@@ -17,13 +17,14 @@ import docx
 import xlrd
 
 # ── 路径配置 ─────────────────────────────────────────────────────────────────
-BASE_DIR    = Path('/Users/doxie/laws_data')
+BASE_DIR    = Path(__file__).parent.parent   # laws_data/
+SRC_BASE    = BASE_DIR / 'sources'
 SRC_DIRS    = {
-    '法律':       BASE_DIR / '法律',
-    '司法解释':   BASE_DIR / '司法解释',
-    '行政法规':   BASE_DIR / '行政法规',
-    '宪法':       BASE_DIR / '宪法',
-    '监察法规':   BASE_DIR / '监察法规',
+    '法律':       SRC_BASE / '法律',
+    '司法解释':   SRC_BASE / '司法解释',
+    '行政法规':   SRC_BASE / '行政法规',
+    '宪法':       SRC_BASE / '宪法',
+    '监察法规':   SRC_BASE / '监察法规',
 }
 JSON_DIR    = BASE_DIR / 'json'
 DB_PATH     = BASE_DIR / 'law_content.db'
@@ -237,7 +238,7 @@ def extract_effective_date(data: dict) -> str | None:
 
 def build_xlsx_index() -> dict:
     index = {}
-    for path in glob.glob(str(BASE_DIR / '**/*.xlsx'), recursive=True):
+    for path in glob.glob(str(SRC_BASE / '**/*.xlsx'), recursive=True):
         try:
             wb = xlrd.open_workbook(path)
         except Exception:

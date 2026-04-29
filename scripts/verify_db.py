@@ -12,8 +12,9 @@ import glob
 import sqlite3
 from pathlib import Path
 
-DB_PATH = '/Users/doxie/laws_data/law_content.db'
-JSON_DIR = '/Users/doxie/laws_data/json'
+BASE_DIR = Path(__file__).parent.parent
+DB_PATH  = str(BASE_DIR / 'law_content.db')
+JSON_DIR = str(BASE_DIR / 'json')
 
 
 def flatten_json(data):

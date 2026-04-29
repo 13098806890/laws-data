@@ -19,19 +19,23 @@
 
 ```
 laws_data/
-├── 法律/              # 源文件（docx/doc + xlsx 目录）
-├── 司法解释/
-├── 行政法规/
-├── 宪法/
-├── 监察法规/
+├── sources/           # 源文件（docx/doc + xlsx 目录）
+│   ├── 法律/
+│   ├── 司法解释/
+│   ├── 行政法规/
+│   ├── 宪法/
+│   └── 监察法规/
 ├── json/              # 结构化 JSON（每部法律一个文件）
 │   ├── 法律/
 │   ├── 司法解释/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── pipeline.py        # 完整 pipeline：docx → JSON → SQLite
-├── verify_db.py       # 数据库与 JSON 一致性验证
+├── scripts/
+│   ├── pipeline.py    # 完整 pipeline：docx → JSON → SQLite
+│   └── verify_db.py   # 数据库与 JSON 一致性验证
+├── knowledge/         # 法律知识图谱（taxonomy/hierarchy/relations）
+├── law_content.db     # SQLite 数据库（pipeline 产物，可重新生成）
 └── CLAUDE.md          # 详细技术说明
 ```
 
@@ -155,8 +159,8 @@ SELECT * FROM laws WHERE legal_domain = '民法商法' AND is_current = 1;
 
 ```bash
 pip install python-docx xlrd
-python3 pipeline.py   # 重新生成 json/ 和 law_content.db
-python3 verify_db.py  # 验证（可选）
+python3 scripts/pipeline.py   # 重新生成 json/ 和 law_content.db
+python3 scripts/verify_db.py  # 验证（可选）
 ```
 
 更新源文件后直接重跑 `pipeline.py` 即可，无需手动干预。
