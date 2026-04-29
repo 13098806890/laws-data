@@ -1,0 +1,11 @@
+# 生成产物，可由 pipeline.py 重新生成
+law_content.db
+json/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
