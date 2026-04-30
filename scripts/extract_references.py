@@ -160,7 +160,7 @@ def build_law_article_index(conn):
         key=len, reverse=True
     )
     short_re = re.compile(
-        rf'(?<![》\w])({"|".join(re.escape(s) for s in valid_shorts)})第({CN_NUM})条'
+        rf'(?<![》《])({"|".join(re.escape(s) for s in valid_shorts)})第({CN_NUM})条'
     )
 
     return art_index, short_to_full, short_re, law_title_to_id
