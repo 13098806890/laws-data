@@ -122,7 +122,9 @@ def law_to_md(law: dict, nodes: list, ref_map: dict,
             linked     = _apply_refs(content, ref_map)
             sups       = _cited_by_superscripts(law['id'], art_num, cited_by,
                                                 law, law_map, md_dir) if art_num else ''
-            lines.append(f'{anchor_tag}{linked}{sups}')
+            # Use hard line breaks (two trailing spaces) so sub-clauses render on separate lines
+            linked_br  = linked.replace('\n', '  \n')
+            lines.append(f'{anchor_tag}{linked_br}{sups}')
         lines.append('')
 
     return '\n'.join(lines)
