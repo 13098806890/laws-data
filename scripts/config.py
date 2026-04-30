@@ -11,5 +11,5 @@ SRC_DIRS  = {
 }
 JSON_DIR  = BASE_DIR / 'json'
 DB_PATH   = BASE_DIR / 'law_content.db'
-MD_DIR    = BASE_DIR / 'markdown'
+MD_DIR    = BASE_DIR
 LAWS_REPO = Path('/Users/doxie/Github/Laws')

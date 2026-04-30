@@ -18,14 +18,14 @@ laws_data/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── markdown/              # Markdown 全文（按 legal_domain 分类，从 DB 生成）
-│   ├── 民法商法/
-│   │   └── 司法解释/
-│   ├── 刑法/
-│   │   ├── 司法解释/
-│   │   └── 法律解释/
-│   └── ...
-├── scripts/
+├── 📂 民法典/                     # Markdown 全文（按 legal_domain，is_current=1）
+│   └── 司法解释/
+├── 📂 民法商法/
+│   └── 司法解释/
+├── 📂 刑法/  ...（其他法律部门目录）
+├── 📂 references/
+│   └── article_references.json
+├── 📂 scripts/
 │   ├── config.py          # 路径配置（BASE_DIR、SRC_DIRS、DB_PATH 等）
 │   ├── utils.py           # 公共工具（title_from_stem、pub_date_from_stem）
 │   ├── docx_to_json/      # 第一阶段：docx → JSON

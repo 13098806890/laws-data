@@ -46,13 +46,19 @@ laws_data/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── 📂 markdown/                   # Markdown 全文（按 legal_domain 分类，从 DB 生成）
-│   ├── 民法商法/
-│   │   └── 司法解释/
-│   ├── 刑法/
-│   │   ├── 司法解释/
-│   │   └── 法律解释/
-│   └── ...
+├── 📂 民法典/                     # Markdown 全文（按 legal_domain 分类，is_current=1）
+│   └── 司法解释/                  # 9 部民法典司法解释
+├── 📂 民法商法/
+│   └── 司法解释/
+├── 📂 刑法/
+│   ├── 司法解释/
+│   └── 法律解释/
+├── 📂 行政法/
+├── 📂 经济法/
+├── 📂 社会法/
+├── 📂 宪法相关法/
+├── 📂 诉讼与非诉讼程序法/
+│   └── 司法解释/
 ├── 📂 references/
 │   └── article_references.json   # 法条间引用关系（跨法引用 + 本法自引）
 ├── 📂 scripts/
@@ -137,14 +143,27 @@ laws_data/
 
 ---
 
-### 🔴 `article_references` 表 — 条文引用关系（空壳，待填充）
+### 🔴 `article_references` 表 — 条文引用关系
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `from_id` | INTEGER FK | 引用方节点 `nodes.id` |
-| `to_id` | INTEGER FK | 被引用方节点 `nodes.id` |
+| `from_node_id` | INTEGER FK | 引用方节点 `nodes.id` |
+| `from_law_id` | INTEGER FK | 引用方法律 |
+| `from_article_num` | INTEGER | 引用方条文序号 |
+| `from_chapter_num` | INTEGER | 引用方章序号 |
+| `from_section_num` | INTEGER | 引用方节序号 |
+| `from_part_num` | INTEGER | 引用方编序号 |
+| `to_node_id` | INTEGER FK | 被引用方节点 `nodes.id` |
+| `to_law_id` | INTEGER FK | 被引用方法律 |
+| `to_article_num` | INTEGER | 被引用方条文序号 |
+| `to_chapter_num` | INTEGER | 被引用方章序号 |
+| `to_section_num` | INTEGER | 被引用方节序号 |
+| `to_part_num` | INTEGER | 被引用方编序号 |
+| `ref_type` | TEXT | `cross_law`（跨法）/ `self_ref`（本法自引） |
+| `resolved` | INTEGER | 1 = 已解析到具体条文，0 = 未解析 |
+| `raw_text` | TEXT | 原文引用文字 |
 
-> 当前引用关系以 JSON 形式存储在 `references/article_references.json`，格式见下文。
+> 同步自 `references/article_references.json`，由 `pipeline.py --only-refs` 更新。
 
 ---
 
@@ -221,7 +240,7 @@ laws_data/
 
 ## 🔗 article_references.json — 法条引用关系
 
-仅覆盖 `is_current=1` 的现行版本，共 **2784 条引用**（跨法 817 条，本法自引 1967 条），解析率 94.7%。
+仅覆盖 `is_current=1` 的现行版本，共 **4994 条引用**（跨法 2986 条，本法自引 2008 条），解析率 98.0%。
 
 ```json
 {
@@ -247,6 +266,23 @@ laws_data/
     }
   ]
 }
+```
+
+---
+
+## 📝 Markdown 超链接与引用标注
+
+每个 Markdown 文件中：
+
+- **条文锚点**：每条条文有 `<a id="art-N">` 锚点，可通过 `文件名.md#art-N` 直接定位
+- **出向链接**：条文正文中引用其他法律条文的文字（如「《中华人民共和国合同法》第五十二条」、「行政诉讼法第五十一条」）自动转为可点击的跨文件链接，跳转到目标条文
+- **入向标注**：被其他法律引用的条文末尾，附有上标数字 `[1]` `[2]` ...，鼠标悬停显示「被《法律名》第N条引用」，点击跳转到引用方对应条文
+
+示例：
+```
+<a id="art-46"></a>第四十六条　……条文内容……
+&thinsp;<sup><a href="..." title="被《人民检察院公益诉讼办案规则》第66条引用">[1]</a></sup>
+&thinsp;<sup><a href="..." title="被《人民检察院民事诉讼监督规则》第101条引用">[2]</a></sup>
 ```
 
 ---

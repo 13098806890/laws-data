@@ -178,12 +178,17 @@ def _cited_by_superscripts(to_law_id, art_num, cited_by: dict,
 
 
 def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
-    if md_dir.exists():
-        shutil.rmtree(md_dir)
+    # 已知的 legal_domain 目录名，用于定向清理，避免误删根目录其他文件
+    KNOWN_DOMAINS = {'刑法', '宪法相关法', '民法典', '民法商法', '社会法',
+                     '经济法', '行政法', '诉讼与非诉讼程序法', '其他'}
+    for d in KNOWN_DOMAINS:
+        p = md_dir / d
+        if p.exists():
+            shutil.rmtree(p)
 
     conn = sqlite3.connect(db_path)
     laws = conn.execute(
-        f'SELECT {", ".join(LAW_KEYS)} FROM laws ORDER BY id'
+        f'SELECT {", ".join(LAW_KEYS)} FROM laws WHERE is_current=1 ORDER BY id'
     ).fetchall()
 
     # build id→law_info lookup and cited-by map before rendering
@@ -214,7 +219,7 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
     conn.close()
     print(f'Markdown 生成完成，输出目录：{md_dir}')
     print(f'  未知 legal_domain（归入"其他"）：{domain_unknown}')
-    for d in sorted(md_dir.iterdir()):
+    for d in sorted(d for d in md_dir.iterdir() if d.is_dir() and d.name in KNOWN_DOMAINS):
         md_count  = len(list(d.glob('*.md')))
         sub_count = sum(len(list(s.glob('*.md'))) for s in d.iterdir() if s.is_dir())
         total_str = f'{md_count} 个' if not sub_count else f'{md_count} 个 + 子分类 {sub_count} 个'

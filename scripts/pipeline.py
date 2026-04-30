@@ -38,6 +38,8 @@ def main():
     if args.only_refs:
         from extract_references import run as extract_refs
         extract_refs()
+        from json_to_db.builder import load_references
+        load_references()
         return
 
     if not args.skip_docx:

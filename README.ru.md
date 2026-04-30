@@ -26,7 +26,7 @@
 
 ## 📦 Источник данных
 
-Все исходные документы загружены с **[Национальной базы данных законов и нормативных актов](https://flk.npc.gov.cn/)** (国家法律法规数据库) — официальной платформы правового поиска Всекитайского собрания народных представителей. Файлы скачиваются в формате docx / doc и преобразуются в структурированные данные с помощью pipeline этого проекта. Платформа поддерживается Комиссией по законодательству Постоянного комитета ВСНП и является авторитетным каналом публикации всех категорий действующего китайского законодательства: Конституции, законов, административных регламентов и судебных толкований.
+Все исходные документы загружены с **[Национальной базы данных законов и нормативных актов](https://flk.npc.gov.cn/)** (国家法律法规数据库) — официальной платформы правового поиска Всекитайского собрания народных представителей. Файлы скачиваются в формате docx / doc и преобразуются в структурированные данные с помощью pipeline этого проекта. Платформа поддерживается Комиссией по законодательству Постоянного комитета ВСНП и является авторитетным каналом публикации всех категорий действующего китайского законодательства.
 
 ---
 
@@ -36,7 +36,24 @@
 laws_data/
 ├── 📂 sources/                    # Исходные файлы (docx/doc + xlsx индекс)
 ├── 📂 json/                       # Структурированный JSON (по категориям, результат pipeline)
-├── 📂 markdown/                   # Полные тексты Markdown (по правовым отраслям, из БД)
+│   ├── 法律/
+│   ├── 司法解释/
+│   ├── 行政法规/
+│   ├── 宪法/
+│   └── 监察法规/
+├── 📂 民法典/                     # Markdown полные тексты (по отраслям, только is_current=1)
+│   └── 司法解释/                  # 9 судебных толкований ГК
+├── 📂 民法商法/
+│   └── 司法解释/
+├── 📂 刑法/
+│   ├── 司法解释/
+│   └── 法律解释/
+├── 📂 行政法/
+├── 📂 经济法/
+├── 📂 社会法/
+├── 📂 宪法相关法/
+├── 📂 诉讼与非诉讼程序法/
+│   └── 司法解释/
 ├── 📂 references/
 │   └── article_references.json   # Межстатейные ссылки
 ├── 📂 scripts/
@@ -57,8 +74,6 @@ laws_data/
 
 ## 🗄️ Структура базы данных
 
-Запустите `python3 scripts/pipeline.py` для генерации `law_content.db`.
-
 ### 🟠 `laws` — По одной строке на закон
 
 | Поле | Тип | Описание |
@@ -67,16 +82,16 @@ laws_data/
 | `title` | TEXT | Полное название |
 | `filename` | TEXT UNIQUE | Формат: `{название}_{YYYYMMDD}` |
 | `category` | TEXT | Категория (法律 / 行政法规 / 司法解释 …) |
-| `legal_domain` | TEXT | Правовая отрасль (民法商法 / 刑法 / 行政法 …) |
+| `legal_domain` | TEXT | Правовая отрасль |
 | `pub_date` | TEXT | Дата опубликования `YYYY-MM-DD` |
 | `effective_date` | TEXT | Дата вступления в силу `YYYY-MM-DD` |
 | `promulgation_info` | TEXT | Полный текст уведомления об опубликовании |
-| `issuing_org` | TEXT | Издающий орган (Верховный суд / Госсовет …) |
-| `doc_number` | TEXT | Номер документа (напр. 法释〔2000〕29号) |
+| `issuing_org` | TEXT | Издающий орган |
+| `doc_number` | TEXT | Номер документа |
 | `total_articles` | INTEGER | Общее число статей |
-| `full_text` | TEXT | Полный текст закона (нормализованные пробелы) |
+| `full_text` | TEXT | Полный текст закона |
 | `version_date` | TEXT | То же, что `pub_date`, для разграничения версий |
-| `is_current` | INTEGER | **1 = действующая версия, 0 = историческая** (берётся с наибольшим pub_date) |
+| `is_current` | INTEGER | **1 = действующая версия, 0 = историческая** |
 
 ---
 
@@ -86,28 +101,21 @@ laws_data/
 |------|-----|----------|
 | `id` | INTEGER PK | Автоинкремент |
 | `law_id` | INTEGER FK | Ссылка на `laws.id` |
-| `parent_id` | INTEGER FK | Родительский узел (NULL для разделов верхнего уровня) |
+| `parent_id` | INTEGER FK | Родительский узел |
 | `type` | TEXT | `part` / `chapter` / `section` / `article` |
-| `title` | TEXT | Заголовок; для статей совпадает с `article_number` |
-| `article_number` | TEXT | Номер статьи, напр. `第一条` (NULL для структурных узлов) |
-| `content` | TEXT | Текст для отображения (заголовок для структурных, тело для статей) |
+| `title` | TEXT | Заголовок |
+| `article_number` | TEXT | Номер статьи, напр. `第一条` |
+| `content` | TEXT | Текст для отображения |
 | `order_index` | INTEGER | Позиция внутри родительского узла |
-| `global_order` | INTEGER | Глобальный порядок обхода в глубину — `ORDER BY global_order` даёт порядок чтения |
-| `part_num` | INTEGER | Номер раздела (NULL при отсутствии разделов) |
+| `global_order` | INTEGER | Глобальный порядок обхода в глубину |
+| `part_num` | INTEGER | Номер раздела |
 | `chapter_num` | INTEGER | Номер главы |
-| `section_num` | INTEGER | Номер параграфа (NULL при отсутствии) |
+| `section_num` | INTEGER | Номер параграфа |
 | `article_num` | INTEGER | Номер статьи (第十二条 → `12`) |
-
-> **Точный поиск:** `WHERE law_id=1100001 AND chapter_num=3 AND article_num=15`
 
 ---
 
 ### 🟢 `nodes_fts` — Полнотекстовый поиск (виртуальная таблица)
-
-| Поле | Описание |
-|------|----------|
-| `content` | Текст статьи (зеркало `nodes.content`) |
-| `article_number` | Номер статьи |
 
 - Движок: FTS5, `tokenize='trigram'`
 - Поддерживает поиск любых китайских подстрок (минимум 3 символа)
@@ -115,20 +123,29 @@ laws_data/
 
 ---
 
-### 🔴 `article_references` — Межстатейные ссылки (заготовка, пока не заполнена)
+### 🔴 `article_references` — Межстатейные ссылки
 
 | Поле | Тип | Описание |
 |------|-----|----------|
-| `from_id` | INTEGER FK | Ссылающийся узел (`nodes.id`) |
-| `to_id` | INTEGER FK | Цитируемый узел (`nodes.id`) |
-
-> Данные о ссылках хранятся в `references/article_references.json` (см. ниже).
+| `from_node_id` | INTEGER FK | Ссылающийся узел |
+| `from_law_id` | INTEGER FK | Ссылающийся закон |
+| `from_article_num` | INTEGER | Номер ссылающейся статьи |
+| `from_chapter_num` | INTEGER | Номер главы |
+| `from_section_num` | INTEGER | Номер параграфа |
+| `from_part_num` | INTEGER | Номер раздела |
+| `to_node_id` | INTEGER FK | Цитируемый узел |
+| `to_law_id` | INTEGER FK | Цитируемый закон |
+| `to_article_num` | INTEGER | Номер цитируемой статьи |
+| `to_chapter_num` | INTEGER | Номер главы |
+| `to_section_num` | INTEGER | Номер параграфа |
+| `to_part_num` | INTEGER | Номер раздела |
+| `ref_type` | TEXT | `cross_law` / `self_ref` |
+| `resolved` | INTEGER | 1 = разрешено, 0 = не разрешено |
+| `raw_text` | TEXT | Исходный текст ссылки |
 
 ---
 
 ## 📎 law_index.json — Глобальный индекс law_id
-
-По одной записи на закон; ID постоянны (новые законы добавляются в конец, существующие ID не меняются):
 
 ```json
 {
@@ -144,84 +161,21 @@ laws_data/
 
 ---
 
-## 📋 Формат JSON
+## 🔗 article_references.json — Граф ссылок
 
-Каждый файл соответствует одному закону. Имя файла: `{название}_{YYYYMMDD}.json`.
-
-**Без структуры разделов (большинство законов):**
-
-```json
-{
-  "law_id": 1100001,
-  "title": "中华人民共和国合同法",
-  "category": "法律",
-  "pub_date": "1999-03-15",
-  "chapters": [
-    {
-      "title": "第一章　一般规定",
-      "order_index": 1,
-      "global_order": 1,
-      "articles": [
-        {
-          "title": "第一条　",
-          "content": "第一条　为了保护合同当事人的合法权益...",
-          "order_index": 1,
-          "global_order": 2
-        }
-      ]
-    }
-  ]
-}
-```
-
-**Со структурой разделов (Гражданский кодекс, УК, ГПК и др. — 8 законов):**
-
-```json
-{
-  "law_id": 1100313,
-  "title": "中华人民共和国民法典",
-  "parts": [
-    {
-      "title": "第一编　总则",
-      "order_index": 1,
-      "global_order": 1,
-      "chapters": [ "..." ]
-    }
-  ]
-}
-```
+Охватывает только законы с `is_current=1`. **4 994 ссылки** (2 986 межзаконных, 2 008 самоссылок), разрешено 98,0%.
 
 ---
 
-## 🔗 article_references.json — Граф ссылок
+## 📝 Гиперссылки и маркеры цитирования в Markdown
 
-Охватывает только законы с `is_current=1`. **2 784 ссылки** (817 межзаконных, 1 967 самоссылок), разрешено 94,7%.
+В каждом Markdown-файле:
 
-```json
-{
-  "from_law_id":      3500601,
-  "from_law":         "人民检察院公益诉讼办案规则",
-  "from_article":     "第六十六条",
-  "from_article_num": 66,
-  "from_chapter_num": 6,
-  "from_section_num": 8,
-  "from_part_num":    null,
-  "refs": [
-    {
-      "type":           "cross_law",
-      "to_law_id":      1100296,
-      "to_law":         "中华人民共和国法官法",
-      "to_article":     "第四十六条",
-      "to_article_num": 46,
-      "to_chapter_num": 4,
-      "to_section_num": null,
-      "to_part_num":    null,
-      "resolved":       true,
-      "raw_text":       "《中华人民共和国法官法》第四十六条"
-    }
-  ]
-}
-```
+- **Якоря статей**: каждая статья имеет якорь `<a id="art-N">`, адресуемый через `filename.md#art-N`
+- **Исходящие ссылки**: упоминания других законов в тексте статей автоматически преобразуются в кликабельные межфайловые ссылки
+- **Входящие маркеры**: статьи, на которые ссылаются другие законы, получают надстрочные цифры `[1]` `[2]` … в конце; при наведении отображается `被《название》第N条引用`; клик переходит к статье-источнику
+
+Отображаются только законы с `is_current=1`.
 
 ---
 
@@ -265,7 +219,7 @@ pip install python-docx xlrd
 # Полный pipeline
 python3 scripts/pipeline.py
 
-# Пропуск этапов (например, если JSON уже создан)
+# Пропуск этапов
 python3 scripts/pipeline.py --skip-docx
 python3 scripts/pipeline.py --skip-docx --skip-index
 python3 scripts/pipeline.py --skip-docx --skip-md
@@ -275,13 +229,13 @@ python3 scripts/pipeline.py --only-refs
 
 # Каждый этап отдельно
 cd scripts
-python3 -m docx_to_json.converter   # docx → JSON
-python3 generate_law_index.py        # присвоить/обновить law_id
-python3 -m json_to_db.builder        # JSON → DB
-python3 -m db_to_md.renderer         # DB → Markdown
-python3 extract_references.py        # извлечь ссылки
+python3 -m docx_to_json.converter
+python3 generate_law_index.py
+python3 -m json_to_db.builder
+python3 -m db_to_md.renderer
+python3 extract_references.py
 
-python3 verify_db.py                 # проверить согласованность (опционально)
+python3 verify_db.py
 ```
 
 После обновления исходных файлов достаточно повторно запустить `pipeline.py` — ручное вмешательство не требуется.

@@ -36,7 +36,24 @@ All source documents are downloaded from the **[National Laws and Regulations Da
 laws_data/
 ├── 📂 sources/                    # Source files (docx/doc + xlsx index)
 ├── 📂 json/                       # Structured JSON (by category, pipeline output)
-├── 📂 markdown/                   # Full-text Markdown (by legal domain, from DB)
+│   ├── 法律/
+│   ├── 司法解释/
+│   ├── 行政法规/
+│   ├── 宪法/
+│   └── 监察法规/
+├── 📂 民法典/                     # Markdown full text (by legal domain, is_current=1 only)
+│   └── 司法解释/                  # 9 judicial interpretations of the Civil Code
+├── 📂 民法商法/
+│   └── 司法解释/
+├── 📂 刑法/
+│   ├── 司法解释/
+│   └── 法律解释/
+├── 📂 行政法/
+├── 📂 经济法/
+├── 📂 社会法/
+├── 📂 宪法相关法/
+├── 📂 诉讼与非诉讼程序法/
+│   └── 司法解释/
 ├── 📂 references/
 │   └── article_references.json   # Article cross-references
 ├── 📂 scripts/
@@ -115,14 +132,27 @@ Run `python3 scripts/pipeline.py` to generate `law_content.db`.
 
 ---
 
-### 🔴 `article_references` — Cross-article citations (placeholder, not yet populated)
+### 🔴 `article_references` — Cross-article citations
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `from_id` | INTEGER FK | Citing node (`nodes.id`) |
-| `to_id` | INTEGER FK | Cited node (`nodes.id`) |
+| `from_node_id` | INTEGER FK | Citing node (`nodes.id`) |
+| `from_law_id` | INTEGER FK | Citing law |
+| `from_article_num` | INTEGER | Citing article number |
+| `from_chapter_num` | INTEGER | Citing chapter number |
+| `from_section_num` | INTEGER | Citing section number |
+| `from_part_num` | INTEGER | Citing part number |
+| `to_node_id` | INTEGER FK | Cited node (`nodes.id`) |
+| `to_law_id` | INTEGER FK | Cited law |
+| `to_article_num` | INTEGER | Cited article number |
+| `to_chapter_num` | INTEGER | Cited chapter number |
+| `to_section_num` | INTEGER | Cited section number |
+| `to_part_num` | INTEGER | Cited part number |
+| `ref_type` | TEXT | `cross_law` / `self_ref` |
+| `resolved` | INTEGER | 1 = resolved to specific article, 0 = unresolved |
+| `raw_text` | TEXT | Original citation text |
 
-> Current citation data is stored in `references/article_references.json` (see below).
+> Synced from `references/article_references.json`, updated by `pipeline.py --only-refs`.
 
 ---
 
@@ -195,7 +225,7 @@ Each file corresponds to one law. Filename: `{title}_{YYYYMMDD}.json`.
 
 ## 🔗 article_references.json — Citation Graph
 
-Covers only `is_current=1` laws. **2,784 citations** total (817 cross-law, 1,967 self-references), 94.7% resolved.
+Covers only `is_current=1` laws. **4,994 citations** total (2,986 cross-law, 2,008 self-references), 98.0% resolved.
 
 ```json
 {
@@ -222,6 +252,25 @@ Covers only `is_current=1` laws. **2,784 citations** total (817 cross-law, 1,967
   ]
 }
 ```
+
+---
+
+## 📝 Markdown Hyperlinks & Citation Markers
+
+Each Markdown file includes:
+
+- **Article anchors**: every article has an `<a id="art-N">` anchor, reachable via `filename.md#art-N`
+- **Outgoing links**: citation text in article bodies (e.g. `《中华人民共和国合同法》第五十二条`, `行政诉讼法第五十一条`) is automatically converted to cross-file links pointing to the cited article
+- **Incoming markers**: articles cited by other laws have superscript numbers `[1]` `[2]` … appended at the end; hovering shows `被《law title》第N条引用`; clicking jumps to the citing article
+
+Example:
+```
+<a id="art-46"></a>第四十六条　… article text …
+&thinsp;<sup><a href="..." title="被《人民检察院公益诉讼办案规则》第66条引用">[1]</a></sup>
+&thinsp;<sup><a href="..." title="被《人民检察院民事诉讼监督规则》第101条引用">[2]</a></sup>
+```
+
+Only `is_current=1` laws are rendered to Markdown.
 
 ---
 
