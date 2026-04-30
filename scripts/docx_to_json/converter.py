@@ -84,6 +84,7 @@ def extract_content(doc_path: Path) -> dict:
     chapters = []
     full_text_lines = []
     current_chapter = current_section = None
+    current_article = None
     in_toc = False
     pending = []
     uses_cn_sections = False  # 是否是汉字序号章节结构（一、二、三…），由目录检测设置
@@ -198,33 +199,39 @@ def extract_content(doc_path: Path) -> dict:
 
             if uses_cn_articles and CN_SECTION_RE.match(text):
                 # 无「第X条」结构的文件：「一、二、三」各段作为独立条文
-                article = {'title': text[:text.index('、') + 1], 'content': text}
+                current_article = {'title': text[:text.index('、') + 1], 'content': text}
                 if not chapters:
                     chapters.append({'title': '正文', 'sections': [], 'articles': []})
-                chapters[-1]['articles'].append(article)
+                chapters[-1]['articles'].append(current_article)
             elif uses_cn_sections and CN_SECTION_RE.match(text):
+                current_article = None
                 current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
                 chapters.append(current_chapter)
                 current_section = None
             elif CHAPTER_RE.match(text):
+                current_article = None
                 current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
                 chapters.append(current_chapter)
                 current_section = None
             elif SECTION_RE.match(text):
+                current_article = None
                 current_section = {'title': normalize_title(text), 'articles': []}
                 if current_chapter:
                     current_chapter['sections'].append(current_section)
             elif ARTICLE_RE.match(text):
                 m = re.match(r'^(第[一二三四五六七八九十百千]+条[　\s]?)', text)
                 art_title = m.group(1) if m else (text[:text.index('　') + 1] if '　' in text else text[:8])
-                article = {'title': art_title, 'content': text}
+                current_article = {'title': art_title, 'content': text}
                 target = current_section or current_chapter
                 if target:
-                    target['articles'].append(article)
+                    target['articles'].append(current_article)
                 else:
                     if not chapters:
                         chapters.append({'title': '正文', 'sections': [], 'articles': []})
-                    chapters[-1]['articles'].append(article)
+                    chapters[-1]['articles'].append(current_article)
+            elif current_article is not None:
+                # 续行段落（分项列举、补充说明等），追加到当前条文
+                current_article['content'] += '\n' + text
 
     total = sum(
         len(ch.get('articles', [])) +
