@@ -34,7 +34,7 @@ LAWS_REPO   = Path('/Users/doxie/Github/Laws')
 CHAPTER_RE  = re.compile(r'^第[一二三四五六七八九十百千]+章[　\s]')
 SECTION_RE  = re.compile(r'^第[一二三四五六七八九十百千]+节[　\s]')
 ARTICLE_RE  = re.compile(r'^第[一二三四五六七八九十百千]+条[　\s]')
-PART_RE     = re.compile(r'^第[一二三四五六七八九十]+编[　\s]')
+PART_RE     = re.compile(r'^第[一二三四五六七八九十]+编[　\s]', re.MULTILINE)
 TOC_RE      = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
 
 PATTERN_ARABIC       = re.compile(r'(\d{4})年(\d{1,2})月(\d{1,2})日起施行')
