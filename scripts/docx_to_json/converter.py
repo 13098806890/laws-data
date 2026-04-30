@@ -21,10 +21,25 @@ from docx_to_json.structure import CHAPTER_RE, SECTION_RE, normalize_title, add_
 ARTICLE_RE    = re.compile(r'^第[一二三四五六七八九十百千]+条[　\s]')
 TOC_RE        = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
 CN_SECTION_RE = re.compile(r'^[一二三四五六七八九十百]+(?:十[一二三四五六七八九]?)?、\S')
-DOC_NUM_RE    = re.compile(r'[（(]?[一-鿿]{1,8}[〔\[]\d{4}[〕\]]\d+号[）)]?')
-ORG_RE        = re.compile(r'^(最高人民法院|最高人民检察院|国务院|全国人民代表大会[一-鿿]*|'
-                           r'中华人民共和国[一-鿿]{2,8}(?:部|委|局|署)|'
-                           r'[一-鿿]{2,10}(?:部|委员会|局|署|总局)(?:、[一-鿿]{2,10}(?:部|委员会|局|署|总局))*)')
+DOC_NUM_RE = re.compile(r'[（(]?[一-鿿]{1,8}[〔\[]\d{4}[〕\]]\d+号[）)]?')
+# 白名单：只匹配已知顶级发布机构，避免误匹配法条正文
+_KNOWN_ORGS = (
+    '最高人民法院',
+    '最高人民检察院',
+    '国务院',
+    '全国人民代表大会常务委员会',
+    '全国人民代表大会',
+    '中央军事委员会',
+    '海关总署',
+    '国家外汇管理局',
+    '中国人民银行',
+    '外交部',
+    '商务部',
+    '对外经济贸易部',
+)
+ORG_RE = re.compile(
+    r'^(' + '|'.join(re.escape(o) for o in _KNOWN_ORGS) + r')$'
+)
 
 
 def _extract_org_and_docnum(paras: list) -> tuple[str, str]:
@@ -38,8 +53,8 @@ def _extract_org_and_docnum(paras: list) -> tuple[str, str]:
                 doc_number = m.group(0).strip('（）()')
         if not issuing_org:
             m = ORG_RE.match(text)
-            if m and len(text) < 40:
-                issuing_org = m.group(0)
+            if m:
+                issuing_org = m.group(1)
     return issuing_org, doc_number
 
 
