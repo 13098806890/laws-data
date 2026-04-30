@@ -1,0 +1,99 @@
+import re
+import glob
+from pathlib import Path
+
+from config import SRC_BASE, LAWS_REPO
+
+DEPT_DIRS = [
+    '宪法', '宪法相关法', '民法商法', '民法典',
+    '行政法', '经济法', '社会法', '刑法', '诉讼与非诉讼程序法',
+]
+
+MANUAL_DOMAINS = {
+    '中华人民共和国民法典': '民法典',
+    '全国人民代表大会常务委员会关于《中华人民共和国刑事诉讼法》第二百九十二条的解释': '宪法相关法',
+    '全国人民代表大会常务委员会关于《中华人民共和国刑事诉讼法》第二百五十四条第五款、第二百五十七条第二款的解释': '宪法相关法',
+    '全国人民代表大会常务委员会关于《中华人民共和国香港特别行政区基本法》第十三条第一款和第十九条的解释': '宪法相关法',
+    '全国人民代表大会常务委员会关于在沿海港口城市设立海事法院的决定': '宪法相关法',
+    '全国人民代表大会常务委员会关于中国人民解放军现役士兵衔级制度的决定': '宪法相关法',
+    '全国人民代表大会常务委员会关于加强中央预算审查监督的决定': '经济法',
+    '全国人民代表大会常务委员会关于惩治骗购外汇、逃汇和非法买卖外汇犯罪的决定': '经济法',
+    '第五届全国人民代表大会常务委员会关于批准《国务院关于职工探亲待遇的规定》的决议': '社会法',
+    '第五届全国人民代表大会常务委员会关于批准《国务院关于安置老弱病残干部的暂行办法》的决议': '社会法',
+    '第五届全国人民代表大会常务委员会关于批准《国务院关于老干部离职休养的暂行规定》的决议': '社会法',
+    '第五届全国人民代表大会常务委员会关于批准《国务院关于工人退休、退职的暂行办法》的决议': '社会法',
+    '第五届全国人民代表大会常务委员会关于批准广东省经济特区条例的决议': '经济法',
+    '中华人民共和国突发公共卫生事件应对法': '社会法',
+    '中华人民共和国国家发展规划法': '经济法',
+    '中华人民共和国民营经济促进法': '经济法',
+    '中华人民共和国法治宣传教育法': '宪法相关法',
+    '中华人民共和国原子能法': '经济法',
+    '中华人民共和国国家公园法': '社会法',
+}
+
+KEYWORD_RULES = [
+    ('刑法',               ['刑法','刑事','犯罪','罪名','量刑','追诉','减刑','假释','定罪','逮捕','起诉','盗窃','贪污','挪用','渎职','走私','毒品']),
+    ('诉讼与非诉讼程序法', ['诉讼','仲裁','调解','证据','执行','管辖','审判程序','司法鉴定','公证','法律援助','立案','侦查','批准逮捕','法律监督']),
+    ('宪法相关法',         ['人民代表大会','选举','国家机构','立法','国防','军队','武装','国旗','国徽','国歌','监察','特别行政区','自治','外交','勋章']),
+    ('民法商法',           ['民法','合同','物权','婚姻','继承','侵权','知识产权','专利','商标','著作权','公司','企业破产','票据','保险','信托','证券','海商','不动产登记','外商投资']),
+    ('经济法',             ['税','财政','预算','审计','会计','金融','银行','价格','反垄断','反不正当竞争','统计','招标','政府采购','国有资产','对外贸易','海关','外汇','能源','矿产','农业','渔业','林业','交通','铁路','公路','港口','电力','煤炭','石油']),
+    ('社会法',             ['劳动','工会','社会保险','教育','医疗','卫生','食品安全','药品','环境','生态','野生动物','文物','文化','体育','残疾人','妇女','未成年人','老年人','慈善','消防','安全生产','职业病','禁毒','传染病','疫苗']),
+    ('行政法',             ['行政','公务员','警察','出入境','国家秘密','档案','网络安全','数据安全','个人信息','密码','广播','出版','土地管理','城乡规划','建设','房地产','道路交通','枪支','爆炸物','危险品','口岸']),
+]
+
+
+def build_xlsx_index() -> dict:
+    index = {}
+    for path in glob.glob(str(SRC_BASE / '**/*.xlsx'), recursive=True):
+        try:
+            import xlrd
+            wb = xlrd.open_workbook(path)
+        except Exception:
+            continue
+        for sheet in wb.sheets():
+            for i in range(1, sheet.nrows):
+                row = sheet.row_values(i)
+                title = str(row[0]).strip()
+                pub   = str(row[1]).strip()
+                eff   = str(row[2]).strip()
+                cat   = str(row[3]).strip()
+                key   = f'{title}_{pub.replace("-", "")}'
+                if key not in index:
+                    index[key] = {'effective_date': eff, 'category': cat}
+    return index
+
+
+def build_domain_index() -> dict:
+    idx = {}
+    for dept in DEPT_DIRS:
+        dept_path = LAWS_REPO / dept
+        if not dept_path.is_dir():
+            continue
+        for fname in dept_path.iterdir():
+            if fname.suffix != '.md' or fname.name.startswith('_'):
+                continue
+            raw = re.sub(r'\(\d{4}-\d{2}-\d{2}\)', '', fname.stem).strip()
+            for variant in [raw, raw.replace('中华人民共和国', '').strip()]:
+                idx[re.sub(r'\s+', '', variant)] = dept
+
+    for title, dept in MANUAL_DOMAINS.items():
+        for variant in [title, title.replace('中华人民共和国', '').strip()]:
+            idx[re.sub(r'\s+', '', variant)] = dept
+
+    return idx
+
+
+def get_legal_domain(title: str, data: dict, domain_idx: dict) -> str | None:
+    clean = lambda s: re.sub(r'\s+', '', s)
+    for key in [clean(title), clean(title.replace('中华人民共和国', ''))]:
+        if key in domain_idx:
+            return domain_idx[key]
+
+    combined = title + ' ' + data.get('promulgation_info', '')
+    for dept, keywords in KEYWORD_RULES:
+        if any(kw in combined for kw in keywords):
+            return dept
+
+    if data.get('category') == '行政法规':
+        return '行政法'
+    return None
