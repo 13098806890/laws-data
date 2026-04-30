@@ -11,6 +11,7 @@ from pathlib import Path
 
 from config import JSON_DIR, DB_PATH
 from utils import pub_date_from_stem
+from docx_to_json.subject_area import get_subject_area
 
 _CN_ORD = {'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,
            '九':9,'十':10,'百':100,'千':1000}
@@ -38,6 +39,7 @@ def create_schema(conn):
             filename TEXT UNIQUE NOT NULL,
             category TEXT,
             legal_domain TEXT,
+            subject_area TEXT,
             pub_date TEXT,
             effective_date TEXT,
             promulgation_info TEXT,
@@ -208,12 +210,15 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
 
         stem         = path.stem
         version_date = pub_date_from_stem(stem)
+        category     = data.get('category')
+        subject_area = get_subject_area(data['title'], category)
         cur = conn.execute(
-            """INSERT INTO laws (id, title, filename, category, legal_domain, pub_date,
+            """INSERT INTO laws (id, title, filename, category, legal_domain, subject_area, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
                                  total_articles, full_text, version_date, is_current)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,1)""",
-            (data.get('law_id'), data['title'], stem, data.get('category'), data.get('legal_domain'),
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)""",
+            (data.get('law_id'), data['title'], stem, category, data.get('legal_domain'),
+             subject_area,
              data.get('pub_date'), data.get('effective_date'),
              data.get('promulgation_info'), data.get('issuing_org'), data.get('doc_number'),
              data.get('total_articles'), _clean_text(data.get('full_text', '')),

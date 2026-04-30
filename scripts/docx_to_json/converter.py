@@ -17,6 +17,7 @@ from utils import title_from_stem, pub_date_from_stem
 from docx_to_json.domain import build_xlsx_index, build_domain_index, get_legal_domain
 from docx_to_json.effective_date import extract_effective_date
 from docx_to_json.structure import CHAPTER_RE, SECTION_RE, PART_RE, normalize_title, add_structure, cn_to_int
+from docx_to_json.subject_area import get_subject_area
 
 ARTICLE_RE    = re.compile(r'^第[零一二三四五六七八九十百千]+条[　\s]')
 _ART_NUM_RE   = re.compile(r'^第([零一二三四五六七八九十百千]+)条')
@@ -287,6 +288,7 @@ def process_docx(docx_path: Path, category: str,
         data['effective_date'] = extract_effective_date(data)
 
     data['legal_domain'] = get_legal_domain(title, data, domain_idx)
+    data['subject_area'] = get_subject_area(title, data.get('category', ''))
     data = add_structure(data)
     return data
 

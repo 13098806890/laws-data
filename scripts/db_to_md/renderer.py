@@ -13,12 +13,15 @@ from config import DB_PATH, MD_DIR
 
 LAW_KEYS = ['id', 'title', 'filename', 'category', 'legal_domain',
             'pub_date', 'effective_date', 'promulgation_info',
-            'issuing_org', 'doc_number', 'total_articles']
+            'issuing_org', 'doc_number', 'total_articles', 'subject_area']
 
 
 def _out_dir(md_dir: Path, law: dict) -> Path:
     domain   = law['legal_domain'] or '其他'
     category = law['category'] or ''
+    subject  = law.get('subject_area') or ''
+    if category == '行政法规' and subject:
+        return md_dir / domain / '行政法规' / subject
     if category in ('司法解释', '法律解释'):
         return md_dir / domain / category
     return md_dir / domain
@@ -195,7 +198,6 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
     laws = conn.execute(
         f'SELECT {", ".join(LAW_KEYS)} FROM laws WHERE is_current=1 ORDER BY id'
     ).fetchall()
-
     # build id→law_info lookup and cited-by map before rendering
     law_map   = {dict(zip(LAW_KEYS, r))['id']: dict(zip(LAW_KEYS, r)) for r in laws}
     cited_by  = _build_cited_by_map(conn, md_dir, law_map)
