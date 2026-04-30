@@ -128,6 +128,30 @@ def extract_content(doc_path: Path) -> dict:
             _last_art_num = cn_to_int(lm.group(1))
         return result
 
+    def _flush_pending():
+        nonlocal current_chapter, current_section
+        if uses_cn_sections:
+            for s in pending:
+                if CN_SECTION_RE.match(s):
+                    full_text_lines.append(s)
+                    current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
+                    chapters.append(current_chapter)
+                    current_section = None
+        else:
+            last_ch1 = next((j for j, s in enumerate(pending) if CHAPTER_RE.match(s)), -1)
+            pend = pending[last_ch1:] if last_ch1 >= 0 else pending
+            for s in pend:
+                full_text_lines.append(s)
+                if CHAPTER_RE.match(s):
+                    current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
+                    chapters.append(current_chapter)
+                    current_section = None
+                elif SECTION_RE.match(s):
+                    current_section = {'title': normalize_title(s), 'articles': []}
+                    if current_chapter:
+                        current_chapter['sections'].append(current_section)
+        pending.clear()
+
     for raw_text in paras[start_idx:]:
         # 展开段落内嵌的连续条文（如飞行基本规则的排版方式）
         for text in _split_inline_articles(raw_text):
@@ -137,36 +161,25 @@ def extract_content(doc_path: Path) -> dict:
 
             if in_toc:
                 if CHAPTER_RE.match(text) or SECTION_RE.match(text):
-                    pending.append(text)
+                    # 若该标题已在 pending 中出现，说明目录已结束、正文开始
+                    # 直接丢弃目录中收集的标题，让正文重新建章
+                    if normalize_title(text) in {normalize_title(s) for s in pending}:
+                        in_toc = False
+                        pending.clear()
+                    else:
+                        pending.append(text)
                 elif CN_SECTION_RE.match(text):
-                    pending.append(text)
-                    uses_cn_sections = True
+                    if normalize_title(text) in {normalize_title(s) for s in pending}:
+                        in_toc = False
+                        pending.clear()
+                    else:
+                        pending.append(text)
+                        uses_cn_sections = True
                 elif ARTICLE_RE.match(text):
                     in_toc = False
-                    if uses_cn_sections:
-                        for s in pending:
-                            if CN_SECTION_RE.match(s):
-                                full_text_lines.append(s)
-                                current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
-                                chapters.append(current_chapter)
-                                current_section = None
-                    else:
-                        last_ch1 = next((j for j, s in enumerate(pending) if CHAPTER_RE.match(s)), -1)
-                        if last_ch1 >= 0:
-                            pending = pending[last_ch1:]
-                        for s in pending:
-                            full_text_lines.append(s)
-                            if CHAPTER_RE.match(s):
-                                current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
-                                chapters.append(current_chapter)
-                                current_section = None
-                            elif SECTION_RE.match(s):
-                                current_section = {'title': normalize_title(s), 'articles': []}
-                                if current_chapter:
-                                    current_chapter['sections'].append(current_section)
-                    pending = []
+                    _flush_pending()
                 else:
-                    pending = []
+                    pending.clear()
                 if in_toc:
                     continue
 
