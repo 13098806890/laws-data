@@ -1,25 +1,46 @@
 # laws_data 项目说明
 
 ## 项目概述
-将中国法律法规的 docx 源文件转换为结构化 JSON，再导入 SQLite 数据库，供 iOS app 使用。
+将中国法律法规的 docx 源文件转换为结构化 JSON，再导入 SQLite 数据库，同时生成 Markdown 全文，供 iOS app 和 Web 前端使用。
 
 ## 目录结构
 ```
 laws_data/
-├── 法律/          # 源 docx + xlsx 目录索引
-├── 司法解释/
-├── 行政法规/
-├── 宪法/
-├── 监察法规/
-├── json/          # 生成的中间 JSON（pipeline.py 产物，可重新生成）
+├── sources/               # 源文件（docx/doc + xlsx 目录索引）
 │   ├── 法律/
 │   ├── 司法解释/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── pipeline.py    # 唯一入口：docx → JSON → law_content.db
-├── verify_db.py   # 验证数据库与 JSON 一致性
-└── law_content.db # 最终数据库（pipeline.py 产物，可重新生成）
+├── json/                  # 结构化 JSON（按 category 平铺，与 sources/ 对应）
+│   ├── 法律/
+│   ├── 司法解释/
+│   ├── 行政法规/
+│   ├── 宪法/
+│   └── 监察法规/
+├── markdown/              # Markdown 全文（按 legal_domain 分类，从 DB 生成）
+│   ├── 民法商法/
+│   │   └── 司法解释/
+│   ├── 刑法/
+│   │   ├── 司法解释/
+│   │   └── 法律解释/
+│   └── ...
+├── scripts/
+│   ├── config.py          # 路径配置（BASE_DIR、SRC_DIRS、DB_PATH 等）
+│   ├── utils.py           # 公共工具（title_from_stem、pub_date_from_stem）
+│   ├── docx_to_json/      # 第一阶段：docx → JSON
+│   │   ├── converter.py   # 主入口，extract_content、process_docx、run()
+│   │   ├── domain.py      # legal_domain 映射、xlsx 索引
+│   │   ├── effective_date.py  # 生效日期提取
+│   │   └── structure.py   # 编/章/节结构 + global_order
+│   ├── json_to_db/        # 第二阶段：JSON → SQLite
+│   │   └── builder.py     # 建表、写入、run()
+│   ├── db_to_md/          # 第三阶段：DB → Markdown
+│   │   └── renderer.py    # 渲染、run()
+│   ├── pipeline.py        # 完整流程（三阶段串联）
+│   └── verify_db.py       # 数据库与 JSON 一致性验证
+├── law_content.db         # SQLite 数据库（pipeline 产物，约 72MB）
+└── CLAUDE.md              # 本文件
 ```
 
 外部依赖：
@@ -29,8 +50,14 @@ laws_data/
 
 ```bash
 cd /Users/doxie/laws_data
-python3 pipeline.py   # 全量重新生成 JSON + 数据库
-python3 verify_db.py  # 验证（可选）
+python3 scripts/pipeline.py        # 完整流程：docx → JSON → DB → Markdown
+python3 scripts/verify_db.py       # 验证（可选）
+
+# 各阶段单独运行
+cd scripts
+python3 -m docx_to_json.converter  # 仅重新生成 JSON
+python3 -m json_to_db.builder      # 仅重新生成数据库
+python3 -m db_to_md.renderer       # 仅重新生成 Markdown
 ```
 
 依赖库：`python-docx`, `xlrd`
@@ -41,10 +68,13 @@ python3 verify_db.py  # 验证（可选）
 每部法律一行，字段：
 - `filename` — 唯一键，格式 `{标题}_{YYYYMMDD}`（无 .json 后缀）
 - `title` — 完整标题，从文件名提取（不从 docx 内部读取，因 docx 第一段可能截断或换行）
-- `category` — 法律分类（法律/行政法规/司法解释/宪法/监察法规），xlsx 为权威来源
-- `legal_domain` — 法律部门（宪法/宪法相关法/民法商法/民法典/行政法/经济法/社会法/刑法/诉讼与非诉讼程序法）
+- `category` — 法律分类（法律/行政法规/司法解释/法律解释/修正案/监察法规/宪法），xlsx 为权威来源
+- `legal_domain` — 法律部门（宪法相关法/民法商法/民法典/行政法/经济法/社会法/刑法/诉讼与非诉讼程序法）
 - `pub_date` — 公布日期，从文件名提取
 - `effective_date` — 生效日期，xlsx 优先，其次从正文提取
+- `promulgation_info` — 发布说明全文（通过/公布/施行信息）
+- `issuing_org` — 发布机关（最高人民法院 / 最高人民检察院 / 国务院等），从文件头部提取
+- `doc_number` — 发文字号（法释〔2000〕29号 等），从文件头部提取
 - `version_date` — 同 pub_date，用于多版本区分
 - `is_current` — 默认 1（现行版本），未来多版本时旧版设为 0
 
@@ -54,7 +84,7 @@ python3 verify_db.py  # 验证（可选）
 - `parent_id` — 父节点 id（编的 parent_id 为 NULL）
 - `title` — 编/章/节 的标题；条文也存 title（同 article_number）
 - `article_number` — 仅条文，如"第一条"
-- `content` — 所有类型都存（编/章/节 存标题文本，条文存正文），iOS 端直接用于展示
+- `content` — 所有类型都存（编/章/节 存标题文本，条文存正文），客户端直接用于展示
 - `global_order` — 深度优先全局序号，`ORDER BY global_order` 即得正确展示顺序
 - `order_index` — 在父节点内的序号，用于层级导航排序
 
@@ -72,6 +102,11 @@ FROM nodes_fts f
 JOIN nodes n ON f.rowid = n.id
 JOIN laws l ON n.law_id = l.id
 WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
+
+-- 查某机构发布的司法解释
+SELECT title, doc_number, pub_date FROM laws
+WHERE issuing_org = '最高人民法院' AND category = '司法解释'
+ORDER BY pub_date DESC;
 ```
 
 ### nodes_fts 虚拟表
@@ -86,6 +121,11 @@ FTS5，`tokenize='trigram'`，索引 `content` 和 `article_number`。
 - **`category`**：xlsx 为权威来源
 
 匹配键：`{标题}_{公布日期无连字符}`，例如 `中华人民共和国民法典_20200528`。
+
+### issuing_org / doc_number 提取规则
+- **发布机关**：白名单精确匹配（最高人民法院、最高人民检察院、国务院、全国人民代表大会常务委员会等），从 docx 前 15 段中独立行提取
+- **发文字号**：正则匹配 `机构缩写〔年份〕序号` 格式的独立短行（< 30 字符）
+- 全国人大通过的法律（民法典、刑法等）通常无发文字号，发布机关信息在 promulgation_info 中，不单独提取
 
 ### 已知问题：7 个文件名含异常字符
 以下文件的原始文件名中 `+` 是空格替代符（macOS 文件系统限制导致），已重命名但标题中
@@ -102,14 +142,20 @@ FTS5，`tokenize='trigram'`，索引 `content` 和 `article_number`。
 
 ### legal_domain 映射优先级
 1. `/Users/doxie/Github/Laws/` 目录结构精确匹配
-2. `MANUAL_DOMAINS` 手工补充（民法典、新法、特殊决议等）
+2. `MANUAL_DOMAINS` 手工补充（民法典、新法、特殊决议、未分类司法解释等）
 3. 关键词规则（标题 + promulgation_info）
+4. 行政法规兜底归入「行政法」
 
 ## 注意事项
 
 ### 更新源文件后
-直接运行 `python3 pipeline.py` 即可，JSON 和数据库会完全重新生成。
+直接运行 `python3 scripts/pipeline.py` 即可，JSON、数据库和 Markdown 会完全重新生成。
 pipeline 是无状态的，不做增量，每次全量重建。
+
+### 章节结构类型
+- **第X章结构**：大多数法律，`CHAPTER_RE` 匹配
+- **汉字序号结构**：115 个司法解释使用 `一、管辖`、`二、回避` 等形式，`CN_SECTION_RE` 匹配
+- **无章节结构**：法律解释、批复等短文件，full_text 整体作为单条 article 写入 DB
 
 ### 法律多版本
 同一部法律可能有多个版本（不同 pub_date），全部导入，`is_current` 目前均为 1。
