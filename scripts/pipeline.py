@@ -15,12 +15,14 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from docx_to_json.converter import run as docx_to_json
+from generate_law_index import run as gen_law_index
 from json_to_db.builder import run as json_to_db
 from db_to_md.renderer import run as db_to_md
 
 
 def main():
     docx_to_json()
+    gen_law_index()
     json_to_db()
     db_to_md()
     print('\n=== 完成 ===')
