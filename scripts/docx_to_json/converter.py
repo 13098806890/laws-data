@@ -73,7 +73,8 @@ def extract_content(doc_path: Path) -> dict:
     start_idx = 0
     for i, text in enumerate(paras[:5]):
         if re.search(r'通过|公布|发布|施行|颁布|批准', text):
-            promulgation_info = text
+            # 去除排版换行和多余空格
+            promulgation_info = re.sub(r'[\r\n]+', '', text).strip()
             start_idx = i + 1
             break
 

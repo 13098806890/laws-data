@@ -24,6 +24,10 @@ def _cn_to_int(s: str) -> int:
 
 def normalize_title(t: str) -> str:
     t = t.strip()
+    # 去除换行和由排版换行引入的多余空格
+    t = re.sub(r'[\r\n]+', '', t)
+    t = re.sub(r'[ \t]{2,}', ' ', t)
+    # 去除两个 CJK 字符之间的多余全角空格
     return re.sub(r'(?<=[一-鿿])　{2,}(?=[一-鿿])', '', t)
 
 
