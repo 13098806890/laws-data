@@ -7,7 +7,34 @@
   "issuing_org": "",
   "doc_number": "",
   "legal_domain": "宪法相关法",
-  "total_articles": 0,
-  "chapters": [],
+  "total_articles": 3,
+  "chapters": [
+    {
+      "title": "正文",
+      "sections": [],
+      "articles": [
+        {
+          "title": "一、",
+          "content": "一、凡国旗和区旗同时升挂、使用时，应当将国旗置于中心、较高或者突出的位置。",
+          "order_index": 1,
+          "global_order": 2
+        },
+        {
+          "title": "二、",
+          "content": "二、凡国旗和区旗同时或者并列升挂、使用时，国旗应当大于区旗，国旗在右，区旗在左。",
+          "order_index": 2,
+          "global_order": 3
+        },
+        {
+          "title": "三、",
+          "content": "三、列队举持国旗和区旗行进时，国旗应当在区旗之前。",
+          "order_index": 3,
+          "global_order": 4
+        }
+      ],
+      "order_index": 1,
+      "global_order": 1
+    }
+  ],
   "full_text": "根据《中华人民共和国国旗法》的有关规定，自1997年7月1日起，在香港特别行政区同时升挂、使用国旗和区旗时，按照下列规定执行：\n一、凡国旗和区旗同时升挂、使用时，应当将国旗置于中心、较高或者突出的位置。\n二、凡国旗和区旗同时或者并列升挂、使用时，国旗应当大于区旗，国旗在右，区旗在左。\n三、列队举持国旗和区旗行进时，国旗应当在区旗之前。"
 }

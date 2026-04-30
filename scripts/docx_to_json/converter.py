@@ -86,8 +86,13 @@ def extract_content(doc_path: Path) -> dict:
     current_chapter = current_section = None
     in_toc = False
     pending = []
-    uses_cn_sections = False  # 是否是汉字序号章节结构（一、二、三…）
+    uses_cn_sections = False  # 是否是汉字序号章节结构（一、二、三…），由目录检测设置
     _last_art_num = 0  # 上一个已处理条文的序号，用于段落内切分验证
+
+    # 预扫：若无任何「第X条」但有「一、二、」段落，则以「一、」为条文粒度
+    _body = paras[start_idx:]
+    _has_art_re = any(ARTICLE_RE.match(p) for p in _body)
+    uses_cn_articles = (not _has_art_re and any(CN_SECTION_RE.match(p) for p in _body))
 
     def _split_inline_articles(text: str) -> list[str]:
         """
@@ -167,7 +172,13 @@ def extract_content(doc_path: Path) -> dict:
 
             full_text_lines.append(text)
 
-            if uses_cn_sections and CN_SECTION_RE.match(text):
+            if uses_cn_articles and CN_SECTION_RE.match(text):
+                # 无「第X条」结构的文件：「一、二、三」各段作为独立条文
+                article = {'title': text[:text.index('、') + 1], 'content': text}
+                if not chapters:
+                    chapters.append({'title': '正文', 'sections': [], 'articles': []})
+                chapters[-1]['articles'].append(article)
+            elif uses_cn_sections and CN_SECTION_RE.match(text):
                 current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
                 chapters.append(current_chapter)
                 current_section = None
