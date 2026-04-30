@@ -18,8 +18,9 @@ from docx_to_json.domain import build_xlsx_index, build_domain_index, get_legal_
 from docx_to_json.effective_date import extract_effective_date
 from docx_to_json.structure import CHAPTER_RE, SECTION_RE, normalize_title, add_structure
 
-ARTICLE_RE = re.compile(r'^第[一二三四五六七八九十百千]+条[　\s]')
-TOC_RE     = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
+ARTICLE_RE    = re.compile(r'^第[一二三四五六七八九十百千]+条[　\s]')
+TOC_RE        = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
+CN_SECTION_RE = re.compile(r'^[一二三四五六七八九十百]+(?:十[一二三四五六七八九]?)?、\S')
 
 
 def extract_content(doc_path: Path) -> dict:
@@ -46,6 +47,7 @@ def extract_content(doc_path: Path) -> dict:
     current_chapter = current_section = None
     in_toc = False
     pending = []
+    uses_cn_sections = False  # 是否是汉字序号章节结构（一、二、三…）
 
     for text in paras[start_idx:]:
         if TOC_RE.match(text) or text in ('目　　录', '目  录', '目录'):
@@ -55,21 +57,33 @@ def extract_content(doc_path: Path) -> dict:
         if in_toc:
             if CHAPTER_RE.match(text) or SECTION_RE.match(text):
                 pending.append(text)
+            elif CN_SECTION_RE.match(text):
+                pending.append(text)
+                uses_cn_sections = True
             elif ARTICLE_RE.match(text):
                 in_toc = False
-                last_ch1 = next((j for j, s in enumerate(pending) if CHAPTER_RE.match(s)), -1)
-                if last_ch1 >= 0:
-                    pending = pending[last_ch1:]
-                for s in pending:
-                    full_text_lines.append(s)
-                    if CHAPTER_RE.match(s):
-                        current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
-                        chapters.append(current_chapter)
-                        current_section = None
-                    elif SECTION_RE.match(s):
-                        current_section = {'title': normalize_title(s), 'articles': []}
-                        if current_chapter:
-                            current_chapter['sections'].append(current_section)
+                if uses_cn_sections:
+                    # 汉字序号结构：TOC 里收集到的是章节名，直接从 pending 建章
+                    for s in pending:
+                        if CN_SECTION_RE.match(s):
+                            full_text_lines.append(s)
+                            current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
+                            chapters.append(current_chapter)
+                            current_section = None
+                else:
+                    last_ch1 = next((j for j, s in enumerate(pending) if CHAPTER_RE.match(s)), -1)
+                    if last_ch1 >= 0:
+                        pending = pending[last_ch1:]
+                    for s in pending:
+                        full_text_lines.append(s)
+                        if CHAPTER_RE.match(s):
+                            current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
+                            chapters.append(current_chapter)
+                            current_section = None
+                        elif SECTION_RE.match(s):
+                            current_section = {'title': normalize_title(s), 'articles': []}
+                            if current_chapter:
+                                current_chapter['sections'].append(current_section)
                 pending = []
             else:
                 pending = []
@@ -78,7 +92,11 @@ def extract_content(doc_path: Path) -> dict:
 
         full_text_lines.append(text)
 
-        if CHAPTER_RE.match(text):
+        if uses_cn_sections and CN_SECTION_RE.match(text):
+            current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
+            chapters.append(current_chapter)
+            current_section = None
+        elif CHAPTER_RE.match(text):
             current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
             chapters.append(current_chapter)
             current_section = None
