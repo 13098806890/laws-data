@@ -705,102 +705,99 @@ def main():
     print('\n=== JSON → 数据库 ===')
     build_db(JSON_DIR, DB_PATH)
 
-    print('\n=== JSON → Markdown ===')
-    build_markdown(JSON_DIR, BASE_DIR / 'markdown')
+    print('\n=== 数据库 → Markdown ===')
+    build_markdown(DB_PATH, BASE_DIR / 'markdown')
 
     print('\n=== 完成 ===')
 
 
-def law_to_md(data: dict) -> str:
+def law_to_md(law: dict, nodes: list) -> str:
     lines = []
-    lines.append(f'# {data["title"]}')
+    lines.append(f'# {law["title"]}')
     lines.append('')
 
     meta = []
-    if data.get('category'):       meta.append(f'**分类**：{data["category"]}')
-    if data.get('legal_domain'):   meta.append(f'**法律部门**：{data["legal_domain"]}')
-    if data.get('pub_date'):       meta.append(f'**公布日期**：{data["pub_date"]}')
-    if data.get('effective_date'): meta.append(f'**生效日期**：{data["effective_date"]}')
-    if data.get('total_articles'): meta.append(f'**条文数**：{data["total_articles"]}')
+    if law.get('category'):       meta.append(f'**分类**：{law["category"]}')
+    if law.get('legal_domain'):   meta.append(f'**法律部门**：{law["legal_domain"]}')
+    if law.get('pub_date'):       meta.append(f'**公布日期**：{law["pub_date"]}')
+    if law.get('effective_date'): meta.append(f'**生效日期**：{law["effective_date"]}')
+    if law.get('total_articles'): meta.append(f'**条文数**：{law["total_articles"]}')
     if meta:
         lines.append('  \n'.join(meta))
         lines.append('')
 
-    if data.get('promulgation_info'):
-        lines.append(f'> {data["promulgation_info"]}')
+    if law.get('promulgation_info'):
+        lines.append(f'> {law["promulgation_info"]}')
         lines.append('')
 
     lines.append('---')
     lines.append('')
 
-    def render_articles(articles):
-        for art in articles:
-            content = art.get('content', '').strip()
-            if content:
-                lines.append(content)
-                lines.append('')
-
-    def render_section(sec):
-        lines.append(f'#### {sec["title"].strip()}')
-        lines.append('')
-        render_articles(sec.get('articles', []))
-
-    def render_chapter(ch):
-        lines.append(f'### {ch["title"].strip()}')
-        lines.append('')
-        for sec in ch.get('sections', []):
-            render_section(sec)
-        render_articles(ch.get('articles', []))
-
-    def render_part(pt):
-        lines.append(f'## {pt["title"].strip()}')
-        lines.append('')
-        for ch in pt.get('chapters', []):
-            render_chapter(ch)
-
-    if 'parts' in data:
-        for pt in data['parts']:
-            render_part(pt)
-    elif data.get('chapters'):
-        for ch in data['chapters']:
-            render_chapter(ch)
-    else:
-        full_text = (data.get('full_text') or '').strip()
-        if full_text:
-            lines.append(full_text)
+    for node in nodes:
+        t = node['type']
+        content = (node['content'] or '').strip()
+        if not content:
+            continue
+        if t == 'part':
+            lines.append(f'## {content}')
+            lines.append('')
+        elif t == 'chapter':
+            lines.append(f'### {content}')
+            lines.append('')
+        elif t == 'section':
+            lines.append(f'#### {content}')
+            lines.append('')
+        else:  # article
+            lines.append(content)
             lines.append('')
 
     return '\n'.join(lines)
 
 
-def build_markdown(json_dir: Path, md_dir: Path):
+def build_markdown(db_path: Path, md_dir: Path):
     import shutil
     if md_dir.exists():
         shutil.rmtree(md_dir)
 
-    paths = sorted(p for p in json_dir.rglob('*.json') if 'index' not in p.name)
+    conn = sqlite3.connect(db_path)
+    laws = conn.execute(
+        'SELECT id, title, filename, category, legal_domain, pub_date, '
+        'effective_date, promulgation_info, total_articles FROM laws ORDER BY id'
+    ).fetchall()
+    law_keys = ['id', 'title', 'filename', 'category', 'legal_domain',
+                'pub_date', 'effective_date', 'promulgation_info', 'total_articles']
+
     domain_unknown = 0
-    for path in paths:
-        with open(path, encoding='utf-8') as f:
-            data = json.load(f)
-        domain = data.get('legal_domain') or '其他'
-        if not data.get('legal_domain'):
+    for row in laws:
+        law = dict(zip(law_keys, row))
+        domain = law['legal_domain'] or '其他'
+        if not law['legal_domain']:
             domain_unknown += 1
-        if data.get('category') == '司法解释':
-            out_dir = md_dir / domain / '司法解释'
-        elif data.get('category') == '法律解释':
-            out_dir = md_dir / domain / '法律解释'
+
+        category = law['category'] or ''
+        if category in ('司法解释', '法律解释'):
+            out_dir = md_dir / domain / category
         else:
             out_dir = md_dir / domain
         out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / (path.stem + '.md')).write_text(law_to_md(data), encoding='utf-8')
 
+        nodes = conn.execute(
+            'SELECT type, content FROM nodes WHERE law_id=? ORDER BY global_order',
+            (law['id'],)
+        ).fetchall()
+        node_list = [{'type': r[0], 'content': r[1]} for r in nodes]
+
+        (out_dir / (law['filename'] + '.md')).write_text(
+            law_to_md(law, node_list), encoding='utf-8'
+        )
+
+    conn.close()
     print(f'Markdown 生成完成，输出目录：{md_dir}')
     print(f'  未知 legal_domain（归入"其他"）：{domain_unknown}')
     for d in sorted(md_dir.iterdir()):
         md_count = len(list(d.glob('*.md')))
         sub_count = sum(len(list(s.glob('*.md'))) for s in d.iterdir() if s.is_dir())
-        total_str = f'{md_count} 个' if not sub_count else f'{md_count} 个 + 司法解释 {sub_count} 个'
+        total_str = f'{md_count} 个' if not sub_count else f'{md_count} 个 + 子分类 {sub_count} 个'
         print(f'  {d.name}/  {total_str}')
 
 
