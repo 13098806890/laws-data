@@ -189,7 +189,8 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
                     '经济、税务与金融', '劳动与社会保障', '诉讼与司法程序', '其他'}
     # 旧的 legal_domain 目录名，首次迁移时一并清理
     OLD_DOMAINS = {'刑法', '宪法相关法', '民法典', '民法商法', '社会法',
-                   '经济法', '行政法', '诉讼与非诉讼程序法'}
+                   '经济法', '行政法', '诉讼与非诉讼程序法',
+                   '经济·税务·金融', '劳动·社会保障'}
     for name in KNOWN_GROUPS | OLD_DOMAINS:
         p = md_dir / name
         if p.exists():
