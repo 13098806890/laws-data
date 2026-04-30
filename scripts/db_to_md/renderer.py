@@ -77,7 +77,8 @@ def _apply_refs(content: str, ref_map: dict) -> str:
     return content
 
 
-def law_to_md(law: dict, nodes: list, ref_map: dict) -> str:
+def law_to_md(law: dict, nodes: list, ref_map: dict,
+              cited_by: dict, law_map: dict, md_dir: Path) -> str:
     lines = []
     lines.append(f'# {law["title"]}')
     lines.append('')
@@ -113,13 +114,62 @@ def law_to_md(law: dict, nodes: list, ref_map: dict) -> str:
         elif t == 'section':
             lines.append(f'#### {content}')
         else:
-            # article: add anchor + apply hyperlinks
+            # article: add anchor + apply outgoing hyperlinks + cited-by superscripts
             anchor_tag = f'<a id="art-{art_num}"></a>' if art_num else ''
-            linked = _apply_refs(content, ref_map)
-            lines.append(f'{anchor_tag}{linked}')
+            linked     = _apply_refs(content, ref_map)
+            sups       = _cited_by_superscripts(law['id'], art_num, cited_by,
+                                                law, law_map, md_dir) if art_num else ''
+            lines.append(f'{anchor_tag}{linked}{sups}')
         lines.append('')
 
     return '\n'.join(lines)
+
+
+def _build_cited_by_map(conn, md_dir: Path, law_map: dict) -> dict:
+    """
+    Build a reverse-citation map:
+    {(to_law_id, to_article_num) → [(from_law_id, from_article_num, from_filename, from_domain, from_category), ...]}
+    Only resolved cross-law citations (self-refs don't need incoming markers).
+    """
+    rows = conn.execute(
+        """SELECT ar.to_law_id, ar.to_article_num,
+                  ar.from_law_id, ar.from_article_num,
+                  lf.filename, lf.legal_domain, lf.category
+           FROM article_references ar
+           JOIN laws lf ON ar.from_law_id = lf.id
+           WHERE ar.resolved = 1 AND ar.ref_type = 'cross_law'
+             AND ar.to_article_num IS NOT NULL"""
+    ).fetchall()
+
+    cited_by = {}
+    for to_law_id, to_art_num, from_law_id, from_art_num, from_fn, from_domain, from_cat in rows:
+        key = (to_law_id, to_art_num)
+        cited_by.setdefault(key, []).append(
+            (from_law_id, from_art_num, from_fn, from_domain, from_cat)
+        )
+    return cited_by
+
+
+def _cited_by_superscripts(to_law_id, art_num, cited_by: dict,
+                            law_info: dict, law_map: dict, md_dir: Path) -> str:
+    """Return superscript links like <sup>[1](link)</sup><sup>[2](link)</sup>"""
+    citations = cited_by.get((to_law_id, art_num), [])
+    if not citations:
+        return ''
+    parts = []
+    for i, (from_law_id, from_art_num, from_fn, from_domain, from_cat) in enumerate(citations, 1):
+        anchor = f'#art-{from_art_num}'
+        from_law = {'legal_domain': from_domain, 'category': from_cat, 'filename': from_fn}
+        to_path  = _law_md_path(md_dir, from_law)
+        from_depth = len(_out_dir(md_dir, law_info).relative_to(md_dir).parts)
+        prefix = '../' * from_depth
+        try:
+            rel = to_path.relative_to(md_dir)
+            link = f'{prefix}{rel}{anchor}'
+        except ValueError:
+            link = anchor
+        parts.append(f'<sup>[{i}]({link})</sup>')
+    return ''.join(parts)
 
 
 def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
@@ -130,6 +180,10 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
     laws = conn.execute(
         f'SELECT {", ".join(LAW_KEYS)} FROM laws ORDER BY id'
     ).fetchall()
+
+    # build id→law_info lookup and cited-by map before rendering
+    law_map   = {dict(zip(LAW_KEYS, r))['id']: dict(zip(LAW_KEYS, r)) for r in laws}
+    cited_by  = _build_cited_by_map(conn, md_dir, law_map)
 
     domain_unknown = 0
     for row in laws:
@@ -149,7 +203,7 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
         ref_map = _build_ref_map(conn, law['id'], law, md_dir)
 
         (out_dir / (law['filename'] + '.md')).write_text(
-            law_to_md(law, node_list, ref_map), encoding='utf-8'
+            law_to_md(law, node_list, ref_map, cited_by, law_map, md_dir), encoding='utf-8'
         )
 
     conn.close()
