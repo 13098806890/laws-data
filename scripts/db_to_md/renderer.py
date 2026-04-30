@@ -24,7 +24,6 @@ def law_to_md(law: dict, nodes: list) -> str:
     if law.get('legal_domain'):   meta.append(f'**法律部门**：{law["legal_domain"]}')
     if law.get('pub_date'):       meta.append(f'**公布日期**：{law["pub_date"]}')
     if law.get('effective_date'): meta.append(f'**生效日期**：{law["effective_date"]}')
-    if law.get('total_articles'): meta.append(f'**条文数**：{law["total_articles"]}')
     if meta:
         lines.append('  \n'.join(meta))
         lines.append('')
