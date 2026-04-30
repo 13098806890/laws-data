@@ -684,13 +684,7 @@ def main():
             if data is None:
                 errors += 1
                 continue
-            if category == '司法解释':
-                domain = data.get('legal_domain') or '其他'
-                dst_dir = JSON_DIR / domain / '司法解释'
-                dst_dir.mkdir(parents=True, exist_ok=True)
-                out_path = dst_dir / (docx_path.stem + '.json')
-            else:
-                out_path = out_dir / (docx_path.stem + '.json')
+            out_path = out_dir / (docx_path.stem + '.json')
             write_json(data, out_path)
             total += 1
 
