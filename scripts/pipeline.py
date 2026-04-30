@@ -333,6 +333,10 @@ def get_legal_domain(title: str, data: dict, domain_idx: dict) -> str | None:
     for dept, keywords in KEYWORD_RULES:
         if any(kw in combined for kw in keywords):
             return dept
+
+    # 行政法规无法匹配关键词时，兜底归入行政法
+    if data.get('category') == '行政法规':
+        return '行政法'
     return None
 
 
