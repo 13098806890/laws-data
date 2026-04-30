@@ -11,7 +11,8 @@ from pathlib import Path
 from config import DB_PATH, MD_DIR
 
 LAW_KEYS = ['id', 'title', 'filename', 'category', 'legal_domain',
-            'pub_date', 'effective_date', 'promulgation_info', 'total_articles']
+            'pub_date', 'effective_date', 'promulgation_info',
+            'issuing_org', 'doc_number', 'total_articles']
 
 
 def law_to_md(law: dict, nodes: list) -> str:
@@ -22,6 +23,8 @@ def law_to_md(law: dict, nodes: list) -> str:
     meta = []
     if law.get('category'):       meta.append(f'**分类**：{law["category"]}')
     if law.get('legal_domain'):   meta.append(f'**法律部门**：{law["legal_domain"]}')
+    if law.get('issuing_org'):    meta.append(f'**发布机关**：{law["issuing_org"]}')
+    if law.get('doc_number'):     meta.append(f'**发文字号**：{law["doc_number"]}')
     if law.get('pub_date'):       meta.append(f'**公布日期**：{law["pub_date"]}')
     if law.get('effective_date'): meta.append(f'**生效日期**：{law["effective_date"]}')
     if meta:

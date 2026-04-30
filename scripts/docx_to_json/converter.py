@@ -21,6 +21,26 @@ from docx_to_json.structure import CHAPTER_RE, SECTION_RE, normalize_title, add_
 ARTICLE_RE    = re.compile(r'^第[一二三四五六七八九十百千]+条[　\s]')
 TOC_RE        = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
 CN_SECTION_RE = re.compile(r'^[一二三四五六七八九十百]+(?:十[一二三四五六七八九]?)?、\S')
+DOC_NUM_RE    = re.compile(r'[（(]?[一-鿿]{1,8}[〔\[]\d{4}[〕\]]\d+号[）)]?')
+ORG_RE        = re.compile(r'^(最高人民法院|最高人民检察院|国务院|全国人民代表大会[一-鿿]*|'
+                           r'中华人民共和国[一-鿿]{2,8}(?:部|委|局|署)|'
+                           r'[一-鿿]{2,10}(?:部|委员会|局|署|总局)(?:、[一-鿿]{2,10}(?:部|委员会|局|署|总局))*)')
+
+
+def _extract_org_and_docnum(paras: list) -> tuple[str, str]:
+    """从文件头部段落提取发布机关和发文字号，搜索范围限前15段。"""
+    issuing_org = ''
+    doc_number  = ''
+    for text in paras[:15]:
+        if not doc_number:
+            m = DOC_NUM_RE.search(text)
+            if m and len(text) < 30:  # 发文字号是独立短行
+                doc_number = m.group(0).strip('（）()')
+        if not issuing_org:
+            m = ORG_RE.match(text)
+            if m and len(text) < 40:
+                issuing_org = m.group(0)
+    return issuing_org, doc_number
 
 
 def extract_content(doc_path: Path) -> dict:
@@ -120,11 +140,14 @@ def extract_content(doc_path: Path) -> dict:
         sum(len(s.get('articles', [])) for s in ch.get('sections', []))
         for ch in chapters
     )
+    issuing_org, doc_number = _extract_org_and_docnum(paras)
     return {
         'promulgation_info': promulgation_info,
-        'full_text': '\n'.join(full_text_lines),
-        'chapters': chapters,
-        'total_articles': total,
+        'issuing_org':       issuing_org,
+        'doc_number':        doc_number,
+        'full_text':         '\n'.join(full_text_lines),
+        'chapters':          chapters,
+        'total_articles':    total,
     }
 
 
@@ -146,6 +169,8 @@ def process_docx(docx_path: Path, category: str,
         'pub_date':          pub_date,
         'effective_date':    None,
         'promulgation_info': content['promulgation_info'],
+        'issuing_org':       content['issuing_org'],
+        'doc_number':        content['doc_number'],
         'legal_domain':      None,
         'total_articles':    content['total_articles'],
         'chapters':          content['chapters'],

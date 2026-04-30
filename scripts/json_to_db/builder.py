@@ -23,6 +23,8 @@ def create_schema(conn):
             pub_date TEXT,
             effective_date TEXT,
             promulgation_info TEXT,
+            issuing_org TEXT,
+            doc_number TEXT,
             total_articles INTEGER,
             version_date TEXT,
             is_current INTEGER DEFAULT 1
@@ -142,12 +144,13 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         version_date = pub_date_from_stem(stem)
         cur = conn.execute(
             """INSERT INTO laws (title, filename, category, legal_domain, pub_date,
-                                 effective_date, promulgation_info, total_articles,
-                                 version_date, is_current)
-               VALUES (?,?,?,?,?,?,?,?,?,1)""",
+                                 effective_date, promulgation_info, issuing_org, doc_number,
+                                 total_articles, version_date, is_current)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,1)""",
             (data['title'], stem, data.get('category'), data.get('legal_domain'),
              data.get('pub_date'), data.get('effective_date'),
-             data.get('promulgation_info'), data.get('total_articles'), version_date)
+             data.get('promulgation_info'), data.get('issuing_org'), data.get('doc_number'),
+             data.get('total_articles'), version_date)
         )
         insert_nodes(conn, cur.lastrowid, data)
 
