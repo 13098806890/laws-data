@@ -140,7 +140,8 @@ def extract_content(doc_path: Path) -> dict:
             if current_chapter:
                 current_chapter['sections'].append(current_section)
         elif ARTICLE_RE.match(text):
-            art_title = text[:text.index('　') + 1] if '　' in text else text[:6]
+            m = re.match(r'^(第[一二三四五六七八九十百千]+条[　\s]?)', text)
+            art_title = m.group(1) if m else (text[:text.index('　') + 1] if '　' in text else text[:8])
             article = {'title': art_title, 'content': text}
             target = current_section or current_chapter
             if target:
