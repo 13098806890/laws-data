@@ -761,9 +761,14 @@ def law_to_md(data: dict) -> str:
     if 'parts' in data:
         for pt in data['parts']:
             render_part(pt)
-    else:
-        for ch in data.get('chapters', []):
+    elif data.get('chapters'):
+        for ch in data['chapters']:
             render_chapter(ch)
+    else:
+        full_text = (data.get('full_text') or '').strip()
+        if full_text:
+            lines.append(full_text)
+            lines.append('')
 
     return '\n'.join(lines)
 
