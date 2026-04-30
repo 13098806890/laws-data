@@ -8,21 +8,19 @@
 
 ## 📊 数据概览
 
-| 类别 | 数量 | law_id 段 |
-|------|-----:|-----------|
-| 🔴 宪法 | 1 | `1000001–1099999` |
-| 🟠 法律 | 442 | `1100001–1999999` |
-| 🟡 修正案 | 12 | `2000001–2099999` |
-| 🟡 决定 | 4 | `2100001–2199999` |
-| 🟢 法律解释 | 25 | `3000001–3499999` |
-| 🟢 司法解释 | 682 | `3500001–4999999` |
-| 🔵 行政法规 | 727 | `5000001–6499999` |
-| 🔵 监察法规 | 3 | `6500001–6999999` |
-| ⚪ 地方性法规（预留）| — | `7000001–7999999` |
-| ⚪ 地方性规章（预留）| — | `8000001–8999999` |
-| **合计** | **1896** | |
+| 类别 | 数量 |
+|------|-----:|
+| 宪法 | 1 |
+| 法律 | 310 |
+| 修正案 | 12 |
+| 决定 | 2 |
+| 法律解释 | 25 |
+| 司法解释 | 566 |
+| 行政法规 | 607 |
+| 监察法规 | 2 |
+| **合计** | **1525** |
 
-**覆盖法律部门：** 宪法相关法 · 民法商法 · 民法典 · 行政法 · 经济法 · 社会法 · 刑法 · 诉讼与非诉讼程序法
+**展示分组：** 宪法与国家机构 · 民事与商事 · 刑事 · 行政与公法 · 经济、税务与金融 · 劳动与社会保障 · 诉讼与司法程序
 
 ## 📦 数据来源
 
@@ -46,19 +44,29 @@ laws_data/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── 📂 民法典/                     # Markdown 全文（按 legal_domain 分类，is_current=1）
-│   └── 司法解释/                  # 9 部民法典司法解释
-├── 📂 民法商法/
+├── 📂 宪法与国家机构/             # Markdown 全文（按展示分组，is_current=1）
+│   ├── 宪法/
+│   ├── 法律及决定/
+│   ├── 行政法规/
 │   └── 司法解释/
-├── 📂 刑法/
-│   ├── 司法解释/
-│   └── 法律解释/
-├── 📂 行政法/
-├── 📂 经济法/
-├── 📂 社会法/
-├── 📂 宪法相关法/
-├── 📂 诉讼与非诉讼程序法/
-│   └── 司法解释/
+├── 📂 民事与商事/
+│   ├── 民法典/
+│   ├── 合同与债权/
+│   ├── 公司与破产/
+│   ├── 知识产权/
+│   └── ...（共 10 个子分组）
+├── 📂 刑事/
+│   ├── 刑法及修正案/
+│   ├── 法律解释/
+│   ├── 财产犯罪/
+│   └── ...（共 6 个子分组）
+├── 📂 行政与公法/
+│   ├── 行政法律/
+│   ├── 国家赔偿/
+│   └── 行政法规/（按 20 个主题细分）
+├── 📂 经济、税务与金融/
+├── 📂 劳动与社会保障/
+├── 📂 诉讼与司法程序/
 ├── 📂 references/
 │   └── article_references.json   # 法条间引用关系（跨法引用 + 本法自引）
 ├── 📂 scripts/
@@ -74,11 +82,11 @@ laws_data/
 │   │   ├── effective_date.py
 │   │   └── structure.py
 │   ├── json_to_db/                # 第二阶段：JSON → SQLite
-│   │   └── builder.py
+│   │   ├── builder.py
+│   │   └── display_group.py       # 展示分组映射表
 │   └── db_to_md/                  # 第三阶段：DB → Markdown
 │       └── renderer.py
-├── 📄 law_index.json              # 全局法律 ID 索引（1896 条）
-└── 🗄️  law_content.db             # SQLite 数据库（pipeline 产物，约 100MB）
+└── 🗄️  law_content.db             # SQLite 数据库（pipeline 产物，约 150MB）
 ```
 
 ---
@@ -91,19 +99,19 @@ laws_data/
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `id` | INTEGER PK | 等于 `law_id`，与 JSON 文件保持一致 |
+| `id` | INTEGER PK | 内部主键 |
 | `title` | TEXT | 完整标题 |
 | `filename` | TEXT UNIQUE | 格式：`{标题}_{YYYYMMDD}` |
-| `category` | TEXT | 法律分类（法律 / 行政法规 / 司法解释 …） |
-| `legal_domain` | TEXT | 法律部门（民法商法 / 刑法 / 行政法 …） |
+| `category` | TEXT | 来源类型（法律 / 行政法规 / 司法解释 …） |
+| `legal_domain` | TEXT | 学术法律部门（民法商法 / 刑法 / 行政法 …） |
+| `subject_area` | TEXT | 行政法规主题分类（交通运输 / 税务财政 …，非行政法规为空） |
 | `pub_date` | TEXT | 公布日期 `YYYY-MM-DD` |
 | `effective_date` | TEXT | 生效日期 `YYYY-MM-DD` |
 | `promulgation_info` | TEXT | 发布说明全文（通过/公布/施行信息） |
 | `issuing_org` | TEXT | 发布机关（最高人民法院 / 国务院 …） |
 | `doc_number` | TEXT | 发文字号（如 法释〔2000〕29号） |
 | `total_articles` | INTEGER | 条文总数 |
-| `full_text` | TEXT | 法律全文（清理多余空格换行后存储） |
-| `version_date` | TEXT | 同 `pub_date`，用于多版本区分 |
+| `full_text` | TEXT | 法律全文 |
 | `is_current` | INTEGER | **1 = 现行版本，0 = 历史版本**（同名多版取最新） |
 
 ---
@@ -126,8 +134,6 @@ laws_data/
 | `section_num` | INTEGER | 所在节序号（无节结构为 NULL） |
 | `article_num` | INTEGER | 条文序号（第十二条 → `12`） |
 
-> **定位示例：** `WHERE law_id=1100001 AND chapter_num=3 AND article_num=15` 直接定位到具体条文。
-
 ---
 
 ### 🟢 `nodes_fts` 虚拟表 — 全文搜索
@@ -143,45 +149,33 @@ laws_data/
 
 ---
 
+### 🟣 `display_group_map` 表 — 展示分组映射
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `law_id` | INTEGER PK FK | 关联 `laws.id` |
+| `display_group` | TEXT | 顶层展示分组（7 个） |
+| `display_subgroup` | TEXT | 二级子分组（行政法规含三级，用 `/` 分隔） |
+
+与 `legal_domain` 解耦，单独维护，只需重跑 `display_group.py` 即可更新，无需重建整个数据库。
+
+---
+
 ### 🔴 `article_references` 表 — 条文引用关系
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `from_node_id` | INTEGER FK | 引用方节点 `nodes.id` |
+| `from_node_id` | INTEGER FK | 引用方节点 |
 | `from_law_id` | INTEGER FK | 引用方法律 |
 | `from_article_num` | INTEGER | 引用方条文序号 |
-| `from_chapter_num` | INTEGER | 引用方章序号 |
-| `from_section_num` | INTEGER | 引用方节序号 |
-| `from_part_num` | INTEGER | 引用方编序号 |
-| `to_node_id` | INTEGER FK | 被引用方节点 `nodes.id` |
+| `to_node_id` | INTEGER FK | 被引用方节点 |
 | `to_law_id` | INTEGER FK | 被引用方法律 |
 | `to_article_num` | INTEGER | 被引用方条文序号 |
-| `to_chapter_num` | INTEGER | 被引用方章序号 |
-| `to_section_num` | INTEGER | 被引用方节序号 |
-| `to_part_num` | INTEGER | 被引用方编序号 |
 | `ref_type` | TEXT | `cross_law`（跨法）/ `self_ref`（本法自引） |
-| `resolved` | INTEGER | 1 = 已解析到具体条文，0 = 未解析 |
+| `resolved` | INTEGER | 1 = 已解析到具体条文 |
 | `raw_text` | TEXT | 原文引用文字 |
 
 > 同步自 `references/article_references.json`，由 `pipeline.py --only-refs` 更新。
-
----
-
-## 📎 law_index.json — 全局法律 ID 索引
-
-每部法律一条记录，稳定不变（新增法律追加，已有 ID 永久固定）：
-
-```json
-{
-  "law_id":        1100001,
-  "filename":      "中华人民共和国合同法_19990315",
-  "title":         "中华人民共和国合同法",
-  "category":      "法律",
-  "legal_domain":  "民法商法",
-  "pub_date":      "1999-03-15",
-  "effective_date":"1999-10-01"
-}
-```
 
 ---
 
@@ -193,7 +187,6 @@ laws_data/
 
 ```json
 {
-  "law_id": 1100001,
   "title": "中华人民共和国合同法",
   "category": "法律",
   "pub_date": "1999-03-15",
@@ -223,7 +216,6 @@ laws_data/
 
 ```json
 {
-  "law_id": 1100313,
   "title": "中华人民共和国民法典",
   "parts": [
     {
@@ -244,7 +236,6 @@ laws_data/
 
 ```json
 {
-  "from_law_id":      3500601,
   "from_law":         "人民检察院公益诉讼办案规则",
   "from_article":     "第六十六条",
   "from_article_num": 66,
@@ -254,13 +245,9 @@ laws_data/
   "refs": [
     {
       "type":           "cross_law",
-      "to_law_id":      1100296,
       "to_law":         "中华人民共和国法官法",
       "to_article":     "第四十六条",
       "to_article_num": 46,
-      "to_chapter_num": 4,
-      "to_section_num": null,
-      "to_part_num":    null,
       "resolved":       true,
       "raw_text":       "《中华人民共和国法官法》第四十六条"
     }
@@ -275,15 +262,8 @@ laws_data/
 每个 Markdown 文件中：
 
 - **条文锚点**：每条条文有 `<a id="art-N">` 锚点，可通过 `文件名.md#art-N` 直接定位
-- **出向链接**：条文正文中引用其他法律条文的文字（如「《中华人民共和国合同法》第五十二条」、「行政诉讼法第五十一条」）自动转为可点击的跨文件链接，跳转到目标条文
-- **入向标注**：被其他法律引用的条文末尾，附有上标数字 `[1]` `[2]` ...，鼠标悬停显示「被《法律名》第N条引用」，点击跳转到引用方对应条文
-
-示例：
-```
-<a id="art-46"></a>第四十六条　……条文内容……
-&thinsp;<sup><a href="..." title="被《人民检察院公益诉讼办案规则》第66条引用">[1]</a></sup>
-&thinsp;<sup><a href="..." title="被《人民检察院民事诉讼监督规则》第101条引用">[2]</a></sup>
-```
+- **出向链接**：条文正文中引用其他法律条文的文字自动转为跨文件链接，跳转到目标条文
+- **入向标注**：被其他法律引用的条文末尾附有上标 `[1]` `[2]`，鼠标悬停显示「被《法律名》第N条引用」，点击跳转到引用方条文
 
 ---
 
@@ -291,11 +271,7 @@ laws_data/
 
 ```sql
 -- 按顺序展示某法律全部内容
-SELECT * FROM nodes WHERE law_id = 1100001 ORDER BY global_order;
-
--- 精确定位：民法典第三编第五章第十二条
-SELECT * FROM nodes
-WHERE law_id = 1100313 AND part_num = 3 AND chapter_num = 5 AND article_num = 12;
+SELECT * FROM nodes WHERE law_id = ? ORDER BY global_order;
 
 -- 全文搜索（任意中文短语，最少3字）
 SELECT n.article_number, n.content, l.title
@@ -304,17 +280,16 @@ JOIN nodes n ON f.rowid = n.id
 JOIN laws l ON n.law_id = l.id
 WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
 
--- 只查现行版本
-SELECT * FROM laws WHERE legal_domain = '民法商法' AND is_current = 1;
+-- 按展示分组浏览
+SELECT l.title, l.category, dgm.display_subgroup
+FROM laws l
+JOIN display_group_map dgm ON l.id = dgm.law_id
+WHERE dgm.display_group = '民事与商事' AND l.is_current = 1;
 
 -- 某机构发布的全部司法解释
 SELECT title, doc_number, pub_date FROM laws
 WHERE issuing_org = '最高人民法院' AND category = '司法解释'
 ORDER BY pub_date DESC;
-
--- 查某法律的所有历史版本
-SELECT title, pub_date, is_current FROM laws
-WHERE title = '中华人民共和国公司法' ORDER BY pub_date;
 ```
 
 ---
@@ -340,6 +315,7 @@ cd scripts
 python3 -m docx_to_json.converter   # docx → JSON
 python3 generate_law_index.py        # 分配/更新 law_id
 python3 -m json_to_db.builder        # JSON → DB
+python3 -m json_to_db.display_group  # 更新展示分组映射
 python3 -m db_to_md.renderer         # DB → Markdown
 python3 extract_references.py        # 提取引用关系
 
