@@ -16,8 +16,8 @@ _DOMAIN_TO_GROUP = {
     '民法商法':   '民事与商事',
     '刑法':       '刑事',
     '行政法':     '行政与公法',
-    '经济法':     '经济·税务·金融',
-    '社会法':     '劳动·社会保障',
+    '经济法':     '经济、税务与金融',
+    '社会法':     '劳动与社会保障',
     '诉讼与非诉讼程序法': '诉讼与司法程序',
 }
 
@@ -53,7 +53,7 @@ _ADMIN_SUBGROUPS = [
     ('司法解释',     ['司法解释']),
 ]
 
-# 经济·税务·金融 子分组
+# 经济、税务与金融 子分组
 _ECON_SUBGROUPS = [
     ('税收·财政',     ['税', '财政', '预算', '审计', '会计', '国有资产']),
     ('金融·证券·保险', ['金融', '银行', '证券', '保险', '信托', '外汇', '货币', '期货']),
@@ -62,7 +62,7 @@ _ECON_SUBGROUPS = [
     ('其他经济法规',  []),
 ]
 
-# 劳动·社会保障 子分组
+# 劳动与社会保障 子分组
 _LABOR_SUBGROUPS = [
     ('劳动就业',      ['劳动', '就业', '工资', '劳动合同', '劳动争议']),
     ('社会保险·福利', ['社会保险', '工伤', '失业', '养老', '医疗保险', '社会保障']),
@@ -199,9 +199,9 @@ def compute_display(law: dict) -> tuple[str, str]:
         subgroup = _criminal_subgroup(law)
     elif group == '行政与公法':
         subgroup = _admin_subgroup(law)
-    elif group == '经济·税务·金融':
+    elif group == '经济、税务与金融':
         subgroup = _econ_subgroup(law)
-    elif group == '劳动·社会保障':
+    elif group == '劳动与社会保障':
         subgroup = _labor_subgroup(law)
     elif group == '诉讼与司法程序':
         subgroup = _proc_subgroup(law)
