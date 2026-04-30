@@ -9,7 +9,7 @@ CN_ORD = {'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':
           '九':9,'十':10,'百':100,'千':1000}
 
 
-def _cn_to_int(s: str) -> int:
+def cn_to_int(s: str) -> int:
     s = s.strip()
     result = tmp = 0
     for c in s:
@@ -71,7 +71,7 @@ def add_structure(data: dict) -> dict:
         if PART_RE.match(line):
             if current: raw_parts.append(current)
             m = re.match(r'^第([一二三四五六七八九十百千零]+)编', line)
-            order = _cn_to_int(m.group(1)) if m else len(raw_parts) + 1
+            order = cn_to_int(m.group(1)) if m else len(raw_parts) + 1
             current = {'title': normalize_title(line), 'order_index': order, 'ch_titles': []}
         elif CHAPTER_RE.match(line):
             if current is None:

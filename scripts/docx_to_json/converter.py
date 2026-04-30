@@ -16,9 +16,12 @@ from config import SRC_DIRS, JSON_DIR
 from utils import title_from_stem, pub_date_from_stem
 from docx_to_json.domain import build_xlsx_index, build_domain_index, get_legal_domain
 from docx_to_json.effective_date import extract_effective_date
-from docx_to_json.structure import CHAPTER_RE, SECTION_RE, normalize_title, add_structure
+from docx_to_json.structure import CHAPTER_RE, SECTION_RE, normalize_title, add_structure, cn_to_int
 
 ARTICLE_RE    = re.compile(r'^第[一二三四五六七八九十百千]+条[　\s]')
+_ART_NUM_RE   = re.compile(r'^第([一二三四五六七八九十百千]+)条')
+# 段落内嵌条文切分：匹配段落中间出现的「\n　　第X条」或「\n第X条」
+_INLINE_ART_RE = re.compile(r'\n[　\s]*(?=第[一二三四五六七八九十百千]+条[　\s])')
 TOC_RE        = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
 CN_SECTION_RE = re.compile(r'^[一二三四五六七八九十百]+(?:十[一二三四五六七八九]?)?、\S')
 DOC_NUM_RE = re.compile(r'[（(]?[一-鿿]{1,8}[〔\[]\d{4}[〕\]]\d+号[）)]?')
@@ -84,73 +87,109 @@ def extract_content(doc_path: Path) -> dict:
     in_toc = False
     pending = []
     uses_cn_sections = False  # 是否是汉字序号章节结构（一、二、三…）
+    _last_art_num = 0  # 上一个已处理条文的序号，用于段落内切分验证
 
-    for text in paras[start_idx:]:
-        if TOC_RE.match(text) or text in ('目　　录', '目  录', '目录'):
-            in_toc = True
-            continue
+    def _split_inline_articles(text: str) -> list[str]:
+        """
+        检测段落内是否包含多个连续条文（第X条紧跟第X-1条之后出现）。
+        只有编号连续时才切分，避免误切正文中提到的条文引用。
+        """
+        nonlocal _last_art_num
+        # 先按换行+缩进拆候选片段
+        parts = _INLINE_ART_RE.split(text)
+        if len(parts) == 1:
+            return [text]
 
-        if in_toc:
-            if CHAPTER_RE.match(text) or SECTION_RE.match(text):
-                pending.append(text)
-            elif CN_SECTION_RE.match(text):
-                pending.append(text)
-                uses_cn_sections = True
-            elif ARTICLE_RE.match(text):
-                in_toc = False
-                if uses_cn_sections:
-                    # 汉字序号结构：TOC 里收集到的是章节名，直接从 pending 建章
-                    for s in pending:
-                        if CN_SECTION_RE.match(s):
-                            full_text_lines.append(s)
-                            current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
-                            chapters.append(current_chapter)
-                            current_section = None
-                else:
-                    last_ch1 = next((j for j, s in enumerate(pending) if CHAPTER_RE.match(s)), -1)
-                    if last_ch1 >= 0:
-                        pending = pending[last_ch1:]
-                    for s in pending:
-                        full_text_lines.append(s)
-                        if CHAPTER_RE.match(s):
-                            current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
-                            chapters.append(current_chapter)
-                            current_section = None
-                        elif SECTION_RE.match(s):
-                            current_section = {'title': normalize_title(s), 'articles': []}
-                            if current_chapter:
-                                current_chapter['sections'].append(current_section)
-                pending = []
-            else:
-                pending = []
-            if in_toc:
+        result = []
+        buf = parts[0]
+        for seg in parts[1:]:
+            m = _ART_NUM_RE.match(seg)
+            if m:
+                seg_num = cn_to_int(m.group(1))
+                # 取 buf 的条号
+                bm = _ART_NUM_RE.match(buf)
+                buf_num = cn_to_int(bm.group(1)) if bm else _last_art_num
+                if seg_num == buf_num + 1:
+                    result.append(buf.strip())
+                    buf = seg
+                    continue
+            # 编号不连续，不切分，拼回
+            buf = buf + '\n' + seg
+        result.append(buf.strip())
+
+        # 更新 _last_art_num 为这批里最后一条的编号
+        lm = _ART_NUM_RE.match(result[-1])
+        if lm:
+            _last_art_num = cn_to_int(lm.group(1))
+        return result
+
+    for raw_text in paras[start_idx:]:
+        # 展开段落内嵌的连续条文（如飞行基本规则的排版方式）
+        for text in _split_inline_articles(raw_text):
+            if TOC_RE.match(text) or text in ('目　　录', '目  录', '目录'):
+                in_toc = True
                 continue
 
-        full_text_lines.append(text)
+            if in_toc:
+                if CHAPTER_RE.match(text) or SECTION_RE.match(text):
+                    pending.append(text)
+                elif CN_SECTION_RE.match(text):
+                    pending.append(text)
+                    uses_cn_sections = True
+                elif ARTICLE_RE.match(text):
+                    in_toc = False
+                    if uses_cn_sections:
+                        for s in pending:
+                            if CN_SECTION_RE.match(s):
+                                full_text_lines.append(s)
+                                current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
+                                chapters.append(current_chapter)
+                                current_section = None
+                    else:
+                        last_ch1 = next((j for j, s in enumerate(pending) if CHAPTER_RE.match(s)), -1)
+                        if last_ch1 >= 0:
+                            pending = pending[last_ch1:]
+                        for s in pending:
+                            full_text_lines.append(s)
+                            if CHAPTER_RE.match(s):
+                                current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
+                                chapters.append(current_chapter)
+                                current_section = None
+                            elif SECTION_RE.match(s):
+                                current_section = {'title': normalize_title(s), 'articles': []}
+                                if current_chapter:
+                                    current_chapter['sections'].append(current_section)
+                    pending = []
+                else:
+                    pending = []
+                if in_toc:
+                    continue
 
-        if uses_cn_sections and CN_SECTION_RE.match(text):
-            current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
-            chapters.append(current_chapter)
-            current_section = None
-        elif CHAPTER_RE.match(text):
-            current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
-            chapters.append(current_chapter)
-            current_section = None
-        elif SECTION_RE.match(text):
-            current_section = {'title': normalize_title(text), 'articles': []}
-            if current_chapter:
-                current_chapter['sections'].append(current_section)
-        elif ARTICLE_RE.match(text):
-            m = re.match(r'^(第[一二三四五六七八九十百千]+条[　\s]?)', text)
-            art_title = m.group(1) if m else (text[:text.index('　') + 1] if '　' in text else text[:8])
-            article = {'title': art_title, 'content': text}
-            target = current_section or current_chapter
-            if target:
-                target['articles'].append(article)
-            else:
-                if not chapters:
-                    chapters.append({'title': '正文', 'sections': [], 'articles': []})
-                chapters[-1]['articles'].append(article)
+            full_text_lines.append(text)
+
+            if uses_cn_sections and CN_SECTION_RE.match(text):
+                current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
+                chapters.append(current_chapter)
+                current_section = None
+            elif CHAPTER_RE.match(text):
+                current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
+                chapters.append(current_chapter)
+                current_section = None
+            elif SECTION_RE.match(text):
+                current_section = {'title': normalize_title(text), 'articles': []}
+                if current_chapter:
+                    current_chapter['sections'].append(current_section)
+            elif ARTICLE_RE.match(text):
+                m = re.match(r'^(第[一二三四五六七八九十百千]+条[　\s]?)', text)
+                art_title = m.group(1) if m else (text[:text.index('　') + 1] if '　' in text else text[:8])
+                article = {'title': art_title, 'content': text}
+                target = current_section or current_chapter
+                if target:
+                    target['articles'].append(article)
+                else:
+                    if not chapters:
+                        chapters.append({'title': '正文', 'sections': [], 'articles': []})
+                    chapters[-1]['articles'].append(article)
 
     total = sum(
         len(ch.get('articles', [])) +
