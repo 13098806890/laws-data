@@ -152,24 +152,29 @@ def _build_cited_by_map(conn, md_dir: Path, law_map: dict) -> dict:
 
 def _cited_by_superscripts(to_law_id, art_num, cited_by: dict,
                             law_info: dict, law_map: dict, md_dir: Path) -> str:
-    """Return superscript links like <sup>[1](link)</sup><sup>[2](link)</sup>"""
+    """Return superscript links like <sup>[1](link)</sup> with spacing and tooltips."""
     citations = cited_by.get((to_law_id, art_num), [])
     if not citations:
         return ''
     parts = []
     for i, (from_law_id, from_art_num, from_fn, from_domain, from_cat) in enumerate(citations, 1):
-        anchor = f'#art-{from_art_num}'
+        anchor   = f'#art-{from_art_num}'
         from_law = {'legal_domain': from_domain, 'category': from_cat, 'filename': from_fn}
         to_path  = _law_md_path(md_dir, from_law)
         from_depth = len(_out_dir(md_dir, law_info).relative_to(md_dir).parts)
         prefix = '../' * from_depth
         try:
-            rel = to_path.relative_to(md_dir)
+            rel  = to_path.relative_to(md_dir)
             link = f'{prefix}{rel}{anchor}'
         except ValueError:
             link = anchor
-        parts.append(f'<sup>[{i}]({link})</sup>')
-    return ''.join(parts)
+        # tooltip: law title from law_map, fallback to filename
+        from_law_info = law_map.get(from_law_id, {})
+        law_title     = from_law_info.get('title') or from_fn
+        art_label     = f'第{from_art_num}条' if from_art_num else ''
+        tooltip       = f'被《{law_title}》{art_label}引用'
+        parts.append(f'<sup><a href="{link}" title="{tooltip}">[{i}]</a></sup>')
+    return '&thinsp;' + '&thinsp;'.join(parts)
 
 
 def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
