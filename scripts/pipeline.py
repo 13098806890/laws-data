@@ -608,8 +608,16 @@ def insert_nodes(conn, law_id: int, data: dict):
             for ch in pt.get('chapters', []):
                 _insert_chapter(conn, law_id, pid, ch)
     else:
-        for ch in data.get('chapters', []):
-            _insert_chapter(conn, law_id, None, ch)
+        chapters = data.get('chapters', [])
+        if chapters:
+            for ch in chapters:
+                _insert_chapter(conn, law_id, None, ch)
+        else:
+            # 无条文结构（法律解释、决定等），将 full_text 整体作为单条 article 写入
+            full_text = (data.get('full_text') or '').strip()
+            if full_text:
+                art = {'title': '', 'content': full_text}
+                _insert_article(conn, law_id, None, art, 1, 1)
 
 
 def build_db(json_dir: Path, db_path: Path):
@@ -771,6 +779,8 @@ def build_markdown(json_dir: Path, md_dir: Path):
             domain_unknown += 1
         if data.get('category') == '司法解释':
             out_dir = md_dir / domain / '司法解释'
+        elif data.get('category') == '法律解释':
+            out_dir = md_dir / domain / '法律解释'
         else:
             out_dir = md_dir / domain
         out_dir.mkdir(parents=True, exist_ok=True)
