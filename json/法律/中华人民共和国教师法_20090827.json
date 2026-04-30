@@ -8,7 +8,7 @@
   "total_articles": 43,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -36,21 +36,21 @@
       "global_order": 4
     },
     {
-      "title": "第五章　考　　核",
+      "title": "第五章　考核",
       "sections": [],
       "articles": [],
       "order_index": 5,
       "global_order": 5
     },
     {
-      "title": "第六章　待　　遇",
+      "title": "第六章　待遇",
       "sections": [],
       "articles": [],
       "order_index": 6,
       "global_order": 6
     },
     {
-      "title": "第七章　奖　　励",
+      "title": "第七章　奖励",
       "sections": [],
       "articles": [],
       "order_index": 7,
@@ -64,14 +64,14 @@
       "global_order": 8
     },
     {
-      "title": "第九章　附　　则",
+      "title": "第九章　附则",
       "sections": [],
       "articles": [],
       "order_index": 9,
       "global_order": 9
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -229,7 +229,7 @@
       "global_order": 30
     },
     {
-      "title": "第五章　考　　核",
+      "title": "第五章　考核",
       "sections": [],
       "articles": [
         {
@@ -255,7 +255,7 @@
       "global_order": 35
     },
     {
-      "title": "第六章　待　　遇",
+      "title": "第六章　待遇",
       "sections": [],
       "articles": [
         {
@@ -311,7 +311,7 @@
       "global_order": 39
     },
     {
-      "title": "第七章　奖　　励",
+      "title": "第七章　奖励",
       "sections": [],
       "articles": [
         {
@@ -369,7 +369,7 @@
       "global_order": 51
     },
     {
-      "title": "第九章　附　　则",
+      "title": "第九章　附则",
       "sections": [],
       "articles": [
         {

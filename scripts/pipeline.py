@@ -86,6 +86,13 @@ def pub_date_from_stem(stem: str) -> str | None:
     return None
 
 
+def normalize_title(t: str) -> str:
+    """去掉标题里用于对齐的全角空格，如'第一章　物　　权' → '第一章　物权'"""
+    t = t.strip()
+    # Remove 2+ consecutive full-width spaces between CJK characters (typographic padding)
+    return re.sub(r'(?<=[一-鿿])　{2,}(?=[一-鿿])', '', t)
+
+
 def extract_content(doc_path: Path) -> dict:
     if doc_path.suffix.lower() == '.doc':
         result = subprocess.run(
@@ -130,11 +137,11 @@ def extract_content(doc_path: Path) -> dict:
                 for s in pending:
                     full_text_lines.append(s)
                     if CHAPTER_RE.match(s):
-                        current_chapter = {'title': s, 'sections': [], 'articles': []}
+                        current_chapter = {'title': normalize_title(s), 'sections': [], 'articles': []}
                         chapters.append(current_chapter)
                         current_section = None
                     elif SECTION_RE.match(s):
-                        current_section = {'title': s, 'articles': []}
+                        current_section = {'title': normalize_title(s), 'articles': []}
                         if current_chapter:
                             current_chapter['sections'].append(current_section)
                 pending = []
@@ -146,11 +153,11 @@ def extract_content(doc_path: Path) -> dict:
         full_text_lines.append(text)
 
         if CHAPTER_RE.match(text):
-            current_chapter = {'title': text, 'sections': [], 'articles': []}
+            current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
             chapters.append(current_chapter)
             current_section = None
         elif SECTION_RE.match(text):
-            current_section = {'title': text, 'articles': []}
+            current_section = {'title': normalize_title(text), 'articles': []}
             if current_chapter:
                 current_chapter['sections'].append(current_section)
         elif ARTICLE_RE.match(text):
@@ -375,7 +382,7 @@ def add_structure(data: dict) -> dict:
             if current: raw_parts.append(current)
             m = re.match(r'^第([一二三四五六七八九十百千零]+)编', line)
             order = cn_to_int(m.group(1)) if m else len(raw_parts) + 1
-            current = {'title': line, 'order_index': order, 'ch_titles': []}
+            current = {'title': normalize_title(line), 'order_index': order, 'ch_titles': []}
         elif CHAPTER_RE.match(line):
             if current is None:
                 current = {'title': None, 'order_index': 1, 'ch_titles': []}
@@ -686,7 +693,90 @@ def main():
     print('\n=== JSON → 数据库 ===')
     build_db(JSON_DIR, DB_PATH)
 
+    print('\n=== JSON → Markdown ===')
+    build_markdown(JSON_DIR, BASE_DIR / 'markdown')
+
     print('\n=== 完成 ===')
+
+
+def law_to_md(data: dict) -> str:
+    lines = []
+    lines.append(f'# {data["title"]}')
+    lines.append('')
+
+    meta = []
+    if data.get('category'):       meta.append(f'**分类**：{data["category"]}')
+    if data.get('legal_domain'):   meta.append(f'**法律部门**：{data["legal_domain"]}')
+    if data.get('pub_date'):       meta.append(f'**公布日期**：{data["pub_date"]}')
+    if data.get('effective_date'): meta.append(f'**生效日期**：{data["effective_date"]}')
+    if data.get('total_articles'): meta.append(f'**条文数**：{data["total_articles"]}')
+    if meta:
+        lines.append('  \n'.join(meta))
+        lines.append('')
+
+    if data.get('promulgation_info'):
+        lines.append(f'> {data["promulgation_info"]}')
+        lines.append('')
+
+    lines.append('---')
+    lines.append('')
+
+    def render_articles(articles):
+        for art in articles:
+            content = art.get('content', '').strip()
+            if content:
+                lines.append(content)
+                lines.append('')
+
+    def render_section(sec):
+        lines.append(f'#### {sec["title"].strip()}')
+        lines.append('')
+        render_articles(sec.get('articles', []))
+
+    def render_chapter(ch):
+        lines.append(f'### {ch["title"].strip()}')
+        lines.append('')
+        for sec in ch.get('sections', []):
+            render_section(sec)
+        render_articles(ch.get('articles', []))
+
+    def render_part(pt):
+        lines.append(f'## {pt["title"].strip()}')
+        lines.append('')
+        for ch in pt.get('chapters', []):
+            render_chapter(ch)
+
+    if 'parts' in data:
+        for pt in data['parts']:
+            render_part(pt)
+    else:
+        for ch in data.get('chapters', []):
+            render_chapter(ch)
+
+    return '\n'.join(lines)
+
+
+def build_markdown(json_dir: Path, md_dir: Path):
+    import shutil
+    if md_dir.exists():
+        shutil.rmtree(md_dir)
+
+    paths = sorted(p for p in json_dir.rglob('*.json') if 'index' not in p.name)
+    domain_unknown = 0
+    for path in paths:
+        with open(path, encoding='utf-8') as f:
+            data = json.load(f)
+        domain = data.get('legal_domain') or '其他'
+        out_dir = md_dir / domain
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / (path.stem + '.md')).write_text(law_to_md(data), encoding='utf-8')
+        if not data.get('legal_domain'):
+            domain_unknown += 1
+
+    print(f'Markdown 生成完成，输出目录：{md_dir}')
+    print(f'  未知 legal_domain（归入"其他"）：{domain_unknown}')
+    for d in sorted(md_dir.iterdir()):
+        print(f'  {d.name}/  {len(list(d.glob("*.md")))} 个')
 
 
 if __name__ == '__main__':

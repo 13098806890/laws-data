@@ -8,7 +8,7 @@
   "total_articles": 75,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -22,28 +22,28 @@
       "global_order": 2
     },
     {
-      "title": "第三章　规　　划",
+      "title": "第三章　规划",
       "sections": [],
       "articles": [],
       "order_index": 3,
       "global_order": 3
     },
     {
-      "title": "第四章　建　　设",
+      "title": "第四章　建设",
       "sections": [],
       "articles": [],
       "order_index": 4,
       "global_order": 4
     },
     {
-      "title": "第五章　利　　用",
+      "title": "第五章　利用",
       "sections": [],
       "articles": [],
       "order_index": 5,
       "global_order": 5
     },
     {
-      "title": "第六章　保　　护",
+      "title": "第六章　保护",
       "sections": [],
       "articles": [],
       "order_index": 6,
@@ -64,14 +64,14 @@
       "global_order": 8
     },
     {
-      "title": "第九章　附　　则",
+      "title": "第九章　附则",
       "sections": [],
       "articles": [],
       "order_index": 9,
       "global_order": 9
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -183,7 +183,7 @@
       "global_order": 19
     },
     {
-      "title": "第三章　规　　划",
+      "title": "第三章　规划",
       "sections": [],
       "articles": [
         {
@@ -245,7 +245,7 @@
       "global_order": 28
     },
     {
-      "title": "第四章　建　　设",
+      "title": "第四章　建设",
       "sections": [],
       "articles": [
         {
@@ -295,7 +295,7 @@
       "global_order": 38
     },
     {
-      "title": "第五章　利　　用",
+      "title": "第五章　利用",
       "sections": [],
       "articles": [
         {
@@ -357,7 +357,7 @@
       "global_order": 46
     },
     {
-      "title": "第六章　保　　护",
+      "title": "第六章　保护",
       "sections": [],
       "articles": [
         {
@@ -573,7 +573,7 @@
       "global_order": 77
     },
     {
-      "title": "第九章　附　　则",
+      "title": "第九章　附则",
       "sections": [],
       "articles": [
         {

@@ -8,21 +8,21 @@
   "total_articles": 54,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　调　　解",
+      "title": "第二章　调解",
       "sections": [],
       "articles": [],
       "order_index": 2,
       "global_order": 2
     },
     {
-      "title": "第三章　仲　　裁",
+      "title": "第三章　仲裁",
       "sections": [
         {
           "title": "第一节　一般规定",
@@ -48,14 +48,14 @@
       "global_order": 3
     },
     {
-      "title": "第四章　附　　则",
+      "title": "第四章　附则",
       "sections": [],
       "articles": [],
       "order_index": 4,
       "global_order": 7
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -117,7 +117,7 @@
       "global_order": 8
     },
     {
-      "title": "第二章　调　　解",
+      "title": "第二章　调解",
       "sections": [],
       "articles": [
         {
@@ -167,7 +167,7 @@
       "global_order": 18
     },
     {
-      "title": "第三章　仲　　裁",
+      "title": "第三章　仲裁",
       "sections": [
         {
           "title": "第一节　一般规定",
@@ -406,7 +406,7 @@
       "global_order": 26
     },
     {
-      "title": "第四章　附　　则",
+      "title": "第四章　附则",
       "sections": [],
       "articles": [
         {

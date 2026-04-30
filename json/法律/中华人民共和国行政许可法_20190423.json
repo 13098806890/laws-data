@@ -8,7 +8,7 @@
   "total_articles": 83,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -44,13 +44,13 @@
           "global_order": 6
         },
         {
-          "title": "第三节　期　　限",
+          "title": "第三节　期限",
           "articles": [],
           "order_index": 3,
           "global_order": 7
         },
         {
-          "title": "第四节　听　　证",
+          "title": "第四节　听证",
           "articles": [],
           "order_index": 4,
           "global_order": 8
@@ -94,14 +94,14 @@
       "global_order": 13
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [],
       "order_index": 8,
       "global_order": 14
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -388,7 +388,7 @@
           "global_order": 53
         },
         {
-          "title": "第三节　期　　限",
+          "title": "第三节　期限",
           "articles": [
             {
               "title": "第四十二条　",
@@ -419,7 +419,7 @@
           "global_order": 62
         },
         {
-          "title": "第四节　听　　证",
+          "title": "第四节　听证",
           "articles": [
             {
               "title": "第四十六条　",
@@ -685,7 +685,7 @@
       "global_order": 97
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [
         {

@@ -8,7 +8,7 @@
   "total_articles": 81,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -63,14 +63,14 @@
       "global_order": 8
     },
     {
-      "title": "第七章　附　　则",
+      "title": "第七章　附则",
       "sections": [],
       "articles": [],
       "order_index": 7,
       "global_order": 9
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -594,7 +594,7 @@
       "global_order": 77
     },
     {
-      "title": "第七章　附　　则",
+      "title": "第七章　附则",
       "sections": [],
       "articles": [
         {

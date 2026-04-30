@@ -8,7 +8,7 @@
   "total_articles": 61,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -63,7 +63,7 @@
           "global_order": 9
         },
         {
-          "title": "第二节　表　　演",
+          "title": "第二节　表演",
           "articles": [],
           "order_index": 2,
           "global_order": 10
@@ -93,14 +93,14 @@
       "global_order": 13
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [],
       "order_index": 6,
       "global_order": 14
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -378,7 +378,7 @@
           "global_order": 52
         },
         {
-          "title": "第二节　表　　演",
+          "title": "第二节　表演",
           "articles": [
             {
               "title": "第三十七条　",
@@ -532,7 +532,7 @@
       "global_order": 73
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [
         {

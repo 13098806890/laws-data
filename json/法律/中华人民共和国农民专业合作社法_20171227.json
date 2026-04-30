@@ -8,7 +8,7 @@
   "total_articles": 74,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -22,7 +22,7 @@
       "global_order": 2
     },
     {
-      "title": "第三章　成　　员",
+      "title": "第三章　成员",
       "sections": [],
       "articles": [],
       "order_index": 3,
@@ -71,14 +71,14 @@
       "global_order": 9
     },
     {
-      "title": "第十章　附　　则",
+      "title": "第十章　附则",
       "sections": [],
       "articles": [],
       "order_index": 10,
       "global_order": 10
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -202,7 +202,7 @@
       "global_order": 23
     },
     {
-      "title": "第三章　成　　员",
+      "title": "第三章　成员",
       "sections": [],
       "articles": [
         {
@@ -582,7 +582,7 @@
       "global_order": 87
     },
     {
-      "title": "第十章　附　　则",
+      "title": "第十章　附则",
       "sections": [],
       "articles": [
         {

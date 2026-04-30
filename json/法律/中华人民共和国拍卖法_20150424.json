@@ -8,7 +8,7 @@
   "total_articles": 68,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -75,7 +75,7 @@
           "global_order": 11
         },
         {
-          "title": "第四节　佣　　金",
+          "title": "第四节　佣金",
           "articles": [],
           "order_index": 4,
           "global_order": 12
@@ -93,14 +93,14 @@
       "global_order": 13
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [],
       "order_index": 6,
       "global_order": 14
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -506,7 +506,7 @@
           "global_order": 73
         },
         {
-          "title": "第四节　佣　　金",
+          "title": "第四节　佣金",
           "articles": [
             {
               "title": "第五十六条　",
@@ -592,7 +592,7 @@
       "global_order": 84
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [
         {

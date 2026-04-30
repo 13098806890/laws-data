@@ -8,7 +8,7 @@
   "total_articles": 66,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -18,13 +18,13 @@
       "title": "第二章　香港特别行政区维护国家安全的职责和机构",
       "sections": [
         {
-          "title": "第一节　职　　责",
+          "title": "第一节　职责",
           "articles": [],
           "order_index": 1,
           "global_order": 3
         },
         {
-          "title": "第二节　机　　构",
+          "title": "第二节　机构",
           "articles": [],
           "order_index": 2,
           "global_order": 4
@@ -93,14 +93,14 @@
       "global_order": 13
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [],
       "order_index": 6,
       "global_order": 14
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -147,7 +147,7 @@
       "title": "第二章　香港特别行政区维护国家安全的职责和机构",
       "sections": [
         {
-          "title": "第一节　职　　责",
+          "title": "第一节　职责",
           "articles": [
             {
               "title": "第七条　",
@@ -184,7 +184,7 @@
           "global_order": 23
         },
         {
-          "title": "第二节　机　　构",
+          "title": "第二节　机构",
           "articles": [
             {
               "title": "第十二条　",
@@ -562,7 +562,7 @@
       "global_order": 74
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [
         {

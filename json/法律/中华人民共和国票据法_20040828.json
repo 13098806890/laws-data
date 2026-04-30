@@ -8,41 +8,41 @@
   "total_articles": 101,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　汇　　票",
+      "title": "第二章　汇票",
       "sections": [
         {
-          "title": "第一节　出　　票",
+          "title": "第一节　出票",
           "articles": [],
           "order_index": 1,
           "global_order": 3
         },
         {
-          "title": "第二节　背　　书",
+          "title": "第二节　背书",
           "articles": [],
           "order_index": 2,
           "global_order": 4
         },
         {
-          "title": "第三节　承　　兑",
+          "title": "第三节　承兑",
           "articles": [],
           "order_index": 3,
           "global_order": 5
         },
         {
-          "title": "第四节　保　　证",
+          "title": "第四节　保证",
           "articles": [],
           "order_index": 4,
           "global_order": 6
         },
         {
-          "title": "第五节　付　　款",
+          "title": "第五节　付款",
           "articles": [],
           "order_index": 5,
           "global_order": 7
@@ -59,14 +59,14 @@
       "global_order": 2
     },
     {
-      "title": "第三章　本　　票",
+      "title": "第三章　本票",
       "sections": [],
       "articles": [],
       "order_index": 3,
       "global_order": 9
     },
     {
-      "title": "第四章　支　　票",
+      "title": "第四章　支票",
       "sections": [],
       "articles": [],
       "order_index": 4,
@@ -87,14 +87,14 @@
       "global_order": 12
     },
     {
-      "title": "第七章　附　　则",
+      "title": "第七章　附则",
       "sections": [],
       "articles": [],
       "order_index": 7,
       "global_order": 13
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -210,10 +210,10 @@
       "global_order": 14
     },
     {
-      "title": "第二章　汇　　票",
+      "title": "第二章　汇票",
       "sections": [
         {
-          "title": "第一节　出　　票",
+          "title": "第一节　出票",
           "articles": [
             {
               "title": "第十九条　",
@@ -268,7 +268,7 @@
           "global_order": 34
         },
         {
-          "title": "第二节　背　　书",
+          "title": "第二节　背书",
           "articles": [
             {
               "title": "第二十七条　",
@@ -341,7 +341,7 @@
           "global_order": 43
         },
         {
-          "title": "第三节　承　　兑",
+          "title": "第三节　承兑",
           "articles": [
             {
               "title": "第三十八条　",
@@ -390,7 +390,7 @@
           "global_order": 55
         },
         {
-          "title": "第四节　保　　证",
+          "title": "第四节　保证",
           "articles": [
             {
               "title": "第四十五条　",
@@ -445,7 +445,7 @@
           "global_order": 63
         },
         {
-          "title": "第五节　付　　款",
+          "title": "第五节　付款",
           "articles": [
             {
               "title": "第五十三条　",
@@ -584,7 +584,7 @@
       "global_order": 33
     },
     {
-      "title": "第三章　本　　票",
+      "title": "第三章　本票",
       "sections": [],
       "articles": [
         {
@@ -640,7 +640,7 @@
       "global_order": 94
     },
     {
-      "title": "第四章　支　　票",
+      "title": "第四章　支票",
       "sections": [],
       "articles": [
         {
@@ -783,7 +783,7 @@
       "global_order": 125
     },
     {
-      "title": "第七章　附　　则",
+      "title": "第七章　附则",
       "sections": [],
       "articles": [
         {

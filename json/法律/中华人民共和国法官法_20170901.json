@@ -8,14 +8,14 @@
   "total_articles": 53,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　职　　责",
+      "title": "第二章　职责",
       "sections": [],
       "articles": [],
       "order_index": 2,
@@ -36,7 +36,7 @@
       "global_order": 4
     },
     {
-      "title": "第五章　任　　免",
+      "title": "第五章　任免",
       "sections": [],
       "articles": [],
       "order_index": 5,
@@ -57,28 +57,28 @@
       "global_order": 7
     },
     {
-      "title": "第八章　考　　核",
+      "title": "第八章　考核",
       "sections": [],
       "articles": [],
       "order_index": 8,
       "global_order": 8
     },
     {
-      "title": "第九章　培　　训",
+      "title": "第九章　培训",
       "sections": [],
       "articles": [],
       "order_index": 9,
       "global_order": 9
     },
     {
-      "title": "第十章　奖　　励",
+      "title": "第十章　奖励",
       "sections": [],
       "articles": [],
       "order_index": 10,
       "global_order": 10
     },
     {
-      "title": "第十一章　惩　　戒",
+      "title": "第十一章　惩戒",
       "sections": [],
       "articles": [],
       "order_index": 11,
@@ -99,7 +99,7 @@
       "global_order": 13
     },
     {
-      "title": "第十四章　退　　休",
+      "title": "第十四章　退休",
       "sections": [],
       "articles": [],
       "order_index": 14,
@@ -120,14 +120,14 @@
       "global_order": 16
     },
     {
-      "title": "第十七章　附　　则",
+      "title": "第十七章　附则",
       "sections": [],
       "articles": [],
       "order_index": 17,
       "global_order": 17
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -159,7 +159,7 @@
       "global_order": 18
     },
     {
-      "title": "第二章　职　　责",
+      "title": "第二章　职责",
       "sections": [],
       "articles": [
         {
@@ -219,7 +219,7 @@
       "global_order": 29
     },
     {
-      "title": "第五章　任　　免",
+      "title": "第五章　任免",
       "sections": [],
       "articles": [
         {
@@ -303,7 +303,7 @@
       "global_order": 41
     },
     {
-      "title": "第八章　考　　核",
+      "title": "第八章　考核",
       "sections": [],
       "articles": [
         {
@@ -341,7 +341,7 @@
       "global_order": 45
     },
     {
-      "title": "第九章　培　　训",
+      "title": "第九章　培训",
       "sections": [],
       "articles": [
         {
@@ -367,7 +367,7 @@
       "global_order": 51
     },
     {
-      "title": "第十章　奖　　励",
+      "title": "第十章　奖励",
       "sections": [],
       "articles": [
         {
@@ -393,7 +393,7 @@
       "global_order": 55
     },
     {
-      "title": "第十一章　惩　　戒",
+      "title": "第十一章　惩戒",
       "sections": [],
       "articles": [
         {
@@ -477,7 +477,7 @@
       "global_order": 68
     },
     {
-      "title": "第十四章　退　　休",
+      "title": "第十四章　退休",
       "sections": [],
       "articles": [
         {
@@ -549,7 +549,7 @@
       "global_order": 80
     },
     {
-      "title": "第十七章　附　　则",
+      "title": "第十七章　附则",
       "sections": [],
       "articles": [
         {

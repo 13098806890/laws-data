@@ -8,7 +8,7 @@
   "total_articles": 93,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -25,7 +25,7 @@
       "title": "第三章　外国人入境出境",
       "sections": [
         {
-          "title": "第一节　签　　证",
+          "title": "第一节　签证",
           "articles": [],
           "order_index": 1,
           "global_order": 4
@@ -83,14 +83,14 @@
       "global_order": 11
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [],
       "order_index": 8,
       "global_order": 12
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -193,7 +193,7 @@
       "title": "第三章　外国人入境出境",
       "sections": [
         {
-          "title": "第一节　签　　证",
+          "title": "第一节　签证",
           "articles": [
             {
               "title": "第十五条　",
@@ -702,7 +702,7 @@
       "global_order": 92
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [
         {

@@ -8,7 +8,7 @@
   "total_articles": 200,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -18,7 +18,7 @@
       "title": "第二章　有限责任公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [],
           "order_index": 1,
           "global_order": 3
@@ -57,7 +57,7 @@
       "title": "第四章　股份有限公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [],
           "order_index": 1,
           "global_order": 9
@@ -161,14 +161,14 @@
       "global_order": 23
     },
     {
-      "title": "第十三章　附　　则",
+      "title": "第十三章　附则",
       "sections": [],
       "articles": [],
       "order_index": 13,
       "global_order": 24
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -311,7 +311,7 @@
       "title": "第二章　有限责任公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [
             {
               "title": "第二十三条　",
@@ -673,7 +673,7 @@
       "title": "第四章　股份有限公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [
             {
               "title": "第七十六条　",
@@ -1523,7 +1523,7 @@
       "global_order": 235
     },
     {
-      "title": "第十三章　附　　则",
+      "title": "第十三章　附则",
       "sections": [],
       "articles": [
         {

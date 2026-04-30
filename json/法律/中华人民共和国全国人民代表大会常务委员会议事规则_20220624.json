@@ -8,7 +8,7 @@
   "total_articles": 52,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -50,21 +50,21 @@
       "global_order": 6
     },
     {
-      "title": "第七章　公　　布",
+      "title": "第七章　公布",
       "sections": [],
       "articles": [],
       "order_index": 7,
       "global_order": 7
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [],
       "order_index": 8,
       "global_order": 8
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -400,7 +400,7 @@
       "global_order": 56
     },
     {
-      "title": "第七章　公　　布",
+      "title": "第七章　公布",
       "sections": [],
       "articles": [
         {
@@ -426,7 +426,7 @@
       "global_order": 63
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [
         {

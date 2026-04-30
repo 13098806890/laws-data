@@ -8,14 +8,14 @@
   "total_articles": 100,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　法　　律",
+      "title": "第二章　法律",
       "sections": [
         {
           "title": "第一节　立法权限",
@@ -69,7 +69,7 @@
           "global_order": 10
         },
         {
-          "title": "第二节　规　　章",
+          "title": "第二节　规章",
           "articles": [],
           "order_index": 2,
           "global_order": 11
@@ -87,14 +87,14 @@
       "global_order": 12
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [],
       "order_index": 6,
       "global_order": 13
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -138,7 +138,7 @@
       "global_order": 14
     },
     {
-      "title": "第二章　法　　律",
+      "title": "第二章　法律",
       "sections": [
         {
           "title": "第一节　立法权限",
@@ -637,7 +637,7 @@
           "global_order": 94
         },
         {
-          "title": "第二节　规　　章",
+          "title": "第二节　规章",
           "articles": [
             {
               "title": "第八十条　",
@@ -783,7 +783,7 @@
       "global_order": 111
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [],
       "order_index": 12,

@@ -8,7 +8,7 @@
   "total_articles": 248,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -25,7 +25,7 @@
       "title": "第三章　有限责任公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [],
           "order_index": 1,
           "global_order": 4
@@ -52,7 +52,7 @@
       "title": "第五章　股份有限公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [],
           "order_index": 1,
           "global_order": 8
@@ -163,14 +163,14 @@
       "global_order": 23
     },
     {
-      "title": "第十五章　附　　则",
+      "title": "第十五章　附则",
       "sections": [],
       "articles": [],
       "order_index": 15,
       "global_order": 24
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -435,7 +435,7 @@
       "title": "第三章　有限责任公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [
             {
               "title": "第四十二条　",
@@ -759,7 +759,7 @@
       "title": "第五章　股份有限公司的设立和组织机构",
       "sections": [
         {
-          "title": "第一节　设　　立",
+          "title": "第一节　设立",
           "articles": [
             {
               "title": "第九十一条　",
@@ -1821,7 +1821,7 @@
       "global_order": 278
     },
     {
-      "title": "第十五章　附　　则",
+      "title": "第十五章　附则",
       "sections": [],
       "articles": [
         {

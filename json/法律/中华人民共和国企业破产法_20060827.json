@@ -8,7 +8,7 @@
   "total_articles": 127,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -18,13 +18,13 @@
       "title": "第二章　申请和受理",
       "sections": [
         {
-          "title": "第一节　申　　请",
+          "title": "第一节　申请",
           "articles": [],
           "order_index": 1,
           "global_order": 3
         },
         {
-          "title": "第二节　受　　理",
+          "title": "第二节　受理",
           "articles": [],
           "order_index": 2,
           "global_order": 4
@@ -83,7 +83,7 @@
       "global_order": 9
     },
     {
-      "title": "第八章　重　　整",
+      "title": "第八章　重整",
       "sections": [
         {
           "title": "第一节　重整申请和重整期间",
@@ -109,7 +109,7 @@
       "global_order": 12
     },
     {
-      "title": "第九章　和　　解",
+      "title": "第九章　和解",
       "sections": [],
       "articles": [],
       "order_index": 9,
@@ -149,14 +149,14 @@
       "global_order": 21
     },
     {
-      "title": "第十二章　附　　则",
+      "title": "第十二章　附则",
       "sections": [],
       "articles": [],
       "order_index": 12,
       "global_order": 22
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -203,7 +203,7 @@
       "title": "第二章　申请和受理",
       "sections": [
         {
-          "title": "第一节　申　　请",
+          "title": "第一节　申请",
           "articles": [
             {
               "title": "第七条　",
@@ -228,7 +228,7 @@
           "global_order": 31
         },
         {
-          "title": "第二节　受　　理",
+          "title": "第二节　受理",
           "articles": [
             {
               "title": "第十条　",
@@ -654,7 +654,7 @@
       "global_order": 89
     },
     {
-      "title": "第八章　重　　整",
+      "title": "第八章　重整",
       "sections": [
         {
           "title": "第一节　重整申请和重整期间",
@@ -833,7 +833,7 @@
       "global_order": 103
     },
     {
-      "title": "第九章　和　　解",
+      "title": "第九章　和解",
       "sections": [],
       "articles": [
         {
@@ -1046,7 +1046,7 @@
       "global_order": 158
     },
     {
-      "title": "第十二章　附　　则",
+      "title": "第十二章　附则",
       "sections": [],
       "articles": [
         {

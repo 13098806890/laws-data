@@ -8,14 +8,14 @@
   "total_articles": 260,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　船　　舶",
+      "title": "第二章　船舶",
       "sections": [
         {
           "title": "第一节　船舶所有权",
@@ -41,7 +41,7 @@
       "global_order": 2
     },
     {
-      "title": "第三章　船　　员",
+      "title": "第三章　船员",
       "sections": [
         {
           "title": "第一节　一般规定",
@@ -50,7 +50,7 @@
           "global_order": 7
         },
         {
-          "title": "第二节　船　　长",
+          "title": "第二节　船长",
           "articles": [],
           "order_index": 2,
           "global_order": 8
@@ -229,7 +229,7 @@
       "global_order": 28
     },
     {
-      "title": "第十三章　时　　效",
+      "title": "第十三章　时效",
       "sections": [],
       "articles": [],
       "order_index": 13,
@@ -243,14 +243,14 @@
       "global_order": 36
     },
     {
-      "title": "第十五章　附　　则",
+      "title": "第十五章　附则",
       "sections": [],
       "articles": [],
       "order_index": 15,
       "global_order": 37
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -294,7 +294,7 @@
       "global_order": 38
     },
     {
-      "title": "第二章　船　　舶",
+      "title": "第二章　船舶",
       "sections": [
         {
           "title": "第一节　船舶所有权",
@@ -467,7 +467,7 @@
       "global_order": 45
     },
     {
-      "title": "第三章　船　　员",
+      "title": "第三章　船员",
       "sections": [
         {
           "title": "第一节　一般规定",
@@ -501,7 +501,7 @@
           "global_order": 74
         },
         {
-          "title": "第二节　船　　长",
+          "title": "第二节　船长",
           "articles": [
             {
               "title": "第三十五条　",
@@ -1927,7 +1927,7 @@
       "global_order": 262
     },
     {
-      "title": "第十三章　时　　效",
+      "title": "第十三章　时效",
       "sections": [],
       "articles": [
         {
@@ -2063,7 +2063,7 @@
       "global_order": 322
     },
     {
-      "title": "第十五章　附　　则",
+      "title": "第十五章　附则",
       "sections": [],
       "articles": [
         {

@@ -8,7 +8,7 @@
   "total_articles": 28,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -36,14 +36,14 @@
       "global_order": 4
     },
     {
-      "title": "第五章　附　　则",
+      "title": "第五章　附则",
       "sections": [],
       "articles": [],
       "order_index": 5,
       "global_order": 5
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -219,7 +219,7 @@
       "global_order": 22
     },
     {
-      "title": "第五章　附　　则",
+      "title": "第五章　附则",
       "sections": [],
       "articles": [
         {

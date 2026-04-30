@@ -8,7 +8,7 @@
   "total_articles": 65,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -43,7 +43,7 @@
       "global_order": 5
     },
     {
-      "title": "第六章　征　　召",
+      "title": "第六章　征召",
       "sections": [],
       "articles": [],
       "order_index": 6,
@@ -71,14 +71,14 @@
       "global_order": 9
     },
     {
-      "title": "第十章　附　　则",
+      "title": "第十章　附则",
       "sections": [],
       "articles": [],
       "order_index": 10,
       "global_order": 10
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -328,7 +328,7 @@
       "global_order": 44
     },
     {
-      "title": "第六章　征　　召",
+      "title": "第六章　征召",
       "sections": [],
       "articles": [
         {
@@ -528,7 +528,7 @@
       "global_order": 76
     },
     {
-      "title": "第十章　附　　则",
+      "title": "第十章　附则",
       "sections": [],
       "articles": [
         {

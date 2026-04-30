@@ -8,28 +8,28 @@
   "total_articles": 63,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　学　　生",
+      "title": "第二章　学生",
       "sections": [],
       "articles": [],
       "order_index": 2,
       "global_order": 2
     },
     {
-      "title": "第三章　学　　校",
+      "title": "第三章　学校",
       "sections": [],
       "articles": [],
       "order_index": 3,
       "global_order": 3
     },
     {
-      "title": "第四章　教　　师",
+      "title": "第四章　教师",
       "sections": [],
       "articles": [],
       "order_index": 4,
@@ -57,14 +57,14 @@
       "global_order": 7
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [],
       "order_index": 8,
       "global_order": 8
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -132,7 +132,7 @@
       "global_order": 9
     },
     {
-      "title": "第二章　学　　生",
+      "title": "第二章　学生",
       "sections": [],
       "articles": [
         {
@@ -164,7 +164,7 @@
       "global_order": 20
     },
     {
-      "title": "第三章　学　　校",
+      "title": "第三章　学校",
       "sections": [],
       "articles": [
         {
@@ -250,7 +250,7 @@
       "global_order": 25
     },
     {
-      "title": "第四章　教　　师",
+      "title": "第四章　教师",
       "sections": [],
       "articles": [
         {
@@ -480,7 +480,7 @@
       "global_order": 65
     },
     {
-      "title": "第八章　附　　则",
+      "title": "第八章　附则",
       "sections": [],
       "articles": [
         {

@@ -8,7 +8,7 @@
   "total_articles": 110,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
@@ -57,19 +57,19 @@
       "title": "第四章　处罚程序",
       "sections": [
         {
-          "title": "第一节　调　　查",
+          "title": "第一节　调查",
           "articles": [],
           "order_index": 1,
           "global_order": 9
         },
         {
-          "title": "第二节　决　　定",
+          "title": "第二节　决定",
           "articles": [],
           "order_index": 2,
           "global_order": 10
         },
         {
-          "title": "第三节　执　　行",
+          "title": "第三节　执行",
           "articles": [],
           "order_index": 3,
           "global_order": 11
@@ -87,14 +87,14 @@
       "global_order": 12
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [],
       "order_index": 6,
       "global_order": 13
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -605,7 +605,7 @@
       "title": "第四章　处罚程序",
       "sections": [
         {
-          "title": "第一节　调　　查",
+          "title": "第一节　调查",
           "articles": [
             {
               "title": "第七十七条　",
@@ -696,7 +696,7 @@
           "global_order": 98
         },
         {
-          "title": "第二节　决　　定",
+          "title": "第二节　决定",
           "articles": [
             {
               "title": "第九十一条　",
@@ -763,7 +763,7 @@
           "global_order": 113
         },
         {
-          "title": "第三节　执　　行",
+          "title": "第三节　执行",
           "articles": [
             {
               "title": "第一百一十条　",
@@ -831,7 +831,7 @@
       "global_order": 127
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [
         {

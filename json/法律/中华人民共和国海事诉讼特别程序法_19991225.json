@@ -8,14 +8,14 @@
   "total_articles": 118,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　管　　辖",
+      "title": "第二章　管辖",
       "sections": [],
       "articles": [],
       "order_index": 2,
@@ -69,7 +69,7 @@
       "global_order": 9
     },
     {
-      "title": "第七章　送　　达",
+      "title": "第七章　送达",
       "sections": [],
       "articles": [],
       "order_index": 7,
@@ -129,14 +129,14 @@
       "global_order": 18
     },
     {
-      "title": "第十二章　附　　则",
+      "title": "第十二章　附则",
       "sections": [],
       "articles": [],
       "order_index": 12,
       "global_order": 19
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -174,7 +174,7 @@
       "global_order": 20
     },
     {
-      "title": "第二章　管　　辖",
+      "title": "第二章　管辖",
       "sections": [],
       "articles": [
         {
@@ -679,7 +679,7 @@
       "global_order": 100
     },
     {
-      "title": "第七章　送　　达",
+      "title": "第七章　送达",
       "sections": [],
       "articles": [
         {
@@ -975,7 +975,7 @@
       "global_order": 147
     },
     {
-      "title": "第十二章　附　　则",
+      "title": "第十二章　附则",
       "sections": [],
       "articles": [
         {

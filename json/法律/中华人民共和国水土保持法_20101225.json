@@ -8,28 +8,28 @@
   "total_articles": 60,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　规　　划",
+      "title": "第二章　规划",
       "sections": [],
       "articles": [],
       "order_index": 2,
       "global_order": 2
     },
     {
-      "title": "第三章　预　　防",
+      "title": "第三章　预防",
       "sections": [],
       "articles": [],
       "order_index": 3,
       "global_order": 3
     },
     {
-      "title": "第四章　治　　理",
+      "title": "第四章　治理",
       "sections": [],
       "articles": [],
       "order_index": 4,
@@ -50,14 +50,14 @@
       "global_order": 6
     },
     {
-      "title": "第七章　附　　则",
+      "title": "第七章　附则",
       "sections": [],
       "articles": [],
       "order_index": 7,
       "global_order": 7
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -119,7 +119,7 @@
       "global_order": 8
     },
     {
-      "title": "第二章　规　　划",
+      "title": "第二章　规划",
       "sections": [],
       "articles": [
         {
@@ -163,7 +163,7 @@
       "global_order": 18
     },
     {
-      "title": "第三章　预　　防",
+      "title": "第三章　预防",
       "sections": [],
       "articles": [
         {
@@ -255,7 +255,7 @@
       "global_order": 25
     },
     {
-      "title": "第四章　治　　理",
+      "title": "第四章　治理",
       "sections": [],
       "articles": [
         {
@@ -453,7 +453,7 @@
       "global_order": 59
     },
     {
-      "title": "第七章　附　　则",
+      "title": "第七章　附则",
       "sections": [],
       "articles": [
         {

@@ -8,28 +8,28 @@
   "total_articles": 55,
   "chapters": [
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [],
       "order_index": 1,
       "global_order": 1
     },
     {
-      "title": "第二章　设　　立",
+      "title": "第二章　设立",
       "sections": [],
       "articles": [],
       "order_index": 2,
       "global_order": 2
     },
     {
-      "title": "第三章　运　　行",
+      "title": "第三章　运行",
       "sections": [],
       "articles": [],
       "order_index": 3,
       "global_order": 3
     },
     {
-      "title": "第四章　服　　务",
+      "title": "第四章　服务",
       "sections": [],
       "articles": [],
       "order_index": 4,
@@ -43,14 +43,14 @@
       "global_order": 5
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [],
       "order_index": 6,
       "global_order": 6
     },
     {
-      "title": "第一章　总　　则",
+      "title": "第一章　总则",
       "sections": [],
       "articles": [
         {
@@ -130,7 +130,7 @@
       "global_order": 7
     },
     {
-      "title": "第二章　设　　立",
+      "title": "第二章　设立",
       "sections": [],
       "articles": [
         {
@@ -198,7 +198,7 @@
       "global_order": 20
     },
     {
-      "title": "第三章　运　　行",
+      "title": "第三章　运行",
       "sections": [],
       "articles": [
         {
@@ -266,7 +266,7 @@
       "global_order": 31
     },
     {
-      "title": "第四章　服　　务",
+      "title": "第四章　服务",
       "sections": [],
       "articles": [
         {
@@ -414,7 +414,7 @@
       "global_order": 59
     },
     {
-      "title": "第六章　附　　则",
+      "title": "第六章　附则",
       "sections": [],
       "articles": [
         {
