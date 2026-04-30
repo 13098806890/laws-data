@@ -44,6 +44,7 @@ def create_schema(conn):
             issuing_org TEXT,
             doc_number TEXT,
             total_articles INTEGER,
+            full_text TEXT,
             version_date TEXT,
             is_current INTEGER DEFAULT 1
         );
@@ -78,6 +79,19 @@ def create_schema(conn):
         CREATE INDEX IF NOT EXISTS idx_laws_title   ON laws(title);
         CREATE INDEX IF NOT EXISTS idx_nodes_nums   ON nodes(law_id, part_num, chapter_num, section_num, article_num);
     """)
+
+
+def _clean_text(t: str) -> str:
+    """去除多余换行和空格，保留段落间单个换行。"""
+    if not t:
+        return t
+    # 合并连续空白行为单个换行
+    t = re.sub(r'\n{2,}', '\n', t)
+    # 去除行首行尾多余空格（保留换行本身）
+    t = '\n'.join(line.strip() for line in t.split('\n'))
+    # 去除多余空格（非换行）
+    t = re.sub(r'[ \t]{2,}', ' ', t)
+    return t.strip()
 
 
 def _insert_article(conn, law_id, parent_id, art, oi, go, coords):
@@ -184,12 +198,13 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         cur = conn.execute(
             """INSERT INTO laws (id, title, filename, category, legal_domain, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
-                                 total_articles, version_date, is_current)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,1)""",
+                                 total_articles, full_text, version_date, is_current)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,1)""",
             (data.get('law_id'), data['title'], stem, data.get('category'), data.get('legal_domain'),
              data.get('pub_date'), data.get('effective_date'),
              data.get('promulgation_info'), data.get('issuing_org'), data.get('doc_number'),
-             data.get('total_articles'), version_date)
+             data.get('total_articles'), _clean_text(data.get('full_text', '')),
+             version_date)
         )
         insert_nodes(conn, data.get('law_id'), data)
 
@@ -199,6 +214,18 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
 
     conn.commit()
     conn.execute("INSERT INTO nodes_fts(nodes_fts) VALUES('optimize')")
+    conn.commit()
+
+    # 多版本标记：同名法律只保留最新 pub_date 为 is_current=1
+    conn.execute("""
+        UPDATE laws SET is_current = 0
+        WHERE id NOT IN (
+            SELECT id FROM laws l1
+            WHERE pub_date = (
+                SELECT MAX(pub_date) FROM laws l2 WHERE l2.title = l1.title
+            )
+        )
+    """)
     conn.commit()
 
     laws     = conn.execute('SELECT COUNT(*) FROM laws').fetchone()[0]

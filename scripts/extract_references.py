@@ -9,16 +9,23 @@
 输出格式：
 [
   {
-    "from_law":     "中华人民共和国民事诉讼法",
-    "from_article": "第四十四条",
-    "from_node_id": 12345,
+    "from_law_id":    1100001,
+    "from_law":       "中华人民共和国民事诉讼法",
+    "from_article":   "第四十四条",
+    "from_article_num": 44,
+    "from_chapter_num": 3,
+    "from_section_num": null,
     "refs": [
       {
-        "type":       "cross_law",
-        "to_law":     "中华人民共和国法官法",   // 已规范化为完整标题
-        "to_article": "第四十六条",
-        "to_node_id": 67890,                   // null 如果找不到对应节点
-        "raw_text":   "《中华人民共和国法官法》第四十六条"
+        "type":           "cross_law",
+        "to_law_id":      1100002,
+        "to_law":         "中华人民共和国法官法",
+        "to_article":     "第四十六条",
+        "to_article_num": 46,
+        "to_chapter_num": 4,
+        "to_section_num": null,
+        "resolved":       true,
+        "raw_text":       "《中华人民共和国法官法》第四十六条"
       }
     ]
   }
@@ -36,102 +43,52 @@ OUT_PATH = Path(__file__).parent.parent / 'references' / 'article_references.jso
 
 CN_NUM = r'[一二三四五六七八九十百千零两]+'
 
-# 匹配《X法》第X条 — 跨法引用（有书名号）
-CROSS_QUOTED_RE = re.compile(
-    rf'《([^》]{{2,40}})》第({CN_NUM})条'
-)
+CROSS_QUOTED_RE = re.compile(rf'《([^》]{{2,40}})》第({CN_NUM})条')
 
-# 书名号内换行符清洗：《中华人民\n共和国X》→《中华人民共和国X》
-def clean_law_name(name: str) -> str:
-    return re.sub(r'\s+', ' ', name).strip()
-
-# 上下文感知的简称 → 完整标题映射
-# key: (from_law_contains, short_name) → full_title
-# from_law_contains 为 None 时表示无论哪部法引用均适用
 CONTEXT_ALIASES = {
-    # 《补充安排》引用原《安排》
     ('内地与香港特别行政区相互执行仲裁裁决的补充安排', '安排'):
         '最高人民法院关于内地与香港特别行政区相互执行仲裁裁决的安排',
-    # 《强制执行房屋征收决定》引用《条例》
     ('国有土地上房屋征收补偿决定案件', '条例'):
         '国有土地上房屋征收与补偿条例',
-    # 《经济纠纷涉及犯罪》自引《规定》
     ('在审理经济纠纷案件中涉及经济犯罪嫌疑若干问题的规定', '规定'):
         '最高人民法院关于在审理经济纠纷案件中涉及经济犯罪嫌疑若干问题的规定',
-    # 《商品房买卖合同》引用《合同法》
     ('商品房买卖合同', '合同法'):
         '中华人民共和国合同法',
-    # 《企业分立行政案件》引用《条例》（全民所有制企业转换条例）、《企业法》
     ('全民所有制工业企业分立', '条例'):
         '全民所有制工业企业转换经营机制条例',
     ('全民所有制工业企业分立', '企业法'):
         '中华人民共和国全民所有制工业企业法',
-    # 《香港基本法第十三条解释》引用《基本法》
     ('香港特别行政区基本法》第十三条', '基本法'):
         '中华人民共和国香港特别行政区基本法',
 }
 
-# 匹配 本法/本条例/本规定/... 第X条  — 本法自引
 SELF_RE = re.compile(
     rf'(?:本法|本条例|本规定|本办法|本规则|本决定|本解释)[^第]{{0,10}}第({CN_NUM})条'
 )
 
 ART_NUM_RE = re.compile(rf'^(第{CN_NUM}条)')
 
+CN_ORD = {'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,
+          '九':9,'十':10,'百':100,'千':1000}
 
-def build_law_article_index(conn):
-    """
-    返回两个索引：
-      art_index:   {规范化法律标题 → {条号 → node_id}}
-      short_to_full: {短标题 → 规范化完整标题}  用于无书名号引用解析
-    """
-    art_index    = {}
-    short_to_full = {}
-
-    # 收集所有 law title
-    law_titles = [r[0] for r in conn.execute("SELECT DISTINCT title FROM laws").fetchall()]
-    for t in law_titles:
-        short = t.replace('中华人民共和国', '').strip()
-        # 只有短标题不歧义时才加入映射
-        if short not in short_to_full:
-            short_to_full[short] = t
+def cn_to_int(s: str) -> int:
+    s = s.strip()
+    result = tmp = 0
+    for c in s:
+        v = CN_ORD.get(c, 0)
+        if v >= 10:
+            result += (tmp or 1) * v
+            tmp = 0
         else:
-            # 有歧义（多部法律同短名），不映射
-            short_to_full[short] = None
+            tmp = v
+    return result + tmp
 
-    rows = conn.execute(
-        "SELECT n.id, n.title, l.title FROM nodes n JOIN laws l ON n.law_id=l.id WHERE n.type='article'"
-    ).fetchall()
-    for node_id, art_title, law_title in rows:
-        m = ART_NUM_RE.match(art_title or '')
-        if not m:
-            continue
-        art_num = m.group(1)
-        for key in [law_title, law_title.replace('中华人民共和国', '').strip()]:
-            key = key.strip()
-            if key not in art_index:
-                art_index[key] = {}
-            art_index[key][art_num] = node_id
 
-    # 构建无书名号短标题的动态正则
-    # 按长度降序排列避免短名遮蔽长名
-    valid_shorts = sorted(
-        [s for s, full in short_to_full.items() if full and len(s) >= 2],
-        key=len, reverse=True
-    )
-    short_re = re.compile(
-        rf'(?<![》\w])({"|".join(re.escape(s) for s in valid_shorts)})第({CN_NUM})条'
-    )
-
-    return art_index, short_to_full, short_re
+def clean_law_name(name: str) -> str:
+    return re.sub(r'\s+', ' ', name).strip()
 
 
 def _normalize_issuer(name: str) -> str:
-    """把机构名之间的空格替换为顿号，正文中的空格去掉。
-    例：'最高人民法院 最高人民检察院关于办理 贪污贿赂…'
-      → '最高人民法院、最高人民检察院关于办理贪污贿赂…'
-    """
-    # 已知机构名，用于判断是否是机构间分隔
     ISSUERS = ('最高人民法院', '最高人民检察院', '国务院', '公安部', '司法部',
                '全国人民代表大会', '中央军事委员会')
     parts = re.split(r'\s+', name)
@@ -146,7 +103,71 @@ def _normalize_issuer(name: str) -> str:
     return ''.join(result)
 
 
-def resolve_to_node(art_index, law_name, art_num):
+def build_law_article_index(conn):
+    """
+    返回：
+      art_index:    {法律标题 → {条号文字 → {law_id, article_num, chapter_num, section_num, part_num}}}
+      short_to_full: {短标题 → 完整标题}
+      law_title_to_id: {法律标题 → law_id}（取 is_current=1 优先，否则最新版）
+    """
+    art_index      = {}
+    short_to_full  = {}
+    law_title_to_id = {}
+
+    # 优先取 is_current=1，否则取最新版
+    law_rows = conn.execute(
+        "SELECT id, title, pub_date, is_current FROM laws ORDER BY pub_date"
+    ).fetchall()
+    for law_id, title, pub_date, is_current in law_rows:
+        if title not in law_title_to_id or is_current == 1:
+            law_title_to_id[title] = law_id
+        short = title.replace('中华人民共和国', '').strip()
+        if short not in short_to_full:
+            short_to_full[short] = title
+        else:
+            short_to_full[short] = None  # 歧义，不映射
+
+    rows = conn.execute(
+        """SELECT n.title, n.law_id, n.article_num, n.chapter_num, n.section_num, n.part_num,
+                  l.title as law_title
+           FROM nodes n JOIN laws l ON n.law_id = l.id
+           WHERE n.type='article'"""
+    ).fetchall()
+
+    for art_title, law_id, article_num, chapter_num, section_num, part_num, law_title in rows:
+        m = ART_NUM_RE.match(art_title or '')
+        if not m:
+            continue
+        art_num_str = m.group(1)
+        loc = {
+            'law_id':      law_id,
+            'article_num': article_num,
+            'chapter_num': chapter_num,
+            'section_num': section_num,
+            'part_num':    part_num,
+        }
+        for key in [law_title, law_title.replace('中华人民共和国', '').strip()]:
+            key = key.strip()
+            if key not in art_index:
+                art_index[key] = {}
+            # 同一条文可能多版本，优先保留 is_current 版本（law_title_to_id 已处理）
+            preferred_id = law_title_to_id.get(law_title)
+            if art_num_str not in art_index[key] or law_id == preferred_id:
+                art_index[key][art_num_str] = loc
+
+    valid_shorts = sorted(
+        [s for s, full in short_to_full.items() if full and len(s) >= 2],
+        key=len, reverse=True
+    )
+    short_re = re.compile(
+        rf'(?<![》\w])({"|".join(re.escape(s) for s in valid_shorts)})第({CN_NUM})条'
+    )
+
+    return art_index, short_to_full, short_re, law_title_to_id
+
+
+def resolve_loc(art_index, law_name, art_num_str):
+    """返回 loc dict 或 None"""
     no_space   = re.sub(r'\s+', '', law_name)
     normalized = _normalize_issuer(law_name)
     first_sep  = re.sub(r'\s+', '、', law_name, count=1)
@@ -160,84 +181,105 @@ def resolve_to_node(art_index, law_name, art_num):
         first_sep,
         first_sep.replace('中华人民共和国', '').strip(),
     ]
-    for key in dict.fromkeys(candidates):  # 去重保序
+    for key in dict.fromkeys(candidates):
         if key in art_index:
-            nid = art_index[key].get(art_num)
-            if nid:
-                return nid
+            loc = art_index[key].get(art_num_str)
+            if loc:
+                return loc
     return None
 
 
-def extract_refs(content, law_title, art_index, short_to_full, short_re):
+def extract_refs(content, law_title, law_id, from_art_num_str,
+                 art_index, short_to_full, short_re, law_title_to_id):
     refs = []
     seen = set()
 
     # 1. 有书名号跨法引用
     for m in CROSS_QUOTED_RE.finditer(content):
         raw    = m.group(0)
-        to_law = clean_law_name(m.group(1))  # 清洗书名号内换行符
-        to_art = f'第{m.group(2)}条'
+        to_law = clean_law_name(m.group(1))
+        to_art_str = f'第{m.group(2)}条'
 
-        # 规范化：短标题映射
         full = short_to_full.get(to_law.replace('中华人民共和国', '').strip())
         if full:
             to_law = full
 
-        # 上下文简称解析（to_law 本身就是简称如"安排"、"条例"）
-        if resolve_to_node(art_index, to_law, to_art) is None:
+        loc = resolve_loc(art_index, to_law, to_art_str)
+        if loc is None:
             for (ctx, short), alias in CONTEXT_ALIASES.items():
                 if short == to_law and ctx in law_title:
                     to_law = alias
+                    loc = resolve_loc(art_index, to_law, to_art_str)
                     break
 
-        key = (to_law, to_art)
+        key = (to_law, to_art_str)
         if key in seen:
             continue
         seen.add(key)
+
+        to_law_id = law_title_to_id.get(to_law)
         refs.append({
-            'type':       'cross_law',
-            'to_law':     to_law,
-            'to_article': to_art,
-            'to_node_id': resolve_to_node(art_index, to_law, to_art),
-            'raw_text':   raw,
+            'type':           'cross_law',
+            'to_law_id':      loc['law_id'] if loc else to_law_id,
+            'to_law':         to_law,
+            'to_article':     to_art_str,
+            'to_article_num': loc['article_num'] if loc else None,
+            'to_chapter_num': loc['chapter_num'] if loc else None,
+            'to_section_num': loc['section_num'] if loc else None,
+            'to_part_num':    loc['part_num']    if loc else None,
+            'resolved':       loc is not None,
+            'raw_text':       raw,
         })
 
-    # 2. 无书名号短标题引用（如 "刑法第二百六十四条"）
+    # 2. 无书名号短标题引用
     for m in short_re.finditer(content):
-        raw      = m.group(0)
-        short    = m.group(1)
-        to_art   = f'第{m.group(2)}条'
-        to_law   = short_to_full.get(short)
+        raw    = m.group(0)
+        short  = m.group(1)
+        to_art_str = f'第{m.group(2)}条'
+        to_law = short_to_full.get(short)
         if not to_law:
             continue
-        # 排除自引（短标题属于本法自身）
         if to_law == law_title or to_law == law_title.replace('中华人民共和国', '').strip():
             continue
-        key = (to_law, to_art)
+        key = (to_law, to_art_str)
         if key in seen:
             continue
         seen.add(key)
+
+        loc = resolve_loc(art_index, to_law, to_art_str)
+        to_law_id = law_title_to_id.get(to_law)
         refs.append({
-            'type':       'cross_law',
-            'to_law':     to_law,
-            'to_article': to_art,
-            'to_node_id': resolve_to_node(art_index, to_law, to_art),
-            'raw_text':   raw,
+            'type':           'cross_law',
+            'to_law_id':      loc['law_id'] if loc else to_law_id,
+            'to_law':         to_law,
+            'to_article':     to_art_str,
+            'to_article_num': loc['article_num'] if loc else None,
+            'to_chapter_num': loc['chapter_num'] if loc else None,
+            'to_section_num': loc['section_num'] if loc else None,
+            'to_part_num':    loc['part_num']    if loc else None,
+            'resolved':       loc is not None,
+            'raw_text':       raw,
         })
 
     # 3. 本法自引
     for m in SELF_RE.finditer(content):
-        to_art = f'第{m.group(1)}条'
-        key    = (law_title, to_art)
+        to_art_str = f'第{m.group(1)}条'
+        key = (law_title, to_art_str)
         if key in seen:
             continue
         seen.add(key)
+        loc = resolve_loc(art_index, law_title, to_art_str)
         refs.append({
-            'type':       'self_ref',
-            'to_law':     law_title,
-            'to_article': to_art,
-            'to_node_id': resolve_to_node(art_index, law_title, to_art),
-            'raw_text':   m.group(0),
+            'type':           'self_ref',
+            'to_law_id':      law_id,
+            'to_law':         law_title,
+            'to_article':     to_art_str,
+            'to_article_num': loc['article_num'] if loc else None,
+            'to_chapter_num': loc['chapter_num'] if loc else None,
+            'to_section_num': loc['section_num'] if loc else None,
+            'to_part_num':    loc['part_num']    if loc else None,
+            'resolved':       loc is not None,
+            'raw_text':       m.group(0),
         })
 
     return refs
@@ -246,28 +288,37 @@ def extract_refs(content, law_title, art_index, short_to_full, short_re):
 def run():
     conn = sqlite3.connect(DB_PATH)
     print('建立条文索引…')
-    art_index, short_to_full, short_re = build_law_article_index(conn)
+    art_index, short_to_full, short_re, law_title_to_id = build_law_article_index(conn)
     print(f'  覆盖 {len(art_index)} 部法律，{len([v for v in short_to_full.values() if v])} 个有效短标题映射')
 
     print('提取引用关系…')
     rows = conn.execute(
-        "SELECT n.id, n.title, n.content, l.title FROM nodes n JOIN laws l ON n.law_id=l.id WHERE n.type='article'"
+        """SELECT n.law_id, n.title, n.content, n.article_num,
+                  n.chapter_num, n.section_num, n.part_num, l.title
+           FROM nodes n JOIN laws l ON n.law_id = l.id
+           WHERE n.type='article'"""
     ).fetchall()
 
     results    = []
     total_refs = 0
-    for node_id, art_title, content, law_title in rows:
+    for law_id, art_title, content, article_num, chapter_num, section_num, part_num, law_title in rows:
         if not content:
             continue
-        refs = extract_refs(content, law_title, art_index, short_to_full, short_re)
+        m = ART_NUM_RE.match(art_title or '')
+        from_art_str = m.group(1) if m else (art_title or '').strip()
+        refs = extract_refs(content, law_title, law_id, from_art_str,
+                            art_index, short_to_full, short_re, law_title_to_id)
         if not refs:
             continue
-        art_num = ART_NUM_RE.match(art_title or '')
         results.append({
-            'from_law':     law_title,
-            'from_article': art_num.group(1) if art_num else (art_title or '').strip(),
-            'from_node_id': node_id,
-            'refs':         refs,
+            'from_law_id':      law_id,
+            'from_law':         law_title,
+            'from_article':     from_art_str,
+            'from_article_num': article_num,
+            'from_chapter_num': chapter_num,
+            'from_section_num': section_num,
+            'from_part_num':    part_num,
+            'refs':             refs,
         })
         total_refs += len(refs)
 
@@ -278,10 +329,10 @@ def run():
 
     cross    = sum(1 for r in results for ref in r['refs'] if ref['type'] == 'cross_law')
     self_    = sum(1 for r in results for ref in r['refs'] if ref['type'] == 'self_ref')
-    resolved = sum(1 for r in results for ref in r['refs'] if ref['to_node_id'] is not None)
+    resolved = sum(1 for r in results for ref in r['refs'] if ref['resolved'])
     print(f'完成：{len(results)} 个条文有引用，共 {total_refs} 条引用')
     print(f'  跨法引用：{cross}  本法自引：{self_}')
-    print(f'  已解析到节点：{resolved}  未解析：{total_refs - resolved}')
+    print(f'  已解析：{resolved}  未解析：{total_refs - resolved}')
     print(f'  输出：{OUT_PATH}')
 
 
