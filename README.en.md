@@ -24,6 +24,10 @@
 
 **Legal domains covered:** Constitutional Law · Civil & Commercial Law · Civil Code · Administrative Law · Economic Law · Social Law · Criminal Law · Procedural Law
 
+## 📦 Data Source
+
+All source documents are downloaded from the **[National Laws and Regulations Database](https://flk.npc.gov.cn/)** (国家法律法规数据库), the official legal retrieval platform of the National People's Congress of China. Files are downloaded in docx / doc format and processed into structured data by this pipeline. The platform is maintained by the Legislative Affairs Commission of the NPC Standing Committee and is the authoritative publication channel for all categories of effective Chinese law — including the Constitution, laws, administrative regulations, and judicial interpretations.
+
 ---
 
 ## 📁 Directory Structure
