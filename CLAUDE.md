@@ -176,3 +176,49 @@ nodes 表中有 `type='part'` 的节点，其余法律顶层直接是 `type='cha
 - `node_tags` — 条文标签（AI 批量生成）
 
 查询时通过 `ATTACH DATABASE` 与 law_content.db 联合使用。
+
+## 已踩过的坑（必读）
+
+### JSON 目录结构不能按 legal_domain 重组
+`json/` 目录必须与 `sources/` 完全对应（按 category 平铺），不能改成按 `legal_domain` 分类。
+JSON 是元数据/中间产物，只有 Markdown 才按 legal_domain 分目录（面向展示）。
+如果改变 JSON 目录结构，`json_to_db/builder.py` 的路径扫描会失效。
+
+### FTS5 trigram 最短匹配词为 3 个字符
+`nodes_fts` 使用 `tokenize='trigram'`，搜索词少于 3 个字符时返回空结果，不报错。
+单字搜索（如"婚"）和双字搜索（如"合同"）均无效，至少需要 3 个字（如"合同法"）。
+如需支持短词搜索，需改用 `tokenize='unicode61'` 并重建 FTS 表，但会失去 trigram 的任意子串匹配能力。
+
+### article_references 表是空壳
+`builder.py` 的 schema 里建了 `article_references` 表，但 pipeline 从未填充它。
+不要查这张表，也不要假设它有数据。后续若实现条文引用关系提取，才会用到。
+
+### normalize_title 的精确行为
+`structure.py` 中的 `normalize_title` 只去掉**两个 CJK 字符之间**的多余全角空格：
+- `第一章　　总则` → `第一章总则`（去掉，因为夹在 CJK 之间）
+- `第一条　` → `第一条　`（保留，因为后面不是 CJK）
+- `第一编　总则` → `第一编　总则`（保留单个全角空格）
+
+正则是 `r'(?<=[一-鿿])　{2,}(?=[一-鿿])'`，不要改成 `r'[　 ]{2,}'`（那会压缩成一个空格而非去掉，且会误匹配条文正文中的空格）。
+
+### 汉字序号结构（CN_SECTION_RE）的识别逻辑
+115 个司法解释用 `一、管辖`、`二、回避` 等形式代替第X章，由 `CN_SECTION_RE` 识别。
+
+识别流程有两条路径：
+1. **有目录**：TOC 扫描阶段如果遇到 `CN_SECTION_RE` 匹配的行，设置 `uses_cn_sections = True`，TOC 结束后从 pending 建章，之后主循环也走汉字序号路径。
+2. **无目录**：主循环直接遇到 `CN_SECTION_RE` 匹配行时，也会建章（`uses_cn_sections` 在主循环里同样生效）。
+
+两条路径互相独立，不要假设"无目录的汉字序号文件会漏掉章节"——主循环会兜底。
+
+### title 从文件名提取，不从 docx 正文读
+`laws.title` 和 `laws.filename` 都从文件名（stem）提取，原因是 docx 第一段经常截断、换行或带格式，不可靠。
+如果发现 title 有误，应重命名源文件，而不是修改解析逻辑。
+
+### issuing_org 白名单是有意限制的
+`ORG_RE` 只匹配 `_KNOWN_ORGS` 中的 12 个机构，不尝试通用提取。
+原因：通用正则会误匹配法条正文（如"村民委员会"、"全国人民代表大会常务委员会关于……的决定"整句被误识别）。
+如需新增机构，直接往 `_KNOWN_ORGS` 元组里加，不要改正则逻辑。
+
+### pipeline 是全量重建，无增量
+每次运行 `pipeline.py` 都会删除并重建 `json/`、`law_content.db`、`markdown/`。
+不存在"只更新某一部法律"的机制。如果只改了几个源文件，仍需全量跑，约需 3-5 分钟。
