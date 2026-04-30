@@ -116,7 +116,7 @@ def build_law_article_index(conn):
 
     # 优先取 is_current=1，否则取最新版
     law_rows = conn.execute(
-        "SELECT id, title, pub_date, is_current FROM laws ORDER BY pub_date"
+        "SELECT id, title, pub_date, is_current FROM laws WHERE is_current=1 ORDER BY pub_date"
     ).fetchall()
     for law_id, title, pub_date, is_current in law_rows:
         if title not in law_title_to_id or is_current == 1:
@@ -296,7 +296,7 @@ def run():
         """SELECT n.law_id, n.title, n.content, n.article_num,
                   n.chapter_num, n.section_num, n.part_num, l.title
            FROM nodes n JOIN laws l ON n.law_id = l.id
-           WHERE n.type='article'"""
+           WHERE n.type='article' AND l.is_current=1"""
     ).fetchall()
 
     results    = []
