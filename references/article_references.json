@@ -1147,9 +1147,9 @@
     "refs": [
       {
         "type": "cross_law",
-        "to_law": "最高人民法院  最高人民检察院关于办理\n贪污贿赂刑事案件适用法律若干问题的解释",
+        "to_law": "最高人民法院 最高人民检察院关于办理 贪污贿赂刑事案件适用法律若干问题的解释",
         "to_article": "第一条",
-        "to_node_id": null,
+        "to_node_id": 2081,
         "raw_text": "《最高人民法院  最高人民检察院关于办理\n贪污贿赂刑事案件适用法律若干问题的解释》第一条"
       },
       {
@@ -2372,7 +2372,7 @@
     "refs": [
       {
         "type": "cross_law",
-        "to_law": "最高人民法院　最高人民检察院关于死刑第二审案件开庭审理程序若干问题的规定（试行）",
+        "to_law": "最高人民法院 最高人民检察院关于死刑第二审案件开庭审理程序若干问题的规定（试行）",
         "to_article": "第四条",
         "to_node_id": null,
         "raw_text": "《最高人民法院　最高人民检察院关于死刑第二审案件开庭审理程序若干问题的规定（试行）》第四条"
@@ -2883,9 +2883,9 @@
     "refs": [
       {
         "type": "cross_law",
-        "to_law": "中华人民\n共和国国家赔偿法",
+        "to_law": "中华人民 共和国国家赔偿法",
         "to_article": "第三十条",
-        "to_node_id": null,
+        "to_node_id": 25518,
         "raw_text": "《中华人民\n共和国国家赔偿法》第三十条"
       },
       {
@@ -3198,14 +3198,14 @@
       },
       {
         "type": "cross_law",
-        "to_law": "安排",
+        "to_law": "最高人民法院关于内地与香港特别行政区相互执行仲裁裁决的安排",
         "to_article": "第二条",
         "to_node_id": null,
         "raw_text": "《安排》第二条"
       },
       {
         "type": "cross_law",
-        "to_law": "安排",
+        "to_law": "最高人民法院关于内地与香港特别行政区相互执行仲裁裁决的安排",
         "to_article": "第六条",
         "to_node_id": null,
         "raw_text": "《安排》第六条"
@@ -3492,9 +3492,9 @@
     "refs": [
       {
         "type": "cross_law",
-        "to_law": "条例",
+        "to_law": "国有土地上房屋征收与补偿条例",
         "to_article": "第二十八条",
-        "to_node_id": null,
+        "to_node_id": 71093,
         "raw_text": "《条例》第二十八条"
       }
     ]
@@ -3751,9 +3751,9 @@
       },
       {
         "type": "cross_law",
-        "to_law": "规定",
+        "to_law": "最高人民法院关于在审理经济纠纷案件中涉及经济犯罪嫌疑若干问题的规定",
         "to_article": "第二条",
-        "to_node_id": null,
+        "to_node_id": 3896,
         "raw_text": "《规定》第二条"
       }
     ]
@@ -4871,7 +4871,7 @@
     "refs": [
       {
         "type": "cross_law",
-        "to_law": "合同法",
+        "to_law": "中华人民共和国合同法",
         "to_article": "第九十四条",
         "to_node_id": null,
         "raw_text": "《合同法》第九十四条"
@@ -8035,7 +8035,7 @@
       },
       {
         "type": "cross_law",
-        "to_law": "企业法",
+        "to_law": "中华人民共和国全民所有制工业企业法",
         "to_article": "第十八条",
         "to_node_id": null,
         "raw_text": "《企业法》第十八条"
@@ -8049,21 +8049,21 @@
       },
       {
         "type": "cross_law",
-        "to_law": "条例",
+        "to_law": "全民所有制工业企业转换经营机制条例",
         "to_article": "第四十七条",
         "to_node_id": null,
         "raw_text": "《条例》第四十七条"
       },
       {
         "type": "cross_law",
-        "to_law": "条例",
+        "to_law": "全民所有制工业企业转换经营机制条例",
         "to_article": "第三十五条",
         "to_node_id": null,
         "raw_text": "《条例》第三十五条"
       },
       {
         "type": "cross_law",
-        "to_law": "条例",
+        "to_law": "全民所有制工业企业转换经营机制条例",
         "to_article": "第二十二条",
         "to_node_id": null,
         "raw_text": "《条例》第二十二条"
@@ -33018,16 +33018,16 @@
       },
       {
         "type": "cross_law",
-        "to_law": "基本法",
+        "to_law": "中华人民共和国香港特别行政区基本法",
         "to_article": "第十九条",
-        "to_node_id": null,
+        "to_node_id": 51769,
         "raw_text": "《基本法》第十九条"
       },
       {
         "type": "cross_law",
-        "to_law": "基本法",
+        "to_law": "中华人民共和国香港特别行政区基本法",
         "to_article": "第八条",
-        "to_node_id": null,
+        "to_node_id": 51757,
         "raw_text": "《基本法》第八条"
       },
       {
@@ -33050,20 +33050,6 @@
         "to_article": "第八十九条",
         "to_node_id": null,
         "raw_text": "《中华人民共和国宪法》第八十九条"
-      },
-      {
-        "type": "cross_law",
-        "to_law": "中华人民共和国香港特别行政区基本法",
-        "to_article": "第十九条",
-        "to_node_id": 51769,
-        "raw_text": "《中华人民共和国香港特别行政区基本法》第十九条"
-      },
-      {
-        "type": "cross_law",
-        "to_law": "中华人民共和国香港特别行政区基本法",
-        "to_article": "第八条",
-        "to_node_id": 51757,
-        "raw_text": "《中华人民共和国香港特别行政区基本法》第八条"
       },
       {
         "type": "self_ref",

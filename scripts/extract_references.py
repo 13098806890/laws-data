@@ -41,6 +41,36 @@ CROSS_QUOTED_RE = re.compile(
     rf'《([^》]{{2,40}})》第({CN_NUM})条'
 )
 
+# 书名号内换行符清洗：《中华人民\n共和国X》→《中华人民共和国X》
+def clean_law_name(name: str) -> str:
+    return re.sub(r'\s+', ' ', name).strip()
+
+# 上下文感知的简称 → 完整标题映射
+# key: (from_law_contains, short_name) → full_title
+# from_law_contains 为 None 时表示无论哪部法引用均适用
+CONTEXT_ALIASES = {
+    # 《补充安排》引用原《安排》
+    ('内地与香港特别行政区相互执行仲裁裁决的补充安排', '安排'):
+        '最高人民法院关于内地与香港特别行政区相互执行仲裁裁决的安排',
+    # 《强制执行房屋征收决定》引用《条例》
+    ('国有土地上房屋征收补偿决定案件', '条例'):
+        '国有土地上房屋征收与补偿条例',
+    # 《经济纠纷涉及犯罪》自引《规定》
+    ('在审理经济纠纷案件中涉及经济犯罪嫌疑若干问题的规定', '规定'):
+        '最高人民法院关于在审理经济纠纷案件中涉及经济犯罪嫌疑若干问题的规定',
+    # 《商品房买卖合同》引用《合同法》
+    ('商品房买卖合同', '合同法'):
+        '中华人民共和国合同法',
+    # 《企业分立行政案件》引用《条例》（全民所有制企业转换条例）、《企业法》
+    ('全民所有制工业企业分立', '条例'):
+        '全民所有制工业企业转换经营机制条例',
+    ('全民所有制工业企业分立', '企业法'):
+        '中华人民共和国全民所有制工业企业法',
+    # 《香港基本法第十三条解释》引用《基本法》
+    ('香港特别行政区基本法》第十三条', '基本法'):
+        '中华人民共和国香港特别行政区基本法',
+}
+
 # 匹配 本法/本条例/本规定/... 第X条  — 本法自引
 SELF_RE = re.compile(
     rf'(?:本法|本条例|本规定|本办法|本规则|本决定|本解释)[^第]{{0,10}}第({CN_NUM})条'
@@ -96,8 +126,41 @@ def build_law_article_index(conn):
     return art_index, short_to_full, short_re
 
 
+def _normalize_issuer(name: str) -> str:
+    """把机构名之间的空格替换为顿号，正文中的空格去掉。
+    例：'最高人民法院 最高人民检察院关于办理 贪污贿赂…'
+      → '最高人民法院、最高人民检察院关于办理贪污贿赂…'
+    """
+    # 已知机构名，用于判断是否是机构间分隔
+    ISSUERS = ('最高人民法院', '最高人民检察院', '国务院', '公安部', '司法部',
+               '全国人民代表大会', '中央军事委员会')
+    parts = re.split(r'\s+', name)
+    result = []
+    for i, part in enumerate(parts):
+        if i == 0:
+            result.append(part)
+        elif any(part.startswith(org) for org in ISSUERS):
+            result.append('、' + part)
+        else:
+            result[-1] += part
+    return ''.join(result)
+
+
 def resolve_to_node(art_index, law_name, art_num):
-    for key in [law_name, law_name.replace('中华人民共和国', '').strip()]:
+    no_space   = re.sub(r'\s+', '', law_name)
+    normalized = _normalize_issuer(law_name)
+    first_sep  = re.sub(r'\s+', '、', law_name, count=1)
+    candidates = [
+        law_name,
+        law_name.replace('中华人民共和国', '').strip(),
+        no_space,
+        no_space.replace('中华人民共和国', '').strip(),
+        normalized,
+        normalized.replace('中华人民共和国', '').strip(),
+        first_sep,
+        first_sep.replace('中华人民共和国', '').strip(),
+    ]
+    for key in dict.fromkeys(candidates):  # 去重保序
         if key in art_index:
             nid = art_index[key].get(art_num)
             if nid:
@@ -112,12 +175,21 @@ def extract_refs(content, law_title, art_index, short_to_full, short_re):
     # 1. 有书名号跨法引用
     for m in CROSS_QUOTED_RE.finditer(content):
         raw    = m.group(0)
-        to_law = m.group(1).strip()
+        to_law = clean_law_name(m.group(1))  # 清洗书名号内换行符
         to_art = f'第{m.group(2)}条'
-        # 规范化：如果短标题能映射到完整标题就用完整标题
-        full   = short_to_full.get(to_law.replace('中华人民共和国', '').strip())
+
+        # 规范化：短标题映射
+        full = short_to_full.get(to_law.replace('中华人民共和国', '').strip())
         if full:
             to_law = full
+
+        # 上下文简称解析（to_law 本身就是简称如"安排"、"条例"）
+        if resolve_to_node(art_index, to_law, to_art) is None:
+            for (ctx, short), alias in CONTEXT_ALIASES.items():
+                if short == to_law and ctx in law_title:
+                    to_law = alias
+                    break
+
         key = (to_law, to_art)
         if key in seen:
             continue
