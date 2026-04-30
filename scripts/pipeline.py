@@ -680,11 +680,17 @@ def main():
         print(f'  {category}: {len(docx_files)} 个文件')
 
         for docx_path in docx_files:
-            out_path = out_dir / (docx_path.stem + '.json')
             data = process_docx(docx_path, category, xlsx_index, domain_idx)
             if data is None:
                 errors += 1
                 continue
+            if category == '司法解释':
+                domain = data.get('legal_domain') or '其他'
+                dst_dir = JSON_DIR / domain / '司法解释'
+                dst_dir.mkdir(parents=True, exist_ok=True)
+                out_path = dst_dir / (docx_path.stem + '.json')
+            else:
+                out_path = out_dir / (docx_path.stem + '.json')
             write_json(data, out_path)
             total += 1
 
@@ -767,16 +773,22 @@ def build_markdown(json_dir: Path, md_dir: Path):
         with open(path, encoding='utf-8') as f:
             data = json.load(f)
         domain = data.get('legal_domain') or '其他'
-        out_dir = md_dir / domain
-        out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / (path.stem + '.md')).write_text(law_to_md(data), encoding='utf-8')
         if not data.get('legal_domain'):
             domain_unknown += 1
+        if data.get('category') == '司法解释':
+            out_dir = md_dir / domain / '司法解释'
+        else:
+            out_dir = md_dir / domain
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / (path.stem + '.md')).write_text(law_to_md(data), encoding='utf-8')
 
     print(f'Markdown 生成完成，输出目录：{md_dir}')
     print(f'  未知 legal_domain（归入"其他"）：{domain_unknown}')
     for d in sorted(md_dir.iterdir()):
-        print(f'  {d.name}/  {len(list(d.glob("*.md")))} 个')
+        md_count = len(list(d.glob('*.md')))
+        sub_count = sum(len(list(s.glob('*.md'))) for s in d.iterdir() if s.is_dir())
+        total_str = f'{md_count} 个' if not sub_count else f'{md_count} 个 + 司法解释 {sub_count} 个'
+        print(f'  {d.name}/  {total_str}')
 
 
 if __name__ == '__main__':
