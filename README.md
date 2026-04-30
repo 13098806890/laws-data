@@ -1,5 +1,7 @@
 # 中国法律法规数据库
 
+[English](README.en.md) · [Русский](README.ru.md)
+
 中国现行法律法规的结构化数据集，包含原始文档（docx）、结构化 JSON、SQLite 数据库和 Markdown 全文，供检索、研究和应用开发使用。
 
 ## 数据概览

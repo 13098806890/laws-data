@@ -1,5 +1,7 @@
 # Chinese Laws & Regulations Database
 
+[中文](README.md) · [Русский](README.ru.md)
+
 A structured dataset of current Chinese laws and regulations, including source documents (docx), structured JSON, SQLite database, and Markdown full text — for search, research, and application development.
 
 ## Data Overview
