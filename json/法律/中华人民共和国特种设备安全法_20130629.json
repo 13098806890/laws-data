@@ -8,7 +8,7 @@
   "issuing_org": "",
   "doc_number": "",
   "legal_domain": "社会法",
-  "total_articles": 100,
+  "total_articles": 101,
   "chapters": [
     {
       "title": "第一章　总则",
@@ -689,6 +689,12 @@
           "content": "第一百条　军事装备、核设施、航空航天器使用的特种设备安全的监督管理不适用本法。",
           "order_index": 2,
           "global_order": 111
+        },
+        {
+          "title": "第一百零一条　",
+          "content": "第一百零一条　本法自2014年1月1日起施行。",
+          "order_index": 3,
+          "global_order": 112
         }
       ],
       "order_index": 7,

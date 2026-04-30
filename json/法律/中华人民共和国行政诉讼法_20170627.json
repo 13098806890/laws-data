@@ -8,7 +8,7 @@
   "issuing_org": "",
   "doc_number": "",
   "legal_domain": "诉讼与非诉讼程序法",
-  "total_articles": 100,
+  "total_articles": 103,
   "chapters": [
     {
       "title": "第一章　总则",
@@ -720,7 +720,26 @@
     {
       "title": "第十章　附则",
       "sections": [],
-      "articles": [],
+      "articles": [
+        {
+          "title": "第一百零一条　",
+          "content": "第一百零一条　人民法院审理行政案件，关于期间、送达、财产保全、开庭审理、调解、中止诉讼、终结诉讼、简易程序、执行等，以及人民检察院对行政案件受理、审理、裁判、执行的监督，本法没有规定的，适用《中华人民共和国民事诉讼法》的相关规定。",
+          "order_index": 1,
+          "global_order": 116
+        },
+        {
+          "title": "第一百零二条　",
+          "content": "第一百零二条　人民法院审理行政案件，应当收取诉讼费用。诉讼费用由败诉方承担，双方都有责任的由双方分担。收取诉讼费用的具体办法另行规定。",
+          "order_index": 2,
+          "global_order": 117
+        },
+        {
+          "title": "第一百零三条　",
+          "content": "第一百零三条　本法自1990年10月1日起施行。",
+          "order_index": 3,
+          "global_order": 118
+        }
+      ],
       "order_index": 10,
       "global_order": 115
     }

@@ -16,10 +16,10 @@ from config import SRC_DIRS, JSON_DIR
 from utils import title_from_stem, pub_date_from_stem
 from docx_to_json.domain import build_xlsx_index, build_domain_index, get_legal_domain
 from docx_to_json.effective_date import extract_effective_date
-from docx_to_json.structure import CHAPTER_RE, SECTION_RE, normalize_title, add_structure, cn_to_int
+from docx_to_json.structure import CHAPTER_RE, SECTION_RE, PART_RE, normalize_title, add_structure, cn_to_int
 
-ARTICLE_RE    = re.compile(r'^第[一二三四五六七八九十百千]+条[　\s]')
-_ART_NUM_RE   = re.compile(r'^第([一二三四五六七八九十百千]+)条')
+ARTICLE_RE    = re.compile(r'^第[零一二三四五六七八九十百千]+条[　\s]')
+_ART_NUM_RE   = re.compile(r'^第([零一二三四五六七八九十百千]+)条')
 # 段落内嵌条文切分：匹配段落中间出现的「\n　　第X条」或「\n第X条」
 _INLINE_ART_RE = re.compile(r'\n[　\s]*(?=第[一二三四五六七八九十百千]+条[　\s])')
 TOC_RE        = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
@@ -160,16 +160,27 @@ def extract_content(doc_path: Path) -> dict:
                 continue
 
             if in_toc:
-                if CHAPTER_RE.match(text) or SECTION_RE.match(text):
-                    # 若该标题已在 pending 中出现，说明目录已结束、正文开始
-                    # 直接丢弃目录中收集的标题，让正文重新建章
-                    if normalize_title(text) in {normalize_title(s) for s in pending}:
+                pending_norm = {normalize_title(s) for s in pending}
+                has_parts_in_pending = any(PART_RE.match(s) for s in pending)
+                if PART_RE.match(text):
+                    # 编标题：重复表示正文开始
+                    if normalize_title(text) in pending_norm:
                         in_toc = False
                         pending.clear()
                     else:
                         pending.append(text)
+                elif CHAPTER_RE.match(text):
+                    # 章标题：若目录里有编，只靠编重复退出；若无编，章重复退出
+                    if not has_parts_in_pending and normalize_title(text) in pending_norm:
+                        in_toc = False
+                        pending.clear()
+                    else:
+                        pending.append(text)
+                elif SECTION_RE.match(text):
+                    # 节标题：不用于 TOC 退出检测（节名在目录内可合法重复）
+                    pending.append(text)
                 elif CN_SECTION_RE.match(text):
-                    if normalize_title(text) in {normalize_title(s) for s in pending}:
+                    if normalize_title(text) in pending_norm:
                         in_toc = False
                         pending.clear()
                     else:

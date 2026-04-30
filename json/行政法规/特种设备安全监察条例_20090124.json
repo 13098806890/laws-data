@@ -3,12 +3,12 @@
   "title": "特种设备安全监察条例",
   "category": "行政法规",
   "pub_date": "2009-01-24",
-  "effective_date": null,
+  "effective_date": "2003-06-01",
   "promulgation_info": "(2003年3月11日中华人民共和国国务院令第373号公布　根据2009年1月24日《国务院关于修改〈特种设备安全监察条例〉的决定》修订)",
   "issuing_org": "",
   "doc_number": "",
   "legal_domain": "宪法相关法",
-  "total_articles": 100,
+  "total_articles": 103,
   "chapters": [
     {
       "title": "第一章　总则",
@@ -669,6 +669,24 @@
           "content": "第一百条　压力管道设计、安装、使用的安全监督管理办法由国务院另行制定。",
           "order_index": 2,
           "global_order": 108
+        },
+        {
+          "title": "第一百零一条　",
+          "content": "第一百零一条　国务院特种设备安全监督管理部门可以授权省、自治区、直辖市特种设备安全监督管理部门负责本条例规定的特种设备行政许可工作，具体办法由国务院特种设备安全监督管理部门制定。",
+          "order_index": 3,
+          "global_order": 109
+        },
+        {
+          "title": "第一百零二条　",
+          "content": "第一百零二条　特种设备行政许可、检验检测，应当按照国家有关规定收取费用。",
+          "order_index": 4,
+          "global_order": 110
+        },
+        {
+          "title": "第一百零三条　",
+          "content": "第一百零三条　本条例自2003年6月1日起施行。1982年2月6日国务院发布的《锅炉压力容器安全监察暂行条例》同时废止。",
+          "order_index": 5,
+          "global_order": 111
         }
       ],
       "order_index": 8,

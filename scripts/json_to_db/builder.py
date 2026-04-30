@@ -27,7 +27,7 @@ def _cn_to_int(s: str) -> int:
             tmp = v
     return result + tmp
 
-_ART_NUM_RE = re.compile(r'^第([一二三四五六七八九十百千]+)条')
+_ART_NUM_RE = re.compile(r'^第([零一二三四五六七八九十百千]+)条')
 
 
 def create_schema(conn):
@@ -69,9 +69,22 @@ def create_schema(conn):
             tokenize='trigram'
         );
         CREATE TABLE IF NOT EXISTS article_references (
-            from_id INTEGER REFERENCES nodes(id),
-            to_id INTEGER REFERENCES nodes(id),
-            PRIMARY KEY (from_id, to_id)
+            id               INTEGER PRIMARY KEY,
+            from_node_id     INTEGER REFERENCES nodes(id),
+            from_law_id      INTEGER REFERENCES laws(id),
+            from_article_num INTEGER,
+            from_chapter_num INTEGER,
+            from_section_num INTEGER,
+            from_part_num    INTEGER,
+            to_node_id       INTEGER REFERENCES nodes(id),
+            to_law_id        INTEGER REFERENCES laws(id),
+            to_article_num   INTEGER,
+            to_chapter_num   INTEGER,
+            to_section_num   INTEGER,
+            to_part_num      INTEGER,
+            ref_type         TEXT,
+            resolved         INTEGER,
+            raw_text         TEXT
         );
         CREATE INDEX IF NOT EXISTS idx_nodes_law    ON nodes(law_id);
         CREATE INDEX IF NOT EXISTS idx_nodes_parent ON nodes(parent_id);
@@ -236,9 +249,73 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
     conn.close()
 
 
+def load_references(db_path: Path = DB_PATH,
+                    refs_path: Path = Path(__file__).parent.parent.parent / 'references' / 'article_references.json'):
+    """将 article_references.json 填入 article_references 表。"""
+    if not refs_path.exists():
+        print(f'  引用文件不存在：{refs_path}')
+        return
+
+    conn = sqlite3.connect(db_path)
+    conn.execute('PRAGMA foreign_keys=ON')
+
+    # 建立坐标 → node_id 索引：(law_id, article_num) → node_id
+    rows = conn.execute(
+        "SELECT law_id, article_num, id FROM nodes WHERE type='article' AND article_num IS NOT NULL"
+    ).fetchall()
+    node_index = {}
+    for law_id, article_num, node_id in rows:
+        node_index[(law_id, article_num)] = node_id
+
+    conn.execute('DELETE FROM article_references')
+
+    data = json.loads(refs_path.read_text(encoding='utf-8'))
+    batch = []
+    for entry in data:
+        from_law_id      = entry.get('from_law_id')
+        from_article_num = entry.get('from_article_num')
+        from_chapter_num = entry.get('from_chapter_num')
+        from_section_num = entry.get('from_section_num')
+        from_part_num    = entry.get('from_part_num')
+        from_node_id     = node_index.get((from_law_id, from_article_num))
+
+        for ref in entry.get('refs', []):
+            to_law_id      = ref.get('to_law_id')
+            to_article_num = ref.get('to_article_num')
+            to_chapter_num = ref.get('to_chapter_num')
+            to_section_num = ref.get('to_section_num')
+            to_part_num    = ref.get('to_part_num')
+            to_node_id     = node_index.get((to_law_id, to_article_num)) if to_law_id and to_article_num else None
+
+            batch.append((
+                from_node_id, from_law_id, from_article_num, from_chapter_num, from_section_num, from_part_num,
+                to_node_id,   to_law_id,   to_article_num,   to_chapter_num,   to_section_num,   to_part_num,
+                ref.get('type'), 1 if ref.get('resolved') else 0, ref.get('raw_text'),
+            ))
+
+    conn.executemany(
+        """INSERT INTO article_references
+           (from_node_id, from_law_id, from_article_num, from_chapter_num, from_section_num, from_part_num,
+            to_node_id,   to_law_id,   to_article_num,   to_chapter_num,   to_section_num,   to_part_num,
+            ref_type, resolved, raw_text)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+        batch
+    )
+    conn.commit()
+
+    total    = conn.execute('SELECT COUNT(*) FROM article_references').fetchone()[0]
+    resolved = conn.execute('SELECT COUNT(*) FROM article_references WHERE resolved=1').fetchone()[0]
+    cross    = conn.execute("SELECT COUNT(*) FROM article_references WHERE ref_type='cross_law'").fetchone()[0]
+    self_    = conn.execute("SELECT COUNT(*) FROM article_references WHERE ref_type='self_ref'").fetchone()[0]
+    conn.close()
+    print(f'引用关系写入完成：共 {total} 条（跨法 {cross} / 自引 {self_}），已解析 {resolved} 条')
+
+
 def run():
     print('\n=== JSON → 数据库 ===')
     build_db()
+    print('\n=== 写入引用关系 ===')
+    load_references()
 
 
 if __name__ == '__main__':

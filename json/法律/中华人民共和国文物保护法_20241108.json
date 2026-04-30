@@ -8,7 +8,7 @@
   "issuing_org": "",
   "doc_number": "",
   "legal_domain": "行政法",
-  "total_articles": 100,
+  "total_articles": 101,
   "chapters": [
     {
       "title": "第一章　总则",
@@ -669,6 +669,12 @@
           "content": "第一百条　文物保护有关行政许可的条件、期限等，本法未作规定的，适用《中华人民共和国行政许可法》和有关法律、行政法规的规定。",
           "order_index": 1,
           "global_order": 108
+        },
+        {
+          "title": "第一百零一条　",
+          "content": "第一百零一条　本法自2025年3月1日起施行。",
+          "order_index": 2,
+          "global_order": 109
         }
       ],
       "order_index": 8,
