@@ -28,16 +28,25 @@ from config import JSON_DIR
 INDEX_PATH = Path(__file__).parent.parent / 'law_index.json'
 
 CATEGORY_BASE = {
-    '宪法':                                100001,
-    '法律':                                200001,
-    '法律解释':                            300001,
-    '修正案':                              400001,
-    '有关法律问题和重大问题的决定（部分）': 500001,
-    '行政法规':                            600001,
-    '监察法规':                            700001,
-    '司法解释':                            800001,
+    '宪法':                                1000001,
+    '法律':                                1100001,
+    '修正案':                              2000001,
+    '有关法律问题和重大问题的决定（部分）': 2100001,
+    '法律解释':                            3000001,
+    '司法解释':                            3500001,
+    '行政法规':                            5000001,
+    '监察法规':                            6500001,
 }
-CATEGORY_CAP = 100000  # 每档 10 万个 ID
+CATEGORY_CAP = {
+    '宪法':                                 100000,
+    '法律':                                 900000,
+    '修正案':                               100000,
+    '有关法律问题和重大问题的决定（部分）':  100000,
+    '法律解释':                             500000,
+    '司法解释':                            1500000,
+    '行政法规':                            1500000,
+    '监察法规':                             500000,
+}
 
 
 def _load_existing_index() -> dict:
@@ -82,9 +91,9 @@ def run():
     # 找出每个分段当前已用到的最大 ID
     max_in_seg = {}
     for filename, lid in assigned.items():
-        # 通过 ID 反推分段基数
         for cat, base in CATEGORY_BASE.items():
-            if base <= lid < base + CATEGORY_CAP:
+            cap = CATEGORY_CAP[cat]
+            if base <= lid < base + cap:
                 if cat not in max_in_seg or lid > max_in_seg[cat]:
                     max_in_seg[cat] = lid
                 break
@@ -94,12 +103,13 @@ def run():
         if base is None:
             print(f'  警告：未知分类 "{cat}"，跳过 {len(entries)} 个文件')
             continue
+        cap = CATEGORY_CAP[cat]
         next_id = max_in_seg.get(cat, base - 1) + 1
         for entry in entries:
             fn = entry['filename']
             if fn not in assigned:
-                if next_id >= base + CATEGORY_CAP:
-                    raise RuntimeError(f'分类 "{cat}" ID 段已满（{base}–{base+CATEGORY_CAP-1}）')
+                if next_id >= base + cap:
+                    raise RuntimeError(f'分类 "{cat}" ID 段已满（{base}–{base+cap-1}）')
                 assigned[fn] = next_id
                 next_id += 1
 
