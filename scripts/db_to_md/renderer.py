@@ -24,8 +24,12 @@ def _out_dir(md_dir: Path, law: dict) -> Path:
     return md_dir / domain
 
 
+def _md_filename(law: dict) -> str:
+    return law['title']
+
+
 def _law_md_path(md_dir: Path, law: dict) -> Path:
-    return _out_dir(md_dir, law) / (law['filename'] + '.md')
+    return _out_dir(md_dir, law) / (_md_filename(law) + '.md')
 
 
 def _build_ref_map(conn, law_id: int, law_info: dict, md_dir: Path) -> dict[str, str]:
@@ -35,7 +39,7 @@ def _build_ref_map(conn, law_id: int, law_info: dict, md_dir: Path) -> dict[str,
     """
     rows = conn.execute(
         """SELECT ar.raw_text, ar.ref_type, ar.to_law_id, ar.to_article_num,
-                  l.filename, l.legal_domain, l.category
+                  l.filename, l.legal_domain, l.category, l.title
            FROM article_references ar
            JOIN laws l ON ar.to_law_id = l.id
            WHERE ar.from_law_id = ? AND ar.resolved = 1""",
@@ -43,17 +47,16 @@ def _build_ref_map(conn, law_id: int, law_info: dict, md_dir: Path) -> dict[str,
     ).fetchall()
 
     ref_map = {}
-    for raw_text, ref_type, to_law_id, to_article_num, to_filename, to_domain, to_category in rows:
+    for raw_text, ref_type, to_law_id, to_article_num, to_filename, to_domain, to_category, to_title in rows:
         if not raw_text:
             continue
         anchor = f'#art-{to_article_num}'
         if ref_type == 'self_ref':
             ref_map[raw_text] = f'[{raw_text}]({anchor})'
         else:
-            # compute relative path from this file's dir to target file
             from_dir = _out_dir(md_dir, law_info)
             to_law   = {'legal_domain': to_domain, 'category': to_category,
-                        'filename': to_filename}
+                        'filename': to_filename, 'title': to_title}
             to_path  = _law_md_path(md_dir, to_law)
             try:
                 rel = Path(to_path).relative_to(md_dir)
@@ -158,21 +161,21 @@ def _cited_by_superscripts(to_law_id, art_num, cited_by: dict,
         return ''
     parts = []
     for i, (from_law_id, from_art_num, from_fn, from_domain, from_cat) in enumerate(citations, 1):
-        anchor   = f'#art-{from_art_num}'
-        from_law = {'legal_domain': from_domain, 'category': from_cat, 'filename': from_fn}
-        to_path  = _law_md_path(md_dir, from_law)
+        anchor        = f'#art-{from_art_num}'
+        from_law_info = law_map.get(from_law_id, {})
+        from_law      = {'legal_domain': from_domain, 'category': from_cat,
+                         'filename': from_fn, 'title': from_law_info.get('title', from_fn)}
+        to_path    = _law_md_path(md_dir, from_law)
         from_depth = len(_out_dir(md_dir, law_info).relative_to(md_dir).parts)
-        prefix = '../' * from_depth
+        prefix     = '../' * from_depth
         try:
             rel  = to_path.relative_to(md_dir)
             link = f'{prefix}{rel}{anchor}'
         except ValueError:
             link = anchor
-        # tooltip: law title from law_map, fallback to filename
-        from_law_info = law_map.get(from_law_id, {})
-        law_title     = from_law_info.get('title') or from_fn
-        art_label     = f'第{from_art_num}条' if from_art_num else ''
-        tooltip       = f'被《{law_title}》{art_label}引用'
+        law_title = from_law_info.get('title') or from_fn
+        art_label = f'第{from_art_num}条' if from_art_num else ''
+        tooltip   = f'被《{law_title}》{art_label}引用'
         parts.append(f'<sup><a href="{link}" title="{tooltip}">[{i}]</a></sup>')
     return '&thinsp;' + '&thinsp;'.join(parts)
 
@@ -212,7 +215,7 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
 
         ref_map = _build_ref_map(conn, law['id'], law, md_dir)
 
-        (out_dir / (law['filename'] + '.md')).write_text(
+        (out_dir / (_md_filename(law) + '.md')).write_text(
             law_to_md(law, node_list, ref_map, cited_by, law_map, md_dir), encoding='utf-8'
         )
 
