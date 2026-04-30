@@ -17,14 +17,13 @@ LAW_KEYS = ['id', 'title', 'filename', 'category', 'legal_domain',
 
 
 def _out_dir(md_dir: Path, law: dict) -> Path:
-    domain   = law['legal_domain'] or '其他'
-    category = law['category'] or ''
-    subject  = law.get('subject_area') or ''
-    if category == '行政法规' and subject:
-        return md_dir / domain / '行政法规' / subject
-    if category in ('司法解释', '法律解释'):
-        return md_dir / domain / category
-    return md_dir / domain
+    group    = law.get('display_group') or law.get('legal_domain') or '其他'
+    subgroup = law.get('display_subgroup') or ''
+    if subgroup:
+        # subgroup 可能包含 '/'（如 '行政法规/交通运输'），直接拆路径
+        parts = subgroup.split('/')
+        return md_dir / group / Path(*parts)
+    return md_dir / group
 
 
 def _md_filename(law: dict) -> str:
@@ -186,25 +185,34 @@ def _cited_by_superscripts(to_law_id, art_num, cited_by: dict,
 
 
 def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
-    # 已知的 legal_domain 目录名，用于定向清理，避免误删根目录其他文件
-    KNOWN_DOMAINS = {'刑法', '宪法相关法', '民法典', '民法商法', '社会法',
-                     '经济法', '行政法', '诉讼与非诉讼程序法', '其他'}
-    for d in KNOWN_DOMAINS:
-        p = md_dir / d
+    KNOWN_GROUPS = {'宪法与国家机构', '民事与商事', '刑事', '行政与公法',
+                    '经济·税务·金融', '劳动·社会保障', '诉讼与司法程序', '其他'}
+    # 旧的 legal_domain 目录名，首次迁移时一并清理
+    OLD_DOMAINS = {'刑法', '宪法相关法', '民法典', '民法商法', '社会法',
+                   '经济法', '行政法', '诉讼与非诉讼程序法'}
+    for name in KNOWN_GROUPS | OLD_DOMAINS:
+        p = md_dir / name
         if p.exists():
             shutil.rmtree(p)
 
     conn = sqlite3.connect(db_path)
     laws = conn.execute(
-        f'SELECT {", ".join(LAW_KEYS)} FROM laws WHERE is_current=1 ORDER BY id'
+        f"""SELECT {", ".join(f"l.{k}" for k in LAW_KEYS)},
+               COALESCE(dgm.display_group, '其他') AS display_group,
+               COALESCE(dgm.display_subgroup, '') AS display_subgroup
+           FROM laws l
+           LEFT JOIN display_group_map dgm ON l.id = dgm.law_id
+           WHERE l.is_current=1 ORDER BY l.id"""
     ).fetchall()
+
+    ALL_KEYS = LAW_KEYS + ['display_group', 'display_subgroup']
     # build id→law_info lookup and cited-by map before rendering
-    law_map   = {dict(zip(LAW_KEYS, r))['id']: dict(zip(LAW_KEYS, r)) for r in laws}
-    cited_by  = _build_cited_by_map(conn, md_dir, law_map)
+    law_map  = {dict(zip(ALL_KEYS, r))['id']: dict(zip(ALL_KEYS, r)) for r in laws}
+    cited_by = _build_cited_by_map(conn, md_dir, law_map)
 
     domain_unknown = 0
     for row in laws:
-        law = dict(zip(LAW_KEYS, row))
+        law = dict(zip(ALL_KEYS, row))
         if not law['legal_domain']:
             domain_unknown += 1
 
@@ -226,11 +234,9 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR):
     conn.close()
     print(f'Markdown 生成完成，输出目录：{md_dir}')
     print(f'  未知 legal_domain（归入"其他"）：{domain_unknown}')
-    for d in sorted(d for d in md_dir.iterdir() if d.is_dir() and d.name in KNOWN_DOMAINS):
-        md_count  = len(list(d.glob('*.md')))
-        sub_count = sum(len(list(s.glob('*.md'))) for s in d.iterdir() if s.is_dir())
-        total_str = f'{md_count} 个' if not sub_count else f'{md_count} 个 + 子分类 {sub_count} 个'
-        print(f'  {d.name}/  {total_str}')
+    for d in sorted(d for d in md_dir.iterdir() if d.is_dir() and d.name in KNOWN_GROUPS):
+        total = sum(1 for _ in d.rglob('*.md'))
+        print(f'  {d.name}/  共 {total} 个')
 
 
 def run():
