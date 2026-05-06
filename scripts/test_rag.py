@@ -97,25 +97,20 @@ Y 的情形（凡符合其一即为 Y）：
 
 ANSWER_PROMPT = """你是中国法律助手。严格根据提供的法律条文回答问题。
 
-输出格式（严格按此结构，不得省略任何部分）：
+只输出【结论】部分，不要输出法条列表（法条将由系统自动附加）。
 
 【结论】
 用2-5句话直接回答用户问题的每个子问题，说明当事人的权利和可采取的行动。语言通俗易懂，不要逐条罗列。
 若用户问了多个问题，每个都要回答。
-
-【参考法条】
-列出本回答所依据的法律条文，每条格式：
-- 《法律名称》第X条（法律原文 / 司法解释）：条文原文（可适当截取关键部分）
+如果提供的条文不足以完整回答，在结论末尾注明"（注：以下方面无法从现有法条确认：……）"
 
 规则：
-1. 【严禁】引用任何未在下方提供的法条
-2. 【结论】部分不得出现"依据第X条"等引用格式，只说结论
-3. 如果提供的条文不足以完整回答，在【结论】末尾注明"（注：以下方面无法从现有法条确认：……）"
-4. 【参考法条】中区分法律原文与司法解释
-5. 【参考法条】中每条只出现一次，不得重复
+1. 只输出结论文字，不要加"【结论】"标题，不要输出任何法条
+2. 不得出现"依据第X条"等引用格式
+3. 可以提及具体赔偿倍数（如十倍、三倍）
 
 ---
-诉讼相关问题的通用知识（当用户问到诉讼程序时可直接使用，无需法条支撑）：
+诉讼相关通用知识（无需法条支撑，直接使用）：
 
 【管辖法院】
 - 合同纠纷：被告住所地 或 合同履行地 法院（一般选区级基层法院）
@@ -131,6 +126,8 @@ ANSWER_PROMPT = """你是中国法律助手。严格根据提供的法律条文�
 - 赔偿损失：请求判令被告赔偿[经济损失/违约金/精神损害抚慰金]XX元
 - 支付利息：请求判令被告支付逾期利息（自XX年XX月XX日起按同期贷款利率计算）
 - 复合请求：多个请求并列，如"解除合同+返还押金+赔偿损失"
+- 食品安全索赔：请求判令被告支付价款十倍赔偿金（依据食品安全法第148条；不足1000元按1000元计）
+- 消费欺诈索赔：请求判令被告支付价款三倍赔偿金（依据消费者权益保护法第55条；不足500元按500元计）
 
 【诉讼费用】
 - 财产类案件按标的额阶梯收费，1万元以下收50元，超出部分按比例递减
@@ -480,20 +477,72 @@ def build_context(articles: dict, max_articles: int = 20) -> str:
     if law_items:
         parts.append("【法律原文】")
         for a in law_items:
-            parts.append(f"《{a['law']}》{a['article']}：{a['content'][:300]}")
+            parts.append(f"《{a['law']}》{a['article']}：{a['content'][:500]}")
     if interp_items:
         parts.append("\n【司法解释】")
         for a in interp_items:
-            parts.append(f"《{a['law']}》{a['article']}：{a['content'][:300]}")
+            parts.append(f"《{a['law']}》{a['article']}：{a['content'][:500]}")
     return "\n".join(parts)
 
 
-def generate_answer(question: str, articles: dict) -> str:
+CITE_FILTER_PROMPT = """你是中国法律助手。判断以下法律条文是否应该作为参考法条展示给用户。
+
+标准：只有当该条文**直接支撑**用户问题的结论或用户可以据此采取行动时，才回答 Y。
+
+Y 的情形：
+- 条文规定了用户可以主张的权利或赔偿（如十倍赔偿、三倍赔偿、合同解除权）
+- 条文是用户行动的直接法律依据
+- 条文规定了对方的义务或违约后果
+
+N 的情形：
+- 条文是行政监管要求（针对生产者/经营者的管理义务，与消费者索赔无直接关系）
+- 条文是定义性条款（如名词解释）
+- 条文与用户具体问题的结论无关
+
+只输出 Y 或 N，不要其他内容。"""
+
+
+def filter_cited_articles(question: str, candidates: list[dict]) -> list[dict]:
+    """逐条问模型是否应展示为参考法条，返回通过的条文。"""
+    kept = []
+    for a in candidates:
+        user_msg = (
+            f"用户问题：{question}\n\n"
+            f"法律条文：《{a['law']}》{a['article']}：{a['content'][:300]}"
+        )
+        try:
+            verdict = chat(CITE_FILTER_PROMPT, user_msg, temperature=0.0).strip().upper()
+        except Exception:
+            verdict = "Y"
+        if verdict.startswith("Y"):
+            kept.append(a)
+    return kept
+
+
+def generate_answer(question: str, articles: dict, verbose: bool = False) -> str:
     context = build_context(articles)
     if not context.strip():
         return "未检索到相关条文，无法回答。"
     user_msg = f"以下是检索到的法律条文：\n\n{context}\n\n用户问题：{question}"
-    return chat(ANSWER_PROMPT, user_msg, temperature=0.1)
+    conclusion = chat(ANSWER_PROMPT, user_msg, temperature=0.1)
+
+    # 候选参考法条：pinned 优先，最多取 10 条送去逐条过滤
+    all_items = articles["laws"] + articles["interpretations"]
+    pinned = [a for a in all_items if a.get("pinned")]
+    others = [a for a in all_items if not a.get("pinned")]
+    candidates = (pinned + others)[:10]
+
+    cited = filter_cited_articles(question, candidates)
+    if verbose:
+        print(f"\n  ▶ 参考法条过滤: {len(candidates)} 候选 → {len(cited)} 通过")
+
+    if cited:
+        refs = ["\n\n【参考法条】"]
+        for a in cited:
+            tier = "司法解释" if a["category"] == "司法解释" else "法律原文"
+            refs.append(f"- 《{a['law']}》{a['article']}（{tier}）：{a['content']}")
+        return conclusion.strip() + "\n".join(refs)
+    return conclusion.strip()
 
 
 # ── 主流程 ────────────────────────────────────────────────────────
@@ -580,7 +629,7 @@ def ask(question: str, verbose: bool = True) -> dict:
 
     # Step 5: 生成
     log("Step 5 生成回答", "调用模型中...")
-    answer = generate_answer(question, articles)
+    answer = generate_answer(question, articles, verbose=verbose)
 
     return {
         "classification": classification,

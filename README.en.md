@@ -378,9 +378,12 @@ ORDER BY pub_date DESC;
 1. **Domain routing** — Maps the question to relevant legal domains, excluding clearly unrelated ones
 2. **Keyword extraction** — Extracts FTS-friendly legal terms from the question
 3. **Alias expansion** — Uses `law_enhancements.db` to translate colloquial language into legal terminology and add synonyms
-4. **Layered retrieval** — Searches statutes first, then judicial interpretations; laws matched by `topic_law_hints` are boosted to the top
-5. **Relevance filtering** — LLM judges each retrieved article, removing noise hits caused by coincidental keyword overlap
-6. **Answer generation** — Strictly grounded in retrieved articles; explicitly flags any gaps in coverage
+4. **Layered retrieval** — Searches statutes first, then judicial interpretations; laws matched by `topic_law_hints` are boosted to the top; matched keywords are sorted by FTS hit count ascending (specific terms run first) to ensure key articles are not pushed out by the cap
+5. **Relevance filtering** — LLM judges articles in batches, removing noise hits; articles from `topic_law_hints` bypass filtering and are always kept
+6. **Citation filtering** — LLM judges each candidate citation article individually: only articles that directly support the conclusion or give the user something to act on are kept; administrative regulations and definitional clauses are filtered out
+7. **Answer generation** — Model outputs conclusion text only; code assembles the filtered citation list and appends it directly, eliminating truncation or omissions
+
+Output format: **conclusion + cited articles**. The system prompt includes built-in templates for court jurisdiction, litigation requests, and court fees that the model can use without law article support.
 
 **Requirements:** [Ollama](https://ollama.com/) running locally, default model `qwen2.5:3b`
 
