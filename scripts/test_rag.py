@@ -73,14 +73,19 @@ FILTER_PROMPT = """你是中国法律审核专家。逐条判断每条法律条�
 
 对每条条文，只需回答 Y（相关）或 N（不相关）。
 
-判断规则：
-- Y：条文规范的法律关系、当事人类型或场景与用户问题一致
-- N：条文仅因含有相同词语被检索到，但实际规范的是完全不同的领域或情形
+判断策略：**宁可多保留，不要错误排除**。只有当你非常确定某条文与用户问题完全无关时，才回答 N。
 
-常见 N 的情形举例：
-- 问道路交通事故 → 海上交通安全法、噪声污染防治法、警察职责列举 → N
-- 问网购假货 → 旅游纠纷解释、植物新品种权、医疗损害解释 → N
-- 问普通车祸赔偿 → 拼装车/报废车转让的特殊规定、时间效力规定 → N
+Y 的情形（凡符合其一即为 Y）：
+- 条文规范的法律关系、当事人类型或场景与用户问题一致或有合理关联
+- 条文涉及的权利义务可能对用户的处境产生影响
+- 条文提供了理解相关规定的背景知识
+
+典型 N 的情形（仅在非常确定时才 N）：
+- 问道路交通事故 → 海上交通安全法、噪声污染防治法 → N
+- 问网购假货 → 旅游纠纷解释、植物新品种权 → N
+- 问普通车祸赔偿 → 拼装车转让特殊规定、时间效力规定 → N
+
+拿不准时，一律回答 Y。
 
 输出格式：每行一个编号和判断，例如：
 0: Y
@@ -264,7 +269,7 @@ def get_topic_law_hints(keywords: list[str]) -> list[str]:
 
 
 def search_layered(keywords: list[str], domains: list[str],
-                   limit_per_kw: int = 6,
+                   limit_per_kw: int = 10,
                    hint_laws: list[str] | None = None) -> dict:
     """
     分两层检索：
@@ -279,7 +284,7 @@ def search_layered(keywords: list[str], domains: list[str],
     conn = sqlite3.connect(DB_PATH)
     seen = set()
 
-    def collect(categories, per_kw):
+    def collect(categories, per_kw, pinned=False):
         results = []
         for kw in keywords:
             for row in fts_search(kw, domains, categories, per_kw, conn):
@@ -293,6 +298,7 @@ def search_layered(keywords: list[str], domains: list[str],
                         "category":     row[3],
                         "article":      row[4],
                         "content":      row[5],
+                        "pinned":       pinned,
                     })
         return results
 
@@ -330,6 +336,7 @@ def search_layered(keywords: list[str], domains: list[str],
                             "category":     row[3],
                             "article":      row[4],
                             "content":      row[5],
+                            "pinned":       True,   # hint 法律结果跳过过滤
                         })
         return results
 
@@ -349,9 +356,15 @@ def filter_articles(question: str, articles: dict, verbose: bool = False,
     if not all_items:
         return articles
 
-    kept = []
-    for batch_start in range(0, len(all_items), batch_size):
-        batch = all_items[batch_start: batch_start + batch_size]
+    # pinned 条文（来自 hint_laws）直接保留，不参与过滤
+    pinned = [a for a in all_items if a.get("pinned")]
+    to_filter = [a for a in all_items if not a.get("pinned")]
+
+    kept = list(pinned)
+    pinned_ids = {a["id"] for a in pinned}
+
+    for batch_start in range(0, len(to_filter), batch_size):
+        batch = to_filter[batch_start: batch_start + batch_size]
         numbered = "\n".join(
             f"[{i}] 《{a['law']}》{a['article']}：{a['content'][:150]}"
             for i, a in enumerate(batch)
@@ -472,7 +485,7 @@ def ask(question: str, verbose: bool = True) -> dict:
 
     # 兜底：若分类过窄导致结果稀少，用全部领域重试
     total = len(articles['laws']) + len(articles['interpretations'])
-    if total <= 2 and classification["relevant"] != ALL_DOMAINS:
+    if total <= 3 and classification["relevant"] != ALL_DOMAINS:
         log("Step 3+4 兜底检索", "结果不足，使用全部领域重试...")
         articles = search_layered(expanded, ALL_DOMAINS, hint_laws=hint_laws)
         law_detail = "\n".join(
@@ -491,12 +504,13 @@ def ask(question: str, verbose: bool = True) -> dict:
         print(f"\n  ▶ Step 4.5 相关性过滤 — 调用模型中...")
     before_laws = len(articles['laws'])
     before_interps = len(articles['interpretations'])
+    pinned_count = sum(1 for a in articles['laws'] + articles['interpretations'] if a.get('pinned'))
     articles = filter_articles(question, articles, verbose=verbose)
     filter_detail = "\n".join(
         f"  [保留] [{a['legal_domain']}][{a['category']}] 《{a['law']}》{a['article']}"
         for a in articles['laws'] + articles['interpretations']
     ) or "  （全部过滤）"
-    log(f"Step 4.5 相关性过滤 — {before_laws + before_interps} 条 → {len(articles['laws']) + len(articles['interpretations'])} 条", filter_detail)
+    log(f"Step 4.5 相关性过滤 — {before_laws + before_interps} 条（{pinned_count} pinned 跳过过滤）→ {len(articles['laws']) + len(articles['interpretations'])} 条", filter_detail)
 
     # Step 5: 生成
     log("Step 5 生成回答", "调用模型中...")
