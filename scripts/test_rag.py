@@ -39,6 +39,7 @@ CLASSIFY_PROMPT = f"""你是中国法律分类专家。你的任务是：从8个
 - 问题与犯罪/刑罚明显无关 → 可排除「刑法」
 - 问题与宪法/选举/立法/监察明显无关 → 可排除「宪法相关法」
 - 问题只问实体权利而非如何打官司 → 可排除「诉讼与非诉讼程序法」
+- 问题涉及"去哪个法院""如何起诉""诉讼请求""管辖" → 必须保留「诉讼与非诉讼程序法」
 
 输出 JSON，格式：
 {{
@@ -99,7 +100,9 @@ ANSWER_PROMPT = """你是中国法律助手。严格根据提供的法律条文�
 输出格式（严格按此结构，不得省略任何部分）：
 
 【结论】
-用2-4句话直接回答用户问题，说明当事人的权利和可采取的行动。语言通俗易懂，不要逐条罗列。
+用2-5句话直接回答用户问题的每个子问题，说明当事人的权利和可采取的行动。语言通俗易懂，不要逐条罗列。
+- 若用户问了多个问题（如"去哪个法院"+"诉讼请求是什么"），每个问题都要回答
+- 诉讼请求的标准表述：请求判令被告返还……；请求判令被告支付……
 
 【参考法条】
 列出本回答所依据的法律条文，每条格式：
@@ -109,7 +112,8 @@ ANSWER_PROMPT = """你是中国法律助手。严格根据提供的法律条文�
 1. 【严禁】引用任何未在下方提供的法条
 2. 【结论】部分不得出现"依据第X条"等引用格式，只说结论
 3. 如果提供的条文不足以完整回答，在【结论】末尾注明"（注：以下方面无法从现有法条确认：……）"
-4. 【参考法条】中区分法律原文与司法解释"""
+4. 【参考法条】中区分法律原文与司法解释
+5. 【参考法条】中每条只出现一次，不得重复"""
 
 
 # ── LLM 调用 ───────────────────────────────────────────────────────
@@ -128,7 +132,7 @@ def chat(system: str, user: str, temperature: float = 0.05) -> str:
         OLLAMA_URL, data=payload,
         headers={"Content-Type": "application/json"}, method="POST"
     )
-    with urllib.request.urlopen(req, timeout=120) as resp:
+    with urllib.request.urlopen(req, timeout=180) as resp:
         return json.loads(resp.read())["message"]["content"]
 
 
@@ -437,10 +441,16 @@ def build_context(articles: dict, max_articles: int = 20) -> str:
     for a in articles["interpretations"]:
         all_items.append(("interp", a))
 
-    # pinned 优先，其余按原顺序
+    # pinned 优先，其余按原顺序，并去重
     pinned = [(t, a) for t, a in all_items if a.get("pinned")]
     others = [(t, a) for t, a in all_items if not a.get("pinned")]
-    selected = (pinned + others)[:max_articles]
+    seen_ids: set = set()
+    deduped = []
+    for t, a in pinned + others:
+        if a["id"] not in seen_ids:
+            seen_ids.add(a["id"])
+            deduped.append((t, a))
+    selected = deduped[:max_articles]
 
     law_items  = [a for t, a in selected if t == "laws"]
     interp_items = [a for t, a in selected if t == "interp"]
