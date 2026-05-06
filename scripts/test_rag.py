@@ -307,10 +307,19 @@ def search_layered(keywords: list[str], domains: list[str],
             return []
         results = []
         ph = ",".join("?" * len(categories))
-        for kw in keywords:
-            cjk = [c for c in kw if '一' <= c <= '鿿']
-            if len(cjk) < 3:
-                continue
+        # 按命中数升序排列关键词：命中少的词更精确，优先检索使结果靠前
+        def kw_hits(kw):
+            try:
+                return conn.execute(
+                    "SELECT COUNT(*) FROM nodes_fts WHERE nodes_fts MATCH ?", [kw]
+                ).fetchone()[0]
+            except Exception:
+                return 999
+        sorted_kws = sorted(
+            [kw for kw in keywords if len([c for c in kw if '一' <= c <= '鿿']) >= 3],
+            key=kw_hits
+        )
+        for kw in sorted_kws:
             for law_title in hint_laws:
                 sql = f"""
                     SELECT n.id, l.title, l.legal_domain, l.category,
@@ -409,15 +418,33 @@ def filter_articles(question: str, articles: dict, verbose: bool = False,
 
 # ── Step 5: 生成回答 ───────────────────────────────────────────────
 
-def build_context(articles: dict) -> str:
+def build_context(articles: dict, max_articles: int = 20) -> str:
+    """
+    构建上下文，限制条文总数避免 3b 模型过载。
+    优先保留 pinned 条文（来自 topic hints），其次按检索顺序截断。
+    """
+    all_items = []
+    for a in articles["laws"]:
+        all_items.append(("laws", a))
+    for a in articles["interpretations"]:
+        all_items.append(("interp", a))
+
+    # pinned 优先，其余按原顺序
+    pinned = [(t, a) for t, a in all_items if a.get("pinned")]
+    others = [(t, a) for t, a in all_items if not a.get("pinned")]
+    selected = (pinned + others)[:max_articles]
+
+    law_items  = [a for t, a in selected if t == "laws"]
+    interp_items = [a for t, a in selected if t == "interp"]
+
     parts = []
-    if articles["laws"]:
+    if law_items:
         parts.append("【法律原文】")
-        for a in articles["laws"]:
+        for a in law_items:
             parts.append(f"《{a['law']}》{a['article']}：{a['content'][:300]}")
-    if articles["interpretations"]:
+    if interp_items:
         parts.append("\n【司法解释】")
-        for a in articles["interpretations"]:
+        for a in interp_items:
             parts.append(f"《{a['law']}》{a['article']}：{a['content'][:300]}")
     return "\n".join(parts)
 
