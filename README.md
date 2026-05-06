@@ -76,6 +76,9 @@ laws_data/
 │   ├── extract_references.py      # 引用关系提取
 │   ├── pipeline.py                # 完整流程（支持阶段跳过参数）
 │   ├── verify_db.py               # 数据库与 JSON 一致性验证
+│   ├── build_aliases.py           # 构建日常语言 → 法律术语别名表
+│   ├── build_enhancements.py      # 构建 topic hints / keyword synonyms 等增强表
+│   ├── test_rag.py                # RAG 法律咨询 pipeline（多步推理）
 │   ├── docx_to_json/              # 第一阶段：docx → JSON
 │   │   ├── converter.py
 │   │   ├── domain.py
@@ -83,17 +86,42 @@ laws_data/
 │   │   └── structure.py
 │   ├── json_to_db/                # 第二阶段：JSON → SQLite
 │   │   ├── builder.py
-│   │   └── display_group.py       # 展示分组映射表
+│   │   ├── display_group.py       # 展示分组映射表
+│   │   └── export_menu.py         # 导出 law_menu.json 导航索引
 │   └── db_to_md/                  # 第三阶段：DB → Markdown
 │       └── renderer.py
-└── 🗄️  law_content.db             # SQLite 数据库（pipeline 产物，约 150MB）
+├── 🗄️  law_content.db             # 主数据库（pipeline 产物，~370MB，Git LFS）
+└── 🗄️  law_enhancements.db        # 增强数据库（RAG 优化用，独立维护，Git LFS）
 ```
 
 ---
 
 ## 🗄️ 数据库结构
 
-运行 `python3 scripts/pipeline.py` 生成 `law_content.db`。
+项目包含两个 SQLite 数据库：
+
+- **`law_content.db`**（~370MB）— 主数据库，由 `pipeline.py` 生成，包含法律全文、条文结构、FTS 索引、展示分组映射、引用关系等。
+- **`law_enhancements.db`**（~64KB）— 增强数据库，独立于主库，RAG 检索优化用，可单独重建，无需重跑完整 pipeline。
+
+### `law_enhancements.db` 表结构
+
+| 表 | 说明 |
+|----|------|
+| `term_aliases` | 日常语言 → 法律术语映射（LLM 生成 + FTS 验证），由 `build_aliases.py` 构建 |
+| `alias_patches` | 手工精确补充 `term_aliases` 的缺口映射 |
+| `topic_law_hints` | 场景关键词 → 最相关法律名称（带优先级），检索时优先在命中法律内搜索 |
+| `keyword_synonyms` | LLM 可能生成的词 → 精确 FTS 关键词映射，解决 LLM 造词无命中问题 |
+
+重建增强数据库（需先启动 Ollama）：
+
+```bash
+python3 scripts/build_aliases.py        # 重建 term_aliases（LLM + FTS 验证）
+python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，无需 LLM）
+```
+
+### `law_content.db` 表结构
+
+运行 `python3 scripts/pipeline.py` 生成。
 
 ### 🟠 `laws` 表 — 每部法律一行
 
@@ -290,6 +318,31 @@ WHERE dgm.display_group = '民事与商事' AND l.is_current = 1;
 SELECT title, doc_number, pub_date FROM laws
 WHERE issuing_org = '最高人民法院' AND category = '司法解释'
 ORDER BY pub_date DESC;
+```
+
+---
+
+## 🤖 RAG 法律咨询 Pipeline
+
+`scripts/test_rag.py` 提供一个基于本地 LLM（Ollama）的多步推理法律问答 pipeline：
+
+1. **分类路由** — 将问题映射到相关法律部门，排除明显无关领域
+2. **关键词提取** — 抽取适合 FTS 检索的法律术语
+3. **别名扩展** — 通过 `law_enhancements.db` 将日常语言转换为法律术语，补充同义词
+4. **分层检索** — 先检法律原文，再检司法解释；`topic_law_hints` 命中的法律优先排前
+5. **相关性过滤** — LLM 逐条判断，去除因同词共现被误召回的无关条文
+6. **生成回答** — 严格基于检索到的条文回答，注明无法确认的部分
+
+**依赖：** [Ollama](https://ollama.com/) 本地运行，默认模型 `qwen2.5:3b`
+
+```bash
+# 启动 Ollama 后运行示例问题
+python3 scripts/test_rag.py
+
+# 在自己的脚本中调用
+from scripts.test_rag import ask
+result = ask("劳动合同试用期最长可以是多久？")
+print(result["answer"])
 ```
 
 ---

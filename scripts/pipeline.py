@@ -204,6 +204,8 @@ def main():
         json_to_db()
         from json_to_db.display_group import run as build_display_group
         build_display_group()
+        from json_to_db.export_menu import run as export_menu
+        export_menu()
 
     if not args.skip_md:
         from db_to_md.renderer import run as db_to_md

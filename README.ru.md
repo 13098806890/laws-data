@@ -50,17 +50,45 @@ laws_data/
 │   ├── extract_references.py      # Извлечение ссылок
 │   ├── pipeline.py                # Полный pipeline (с флагами пропуска этапов)
 │   ├── verify_db.py               # Проверка согласованности БД и JSON
+│   ├── build_aliases.py           # Построение таблицы алиасов: разговорный язык → юридические термины
+│   ├── build_enhancements.py      # Построение таблиц topic hints / keyword synonyms
+│   ├── test_rag.py                # RAG-pipeline для юридических консультаций
 │   ├── docx_to_json/              # Этап 1: docx → JSON
 │   ├── json_to_db/                # Этап 2: JSON → SQLite
 │   │   ├── builder.py
-│   │   └── display_group.py       # Таблица маппинга групп отображения
+│   │   ├── display_group.py       # Таблица маппинга групп отображения
+│   │   └── export_menu.py         # Экспорт навигационного индекса law_menu.json
 │   └── db_to_md/                  # Этап 3: DB → Markdown
-└── 🗄️  law_content.db             # База данных SQLite (~150MB)
+├── 🗄️  law_content.db             # Основная БД (~370MB, Git LFS)
+└── 🗄️  law_enhancements.db        # БД расширений для RAG-поиска (Git LFS)
 ```
 
 ---
 
 ## 🗄️ Структура базы данных
+
+Проект содержит две базы данных SQLite:
+
+- **`law_content.db`** (~370MB) — основная БД, генерируется через `pipeline.py`. Содержит полные тексты законов, структуру статей, FTS-индексы, маппинг групп отображения и связи между статьями.
+- **`law_enhancements.db`** (~64KB) — БД расширений, поддерживается независимо, используется для оптимизации RAG-поиска. Пересборка не требует повторного запуска полного pipeline.
+
+### Таблицы `law_enhancements.db`
+
+| Таблица | Описание |
+|---------|----------|
+| `term_aliases` | Разговорный язык → юридические термины (LLM + FTS-валидация), строится через `build_aliases.py` |
+| `alias_patches` | Ручные исправления пробелов в `term_aliases` |
+| `topic_law_hints` | Ключевое слово темы → наиболее релевантные законы (с приоритетом) |
+| `keyword_synonyms` | Слова, которые может сгенерировать LLM → точные FTS-термины |
+
+Пересборка БД расширений (для `term_aliases` требуется Ollama):
+
+```bash
+python3 scripts/build_aliases.py        # Пересборка term_aliases (LLM + FTS)
+python3 scripts/build_enhancements.py   # Пересборка остальных таблиц (без LLM)
+```
+
+### Таблицы `law_content.db`
 
 ### 🟠 `laws` — По одной строке на закон
 
@@ -178,6 +206,25 @@ WHERE dgm.display_group = '民事与商事' AND l.is_current = 1;
 SELECT title, doc_number, pub_date FROM laws
 WHERE issuing_org = '最高人民法院' AND category = '司法解释'
 ORDER BY pub_date DESC;
+```
+
+---
+
+## 🤖 RAG-pipeline для юридических консультаций
+
+`scripts/test_rag.py` реализует многоэтапный RAG-pipeline на основе локальной LLM (Ollama):
+
+1. **Маршрутизация по домену** — сопоставляет вопрос с релевантными отраслями права
+2. **Извлечение ключевых слов** — выделяет юридические термины для FTS-поиска
+3. **Расширение алиасов** — через `law_enhancements.db` переводит разговорный язык в юридическую терминологию
+4. **Послойный поиск** — сначала законы и НПА, затем судебные толкования; законы из `topic_law_hints` поднимаются в начало
+5. **Фильтрация релевантности** — LLM оценивает каждую статью, отсеивая шумовые совпадения
+6. **Генерация ответа** — строго на основе найденных статей, с явным указанием пробелов
+
+**Требования:** [Ollama](https://ollama.com/), модель по умолчанию `qwen2.5:3b`
+
+```bash
+python3 scripts/test_rag.py
 ```
 
 ---
