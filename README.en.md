@@ -145,64 +145,115 @@ python3 scripts/build_enhancements.py   # Rebuild the other three tables (static
 
 Run `python3 scripts/pipeline.py` to generate.
 
+---
+
 ### 🟠 `laws` — One row per law
+
+Each law has exactly one active row (`is_current=1`). When multiple versions exist (different `pub_date`), only the latest is marked current.
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `id` | INTEGER PK | Internal primary key |
-| `title` | TEXT | Full title |
-| `filename` | TEXT UNIQUE | Format: `{title}_{YYYYMMDD}` |
-| `category` | TEXT | Source type (法律 / 行政法规 / 司法解释 …) |
-| `legal_domain` | TEXT | Academic legal domain (民法商法 / 刑法 / 行政法 …) |
-| `subject_area` | TEXT | Topic for administrative regulations (交通运输 / 税务财政 …; empty for others) |
+| `id` | INTEGER PK | Stable primary key assigned by `generate_law_index.py`; survives pipeline rebuilds |
+| `title` | TEXT | Full title extracted from filename (not from docx body, which can be truncated) |
+| `filename` | TEXT UNIQUE | Format: `{title}_{YYYYMMDD}`, no extension |
+| `category` | TEXT | Source type: `法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` |
+| `legal_domain` | TEXT | Legal domain: `民法典` / `民法商法` / `刑法` / `行政法` / `经济法` / `社会法` / `宪法相关法` / `诉讼与非诉讼程序法` |
+| `subject_area` | TEXT | Sub-topic for administrative regulations (交通运输 / 税务财政 …); empty for others |
 | `pub_date` | TEXT | Promulgation date `YYYY-MM-DD` |
-| `effective_date` | TEXT | Effective date `YYYY-MM-DD` |
-| `promulgation_info` | TEXT | Full promulgation notice text |
-| `issuing_org` | TEXT | Issuing authority (Supreme Court / State Council …) |
-| `doc_number` | TEXT | Document number (e.g. 法释〔2000〕29号) |
+| `effective_date` | TEXT | Effective date `YYYY-MM-DD`; xlsx index is authoritative, otherwise extracted from body |
+| `promulgation_info` | TEXT | Full promulgation notice (passage / date / implementation paragraphs) |
+| `issuing_org` | TEXT | Issuing authority (whitelist-matched: Supreme Court / Supreme Procuratorate / State Council / NPC SC …) |
+| `doc_number` | TEXT | Document reference number (法释〔2000〕29号 etc.); usually empty for NPC laws |
 | `total_articles` | INTEGER | Total article count |
-| `full_text` | TEXT | Full text |
-| `is_current` | INTEGER | **1 = current version, 0 = historical** (latest pub_date wins) |
+| `full_text` | TEXT | Complete law text |
+| `version_date` | TEXT | Same as `pub_date`; used for multi-version disambiguation |
+| `is_current` | INTEGER | **1 = current version**, 0 = historical |
+
+```sql
+-- All judicial interpretations from the Supreme Court
+SELECT title, doc_number, pub_date FROM laws
+WHERE issuing_org = '最高人民法院' AND category = '司法解释'
+ORDER BY pub_date DESC;
+```
 
 ---
 
 ### 🔵 `nodes` — Unified storage for parts / chapters / sections / articles
 
+All structural levels share one table, differentiated by `type`. `parent_id` forms a tree; `ORDER BY global_order` restores reading order.
+
 | Field | Type | Description |
 |-------|------|-------------|
 | `id` | INTEGER PK | Auto-increment primary key |
 | `law_id` | INTEGER FK | References `laws.id` |
-| `parent_id` | INTEGER FK | Parent node (NULL for top-level parts) |
-| `type` | TEXT | `part` / `chapter` / `section` / `article` |
-| `title` | TEXT | Heading text; for articles same as `article_number` |
-| `article_number` | TEXT | Article label, e.g. `第一条` (NULL for structural nodes) |
-| `content` | TEXT | Display text (heading for structural nodes, body for articles) |
-| `order_index` | INTEGER | Position within parent |
-| `global_order` | INTEGER | Depth-first global sequence — `ORDER BY global_order` gives reading order |
-| `part_num` | INTEGER | Part number (NULL if no part structure) |
+| `parent_id` | INTEGER FK | Parent node id; NULL for top-level parts |
+| `type` | TEXT | `part`（编）/ `chapter`（章）/ `section`（节）/ `article`（条） |
+| `title` | TEXT | Heading text for structural nodes; same as `article_number` for articles |
+| `article_number` | TEXT | Article label e.g. `第一条`; NULL for structural nodes |
+| `content` | TEXT | Display text: heading text for structural nodes, full body for articles (includes "第X条　" prefix) |
+| `order_index` | INTEGER | Position within parent (1-based) |
+| `global_order` | INTEGER | Depth-first global sequence number — `ORDER BY global_order` gives correct reading order |
+| `part_num` | INTEGER | Part number (NULL if law has no part structure) |
 | `chapter_num` | INTEGER | Chapter number |
-| `section_num` | INTEGER | Section number (NULL if no section structure) |
-| `article_num` | INTEGER | Article number (第十二条 → `12`) |
+| `section_num` | INTEGER | Section number (NULL if chapter has no sections) |
+| `article_num` | INTEGER | Integer article number (第十二条 → `12`), enables range queries |
+
+Notes:
+- `part` nodes exist only in 8 laws (Civil Code, Criminal Code ×2, Civil Procedure ×3, Criminal Procedure ×2)
+- 115 judicial interpretations use Chinese-numeral headings (`一、管辖`) instead of chapters; these are still mapped to `chapter` type
+- Short documents (legal interpretations, replies) are written as a single `article` node with no structural hierarchy
+
+```sql
+-- All articles in a chapter
+SELECT article_number, content FROM nodes
+WHERE parent_id = ? AND type = 'article' ORDER BY order_index;
+
+-- Articles by number range (e.g. articles 10–20)
+SELECT article_number, content FROM nodes
+WHERE law_id = ? AND type = 'article' AND article_num BETWEEN 10 AND 20;
+```
 
 ---
 
-### 🟢 `nodes_fts` — Full-text search (virtual table)
+### 🟢 `nodes_fts` — Full-text search, ≥3 characters (virtual table)
 
-- Engine: FTS5, `tokenize='trigram'`
-- Supports arbitrary Chinese substring search (minimum 3 characters)
-- `rowid` maps to `nodes.id`
+FTS5 external content table backed by `nodes`. Only the inverted index is stored here — **the article text is not duplicated** (saves ~60MB vs standalone storage).
+
+| Field | Description |
+|-------|-------------|
+| `content` | Article body, corresponds to `nodes.content` |
+| `article_number` | Article label, corresponds to `nodes.article_number` |
+
+- Tokenizer: `trigram` — indexes all consecutive 3-character windows, enabling arbitrary substring search
+- Minimum query length: 3 CJK characters (use `nodes_fts_bigram` for 1–2 characters)
+- 4, 5, 6, 7+ character queries work natively — no extra indexes needed
+- `rowid` maps 1:1 to `nodes.id`
+
+```sql
+SELECT n.article_number, n.content, l.title
+FROM nodes_fts f
+JOIN nodes n ON f.rowid = n.id
+JOIN laws l ON n.law_id = l.id
+WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
+```
 
 ---
 
-### 🟣 `display_group_map` — Display group mapping
+### 🔵 `nodes_fts_bigram` — Short-word search, 1–2 characters (virtual table)
 
-| Field | Type | Description |
-|-------|------|-------------|
-| `law_id` | INTEGER PK FK | References `laws.id` |
-| `display_group` | TEXT | Top-level display group (7 values) |
-| `display_subgroup` | TEXT | Second-level subgroup (`/`-separated for third level) |
+FTS5 external content table, `unicode61` tokenizer, covering the 1–2 character range that trigram cannot handle. Shares `nodes` as the content source — **no text duplication** (saves ~115MB).
 
-Decoupled from `legal_domain` — update by re-running `display_group.py` only, no full pipeline rebuild needed.
+| Field | Description |
+|-------|-------------|
+| `content` | Article body, corresponds to `nodes.content` |
+| `article_number` | Article label, corresponds to `nodes.article_number` |
+
+- Tokenizer: `unicode61` — splits on Unicode character boundaries; each Chinese character is one token
+- Use for 1–2 character queries only; for ≥3 characters use `nodes_fts`
+
+```sql
+SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
+```
 
 ---
 
@@ -210,17 +261,23 @@ Decoupled from `legal_domain` — update by re-running `display_group.py` only, 
 
 | Field | Type | Description |
 |-------|------|-------------|
-| `from_node_id` | INTEGER FK | Citing node |
+| `from_node_id` | INTEGER FK | Citing node (`nodes.id`) |
 | `from_law_id` | INTEGER FK | Citing law |
 | `from_article_num` | INTEGER | Citing article number |
-| `to_node_id` | INTEGER FK | Cited node |
+| `from_chapter_num` | INTEGER | Citing chapter number |
+| `from_section_num` | INTEGER | Citing section number |
+| `from_part_num` | INTEGER | Citing part number |
+| `to_node_id` | INTEGER FK | Cited node (populated when resolved) |
 | `to_law_id` | INTEGER FK | Cited law |
 | `to_article_num` | INTEGER | Cited article number |
-| `ref_type` | TEXT | `cross_law` / `self_ref` |
-| `resolved` | INTEGER | 1 = resolved to specific article |
-| `raw_text` | TEXT | Original citation text |
+| `to_chapter_num` | INTEGER | Cited chapter number |
+| `to_section_num` | INTEGER | Cited section number |
+| `to_part_num` | INTEGER | Cited part number |
+| `ref_type` | TEXT | `cross_law` (cross-law reference) / `self_ref` (within same law) |
+| `resolved` | INTEGER | 1 = resolved to a specific node, 0 = unresolved |
+| `raw_text` | TEXT | Original citation string, e.g. `《中华人民共和国民法典》第一千二百零八条` |
 
-> Synced from `references/article_references.json`, updated by `pipeline.py --only-refs`.
+Synced from `references/article_references.json`, updated by `pipeline.py --only-refs` without rebuilding the full database.
 
 ---
 

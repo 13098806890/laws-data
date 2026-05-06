@@ -100,7 +100,7 @@ laws_data/
 
 项目包含两个 SQLite 数据库：
 
-- **`law_content.db`**（~370MB）— 主数据库，由 `pipeline.py` 生成，包含法律全文、条文结构、FTS 索引、展示分组映射、引用关系等。
+- **`law_content.db`**（~180MB）— 主数据库，由 `pipeline.py` 生成，包含法律全文、条文结构、FTS 索引、引用关系等。
 - **`law_enhancements.db`**（~64KB）— 增强数据库，独立于主库，RAG 检索优化用，可单独重建，无需重跑完整 pipeline。
 
 ### `law_enhancements.db` 表结构
@@ -174,69 +174,125 @@ python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，�
 
 运行 `python3 scripts/pipeline.py` 生成。
 
+---
+
 ### 🟠 `laws` 表 — 每部法律一行
+
+每部法律在此表中只有一行（`is_current=1`），同名多版本只保留最新 `pub_date` 的版本。
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `id` | INTEGER PK | 内部主键 |
-| `title` | TEXT | 完整标题 |
-| `filename` | TEXT UNIQUE | 格式：`{标题}_{YYYYMMDD}` |
-| `category` | TEXT | 来源类型（法律 / 行政法规 / 司法解释 …） |
-| `legal_domain` | TEXT | 学术法律部门（民法商法 / 刑法 / 行政法 …） |
-| `subject_area` | TEXT | 行政法规主题分类（交通运输 / 税务财政 …，非行政法规为空） |
+| `id` | INTEGER PK | 稳定主键，由 `generate_law_index.py` 分配，跨 pipeline 重建保持不变 |
+| `title` | TEXT | 完整标题，从文件名提取（不从 docx 正文读，因正文标题常截断） |
+| `filename` | TEXT UNIQUE | 格式：`{标题}_{YYYYMMDD}`，无后缀 |
+| `category` | TEXT | 来源类型：`法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` |
+| `legal_domain` | TEXT | 法律部门：`民法典` / `民法商法` / `刑法` / `行政法` / `经济法` / `社会法` / `宪法相关法` / `诉讼与非诉讼程序法` |
+| `subject_area` | TEXT | 行政法规二级主题（交通运输 / 税务财政 …），非行政法规为空 |
 | `pub_date` | TEXT | 公布日期 `YYYY-MM-DD` |
-| `effective_date` | TEXT | 生效日期 `YYYY-MM-DD` |
-| `promulgation_info` | TEXT | 发布说明全文（通过/公布/施行信息） |
-| `issuing_org` | TEXT | 发布机关（最高人民法院 / 国务院 …） |
-| `doc_number` | TEXT | 发文字号（如 法释〔2000〕29号） |
+| `effective_date` | TEXT | 生效日期 `YYYY-MM-DD`，xlsx 权威来源优先，其次从正文提取 |
+| `promulgation_info` | TEXT | 发布说明全文（通过 / 公布 / 施行信息段落） |
+| `issuing_org` | TEXT | 发布机关（最高人民法院 / 最高人民检察院 / 国务院 / 全国人大常委会等，白名单匹配） |
+| `doc_number` | TEXT | 发文字号（法释〔2000〕29号 等），全国人大通过的法律通常为空 |
 | `total_articles` | INTEGER | 条文总数 |
-| `full_text` | TEXT | 法律全文 |
-| `is_current` | INTEGER | **1 = 现行版本，0 = 历史版本**（同名多版取最新） |
+| `full_text` | TEXT | 法律全文原文 |
+| `version_date` | TEXT | 同 `pub_date`，用于多版本区分 |
+| `is_current` | INTEGER | **1 = 现行版本**，0 = 历史版本 |
+
+常用查询：
+
+```sql
+-- 查某机构所有司法解释
+SELECT title, doc_number, pub_date FROM laws
+WHERE issuing_org = '最高人民法院' AND category = '司法解释'
+ORDER BY pub_date DESC;
+```
 
 ---
 
 ### 🔵 `nodes` 表 — 编 / 章 / 节 / 条统一存储
 
+所有层级（编、章、节、条）用同一张表存储，通过 `type` 字段区分，`parent_id` 构成树形结构。`ORDER BY global_order` 即可还原原文顺序。
+
 | 字段 | 类型 | 说明 |
 |------|------|------|
 | `id` | INTEGER PK | 自增主键 |
 | `law_id` | INTEGER FK | 关联 `laws.id` |
-| `parent_id` | INTEGER FK | 父节点（编的 parent 为 NULL） |
-| `type` | TEXT | `part` / `chapter` / `section` / `article` |
-| `title` | TEXT | 编/章/节标题；条文同 `article_number` |
-| `article_number` | TEXT | 条文编号，如 `第一条`（非条文为 NULL） |
-| `content` | TEXT | 展示文本（编/章/节为标题文本，条文为正文） |
-| `order_index` | INTEGER | 在父节点内的序号 |
-| `global_order` | INTEGER | 全文深度优先序号，`ORDER BY global_order` 得正文顺序 |
-| `part_num` | INTEGER | 所在编序号（无编结构为 NULL） |
-| `chapter_num` | INTEGER | 所在章序号 |
-| `section_num` | INTEGER | 所在节序号（无节结构为 NULL） |
-| `article_num` | INTEGER | 条文序号（第十二条 → `12`） |
+| `parent_id` | INTEGER FK | 父节点 id，编（part）的 parent_id 为 NULL |
+| `type` | TEXT | `part`（编）/ `chapter`（章）/ `section`（节）/ `article`（条） |
+| `title` | TEXT | 编/章/节 的标题文本；条文此字段同 `article_number` |
+| `article_number` | TEXT | 条文编号，如 `第一条`；非条文节点为 NULL |
+| `content` | TEXT | 展示内容：编/章/节 存标题文本，条文存正文（含"第X条　"前缀） |
+| `order_index` | INTEGER | 在父节点内的排序序号（从 1 开始） |
+| `global_order` | INTEGER | 全文深度优先遍历序号，`ORDER BY global_order` 得正确展示顺序 |
+| `part_num` | INTEGER | 所在编的序号（无编结构为 NULL） |
+| `chapter_num` | INTEGER | 所在章的序号 |
+| `section_num` | INTEGER | 所在节的序号（无节结构为 NULL） |
+| `article_num` | INTEGER | 条文序号，如第十二条 → `12`，便于数值范围查询 |
+
+设计说明：
+- 编（part）结构只在 8 部法律中存在（民法典、刑法×2、刑事诉讼法×2、民事诉讼法×3）
+- 115 个司法解释用汉字序号（`一、管辖`）代替第X章，识别后仍映射为 `chapter` 类型
+- 无章节的短文件（法律解释、批复等）整体写为单条 `article`
+
+常用查询：
+
+```sql
+-- 按顺序展示某法律全文
+SELECT type, title, content FROM nodes WHERE law_id = ? ORDER BY global_order;
+
+-- 某章下所有条文
+SELECT article_number, content FROM nodes
+WHERE parent_id = ? AND type = 'article' ORDER BY order_index;
+
+-- 按条文序号范围查询（如第10-20条）
+SELECT article_number, content FROM nodes
+WHERE law_id = ? AND type = 'article' AND article_num BETWEEN 10 AND 20;
+```
 
 ---
 
-### 🟢 `nodes_fts` 虚拟表 — 全文搜索
+### 🟢 `nodes_fts` 虚拟表 — 全文搜索（≥3 字）
+
+FTS5 外部内容表，索引内容存储在 `nodes` 表中，本身只保存倒排索引，**不复制原文**（比独立存储节省 ~60MB）。
 
 | 字段 | 说明 |
 |------|------|
-| `content` | 条文正文（同 `nodes.content`） |
-| `article_number` | 条文编号 |
+| `content` | 条文正文，对应 `nodes.content` |
+| `article_number` | 条文编号，对应 `nodes.article_number` |
 
-- 引擎：FTS5，`tokenize='trigram'`
-- 支持任意中文子串搜索（最短 3 个字符）
-- `rowid` 与 `nodes.id` 对应
+- 分词器：`trigram`，将文本切成所有连续三字 gram，支持任意中文子串精确匹配
+- 最短搜索词：3 个 CJK 字符（1-2 字用 `nodes_fts_bigram`）
+- 4 字、5 字、6 字及以上均原生支持，无需额外索引
+- `rowid` 与 `nodes.id` 一一对应
+
+```sql
+-- 全文搜索，找含"合同解除"的条文
+SELECT n.article_number, n.content, l.title
+FROM nodes_fts f
+JOIN nodes n ON f.rowid = n.id
+JOIN laws l ON n.law_id = l.id
+WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
+```
 
 ---
 
-### 🟣 `display_group_map` 表 — 展示分组映射
+### 🔵 `nodes_fts_bigram` 虚拟表 — 短词搜索（1-2 字）
 
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `law_id` | INTEGER PK FK | 关联 `laws.id` |
-| `display_group` | TEXT | 顶层展示分组（7 个） |
-| `display_subgroup` | TEXT | 二级子分组（行政法规含三级，用 `/` 分隔） |
+FTS5 外部内容表，使用 `unicode61` 分词器，专门处理 trigram 无法覆盖的 1-2 字搜索。与 `nodes_fts` 共享 `nodes` 表的原文，同样不复制内容（节省 ~115MB）。
 
-与 `legal_domain` 解耦，单独维护，只需重跑 `display_group.py` 即可更新，无需重建整个数据库。
+| 字段 | 说明 |
+|------|------|
+| `content` | 条文正文，对应 `nodes.content` |
+| `article_number` | 条文编号，对应 `nodes.article_number` |
+
+- 分词器：`unicode61`，按 Unicode 字符边界分词，中文单字即为一个 token
+- 适用场景：搜索单字（`婚`、`税`）或双字（`婚姻`、`合同`）
+- 3 字及以上请用 `nodes_fts`（trigram），不要用此表
+
+```sql
+-- 搜索单字或双字（由 RAG pipeline 自动路由）
+SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
+```
 
 ---
 
@@ -244,17 +300,23 @@ python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，�
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `from_node_id` | INTEGER FK | 引用方节点 |
+| `from_node_id` | INTEGER FK | 引用方节点（`nodes.id`） |
 | `from_law_id` | INTEGER FK | 引用方法律 |
 | `from_article_num` | INTEGER | 引用方条文序号 |
-| `to_node_id` | INTEGER FK | 被引用方节点 |
+| `from_chapter_num` | INTEGER | 引用方所在章序号 |
+| `from_section_num` | INTEGER | 引用方所在节序号 |
+| `from_part_num` | INTEGER | 引用方所在编序号 |
+| `to_node_id` | INTEGER FK | 被引用方节点（已解析时有值） |
 | `to_law_id` | INTEGER FK | 被引用方法律 |
 | `to_article_num` | INTEGER | 被引用方条文序号 |
-| `ref_type` | TEXT | `cross_law`（跨法）/ `self_ref`（本法自引） |
-| `resolved` | INTEGER | 1 = 已解析到具体条文 |
-| `raw_text` | TEXT | 原文引用文字 |
+| `to_chapter_num` | INTEGER | 被引用方所在章序号 |
+| `to_section_num` | INTEGER | 被引用方所在节序号 |
+| `to_part_num` | INTEGER | 被引用方所在编序号 |
+| `ref_type` | TEXT | `cross_law`（跨法引用）/ `self_ref`（本法自引） |
+| `resolved` | INTEGER | 1 = 已解析到具体节点，0 = 未解析 |
+| `raw_text` | TEXT | 原文引用字符串，如 `《中华人民共和国民法典》第一千二百零八条` |
 
-> 同步自 `references/article_references.json`，由 `pipeline.py --only-refs` 更新。
+同步自 `references/article_references.json`，由 `pipeline.py --only-refs` 单独更新，无需重建整个数据库。
 
 ---
 

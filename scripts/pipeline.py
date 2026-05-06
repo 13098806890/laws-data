@@ -202,8 +202,6 @@ def main():
     if not args.skip_db:
         from json_to_db.builder import run as json_to_db
         json_to_db()
-        from json_to_db.display_group import run as build_display_group
-        build_display_group()
         from json_to_db.export_menu import run as export_menu
         export_menu()
 

@@ -196,7 +196,7 @@ def fts_search(kw: str, domains: list[str], categories: list[str],
               AND l.category IN ({cat_ph})
             LIMIT ?
         """
-        params = [" ".join(cjk)] + domains + categories + [limit]
+        params = [kw] + domains + categories + [limit]
     else:
         return []
 

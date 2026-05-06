@@ -31,26 +31,6 @@ def _cn_to_int(s: str) -> int:
 _ART_NUM_RE = re.compile(r'^第([零一二三四五六七八九十百千]+)条')
 
 _CJK_RE = re.compile(r'[一-鿿]')
-_ART_PREFIX_RE = re.compile(r'^第[^条]{1,10}条[　 ]+')  # 剥离"第X条　"前缀
-
-def _to_bigrams(text: str) -> str:
-    """把文本中的 CJK 字符切成 unigram + bigram token，供 FTS 短词搜索用。
-    '婚姻自由' → '婚 婚姻 姻 姻自 自 自由 由'
-    单字和双字都能精确匹配。查询转换：
-      1字 → 单 token '婚'
-      2字 → phrase '"婚姻"' 或 两个相邻 token
-      3字以上 → 走 trigram FTS
-    """
-    chars = _CJK_RE.findall(text)
-    if not chars:
-        return ''
-    tokens = []
-    for i, ch in enumerate(chars):
-        tokens.append(ch)                          # unigram
-        if i < len(chars) - 1:
-            tokens.append(ch + chars[i + 1])       # bigram
-    return ' '.join(tokens)
-
 
 def create_schema(conn):
     conn.executescript("""
@@ -88,13 +68,16 @@ def create_schema(conn):
         );
         CREATE VIRTUAL TABLE IF NOT EXISTS nodes_fts USING fts5(
             content,
-            content_body,
             article_number,
+            content="nodes",
+            content_rowid="id",
             tokenize='trigram'
         );
         CREATE VIRTUAL TABLE IF NOT EXISTS nodes_fts_bigram USING fts5(
             content,
             article_number,
+            content="nodes",
+            content_rowid="id",
             tokenize='unicode61'
         );
         CREATE TABLE IF NOT EXISTS article_references (
@@ -154,12 +137,12 @@ def _insert_article(conn, law_id, parent_id, art, oi, go, coords):
          pt_num, ch_num, sec_num, art_num)
     )
     conn.execute(
-        "INSERT INTO nodes_fts(rowid, content, content_body, article_number) VALUES(?,?,?,?)",
-        (cur.lastrowid, content, _ART_PREFIX_RE.sub('', content), art_number)
+        "INSERT INTO nodes_fts(rowid, content, article_number) VALUES(?,?,?)",
+        (cur.lastrowid, content, art_number)
     )
     conn.execute(
         "INSERT INTO nodes_fts_bigram(rowid, content, article_number) VALUES(?,?,?)",
-        (cur.lastrowid, _to_bigrams(content), _to_bigrams(art_number))
+        (cur.lastrowid, content, art_number)
     )
 
 

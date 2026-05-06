@@ -137,7 +137,7 @@ def fts_hits(term: str, conn: sqlite3.Connection) -> int:
             rows = conn.execute(
                 "SELECT COUNT(*) FROM nodes_fts_bigram f JOIN nodes n ON f.rowid=n.id "
                 "WHERE nodes_fts_bigram MATCH ? AND n.type='article'",
-                [" ".join(cjk)]
+                [term]
             ).fetchone()
             return rows[0] if rows else 0
         except Exception:

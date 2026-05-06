@@ -34,6 +34,11 @@
 laws_data/
 ├── 📂 sources/                    # Исходные файлы (docx/doc + xlsx индекс)
 ├── 📂 json/                       # Структурированный JSON (по категориям, результат pipeline)
+│   ├── 法律/
+│   ├── 司法解释/
+│   ├── 行政法规/
+│   ├── 宪法/
+│   └── 监察法规/
 ├── 📂 宪法与国家机构/             # Markdown полные тексты (по группам отображения, только is_current=1)
 ├── 📂 民事与商事/                 # 10 подгрупп
 ├── 📂 刑事/                       # 6 подгрупп
@@ -52,15 +57,14 @@ laws_data/
 │   ├── verify_db.py               # Проверка согласованности БД и JSON
 │   ├── build_aliases.py           # Построение таблицы алиасов: разговорный язык → юридические термины
 │   ├── build_enhancements.py      # Построение таблиц topic hints / keyword synonyms
-│   ├── test_rag.py                # RAG-pipeline для юридических консультаций
+│   ├── test_rag.py                # RAG-pipeline для юридических консультаций (многоэтапный)
 │   ├── docx_to_json/              # Этап 1: docx → JSON
 │   ├── json_to_db/                # Этап 2: JSON → SQLite
 │   │   ├── builder.py
-│   │   ├── display_group.py       # Таблица маппинга групп отображения
 │   │   └── export_menu.py         # Экспорт навигационного индекса law_menu.json
 │   └── db_to_md/                  # Этап 3: DB → Markdown
-├── 🗄️  law_content.db             # Основная БД (~370MB, Git LFS)
-└── 🗄️  law_enhancements.db        # БД расширений для RAG-поиска (Git LFS)
+├── 🗄️  law_content.db             # Основная БД (~180MB, Git LFS)
+└── 🗄️  law_enhancements.db        # БД расширений для RAG-поиска (~64KB, Git LFS)
 ```
 
 ---
@@ -69,7 +73,7 @@ laws_data/
 
 Проект содержит две базы данных SQLite:
 
-- **`law_content.db`** (~370MB) — основная БД, генерируется через `pipeline.py`. Содержит полные тексты законов, структуру статей, FTS-индексы, маппинг групп отображения и связи между статьями.
+- **`law_content.db`** (~180MB) — основная БД, генерируется через `pipeline.py`. Содержит полные тексты законов, структуру статей, FTS-индексы и связи между статьями.
 - **`law_enhancements.db`** (~64KB) — БД расширений, поддерживается независимо, используется для оптимизации RAG-поиска. Пересборка не требует повторного запуска полного pipeline.
 
 ### Таблицы `law_enhancements.db`
@@ -94,6 +98,11 @@ SELECT legal_term, fts_hits FROM term_aliases WHERE colloquial = '车祸' ORDER 
 
 Заполняет пробелы `term_aliases`, где LLM не справился (напр. "离婚", "误工费", "工伤"). Та же схема, строится через `build_enhancements.py`, все записи прошли FTS-валидацию.
 
+```sql
+SELECT legal_term, fts_hits FROM alias_patches WHERE colloquial = '离婚';
+-- → 离婚登记 (18), 离婚诉讼 (29), 婚姻自由 (24), 解除婚姻关系 (13)
+```
+
 #### 🟠 `topic_law_hints` — Ключевые слова темы → рекомендованные законы (50 строк)
 
 Привязывает тему вопроса к конкретным законам. RAG-поиск сначала ищет в этих законах, снижая межотраслевой шум.
@@ -102,10 +111,10 @@ SELECT legal_term, fts_hits FROM term_aliases WHERE colloquial = '车祸' ORDER 
 |------|-----|----------|
 | `topic_keyword` | TEXT | Слово темы, напр. `消费者`, `交通事故`, `离婚` |
 | `law_title` | TEXT | Полное название закона, совпадает с `laws.title` в `law_content.db` |
-| `priority` | INTEGER | Чем меньше — тем выше приоритет |
+| `priority` | INTEGER | Чем меньше — тем выше приоритет; несколько законов по одной теме сортируются по нему |
 
 ```sql
-SELECT law_title, priority FROM topic_law_hints WHERE topic_keyword IN ('假货', '网购') ORDER BY priority;
+SELECT law_title, priority FROM topic_law_hints WHERE topic_keyword IN ('假货', '网购', '退货') ORDER BY priority;
 -- → 消费者权益保护法 (1), 电子商务法 (1), 产品质量法 (2)
 ```
 
@@ -119,6 +128,11 @@ LLM нередко генерирует фразы, отсутствующие �
 | `target_kw` | TEXT | Точный термин с FTS-попаданиями, напр. `交通事故`, `违约责任` |
 | `fts_hits` | INTEGER | Число попаданий `target_kw` в текстах статей |
 
+```sql
+SELECT target_kw, fts_hits FROM keyword_synonyms WHERE source_kw = '机动车事故';
+-- → 交通事故 (276)
+```
+
 Пересборка БД расширений (для `term_aliases` требуется Ollama):
 
 ```bash
@@ -128,64 +142,117 @@ python3 scripts/build_enhancements.py   # Пересборка остальны�
 
 ### Таблицы `law_content.db`
 
+Генерируются через `python3 scripts/pipeline.py`.
+
+---
+
 ### 🟠 `laws` — По одной строке на закон
+
+Каждый закон имеет ровно одну активную строку (`is_current=1`). При наличии нескольких версий (разные `pub_date`) текущей считается только последняя.
 
 | Поле | Тип | Описание |
 |------|-----|----------|
-| `id` | INTEGER PK | Внутренний первичный ключ |
-| `title` | TEXT | Полное название |
-| `filename` | TEXT UNIQUE | Формат: `{название}_{YYYYMMDD}` |
-| `category` | TEXT | Тип источника (法律 / 行政法规 / 司法解释 …) |
-| `legal_domain` | TEXT | Академическая правовая отрасль |
-| `subject_area` | TEXT | Тема административного регламента (пусто для остальных) |
+| `id` | INTEGER PK | Стабильный первичный ключ, назначается `generate_law_index.py`; сохраняется при пересборке pipeline |
+| `title` | TEXT | Полное название, извлекается из имени файла (не из тела docx, которое может быть усечено) |
+| `filename` | TEXT UNIQUE | Формат: `{название}_{YYYYMMDD}`, без расширения |
+| `category` | TEXT | Тип источника: `法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` |
+| `legal_domain` | TEXT | Правовая отрасль: `民法典` / `民法商法` / `刑法` / `行政法` / `经济法` / `社会法` / `宪法相关法` / `诉讼与非诉讼程序法` |
+| `subject_area` | TEXT | Подтема для административных регламентов (交通运输 / 税务财政 …); для остальных пусто |
 | `pub_date` | TEXT | Дата опубликования `YYYY-MM-DD` |
-| `effective_date` | TEXT | Дата вступления в силу `YYYY-MM-DD` |
+| `effective_date` | TEXT | Дата вступления в силу `YYYY-MM-DD`; xlsx является авторитетным источником, иначе извлекается из текста |
 | `promulgation_info` | TEXT | Полный текст уведомления об опубликовании |
-| `issuing_org` | TEXT | Издающий орган |
-| `doc_number` | TEXT | Номер документа |
+| `issuing_org` | TEXT | Издающий орган (Верховный суд / Верховная прокуратура / Госсовет / ПК ВСНП …) |
+| `doc_number` | TEXT | Номер документа (法释〔2000〕29号 и т.п.); обычно пуст для законов ВСНП |
 | `total_articles` | INTEGER | Общее число статей |
 | `full_text` | TEXT | Полный текст закона |
-| `is_current` | INTEGER | **1 = действующая версия, 0 = историческая** |
+| `version_date` | TEXT | То же что `pub_date`; используется для различения версий |
+| `is_current` | INTEGER | **1 = действующая версия**, 0 = историческая |
+
+```sql
+-- Все судебные толкования Верховного суда
+SELECT title, doc_number, pub_date FROM laws
+WHERE issuing_org = '最高人民法院' AND category = '司法解释'
+ORDER BY pub_date DESC;
+```
 
 ---
 
 ### 🔵 `nodes` — Единое хранилище для разделов / глав / параграфов / статей
 
+Все структурные уровни хранятся в одной таблице, различаются по полю `type`. `parent_id` образует дерево; `ORDER BY global_order` восстанавливает порядок чтения.
+
 | Поле | Тип | Описание |
 |------|-----|----------|
 | `id` | INTEGER PK | Автоинкремент |
 | `law_id` | INTEGER FK | Ссылка на `laws.id` |
-| `parent_id` | INTEGER FK | Родительский узел |
-| `type` | TEXT | `part` / `chapter` / `section` / `article` |
-| `title` | TEXT | Заголовок |
-| `article_number` | TEXT | Номер статьи, напр. `第一条` |
-| `content` | TEXT | Текст для отображения |
-| `order_index` | INTEGER | Позиция внутри родительского узла |
-| `global_order` | INTEGER | Глобальный порядок обхода в глубину |
-| `part_num` | INTEGER | Номер раздела |
+| `parent_id` | INTEGER FK | Родительский узел; NULL для разделов верхнего уровня |
+| `type` | TEXT | `part`（编）/ `chapter`（章）/ `section`（节）/ `article`（条） |
+| `title` | TEXT | Текст заголовка для структурных узлов; для статей совпадает с `article_number` |
+| `article_number` | TEXT | Метка статьи, напр. `第一条`; NULL для структурных узлов |
+| `content` | TEXT | Отображаемый текст: заголовок для структурных узлов, полный текст для статей (включая префикс "第X条　") |
+| `order_index` | INTEGER | Позиция внутри родительского узла (с 1) |
+| `global_order` | INTEGER | Глобальный порядковый номер обхода в глубину — `ORDER BY global_order` даёт правильный порядок чтения |
+| `part_num` | INTEGER | Номер раздела (NULL, если закон не имеет структуры разделов) |
 | `chapter_num` | INTEGER | Номер главы |
-| `section_num` | INTEGER | Номер параграфа |
-| `article_num` | INTEGER | Номер статьи (第十二条 → `12`) |
+| `section_num` | INTEGER | Номер параграфа (NULL, если в главе нет параграфов) |
+| `article_num` | INTEGER | Целочисленный номер статьи (第十二条 → `12`), для запросов по диапазону |
+
+Примечания:
+- Узлы типа `part` существуют только в 8 законах (ГК, УК ×2, ГПК ×3, УПК ×2)
+- 115 судебных толкований используют заголовки с китайскими числительными (`一、管辖`) вместо глав; они всё равно маппируются в тип `chapter`
+- Короткие документы (правовые толкования, ответы) записываются как один узел `article` без иерархии
+
+```sql
+-- Все статьи главы
+SELECT article_number, content FROM nodes
+WHERE parent_id = ? AND type = 'article' ORDER BY order_index;
+
+-- Статьи по диапазону номеров (напр. 10–20)
+SELECT article_number, content FROM nodes
+WHERE law_id = ? AND type = 'article' AND article_num BETWEEN 10 AND 20;
+```
 
 ---
 
-### 🟢 `nodes_fts` — Полнотекстовый поиск (виртуальная таблица)
+### 🟢 `nodes_fts` — Полнотекстовый поиск, ≥3 символов (виртуальная таблица)
 
-- Движок: FTS5, `tokenize='trigram'`
-- Поддерживает поиск любых китайских подстрок (минимум 3 символа)
-- `rowid` соответствует `nodes.id`
+FTS5-таблица с внешним содержимым из `nodes`. Хранится только инвертированный индекс — **текст статей не дублируется** (экономит ~60MB по сравнению с автономным хранением).
+
+| Поле | Описание |
+|------|----------|
+| `content` | Текст статьи, соответствует `nodes.content` |
+| `article_number` | Метка статьи, соответствует `nodes.article_number` |
+
+- Токенизатор: `trigram` — индексирует все последовательные 3-символьные окна, поддерживает поиск любых подстрок
+- Минимальная длина запроса: 3 символа CJK (для 1–2 символов используйте `nodes_fts_bigram`)
+- Запросы из 4, 5, 6, 7+ символов поддерживаются нативно — дополнительные индексы не нужны
+- `rowid` взаимно однозначно соответствует `nodes.id`
+
+```sql
+SELECT n.article_number, n.content, l.title
+FROM nodes_fts f
+JOIN nodes n ON f.rowid = n.id
+JOIN laws l ON n.law_id = l.id
+WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
+```
 
 ---
 
-### 🟣 `display_group_map` — Маппинг групп отображения
+### 🔵 `nodes_fts_bigram` — Поиск коротких слов, 1–2 символа (виртуальная таблица)
 
-| Поле | Тип | Описание |
-|------|-----|----------|
-| `law_id` | INTEGER PK FK | Ссылка на `laws.id` |
-| `display_group` | TEXT | Группа верхнего уровня (7 значений) |
-| `display_subgroup` | TEXT | Подгруппа второго уровня (третий уровень через `/`) |
+FTS5-таблица с внешним содержимым, токенизатор `unicode61`, охватывает диапазон 1–2 символов, который trigram не обрабатывает. Использует `nodes` как источник содержимого — **текст не дублируется** (экономит ~115MB).
 
-Не зависит от `legal_domain` — обновляется повторным запуском `display_group.py`.
+| Поле | Описание |
+|------|----------|
+| `content` | Текст статьи, соответствует `nodes.content` |
+| `article_number` | Метка статьи, соответствует `nodes.article_number` |
+
+- Токенизатор: `unicode61` — разбивает по границам символов Unicode; каждый китайский иероглиф является отдельным токеном
+- Только для запросов из 1–2 символов; для ≥3 символов используйте `nodes_fts`
+
+```sql
+SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
+```
 
 ---
 
@@ -193,15 +260,70 @@ python3 scripts/build_enhancements.py   # Пересборка остальны�
 
 | Поле | Тип | Описание |
 |------|-----|----------|
-| `from_node_id` | INTEGER FK | Ссылающийся узел |
+| `from_node_id` | INTEGER FK | Ссылающийся узел (`nodes.id`) |
 | `from_law_id` | INTEGER FK | Ссылающийся закон |
 | `from_article_num` | INTEGER | Номер ссылающейся статьи |
-| `to_node_id` | INTEGER FK | Цитируемый узел |
+| `from_chapter_num` | INTEGER | Номер главы ссылающейся статьи |
+| `from_section_num` | INTEGER | Номер параграфа ссылающейся статьи |
+| `from_part_num` | INTEGER | Номер раздела ссылающейся статьи |
+| `to_node_id` | INTEGER FK | Цитируемый узел (заполнен при разрешении) |
 | `to_law_id` | INTEGER FK | Цитируемый закон |
 | `to_article_num` | INTEGER | Номер цитируемой статьи |
-| `ref_type` | TEXT | `cross_law` / `self_ref` |
-| `resolved` | INTEGER | 1 = разрешено до конкретной статьи |
-| `raw_text` | TEXT | Исходный текст ссылки |
+| `to_chapter_num` | INTEGER | Номер главы цитируемой статьи |
+| `to_section_num` | INTEGER | Номер параграфа цитируемой статьи |
+| `to_part_num` | INTEGER | Номер раздела цитируемой статьи |
+| `ref_type` | TEXT | `cross_law` (межзаконная) / `self_ref` (самоссылка) |
+| `resolved` | INTEGER | 1 = разрешено до конкретного узла, 0 = не разрешено |
+| `raw_text` | TEXT | Исходный текст ссылки, напр. `《中华人民共和国民法典》第一千二百零八条` |
+
+Синхронизируется из `references/article_references.json`, обновляется через `pipeline.py --only-refs` без пересборки всей базы данных.
+
+---
+
+## 📋 Формат JSON
+
+Каждый файл соответствует одному закону. Имя файла: `{название}_{YYYYMMDD}.json`.
+
+**Без структуры разделов (большинство законов):**
+
+```json
+{
+  "title": "中华人民共和国合同法",
+  "category": "法律",
+  "pub_date": "1999-03-15",
+  "chapters": [
+    {
+      "title": "第一章　一般规定",
+      "order_index": 1,
+      "global_order": 1,
+      "articles": [
+        {
+          "title": "第一条　",
+          "content": "第一条　为了保护合同当事人的合法权益...",
+          "order_index": 1,
+          "global_order": 2
+        }
+      ]
+    }
+  ]
+}
+```
+
+**Со структурой разделов (ГК, УК, ГПК и др. — 8 законов):**
+
+```json
+{
+  "title": "中华人民共和国民法典",
+  "parts": [
+    {
+      "title": "第一编　总则",
+      "order_index": 1,
+      "global_order": 1,
+      "chapters": [ "..." ]
+    }
+  ]
+}
+```
 
 ---
 
@@ -216,7 +338,7 @@ python3 scripts/build_enhancements.py   # Пересборка остальны�
 В каждом Markdown-файле:
 
 - **Якоря статей**: каждая статья имеет якорь `<a id="art-N">`, адресуемый через `filename.md#art-N`
-- **Исходящие ссылки**: упоминания других законов автоматически преобразуются в кликабельные межфайловые ссылки
+- **Исходящие ссылки**: упоминания других законов автоматически преобразуются в кликабельные межфайловые ссылки на конкретную статью
 - **Входящие маркеры**: статьи, на которые ссылаются другие законы, получают надстрочные цифры `[1]` `[2]` …; при наведении отображается закон-источник; клик переходит к статье-источнику
 
 ---
@@ -252,17 +374,23 @@ ORDER BY pub_date DESC;
 
 `scripts/test_rag.py` реализует многоэтапный RAG-pipeline на основе локальной LLM (Ollama):
 
-1. **Маршрутизация по домену** — сопоставляет вопрос с релевантными отраслями права
+1. **Маршрутизация по домену** — сопоставляет вопрос с релевантными отраслями права, исключая явно нерелевантные
 2. **Извлечение ключевых слов** — выделяет юридические термины для FTS-поиска
-3. **Расширение алиасов** — через `law_enhancements.db` переводит разговорный язык в юридическую терминологию
-4. **Послойный поиск** — сначала законы и НПА, затем судебные толкования; законы из `topic_law_hints` поднимаются в начало
-5. **Фильтрация релевантности** — LLM оценивает каждую статью, отсеивая шумовые совпадения
+3. **Расширение алиасов** — через `law_enhancements.db` переводит разговорный язык в юридическую терминологию и добавляет синонимы
+4. **Послойный поиск** — сначала законы и НПА, затем судебные толкования; законы из `topic_law_hints` поднимаются в начало результатов
+5. **Фильтрация релевантности** — LLM оценивает каждую статью, отсеивая шумовые совпадения по совпавшим словам
 6. **Генерация ответа** — строго на основе найденных статей, с явным указанием пробелов
 
 **Требования:** [Ollama](https://ollama.com/), модель по умолчанию `qwen2.5:3b`
 
 ```bash
+# Запуск примеров после старта Ollama
 python3 scripts/test_rag.py
+
+# Использование в своём скрипте
+from scripts.test_rag import ask
+result = ask("Каков максимальный испытательный срок по трудовому договору?")
+print(result["answer"])
 ```
 
 ---
@@ -275,7 +403,7 @@ pip install python-docx xlrd
 # Полный pipeline
 python3 scripts/pipeline.py
 
-# Пропуск этапов
+# Пропуск этапов (напр. если JSON уже есть)
 python3 scripts/pipeline.py --skip-docx
 python3 scripts/pipeline.py --skip-docx --skip-index
 python3 scripts/pipeline.py --skip-docx --skip-md
@@ -285,14 +413,13 @@ python3 scripts/pipeline.py --only-refs
 
 # Каждый этап отдельно
 cd scripts
-python3 -m docx_to_json.converter
-python3 generate_law_index.py
-python3 -m json_to_db.builder
-python3 -m json_to_db.display_group
-python3 -m db_to_md.renderer
-python3 extract_references.py
+python3 -m docx_to_json.converter   # docx → JSON
+python3 generate_law_index.py        # назначить/обновить law_id
+python3 -m json_to_db.builder        # JSON → DB
+python3 -m db_to_md.renderer         # DB → Markdown
+python3 extract_references.py        # извлечь ссылки
 
-python3 verify_db.py
+python3 verify_db.py                 # проверка согласованности БД и JSON (опционально)
 ```
 
 После обновления исходных файлов достаточно повторно запустить `pipeline.py` — ручное вмешательство не требуется.
