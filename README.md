@@ -105,18 +105,69 @@ laws_data/
 
 ### `law_enhancements.db` 表结构
 
-| 表 | 说明 |
-|----|------|
-| `term_aliases` | 日常语言 → 法律术语映射（LLM 生成 + FTS 验证），由 `build_aliases.py` 构建 |
-| `alias_patches` | 手工精确补充 `term_aliases` 的缺口映射 |
-| `topic_law_hints` | 场景关键词 → 最相关法律名称（带优先级），检索时优先在命中法律内搜索 |
-| `keyword_synonyms` | LLM 可能生成的词 → 精确 FTS 关键词映射，解决 LLM 造词无命中问题 |
+#### 🔵 `term_aliases` — 日常语言 → 法律术语（134 条）
+
+由 `build_aliases.py` 自动构建：LLM 对每个日常词生成候选法律术语，再用 FTS 验证命中数 > 0 才写入。
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `colloquial` | TEXT | 日常用语，如 `车祸`、`被炒鱿鱼` |
+| `legal_term` | TEXT | 法律条文中实际出现的术语，如 `道路交通事故`、`解除劳动合同` |
+| `fts_hits` | INTEGER | 该术语在 `law_content.db` 条文中的命中数（用于排序） |
+
+```sql
+-- 示例：用户说"车祸"，扩展为法律术语
+SELECT legal_term, fts_hits FROM term_aliases WHERE colloquial = '车祸' ORDER BY fts_hits DESC;
+-- → 道路交通事故 (36)
+```
+
+#### 🟡 `alias_patches` — 手工精确补丁（22 条）
+
+LLM 自动生成的 `term_aliases` 存在缺口（如"离婚"、"误工费"、"工伤"等），由此表手工补充，均经 FTS 验证。与 `term_aliases` 结构完全相同，由 `build_enhancements.py` 构建。
+
+```sql
+-- 示例：离婚相关法律术语
+SELECT legal_term, fts_hits FROM alias_patches WHERE colloquial = '离婚';
+-- → 离婚登记 (18), 离婚诉讼 (29), 婚姻自由 (24), 解除婚姻关系 (13)
+```
+
+#### 🟠 `topic_law_hints` — 场景关键词 → 推荐法律（50 条）
+
+将问题场景映射到最相关的具体法律，RAG 检索时优先在这些法律内搜索，减少跨领域噪声。
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `topic_keyword` | TEXT | 场景词，如 `消费者`、`交通事故`、`离婚` |
+| `law_title` | TEXT | 法律完整标题，与 `law_content.db` 的 `laws.title` 对应 |
+| `priority` | INTEGER | 优先级（越小越靠前），同场景多部法律按此排序 |
+
+```sql
+-- 示例：网购假货场景应优先检索哪些法律
+SELECT law_title, priority FROM topic_law_hints WHERE topic_keyword IN ('假货', '网购', '退货') ORDER BY priority;
+-- → 消费者权益保护法 (1), 电子商务法 (1), 产品质量法 (2)
+```
+
+#### 🟢 `keyword_synonyms` — LLM 关键词 → 精确 FTS 词（40 条）
+
+LLM 提取关键词时常造出法条中不存在的词（如"超速驾驶"、"机动车事故"），此表将这类词映射到实际有命中的术语。
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| `source_kw` | TEXT | LLM 可能输出的词，如 `机动车事故`、`合同违约` |
+| `target_kw` | TEXT | FTS 有命中的精确术语，如 `交通事故`、`违约责任` |
+| `fts_hits` | INTEGER | `target_kw` 在条文中的命中数 |
+
+```sql
+-- 示例：LLM 输出"机动车事故"，映射为有命中的词
+SELECT target_kw, fts_hits FROM keyword_synonyms WHERE source_kw = '机动车事故';
+-- → 交通事故 (276)
+```
 
 重建增强数据库（需先启动 Ollama）：
 
 ```bash
-python3 scripts/build_aliases.py        # 重建 term_aliases（LLM + FTS 验证）
-python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，无需 LLM）
+python3 scripts/build_aliases.py        # 重建 term_aliases（LLM + FTS 验证，约 5 分钟）
+python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，无需 LLM，< 1 秒）
 ```
 
 ### `law_content.db` 表结构

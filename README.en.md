@@ -79,18 +79,66 @@ The project ships two SQLite databases:
 
 ### `law_enhancements.db` tables
 
-| Table | Description |
-|-------|-------------|
-| `term_aliases` | Colloquial language → legal term mappings (LLM-generated, FTS-validated), built by `build_aliases.py` |
-| `alias_patches` | Manually curated patches filling gaps in `term_aliases` |
-| `topic_law_hints` | Topic keyword → most-relevant law titles (with priority), for boosting key laws to the top of search results |
-| `keyword_synonyms` | LLM-generated keywords → precise FTS terms, fixes cases where LLM coins phrases that don't appear in law text |
+#### 🔵 `term_aliases` — Colloquial language → legal terms (134 rows)
+
+Built automatically by `build_aliases.py`: the LLM generates candidate legal terms for each colloquial word, then FTS validation keeps only those with hit count > 0.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `colloquial` | TEXT | Everyday language, e.g. `车祸` (car accident), `被炒鱿鱼` (got fired) |
+| `legal_term` | TEXT | Term that actually appears in law text, e.g. `道路交通事故`, `解除劳动合同` |
+| `fts_hits` | INTEGER | Hit count in `law_content.db` articles (used for ranking) |
+
+```sql
+-- Example: user says "车祸", expand to legal terms
+SELECT legal_term, fts_hits FROM term_aliases WHERE colloquial = '车祸' ORDER BY fts_hits DESC;
+-- → 道路交通事故 (36)
+```
+
+#### 🟡 `alias_patches` — Manual patches (22 rows)
+
+Fills gaps in `term_aliases` where LLM-generation failed (e.g. "离婚", "误工费", "工伤"). All entries are FTS-validated. Same schema as `term_aliases`, built by `build_enhancements.py`.
+
+```sql
+SELECT legal_term, fts_hits FROM alias_patches WHERE colloquial = '离婚';
+-- → 离婚登记 (18), 离婚诉讼 (29), 婚姻自由 (24), 解除婚姻关系 (13)
+```
+
+#### 🟠 `topic_law_hints` — Topic keywords → recommended laws (50 rows)
+
+Maps question topics to the most relevant specific laws. During RAG retrieval, matching laws are searched first to reduce cross-domain noise.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `topic_keyword` | TEXT | Topic word, e.g. `消费者`, `交通事故`, `离婚` |
+| `law_title` | TEXT | Full law title, matching `laws.title` in `law_content.db` |
+| `priority` | INTEGER | Lower = higher priority; multiple laws per topic are ranked by this |
+
+```sql
+SELECT law_title, priority FROM topic_law_hints WHERE topic_keyword IN ('假货', '网购', '退货') ORDER BY priority;
+-- → 消费者权益保护法 (1), 电子商务法 (1), 产品质量法 (2)
+```
+
+#### 🟢 `keyword_synonyms` — LLM keywords → precise FTS terms (40 rows)
+
+The LLM often coins phrases that don't appear in law text (e.g. "超速驾驶", "机动车事故"). This table maps them to terms that actually have FTS hits.
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `source_kw` | TEXT | Word the LLM might output, e.g. `机动车事故`, `合同违约` |
+| `target_kw` | TEXT | Precise term with FTS hits, e.g. `交通事故`, `违约责任` |
+| `fts_hits` | INTEGER | Hit count for `target_kw` in article text |
+
+```sql
+SELECT target_kw, fts_hits FROM keyword_synonyms WHERE source_kw = '机动车事故';
+-- → 交通事故 (276)
+```
 
 Rebuild the enhancement database (requires Ollama for aliases):
 
 ```bash
-python3 scripts/build_aliases.py        # Rebuild term_aliases (LLM + FTS validation)
-python3 scripts/build_enhancements.py   # Rebuild the other three tables (static, no LLM needed)
+python3 scripts/build_aliases.py        # Rebuild term_aliases (LLM + FTS validation, ~5 min)
+python3 scripts/build_enhancements.py   # Rebuild the other three tables (static, no LLM, < 1s)
 ```
 
 ### `law_content.db` tables
