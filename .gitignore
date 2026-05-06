@@ -5,3 +5,4 @@ __pycache__/
 
 # macOS
 .DS_Store
+scripts/law_content.db
