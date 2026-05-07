@@ -78,7 +78,9 @@ laws_data/
 │   ├── verify_db.py               # 数据库与 JSON 一致性验证
 │   ├── build_aliases.py           # 构建日常语言 → 法律术语别名表
 │   ├── build_enhancements.py      # 构建 topic hints / keyword synonyms 等增强表
-│   ├── test_rag.py                # RAG 法律咨询 pipeline（多步推理）
+│   ├── test_rag.py                # 基础 RAG pipeline（关键词检索 + 分层过滤）
+│   ├── legal_chain_agent.py       # 法条链推理 Agent（章节定位 + 引用链扩展）
+│   ├── legal_expert_agent.py      # 多层专家协作系统（17 个细分专家 + 信息收集）
 │   ├── docx_to_json/              # 第一阶段：docx → JSON
 │   │   ├── converter.py
 │   │   ├── domain.py
@@ -435,31 +437,88 @@ ORDER BY pub_date DESC;
 
 ---
 
-## 🤖 RAG 法律咨询 Pipeline
+## 🤖 法律咨询 Agent
 
-`scripts/test_rag.py` 提供一个基于本地 LLM（Ollama）的多步推理法律问答 pipeline：
+项目提供三个递进层次的法律问答脚本，均支持 DeepSeek / Groq / Ollama 等多种 LLM provider。
 
-1. **分类路由** — 将问题映射到相关法律部门，排除明显无关领域
-2. **关键词提取** — 抽取适合 FTS 检索的法律术语
-3. **别名扩展** — 通过 `law_enhancements.db` 将日常语言转换为法律术语，补充同义词
-4. **分层检索** — 先检法律原文，再检司法解释；`topic_law_hints` 命中的法律优先排前，命中词按 FTS 命中数升序排序（精确词优先），确保关键条文不被截断
-5. **相关性过滤** — LLM 批量判断，去除因同词共现被误召回的无关条文；`topic_law_hints` 命中的条文跳过此步骤直接保留
-6. **参考法条筛选** — LLM 逐条判断每条候选法条是否直接支撑结论，仅保留用户可据此行动的条文，过滤行政监管条文和定义性条款
-7. **生成回答** — 模型只输出结论文字；代码自动拼接筛选后的参考法条，避免截断或遗漏
+### `scripts/test_rag.py` — 基础 RAG Pipeline
 
-回答格式为 **结论 + 参考法条**，prompt 内置管辖法院、诉讼请求模板、诉讼费用等通用知识。
+基于关键词检索的多步推理 pipeline，适合快速验证检索质量：
 
-**依赖：** [Ollama](https://ollama.com/) 本地运行，默认模型 `qwen2.5:3b`
+1. **分类路由** — 将问题映射到相关法律部门
+2. **关键词提取 + 别名扩展** — 通过 `law_enhancements.db` 将日常语言转换为法律术语
+3. **分层检索** — 先检法律原文，再检司法解释
+4. **相关性过滤** — LLM 批量判断，去除无关条文
+5. **参考法条筛选** — 仅保留用户可据此行动的条文
+6. **生成回答** — 结论 + 参考法条
+
+---
+
+### `scripts/legal_chain_agent.py` — 法条链推理 Agent
+
+在基础 RAG 基础上引入**章节定位**与**引用链扩展**，检索更精准：
+
+1. **问题拆分** — 将复合问题拆为 2-4 个子问题，每个保留完整上下文
+2. **大类分类** — 路由到 7 个法律大类（刑法/民法/行政法/劳动法/经济法/刑诉/民诉）
+3. **章节定位** — LLM 从主体法律的编/章/节结构中选出相关章节，按章抓取条文
+4. **FTS 补充检索** — 关键词在领域范围内搜索，补充章节导航未覆盖的条文
+5. **引用链扩展** — 解析条文中的交叉引用（`《X法》第Y条`、`本法第Z条`），自动追加被引条文
+6. **相关性过滤** — 批量过滤无关条文
+7. **法条链构建** — LLM 按"基础→权利义务→救济程序"逻辑排序，最多保留 12 条
+8. **生成结论** — 带明确引用的通俗结论
 
 ```bash
-# 启动 Ollama 后运行示例问题
-python3 scripts/test_rag.py
-
-# 在自己的脚本中调用
-from scripts.test_rag import ask
-result = ask("劳动合同试用期最长可以是多久？")
-print(result["answer"])
+cd /Users/doxie/laws_data
+python3 scripts/legal_chain_agent.py                          # 交互模式
+python3 scripts/legal_chain_agent.py -q "网购假货怎么维权"    # 单次提问
+python3 scripts/legal_chain_agent.py -q "..." --provider deepseek
 ```
+
+---
+
+### `scripts/legal_expert_agent.py` — 多层专家协作系统
+
+最完整的实现，三层专家架构，支持信息收集与补充：
+
+**架构：**
+```
+协调员（路由）
+  ├── 民法专家组 → 合同法专家 / 物权专家 / 侵权责任专家 / 婚姻家庭专家 / 继承专家 / 人格权专家
+  ├── 刑法专家组 → 财产犯罪专家 / 人身伤害专家 / 经济犯罪专家 / 腐败职务犯罪专家
+  ├── 劳动法专家组 → 劳动合同专家 / 工资福利专家 / 工伤职业病专家 / 劳动争议专家
+  ├── 行政法专家组 → 行政诉讼专家
+  ├── 经济法专家组 → 消费者权益专家 / 产品质量专家 / 电子商务专家 / 公司商事专家
+  └── 诉讼专家组   → 民事诉讼专家 / 刑事诉讼专家 / 行政诉讼专家
+```
+
+**流程：**
+1. **路由** — 协调员识别应由哪些专家组介入
+2. **子专家确定** — 每个专家组决定召集哪些细分专家
+3. **信息收集** — 自动从问题中提取已知信息（正则匹配），缺失字段**一次性**批量询问用户
+4. **专家检索与分析** — 每位专家在自己专属的章节/法律内检索，给出专项分析
+5. **专家组综合** — 各组汇总子专家意见
+6. **协调员综合** — 整合所有专家组输出，给出最终结论与引用法条
+
+每位细分专家有独立的 `required_info`（必要信息清单）和 `answer_template`（分析模板），例如：
+- **婚姻家庭专家** 需要：婚姻状况、子女情况、财产情况、纠纷类型
+- **工伤职业病专家** 需要：事故情形、伤情程度、单位态度、参保情况
+- **合同法专家** 需要：合同类型、签订方式、违约方、具体违约行为
+
+```bash
+python3 scripts/legal_expert_agent.py                                       # 交互模式（含补充信息询问）
+python3 scripts/legal_expert_agent.py -q "公司非法裁员我怎么办"              # 单次提问
+python3 scripts/legal_expert_agent.py -q "..." --no-interactive             # 跳过信息收集
+python3 scripts/legal_expert_agent.py -q "..." --provider deepseek          # 指定 provider
+```
+
+**依赖：**
+
+```bash
+pip install requests   # Groq / DeepSeek / Gemini 等在线 provider 必须
+# Ollama 本地运行时还需：ollama pull qwen2.5:3b
+```
+
+默认使用 DeepSeek（`deepseek-chat`），在 `legal_chain_agent.py` 和 `legal_expert_agent.py` 顶部的 `PROVIDERS` 字典中配置 API Key。
 
 ---
 
