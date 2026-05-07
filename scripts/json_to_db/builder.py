@@ -12,6 +12,7 @@ from pathlib import Path
 from config import JSON_DIR, DB_PATH
 from utils import pub_date_from_stem
 from docx_to_json.subject_area import get_subject_area
+from law_aliases import ALIASES
 
 _CN_ORD = {'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,
            '九':9,'十':10,'百':100,'千':1000}
@@ -49,7 +50,8 @@ def create_schema(conn):
             total_articles INTEGER,
             full_text TEXT,
             version_date TEXT,
-            is_current INTEGER DEFAULT 1
+            is_current INTEGER DEFAULT 1,
+            aliases TEXT
         );
         CREATE TABLE IF NOT EXISTS nodes (
             id INTEGER PRIMARY KEY,
@@ -164,6 +166,11 @@ def _insert_section(conn, law_id, parent_id, sec, coords):
 
 def _insert_chapter(conn, law_id, parent_id, ch, coords):
     t = ch.get('title', '').strip()
+    if t.startswith('_DIRECT_'):
+        # 编下直属条文占位章：不创建 chapter 节点，文章直接挂到编（parent_id）下
+        for a in ch.get('articles', []):
+            _insert_article(conn, law_id, parent_id, a, a.get('order_index'), a.get('global_order'), coords)
+        return
     ch_num = ch.get('order_index')
     cur = conn.execute(
         """INSERT INTO nodes (law_id, parent_id, type, title, content,
@@ -226,17 +233,18 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         version_date = pub_date_from_stem(stem)
         category     = data.get('category')
         subject_area = get_subject_area(data['title'], category)
+        aliases      = ALIASES.get(data['title'], '')
         cur = conn.execute(
             """INSERT INTO laws (id, title, filename, category, legal_domain, subject_area, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
-                                 total_articles, full_text, version_date, is_current)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1)""",
+                                 total_articles, full_text, version_date, is_current, aliases)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?)""",
             (data.get('law_id'), data['title'], stem, category, data.get('legal_domain'),
              subject_area,
              data.get('pub_date'), data.get('effective_date'),
              data.get('promulgation_info'), data.get('issuing_org'), data.get('doc_number'),
              data.get('total_articles'), _clean_text(data.get('full_text', '')),
-             version_date)
+             version_date, aliases if aliases else None)
         )
         insert_nodes(conn, data.get('law_id'), data)
 
@@ -335,7 +343,10 @@ def run():
     print('\n=== JSON → 数据库 ===')
     build_db()
     print('\n=== 写入引用关系 ===')
-    load_references()
+    try:
+        load_references()
+    except Exception as e:
+        print(f'  引用关系写入失败（非致命）: {e}')
 
 
 if __name__ == '__main__':

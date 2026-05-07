@@ -205,6 +205,13 @@ def main():
         from json_to_db.export_menu import run as export_menu
         export_menu()
 
+    # 引用关系提取：在数据库建好之后运行，结果直接写入 DB
+    if not args.skip_db:
+        from extract_references import run as extract_refs
+        extract_refs()
+        from json_to_db.builder import load_references
+        load_references()
+
     if not args.skip_md:
         from db_to_md.renderer import run as db_to_md
         db_to_md()

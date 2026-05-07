@@ -13,18 +13,22 @@
 | 宪法 | 1 |
 | 法律 | 310 |
 | 修正案 | 12 |
-| 决定 | 2 |
 | 法律解释 | 25 |
 | 司法解释 | 566 |
 | 行政法规 | 607 |
 | 监察法规 | 2 |
-| **合计** | **1525** |
+| 会议纪要等 | 数部 |
+| **合计** | **~1903** |
 
-**展示分组：** 宪法与国家机构 · 民事与商事 · 刑事 · 行政与公法 · 经济、税务与金融 · 劳动与社会保障 · 诉讼与司法程序
+条文总数约 **77,800 条**，法条间引用关系 **6,452 条**（跨法引用 3,555 条，本法自引 2,897 条），解析率 98.8%。
+
+---
 
 ## 📦 数据来源
 
-所有原始文档均来自 **[国家法律法规数据库](https://flk.npc.gov.cn/)**（全国人民代表大会官方法律检索平台），以 docx / doc 格式下载后经本项目 pipeline 结构化处理。该平台由全国人大常委会法制工作委员会维护，是中国法律法规的权威发布渠道，收录宪法、法律、行政法规、司法解释等全类别现行有效文本。
+所有原始文档均来自 **[国家法律法规数据库](https://flk.npc.gov.cn/)**（全国人大常委会法制工作委员会官方发布平台），以 docx / doc 格式下载后经本项目 pipeline 结构化处理。
+
+部分文件因原始 docx 缺失或结构异常，从最高人民法院官网抓取网页文本替换，记录在 `sources/_web_sources/README.md`。
 
 ---
 
@@ -37,7 +41,8 @@ laws_data/
 │   ├── 司法解释/
 │   ├── 行政法规/
 │   ├── 宪法/
-│   └── 监察法规/
+│   ├── 监察法规/
+│   └── _web_sources/              # 网页抓取替换文件及 HTML 缓存
 ├── 📂 json/                       # 结构化 JSON（按 category 分类，pipeline 产物）
 │   ├── 法律/
 │   ├── 司法解释/
@@ -45,55 +50,173 @@ laws_data/
 │   ├── 宪法/
 │   └── 监察法规/
 ├── 📂 宪法与国家机构/             # Markdown 全文（按展示分组，is_current=1）
-│   ├── 宪法/
-│   ├── 法律及决定/
-│   ├── 行政法规/
-│   └── 司法解释/
 ├── 📂 民事与商事/
-│   ├── 民法典/
-│   ├── 合同与债权/
-│   ├── 公司与破产/
-│   ├── 知识产权/
-│   └── ...（共 10 个子分组）
 ├── 📂 刑事/
-│   ├── 刑法及修正案/
-│   ├── 法律解释/
-│   ├── 财产犯罪/
-│   └── ...（共 6 个子分组）
 ├── 📂 行政与公法/
-│   ├── 行政法律/
-│   ├── 国家赔偿/
-│   └── 行政法规/（按 20 个主题细分）
 ├── 📂 经济、税务与金融/
 ├── 📂 劳动与社会保障/
 ├── 📂 诉讼与司法程序/
 ├── 📂 references/
-│   └── article_references.json   # 法条间引用关系（跨法引用 + 本法自引）
+│   └── article_references.json   # 法条间引用关系（pipeline 产物）
 ├── 📂 scripts/
-│   ├── config.py                  # 路径配置
-│   ├── utils.py                   # 公共工具函数
+│   ├── config.py                  # 路径配置（BASE_DIR、DB_PATH 等）
+│   ├── utils.py                   # 公共工具（title_from_stem、pub_date_from_stem）
+│   ├── law_aliases.py             # 法律别名映射表（民法典→"民法典,民法" 等）
+│   ├── pipeline.py                # 完整流程入口（支持阶段跳过参数）
 │   ├── generate_law_index.py      # 稳定 law_id 分配
-│   ├── extract_references.py      # 引用关系提取
-│   ├── pipeline.py                # 完整流程（支持阶段跳过参数）
+│   ├── extract_references.py      # 法条引用关系提取
+│   ├── fetch_web_sources.py       # 网页抓取 → .txt 替换文件
 │   ├── verify_db.py               # 数据库与 JSON 一致性验证
-│   ├── build_aliases.py           # 构建日常语言 → 法律术语别名表
-│   ├── build_enhancements.py      # 构建 topic hints / keyword synonyms 等增强表
-│   ├── test_rag.py                # 基础 RAG pipeline（关键词检索 + 分层过滤）
-│   ├── legal_chain_agent.py       # 法条链推理 Agent（章节定位 + 引用链扩展）
-│   ├── legal_expert_agent.py      # 多层专家协作系统（17 个细分专家 + 信息收集）
-│   ├── docx_to_json/              # 第一阶段：docx → JSON
-│   │   ├── converter.py
-│   │   ├── domain.py
-│   │   ├── effective_date.py
-│   │   └── structure.py
+│   ├── build_aliases.py           # 构建 term_aliases（LLM + FTS 验证）
+│   ├── build_enhancements.py      # 构建 RAG 增强表
+│   ├── test_rag.py                # 基础 RAG pipeline
+│   ├── legal_chain_agent.py       # 法条链推理 Agent
+│   ├── legal_expert_agent.py      # 多层专家协作系统入口
+│   ├── agents/                    # 专家协作系统模块
+│   ├── docx_to_json/              # 第一阶段：docx/txt → JSON
+│   │   ├── converter.py           # 主入口，段落解析，编/章/节/条识别
+│   │   ├── structure.py           # 层级结构组装，global_order 分配
+│   │   ├── domain.py              # legal_domain 映射，xlsx 索引读取
+│   │   ├── effective_date.py      # 生效日期提取
+│   │   └── subject_area.py        # 行政法规二级主题分类
 │   ├── json_to_db/                # 第二阶段：JSON → SQLite
-│   │   ├── builder.py
-│   │   ├── display_group.py       # 展示分组映射表
+│   │   ├── builder.py             # 建表、写入法律/节点/FTS/引用关系
 │   │   └── export_menu.py         # 导出 law_menu.json 导航索引
 │   └── db_to_md/                  # 第三阶段：DB → Markdown
 │       └── renderer.py
-├── 🗄️  law_content.db             # 主数据库（pipeline 产物，~370MB，Git LFS）
-└── 🗄️  law_enhancements.db        # 增强数据库（RAG 优化用，独立维护，Git LFS）
+├── 🗄️  law_content.db             # 主数据库（~132MB，Git LFS）
+└── 🗄️  law_enhancements.db        # RAG 增强数据库（~64KB，Git LFS）
+```
+
+---
+
+## 🔄 Pipeline 详解
+
+运行入口：`python3 scripts/pipeline.py`
+
+Pipeline 分五个阶段顺序执行，每个阶段可通过参数单独跳过。
+
+### 阶段一：`docx_to_json` — 源文件 → 结构化 JSON
+
+**输入**：`sources/` 目录下的 `.docx` / `.doc` / `.txt` 文件（`.txt` 优先于同名 `.docx`，用于替换有缺陷的原文件）
+
+**输出**：`json/` 目录下的 `.json` 文件，每部法律一个文件
+
+**具体步骤**：
+
+1. **xlsx 索引预读**（`domain.py`）：每个源目录下有 `法律法规文件目录_*.xlsx`，4 列（标题 | 公布日期 | 施行日期 | 分类）。预读后建立 `{标题}_{YYYYMMDD}` → `{effective_date, category}` 索引，作为权威来源覆盖从正文提取的结果。
+
+2. **段落提取**（`converter.py`）：逐段读取 docx 段落文本，`.txt` 文件则按行读取。去除页眉页脚噪声，识别发布机关（白名单精确匹配 12 个机构）和发文字号（正则匹配 `机构缩写〔年份〕序号` 格式）。
+
+3. **生效日期提取**（`effective_date.py`）：从发布说明段落（含"自…起施行"）中提取生效日期，xlsx 有记录时用 xlsx 值覆盖。
+
+4. **编/章/节/条识别**（`converter.py` 主循环）：
+   - `第X编` → part 节点
+   - `第X章` 或 `一、管辖`（汉字序号，司法解释常见） → chapter 节点
+   - `第X节` → section 节点
+   - `第X条` → article 节点；支持多条合并段落的拆分（`_INLINE_ART_RE`）
+   - 无章节结构的短文件（法律解释、批复等）→ 整体 full_text 写为单条 article
+
+5. **结构组装**（`structure.py`）：按 part/chapter/section/article 层级组装嵌套 dict，分配 `global_order`（深度优先遍历序号），保证 `ORDER BY global_order` 还原原文顺序。同名章节去重（bare-TOC 法律会先出现目录标题、再出现正文标题，去重保留后者）。
+
+6. **元数据写入**：`title`（从文件名提取，不从 docx 正文读）、`category`（xlsx 权威）、`legal_domain`（优先从 `/Users/doxie/Github/Laws/` 目录结构匹配，其次手工补充，再次关键词规则）、`subject_area`（行政法规二级主题）。
+
+**特殊处理**：
+- 民法典有 7 编，第一编"总则"在源文件 full_text 中无编标题行，硬编码补全
+- 刑法修正案用"一、二、三、"编号，不是"第X条"，整体按章节处理
+- 刑诉法等有编（part）结构的法律，编下直属条文（无章层级）通过 `_DIRECT_` 占位章节处理
+- 九民纪要等用 `1.【标题】正文` 格式的文件，由 `fetch_web_sources.py` 预处理转换为 `第N条　【标题】正文`
+
+---
+
+### 阶段二：`generate_law_index` — 分配稳定 law_id
+
+**输入**：`json/` 目录下的所有 `.json` 文件
+
+**输出**：`scripts/law_index.json`（持久化索引，跨 pipeline 重建保持 ID 稳定）
+
+每部法律用 `{title}_{pub_date}` 作为唯一键，第一次见到时分配一个永久 ID（从 1000001 起自增）。后续重建 pipeline 时已有的法律保持原 ID，新增法律追加新 ID。这保证了 `article_references` 等跨库引用不因重建而失效。
+
+---
+
+### 阶段三：`json_to_db` — JSON → SQLite 数据库
+
+**输入**：`json/` 目录下的所有 `.json` 文件，`law_index.json`
+
+**输出**：`law_content.db`（每次全量重建，删旧建新）
+
+**具体步骤**：
+
+1. **建表**（`builder.py`）：创建 `laws`、`nodes`、`nodes_fts`（trigram FTS5）、`nodes_fts_bigram`（unicode61 FTS5）、`article_references` 表及索引。`nodes_fts` / `nodes_fts_bigram` 均为**外部内容表**（`content="nodes"`），不复制原文，节省约 175MB 空间。
+
+2. **写入 laws 表**：从 JSON 读取元数据，查 `law_index.json` 拿稳定 ID，查 `law_aliases.py` 拿别名（如 `民法典,民法`）。`full_text` 做清洗（合并连续空行、去行首尾空格）。
+
+3. **写入 nodes 表**（递归插入）：
+   - `parts` → `chapters` → `sections` → `articles` 递归插入，每层记录 `parent_id`、`global_order`、`part_num`、`chapter_num`、`section_num`、`article_num`
+   - `_DIRECT_` 占位章节直接将条文挂到编节点下，不创建多余的章节行
+   - 每条 article 同时插入 `nodes_fts` 和 `nodes_fts_bigram`
+
+4. **多版本标记**：同名法律按 `pub_date` 降序，最新版设 `is_current=1`，其余设 `0`。
+
+5. **FTS 优化**：全部插入完成后执行 `INSERT INTO nodes_fts(nodes_fts) VALUES('optimize')`，合并 FTS 段，提升查询性能。
+
+6. **导出导航菜单**（`export_menu.py`）：从 DB 生成 `law_menu.json`，供 iOS app 侧边栏使用，按展示分组（宪法与国家机构 / 民事与商事 / 刑事 / …）组织。
+
+---
+
+### 阶段四：`extract_references` + `load_references` — 法条引用关系
+
+**输入**：`law_content.db`（nodes 表中的 article 条文正文）
+
+**输出**：`references/article_references.json`，并写入 `law_content.db` 的 `article_references` 表
+
+**提取逻辑**（`extract_references.py`）：
+
+遍历所有 `is_current=1` 的条文，对每条正文用正则识别三类引用：
+
+1. **有书名号跨法引用**：匹配 `《法律名》第X条` 和 `〈法律名〉第X条`（两种书名号均支持）。提取法律名后查 `art_index` 解析到具体节点。短标题（去掉"中华人民共和国"前缀）和全称均可匹配。
+
+2. **无书名号短标题引用**：如 `刑法第X条`、`合同法第X条`，动态构建短标题正则（所有无歧义短标题，按长度降序优先匹配）。
+
+3. **本法自引**：匹配 `本法/本条例/本规定/本办法/本规则第X条`。刑法修正案特殊处理——其条文中的"本法第X条"实际指刑法主体，自动重定向到 `中华人民共和国刑法` 并标记为 `cross_law`。
+
+解析结果写入 JSON 和数据库，包含 `from_node_id`、`to_node_id`（已解析时）、`ref_type`、`resolved`、`raw_text` 等字段。
+
+**当前统计**：6,452 条引用，解析率 98.8%，剩余 78 条因目标法律未收录而无法解析。
+
+---
+
+### 阶段五：`db_to_md` — 数据库 → Markdown 全文
+
+**输入**：`law_content.db`（`is_current=1` 的法律）
+
+**输出**：按展示分组分目录的 `.md` 文件，每部法律一个文件
+
+每条条文生成 `<a id="art-N">` 锚点，正文中识别到的出向引用自动转为跨文件 Markdown 链接，被引用条文末尾附有入向标注上标（`[1]` `[2]` …，悬停显示来源）。
+
+---
+
+### 支持的参数
+
+```bash
+python3 scripts/pipeline.py              # 完整五阶段运行
+python3 scripts/pipeline.py --skip-docx  # 跳过阶段一（JSON 已有时）
+python3 scripts/pipeline.py --skip-docx --skip-index  # 跳过阶段一二
+python3 scripts/pipeline.py --skip-docx --skip-db     # 只重建 Markdown
+python3 scripts/pipeline.py --skip-docx --skip-md     # 不重建 Markdown
+```
+
+单阶段单独运行：
+
+```bash
+cd scripts
+python3 -m docx_to_json.converter   # 阶段一
+python3 generate_law_index.py        # 阶段二
+python3 -m json_to_db.builder        # 阶段三
+python3 extract_references.py        # 阶段四（仅生成 JSON）
+python3 -m db_to_md.renderer         # 阶段五
+python3 fetch_web_sources.py         # 抓取/更新网页替换文件（独立运行）
+python3 verify_db.py                 # 验证 DB 与 JSON 一致性（可选）
 ```
 
 ---
@@ -102,118 +225,43 @@ laws_data/
 
 项目包含两个 SQLite 数据库：
 
-- **`law_content.db`**（~180MB）— 主数据库，由 `pipeline.py` 生成，包含法律全文、条文结构、FTS 索引、引用关系等。
-- **`law_enhancements.db`**（~64KB）— 增强数据库，独立于主库，RAG 检索优化用，可单独重建，无需重跑完整 pipeline。
-
-### `law_enhancements.db` 表结构
-
-#### 🔵 `term_aliases` — 日常语言 → 法律术语（134 条）
-
-由 `build_aliases.py` 自动构建：LLM 对每个日常词生成候选法律术语，再用 FTS 验证命中数 > 0 才写入。
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `colloquial` | TEXT | 日常用语，如 `车祸`、`被炒鱿鱼` |
-| `legal_term` | TEXT | 法律条文中实际出现的术语，如 `道路交通事故`、`解除劳动合同` |
-| `fts_hits` | INTEGER | 该术语在 `law_content.db` 条文中的命中数（用于排序） |
-
-```sql
--- 示例：用户说"车祸"，扩展为法律术语
-SELECT legal_term, fts_hits FROM term_aliases WHERE colloquial = '车祸' ORDER BY fts_hits DESC;
--- → 道路交通事故 (36)
-```
-
-#### 🟡 `alias_patches` — 手工精确补丁（22 条）
-
-LLM 自动生成的 `term_aliases` 存在缺口（如"离婚"、"误工费"、"工伤"等），由此表手工补充，均经 FTS 验证。与 `term_aliases` 结构完全相同，由 `build_enhancements.py` 构建。
-
-```sql
--- 示例：离婚相关法律术语
-SELECT legal_term, fts_hits FROM alias_patches WHERE colloquial = '离婚';
--- → 离婚登记 (18), 离婚诉讼 (29), 婚姻自由 (24), 解除婚姻关系 (13)
-```
-
-#### 🟠 `topic_law_hints` — 场景关键词 → 推荐法律（50 条）
-
-将问题场景映射到最相关的具体法律，RAG 检索时优先在这些法律内搜索，减少跨领域噪声。
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `topic_keyword` | TEXT | 场景词，如 `消费者`、`交通事故`、`离婚` |
-| `law_title` | TEXT | 法律完整标题，与 `law_content.db` 的 `laws.title` 对应 |
-| `priority` | INTEGER | 优先级（越小越靠前），同场景多部法律按此排序 |
-
-```sql
--- 示例：网购假货场景应优先检索哪些法律
-SELECT law_title, priority FROM topic_law_hints WHERE topic_keyword IN ('假货', '网购', '退货') ORDER BY priority;
--- → 消费者权益保护法 (1), 电子商务法 (1), 产品质量法 (2)
-```
-
-#### 🟢 `keyword_synonyms` — LLM 关键词 → 精确 FTS 词（40 条）
-
-LLM 提取关键词时常造出法条中不存在的词（如"超速驾驶"、"机动车事故"），此表将这类词映射到实际有命中的术语。
-
-| 字段 | 类型 | 说明 |
-|------|------|------|
-| `source_kw` | TEXT | LLM 可能输出的词，如 `机动车事故`、`合同违约` |
-| `target_kw` | TEXT | FTS 有命中的精确术语，如 `交通事故`、`违约责任` |
-| `fts_hits` | INTEGER | `target_kw` 在条文中的命中数 |
-
-```sql
--- 示例：LLM 输出"机动车事故"，映射为有命中的词
-SELECT target_kw, fts_hits FROM keyword_synonyms WHERE source_kw = '机动车事故';
--- → 交通事故 (276)
-```
-
-重建增强数据库（需先启动 Ollama）：
-
-```bash
-python3 scripts/build_aliases.py        # 重建 term_aliases（LLM + FTS 验证，约 5 分钟）
-python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，无需 LLM，< 1 秒）
-```
+- **`law_content.db`**（~132MB）— 主数据库，由 `pipeline.py` 全量生成
+- **`law_enhancements.db`**（~64KB）— RAG 增强数据库，独立维护，无需重跑完整 pipeline
 
 ### `law_content.db` 表结构
 
-运行 `python3 scripts/pipeline.py` 生成。
-
----
-
-### 🟠 `laws` 表 — 每部法律一行
-
-每部法律在此表中只有一行（`is_current=1`），同名多版本只保留最新 `pub_date` 的版本。
+#### 🟠 `laws` 表 — 每部法律一行
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `id` | INTEGER PK | 稳定主键，由 `generate_law_index.py` 分配，跨 pipeline 重建保持不变 |
-| `title` | TEXT | 完整标题，从文件名提取（不从 docx 正文读，因正文标题常截断） |
+| `id` | INTEGER PK | 稳定主键，由 `generate_law_index.py` 分配，跨重建不变 |
+| `title` | TEXT | 完整标题，从文件名提取（不从 docx 正文读） |
 | `filename` | TEXT UNIQUE | 格式：`{标题}_{YYYYMMDD}`，无后缀 |
-| `category` | TEXT | 来源类型：`法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` |
+| `category` | TEXT | `法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` |
 | `legal_domain` | TEXT | 法律部门：`民法典` / `民法商法` / `刑法` / `行政法` / `经济法` / `社会法` / `宪法相关法` / `诉讼与非诉讼程序法` |
-| `subject_area` | TEXT | 行政法规二级主题（交通运输 / 税务财政 …），非行政法规为空 |
+| `subject_area` | TEXT | 行政法规二级主题（交通运输 / 税务财政 …），其他类别为空 |
 | `pub_date` | TEXT | 公布日期 `YYYY-MM-DD` |
-| `effective_date` | TEXT | 生效日期 `YYYY-MM-DD`，xlsx 权威来源优先，其次从正文提取 |
-| `promulgation_info` | TEXT | 发布说明全文（通过 / 公布 / 施行信息段落） |
-| `issuing_org` | TEXT | 发布机关（最高人民法院 / 最高人民检察院 / 国务院 / 全国人大常委会等，白名单匹配） |
+| `effective_date` | TEXT | 生效日期，xlsx 权威来源优先 |
+| `promulgation_info` | TEXT | 发布说明全文（通过/公布/施行信息段落） |
+| `issuing_org` | TEXT | 发布机关（白名单精确匹配：最高人民法院 / 最高人民检察院 / 国务院 / 全国人大常委会等） |
 | `doc_number` | TEXT | 发文字号（法释〔2000〕29号 等），全国人大通过的法律通常为空 |
 | `total_articles` | INTEGER | 条文总数 |
 | `full_text` | TEXT | 法律全文原文 |
 | `version_date` | TEXT | 同 `pub_date`，用于多版本区分 |
 | `is_current` | INTEGER | **1 = 现行版本**，0 = 历史版本 |
-
-常用查询：
+| `aliases` | TEXT | 逗号分隔的别名（如 `民法典,民法`），用于搜索时别名匹配 |
 
 ```sql
--- 查某机构所有司法解释
+-- 按别名搜索
+SELECT * FROM laws WHERE is_current=1 AND (title LIKE '%民法%' OR aliases LIKE '%民法%');
+
+-- 查某机构司法解释
 SELECT title, doc_number, pub_date FROM laws
 WHERE issuing_org = '最高人民法院' AND category = '司法解释'
 ORDER BY pub_date DESC;
 ```
 
----
-
-### 🔵 `nodes` 表 — 编 / 章 / 节 / 条统一存储
-
-所有层级（编、章、节、条）用同一张表存储，通过 `type` 字段区分，`parent_id` 构成树形结构。`ORDER BY global_order` 即可还原原文顺序。
+#### 🔵 `nodes` 表 — 编 / 章 / 节 / 条统一存储
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
@@ -223,52 +271,33 @@ ORDER BY pub_date DESC;
 | `type` | TEXT | `part`（编）/ `chapter`（章）/ `section`（节）/ `article`（条） |
 | `title` | TEXT | 编/章/节 的标题文本；条文此字段同 `article_number` |
 | `article_number` | TEXT | 条文编号，如 `第一条`；非条文节点为 NULL |
-| `content` | TEXT | 展示内容：编/章/节 存标题文本，条文存正文（含"第X条　"前缀） |
-| `order_index` | INTEGER | 在父节点内的排序序号（从 1 开始） |
+| `content` | TEXT | 展示内容：编/章/节 存标题文本，条文存正文 |
+| `order_index` | INTEGER | 在父节点内的排序序号 |
 | `global_order` | INTEGER | 全文深度优先遍历序号，`ORDER BY global_order` 得正确展示顺序 |
 | `part_num` | INTEGER | 所在编的序号（无编结构为 NULL） |
 | `chapter_num` | INTEGER | 所在章的序号 |
 | `section_num` | INTEGER | 所在节的序号（无节结构为 NULL） |
-| `article_num` | INTEGER | 条文序号，如第十二条 → `12`，便于数值范围查询 |
+| `article_num` | INTEGER | 条文整数序号（第十二条 → 12），便于数值范围查询 |
 
 设计说明：
 - 编（part）结构只在 8 部法律中存在（民法典、刑法×2、刑事诉讼法×2、民事诉讼法×3）
-- 115 个司法解释用汉字序号（`一、管辖`）代替第X章，识别后仍映射为 `chapter` 类型
-- 无章节的短文件（法律解释、批复等）整体写为单条 `article`
-
-常用查询：
+- 115 个司法解释用汉字序号章节（`一、管辖`），仍映射为 `chapter` 类型
+- 无章节的短文件整体写为单条 `article`
 
 ```sql
 -- 按顺序展示某法律全文
 SELECT type, title, content FROM nodes WHERE law_id = ? ORDER BY global_order;
 
--- 某章下所有条文
-SELECT article_number, content FROM nodes
-WHERE parent_id = ? AND type = 'article' ORDER BY order_index;
-
--- 按条文序号范围查询（如第10-20条）
+-- 按条文序号范围查询
 SELECT article_number, content FROM nodes
 WHERE law_id = ? AND type = 'article' AND article_num BETWEEN 10 AND 20;
 ```
 
----
+#### 🟢 `nodes_fts` — 全文搜索（≥3 字）
 
-### 🟢 `nodes_fts` 虚拟表 — 全文搜索（≥3 字）
-
-FTS5 外部内容表，索引内容存储在 `nodes` 表中，本身只保存倒排索引，**不复制原文**（比独立存储节省 ~60MB）。
-
-| 字段 | 说明 |
-|------|------|
-| `content` | 条文正文，对应 `nodes.content` |
-| `article_number` | 条文编号，对应 `nodes.article_number` |
-
-- 分词器：`trigram`，将文本切成所有连续三字 gram，支持任意中文子串精确匹配
-- 最短搜索词：3 个 CJK 字符（1-2 字用 `nodes_fts_bigram`）
-- 4 字、5 字、6 字及以上均原生支持，无需额外索引
-- `rowid` 与 `nodes.id` 一一对应
+FTS5 外部内容表（`content="nodes"`），不复制原文。分词器：`trigram`，支持任意中文子串精确匹配，最少 3 个字符。
 
 ```sql
--- 全文搜索，找含"合同解除"的条文
 SELECT n.article_number, n.content, l.title
 FROM nodes_fts f
 JOIN nodes n ON f.rowid = n.id
@@ -276,49 +305,58 @@ JOIN laws l ON n.law_id = l.id
 WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
 ```
 
----
+#### 🔵 `nodes_fts_bigram` — 短词搜索（1-2 字）
 
-### 🔵 `nodes_fts_bigram` 虚拟表 — 短词搜索（1-2 字）
+FTS5 外部内容表，分词器：`unicode61`，专门处理 1-2 字搜索（`婚`、`婚姻`）。3 字及以上请用 `nodes_fts`。
 
-FTS5 外部内容表，使用 `unicode61` 分词器，专门处理 trigram 无法覆盖的 1-2 字搜索。与 `nodes_fts` 共享 `nodes` 表的原文，同样不复制内容（节省 ~115MB）。
-
-| 字段 | 说明 |
-|------|------|
-| `content` | 条文正文，对应 `nodes.content` |
-| `article_number` | 条文编号，对应 `nodes.article_number` |
-
-- 分词器：`unicode61`，按 Unicode 字符边界分词，中文单字即为一个 token
-- 适用场景：搜索单字（`婚`、`税`）或双字（`婚姻`、`合同`）
-- 3 字及以上请用 `nodes_fts`（trigram），不要用此表
-
-```sql
--- 搜索单字或双字（由 RAG pipeline 自动路由）
-SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
-```
-
----
-
-### 🔴 `article_references` 表 — 条文引用关系
+#### 🔴 `article_references` — 法条引用关系
 
 | 字段 | 类型 | 说明 |
 |------|------|------|
-| `from_node_id` | INTEGER FK | 引用方节点（`nodes.id`） |
+| `from_node_id` | INTEGER FK | 引用方节点 |
 | `from_law_id` | INTEGER FK | 引用方法律 |
 | `from_article_num` | INTEGER | 引用方条文序号 |
-| `from_chapter_num` | INTEGER | 引用方所在章序号 |
-| `from_section_num` | INTEGER | 引用方所在节序号 |
-| `from_part_num` | INTEGER | 引用方所在编序号 |
-| `to_node_id` | INTEGER FK | 被引用方节点（已解析时有值） |
+| `to_node_id` | INTEGER FK | 被引用方节点（已解析时） |
 | `to_law_id` | INTEGER FK | 被引用方法律 |
 | `to_article_num` | INTEGER | 被引用方条文序号 |
-| `to_chapter_num` | INTEGER | 被引用方所在章序号 |
-| `to_section_num` | INTEGER | 被引用方所在节序号 |
-| `to_part_num` | INTEGER | 被引用方所在编序号 |
-| `ref_type` | TEXT | `cross_law`（跨法引用）/ `self_ref`（本法自引） |
-| `resolved` | INTEGER | 1 = 已解析到具体节点，0 = 未解析 |
+| `ref_type` | TEXT | `cross_law`（跨法）/ `self_ref`（本法自引） |
+| `resolved` | INTEGER | 1 = 已解析到具体节点 |
 | `raw_text` | TEXT | 原文引用字符串，如 `《中华人民共和国民法典》第一千二百零八条` |
 
-同步自 `references/article_references.json`，由 `pipeline.py --only-refs` 单独更新，无需重建整个数据库。
+由 `extract_references.py` 从条文正文提取后写入，随 pipeline 自动更新，无需手动维护。
+
+---
+
+### `law_enhancements.db` 表结构
+
+#### `term_aliases` — 日常语言 → 法律术语（134 条）
+
+LLM 生成候选术语，FTS 验证命中数 > 0 后写入。
+
+| 字段 | 说明 |
+|------|------|
+| `colloquial` | 日常用语，如 `车祸`、`被炒鱿鱼` |
+| `legal_term` | 法律条文中实际出现的术语，如 `道路交通事故`、`解除劳动合同` |
+| `fts_hits` | 该术语在条文中的命中数 |
+
+#### `alias_patches` — 手工精确补丁（22 条）
+
+补充 LLM 自动生成的缺口（`离婚`、`误工费`、`工伤` 等），与 `term_aliases` 结构相同。
+
+#### `topic_law_hints` — 场景关键词 → 推荐法律（50 条）
+
+将问题场景映射到最相关法律，RAG 检索时优先在这些法律内搜索。
+
+#### `keyword_synonyms` — LLM 关键词 → 精确 FTS 词（40 条）
+
+LLM 造出的词（`超速驾驶`）映射到实际有命中的术语（`违法驾驶`）。
+
+重建增强数据库：
+
+```bash
+python3 scripts/build_aliases.py        # 重建 term_aliases（需 Ollama，约 5 分钟）
+python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，< 1 秒）
+```
 
 ---
 
@@ -330,11 +368,12 @@ SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
 
 ```json
 {
+  "law_id": 1100023,
   "title": "中华人民共和国合同法",
   "category": "法律",
+  "legal_domain": "民法商法",
   "pub_date": "1999-03-15",
   "effective_date": "1999-10-01",
-  "legal_domain": "民法商法",
   "total_articles": 428,
   "chapters": [
     {
@@ -355,7 +394,7 @@ SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
 }
 ```
 
-**有编结构（民法典、刑法、民事诉讼法等 8 部）：**
+**有编结构（民法典、刑法、诉讼法等 8 部）：**
 
 ```json
 {
@@ -373,181 +412,59 @@ SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
 
 ---
 
-## 🔗 article_references.json — 法条引用关系
-
-仅覆盖 `is_current=1` 的现行版本，共 **4994 条引用**（跨法 2986 条，本法自引 2008 条），解析率 98.0%。
-
-```json
-{
-  "from_law":         "人民检察院公益诉讼办案规则",
-  "from_article":     "第六十六条",
-  "from_article_num": 66,
-  "from_chapter_num": 6,
-  "from_section_num": 8,
-  "from_part_num":    null,
-  "refs": [
-    {
-      "type":           "cross_law",
-      "to_law":         "中华人民共和国法官法",
-      "to_article":     "第四十六条",
-      "to_article_num": 46,
-      "resolved":       true,
-      "raw_text":       "《中华人民共和国法官法》第四十六条"
-    }
-  ]
-}
-```
-
----
-
-## 📝 Markdown 超链接与引用标注
-
-每个 Markdown 文件中：
-
-- **条文锚点**：每条条文有 `<a id="art-N">` 锚点，可通过 `文件名.md#art-N` 直接定位
-- **出向链接**：条文正文中引用其他法律条文的文字自动转为跨文件链接，跳转到目标条文
-- **入向标注**：被其他法律引用的条文末尾附有上标 `[1]` `[2]`，鼠标悬停显示「被《法律名》第N条引用」，点击跳转到引用方条文
-
----
-
-## ⚡ 常用查询
-
-```sql
--- 按顺序展示某法律全部内容
-SELECT * FROM nodes WHERE law_id = ? ORDER BY global_order;
-
--- 全文搜索（任意中文短语，最少3字）
-SELECT n.article_number, n.content, l.title
-FROM nodes_fts f
-JOIN nodes n ON f.rowid = n.id
-JOIN laws l ON n.law_id = l.id
-WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
-
--- 按展示分组浏览
-SELECT l.title, l.category, dgm.display_subgroup
-FROM laws l
-JOIN display_group_map dgm ON l.id = dgm.law_id
-WHERE dgm.display_group = '民事与商事' AND l.is_current = 1;
-
--- 某机构发布的全部司法解释
-SELECT title, doc_number, pub_date FROM laws
-WHERE issuing_org = '最高人民法院' AND category = '司法解释'
-ORDER BY pub_date DESC;
-```
-
----
-
 ## 🤖 法律咨询 Agent
 
-项目提供三个递进层次的法律问答脚本，均支持 DeepSeek / Groq / Ollama 等多种 LLM provider。
+项目提供三个递进层次的法律问答脚本，均支持 DeepSeek / Groq / Ollama 等多种 provider。
 
-### `scripts/test_rag.py` — 基础 RAG Pipeline
+### `test_rag.py` — 基础 RAG Pipeline
 
-基于关键词检索的多步推理 pipeline，适合快速验证检索质量：
+关键词检索 + LLM 过滤，步骤：分类路由 → 关键词提取+别名扩展 → FTS 检索 → 相关性过滤 → 生成回答。
 
-1. **分类路由** — 将问题映射到相关法律部门
-2. **关键词提取 + 别名扩展** — 通过 `law_enhancements.db` 将日常语言转换为法律术语
-3. **分层检索** — 先检法律原文，再检司法解释
-4. **相关性过滤** — LLM 批量判断，去除无关条文
-5. **参考法条筛选** — 仅保留用户可据此行动的条文
-6. **生成回答** — 结论 + 参考法条
+### `legal_chain_agent.py` — 法条链推理 Agent
 
----
-
-### `scripts/legal_chain_agent.py` — 法条链推理 Agent
-
-在基础 RAG 基础上引入**章节定位**与**引用链扩展**，检索更精准：
-
-1. **问题拆分** — 将复合问题拆为 2-4 个子问题，每个保留完整上下文
-2. **大类分类** — 路由到 7 个法律大类（刑法/民法/行政法/劳动法/经济法/刑诉/民诉）
-3. **章节定位** — LLM 从主体法律的编/章/节结构中选出相关章节，按章抓取条文
-4. **FTS 补充检索** — 关键词在领域范围内搜索，补充章节导航未覆盖的条文
-5. **引用链扩展** — 解析条文中的交叉引用（`《X法》第Y条`、`本法第Z条`），自动追加被引条文
-6. **相关性过滤** — 批量过滤无关条文
-7. **法条链构建** — LLM 按"基础→权利义务→救济程序"逻辑排序，最多保留 12 条
-8. **生成结论** — 带明确引用的通俗结论
+引入章节定位与引用链扩展：问题拆分 → 大类路由 → 章节导航抓取条文 → FTS 补充 → 引用链扩展（自动追加被引条文）→ 过滤排序 → 生成结论。
 
 ```bash
-cd /Users/doxie/laws_data
-python3 scripts/legal_chain_agent.py                          # 交互模式
-python3 scripts/legal_chain_agent.py -q "网购假货怎么维权"    # 单次提问
+python3 scripts/legal_chain_agent.py -q "网购假货怎么维权"
 python3 scripts/legal_chain_agent.py -q "..." --provider deepseek
 ```
 
----
+### `legal_expert_agent.py` — 多层专家协作系统
 
-### `scripts/legal_expert_agent.py` — 多层专家协作系统
-
-最完整的实现，三层专家架构，支持信息收集与补充：
-
-**架构：**
-```
-协调员（路由）
-  ├── 民法专家组 → 合同法专家 / 物权专家 / 侵权责任专家 / 婚姻家庭专家 / 继承专家 / 人格权专家
-  ├── 刑法专家组 → 财产犯罪专家 / 人身伤害专家 / 经济犯罪专家 / 腐败职务犯罪专家
-  ├── 劳动法专家组 → 劳动合同专家 / 工资福利专家 / 工伤职业病专家 / 劳动争议专家
-  ├── 行政法专家组 → 行政诉讼专家
-  ├── 经济法专家组 → 消费者权益专家 / 产品质量专家 / 电子商务专家 / 公司商事专家
-  └── 诉讼专家组   → 民事诉讼专家 / 刑事诉讼专家 / 行政诉讼专家
-```
-
-**流程：**
-1. **路由** — 协调员识别应由哪些专家组介入
-2. **子专家确定** — 每个专家组决定召集哪些细分专家
-3. **信息收集** — 自动从问题中提取已知信息（正则匹配），缺失字段**一次性**批量询问用户
-4. **专家检索与分析** — 每位专家在自己专属的章节/法律内检索，给出专项分析
-5. **专家组综合** — 各组汇总子专家意见
-6. **协调员综合** — 整合所有专家组输出，给出最终结论与引用法条
-
-每位细分专家有独立的 `required_info`（必要信息清单）和 `answer_template`（分析模板），例如：
-- **婚姻家庭专家** 需要：婚姻状况、子女情况、财产情况、纠纷类型
-- **工伤职业病专家** 需要：事故情形、伤情程度、单位态度、参保情况
-- **合同法专家** 需要：合同类型、签订方式、违约方、具体违约行为
+三层专家架构（协调员 → 6 个专家组 → 17 个细分专家），支持信息收集（自动提取已知事实，缺失时一次性批量询问）。
 
 ```bash
-python3 scripts/legal_expert_agent.py                                       # 交互模式（含补充信息询问）
-python3 scripts/legal_expert_agent.py -q "公司非法裁员我怎么办"              # 单次提问
-python3 scripts/legal_expert_agent.py -q "..." --no-interactive             # 跳过信息收集
-python3 scripts/legal_expert_agent.py -q "..." --provider deepseek          # 指定 provider
+python3 scripts/legal_expert_agent.py -q "公司非法裁员我怎么办"
+python3 scripts/legal_expert_agent.py -q "..." --no-interactive  # 跳过信息收集
 ```
 
-**依赖：**
-
-```bash
-pip install requests   # Groq / DeepSeek / Gemini 等在线 provider 必须
-# Ollama 本地运行时还需：ollama pull qwen2.5:3b
-```
-
-默认使用 DeepSeek（`deepseek-chat`），在 `legal_chain_agent.py` 和 `legal_expert_agent.py` 顶部的 `PROVIDERS` 字典中配置 API Key。
+**依赖**：`pip install requests`（在线 provider）；本地 Ollama 需 `ollama pull qwen2.5:3b`。
 
 ---
 
-## 🚀 重新生成
+## 🚀 快速开始
 
 ```bash
 pip install python-docx xlrd
 
-# 完整流程
+# 完整 pipeline（约 5-10 分钟）
+cd /path/to/laws_data
 python3 scripts/pipeline.py
 
-# 跳过某阶段（已有 JSON 时跳过 docx 解析，节省时间）
+# 已有 JSON，只重建数据库（约 1-2 分钟）
 python3 scripts/pipeline.py --skip-docx
-python3 scripts/pipeline.py --skip-docx --skip-index
-python3 scripts/pipeline.py --skip-docx --skip-md
 
-# 只重新生成引用关系
-python3 scripts/pipeline.py --only-refs
-
-# 各阶段单独运行
-cd scripts
-python3 -m docx_to_json.converter   # docx → JSON
-python3 generate_law_index.py        # 分配/更新 law_id
-python3 -m json_to_db.builder        # JSON → DB
-python3 -m json_to_db.display_group  # 更新展示分组映射
-python3 -m db_to_md.renderer         # DB → Markdown
-python3 extract_references.py        # 提取引用关系
-
-python3 verify_db.py                 # 验证 DB 与 JSON 一致性（可选）
+# 验证数据库完整性（可选）
+python3 scripts/verify_db.py
 ```
 
-更新源文件后直接重跑 `pipeline.py` 即可，无需手动干预。
+更新源文件后直接重跑 `pipeline.py` 即可，pipeline 无状态，每次全量重建。
+
+---
+
+## ⚠️ 已知限制
+
+- FTS trigram 最短匹配词为 3 字（1-2 字用 `nodes_fts_bigram`）
+- 法条引用关系仅提取现行版本（`is_current=1`）条文
+- 78 条引用因目标法律未收录而无法解析（执业医师法、公民出境入境管理法实施细则等未纳入数据集）
+- 刑法修正案用"一、二、三、"编号，不构成可引用的"第X条"，无法作为引用目标解析

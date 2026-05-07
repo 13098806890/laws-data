@@ -43,7 +43,11 @@ OUT_PATH = Path(__file__).parent.parent / 'references' / 'article_references.jso
 
 CN_NUM = r'[一二三四五六七八九十百千零两]+'
 
-CROSS_QUOTED_RE = re.compile(rf'《([^》]{{2,40}})》第({CN_NUM})条')
+# 同时匹配《》和〈〉两种书名号
+CROSS_QUOTED_RE = re.compile(rf'[《〈]([^》〉]{{2,40}})[》〉]第({CN_NUM})条')
+
+# 刑法修正案本身用"一、二、三、"编号，其条文中"本法第X条"指的是刑法主体
+_XINGFA_AMENDMENTS = re.compile(r'^中华人民共和国刑法修正案')
 
 CONTEXT_ALIASES = {
     ('内地与香港特别行政区相互执行仲裁裁决的补充安排', '安排'):
@@ -262,17 +266,27 @@ def extract_refs(content, law_title, law_id, from_art_num_str,
         })
 
     # 3. 本法自引
+    # 刑法修正案用"一、二、"编号，其正文中"本法第X条"实际指的是刑法主体
+    if _XINGFA_AMENDMENTS.match(law_title):
+        effective_self_title = '中华人民共和国刑法'
+        effective_self_id    = law_title_to_id.get(effective_self_title, law_id)
+        ref_type_self        = 'cross_law'
+    else:
+        effective_self_title = law_title
+        effective_self_id    = law_id
+        ref_type_self        = 'self_ref'
+
     for m in SELF_RE.finditer(content):
         to_art_str = f'第{m.group(1)}条'
-        key = (law_title, to_art_str)
+        key = (effective_self_title, to_art_str)
         if key in seen:
             continue
         seen.add(key)
-        loc = resolve_loc(art_index, law_title, to_art_str)
+        loc = resolve_loc(art_index, effective_self_title, to_art_str)
         refs.append({
-            'type':           'self_ref',
-            'to_law_id':      law_id,
-            'to_law':         law_title,
+            'type':           ref_type_self,
+            'to_law_id':      loc['law_id'] if loc else effective_self_id,
+            'to_law':         effective_self_title,
             'to_article':     to_art_str,
             'to_article_num': loc['article_num'] if loc else None,
             'to_chapter_num': loc['chapter_num'] if loc else None,
