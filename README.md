@@ -14,13 +14,15 @@
 | 法律 | 310 |
 | 修正案 | 12 |
 | 法律解释 | 25 |
-| 司法解释 | 566 |
+| 司法解释 | 608 |
 | 行政法规 | 607 |
 | 监察法规 | 2 |
 | 会议纪要等 | 数部 |
-| **合计** | **~1903** |
+| **合计** | **~1945** |
 
 条文总数约 **77,800 条**，法条间引用关系 **6,452 条**（跨法引用 3,555 条，本法自引 2,897 条），解析率 98.8%。
+
+法考模式：数据集包含 **208 部**法律考试（法考）收录法律，标记字段 `is_flk`，并附有按法考科目排列的 `flk_menu.json` 导航索引和 `法考/` Markdown 目录。
 
 本数据集已用于构建 [ChineseLawsSearch](https://github.com/doxie/LawsSearch) iOS 应用。
 
@@ -58,6 +60,13 @@ laws_data/
 ├── 📂 经济、税务与金融/
 ├── 📂 劳动与社会保障/
 ├── 📂 诉讼与司法程序/
+├── 📂 法考/                        # Markdown 全文（按法考科目分目录，pipeline 产物）
+│   ├── 刑法/
+│   ├── 刑事诉讼法/
+│   ├── 行政法与行政诉讼法/
+│   ├── 民法/
+│   ├── 商法/
+│   └── 民事诉讼法/
 ├── 📂 references/
 │   └── article_references.json   # 法条间引用关系（pipeline 产物）
 ├── 📂 scripts/
@@ -83,10 +92,16 @@ laws_data/
 │   │   └── subject_area.py        # 行政法规二级主题分类
 │   ├── json_to_db/                # 第二阶段：JSON → SQLite
 │   │   ├── builder.py             # 建表、写入法律/节点/FTS/引用关系
-│   │   └── export_menu.py         # 导出 law_menu.json 导航索引
+│   │   ├── export_menu.py         # 导出 law_menu.json 导航索引
+│   │   └── export_flk_menu.py     # 导出 flk_menu.json 法考导航索引
 │   └── db_to_md/                  # 第三阶段：DB → Markdown
-│       └── renderer.py
-├── 🗄️  law_content.db             # 主数据库（~132MB，Git LFS）
+│       ├── renderer.py            # 按 legal_domain 分目录渲染全量 Markdown
+│       └── render_flk.py          # 按法考科目渲染 法考/ 目录
+├── 📄 law_index.json              # 稳定 law_id 索引（跨重建不变）
+├── 📄 law_menu.json               # 侧边栏导航索引（按展示分组）
+├── 📄 flk_menu.json               # 法考导航索引（208部，按6个科目排列）
+├── 📄 法考目录.json               # 法考收录法律名单（来源：官方法考大纲）
+├── 🗄️  law_content.db             # 主数据库（~135MB，Git LFS）
 └── 🗄️  law_enhancements.db        # RAG 增强数据库（~64KB，Git LFS）
 ```
 
@@ -164,6 +179,10 @@ Pipeline 分五个阶段顺序执行，每个阶段可通过参数单独跳过�
 
 6. **导出导航菜单**（`export_menu.py`）：从 DB 生成 `law_menu.json`，供 iOS app 侧边栏使用，按展示分组（宪法与国家机构 / 民事与商事 / 刑事 / …）组织。
 
+7. **法考标记**：读取 `法考目录.json`，将匹配的法律（标题精确匹配或去书名号后匹配）的 `is_flk` 字段设为 1。共标记 269 条记录（含历史版本）。
+
+8. **导出法考导航菜单**（`export_flk_menu.py`）：从 `is_current=1` 且 `is_flk=1` 的法律中，按 `法考目录.json` 顺序生成 `flk_menu.json`，6 个科目，共 208 部法律。
+
 ---
 
 ### 阶段四：`extract_references` + `load_references` — 法条引用关系
@@ -192,7 +211,9 @@ Pipeline 分五个阶段顺序执行，每个阶段可通过参数单独跳过�
 
 **输入**：`law_content.db`（`is_current=1` 的法律）
 
-**输出**：按展示分组分目录的 `.md` 文件，每部法律一个文件
+**输出**：
+- 按 `legal_domain` 分目录的 `.md` 文件（全量），每部法律一个文件
+- `法考/` 目录：按法考科目（刑法 / 刑事诉讼法 / 行政法与行政诉讼法 / 民法 / 商法 / 民事诉讼法）分子目录，共 208 个文件（`render_flk.py`）
 
 每条条文生成 `<a id="art-N">` 锚点，正文中识别到的出向引用自动转为跨文件 Markdown 链接，被引用条文末尾附有入向标注上标（`[1]` `[2]` …，悬停显示来源）。
 
@@ -227,7 +248,7 @@ python3 verify_db.py                 # 验证 DB 与 JSON 一致性（可选）
 
 项目包含两个 SQLite 数据库：
 
-- **`law_content.db`**（~132MB）— 主数据库，由 `pipeline.py` 全量生成
+- **`law_content.db`**（~135MB）— 主数据库，由 `pipeline.py` 全量生成
 - **`law_enhancements.db`**（~64KB）— RAG 增强数据库，独立维护，无需重跑完整 pipeline
 
 ### `law_content.db` 表结构
@@ -252,6 +273,7 @@ python3 verify_db.py                 # 验证 DB 与 JSON 一致性（可选）
 | `version_date` | TEXT | 同 `pub_date`，用于多版本区分 |
 | `is_current` | INTEGER | **1 = 现行版本**，0 = 历史版本 |
 | `aliases` | TEXT | 逗号分隔的别名（如 `民法典,民法`），用于搜索时别名匹配 |
+| `is_flk` | INTEGER | **1 = 法考收录**，0 = 非法考。由 `法考目录.json` 标注，含历史版本 |
 
 ```sql
 -- 按别名搜索
@@ -261,6 +283,9 @@ SELECT * FROM laws WHERE is_current=1 AND (title LIKE '%民法%' OR aliases LIKE
 SELECT title, doc_number, pub_date FROM laws
 WHERE issuing_org = '最高人民法院' AND category = '司法解释'
 ORDER BY pub_date DESC;
+
+-- 查法考收录的现行法律
+SELECT title, category FROM laws WHERE is_flk=1 AND is_current=1 ORDER BY title;
 ```
 
 #### 🔵 `nodes` 表 — 编 / 章 / 节 / 条统一存储
