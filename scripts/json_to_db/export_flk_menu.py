@@ -51,14 +51,35 @@ def export_flk_menu(db_path: Path = DB_PATH,
 
     title_to_law: dict[str, dict] = {r[1]: {'id': r[0], 'title': r[1]} for r in rows}
 
-    # 规范化查找（去书名号和版本后缀）
-    import re as _re
-    def _norm(t: str) -> str:
-        t = t.replace('《', '').replace('》', '')
-        t = _re.sub(r'[\(（][^\)）]{0,8}[\)）]$', '', t).strip()
-        return t
+    # 规范化查找：
+    #   1. 精确匹配
+    #   2. 半角括号 → 全角括号（法考目录用半角，DB 用全角）
+    #   3. 去书名号（《》）后匹配
+    # 注意：不能去掉末尾括号内容，否则"修正案(四)"和"修正案(十二)"会变成同一个键导致冲突
+    def _to_fullwidth_bracket(t: str) -> str:
+        return t.replace('(', '（').replace(')', '）')
 
-    norm_map: dict[str, dict] = {_norm(k): v for k, v in title_to_law.items()}
+    def _strip_book_marks(t: str) -> str:
+        return t.replace('《', '').replace('》', '')
+
+    # 建立多种规范化形式的查找映射（后建的不覆盖先建的，用 setdefault）
+    norm_map: dict[str, dict] = {}
+    for db_title, law in title_to_law.items():
+        for variant in [
+            _strip_book_marks(db_title),
+            _to_fullwidth_bracket(db_title),
+            _strip_book_marks(_to_fullwidth_bracket(db_title)),
+        ]:
+            norm_map.setdefault(variant, law)
+
+    def _lookup(title: str):
+        """按优先级查找：精确 → 半角转全角 → 去书名号 → 两者组合"""
+        return (
+            title_to_law.get(title)
+            or norm_map.get(_to_fullwidth_bracket(title))
+            or norm_map.get(_strip_book_marks(title))
+            or norm_map.get(_strip_book_marks(_to_fullwidth_bracket(title)))
+        )
 
     groups_out = []
     total = 0
@@ -68,7 +89,7 @@ def export_flk_menu(db_path: Path = DB_PATH,
         law_titles = flk_data.get(group_label, [])
         laws_out = []
         for title in law_titles:
-            law = title_to_law.get(title) or norm_map.get(_norm(title))
+            law = _lookup(title)
             if law:
                 laws_out.append(law)
             else:

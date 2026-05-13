@@ -279,18 +279,24 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         flk_titles: set[str] = set()
         for laws_list in flk_data.values():
             flk_titles.update(laws_list)
-        # 规范化：去掉书名号、括号版本后缀，用于模糊匹配
-        import re as _re
-        def _norm(t: str) -> str:
-            t = t.replace('《', '').replace('》', '')
-            t = _re.sub(r'[\(（][^\)）]{0,8}[\)）]$', '', t).strip()
-            return t
-        flk_norm = {_norm(t): t for t in flk_titles}
+        # 规范化：半角括号→全角括号、去书名号，用于模糊匹配
+        # 不去掉末尾括号内容，否则"修正案(四)"和"修正案(十二)"会变成同一个键导致误匹配
+        def _to_fw(t: str) -> str:
+            return t.replace('(', '（').replace(')', '）')
+        def _no_marks(t: str) -> str:
+            return t.replace('《', '').replace('》', '')
+        # 建立四种规范化形式的查找集合
+        flk_variants: set[str] = set()
+        for t in flk_titles:
+            flk_variants.update([t, _to_fw(t), _no_marks(t), _no_marks(_to_fw(t))])
         # 精确匹配优先，然后规范化匹配
         all_laws = conn.execute('SELECT id, title FROM laws').fetchall()
         matched_ids = []
         for law_id, title in all_laws:
-            if title in flk_titles or _norm(title) in flk_norm:
+            if (title in flk_titles or title in flk_variants
+                    or _to_fw(title) in flk_variants
+                    or _no_marks(title) in flk_variants
+                    or _no_marks(_to_fw(title)) in flk_variants):
                 matched_ids.append(law_id)
         if matched_ids:
             conn.executemany('UPDATE laws SET is_flk=1 WHERE id=?', [(i,) for i in matched_ids])
