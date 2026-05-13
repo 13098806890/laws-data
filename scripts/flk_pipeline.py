@@ -28,10 +28,10 @@ import urllib.request
 from pathlib import Path
 
 BASE_DIR    = Path(__file__).parent.parent
-FLK_SRC     = BASE_DIR / 'flk_source'
+FLK_SRC     = BASE_DIR / '法考' / 'flk_source'
 FLK_JSON    = FLK_SRC / 'json'
 TREE_JS     = FLK_SRC / 'tree_data.js'
-FLK_DB      = BASE_DIR / 'flk_content.db'
+FLK_DB      = BASE_DIR / '法考' / 'flk_content.db'
 MAIN_DB     = BASE_DIR / 'law_content.db'
 
 # ── 科目顺序 ────────────────────────────────────────────────────────────────

@@ -23,7 +23,7 @@ import sqlite3
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.parent
-FLK_DB   = BASE_DIR / 'flk_content.db'
+FLK_DB   = BASE_DIR / '法考' / 'flk_content.db'
 MAIN_DB  = BASE_DIR / 'law_content.db'
 
 

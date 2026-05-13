@@ -17,36 +17,42 @@
         {
           "title": "第一条　",
           "content": "第一条　为了健全地方各级人民代表大会和地方各级人民政府的组织和工作制度，保障和规范其行使职权，坚持和完善人民代表大会制度，保证人民当家作主，根据宪法，制定本法。",
+          "_seq": 1,
           "order_index": 1,
           "global_order": 2
         },
         {
           "title": "第二条　",
           "content": "第二条　地方各级人民代表大会是地方国家权力机关。\n县级以上的地方各级人民代表大会常务委员会是本级人民代表大会的常设机关。\n地方各级人民政府是地方各级国家权力机关的执行机关，是地方各级国家行政机关。",
+          "_seq": 2,
           "order_index": 2,
           "global_order": 3
         },
         {
           "title": "第三条　",
           "content": "第三条　地方各级人民代表大会、县级以上的地方各级人民代表大会常务委员会和地方各级人民政府坚持中国共产党的领导，坚持以马克思列宁主义、毛泽东思想、邓小平理论、“三个代表”重要思想、科学发展观、习近平新时代中国特色社会主义思想为指导，依照宪法和法律规定行使职权。",
+          "_seq": 3,
           "order_index": 3,
           "global_order": 4
         },
         {
           "title": "第四条　",
           "content": "第四条　地方各级人民代表大会、县级以上的地方各级人民代表大会常务委员会和地方各级人民政府坚持以人民为中心，坚持和发展全过程人民民主，始终同人民保持密切联系，倾听人民的意见和建议，为人民服务，对人民负责，受人民监督。",
+          "_seq": 4,
           "order_index": 4,
           "global_order": 5
         },
         {
           "title": "第五条　",
           "content": "第五条　地方各级人民代表大会、县级以上的地方各级人民代表大会常务委员会和地方各级人民政府遵循在中央的统一领导下、充分发挥地方的主动性积极性的原则，保证宪法、法律和行政法规在本行政区域的实施。",
+          "_seq": 5,
           "order_index": 5,
           "global_order": 6
         },
         {
           "title": "第六条　",
           "content": "第六条　地方各级人民代表大会、县级以上的地方各级人民代表大会常务委员会和地方各级人民政府实行民主集中制原则。\n地方各级人民代表大会和县级以上的地方各级人民代表大会常务委员会应当充分发扬民主，集体行使职权。\n地方各级人民政府实行首长负责制。政府工作中的重大事项应当经集体讨论决定。",
+          "_seq": 6,
           "order_index": 6,
           "global_order": 7
         }
@@ -79,6 +85,7 @@
               "global_order": 12
             }
           ],
+          "_seq": 7,
           "order_index": 1,
           "global_order": 9
         },
@@ -110,6 +117,7 @@
               "global_order": 17
             }
           ],
+          "_seq": 8,
           "order_index": 2,
           "global_order": 13
         },
@@ -189,6 +197,7 @@
               "global_order": 30
             }
           ],
+          "_seq": 9,
           "order_index": 3,
           "global_order": 18
         },
@@ -238,6 +247,7 @@
               "global_order": 38
             }
           ],
+          "_seq": 10,
           "order_index": 4,
           "global_order": 31
         },
@@ -275,6 +285,7 @@
               "global_order": 44
             }
           ],
+          "_seq": 11,
           "order_index": 5,
           "global_order": 39
         },
@@ -330,6 +341,7 @@
               "global_order": 53
             }
           ],
+          "_seq": 12,
           "order_index": 6,
           "global_order": 45
         }
@@ -363,6 +375,7 @@
               "global_order": 58
             }
           ],
+          "_seq": 13,
           "order_index": 1,
           "global_order": 55
         },
@@ -382,6 +395,7 @@
               "global_order": 61
             }
           ],
+          "_seq": 14,
           "order_index": 2,
           "global_order": 59
         },
@@ -419,6 +433,7 @@
               "global_order": 67
             }
           ],
+          "_seq": 15,
           "order_index": 3,
           "global_order": 62
         },
@@ -456,6 +471,7 @@
               "global_order": 73
             }
           ],
+          "_seq": 16,
           "order_index": 4,
           "global_order": 68
         }
@@ -525,6 +541,7 @@
               "global_order": 84
             }
           ],
+          "_seq": 17,
           "order_index": 1,
           "global_order": 75
         },
@@ -550,6 +567,7 @@
               "global_order": 88
             }
           ],
+          "_seq": 18,
           "order_index": 2,
           "global_order": 85
         },
@@ -593,6 +611,7 @@
               "global_order": 95
             }
           ],
+          "_seq": 19,
           "order_index": 3,
           "global_order": 89
         },
@@ -660,6 +679,7 @@
               "global_order": 106
             }
           ],
+          "_seq": 20,
           "order_index": 4,
           "global_order": 96
         }
@@ -675,12 +695,14 @@
         {
           "title": "第八十九条　",
           "content": "第八十九条　自治区、自治州、自治县的自治机关除行使本法规定的职权外，同时依照宪法、民族区域自治法和其他法律规定的权限行使自治权。",
+          "_seq": 21,
           "order_index": 1,
           "global_order": 108
         },
         {
           "title": "第九十条　",
           "content": "第九十条　省、自治区、直辖市的人民代表大会及其常务委员会可以根据本法和实际情况，对执行中的问题作具体规定。",
+          "_seq": 22,
           "order_index": 2,
           "global_order": 109
         }

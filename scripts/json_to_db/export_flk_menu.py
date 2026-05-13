@@ -17,8 +17,8 @@ from pathlib import Path
 
 from config import DB_PATH, BASE_DIR
 
-FLK_MENU_PATH = BASE_DIR / 'flk_menu.json'
-FLK_DIR_PATH  = BASE_DIR / '法考目录.json'
+FLK_MENU_PATH = BASE_DIR / '法考' / 'flk_menu.json'
+FLK_DIR_PATH  = BASE_DIR / '法考' / '法考目录.json'
 
 # 法考六大科目顺序
 _FLK_GROUP_ORDER = [

@@ -273,7 +273,7 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
     conn.commit()
 
     # 法考标记：从 法考目录.json 中读取法律标题集合，匹配并打标
-    flk_path = db_path.parent / '法考目录.json'
+    flk_path = db_path.parent / '法考' / '法考目录.json'
     if flk_path.exists():
         flk_data = json.loads(flk_path.read_text(encoding='utf-8'))
         flk_titles: set[str] = set()

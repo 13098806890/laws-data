@@ -5,11 +5,11 @@
 支持五个栏目，每个栏目保存到独立目录，每条记录保存为 JSON 文件。
 
 栏目：
-  al      指导性案例      → 公报指导案例/
-  sfjs    司法解释        → 公报司法解释/
-  cpwsxd  裁判文书        → 公报裁判文书/
-  flxd    法律法规        → 最高人民法院公报法律法规/
-  sfwj    司法文件        → 公报司法文件/
+  al      指导性案例      → 最高人民法院公报/指导案例/
+  sfjs    司法解释        → 最高人民法院公报/司法解释/
+  cpwsxd  裁判文书        → 最高人民法院公报/裁判文书/
+  flxd    法律法规        → 最高人民法院公报/法律法规/
+  sfwj    司法文件        → 最高人民法院公报/司法文件/
 
 JSON 结构：
 {
@@ -51,27 +51,27 @@ TARGETS = {
     "al": {
         "name":   "指导性案例",
         "serial": "al",
-        "outdir": BASE_DIR / "公报指导案例",
+        "outdir": BASE_DIR / "最高人民法院公报" / "指导案例",
     },
     "sfjs": {
         "name":   "司法解释",
         "serial": "sfjs",
-        "outdir": BASE_DIR / "公报司法解释",
+        "outdir": BASE_DIR / "最高人民法院公报" / "司法解释",
     },
     "cpwsxd": {
         "name":   "裁判文书",
         "serial": "cpwsxd",
-        "outdir": BASE_DIR / "公报裁判文书",
+        "outdir": BASE_DIR / "最高人民法院公报" / "裁判文书",
     },
     "flxd": {
         "name":   "法律法规",
         "serial": "flxd",
-        "outdir": BASE_DIR / "最高人民法院公报法律法规",
+        "outdir": BASE_DIR / "最高人民法院公报" / "法律法规",
     },
     "sfwj": {
         "name":   "司法文件",
         "serial": "sfwj",
-        "outdir": BASE_DIR / "公报司法文件",
+        "outdir": BASE_DIR / "最高人民法院公报" / "司法文件",
     },
 }
 
