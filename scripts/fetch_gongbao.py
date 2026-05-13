@@ -2,7 +2,14 @@
 """
 最高人民法院公报通用抓取脚本
 ==============================
-支持多个栏目，每个栏目保存到独立目录，每条记录保存为 JSON 文件。
+支持五个栏目，每个栏目保存到独立目录，每条记录保存为 JSON 文件。
+
+栏目：
+  al      指导性案例      → 公报指导案例/
+  sfjs    司法解释        → 公报司法解释/
+  cpwsxd  裁判文书        → 公报裁判文书/
+  flxd    法律法规        → 最高人民法院公报法律法规/
+  sfwj    司法文件        → 公报司法文件/
 
 JSON 结构：
 {
@@ -20,7 +27,8 @@ JSON 结构：
 用法：
   cd /Users/doxie/laws_data
   python3 scripts/fetch_gongbao.py                      # 抓取所有栏目
-  python3 scripts/fetch_gongbao.py --target cpwsxd      # 只抓裁判文书
+  python3 scripts/fetch_gongbao.py --target al          # 只抓指导性案例
+  python3 scripts/fetch_gongbao.py --target sfjs        # 只抓司法解释
   python3 scripts/fetch_gongbao.py --page 1             # 只抓第1页（调试）
   python3 scripts/fetch_gongbao.py --skip-existing      # 断点续抓
 """
@@ -40,6 +48,16 @@ BASE_DIR = Path(__file__).parent.parent
 
 # ── 栏目配置 ──────────────────────────────────────────────────────────────────
 TARGETS = {
+    "al": {
+        "name":   "指导性案例",
+        "serial": "al",
+        "outdir": BASE_DIR / "公报指导案例",
+    },
+    "sfjs": {
+        "name":   "司法解释",
+        "serial": "sfjs",
+        "outdir": BASE_DIR / "公报司法解释",
+    },
     "cpwsxd": {
         "name":   "裁判文书",
         "serial": "cpwsxd",
