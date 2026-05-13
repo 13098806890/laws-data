@@ -24,15 +24,19 @@
 
 **法考模式**：数据集包含 **208 部**法律职业资格考试（法考）收录的法律，全部来自主库源文件（`sources/` 目录），通过 `is_flk` 字段标注，并附有按法考六大科目排列的 `flk_menu.json` 导航索引和 `法考/` Markdown 目录。
 
+**最高人民法院公报**：额外收录最高人民法院公报（gongbao.court.gov.cn）全量数据，包括指导案例 986 篇、司法文件 860 篇、裁判文书 443 篇，以及 487 条主库未收录的公报司法解释，均已建立与主库法条的引用关联（3,526 条，解析率 99.8%）。
+
 本数据集已用于构建 [ChineseLawsSearch](https://github.com/doxie/LawsSearch) iOS 应用。
 
 ---
 
 ## 📦 数据来源
 
-所有原始文档均来自 **[国家法律法规数据库](https://flk.npc.gov.cn/)**（全国人大常委会法制工作委员会官方发布平台），以 docx / doc 格式下载后经本项目 pipeline 结构化处理。
+**主库**：所有原始文档均来自 **[国家法律法规数据库](https://flk.npc.gov.cn/)**（全国人大常委会法制工作委员会官方发布平台），以 docx / doc 格式下载后经本项目 pipeline 结构化处理。
 
 部分文件因原始 docx 缺失或结构异常，从最高人民法院官网抓取网页文本替换，详见 `sources/_web_sources/README.md`。
+
+**最高人民法院公报**：通过 `scripts/fetch_gongbao.py` 从 [gongbao.court.gov.cn](https://gongbao.court.gov.cn) 抓取，存入 `最高人民法院公报/` 目录（JSON 格式）。
 
 ---
 
@@ -72,11 +76,18 @@ laws_data/
 ├── 📂 flk_source/                 # 法考交叉验证专用目录（独立 pipeline）
 │   ├── tree_data.js               # 厚大法考目录树（手动下载）
 │   └── json/                      # 厚大法考 JSON 缓存（flk_pipeline.py 自动下载）
+├── 📂 最高人民法院公报/            # 公报全量数据（fetch_gongbao.py 抓取，JSON 格式）
+│   ├── 指导案例/                  # 986 篇（al）
+│   ├── 司法文件/                  # 860 篇（sfwj）
+│   ├── 裁判文书/                  # 443 篇（cpwsxd）
+│   └── 司法解释/                  # 927 篇（含主库已有 + 独有 487 篇）
 ├── 📂 scripts/
 │   ├── config.py                  # 路径配置（BASE_DIR、DB_PATH 等）
 │   ├── utils.py                   # 公共工具（title_from_stem、pub_date_from_stem）
 │   ├── law_aliases.py             # 法律别名映射（民法典→"民法典,民法" 等）
-│   ├── pipeline.py                # 主 pipeline 入口（五阶段）
+│   ├── pipeline.py                # 主 pipeline 入口（六阶段，含公报导入）
+│   ├── fetch_gongbao.py           # 最高人民法院公报抓取脚本（5 个目标）
+│   ├── build_gongbao_db.py        # 公报数据 → law_content.db（阶段六）
 │   ├── flk_pipeline.py            # 法考交叉验证 pipeline（独立，见下文）
 │   ├── verify_flk.py              # 法考数据库条文内容交叉验证脚本
 │   ├── generate_law_index.py      # 稳定 law_id 分配
@@ -106,7 +117,7 @@ laws_data/
 ├── 📄 law_menu.json               # 侧边栏导航索引（按法律部门分组）
 ├── 📄 flk_menu.json               # 法考导航索引（208 部，6 个科目）
 ├── 📄 法考目录.json               # 法考收录法律名单（来源：官方法考大纲）
-├── 🗄️  law_content.db             # 主数据库（~135MB，Git LFS）
+├── 🗄️  law_content.db             # 主数据库（~250MB，含公报表，Git LFS）
 ├── 🗄️  law_enhancements.db        # RAG 增强数据库（~64KB，Git LFS）
 └── 🗄️  flk_content.db             # 法考交叉验证数据库（独立 pipeline 产物）
 ```
@@ -217,14 +228,52 @@ laws_data/
 
 ---
 
+### 阶段六：`build_gongbao_db` — 公报数据 → law_content.db
+
+**前置条件**：`最高人民法院公报/` 目录已有 JSON 文件（由 `fetch_gongbao.py` 抓取）
+
+**输出**：在 `law_content.db` 中新增五张表：
+
+| 表 | 说明 |
+|----|------|
+| `gongbao_docs` | 裁判文书 + 指导案例 + 司法文件，共 2,289 条；`source` 字段区分 `al`/`cpwsxd`/`sfwj` |
+| `gongbao_sfjs` | 公报独有司法解释（主库未收录），共 487 条 |
+| `gongbao_case_law_links` | 公报文书引用主库法条的关联，共 3,526 条，解析率 99.8% |
+| `gongbao_docs_fts` | FTS5 trigram 全文索引（外部内容表） |
+| `gongbao_sfjs_fts` | FTS5 trigram 全文索引（外部内容表） |
+
+**独立运行**：
+
+```bash
+python3 scripts/build_gongbao_db.py          # 建表并导入（表已存在时跳过）
+python3 scripts/build_gongbao_db.py --drop   # 先删旧表再重建
+```
+
+**公报数据抓取**：
+
+```bash
+# 抓取所有目标（首次约 2–3 小时）
+python3 scripts/fetch_gongbao.py --target al      # 指导案例
+python3 scripts/fetch_gongbao.py --target sfwj    # 司法文件
+python3 scripts/fetch_gongbao.py --target cpwsxd  # 裁判文书
+python3 scripts/fetch_gongbao.py --target sfjs    # 公报司法解释
+python3 scripts/fetch_gongbao.py --target flxd    # 法律法规（参考）
+
+# 增量更新（跳过已抓取文件）
+python3 scripts/fetch_gongbao.py --target al --skip-existing
+```
+
+---
+
 ### 运行参数
 
 ```bash
-python3 scripts/pipeline.py              # 完整五阶段运行
-python3 scripts/pipeline.py --skip-docx  # 跳过阶段一（JSON 已有时）
-python3 scripts/pipeline.py --skip-docx --skip-index  # 跳过阶段一、二
-python3 scripts/pipeline.py --skip-docx --skip-db     # 只重建 Markdown
-python3 scripts/pipeline.py --skip-docx --skip-md     # 不重建 Markdown
+python3 scripts/pipeline.py                          # 完整六阶段运行
+python3 scripts/pipeline.py --skip-docx              # 跳过阶段一（JSON 已有时）
+python3 scripts/pipeline.py --skip-docx --skip-index # 跳过阶段一、二
+python3 scripts/pipeline.py --skip-docx --skip-db    # 只重建 Markdown
+python3 scripts/pipeline.py --skip-docx --skip-md    # 不重建 Markdown
+python3 scripts/pipeline.py --skip-gongbao           # 跳过阶段六（公报导入）
 
 # 各阶段单独运行
 cd scripts
@@ -233,6 +282,7 @@ python3 generate_law_index.py          # 阶段二
 python3 -m json_to_db.builder          # 阶段三
 python3 extract_references.py          # 阶段四（仅生成 JSON）
 python3 -m db_to_md.renderer           # 阶段五
+python3 build_gongbao_db.py --drop     # 阶段六（独立重建）
 python3 fetch_web_sources.py           # 抓取/更新网页替换文件（独立）
 python3 verify_db.py                   # 验证 DB 与 JSON 一致性（可选）
 ```
@@ -320,7 +370,7 @@ python3 scripts/verify_flk.py --out verify_report.txt
 
 项目包含三个 SQLite 数据库：
 
-- **`law_content.db`**（~135MB）— 主数据库，由 `pipeline.py` 全量生成
+- **`law_content.db`**（~250MB）— 主数据库，由 `pipeline.py` 全量生成，含公报表
 - **`law_enhancements.db`**（~64KB）— RAG 增强数据库，独立维护
 - **`flk_content.db`**（独立）— 法考交叉验证数据库，由 `flk_pipeline.py` 生成
 
@@ -424,6 +474,54 @@ FTS5 外部内容表，分词器：`unicode61`，专门处理 1–2 字搜索（
 | `raw_text` | TEXT | 原文引用字符串，如 `《中华人民共和国民法典》第一千二百零八条` |
 
 覆盖所有 `is_current=1` 的条文，包含全部 208 部法考法律，由 `extract_references.py` 提取，随主 pipeline 自动更新。
+
+---
+
+### `law_content.db` 公报扩展表
+
+这五张表由 `build_gongbao_db.py`（pipeline 阶段六）写入，存储最高人民法院公报数据。
+
+#### `gongbao_docs` — 裁判文书 / 指导案例 / 司法文件（2,289 条）
+
+| 字段 | 说明 |
+|------|------|
+| `source` | `al`（指导案例）/ `cpwsxd`（裁判文书）/ `sfwj`（司法文件） |
+| `case_number` | 指导性案例编号，如 `指导性案例212号`（仅 al 有） |
+| `title` | 案件/文件标题 |
+| `issue` | 期刊期号，如 `2024年01期` |
+| `year` / `issue_num` | 年份 / 期号（整数，便于排序） |
+| `pub_date` | 文书发布日期 |
+| `url` | 原文链接（gongbao.court.gov.cn） |
+| `ruling_gist` | 裁判要点/裁判摘要（最多 500 字，从正文提取） |
+| `keywords` | 关键词（逗号分隔，从正文提取） |
+| `full_text` | 全文原文 |
+
+#### `gongbao_sfjs` — 公报独有司法解释（487 条）
+
+主库 `laws` 表（`category='司法解释'`）中没有对应条目的公报司法解释。字段与 `laws` 表结构相近，含 `effective_date`。
+
+#### `gongbao_case_law_links` — 公报文书 → 主库法条关联（3,526 条）
+
+从 `gongbao_docs` 全文提取 `《法律名》第N条` 引用，关联到 `laws.id` 和 `nodes.id`，解析率 99.8%。
+
+#### `gongbao_docs_fts` / `gongbao_sfjs_fts`
+
+FTS5 外部内容表，`tokenize="trigram"`，索引 `title`、`ruling_gist`、`keywords`、`full_text`，支持中文任意子串搜索（≥2 字）。
+
+```sql
+-- 搜索裁判要点含"善意取得"的指导案例
+SELECT d.title, d.case_number, d.ruling_gist
+FROM gongbao_docs_fts f
+JOIN gongbao_docs d ON f.rowid = d.id
+WHERE gongbao_docs_fts MATCH '善意取得' AND d.source = 'al'
+ORDER BY d.year DESC;
+
+-- 查某条文被哪些公报案例引用
+SELECT d.title, d.source, l.article_num
+FROM gongbao_case_law_links l
+JOIN gongbao_docs d ON l.doc_id = d.id
+WHERE l.node_id = ?;
+```
 
 ---
 

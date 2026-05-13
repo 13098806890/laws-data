@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-完整 pipeline：docx → JSON → law_index → DB → Markdown
+完整 pipeline：docx → JSON → law_index → DB → Markdown → 公报数据
 用法：python3 scripts/pipeline.py [选项]
 
 选项：
@@ -8,6 +8,7 @@
   --skip-index   跳过 law_index 生成阶段
   --skip-db      跳过 JSON → DB 阶段
   --skip-md      跳过 DB → Markdown 阶段
+  --skip-gongbao 跳过公报数据导入（gongbao_docs / gongbao_sfjs）
   --only-refs    只运行 extract_references（不跑主流程）
 
 各阶段也可单独运行：
@@ -163,11 +164,12 @@ def _write_log(report_lines: list[str], db_path: Path):
 
 def main():
     parser = argparse.ArgumentParser(description='laws_data pipeline')
-    parser.add_argument('--skip-docx',  action='store_true', help='跳过 docx → JSON')
-    parser.add_argument('--skip-index', action='store_true', help='跳过 law_index 生成')
-    parser.add_argument('--skip-db',    action='store_true', help='跳过 JSON → DB')
-    parser.add_argument('--skip-md',    action='store_true', help='跳过 DB → Markdown')
-    parser.add_argument('--only-refs',  action='store_true', help='只运行 extract_references')
+    parser.add_argument('--skip-docx',    action='store_true', help='跳过 docx → JSON')
+    parser.add_argument('--skip-index',   action='store_true', help='跳过 law_index 生成')
+    parser.add_argument('--skip-db',      action='store_true', help='跳过 JSON → DB')
+    parser.add_argument('--skip-md',      action='store_true', help='跳过 DB → Markdown')
+    parser.add_argument('--skip-gongbao', action='store_true', help='跳过公报数据导入')
+    parser.add_argument('--only-refs',    action='store_true', help='只运行 extract_references')
     args = parser.parse_args()
 
     from config import DB_PATH
@@ -213,6 +215,12 @@ def main():
         extract_refs()
         from json_to_db.builder import load_references
         load_references()
+
+    # 公报数据导入：在主库引用关系写入后运行，build_links 依赖 nodes 表
+    if not args.skip_db and not args.skip_gongbao:
+        print('\n=== 阶段六：导入公报数据（gongbao_docs / gongbao_sfjs） ===')
+        from build_gongbao_db import run as build_gongbao
+        build_gongbao(drop=True)
 
     if not args.skip_md:
         from db_to_md.renderer import run as db_to_md

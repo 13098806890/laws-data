@@ -371,5 +371,42 @@ def main():
     print(f'  → {DB_PATH}')
 
 
+def run(drop: bool = True):
+    """供 pipeline.py 调用的入口。drop=True 时先删旧表再重建。"""
+    if not DB_PATH.exists():
+        print(f'✗ 找不到 {DB_PATH}，请先运行主 pipeline')
+        return
+
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute("PRAGMA journal_mode=WAL")
+
+    if drop:
+        print('  删除旧公报表...')
+        conn.executescript(DROP_SQL)
+
+    conn.executescript(SCHEMA)
+
+    print('\n  导入 gongbao_docs（裁判文书 + 指导案例 + 司法文件）...')
+    n_docs = import_docs(conn)
+    print(f'  共导入 {n_docs} 条')
+
+    print('\n  导入 gongbao_sfjs（公报独有司法解释）...')
+    n_sfjs = import_sfjs(conn)
+
+    print('\n  建立法条引用关联...')
+    n_links = build_links(conn)
+    print(f'  共建立 {n_links} 条法条关联')
+
+    print('\n  构建 FTS 索引...')
+    build_fts(conn)
+
+    conn.commit()
+    conn.close()
+
+    print(f'\n  gongbao_docs: {n_docs} 条（裁判文书+指导案例+司法文件）')
+    print(f'  gongbao_sfjs: {n_sfjs} 条（公报独有司法解释）')
+    print(f'  gongbao_case_law_links: {n_links} 条')
+
+
 if __name__ == '__main__':
     main()
