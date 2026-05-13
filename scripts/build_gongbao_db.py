@@ -93,7 +93,8 @@ CREATE TABLE IF NOT EXISTS gongbao_docs (
     pub_date    TEXT,
     url         TEXT,
     ruling_gist TEXT,                 -- 裁判摘要/裁判要点（从正文提取）
-    keywords    TEXT,                 -- 关键词（从正文提取，逗号分隔）
+    keywords    TEXT,                 -- 关键词平铺字符串（规则提取+LLM推导合并）
+    keywords_meta TEXT,               -- 结构化关键词 JSON（LLM生成，各维度分组）
     full_text   TEXT
 );
 
@@ -254,19 +255,22 @@ def import_docs(conn: sqlite3.Connection) -> int:
             title    = d.get('title', '')
             case_num = d.get('case_number') or extract_case_number(title) or None
             # 优先使用 JSON 中已写入的字段，缺失时现场提取/推导
-            gist     = d.get('ruling_gist') or extract_ruling_gist(content)
-            keywords = d.get('keywords') or extract_keywords(content)
+            gist          = d.get('ruling_gist') or extract_ruling_gist(content)
+            keywords      = d.get('keywords') or extract_keywords(content)
+            keywords_meta = d.get('keywords_meta')  # LLM 生成的结构化 JSON
             if not keywords:
                 keywords = infer_keywords_from_text(title, gist, content)
             conn.execute(
                 """INSERT INTO gongbao_docs
                    (source, case_number, title, issue, year, issue_num,
-                    doc_number, pub_date, url, ruling_gist, keywords, full_text)
-                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
+                    doc_number, pub_date, url, ruling_gist, keywords, keywords_meta, full_text)
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
                 (source, case_num or None, title, d.get('issue',''),
                  d.get('year'), d.get('issue_num'), d.get('doc_number',''),
                  d.get('pub_date',''), d.get('url',''),
-                 gist, keywords, content)
+                 gist, keywords,
+                 json.dumps(keywords_meta, ensure_ascii=False) if keywords_meta else None,
+                 content)
             )
             total += 1
     return total
