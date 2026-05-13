@@ -150,26 +150,86 @@ DROP TABLE IF EXISTS gongbao_sfjs;
 # ── 字段提取辅助 ──────────────────────────────────────────────────────────────
 
 def extract_ruling_gist(content: str) -> str:
-    """提取裁判摘要或裁判要点（最多500字）。"""
-    for marker in ['裁判摘要', '裁判要点']:
-        idx = content.find(marker)
-        if idx >= 0:
-            snippet = content[idx + len(marker):idx + 600].strip()
-            # 到下一个大节标题截断
-            end = re.search(r'\n\n(?:基本案情|裁判结果|裁判理由|相关法条|关键词)', snippet)
-            if end:
-                snippet = snippet[:end.start()]
-            return snippet.strip()[:500]
+    """提取裁判摘要/裁判要点/裁判要旨（最多500字）。
+
+    支持两种格式：
+    1. 新格式（指导案例）：裁判要点\n正文...（纯文本标题行）
+    2. 旧格式（公报案例）：【裁判摘要】正文... 或 【裁判要旨】...
+    """
+    # 新格式：独立行"裁判要点"后跟换行，内容直到下一个大节
+    for marker in ['裁判要点', '裁判摘要', '裁判要旨']:
+        # 先尝试【marker】格式（旧格式）
+        m = re.search(r'【' + marker + r'】\s*(.+?)(?=\n\n|\n【|$)', content, re.S)
+        if m:
+            return m.group(1).strip()[:500]
+        # 再尝试独立行格式（新格式）：marker单独成行，后面是内容
+        m = re.search(r'(?:^|\n)' + marker + r'\s*\n(.+?)(?=\n\n(?:基本案情|裁判结果|相关法条|关键词|一、|二、)|$)',
+                      content, re.S)
+        if m:
+            return m.group(1).strip()[:500]
     return ''
 
 
 def extract_keywords(content: str) -> str:
-    """提取关键词字段。"""
-    m = re.search(r'关键词[　 ]*(.{5,200}?)(?:\n|裁判)', content)
+    """提取关键词字段。
+
+    支持两种格式：
+    1. 旧格式：【关键词】xxx、yyy、zzz
+    2. 新格式：独立行"关键词"（可能隔空行）后跟内容，斜杠分隔
+    """
+    m = re.search(r'【关键词】\s*(.{2,200}?)(?:\n|$)', content)
     if m:
-        kw = m.group(1).strip()
+        return m.group(1).strip()[:200]
+    # "关键词"单独成行，内容在后续非空行
+    m = re.search(r'(?:^|\n)关键词\s*\n[\s\n]*([^\n]{2,200})', content)
+    if m:
+        kw = m.group(1).strip().replace('/', '、').replace('/', '、')
+        return kw[:200]
+    # "关键词"后内容在同一行
+    m = re.search(r'(?:^|\n)关键词[　\s]+([^\n]{2,200})', content)
+    if m:
+        kw = m.group(1).strip().replace('/', '、').replace('/', '、')
         return kw[:200]
     return ''
+
+
+# 精简的法律纠纷关键词词典（去掉"公司"等过于通用的词）
+_KW_DICT = [
+    # 合同类
+    '合同纠纷', '买卖合同', '借款合同', '租赁合同', '建设工程合同', '服务合同',
+    '劳动合同', '承揽合同', '运输合同', '保险合同', '委托合同', '赠与合同',
+    '民间借贷', '网络服务合同',
+    # 侵权类
+    '侵权责任', '人身损害赔偿', '交通事故', '医疗纠纷', '产品责任', '名誉权',
+    '肖像权', '隐私权', '著作权', '专利权', '商标权', '不正当竞争',
+    # 物权/房产
+    '物权', '房屋买卖', '土地使用权', '征收补偿', '业主权利', '抵押权', '质权',
+    # 婚姻家庭继承
+    '婚姻', '离婚', '子女抚养', '监护权', '探望权', '遗产继承', '遗嘱',
+    # 公司/金融/证券
+    '股权转让', '股东权利', '公司解散', '破产', '票据', '保险理赔', '证券',
+    '担保', '保证', '抵押', '质押',
+    # 刑事
+    '正当防卫', '紧急避险', '故意伤害', '故意杀人', '盗窃', '诈骗',
+    '贪污', '受贿', '行贿', '走私', '毒品', '强奸', '抢劫',
+    '虐待', '组织卖淫',
+    # 行政/程序
+    '行政诉讼', '行政许可', '行政处罚', '行政赔偿', '国家赔偿',
+    '执行异议', '申请再审', '管辖权', '诉讼时效', '仲裁',
+    # 知识产权
+    '专利无效', '商标注册', '著作权侵权', '知识产权',
+    # 劳动
+    '劳动争议', '工伤', '社会保险', '经济补偿',
+]
+
+def infer_keywords_from_text(title: str, gist: str, full_text: str) -> str:
+    """当源数据无关键词字段时，从标题和裁判摘要推导关键词。"""
+    combined = f"{title} {gist} {full_text[:800]}"
+    found = [kw for kw in _KW_DICT if kw in combined]
+    # 从标题提取"XXX纠纷/争议"模式（2-10字前缀）
+    extra = re.findall(r'[一-龥]{2,10}(?:纠纷|争议|案件)', title)
+    all_kw = list(dict.fromkeys(found + extra))  # 去重保序
+    return '、'.join(all_kw[:8])
 
 
 def extract_case_number(title: str) -> str:
@@ -191,15 +251,19 @@ def import_docs(conn: sqlite3.Connection) -> int:
         for f in files:
             d = json.loads(f.read_text(encoding='utf-8'))
             content  = d.get('content', '')
-            case_num = extract_case_number(d.get('title', ''))
-            gist     = extract_ruling_gist(content)
-            keywords = extract_keywords(content)
+            title    = d.get('title', '')
+            case_num = d.get('case_number') or extract_case_number(title) or None
+            # 优先使用 JSON 中已写入的字段，缺失时现场提取/推导
+            gist     = d.get('ruling_gist') or extract_ruling_gist(content)
+            keywords = d.get('keywords') or extract_keywords(content)
+            if not keywords:
+                keywords = infer_keywords_from_text(title, gist, content)
             conn.execute(
                 """INSERT INTO gongbao_docs
                    (source, case_number, title, issue, year, issue_num,
                     doc_number, pub_date, url, ruling_gist, keywords, full_text)
                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?)""",
-                (source, case_num or None, d.get('title',''), d.get('issue',''),
+                (source, case_num or None, title, d.get('issue',''),
                  d.get('year'), d.get('issue_num'), d.get('doc_number',''),
                  d.get('pub_date',''), d.get('url',''),
                  gist, keywords, content)
