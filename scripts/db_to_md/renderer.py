@@ -199,7 +199,7 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR,
         group = grp['label']
         for sub in grp['subgroups']:
             subgroup = sub['label']
-            for lid in sub['lawIds']:
+            for lid in (law['id'] if isinstance(law, dict) else law for law in sub.get('lawIds', sub.get('laws', []))):
                 law_location[lid] = (group, subgroup)
 
     # 清理旧目录：menu 里的所有顶层 group + 已知旧名称
@@ -234,7 +234,7 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR,
             out_dir  = _out_dir(md_dir, group, subgroup)
             out_dir.mkdir(parents=True, exist_ok=True)
 
-            for law_id in sub['lawIds']:
+            for law_id in (law['id'] if isinstance(law, dict) else law for law in sub.get('lawIds', sub.get('laws', []))):
                 law = law_map.get(law_id)
                 if law is None:
                     continue

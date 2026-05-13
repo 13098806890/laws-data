@@ -20,9 +20,38 @@ from docx_to_json.structure import CHAPTER_RE, SECTION_RE, PART_RE, normalize_ti
 from docx_to_json.subject_area import get_subject_area
 
 ARTICLE_RE    = re.compile(r'^第[零一二三四五六七八九十百千]+条[　\s]')
+
+# ── 条文内容清洗 ──────────────────────────────────────────────────────────────
+
+# PAGE/MERGEFORMAT 噪音：Word 导出的页码字段，如 "－PAGE  2－" 或 "PAGE \* MERGEFORMAT"
+_PAGE_RE        = re.compile(r'[-－]\s*PAGE\s+\d+\s*[-－]')
+_PAGE_MERGE_RE  = re.compile(r'\bPAGE\s*\\\*\s*MERGEFORMAT\b|\bMERGEFORMAT\b|\bPAGE\b')
+# HYPERLINK 残留：如 HYPERLINK "javascript:SLC(13912,0)"
+_HYPERLINK_RE   = re.compile(r'HYPERLINK\s*"[^"]*"\s*')
+# 小写 l 误作数字 1：仅修正明确上下文
+_L_AS_1_RE      = re.compile(r'(?<!\w)l(?=[月年日万千百元％%个项条款位]|\d)')
+# 公式中 (l－ 或 (l- 的 l
+_L_FORMULA_RE   = re.compile(r'(?<=[(（])l(?=[-－])')
+
+
+def clean_article_content(text: str) -> str:
+    """清洗条文内容中的 Word 导出噪音和明显 OCR 错误"""
+    # 1. 去掉 PAGE 噪音（整段）
+    text = _PAGE_RE.sub('', text)
+    text = _PAGE_MERGE_RE.sub('', text)
+    # 2. 去掉 HYPERLINK 标记，保留后面紧跟的正文
+    text = _HYPERLINK_RE.sub('', text)
+    # 3. 小写 l → 1
+    text = _L_AS_1_RE.sub('1', text)
+    text = _L_FORMULA_RE.sub('1', text)
+    # 4. 清理多余空白（PAGE 删除后可能留下空行）
+    lines = [ln for ln in text.splitlines() if ln.strip()]
+    return '\n'.join(lines)
+
+
 _ART_NUM_RE   = re.compile(r'^第([零一二三四五六七八九十百千]+)条')
 # 段落内嵌条文切分：匹配段落中间出现的「\n　　第X条」或「\n第X条」
-_INLINE_ART_RE = re.compile(r'\n[　\s]*(?=第[一二三四五六七八九十百千]+条[　\s])')
+_INLINE_ART_RE = re.compile(r'\n[　\s]*(?=第[零一二三四五六七八九十百千]+条[　\s])')
 TOC_RE        = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
 CN_SECTION_RE = re.compile(r'^[一二三四五六七八九十百]+(?:十[一二三四五六七八九]?)?、\S')
 DOC_NUM_RE = re.compile(r'[（(]?[一-鿿]{1,8}[〔\[]\d{4}[〕\]]\d+号[）)]?')
@@ -63,7 +92,10 @@ def _extract_org_and_docnum(paras: list) -> tuple[str, str]:
 
 
 def extract_content(doc_path: Path) -> dict:
-    if doc_path.suffix.lower() == '.doc':
+    if doc_path.suffix.lower() == '.txt':
+        # 从网页抓取并保存的纯文本文件，直接按行读取
+        paras = [l.strip() for l in doc_path.read_text(encoding='utf-8').splitlines() if l.strip()]
+    elif doc_path.suffix.lower() == '.doc':
         result = subprocess.run(
             ['textutil', '-convert', 'txt', '-stdout', str(doc_path)],
             capture_output=True, text=True, timeout=30
@@ -154,6 +186,13 @@ def extract_content(doc_path: Path) -> dict:
                         current_chapter['sections'].append(current_section)
         pending.clear()
 
+    _child_seq = [0]  # 章内子节点（直属条文+节）全局追加序号
+    _current_part_title = None  # 最近一个编标题（用于直属编条文的占位章）
+
+    def _next_seq():
+        _child_seq[0] += 1
+        return _child_seq[0]
+
     for raw_text in paras[start_idx:]:
         # 展开段落内嵌的连续条文（如飞行基本规则的排版方式）
         for text in _split_inline_articles(raw_text):
@@ -209,6 +248,14 @@ def extract_content(doc_path: Path) -> dict:
                 current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
                 chapters.append(current_chapter)
                 current_section = None
+            elif PART_RE.match(text):
+                # 编标题：重置当前章/节/条。
+                # 直属于编的条文（编下无章）将在遇到第一个 ARTICLE_RE 时动态创建一个
+                # 占位章，以便 structure.py 的 part→chapter 映射能正确处理。
+                current_article = None
+                current_chapter = None
+                current_section = None
+                _current_part_title = normalize_title(text)  # 备用，供占位章标题
             elif CHAPTER_RE.match(text):
                 current_article = None
                 current_chapter = {'title': normalize_title(text), 'sections': [], 'articles': []}
@@ -216,7 +263,7 @@ def extract_content(doc_path: Path) -> dict:
                 current_section = None
             elif SECTION_RE.match(text):
                 current_article = None
-                current_section = {'title': normalize_title(text), 'articles': []}
+                current_section = {'title': normalize_title(text), 'articles': [], '_seq': _next_seq()}
                 if current_chapter:
                     current_chapter['sections'].append(current_section)
             elif ARTICLE_RE.match(text):
@@ -224,8 +271,16 @@ def extract_content(doc_path: Path) -> dict:
                 art_title = m.group(1) if m else (text[:text.index('　') + 1] if '　' in text else text[:8])
                 current_article = {'title': art_title, 'content': text}
                 target = current_section or current_chapter
+                if target is None and _current_part_title is not None:
+                    # 编下直属条文（无章）：创建占位章，标题用 _DIRECT_ 前缀供 structure.py 识别
+                    current_chapter = {'title': f'_DIRECT_{_current_part_title}', 'sections': [], 'articles': [], '_is_direct_part': True}
+                    chapters.append(current_chapter)
+                    target = current_chapter
                 if target:
                     target['articles'].append(current_article)
+                    # 直属于章的条文（current_section is None）记录章内出现序号
+                    if current_section is None and current_chapter is not None:
+                        current_article['_seq'] = _next_seq()
                 else:
                     if not chapters:
                         chapters.append({'title': '正文', 'sections': [], 'articles': []})
@@ -239,6 +294,13 @@ def extract_content(doc_path: Path) -> dict:
         sum(len(s.get('articles', [])) for s in ch.get('sections', []))
         for ch in chapters
     )
+    # 清洗所有条文内容
+    for ch in chapters:
+        for art in ch.get('articles', []):
+            art['content'] = clean_article_content(art['content'])
+        for sec in ch.get('sections', []):
+            for art in sec.get('articles', []):
+                art['content'] = clean_article_content(art['content'])
     issuing_org, doc_number = _extract_org_and_docnum(paras)
     return {
         'promulgation_info': promulgation_info,
@@ -313,16 +375,22 @@ def run():
         out_dir = JSON_DIR / category
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        docx_files = sorted(f for f in src_dir.iterdir()
+        docx_files_raw = sorted(f for f in src_dir.iterdir()
                             if f.suffix.lower() in ('.docx', '.doc'))
-        print(f'  {category}: {len(docx_files)} 个文件')
+        # .txt（网页来源）优先于同名 .docx/.doc：如果 stem 相同，用 .txt 替换
+        txt_stems = {f.stem for f in src_dir.iterdir() if f.suffix.lower() == '.txt'}
+        docx_files = [f for f in docx_files_raw if f.stem not in txt_stems]
+        txt_files  = sorted(f for f in src_dir.iterdir() if f.suffix.lower() == '.txt')
+        all_files  = sorted(docx_files + txt_files, key=lambda f: f.stem)
+        print(f'  {category}: {len(docx_files_raw)} 个 docx'
+              f'（{len(txt_stems)} 个被 txt 替换），{len(txt_files)} 个 txt 新增')
 
-        for docx_path in docx_files:
-            data = process_docx(docx_path, category, xlsx_index, domain_idx)
+        for doc_path in all_files:
+            data = process_docx(doc_path, category, xlsx_index, domain_idx)
             if data is None:
                 errors += 1
                 continue
-            out_path = out_dir / (docx_path.stem + '.json')
+            out_path = out_dir / (doc_path.stem + '.json')
             out_path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
             total += 1
 

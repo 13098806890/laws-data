@@ -12,6 +12,7 @@ from pathlib import Path
 from config import JSON_DIR, DB_PATH
 from utils import pub_date_from_stem
 from docx_to_json.subject_area import get_subject_area
+from docx_to_json.converter import clean_article_content
 from law_aliases import ALIASES
 
 _CN_ORD = {'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,
@@ -51,7 +52,8 @@ def create_schema(conn):
             full_text TEXT,
             version_date TEXT,
             is_current INTEGER DEFAULT 1,
-            aliases TEXT
+            aliases TEXT,
+            is_flk INTEGER DEFAULT 0
         );
         CREATE TABLE IF NOT EXISTS nodes (
             id INTEGER PRIMARY KEY,
@@ -209,6 +211,7 @@ def insert_nodes(conn, law_id: int, data: dict):
         else:
             full_text = (data.get('full_text') or '').strip()
             if full_text:
+                full_text = clean_article_content(full_text)
                 _insert_article(conn, law_id, None,
                                 {'title': '', 'content': full_text}, 1, 1, (None, None, None))
 
@@ -218,7 +221,7 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         db_path.unlink()
 
     conn = sqlite3.connect(db_path)
-    conn.execute('PRAGMA journal_mode=WAL')
+    conn.execute('PRAGMA journal_mode=DELETE')  # iOS bundle 不支持 WAL（只读目录无法创建 -wal/-shm）
     conn.execute('PRAGMA foreign_keys=ON')
     create_schema(conn)
 
@@ -237,8 +240,8 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         cur = conn.execute(
             """INSERT INTO laws (id, title, filename, category, legal_domain, subject_area, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
-                                 total_articles, full_text, version_date, is_current, aliases)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?)""",
+                                 total_articles, full_text, version_date, is_current, aliases, is_flk)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,0)""",
             (data.get('law_id'), data['title'], stem, category, data.get('legal_domain'),
              subject_area,
              data.get('pub_date'), data.get('effective_date'),
@@ -268,6 +271,34 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         )
     """)
     conn.commit()
+
+    # 法考标记：从 法考目录.json 中读取法律标题集合，匹配并打标
+    flk_path = db_path.parent / '法考目录.json'
+    if flk_path.exists():
+        flk_data = json.loads(flk_path.read_text(encoding='utf-8'))
+        flk_titles: set[str] = set()
+        for laws_list in flk_data.values():
+            flk_titles.update(laws_list)
+        # 规范化：去掉书名号、括号版本后缀，用于模糊匹配
+        import re as _re
+        def _norm(t: str) -> str:
+            t = t.replace('《', '').replace('》', '')
+            t = _re.sub(r'[\(（][^\)）]{0,8}[\)）]$', '', t).strip()
+            return t
+        flk_norm = {_norm(t): t for t in flk_titles}
+        # 精确匹配优先，然后规范化匹配
+        all_laws = conn.execute('SELECT id, title FROM laws').fetchall()
+        matched_ids = []
+        for law_id, title in all_laws:
+            if title in flk_titles or _norm(title) in flk_norm:
+                matched_ids.append(law_id)
+        if matched_ids:
+            conn.executemany('UPDATE laws SET is_flk=1 WHERE id=?', [(i,) for i in matched_ids])
+            conn.commit()
+        flk_count = conn.execute('SELECT COUNT(*) FROM laws WHERE is_flk=1').fetchone()[0]
+        print(f'法考标记完成：{flk_count} 部法律标记为 is_flk=1')
+    else:
+        print('未找到 法考目录.json，跳过法考标记')
 
     laws     = conn.execute('SELECT COUNT(*) FROM laws').fetchone()[0]
     nodes    = conn.execute('SELECT COUNT(*) FROM nodes').fetchone()[0]
