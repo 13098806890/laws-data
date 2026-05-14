@@ -28,6 +28,7 @@ laws_data/
 ├── 📂 scripts/
 │   ├── config.py          # 路径配置（BASE_DIR、SRC_DIRS、DB_PATH 等）
 │   ├── utils.py           # 公共工具（title_from_stem、pub_date_from_stem）
+│   ├── source_override_blocklist.json  # 被其他来源覆盖的主库条目列表
 │   ├── docx_to_json/      # 第一阶段：docx → JSON
 │   │   ├── converter.py   # 主入口，extract_content、process_docx、run()
 │   │   ├── domain.py      # legal_domain 映射、xlsx 索引
@@ -38,6 +39,7 @@ laws_data/
 │   ├── db_to_md/          # 第三阶段：DB → Markdown
 │   │   └── renderer.py    # 渲染、run()
 │   ├── pipeline.py        # 完整流程（三阶段串联）
+│   ├── build_gongbao_db.py  # 公报裁判文书/指导案例/司法文件导入
 │   └── verify_db.py       # 数据库与 JSON 一致性验证
 ├── law_content.db         # SQLite 数据库（pipeline 产物，约 72MB）
 └── CLAUDE.md              # 本文件
@@ -77,6 +79,21 @@ python3 -m db_to_md.renderer       # 仅重新生成 Markdown
 - `doc_number` — 发文字号（法释〔2000〕29号 等），从文件头部提取
 - `version_date` — 同 pub_date，用于多版本区分
 - `is_current` — 默认 1（现行版本），未来多版本时旧版设为 0
+- `source` — 数据来源：`'flk'`（主库 docx 源文件）/ `'gongbao'`（最高人民法院公报）/ 未来可扩展其他来源
+
+### 多来源覆盖机制
+
+`laws` 表统一存放所有来源的法律条文，用 `source` 字段区分。ID 分配规则：
+
+1. **主库（source='flk'）先跑 pipeline 分配 ID**，ID 一旦写入 JSON 就固定不变
+2. **其他来源（source='gongbao' 等）**：
+   - 与主库同名的法律 → 复用主库 ID，内容用新来源替换，主库版本从 `source_override_blocklist.json` 屏蔽
+   - 主库没有的法律 → 分配新 ID（从主库最大 ID 之后的保留段开始），同样写入来源 JSON 固定
+3. `source_override_blocklist.json`：格式 `[{laws_id, gongbao_file, title, pub_date}]`，记录被覆盖的主库条目；builder.py 导入主库时跳过这些 ID
+
+当前数量（2026-05-14）：
+- `source='flk'`：1526 条
+- `source='gongbao'`（公报司法解释）：927 条，其中 419 条复用主库 ID，508 条分配新 ID（范围 3500726–3501233）
 
 ### nodes 表
 编/章/节/条 统一存储，字段：
@@ -112,6 +129,25 @@ ORDER BY pub_date DESC;
 ### nodes_fts 虚拟表
 FTS5，`tokenize='trigram'`，索引 `content` 和 `article_number`。
 搜索时建议加 `AND n.type = 'article'` 限制只搜条文，避免章节标题干扰。
+公报司法解释（`source='gongbao'`）的条文也在此 FTS 表中，无需单独搜索。
+
+## 公报数据表（gongbao_docs / gongbao_case_law_links）
+
+`build_gongbao_db.py`（由 pipeline 阶段六调用）管理公报裁判文书、指导案例、司法文件：
+
+### gongbao_docs 表
+- `source`：`'cpwsxd'`（裁判文书）/ `'al'`（指导案例）/ `'sfwj'`（司法文件）
+- `ruling_gist`：裁判摘要/裁判要点（从正文提取，≤500字）
+- `keywords`：关键词平铺字符串
+- `keywords_meta`：结构化关键词 JSON（LLM生成，各维度分组）
+
+### gongbao_case_law_links 表
+公报文书引用主库法条的关联：`doc_id → (law_id, node_id, article_num)`
+
+### gongbao_docs_fts 虚拟表
+FTS5 trigram，索引 title/ruling_gist/keywords/full_text。
+
+> 注：公报司法解释已合并进主库 `laws`/`nodes` 表（`source='gongbao'`），不在此处维护。
 
 ## 数据来源说明
 
@@ -189,9 +225,12 @@ JSON 是元数据/中间产物，只有 Markdown 才按 legal_domain 分目录�
 单字搜索（如"婚"）和双字搜索（如"合同"）均无效，至少需要 3 个字（如"合同法"）。
 如需支持短词搜索，需改用 `tokenize='unicode61'` 并重建 FTS 表，但会失去 trigram 的任意子串匹配能力。
 
-### article_references 表是空壳
-`builder.py` 的 schema 里建了 `article_references` 表，但 pipeline 从未填充它。
-不要查这张表，也不要假设它有数据。后续若实现条文引用关系提取，才会用到。
+### article_references 表
+`builder.py` 建表并由 pipeline 填充，记录条文间的引用关系：
+- `ref_type`：`'cross_law'`（跨法引用）/ `'self'`（本法自引）
+- `resolved`：1 表示已找到目标条文节点
+
+当前数量：8024 条（跨法 4797，自引 3227），已解析 7444 条。
 
 ### normalize_title 的精确行为
 `structure.py` 中的 `normalize_title` 只去掉**两个 CJK 字符之间**的多余全角空格：

@@ -86,7 +86,7 @@ def compare(json_path, conn):
         "SELECT id FROM laws WHERE filename=?", (filename,)
     ).fetchone()
     if not row:
-        return f'NOT FOUND: {title} ({version_date})'
+        return f'NOT FOUND: {title} ({filename})'
 
     law_id = row[0]
     errors = []

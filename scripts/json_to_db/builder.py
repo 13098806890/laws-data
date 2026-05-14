@@ -7,13 +7,30 @@ JSON → SQLite
 import json
 import re
 import sqlite3
+from datetime import datetime
 from pathlib import Path
 
+import os
+import sys
+import tempfile
 from config import JSON_DIR, DB_PATH
 from utils import pub_date_from_stem
 from docx_to_json.subject_area import get_subject_area
-from docx_to_json.converter import clean_article_content
+from docx_to_json.converter import clean_article_content, extract_content
 from law_aliases import ALIASES
+
+BASE_DIR     = Path(__file__).parent.parent.parent   # laws_data/
+GONGBAO_SFJS_DIR = BASE_DIR / '最高人民法院公报' / '司法解释'
+
+# 覆盖名单：其他来源替换了主库版本的 law_id 集合
+# 格式：[{laws_id, gongbao_file, title, pub_date}, ...]
+_BLOCKLIST_PATH = Path(__file__).parent.parent / 'source_override_blocklist.json'
+def _load_blocklist() -> set:
+    if not _BLOCKLIST_PATH.exists():
+        return set()
+    entries = json.loads(_BLOCKLIST_PATH.read_text(encoding='utf-8'))
+    return {e['laws_id'] for e in entries}
+_OVERRIDE_BLOCKLIST: set = _load_blocklist()
 
 _CN_ORD = {'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,
            '九':9,'十':10,'百':100,'千':1000}
@@ -53,7 +70,8 @@ def create_schema(conn):
             version_date TEXT,
             is_current INTEGER DEFAULT 1,
             aliases TEXT,
-            is_flk INTEGER DEFAULT 0
+            is_flk INTEGER DEFAULT 0,
+            source TEXT DEFAULT 'flk'  -- 'flk'=主库法律库, 'gongbao'=最高人民法院公报
         );
         CREATE TABLE IF NOT EXISTS nodes (
             id INTEGER PRIMARY KEY,
@@ -235,13 +253,18 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         stem         = path.stem
         version_date = pub_date_from_stem(stem)
         category     = data.get('category')
+
+        # 跳过已被其他来源覆盖的条目（在覆盖名单中的 law_id 由其他来源写入）
+        if data.get('law_id') in _OVERRIDE_BLOCKLIST:
+            continue
+
         subject_area = get_subject_area(data['title'], category)
         aliases      = ALIASES.get(data['title'], '')
         cur = conn.execute(
             """INSERT INTO laws (id, title, filename, category, legal_domain, subject_area, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
-                                 total_articles, full_text, version_date, is_current, aliases, is_flk)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,0)""",
+                                 total_articles, full_text, version_date, is_current, aliases, is_flk, source)
+               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,0,'flk')""",
             (data.get('law_id'), data['title'], stem, category, data.get('legal_domain'),
              subject_area,
              data.get('pub_date'), data.get('effective_date'),
@@ -314,6 +337,104 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
     conn.close()
 
 
+def import_gongbao_sfjs(db_path: Path = DB_PATH):
+    """将公报司法解释（927个JSON文件）解析为结构化条文，写入 laws/nodes 表（source='gongbao'）。
+
+    每个文件的 law_id 已在预处理阶段写入 JSON，本函数直接读取使用。
+    与主库重复的条目（id 已存在）通过 INSERT OR IGNORE 跳过。
+    """
+    if not GONGBAO_SFJS_DIR.exists():
+        print(f'  ⚠ 公报司法解释目录不存在：{GONGBAO_SFJS_DIR}')
+        return
+
+    conn = sqlite3.connect(db_path)
+    conn.execute('PRAGMA journal_mode=WAL')
+    conn.execute('PRAGMA foreign_keys=OFF')   # 批量插入时临时关闭外键检查
+
+    files = sorted(GONGBAO_SFJS_DIR.glob('*.json'))
+    print(f'\n导入公报司法解释：{len(files)} 个文件')
+
+    inserted = skipped = parse_errors = 0
+
+    for i, f in enumerate(files):
+        d = json.loads(f.read_text(encoding='utf-8'))
+        law_id = d.get('law_id')
+        if not law_id:
+            parse_errors += 1
+            continue
+
+        title   = d.get('title', '').strip()
+        pub_date = d.get('pub_date', '')
+
+        # 用临时 txt 文件让 extract_content 解析条文结构
+        content_text = d.get('content', '')
+        with tempfile.NamedTemporaryFile(
+            suffix='.txt', mode='w', encoding='utf-8', delete=False
+        ) as tmp:
+            tmp.write(content_text)
+            tmp_path = Path(tmp.name)
+
+        try:
+            content_data = extract_content(tmp_path)
+        except Exception as e:
+            parse_errors += 1
+            tmp_path.unlink(missing_ok=True)
+            continue
+        finally:
+            tmp_path.unlink(missing_ok=True)
+
+        full_text  = _clean_text(content_data.get('full_text', content_text))
+        total_arts = content_data.get('total_articles', 0)
+        prom_info  = content_data.get('promulgation_info', '')
+        issuing    = content_data.get('issuing_org', '') or '最高人民法院'
+        doc_num    = d.get('doc_number', '') or content_data.get('doc_number', '')
+        eff_date   = d.get('effective_date', '')
+        filename   = f.stem   # 用文件 stem 作 filename（唯一键）
+
+        try:
+            conn.execute(
+                """INSERT OR IGNORE INTO laws
+                   (id, title, filename, category, legal_domain, subject_area, pub_date,
+                    effective_date, promulgation_info, issuing_org, doc_number,
+                    total_articles, full_text, version_date, is_current, aliases, is_flk, source)
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,NULL,0,'gongbao')""",
+                (law_id, title, filename, '司法解释', '', '',
+                 pub_date, eff_date, prom_info, issuing, doc_num,
+                 total_arts, full_text, pub_date)
+            )
+            if conn.execute('SELECT changes()').fetchone()[0] == 0:
+                skipped += 1
+                continue
+
+            insert_nodes(conn, law_id, content_data)
+            inserted += 1
+        except Exception as e:
+            parse_errors += 1
+            print(f'  ERROR [{f.name}]: {e}')
+
+        if (i + 1) % 200 == 0:
+            print(f'  {i+1}/{len(files)} (inserted={inserted} skipped={skipped})')
+            conn.commit()
+
+    conn.commit()
+
+    # 多版本标记：同标题公报版本也参与 is_current 更新
+    conn.execute("""
+        UPDATE laws SET is_current = 0
+        WHERE id NOT IN (
+            SELECT id FROM laws l1
+            WHERE pub_date = (
+                SELECT MAX(pub_date) FROM laws l2 WHERE l2.title = l1.title
+            )
+        )
+    """)
+    conn.commit()
+    conn.execute('PRAGMA foreign_keys=ON')
+    conn.close()
+
+    print(f'  公报司法解释：插入 {inserted} 条，跳过（已有） {skipped} 条，解析错误 {parse_errors} 条')
+
+
 def load_references(db_path: Path = DB_PATH,
                     refs_path: Path = Path(__file__).parent.parent.parent / 'references' / 'article_references.json'):
     """将 article_references.json 填入 article_references 表。"""
@@ -379,11 +500,20 @@ def load_references(db_path: Path = DB_PATH,
 def run():
     print('\n=== JSON → 数据库 ===')
     build_db()
+    print('\n=== 导入公报司法解释 ===')
+    import_gongbao_sfjs()
     print('\n=== 写入引用关系 ===')
     try:
         load_references()
     except Exception as e:
         print(f'  引用关系写入失败（非致命）: {e}')
+    # 写入 db 版本戳（YYYYMMDD 整数），供 iOS 端判断是否需要重新复制
+    version = int(datetime.now().strftime('%Y%m%d'))
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute(f'PRAGMA user_version = {version}')
+    conn.commit()
+    conn.close()
+    print(f'\n  DB user_version 设为 {version}')
 
 
 if __name__ == '__main__':
