@@ -194,9 +194,19 @@ def _proc_subgroup(title: str, category: str) -> str:
 
 def compute_display(title: str, category: str, legal_domain: str,
                     subject_area: str) -> tuple[str, str]:
-    group = _DOMAIN_TO_GROUP.get(legal_domain or '', '其他')
     cat   = category or ''
     subj  = subject_area or ''
+    group = _DOMAIN_TO_GROUP.get(legal_domain or '', '')
+    if not group:
+        # 按 category 兜底
+        if cat in ('法律', '宪法', '修正案', '法律解释'):
+            group = '宪法与国家机构'
+        elif cat == '行政法规':
+            group = '行政与公法'
+        elif cat in ('司法解释', '监察法规'):
+            group = '诉讼与司法程序'
+        else:
+            group = '其他'
 
     if group == '宪法与国家机构':
         if cat == '宪法':             subgroup = '宪法'
@@ -239,7 +249,8 @@ def _sort_subgroups(group: str, subgroups: list[str]) -> list[str]:
 def export_menu(db_path: Path = DB_PATH, menu_path: Path = MENU_PATH):
     conn = sqlite3.connect(db_path)
     rows = conn.execute(
-        "SELECT id, title, category, legal_domain, subject_area FROM laws WHERE is_current=1"
+        """SELECT id, title, category, legal_domain, subject_area FROM laws
+           WHERE is_current=1 AND (source='flk' OR (source='gongbao' AND legal_domain != ''))"""
     ).fetchall()
     conn.close()
 

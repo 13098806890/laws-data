@@ -351,10 +351,29 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
     conn.execute('PRAGMA journal_mode=WAL')
     conn.execute('PRAGMA foreign_keys=OFF')   # 批量插入时临时关闭外键检查
 
+    # 清空旧数据，确保本次写入覆盖之前可能错误的条目
+    conn.execute("DELETE FROM nodes WHERE law_id IN (SELECT id FROM laws WHERE source='gongbao')")
+    conn.execute("DELETE FROM laws WHERE source='gongbao'")
+    conn.commit()
+
+    # 从 json/司法解释/ 目录预建 law_id → (legal_domain, subject_area) 映射
+    # 公报原始文件不含这两个字段，需从 pipeline 生成的结构化 JSON 补充
+    _domain_map: dict[int, tuple[str, str]] = {}
+    json_sfjs_dir = BASE_DIR / 'json' / '司法解释'
+    if json_sfjs_dir.exists():
+        for jf in json_sfjs_dir.glob('*.json'):
+            try:
+                jd = json.loads(jf.read_text('utf-8'))
+                lid = jd.get('law_id')
+                if lid:
+                    _domain_map[lid] = (jd.get('legal_domain', '') or '', jd.get('subject_area', '') or '')
+            except Exception:
+                pass
+
     files = sorted(GONGBAO_SFJS_DIR.glob('*.json'))
     print(f'\n导入公报司法解释：{len(files)} 个文件')
 
-    inserted = skipped = parse_errors = 0
+    inserted = parse_errors = 0
 
     for i, f in enumerate(files):
         d = json.loads(f.read_text(encoding='utf-8'))
@@ -367,7 +386,11 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
         pub_date = d.get('pub_date', '')
 
         # 用临时 txt 文件让 extract_content 解析条文结构
-        content_text = d.get('content', '')
+        # 公报 content 字段中条文号后可能缺少空白，补全以确保 ARTICLE_RE 能识别
+        content_text = re.sub(
+            r'^(第[零一二三四五六七八九十百千]+条)([^　\s])',
+            r'\1　\2', d.get('content', ''), flags=re.MULTILINE
+        )
         with tempfile.NamedTemporaryFile(
             suffix='.txt', mode='w', encoding='utf-8', delete=False
         ) as tmp:
@@ -393,19 +416,17 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
         try:
             conn.execute(
-                """INSERT OR IGNORE INTO laws
+                """INSERT INTO laws
                    (id, title, filename, category, legal_domain, subject_area, pub_date,
                     effective_date, promulgation_info, issuing_org, doc_number,
                     total_articles, full_text, version_date, is_current, aliases, is_flk, source)
                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,NULL,0,'gongbao')""",
-                (law_id, title, filename, '司法解释', '', '',
+                (law_id, title, filename, '司法解释',
+                 _domain_map.get(law_id, ('', ''))[0],
+                 _domain_map.get(law_id, ('', ''))[1],
                  pub_date, eff_date, prom_info, issuing, doc_num,
                  total_arts, full_text, pub_date)
             )
-            if conn.execute('SELECT changes()').fetchone()[0] == 0:
-                skipped += 1
-                continue
-
             insert_nodes(conn, law_id, content_data)
             inserted += 1
         except Exception as e:
@@ -413,7 +434,7 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
             print(f'  ERROR [{f.name}]: {e}')
 
         if (i + 1) % 200 == 0:
-            print(f'  {i+1}/{len(files)} (inserted={inserted} skipped={skipped})')
+            print(f'  {i+1}/{len(files)} (inserted={inserted})')
             conn.commit()
 
     conn.commit()
@@ -432,7 +453,7 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
     conn.execute('PRAGMA foreign_keys=ON')
     conn.close()
 
-    print(f'  公报司法解释：插入 {inserted} 条，跳过（已有） {skipped} 条，解析错误 {parse_errors} 条')
+    print(f'  公报司法解释：插入 {inserted} 条，解析错误 {parse_errors} 条')
 
 
 def load_references(db_path: Path = DB_PATH,

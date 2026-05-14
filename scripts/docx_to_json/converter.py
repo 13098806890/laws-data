@@ -53,7 +53,7 @@ _ART_NUM_RE   = re.compile(r'^第([零一二三四五六七八九十百千]+)条
 # 段落内嵌条文切分：匹配段落中间出现的「\n　　第X条」或「\n第X条」
 _INLINE_ART_RE = re.compile(r'\n[　\s]*(?=第[零一二三四五六七八九十百千]+条[　\s])')
 TOC_RE        = re.compile(r'^(?:目\s*录|附\s*录|附\s*件)$')
-CN_SECTION_RE = re.compile(r'^[一二三四五六七八九十百]+(?:十[一二三四五六七八九]?)?、\S')
+CN_SECTION_RE = re.compile(r'^[一二三四五六七八九十百]+(?:十[一二三四五六七八九]?)?、\s*\S')
 DOC_NUM_RE = re.compile(r'[（(]?[一-鿿]{1,8}[〔\[]\d{4}[〕\]]\d+号[）)]?')
 # 白名单：只匹配已知顶级发布机构，避免误匹配法条正文
 _KNOWN_ORGS = (
