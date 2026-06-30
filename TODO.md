@@ -2,8 +2,8 @@
 
 ## B. 翻译工程
 
-### B1. 翻译基础设施：json_en/ 目录 + 格式设计
-建 `json_en/` 目录，镜像 `json/` 的 category 结构，设计英文 JSON 格式。
+### ✅ B1. 翻译基础设施：json_en/ 目录 + 格式设计
+`json_en/` 目录已建立，镜像 `json/` 的 category 结构（1,529 个占位文件），格式设计完成。
 
 每部法律一个 JSON 文件，只含英文字段，通过 `law_id` 与中文关联：
 
@@ -21,11 +21,9 @@
 
 > `full_text_en` 不单独存，由 `builder.py` 从上述字段自动拼接。
 
-### B2. Phase 1：法律标题翻译
-- 从 `json/` 提取所有不重复 `title`（约 1500+）
-- LLM 批量翻译，产出 `references/law_title_en_map.json`
-- 格式：`{"中文标题": "English Title", ...}`
-- **人工过一遍确认**
+### ✅ B2. Phase 1：法律标题翻译
+- `references/law_title_en_map.json` 已生成，1,570 条
+- ⚠️ **人工过一遍确认**（待完成）
 
 ### B3. Phase 2：法律术语表
 - 从法条正文提取高频法律术语（200-500 词）
@@ -46,12 +44,12 @@
   - 翻译流畅度
 - 根据结果调整 prompt 策略
 
-### B5. Phase 3：全量翻译
-- 逐条翻译 ~1500 部法律
+### B5. Phase 4：全量翻译
+- 逐条翻译 ~1,529 部法律
 - 注入 `title_en_map` + `glossary`，确保交叉引用一致
-- 建议 3-5 部法律一批调用 LLM，平衡成本和单次质量
+- 建议 3-5 部法律一批调用 LLM，平衡成本和质量
 
-### B6. Phase 3：一致性校验
+### B6. Phase 4：一致性校验
 - 脚本扫描所有 `json_en/` 文件，检查：
   1. `title_en` 与 `law_title_en_map.json` 一致
   2. 正文中引用的法律名称（`《xxx》`）对应的英文拼写统一
