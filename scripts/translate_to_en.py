@@ -1,80 +1,48 @@
 #!/usr/bin/env python3
 """
-Translate law_content.db into English, producing law_content_en.db.
+将法条翻译成英文，结果写回 json_en/{category}/{filename}.json。
 
-Schema of law_content_en.db:
-  law_translations  (law_id, title_en, category_en, legal_domain_en,
-                     subject_area_en, issuing_org_en)
-  node_translations (node_id, law_id, title_en, article_number_en, content_en)
-  meta              (key, value)   — stores progress so runs are resumable
+特性：
+- 增量：content_en 已有内容的条文跳过，已完整翻译的法律跳过
+- 术语一致性：启动时注入 law_title_en_map.json + legal_terms_glossary.json
+- 可恢复：中断后重跑自动从未完成的法律继续
 
-Usage:
+用法：
   export ANTHROPIC_API_KEY=sk-ant-...
-  cd /Users/doxie/laws_data
-  python3 scripts/translate_to_en.py [--batch-size 20] [--workers 4] [--dry-run]
-
-The script is fully resumable: already-translated rows are skipped.
+  cd /Users/doxie/Github/laws-data
+  python3 scripts/translate_to_en.py                  # 全量翻译
+  python3 scripts/translate_to_en.py --dry-run        # 统计待翻译量
+  python3 scripts/translate_to_en.py --laws-only      # 只翻译标题
+  python3 scripts/translate_to_en.py --filter 民法典  # 只翻译标题含关键词的法律
 """
 
 import argparse
 import json
 import os
-import sqlite3
 import sys
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-SRC_DB  = Path("/Users/doxie/laws_data/law_content.db")
-DST_DB  = Path("/Users/doxie/laws_data/law_content_en.db")
+sys.path.insert(0, str(Path(__file__).parent))
+from config import JSON_DIR, DB_PATH
+
+JSON_EN_DIR    = JSON_DIR.parent / 'json_en'
+REFERENCES_DIR = JSON_DIR.parent / 'references'
+TITLE_MAP_PATH = REFERENCES_DIR / 'law_title_en_map.json'
+GLOSSARY_PATH  = REFERENCES_DIR / 'legal_terms_glossary.json'
+
 API_URL = "https://api.anthropic.com/v1/messages"
-MODEL   = "claude-haiku-4-5"
+MODEL   = "claude-haiku-4-5-20251001"
 
-# Static enum translations (no API needed)
-CN_DIGITS = {
-    "零":0,"一":1,"二":2,"三":3,"四":4,"五":5,"六":6,"七":7,"八":8,"九":9,
-    "十":10,"百":100,"千":1000,"万":10000,
-}
-
-def cn_to_int(s: str) -> int | None:
-    """Convert a Chinese numeral string to an integer, e.g. '一百二十三' → 123."""
-    if not s:
-        return None
-    result = 0
-    current = 0
-    for ch in s:
-        v = CN_DIGITS.get(ch)
-        if v is None:
-            return None
-        if v >= 10:
-            if current == 0:
-                current = 1
-            result += current * v
-            current = 0
-        else:
-            current = v
-    result += current
-    return result if result else None
-
-def cn_article_number_to_en(an: str | None) -> str:
-    """Convert '第一百二十三条' → 'Article 123', pass through non-Chinese."""
-    if not an:
-        return an or ""
-    import re
-    m = re.match(r"第([零一二三四五六七八九十百千]+)条", an.strip())
-    if m:
-        n = cn_to_int(m.group(1))
-        if n is not None:
-            return f"Article {n}"
-    return an
-
+# ── 静态枚举翻译 ────────────────────────────────────────────────────────────
 
 CATEGORY_MAP = {
-    "宪法":    "Constitution",
-    "法律":    "Law",
-    "修正案":  "Amendment",
-    "决定":    "Decision",
+    "宪法":     "Constitution",
+    "法律":     "Law",
+    "修正案":   "Amendment",
+    "决定":     "Decision",
     "法律解释": "Legal Interpretation",
     "司法解释": "Judicial Interpretation",
     "行政法规": "Administrative Regulation",
@@ -82,13 +50,13 @@ CATEGORY_MAP = {
 }
 
 DOMAIN_MAP = {
-    "宪法相关法":        "Constitutional Law",
-    "民法典":            "Civil Code",
-    "民法商法":          "Civil & Commercial Law",
-    "刑法":              "Criminal Law",
-    "行政法":            "Administrative Law",
-    "经济法":            "Economic Law",
-    "社会法":            "Social Law",
+    "宪法相关法":         "Constitutional Law",
+    "民法典":             "Civil Code",
+    "民法商法":           "Civil & Commercial Law",
+    "刑法":               "Criminal Law",
+    "行政法":             "Administrative Law",
+    "经济法":             "Economic Law",
+    "社会法":             "Social Law",
     "诉讼与非诉讼程序法": "Procedural Law",
 }
 
@@ -102,7 +70,51 @@ ORG_MAP = {
 }
 
 
-def api_call(api_key: str, messages: list[dict], system: str = "") -> str:
+# ── 参考资料加载 ────────────────────────────────────────────────────────────
+
+def load_title_map() -> dict:
+    if TITLE_MAP_PATH.exists():
+        return json.loads(TITLE_MAP_PATH.read_text(encoding='utf-8'))
+    return {}
+
+
+def load_glossary() -> dict:
+    if GLOSSARY_PATH.exists():
+        return json.loads(GLOSSARY_PATH.read_text(encoding='utf-8'))
+    return {}
+
+
+def build_system_prompt(title_map: dict, glossary: dict) -> str:
+    lines = [
+        "You are a professional legal translator specializing in Chinese law.",
+        "Translate Chinese legal text into English with precision and consistency.",
+        "",
+        "Rules:",
+        "- Preserve legal precision and formal style",
+        "- Use 'shall' for obligations, 'may' for permissions, 'must' for requirements",
+        "- Keep article numbers as-is (第一条 context implies Article 1)",
+        "- For law titles cited in text (《xxx》), use the exact English title from the glossary below",
+        "- Output only the translated text, nothing else",
+    ]
+
+    if title_map:
+        lines += ["", "## Law Title Translations (use these exact translations when citing laws in text)"]
+        # 只注入最常被引用的 200 条，避免 prompt 过长
+        for zh, en in list(title_map.items())[:200]:
+            lines.append(f"  {zh} → {en}")
+
+    if glossary:
+        lines += ["", "## Legal Term Glossary (use these exact translations for these terms)"]
+        if isinstance(glossary, dict):
+            for zh, en in list(glossary.items())[:300]:
+                lines.append(f"  {zh} → {en}")
+
+    return "\n".join(lines)
+
+
+# ── API 调用 ────────────────────────────────────────────────────────────────
+
+def api_call(api_key: str, messages: list, system: str) -> str:
     payload = json.dumps({
         "model": MODEL,
         "max_tokens": 4096,
@@ -122,31 +134,17 @@ def api_call(api_key: str, messages: list[dict], system: str = "") -> str:
         return json.loads(resp.read())["content"][0]["text"]
 
 
-TITLE_SYSTEM = """You are a professional legal translator specializing in Chinese law.
-Translate the given Chinese law title into English accurately and concisely.
-Output only the translated title, nothing else."""
-
-ARTICLE_SYSTEM = """You are a professional legal translator specializing in Chinese law.
-Translate the given Chinese legal article into English.
-Preserve legal precision, article numbers (第X条 → Article X), and structure.
-Output only the translated text, nothing else."""
-
-BATCH_ARTICLE_SYSTEM = """You are a professional legal translator specializing in Chinese law.
-You will receive a JSON array of objects, each with "id" and "text" fields containing Chinese legal article text.
-Translate each article into English. Preserve legal precision, article numbers (第X条 → Article X), and structure.
-Return a JSON array with the same objects, adding an "en" field with the English translation.
-Output only the JSON array, nothing else."""
+def translate_title(api_key: str, title: str, system: str) -> str:
+    return api_call(api_key, [{"role": "user", "content": f"Translate this Chinese law title:\n{title}"}], system).strip()
 
 
-def translate_title(api_key: str, title: str) -> str:
-    return api_call(api_key, [{"role": "user", "content": f"Translate this Chinese law title:\n{title}"}], TITLE_SYSTEM)
-
-
-def translate_articles_batch(api_key: str, items: list[tuple[int, str]]) -> dict[int, str]:
-    """Translate a batch of (node_id, content) pairs. Returns {node_id: translated_text}."""
-    payload = json.dumps([{"id": nid, "text": text} for nid, text in items], ensure_ascii=False)
-    raw = api_call(api_key, [{"role": "user", "content": payload}], BATCH_ARTICLE_SYSTEM)
-    # parse JSON from response
+def translate_articles_batch(api_key: str, items: list, system: str) -> dict:
+    """items: list of (article_number, content_zh). Returns {article_number: content_en}."""
+    payload = json.dumps(
+        [{"id": art_num, "text": content} for art_num, content in items],
+        ensure_ascii=False
+    )
+    raw = api_call(api_key, [{"role": "user", "content": payload}], system)
     s = raw.find("[")
     e = raw.rfind("]") + 1
     if s < 0 or e <= s:
@@ -155,229 +153,196 @@ def translate_articles_batch(api_key: str, items: list[tuple[int, str]]) -> dict
     return {obj["id"]: obj["en"] for obj in result if "id" in obj and "en" in obj}
 
 
-def init_dst_db(conn: sqlite3.Connection):
-    conn.executescript("""
-    CREATE TABLE IF NOT EXISTS law_translations (
-        law_id          INTEGER PRIMARY KEY,
-        title_en        TEXT,
-        category_en     TEXT,
-        legal_domain_en TEXT,
-        subject_area_en TEXT,
-        issuing_org_en  TEXT
-    );
-    CREATE TABLE IF NOT EXISTS node_translations (
-        node_id         INTEGER PRIMARY KEY,
-        law_id          INTEGER,
-        title_en        TEXT,
-        article_number_en TEXT,
-        content_en      TEXT
-    );
-    CREATE INDEX IF NOT EXISTS idx_node_trans_law ON node_translations(law_id);
-    CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);
-    """)
-    conn.commit()
+BATCH_ARTICLE_SUFFIX = """
+
+You will receive a JSON array of objects with "id" (article number) and "text" (Chinese legal text).
+Translate each "text" into English.
+Return a JSON array with the same objects, adding an "en" field with the English translation.
+Output only the JSON array, nothing else."""
 
 
-def get_done_ids(conn: sqlite3.Connection, table: str, id_col: str) -> set[int]:
-    return {row[0] for row in conn.execute(f"SELECT {id_col} FROM {table}")}
+# ── json_en 文件读写 ────────────────────────────────────────────────────────
+
+def load_en_file(path: Path) -> dict:
+    if path.exists():
+        return json.loads(path.read_text(encoding='utf-8'))
+    return {}
 
 
-def static_translate_law(row) -> dict:
-    law_id, title, category, legal_domain, subject_area, issuing_org = row
-    return {
-        "law_id":          law_id,
-        "category_en":     CATEGORY_MAP.get(category, category),
-        "legal_domain_en": DOMAIN_MAP.get(legal_domain, legal_domain),
-        "subject_area_en": subject_area or "",
-        "issuing_org_en":  ORG_MAP.get(issuing_org or "", issuing_org or ""),
-    }
+def save_en_file(path: Path, data: dict):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+
+def is_fully_translated(en_data: dict) -> bool:
+    """所有 articles 的 content_en 都非空则视为已完整翻译。"""
+    articles = en_data.get('articles', [])
+    if not articles:
+        return False
+    return all(a.get('content_en', '').strip() for a in articles)
+
+
+def pending_articles(en_data: dict) -> list:
+    """返回 content_en 为空的条文列表 [(article_number, ''), ...]。"""
+    return [
+        (a['article_number'], a.get('content_en', ''))
+        for a in en_data.get('articles', [])
+        if not a.get('content_en', '').strip()
+    ]
+
+
+# ── 主流程 ──────────────────────────────────────────────────────────────────
+
+def get_laws(filter_kw: str = '') -> list:
+    """从数据库读取需翻译的法律列表，返回 [(law_id, filename, category, title), ...]。"""
+    import sqlite3
+    conn = sqlite3.connect(DB_PATH)
+    rows = conn.execute(
+        "SELECT id, filename, category, title FROM laws WHERE is_current=1"
+    ).fetchall()
+    conn.close()
+    if filter_kw:
+        rows = [r for r in rows if filter_kw in r[3]]
+    return rows
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--batch-size", type=int, default=20, help="Articles per API call")
-    parser.add_argument("--workers",    type=int, default=4,  help="Parallel API workers")
-    parser.add_argument("--dry-run",    action="store_true",  help="Count work without calling API")
-    parser.add_argument("--laws-only",  action="store_true",  help="Translate law titles only")
+    parser = argparse.ArgumentParser(description='翻译法条到 json_en/')
+    parser.add_argument('--batch-size', type=int, default=20, help='每次 API 调用的条文数')
+    parser.add_argument('--workers',    type=int, default=4,  help='并行 API 线程数')
+    parser.add_argument('--dry-run',    action='store_true',  help='统计待翻译量，不调用 API')
+    parser.add_argument('--laws-only',  action='store_true',  help='只翻译法律标题')
+    parser.add_argument('--filter',     type=str, default='', help='只处理标题含此关键词的法律')
     args = parser.parse_args()
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
     if not api_key and not args.dry_run:
-        print("ERROR: ANTHROPIC_API_KEY not set. Export it and retry.", file=sys.stderr)
+        print("ERROR: ANTHROPIC_API_KEY not set.", file=sys.stderr)
         sys.exit(1)
 
-    src = sqlite3.connect(SRC_DB)
-    dst = sqlite3.connect(DST_DB)
-    init_dst_db(dst)
+    title_map = load_title_map()
+    glossary  = load_glossary()
+    print(f"已加载标题 map：{len(title_map)} 条，术语表：{len(glossary)} 条")
 
-    # ── 1. Law titles ──────────────────────────────────────────────────
-    all_laws = src.execute(
-        "SELECT id, title, category, legal_domain, subject_area, issuing_org "
-        "FROM laws WHERE is_current=1"
-    ).fetchall()
+    system = build_system_prompt(title_map, glossary)
+    article_system = system + BATCH_ARTICLE_SUFFIX
 
-    done_law_ids = get_done_ids(dst, "law_translations", "law_id")
-    pending_laws = [r for r in all_laws if r[0] not in done_law_ids]
-    print(f"Laws: {len(all_laws)} total, {len(done_law_ids)} done, {len(pending_laws)} pending")
+    laws = get_laws(args.filter)
+    print(f"法律总数：{len(laws)} 部")
 
+    # ── dry-run：统计待翻译量 ──
     if args.dry_run:
-        all_nodes = src.execute(
-            "SELECT id, law_id, title, article_number, content, type FROM nodes "
-            "WHERE law_id IN (SELECT id FROM laws WHERE is_current=1)"
-        ).fetchall()
-        done_node_ids = get_done_ids(dst, "node_translations", "node_id")
-        pending_nodes = [r for r in all_nodes if r[0] not in done_node_ids]
-        total_chars = sum(len(r[4] or "") for r in pending_nodes if r[5] == "article")
-        print(f"Nodes: {len(all_nodes)} total, {len(done_node_ids)} done, {len(pending_nodes)} pending")
-        print(f"Article chars to translate: ~{total_chars:,}")
-        print(f"Estimated batches: {len([r for r in pending_nodes if r[5]=='article']) // args.batch_size + 1}")
-        src.close(); dst.close()
+        need_title = need_articles = done_laws = 0
+        total_pending_articles = 0
+        for law_id, filename, category, title in laws:
+            en_path = JSON_EN_DIR / category / f'{filename}.json'
+            en_data = load_en_file(en_path)
+            if not en_data.get('title_en', '').strip():
+                need_title += 1
+            if is_fully_translated(en_data):
+                done_laws += 1
+            else:
+                pending = pending_articles(en_data)
+                total_pending_articles += len(pending)
+                need_articles += 1
+        print(f"  已完整翻译：{done_laws} 部")
+        print(f"  待翻译标题：{need_title} 个")
+        print(f"  待翻译法律：{need_articles} 部，共 {total_pending_articles} 条条文")
+        print(f"  预计批次数：{total_pending_articles // args.batch_size + 1}")
         return
 
-    # Fill static fields for all laws first (no API)
-    for row in pending_laws:
-        d = static_translate_law(row)
-        dst.execute(
-            "INSERT OR IGNORE INTO law_translations(law_id,category_en,legal_domain_en,subject_area_en,issuing_org_en) "
-            "VALUES(?,?,?,?,?)",
-            (d["law_id"], d["category_en"], d["legal_domain_en"], d["subject_area_en"], d["issuing_org_en"])
-        )
-    dst.commit()
-    print(f"Static fields filled for {len(pending_laws)} laws.")
-
-    # Translate law titles via API
-    title_pending = [r for r in all_laws if r[0] not in done_law_ids or
-                     dst.execute("SELECT title_en FROM law_translations WHERE law_id=?", [r[0]]).fetchone()[0] is None]
-    print(f"Translating {len(title_pending)} law titles...")
+    # ── 翻译标题 ──
+    title_pending = [
+        (law_id, filename, category, title)
+        for law_id, filename, category, title in laws
+        if not load_en_file(JSON_EN_DIR / category / f'{filename}.json').get('title_en', '').strip()
+    ]
+    print(f"待翻译标题：{len(title_pending)} 个")
 
     def translate_one_title(row):
-        law_id, title = row[0], row[1]
+        law_id, filename, category, title = row
         try:
-            title_en = translate_title(api_key, title)
-            return law_id, title_en.strip()
-        except Exception as e:
-            return law_id, f"[Translation error: {e}]"
+            # 优先从 title_map 取（已人工确认）
+            if title in title_map:
+                return law_id, filename, category, title_map[title]
+            return law_id, filename, category, translate_title(api_key, title, system)
+        except Exception as exc:
+            return law_id, filename, category, f"[Translation error: {exc}]"
 
     done = 0
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         futures = {ex.submit(translate_one_title, r): r for r in title_pending}
         for fut in as_completed(futures):
-            law_id, title_en = fut.result()
-            dst.execute("UPDATE law_translations SET title_en=? WHERE law_id=?", [title_en, law_id])
+            law_id, filename, category, title_en = fut.result()
+            en_path = JSON_EN_DIR / category / f'{filename}.json'
+            en_data = load_en_file(en_path)
+            en_data['law_id']   = law_id
+            en_data['title_en'] = title_en
+            en_data.setdefault('promulgation_info_en', '')
+            en_data.setdefault('articles', [])
+            save_en_file(en_path, en_data)
             done += 1
             if done % 50 == 0:
-                dst.commit()
-                print(f"  Titles: {done}/{len(title_pending)}")
-    dst.commit()
-    print(f"Law titles done.")
+                print(f"  标题：{done}/{len(title_pending)}")
+    print(f"标题翻译完成（{done} 个）")
 
     if args.laws_only:
-        src.close(); dst.close()
         return
 
-    # ── 2. Nodes ───────────────────────────────────────────────────────
-    all_nodes = src.execute(
-        "SELECT id, law_id, title, article_number, content, type FROM nodes "
-        "WHERE law_id IN (SELECT id FROM laws WHERE is_current=1)"
-    ).fetchall()
+    # ── 翻译条文 ──
+    laws_with_pending = [
+        (law_id, filename, category, title)
+        for law_id, filename, category, title in laws
+        if not is_fully_translated(load_en_file(JSON_EN_DIR / category / f'{filename}.json'))
+    ]
+    print(f"待翻译法律：{len(laws_with_pending)} 部")
 
-    done_node_ids = get_done_ids(dst, "node_translations", "node_id")
-    pending_nodes = [r for r in all_nodes if r[0] not in done_node_ids]
-    articles  = [r for r in pending_nodes if r[5] == "article"]
-    non_arts  = [r for r in pending_nodes if r[5] != "article"]
-    print(f"Nodes pending: {len(pending_nodes)} ({len(articles)} articles, {len(non_arts)} structural)")
+    total_done = total_errors = 0
 
-    # Non-article nodes (chapter/section/part titles) — translate in batches too
-    def insert_node(node_id, law_id, title_en, article_number_en, content_en):
-        dst.execute(
-            "INSERT OR IGNORE INTO node_translations(node_id,law_id,title_en,article_number_en,content_en) "
-            "VALUES(?,?,?,?,?)",
-            (node_id, law_id, title_en, article_number_en, content_en)
-        )
+    for idx, (law_id, filename, category, title) in enumerate(laws_with_pending, 1):
+        en_path = JSON_EN_DIR / category / f'{filename}.json'
+        en_data = load_en_file(en_path)
 
-    # Translate structural node titles (chapter/section titles are short, batch them)
-    structural_items = [(r[0], r[2] or "") for r in non_arts]  # (node_id, title)
-    print(f"Translating {len(structural_items)} structural titles...")
-    done = 0
-    for i in range(0, len(structural_items), args.batch_size):
-        batch = structural_items[i:i + args.batch_size]
-        try:
-            translations = translate_articles_batch(api_key, batch)
-            for node_id, title_zh in batch:
-                row = next(r for r in non_arts if r[0] == node_id)
-                title_en = translations.get(node_id, title_zh)
-                insert_node(node_id, row[1], title_en, cn_article_number_to_en(row[3]), title_en)
-        except Exception as e:
-            print(f"  Structural batch {i} error: {e}, inserting raw")
-            for node_id, title_zh in batch:
-                row = next(r for r in non_arts if r[0] == node_id)
-                insert_node(node_id, row[1], title_zh, row[3], title_zh)
-        done += len(batch)
-        if done % 200 == 0:
-            dst.commit()
-            print(f"  Structural: {done}/{len(structural_items)}")
-    dst.commit()
+        pending = pending_articles(en_data)
+        if not pending:
+            continue
 
-    # Translate article content in batches
-    article_items = [(r[0], r[4] or "") for r in articles]  # (node_id, content)
-    total_batches = (len(article_items) + args.batch_size - 1) // args.batch_size
-    print(f"Translating {len(article_items)} articles in {total_batches} batches (workers={args.workers})...")
+        print(f"[{idx}/{len(laws_with_pending)}] {title}（{len(pending)} 条待翻译）")
 
-    batches = [article_items[i:i+args.batch_size] for i in range(0, len(article_items), args.batch_size)]
-    node_lookup = {r[0]: r for r in articles}
+        # 构建 article_number → index 映射，便于回写
+        art_index = {a['article_number']: i for i, a in enumerate(en_data['articles'])}
 
-    done_batches = 0
-    errors = 0
-    lock_results = []
+        # 分批翻译
+        batches = [pending[i:i + args.batch_size] for i in range(0, len(pending), args.batch_size)]
 
-    def translate_batch(batch):
-        for attempt in range(3):
-            try:
-                return translate_articles_batch(api_key, batch)
-            except Exception as e:
-                if attempt == 2:
-                    return {nid: text for nid, text in batch}  # fallback: keep Chinese
-                time.sleep(2 ** attempt)
+        def translate_batch(batch):
+            for attempt in range(3):
+                try:
+                    return translate_articles_batch(api_key, batch, article_system)
+                except Exception as exc:
+                    if attempt == 2:
+                        print(f"    批次失败（已重试3次）：{exc}")
+                        return {}
+                    time.sleep(2 ** attempt)
 
-    with ThreadPoolExecutor(max_workers=args.workers) as ex:
-        futures = {ex.submit(translate_batch, b): b for b in batches}
-        for fut in as_completed(futures):
-            translations = fut.result()
-            batch = futures[fut]
-            for node_id, _ in batch:
-                row = node_lookup[node_id]
-                content_en = translations.get(node_id, row[4] or "")
-                an_en = cn_article_number_to_en(row[3])
-                insert_node(node_id, row[1], row[2], an_en, content_en)
-            done_batches += 1
-            if done_batches % 10 == 0:
-                dst.commit()
-                pct = done_batches * 100 // total_batches
-                print(f"  Batches: {done_batches}/{total_batches} ({pct}%)")
+        with ThreadPoolExecutor(max_workers=args.workers) as ex:
+            futures = {ex.submit(translate_batch, b): b for b in batches}
+            for fut in as_completed(futures):
+                translations = fut.result()
+                batch = futures[fut]
+                for art_num, _ in batch:
+                    en_text = translations.get(art_num, '')
+                    if art_num in art_index:
+                        en_data['articles'][art_index[art_num]]['content_en'] = en_text
+                        if en_text:
+                            total_done += 1
+                        else:
+                            total_errors += 1
 
-    dst.commit()
-    print("All translations complete.")
+        save_en_file(en_path, en_data)
+        print(f"    已写回 {en_path.name}")
 
-    # ── 3. FTS index for English ───────────────────────────────────────
-    print("Building English FTS index...")
-    dst.executescript("""
-    DROP TABLE IF EXISTS node_translations_fts;
-    CREATE VIRTUAL TABLE node_translations_fts USING fts5(
-        content_en,
-        article_number_en,
-        content='node_translations',
-        content_rowid='node_id',
-        tokenize='porter unicode61'
-    );
-    INSERT INTO node_translations_fts(rowid, content_en, article_number_en)
-    SELECT node_id, content_en, article_number_en FROM node_translations;
-    """)
-    dst.commit()
-    print("FTS index built.")
-
-    src.close()
-    dst.close()
-    print(f"Done. Output: {DST_DB}")
+    print(f"\n完成：{total_done} 条翻译，{total_errors} 条失败")
 
 
 if __name__ == "__main__":
