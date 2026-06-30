@@ -1,27 +1,27 @@
 {
   "law_id": 3500204,
-  "title_en": "",
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Sabotaging Public Telecommunications Facilities",
   "promulgation_info_en": "",
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 Where any person intentionally damages a public telecommunications facility in service by severing communication lines, damaging communication equipment, or deleting, modifying, or adding data or application programs stored, processed, or transmitted in a telecommunications network computer system, and such act falls under any of the following circumstances, it shall constitute \"endangering public security\" as provided for in Article 124 of the Criminal Law. In accordance with paragraph 1 of Article 124 of the Criminal Law, the person shall be sentenced to fixed-term imprisonment of not less than three years but not more than seven years for the crime of damaging public telecommunications facilities:\n(1) Causing communication interruption or serious obstruction for fire alarm, police alarm, medical emergency, traffic accident reporting, disaster relief, emergency rescue, flood control, or similar services, thereby delaying rescue, medical treatment, disaster relief, or emergency response, and resulting in the death of one person, serious injury to three or more persons, or property losses of 300,000 yuan or more;\n(2) Causing communication interruption for more than one hour affecting not less than 2,000 but fewer than 10,000 users, or communication interruption for less than one hour affecting 10,000 or more users;\n(3) Within the scope of one local network, causing complete blockage of inter-network communication, complete interruption of all connections from a gateway office to a certain office direction, or complete interruption of a certain inter-network service for less than two hours, or directly affecting fewer than 50,000 (user × hours);\n(4) Causing serious obstruction to inter-network communication, with a cumulative duration of not less than two hours but less than twelve hours within one day;\n(5) Other circumstances that endanger public security."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 Where any person commits the acts specified in Article 1 of this Interpretation, and such acts fall under any of the following circumstances, it shall constitute \"serious consequences\" as provided for in paragraph 1 of Article 124 of the Criminal Law, and the person shall be sentenced to fixed-term imprisonment of not less than seven years for the crime of damaging public telecommunications facilities:\n(1) Causing communication interruption or serious obstruction for fire alarm, police alarm, medical emergency, traffic accident reporting, disaster relief, emergency rescue, flood control, or similar services, thereby delaying rescue, medical treatment, disaster relief, or emergency response, and resulting in the death of two or more persons, serious injury to six or more persons, or property losses of 600,000 yuan or more;\n(2) Causing communication interruption for more than one hour affecting 10,000 or more users;\n(3) Within the scope of one local network, causing complete blockage of inter-network communication, complete interruption of all connections from a gateway office to a certain office direction, or complete interruption of a certain inter-network service for two hours or more, or directly affecting 50,000 (user × hours) or more;\n(4) Causing serious obstruction to inter-network communication, with a cumulative duration of twelve hours or more within one day;\n(5) Causing other serious consequences."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 Where any person intentionally damages a public telecommunications facility in service but such act does not yet endanger public security, or intentionally destroys a public telecommunications facility not yet put into service, causing property damage and constituting a crime, the person shall be convicted and punished for the crime of intentionally damaging property in accordance with Article 275 of the Criminal Law.\nWhere any person steals a public telecommunications facility of relatively small value, but the act constitutes a crime of endangering public security, the person shall be convicted and punished in accordance with Article 124 of the Criminal Law; where the theft of a public telecommunications facility simultaneously constitutes both the crime of theft and the crime of damaging public telecommunications facilities, the person shall be convicted and punished in accordance with the provision providing for the heavier punishment."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 Any person who directs, organizes, or instigates another person to commit the intentional criminal acts specified in this Interpretation shall be convicted and punished as an accomplice."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 The scope of public telecommunications facilities, number of users, and the standards and duration for communication interruption and serious obstruction as specified in this Interpretation shall be determined in accordance with the relevant provisions of the competent national telecommunications industry authorities."
     }
   ]
 }

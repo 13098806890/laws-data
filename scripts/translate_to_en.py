@@ -33,8 +33,12 @@ REFERENCES_DIR = JSON_DIR.parent / 'references'
 TITLE_MAP_PATH = REFERENCES_DIR / 'law_title_en_map.json'
 GLOSSARY_PATH  = REFERENCES_DIR / 'legal_terms_glossary.json'
 
-API_URL = "https://api.anthropic.com/v1/messages"
-MODEL   = "claude-haiku-4-5-20251001"
+# Anthropic
+ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
+ANTHROPIC_MODEL   = "claude-haiku-4-5-20251001"
+# DeepSeek (OpenAI-compatible)
+DEEPSEEK_API_URL  = "https://api.deepseek.com/chat/completions"
+DEEPSEEK_MODEL    = "deepseek-chat"
 
 # ── 静态枚举翻译 ────────────────────────────────────────────────────────────
 
@@ -115,23 +119,46 @@ def build_system_prompt(title_map: dict, glossary: dict) -> str:
 # ── API 调用 ────────────────────────────────────────────────────────────────
 
 def api_call(api_key: str, messages: list, system: str) -> str:
-    payload = json.dumps({
-        "model": MODEL,
-        "max_tokens": 4096,
-        "system": system,
-        "messages": messages,
-    }).encode()
-    req = urllib.request.Request(
-        API_URL, data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
-        },
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        return json.loads(resp.read())["content"][0]["text"]
+    """支持 Anthropic 和 DeepSeek 两种 API。
+    设置 DEEPSEEK_API_KEY 时优先用 DeepSeek，否则用 Anthropic。
+    """
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
+    if deepseek_key:
+        # DeepSeek OpenAI-compatible API
+        payload = json.dumps({
+            "model": DEEPSEEK_MODEL,
+            "max_tokens": 4096,
+            "messages": [{"role": "system", "content": system}] + messages,
+        }).encode()
+        req = urllib.request.Request(
+            DEEPSEEK_API_URL, data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "Authorization": f"Bearer {deepseek_key}",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            return json.loads(resp.read())["choices"][0]["message"]["content"]
+    else:
+        # Anthropic API
+        payload = json.dumps({
+            "model": ANTHROPIC_MODEL,
+            "max_tokens": 4096,
+            "system": system,
+            "messages": messages,
+        }).encode()
+        req = urllib.request.Request(
+            ANTHROPIC_API_URL, data=payload,
+            headers={
+                "Content-Type": "application/json",
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+            },
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            return json.loads(resp.read())["content"][0]["text"]
 
 
 def translate_title(api_key: str, title: str, system: str) -> str:
@@ -182,19 +209,25 @@ def is_fully_translated(en_data: dict) -> bool:
     return all(a.get('content_en', '').strip() for a in articles)
 
 
-def pending_articles(en_data: dict) -> list:
-    """返回 content_en 为空的条文列表 [(article_number, ''), ...]。"""
-    return [
-        (a['article_number'], a.get('content_en', ''))
-        for a in en_data.get('articles', [])
-        if not a.get('content_en', '').strip()
-    ]
+def pending_articles(en_data: dict, cn_articles: dict) -> list:
+    """返回 content_en 为空且有中文原文的条文列表 [(article_number, 中文content), ...]。"""
+    result = []
+    for a in en_data.get('articles', []):
+        if a.get('content_en', '').strip():
+            continue  # 已翻译，跳过
+        art_num = a['article_number']
+        cn_content = cn_articles.get(art_num, '').strip()
+        if cn_content:
+            result.append((art_num, cn_content))
+    return result
 
 
 # ── 主流程 ──────────────────────────────────────────────────────────────────
 
 def get_laws(filter_kw: str = '') -> list:
-    """从数据库读取需翻译的法律列表，返回 [(law_id, filename, category, title), ...]。"""
+    """从数据库读取 is_current=1 的法律列表，返回 [(law_id, filename, category, title), ...]。
+    只翻译现行版本，旧版本跳过。
+    """
     import sqlite3
     conn = sqlite3.connect(DB_PATH)
     rows = conn.execute(
@@ -204,6 +237,38 @@ def get_laws(filter_kw: str = '') -> list:
     if filter_kw:
         rows = [r for r in rows if filter_kw in r[3]]
     return rows
+
+
+def load_cn_articles(filename: str, category: str) -> dict:
+    """从中文 json/ 文件中提取 article_number → 中文content 的映射。"""
+    cn_path = JSON_DIR / category / f'{filename}.json'
+    if not cn_path.exists():
+        return {}
+    cn_data = json.loads(cn_path.read_text(encoding='utf-8'))
+
+    mapping = {}
+
+    def collect(chapters):
+        for ch in chapters:
+            for sec in ch.get('sections', []):
+                for a in sec.get('articles', []):
+                    _add(a)
+            for a in ch.get('articles', []):
+                _add(a)
+
+    def _add(a):
+        art_num = (a.get('title') or '').rstrip('　 ').strip()
+        content = a.get('content', '').strip()
+        if art_num and content:
+            mapping[art_num] = content
+
+    if 'parts' in cn_data:
+        for pt in cn_data['parts']:
+            collect(pt.get('chapters', []))
+    elif 'chapters' in cn_data:
+        collect(cn_data['chapters'])
+
+    return mapping
 
 
 def main():
@@ -216,9 +281,12 @@ def main():
     args = parser.parse_args()
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    if not api_key and not args.dry_run:
-        print("ERROR: ANTHROPIC_API_KEY not set.", file=sys.stderr)
+    deepseek_key = os.environ.get("DEEPSEEK_API_KEY", "")
+    if not api_key and not deepseek_key and not args.dry_run:
+        print("ERROR: 请设置 ANTHROPIC_API_KEY 或 DEEPSEEK_API_KEY", file=sys.stderr)
         sys.exit(1)
+    if deepseek_key:
+        print(f"使用 DeepSeek API（{DEEPSEEK_MODEL}）")
 
     title_map = load_title_map()
     glossary  = load_glossary()
@@ -237,12 +305,13 @@ def main():
         for law_id, filename, category, title in laws:
             en_path = JSON_EN_DIR / category / f'{filename}.json'
             en_data = load_en_file(en_path)
+            cn_articles = load_cn_articles(filename, category)
             if not en_data.get('title_en', '').strip():
                 need_title += 1
             if is_fully_translated(en_data):
                 done_laws += 1
             else:
-                pending = pending_articles(en_data)
+                pending = pending_articles(en_data, cn_articles)
                 total_pending_articles += len(pending)
                 need_articles += 1
         print(f"  已完整翻译：{done_laws} 部")
@@ -300,10 +369,11 @@ def main():
     total_done = total_errors = 0
 
     for idx, (law_id, filename, category, title) in enumerate(laws_with_pending, 1):
-        en_path = JSON_EN_DIR / category / f'{filename}.json'
-        en_data = load_en_file(en_path)
+        en_path    = JSON_EN_DIR / category / f'{filename}.json'
+        en_data    = load_en_file(en_path)
+        cn_articles = load_cn_articles(filename, category)
 
-        pending = pending_articles(en_data)
+        pending = pending_articles(en_data, cn_articles)
         if not pending:
             continue
 
