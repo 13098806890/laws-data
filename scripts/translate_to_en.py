@@ -76,6 +76,38 @@ ORG_MAP = {
 
 # ── 参考资料加载 ────────────────────────────────────────────────────────────
 
+def clean_punctuation(text: str) -> str:
+    """清理中文标点符号，替换为英文标点"""
+    replacements = {
+        '"': '"',    # 中文左引号 → 英文左引号
+        '"': '"',    # 中文右引号 → 英文右引号
+        ''': "'",    # 中文左单引号 → 英文单引号
+        ''': "'",    # 中文右单引号 → 英文单引号
+        '，': ',',   # 中文逗号 → 英文逗号
+        '。': '.',   # 中文句号 → 英文句号
+        '；': ';',   # 中文分号 → 英文分号
+        '：': ':',   # 中文冒号 → 英文冒号
+        '！': '!',   # 中文感叹号 → 英文感叹号
+        '？': '?',   # 中文问号 → 英文问号
+        '（': '(',   # 中文左括号 → 英文左括号
+        '）': ')',   # 中文右括号 → 英文右括号
+        '【': '[',   # 中文左方括号 → 英文左方括号
+        '】': ']',   # 中文右方括号 → 英文右方括号
+        '《': '"',   # 书名号左 → 引号
+        '》': '"',   # 书名号右 → 引号
+        '、': ', ',  # 顿号 → 逗号+空格
+        '　': ' ',   # 全角空格 → 半角空格
+    }
+
+    for zh_punct, en_punct in replacements.items():
+        text = text.replace(zh_punct, en_punct)
+
+    # 清理多余空格
+    text = ' '.join(text.split())
+
+    return text
+
+
 def load_title_map() -> dict:
     if TITLE_MAP_PATH.exists():
         return json.loads(TITLE_MAP_PATH.read_text(encoding='utf-8'))
@@ -93,12 +125,23 @@ def build_system_prompt(title_map: dict, glossary: dict) -> str:
         "You are a professional legal translator specializing in Chinese law.",
         "Translate Chinese legal text into English with precision and consistency.",
         "",
-        "Rules:",
+        "CRITICAL - Legal Language Rules:",
+        "- Use 'shall' for obligations and requirements (NEVER use 'will')",
+        "- Use 'may' for permissions and rights (NEVER use 'would')",
+        "- Use 'must' for absolute requirements",
+        "- NEVER use 'will' or 'would' - these are FORBIDDEN in legal English",
+        "",
+        "Additional Rules:",
         "- Preserve legal precision and formal style",
-        "- Use 'shall' for obligations, 'may' for permissions, 'must' for requirements",
+        "- Use only English punctuation (NEVER use Chinese punctuation like " " ， 。)",
         "- Keep article numbers as-is (第一条 context implies Article 1)",
         "- For law titles cited in text (《xxx》), use the exact English title from the glossary below",
         "- Output only the translated text, nothing else",
+        "",
+        "Examples of CORRECT usage:",
+        "- ✓ 'shall establish' (NOT 'will establish')",
+        "- ✓ 'may appoint' (NOT 'can appoint' or 'would appoint')",
+        "- ✓ 'must comply' (NOT 'shall comply' when absolute requirement)",
     ]
 
     if title_map:
@@ -162,7 +205,8 @@ def api_call(api_key: str, messages: list, system: str) -> str:
 
 
 def translate_title(api_key: str, title: str, system: str) -> str:
-    return api_call(api_key, [{"role": "user", "content": f"Translate this Chinese law title:\n{title}"}], system).strip()
+    result = api_call(api_key, [{"role": "user", "content": f"Translate this Chinese law title:\n{title}"}], system).strip()
+    return clean_punctuation(result)
 
 
 def translate_articles_batch(api_key: str, items: list, system: str) -> dict:
@@ -177,7 +221,8 @@ def translate_articles_batch(api_key: str, items: list, system: str) -> dict:
     if s < 0 or e <= s:
         raise ValueError(f"No JSON array in response: {raw[:200]}")
     result = json.loads(raw[s:e])
-    return {obj["id"]: obj["en"] for obj in result if "id" in obj and "en" in obj}
+    # 应用标点清理
+    return {obj["id"]: clean_punctuation(obj["en"]) for obj in result if "id" in obj and "en" in obj}
 
 
 BATCH_ARTICLE_SUFFIX = """

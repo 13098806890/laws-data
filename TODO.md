@@ -102,36 +102,43 @@
 - 根据结果调整 prompt 策略
 
 ### ✅ B5. Phase 4：全量翻译（`translate_to_en.py` 改造）
-`translate_to_en.py` 已改造完成，写入 `json_en/` 文件：
+`translate_to_en.py` 已改造完成，并已根据验证结果进行改进：
 
+**基础功能**（已完成）：
 - ✅ 读取 `json_en/` 中 `content_en` 为空的文件（增量，跳过已翻译）
 - ✅ 注入 `law_title_en_map.json` + `legal_terms_glossary.json`
 - ✅ 批量调用 LLM（默认 20 条/批，可调整），写回 `json_en/` 文件
 - ✅ 支持 Anthropic（Haiku 4.5）和 DeepSeek API
 - ✅ 支持 `--dry-run` 统计待翻译量
-- ✅ 支持 `--laws-only` 只翻译标题
-- ✅ 支持 `--filter` 关键词过滤
-- ✅ 并行翻译 + 失败重试3次
+
+**质量改进**（2026-07-01）：
+- ✅ 强化 system prompt：明确禁止 will/would，使用 CRITICAL 强调
+- ✅ 添加正确/错误示例（shall vs will）
+- ✅ 自动标点清理：`clean_punctuation()` 函数自动替换所有中文标点
+- ✅ 应用于标题和条文翻译的返回结果
+
+**新增工具**：
+- ✅ `retranslate.py`：清空已有翻译，准备重新翻译
+- ✅ `fix_translations.sh`：一键修复脚本（清空→翻译→验证→更新MD）
 
 **当前进度（2026-07-01）：**
 - 法律总数：1,568 部（is_current=1）
-- 已完整翻译：4 部
-- 待翻译标题：1,557 个
+- 已完整翻译：11 部（待修复质量问题）
 - 待翻译条文：49,719 条（预计2,486批）
+- 质量验证：发现186个问题，预计修复后减少到≤30个
+
+**预期质量提升**：4/5 → 4.5/5（修复标点+will/would 问题）
 
 **用法：**
 ```bash
 # 统计待翻译量
 python3 scripts/translate_to_en.py --dry-run
 
-# 只翻译标题（快速验证）
-python3 scripts/translate_to_en.py --laws-only
+# 修复现有翻译（推荐先做）
+export DEEPSEEK_API_KEY=sk-...
+bash scripts/fix_translations.sh  # 一键修复，约$2-3，10-20分钟
 
-# 全量翻译（需设置 API key）
-export ANTHROPIC_API_KEY=sk-ant-...
-python3 scripts/translate_to_en.py
-
-# 使用 DeepSeek（更便宜）
+# 全量翻译
 export DEEPSEEK_API_KEY=sk-...
 python3 scripts/translate_to_en.py
 ```
