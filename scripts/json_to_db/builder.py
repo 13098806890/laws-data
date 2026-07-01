@@ -20,6 +20,7 @@ from docx_to_json.converter import clean_article_content, extract_content
 from law_aliases import ALIASES
 
 BASE_DIR     = Path(__file__).parent.parent.parent   # laws_data/
+JSON_EN_DIR  = BASE_DIR / 'json_en'
 GONGBAO_SFJS_DIR = BASE_DIR / '最高人民法院公报' / '司法解释'
 
 # 覆盖名单：其他来源替换了主库版本的 law_id 集合
@@ -234,6 +235,25 @@ def insert_nodes(conn, law_id: int, data: dict):
                                 {'title': '', 'content': full_text}, 1, 1, (None, None, None))
 
 
+def sync_en_translations(conn, law_id: int, category: str, filename: str):
+    """从 json_en/ 同步英文翻译到 nodes.content_en。幂等，不覆盖已有翻译。"""
+    en_path = JSON_EN_DIR / category / f'{filename}.json'
+    if not en_path.exists():
+        return
+    try:
+        en_data = json.loads(en_path.read_text(encoding='utf-8'))
+    except Exception:
+        return
+    for art in en_data.get('articles', []):
+        art_num = art.get('article_number', '')
+        content_en = art.get('content_en', '').strip()
+        if art_num and content_en:
+            conn.execute(
+                "UPDATE nodes SET content_en = ? WHERE law_id = ? AND article_number = ? AND content_en IS NULL",
+                (content_en, law_id, art_num)
+            )
+
+
 def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
     if db_path.exists():
         db_path.unlink()
@@ -273,6 +293,7 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
              version_date, aliases if aliases else None)
         )
         insert_nodes(conn, data.get('law_id'), data)
+        sync_en_translations(conn, data.get('law_id'), category, stem)
 
         if (i + 1) % 200 == 0:
             print(f'  {i+1}/{len(paths)}')

@@ -76,10 +76,10 @@ def build_flk_markdown(db_path: Path = DB_PATH,
                     continue
 
                 nodes_rows = conn.execute(
-                    'SELECT type, content, article_num FROM nodes WHERE law_id=? ORDER BY global_order',
+                    'SELECT type, content, article_num, content_en FROM nodes WHERE law_id=? ORDER BY global_order',
                     (law_id,)
                 ).fetchall()
-                node_list = [{'type': r[0], 'content': r[1], 'article_num': r[2]}
+                node_list = [{'type': r[0], 'content': r[1], 'article_num': r[2], 'content_en': r[3]}
                              for r in nodes_rows]
 
                 # 引用关系（法考目录内的相对链接）
