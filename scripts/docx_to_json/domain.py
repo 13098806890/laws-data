@@ -168,6 +168,12 @@ def get_legal_domain(title: str, data: dict, domain_idx: dict) -> str | None:
         if key in domain_idx:
             return domain_idx[key]
 
+    # 先只查标题（避免 promulgation_info 中的"全国人民代表大会"等词干扰）
+    for dept, keywords in KEYWORD_RULES:
+        if any(kw in title for kw in keywords):
+            return dept
+
+    # 标题无命中时，fallback 查标题 + promulgation_info
     combined = title + ' ' + data.get('promulgation_info', '')
     for dept, keywords in KEYWORD_RULES:
         if any(kw in combined for kw in keywords):

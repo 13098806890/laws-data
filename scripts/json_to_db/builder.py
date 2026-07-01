@@ -82,6 +82,7 @@ def create_schema(conn):
             title TEXT,
             article_number TEXT,
             content TEXT,
+            content_en TEXT,
             order_index INTEGER,
             global_order INTEGER,
             part_num    INTEGER,

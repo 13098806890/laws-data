@@ -184,7 +184,7 @@
     "filename": "中华人民共和国海商法_19921107",
     "title": "中华人民共和国海商法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "1992-11-07",
     "effective_date": "1993-07-01"
   },
@@ -220,7 +220,7 @@
     "filename": "中华人民共和国职业教育法_19960515",
     "title": "中华人民共和国职业教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "1996-05-15",
     "effective_date": "1996-09-01"
   },
@@ -238,7 +238,7 @@
     "filename": "中华人民共和国价格法_19971229",
     "title": "中华人民共和国价格法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "1997-12-29",
     "effective_date": "1998-05-01"
   },
@@ -346,7 +346,7 @@
     "filename": "中华人民共和国信托法_20010428",
     "title": "中华人民共和国信托法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2001-04-28",
     "effective_date": "2001-10-01"
   },
@@ -382,7 +382,7 @@
     "filename": "中华人民共和国海关关衔条例_20030228",
     "title": "中华人民共和国海关关衔条例",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2003-02-28",
     "effective_date": "2003-02-28"
   },
@@ -400,7 +400,7 @@
     "filename": "中华人民共和国行政许可法_20030827",
     "title": "中华人民共和国行政许可法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2003-08-27",
     "effective_date": "2004-07-01"
   },
@@ -409,7 +409,7 @@
     "filename": "中华人民共和国中国人民银行法_20031227",
     "title": "中华人民共和国中国人民银行法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2003-12-27",
     "effective_date": "2004-02-01"
   },
@@ -418,7 +418,7 @@
     "filename": "中华人民共和国农业机械化促进法_20040625",
     "title": "中华人民共和国农业机械化促进法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2004-06-25",
     "effective_date": "2004-11-01"
   },
@@ -427,7 +427,7 @@
     "filename": "中华人民共和国土地管理法_20040828",
     "title": "中华人民共和国土地管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2004-08-28",
     "effective_date": "2004-08-28"
   },
@@ -436,7 +436,7 @@
     "filename": "中华人民共和国票据法_20040828",
     "title": "中华人民共和国票据法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2004-08-28",
     "effective_date": "2004-08-28"
   },
@@ -454,7 +454,7 @@
     "filename": "中华人民共和国妇女权益保障法_20050828",
     "title": "中华人民共和国妇女权益保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2005-08-28",
     "effective_date": "2005-12-01"
   },
@@ -463,7 +463,7 @@
     "filename": "中华人民共和国外国中央银行财产司法强制措施豁免法_20051025",
     "title": "中华人民共和国外国中央银行财产司法强制措施豁免法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2005-10-25",
     "effective_date": "2005-10-25"
   },
@@ -472,7 +472,7 @@
     "filename": "中华人民共和国审计法_20060228",
     "title": "中华人民共和国审计法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2006-02-28",
     "effective_date": "2006-06-01"
   },
@@ -499,7 +499,7 @@
     "filename": "中华人民共和国企业破产法_20060827",
     "title": "中华人民共和国企业破产法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2006-08-27",
     "effective_date": "2007-06-01"
   },
@@ -526,7 +526,7 @@
     "filename": "中华人民共和国人民法院组织法_20061031",
     "title": "中华人民共和国人民法院组织法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2006-10-31",
     "effective_date": "2007-01-01"
   },
@@ -544,7 +544,7 @@
     "filename": "中华人民共和国银行业监督管理法_20061031",
     "title": "中华人民共和国银行业监督管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2006-10-31",
     "effective_date": "2007-01-01"
   },
@@ -553,7 +553,7 @@
     "filename": "中华人民共和国反垄断法_20070830",
     "title": "中华人民共和国反垄断法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2007-08-30",
     "effective_date": "2008-08-01"
   },
@@ -580,7 +580,7 @@
     "filename": "中华人民共和国禁毒法_20071229",
     "title": "中华人民共和国禁毒法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2007-12-29",
     "effective_date": "2008-06-01"
   },
@@ -598,7 +598,7 @@
     "filename": "中华人民共和国残疾人保障法_20080424",
     "title": "中华人民共和国残疾人保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2008-04-24",
     "effective_date": "2008-07-01"
   },
@@ -616,7 +616,7 @@
     "filename": "中华人民共和国企业国有资产法_20081028",
     "title": "中华人民共和国企业国有资产法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2008-10-28",
     "effective_date": "2009-05-01"
   },
@@ -625,7 +625,7 @@
     "filename": "中华人民共和国消防法_20081028",
     "title": "中华人民共和国消防法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2008-10-28",
     "effective_date": "2009-05-01"
   },
@@ -634,7 +634,7 @@
     "filename": "中华人民共和国专利法_20081227",
     "title": "中华人民共和国专利法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2008-12-27",
     "effective_date": "2009-10-01"
   },
@@ -670,7 +670,7 @@
     "filename": "中华人民共和国统计法_20090627",
     "title": "中华人民共和国统计法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2009-06-27",
     "effective_date": "2010-01-01"
   },
@@ -697,7 +697,7 @@
     "filename": "中华人民共和国人民警察警衔条例_20090827",
     "title": "中华人民共和国人民警察警衔条例",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2009-08-27",
     "effective_date": "2009-08-27"
   },
@@ -733,7 +733,7 @@
     "filename": "中华人民共和国劳动法_20090827",
     "title": "中华人民共和国劳动法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2009-08-27",
     "effective_date": "2009-08-27"
   },
@@ -769,7 +769,7 @@
     "filename": "中华人民共和国城市房地产管理法_20090827",
     "title": "中华人民共和国城市房地产管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2009-08-27",
     "effective_date": "2009-08-27"
   },
@@ -778,7 +778,7 @@
     "filename": "中华人民共和国工会法_20090827",
     "title": "中华人民共和国工会法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2009-08-27",
     "effective_date": "2009-08-27"
   },
@@ -814,7 +814,7 @@
     "filename": "中华人民共和国矿产资源法_20090827",
     "title": "中华人民共和国矿产资源法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2009-08-27",
     "effective_date": "2009-08-27"
   },
@@ -859,7 +859,7 @@
     "filename": "中华人民共和国可再生能源法_20091226",
     "title": "中华人民共和国可再生能源法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2009-12-26",
     "effective_date": "2010-04-01"
   },
@@ -886,7 +886,7 @@
     "filename": "中华人民共和国著作权法_20100226",
     "title": "中华人民共和国著作权法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2010-02-26",
     "effective_date": "2010-04-01"
   },
@@ -895,7 +895,7 @@
     "filename": "中华人民共和国保守国家秘密法_20100429",
     "title": "中华人民共和国保守国家秘密法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2010-04-29",
     "effective_date": "2010-10-01"
   },
@@ -904,7 +904,7 @@
     "filename": "中华人民共和国石油天然气管道保护法_20100625",
     "title": "中华人民共和国石油天然气管道保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2010-06-25",
     "effective_date": "2010-10-01"
   },
@@ -940,7 +940,7 @@
     "filename": "中华人民共和国社会保险法_20101028",
     "title": "中华人民共和国社会保险法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2010-10-28",
     "effective_date": "2011-07-01"
   },
@@ -958,7 +958,7 @@
     "filename": "中华人民共和国车船税法_20110225",
     "title": "中华人民共和国车船税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2011-02-25",
     "effective_date": "2012-01-01"
   },
@@ -967,7 +967,7 @@
     "filename": "中华人民共和国非物质文化遗产法_20110225",
     "title": "中华人民共和国非物质文化遗产法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2011-02-25",
     "effective_date": "2011-06-01"
   },
@@ -985,7 +985,7 @@
     "filename": "中华人民共和国道路交通安全法_20110422",
     "title": "中华人民共和国道路交通安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2011-04-22",
     "effective_date": "2011-05-01"
   },
@@ -994,7 +994,7 @@
     "filename": "中华人民共和国行政强制法_20110630",
     "title": "中华人民共和国行政强制法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2011-06-30",
     "effective_date": "2012-01-01"
   },
@@ -1039,7 +1039,7 @@
     "filename": "中华人民共和国军人保险法_20120427",
     "title": "中华人民共和国军人保险法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2012-04-27",
     "effective_date": "2012-07-01"
   },
@@ -1066,7 +1066,7 @@
     "filename": "中华人民共和国农业技术推广法_20120831",
     "title": "中华人民共和国农业技术推广法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2012-08-31",
     "effective_date": "2013-01-01"
   },
@@ -1075,7 +1075,7 @@
     "filename": "中华人民共和国人民警察法_20121026",
     "title": "中华人民共和国人民警察法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2012-10-26",
     "effective_date": "2013-01-01"
   },
@@ -1093,7 +1093,7 @@
     "filename": "中华人民共和国未成年人保护法_20121026",
     "title": "中华人民共和国未成年人保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2012-10-26",
     "effective_date": "2013-01-01"
   },
@@ -1129,7 +1129,7 @@
     "filename": "中华人民共和国农业法_20121228",
     "title": "中华人民共和国农业法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2012-12-28",
     "effective_date": "2013-01-01"
   },
@@ -1138,7 +1138,7 @@
     "filename": "中华人民共和国劳动合同法_20121228",
     "title": "中华人民共和国劳动合同法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2012-12-28",
     "effective_date": "2013-07-01"
   },
@@ -1147,7 +1147,7 @@
     "filename": "中华人民共和国传染病防治法_20130629",
     "title": "中华人民共和国传染病防治法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2013-06-29",
     "effective_date": "2013-06-29"
   },
@@ -1174,7 +1174,7 @@
     "filename": "中华人民共和国商标法_20130830",
     "title": "中华人民共和国商标法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2013-08-30",
     "effective_date": "2014-05-01"
   },
@@ -1192,7 +1192,7 @@
     "filename": "中华人民共和国公司法_20131228",
     "title": "中华人民共和国公司法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2013-12-28",
     "effective_date": "2014-03-01"
   },
@@ -1201,7 +1201,7 @@
     "filename": "中华人民共和国渔业法_20131228",
     "title": "中华人民共和国渔业法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2013-12-28",
     "effective_date": "2013-12-28"
   },
@@ -1210,7 +1210,7 @@
     "filename": "中华人民共和国环境保护法_20140424",
     "title": "中华人民共和国环境保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2014-04-24",
     "effective_date": "2015-01-01"
   },
@@ -1228,7 +1228,7 @@
     "filename": "中华人民共和国安全生产法_20140831",
     "title": "中华人民共和国安全生产法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2014-08-31",
     "effective_date": "2014-12-01"
   },
@@ -1237,7 +1237,7 @@
     "filename": "中华人民共和国政府采购法_20140831",
     "title": "中华人民共和国政府采购法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2014-08-31",
     "effective_date": "2014-08-31"
   },
@@ -1246,7 +1246,7 @@
     "filename": "中华人民共和国注册会计师法_20140831",
     "title": "中华人民共和国注册会计师法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2014-08-31",
     "effective_date": "2014-08-31"
   },
@@ -1255,7 +1255,7 @@
     "filename": "中华人民共和国证券法_20140831",
     "title": "中华人民共和国证券法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2014-08-31",
     "effective_date": "2014-08-31"
   },
@@ -1264,7 +1264,7 @@
     "filename": "中华人民共和国预算法_20140831",
     "title": "中华人民共和国预算法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2014-08-31",
     "effective_date": "2015-01-01"
   },
@@ -1291,7 +1291,7 @@
     "filename": "中华人民共和国义务教育法_20150424",
     "title": "中华人民共和国义务教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1300,7 +1300,7 @@
     "filename": "中华人民共和国保险法_20150424",
     "title": "中华人民共和国保险法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1318,7 +1318,7 @@
     "filename": "中华人民共和国城乡规划法_20150424",
     "title": "中华人民共和国城乡规划法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1354,7 +1354,7 @@
     "filename": "中华人民共和国枪支管理法_20150424",
     "title": "中华人民共和国枪支管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1372,7 +1372,7 @@
     "filename": "中华人民共和国电力法_20150424",
     "title": "中华人民共和国电力法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1399,7 +1399,7 @@
     "filename": "中华人民共和国税收征收管理法_20150424",
     "title": "中华人民共和国税收征收管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1408,7 +1408,7 @@
     "filename": "中华人民共和国老年人权益保障法_20150424",
     "title": "中华人民共和国老年人权益保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1417,7 +1417,7 @@
     "filename": "中华人民共和国药品管理法_20150424",
     "title": "中华人民共和国药品管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1426,7 +1426,7 @@
     "filename": "中华人民共和国证券投资基金法_20150424",
     "title": "中华人民共和国证券投资基金法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1444,7 +1444,7 @@
     "filename": "中华人民共和国铁路法_20150424",
     "title": "中华人民共和国铁路法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-04-24"
   },
@@ -1453,7 +1453,7 @@
     "filename": "中华人民共和国食品安全法_20150424",
     "title": "中华人民共和国食品安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2015-04-24",
     "effective_date": "2015-10-01"
   },
@@ -1498,7 +1498,7 @@
     "filename": "中华人民共和国商业银行法_20150829",
     "title": "中华人民共和国商业银行法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2015-08-29",
     "effective_date": "2015-10-01"
   },
@@ -1561,7 +1561,7 @@
     "filename": "中华人民共和国教育法_20151227",
     "title": "中华人民共和国教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2015-12-27",
     "effective_date": "2016-06-01"
   },
@@ -1570,7 +1570,7 @@
     "filename": "中华人民共和国高等教育法_20151227",
     "title": "中华人民共和国高等教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2015-12-27",
     "effective_date": "2016-06-01"
   },
@@ -1588,7 +1588,7 @@
     "filename": "中华人民共和国慈善法_20160316",
     "title": "中华人民共和国慈善法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2016-03-16",
     "effective_date": "2016-09-01"
   },
@@ -1606,7 +1606,7 @@
     "filename": "中华人民共和国环境影响评价法_20160702",
     "title": "中华人民共和国环境影响评价法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2016-07-02",
     "effective_date": "2016-09-01"
   },
@@ -1624,7 +1624,7 @@
     "filename": "中华人民共和国节约能源法_20160702",
     "title": "中华人民共和国节约能源法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2016-07-02",
     "effective_date": "2016-09-01"
   },
@@ -1642,7 +1642,7 @@
     "filename": "中华人民共和国野生动物保护法_20160702",
     "title": "中华人民共和国野生动物保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2016-07-02",
     "effective_date": "2017-01-01"
   },
@@ -1678,7 +1678,7 @@
     "filename": "中华人民共和国体育法_20161107",
     "title": "中华人民共和国体育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2016-11-07",
     "effective_date": "2016-11-07"
   },
@@ -1687,7 +1687,7 @@
     "filename": "中华人民共和国固体废物污染环境防治法_20161107",
     "title": "中华人民共和国固体废物污染环境防治法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2016-11-07",
     "effective_date": "2016-11-07"
   },
@@ -1696,7 +1696,7 @@
     "filename": "中华人民共和国对外贸易法_20161107",
     "title": "中华人民共和国对外贸易法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2016-11-07",
     "effective_date": "2016-11-07"
   },
@@ -1714,7 +1714,7 @@
     "filename": "中华人民共和国档案法_20161107",
     "title": "中华人民共和国档案法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2016-11-07",
     "effective_date": "2016-11-07"
   },
@@ -1723,7 +1723,7 @@
     "filename": "中华人民共和国民办教育促进法_20161107",
     "title": "中华人民共和国民办教育促进法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2016-11-07",
     "effective_date": "2017-09-01"
   },
@@ -1741,7 +1741,7 @@
     "filename": "中华人民共和国海上交通安全法_20161107",
     "title": "中华人民共和国海上交通安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2016-11-07",
     "effective_date": "2016-11-07"
   },
@@ -1750,7 +1750,7 @@
     "filename": "中华人民共和国煤炭法_20161107",
     "title": "中华人民共和国煤炭法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2016-11-07",
     "effective_date": "2016-11-07"
   },
@@ -1768,7 +1768,7 @@
     "filename": "中华人民共和国网络安全法_20161107",
     "title": "中华人民共和国网络安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2016-11-07",
     "effective_date": "2017-06-01"
   },
@@ -1786,7 +1786,7 @@
     "filename": "中华人民共和国公共文化服务保障法_20161225",
     "title": "中华人民共和国公共文化服务保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2016-12-25",
     "effective_date": "2017-03-01"
   },
@@ -1795,7 +1795,7 @@
     "filename": "中华人民共和国环境保护税法_20161225",
     "title": "中华人民共和国环境保护税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2016-12-25",
     "effective_date": "2018-01-01"
   },
@@ -1804,7 +1804,7 @@
     "filename": "中华人民共和国企业所得税法_20170224",
     "title": "中华人民共和国企业所得税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-02-24",
     "effective_date": "2017-02-24"
   },
@@ -1876,7 +1876,7 @@
     "filename": "中华人民共和国公务员法_20170901",
     "title": "中华人民共和国公务员法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2017-09-01",
     "effective_date": "2018-01-01"
   },
@@ -1939,7 +1939,7 @@
     "filename": "中华人民共和国行政处罚法_20170901",
     "title": "中华人民共和国行政处罚法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2017-09-01",
     "effective_date": "2018-01-01"
   },
@@ -1948,7 +1948,7 @@
     "filename": "中华人民共和国行政复议法_20170901",
     "title": "中华人民共和国行政复议法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2017-09-01",
     "effective_date": "2018-01-01"
   },
@@ -1957,7 +1957,7 @@
     "filename": "中华人民共和国会计法_20171104",
     "title": "中华人民共和国会计法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-11-04",
     "effective_date": "2017-11-05"
   },
@@ -1975,7 +1975,7 @@
     "filename": "中华人民共和国公路法_20171104",
     "title": "中华人民共和国公路法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-11-04",
     "effective_date": "2017-11-05"
   },
@@ -1984,7 +1984,7 @@
     "filename": "中华人民共和国反不正当竞争法_20171104",
     "title": "中华人民共和国反不正当竞争法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-11-04",
     "effective_date": "2018-01-01"
   },
@@ -2002,7 +2002,7 @@
     "filename": "中华人民共和国文物保护法_20171104",
     "title": "中华人民共和国文物保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2017-11-04",
     "effective_date": "2017-11-05"
   },
@@ -2038,7 +2038,7 @@
     "filename": "中华人民共和国海关法_20171104",
     "title": "中华人民共和国海关法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-11-04",
     "effective_date": "2017-11-05"
   },
@@ -2047,7 +2047,7 @@
     "filename": "中华人民共和国海洋环境保护法_20171104",
     "title": "中华人民共和国海洋环境保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2017-11-04",
     "effective_date": "2017-11-05"
   },
@@ -2056,7 +2056,7 @@
     "filename": "中华人民共和国港口法_20171104",
     "title": "中华人民共和国港口法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-11-04",
     "effective_date": "2017-11-05"
   },
@@ -2065,7 +2065,7 @@
     "filename": "中华人民共和国职业病防治法_20171104",
     "title": "中华人民共和国职业病防治法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2017-11-04",
     "effective_date": "2017-11-05"
   },
@@ -2083,7 +2083,7 @@
     "filename": "中华人民共和国招标投标法_20171227",
     "title": "中华人民共和国招标投标法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-12-27",
     "effective_date": "2017-12-28"
   },
@@ -2092,7 +2092,7 @@
     "filename": "中华人民共和国烟叶税法_20171227",
     "title": "中华人民共和国烟叶税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-12-27",
     "effective_date": "2018-07-01"
   },
@@ -2101,7 +2101,7 @@
     "filename": "中华人民共和国船舶吨税法_20171227",
     "title": "中华人民共和国船舶吨税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2017-12-27",
     "effective_date": "2018-07-01"
   },
@@ -2146,7 +2146,7 @@
     "filename": "中华人民共和国国境卫生检疫法_20180427",
     "title": "中华人民共和国国境卫生检疫法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-04-27",
     "effective_date": "2018-04-27"
   },
@@ -2173,7 +2173,7 @@
     "filename": "中华人民共和国精神卫生法_20180427",
     "title": "中华人民共和国精神卫生法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-04-27",
     "effective_date": "2018-04-27"
   },
@@ -2200,7 +2200,7 @@
     "filename": "中华人民共和国个人所得税法_20180831",
     "title": "中华人民共和国个人所得税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-08-31",
     "effective_date": "2019-01-01"
   },
@@ -2236,7 +2236,7 @@
     "filename": "中华人民共和国人民法院组织法_20181026",
     "title": "中华人民共和国人民法院组织法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2018-10-26",
     "effective_date": "2019-01-01"
   },
@@ -2254,7 +2254,7 @@
     "filename": "中华人民共和国公司法_20181026",
     "title": "中华人民共和国公司法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2263,7 +2263,7 @@
     "filename": "中华人民共和国农业机械化促进法_20181026",
     "title": "中华人民共和国农业机械化促进法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2308,7 +2308,7 @@
     "filename": "中华人民共和国妇女权益保障法_20181026",
     "title": "中华人民共和国妇女权益保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2344,7 +2344,7 @@
     "filename": "中华人民共和国残疾人保障法_20181026",
     "title": "中华人民共和国残疾人保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2353,7 +2353,7 @@
     "filename": "中华人民共和国消防救援衔条例_20181026",
     "title": "中华人民共和国消防救援衔条例",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-27"
   },
@@ -2362,7 +2362,7 @@
     "filename": "中华人民共和国环境保护税法_20181026",
     "title": "中华人民共和国环境保护税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2371,7 +2371,7 @@
     "filename": "中华人民共和国船舶吨税法_20181026",
     "title": "中华人民共和国船舶吨税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2380,7 +2380,7 @@
     "filename": "中华人民共和国节约能源法_20181026",
     "title": "中华人民共和国节约能源法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2398,7 +2398,7 @@
     "filename": "中华人民共和国野生动物保护法_20181026",
     "title": "中华人民共和国野生动物保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-10-26",
     "effective_date": "2018-10-26"
   },
@@ -2416,7 +2416,7 @@
     "filename": "中华人民共和国义务教育法_20181229",
     "title": "中华人民共和国义务教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2434,7 +2434,7 @@
     "filename": "中华人民共和国企业所得税法_20181229",
     "title": "中华人民共和国企业所得税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2443,7 +2443,7 @@
     "filename": "中华人民共和国公务员法_20181229",
     "title": "中华人民共和国公务员法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2018-12-29",
     "effective_date": "2019-06-01"
   },
@@ -2461,7 +2461,7 @@
     "filename": "中华人民共和国劳动法_20181229",
     "title": "中华人民共和国劳动法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2488,7 +2488,7 @@
     "filename": "中华人民共和国民办教育促进法_20181229",
     "title": "中华人民共和国民办教育促进法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2506,7 +2506,7 @@
     "filename": "中华人民共和国港口法_20181229",
     "title": "中华人民共和国港口法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2515,7 +2515,7 @@
     "filename": "中华人民共和国环境影响评价法_20181229",
     "title": "中华人民共和国环境影响评价法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2524,7 +2524,7 @@
     "filename": "中华人民共和国电力法_20181229",
     "title": "中华人民共和国电力法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2533,7 +2533,7 @@
     "filename": "中华人民共和国社会保险法_20181229",
     "title": "中华人民共和国社会保险法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2542,7 +2542,7 @@
     "filename": "中华人民共和国老年人权益保障法_20181229",
     "title": "中华人民共和国老年人权益保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2551,7 +2551,7 @@
     "filename": "中华人民共和国耕地占用税法_20181229",
     "title": "中华人民共和国耕地占用税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-12-29",
     "effective_date": "2019-09-01"
   },
@@ -2560,7 +2560,7 @@
     "filename": "中华人民共和国职业病防治法_20181229",
     "title": "中华人民共和国职业病防治法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2569,7 +2569,7 @@
     "filename": "中华人民共和国车辆购置税法_20181229",
     "title": "中华人民共和国车辆购置税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-12-29",
     "effective_date": "2019-07-01"
   },
@@ -2587,7 +2587,7 @@
     "filename": "中华人民共和国预算法_20181229",
     "title": "中华人民共和国预算法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2596,7 +2596,7 @@
     "filename": "中华人民共和国食品安全法_20181229",
     "title": "中华人民共和国食品安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2605,7 +2605,7 @@
     "filename": "中华人民共和国高等教育法_20181229",
     "title": "中华人民共和国高等教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2018-12-29",
     "effective_date": "2018-12-29"
   },
@@ -2614,7 +2614,7 @@
     "filename": "中华人民共和国外商投资法_20190315",
     "title": "中华人民共和国外商投资法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2019-03-15",
     "effective_date": "2020-01-01"
   },
@@ -2623,7 +2623,7 @@
     "filename": "中华人民共和国反不正当竞争法_20190423",
     "title": "中华人民共和国反不正当竞争法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2019-04-23",
     "effective_date": "2019-04-23"
   },
@@ -2632,7 +2632,7 @@
     "filename": "中华人民共和国商标法_20190423",
     "title": "中华人民共和国商标法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2019-04-23",
     "effective_date": "2019-11-01"
   },
@@ -2641,7 +2641,7 @@
     "filename": "中华人民共和国城乡规划法_20190423",
     "title": "中华人民共和国城乡规划法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2019-04-23",
     "effective_date": "2019-04-23"
   },
@@ -2677,7 +2677,7 @@
     "filename": "中华人民共和国消防法_20190423",
     "title": "中华人民共和国消防法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2019-04-23",
     "effective_date": "2019-04-23"
   },
@@ -2695,7 +2695,7 @@
     "filename": "中华人民共和国行政许可法_20190423",
     "title": "中华人民共和国行政许可法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2019-04-23",
     "effective_date": "2019-04-23"
   },
@@ -2704,7 +2704,7 @@
     "filename": "中华人民共和国车船税法_20190423",
     "title": "中华人民共和国车船税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2019-04-23",
     "effective_date": "2019-04-23"
   },
@@ -2713,7 +2713,7 @@
     "filename": "中华人民共和国疫苗管理法_20190629",
     "title": "中华人民共和国疫苗管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2019-06-29",
     "effective_date": "2019-12-01"
   },
@@ -2722,7 +2722,7 @@
     "filename": "中华人民共和国土地管理法_20190826",
     "title": "中华人民共和国土地管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2019-08-26",
     "effective_date": "2020-01-01"
   },
@@ -2731,7 +2731,7 @@
     "filename": "中华人民共和国城市房地产管理法_20190826",
     "title": "中华人民共和国城市房地产管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2019-08-26",
     "effective_date": "2020-01-01"
   },
@@ -2740,7 +2740,7 @@
     "filename": "中华人民共和国药品管理法_20190826",
     "title": "中华人民共和国药品管理法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2019-08-26",
     "effective_date": "2019-12-01"
   },
@@ -2749,7 +2749,7 @@
     "filename": "中华人民共和国资源税法_20190826",
     "title": "中华人民共和国资源税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2019-08-26",
     "effective_date": "2020-09-01"
   },
@@ -2758,7 +2758,7 @@
     "filename": "中华人民共和国密码法_20191026",
     "title": "中华人民共和国密码法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2019-10-26",
     "effective_date": "2020-01-01"
   },
@@ -2776,7 +2776,7 @@
     "filename": "中华人民共和国基本医疗卫生与健康促进法_20191228",
     "title": "中华人民共和国基本医疗卫生与健康促进法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2019-12-28",
     "effective_date": "2020-06-01"
   },
@@ -2803,7 +2803,7 @@
     "filename": "中华人民共和国证券法_20191228",
     "title": "中华人民共和国证券法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2019-12-28",
     "effective_date": "2020-03-01"
   },
@@ -2812,7 +2812,7 @@
     "filename": "中华人民共和国固体废物污染环境防治法_20200429",
     "title": "中华人民共和国固体废物污染环境防治法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2020-04-29",
     "effective_date": "2020-09-01"
   },
@@ -2848,7 +2848,7 @@
     "filename": "中华人民共和国档案法_20200620",
     "title": "中华人民共和国档案法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2020-06-20",
     "effective_date": "2021-01-01"
   },
@@ -2866,7 +2866,7 @@
     "filename": "中华人民共和国城市维护建设税法_20200811",
     "title": "中华人民共和国城市维护建设税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2020-08-11",
     "effective_date": "2021-09-01"
   },
@@ -2875,7 +2875,7 @@
     "filename": "中华人民共和国契税法_20200811",
     "title": "中华人民共和国契税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2020-08-11",
     "effective_date": "2021-09-01"
   },
@@ -2884,7 +2884,7 @@
     "filename": "中华人民共和国专利法_20201017",
     "title": "中华人民共和国专利法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2020-10-17",
     "effective_date": "2021-06-01"
   },
@@ -2929,7 +2929,7 @@
     "filename": "中华人民共和国未成年人保护法_20201017",
     "title": "中华人民共和国未成年人保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2020-10-17",
     "effective_date": "2021-06-01"
   },
@@ -2947,7 +2947,7 @@
     "filename": "中华人民共和国著作权法_20201111",
     "title": "中华人民共和国著作权法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2020-11-11",
     "effective_date": "2021-06-01"
   },
@@ -3019,7 +3019,7 @@
     "filename": "中华人民共和国行政处罚法_20210122",
     "title": "中华人民共和国行政处罚法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2021-01-22",
     "effective_date": "2021-07-15"
   },
@@ -3073,7 +3073,7 @@
     "filename": "中华人民共和国教育法_20210429",
     "title": "中华人民共和国教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2021-04-29",
     "effective_date": "2021-04-30"
   },
@@ -3091,7 +3091,7 @@
     "filename": "中华人民共和国海上交通安全法_20210429",
     "title": "中华人民共和国海上交通安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2021-04-29",
     "effective_date": "2021-09-01"
   },
@@ -3100,7 +3100,7 @@
     "filename": "中华人民共和国海关法_20210429",
     "title": "中华人民共和国海关法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2021-04-29",
     "effective_date": "2021-04-29"
   },
@@ -3109,7 +3109,7 @@
     "filename": "中华人民共和国消防法_20210429",
     "title": "中华人民共和国消防法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2021-04-29",
     "effective_date": "2021-04-29"
   },
@@ -3136,7 +3136,7 @@
     "filename": "中华人民共和国道路交通安全法_20210429",
     "title": "中华人民共和国道路交通安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2021-04-29",
     "effective_date": "2021-04-29"
   },
@@ -3145,7 +3145,7 @@
     "filename": "中华人民共和国食品安全法_20210429",
     "title": "中华人民共和国食品安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2021-04-29",
     "effective_date": "2021-04-29"
   },
@@ -3181,7 +3181,7 @@
     "filename": "中华人民共和国印花税法_20210610",
     "title": "中华人民共和国印花税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2021-06-10",
     "effective_date": "2022-07-01"
   },
@@ -3199,7 +3199,7 @@
     "filename": "中华人民共和国安全生产法_20210610",
     "title": "中华人民共和国安全生产法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2021-06-10",
     "effective_date": "2021-09-01"
   },
@@ -3208,7 +3208,7 @@
     "filename": "中华人民共和国数据安全法_20210610",
     "title": "中华人民共和国数据安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2021-06-10",
     "effective_date": "2021-09-01"
   },
@@ -3226,7 +3226,7 @@
     "filename": "中华人民共和国个人信息保护法_20210820",
     "title": "中华人民共和国个人信息保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2021-08-20",
     "effective_date": "2021-11-01"
   },
@@ -3280,7 +3280,7 @@
     "filename": "中华人民共和国审计法_20211023",
     "title": "中华人民共和国审计法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2021-10-23",
     "effective_date": "2022-01-01"
   },
@@ -3289,7 +3289,7 @@
     "filename": "中华人民共和国家庭教育促进法_20211023",
     "title": "中华人民共和国家庭教育促进法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2021-10-23",
     "effective_date": "2022-01-01"
   },
@@ -3325,7 +3325,7 @@
     "filename": "中华人民共和国工会法_20211224",
     "title": "中华人民共和国工会法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2021-12-24",
     "effective_date": "2022-01-01"
   },
@@ -3397,7 +3397,7 @@
     "filename": "中华人民共和国职业教育法_20220420",
     "title": "中华人民共和国职业教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2022-04-20",
     "effective_date": "2022-05-01"
   },
@@ -3406,7 +3406,7 @@
     "filename": "中华人民共和国体育法_20220624",
     "title": "中华人民共和国体育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2022-06-24",
     "effective_date": "2023-01-01"
   },
@@ -3424,7 +3424,7 @@
     "filename": "中华人民共和国反垄断法_20220624",
     "title": "中华人民共和国反垄断法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2022-06-24",
     "effective_date": "2022-08-01"
   },
@@ -3460,7 +3460,7 @@
     "filename": "中华人民共和国妇女权益保障法_20221030",
     "title": "中华人民共和国妇女权益保障法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2022-10-30",
     "effective_date": "2023-01-01"
   },
@@ -3487,7 +3487,7 @@
     "filename": "中华人民共和国对外贸易法_20221230",
     "title": "中华人民共和国对外贸易法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2022-12-30",
     "effective_date": "2022-12-30"
   },
@@ -3496,7 +3496,7 @@
     "filename": "中华人民共和国野生动物保护法_20221230",
     "title": "中华人民共和国野生动物保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2022-12-30",
     "effective_date": "2023-05-01"
   },
@@ -3532,7 +3532,7 @@
     "filename": "中华人民共和国青藏高原生态保护法_20230426",
     "title": "中华人民共和国青藏高原生态保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2023-04-26",
     "effective_date": "2023-09-01"
   },
@@ -3550,7 +3550,7 @@
     "filename": "中华人民共和国无障碍环境建设法_20230628",
     "title": "中华人民共和国无障碍环境建设法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2023-06-28",
     "effective_date": "2023-09-01"
   },
@@ -3577,7 +3577,7 @@
     "filename": "中华人民共和国行政复议法_20230901",
     "title": "中华人民共和国行政复议法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2023-09-01",
     "effective_date": "2024-01-01"
   },
@@ -3586,7 +3586,7 @@
     "filename": "中华人民共和国海洋环境保护法_20231024",
     "title": "中华人民共和国海洋环境保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2023-10-24",
     "effective_date": "2024-01-01"
   },
@@ -3595,7 +3595,7 @@
     "filename": "中华人民共和国爱国主义教育法_20231024",
     "title": "中华人民共和国爱国主义教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2023-10-24",
     "effective_date": "2024-01-01"
   },
@@ -3604,7 +3604,7 @@
     "filename": "中华人民共和国公司法_20231229",
     "title": "中华人民共和国公司法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2023-12-29",
     "effective_date": "2024-07-01"
   },
@@ -3613,7 +3613,7 @@
     "filename": "中华人民共和国慈善法_20231229",
     "title": "中华人民共和国慈善法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2023-12-29",
     "effective_date": "2024-09-05"
   },
@@ -3631,7 +3631,7 @@
     "filename": "中华人民共和国保守国家秘密法_20240227",
     "title": "中华人民共和国保守国家秘密法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2024-02-27",
     "effective_date": "2024-05-01"
   },
@@ -3649,7 +3649,7 @@
     "filename": "中华人民共和国关税法_20240426",
     "title": "中华人民共和国关税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2024-04-26",
     "effective_date": "2024-12-01"
   },
@@ -3658,7 +3658,7 @@
     "filename": "中华人民共和国农业技术推广法_20240426",
     "title": "中华人民共和国农业技术推广法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2024-04-26",
     "effective_date": "2024-04-26"
   },
@@ -3676,7 +3676,7 @@
     "filename": "中华人民共和国未成年人保护法_20240426",
     "title": "中华人民共和国未成年人保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2024-04-26",
     "effective_date": "2024-04-26"
   },
@@ -3694,7 +3694,7 @@
     "filename": "中华人民共和国会计法_20240628",
     "title": "中华人民共和国会计法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2024-06-28",
     "effective_date": "2024-07-01"
   },
@@ -3712,7 +3712,7 @@
     "filename": "中华人民共和国国境卫生检疫法_20240628",
     "title": "中华人民共和国国境卫生检疫法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2024-06-28",
     "effective_date": "2025-01-01"
   },
@@ -3739,7 +3739,7 @@
     "filename": "中华人民共和国统计法_20240913",
     "title": "中华人民共和国统计法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2024-09-13",
     "effective_date": "2024-09-13"
   },
@@ -3766,7 +3766,7 @@
     "filename": "中华人民共和国学前教育法_20241108",
     "title": "中华人民共和国学前教育法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2024-11-08",
     "effective_date": "2025-06-01"
   },
@@ -3775,7 +3775,7 @@
     "filename": "中华人民共和国文物保护法_20241108",
     "title": "中华人民共和国文物保护法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2024-11-08",
     "effective_date": "2025-03-01"
   },
@@ -3784,7 +3784,7 @@
     "filename": "中华人民共和国矿产资源法_20241108",
     "title": "中华人民共和国矿产资源法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2024-11-08",
     "effective_date": "2025-07-01"
   },
@@ -3793,7 +3793,7 @@
     "filename": "中华人民共和国能源法_20241108",
     "title": "中华人民共和国能源法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2024-11-08",
     "effective_date": "2025-01-01"
   },
@@ -3802,7 +3802,7 @@
     "filename": "中华人民共和国增值税法_20241225",
     "title": "中华人民共和国增值税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2024-12-25",
     "effective_date": "2026-01-01"
   },
@@ -3838,7 +3838,7 @@
     "filename": "中华人民共和国传染病防治法_20250430",
     "title": "中华人民共和国传染病防治法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2025-04-30",
     "effective_date": "2025-09-01"
   },
@@ -3856,7 +3856,7 @@
     "filename": "中华人民共和国反不正当竞争法_20250627",
     "title": "中华人民共和国反不正当竞争法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2025-06-27",
     "effective_date": "2025-10-15"
   },
@@ -3919,7 +3919,7 @@
     "filename": "中华人民共和国食品安全法_20250912",
     "title": "中华人民共和国食品安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2025-09-12",
     "effective_date": "2025-12-01"
   },
@@ -3946,7 +3946,7 @@
     "filename": "中华人民共和国海商法_20251028",
     "title": "中华人民共和国海商法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "民法商法",
     "pub_date": "2025-10-28",
     "effective_date": "2026-05-01"
   },
@@ -3955,7 +3955,7 @@
     "filename": "中华人民共和国环境保护税法_20251028",
     "title": "中华人民共和国环境保护税法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2025-10-28",
     "effective_date": "2025-10-28"
   },
@@ -3964,7 +3964,7 @@
     "filename": "中华人民共和国网络安全法_20251028",
     "title": "中华人民共和国网络安全法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "行政法",
     "pub_date": "2025-10-28",
     "effective_date": "2026-01-01"
   },
@@ -3991,7 +3991,7 @@
     "filename": "中华人民共和国对外贸易法_20251227",
     "title": "中华人民共和国对外贸易法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2025-12-27",
     "effective_date": "2026-03-01"
   },
@@ -4009,7 +4009,7 @@
     "filename": "中华人民共和国渔业法_20251227",
     "title": "中华人民共和国渔业法",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2025-12-27",
     "effective_date": "2026-05-01"
   },
@@ -4036,7 +4036,7 @@
     "filename": "中华人民共和国生态环境法典_20260312",
     "title": "中华人民共和国生态环境法典",
     "category": "法律",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "社会法",
     "pub_date": "2026-03-12",
     "effective_date": "2026-08-15"
   },
@@ -6016,7 +6016,7 @@
     "filename": "最高人民法院关于处理涉枪、涉爆申诉案件有关问题的通知_20030115",
     "title": "最高人民法院关于处理涉枪、涉爆申诉案件有关问题的通知",
     "category": "司法解释",
-    "legal_domain": "刑法",
+    "legal_domain": "民法商法",
     "pub_date": "2003-01-15",
     "effective_date": "2003-01-15"
   },
@@ -8752,7 +8752,7 @@
     "filename": "最高人民法院关于人民法院办理财产保全案件若干问题的规定_20201229",
     "title": "最高人民法院关于人民法院办理财产保全案件若干问题的规定",
     "category": "司法解释",
-    "legal_domain": "诉讼与非诉讼程序法",
+    "legal_domain": "民法商法",
     "pub_date": "2020-12-29",
     "effective_date": "2021-01-01"
   },
@@ -8779,7 +8779,7 @@
     "filename": "最高人民法院关于人民法院扣押铁路运输货物若干问题的规定_20201229",
     "title": "最高人民法院关于人民法院扣押铁路运输货物若干问题的规定",
     "category": "司法解释",
-    "legal_domain": "诉讼与非诉讼程序法",
+    "legal_domain": "民法商法",
     "pub_date": "2020-12-29",
     "effective_date": "2021-01-01"
   },
@@ -8824,7 +8824,7 @@
     "filename": "最高人民法院关于人民法院能否对信用证开证保证金采取冻结和扣划措施问题的规定_20201229",
     "title": "最高人民法院关于人民法院能否对信用证开证保证金采取冻结和扣划措施问题的规定",
     "category": "司法解释",
-    "legal_domain": "诉讼与非诉讼程序法",
+    "legal_domain": "民法商法",
     "pub_date": "2020-12-29",
     "effective_date": "2021-01-01"
   },
@@ -10705,7 +10705,7 @@
     "filename": "关于审理行政案件适用法律规范问题的座谈会纪要_20040518",
     "title": "关于审理行政案件适用法律规范问题的座谈会纪要",
     "category": "司法解释",
-    "legal_domain": "诉讼与非诉讼程序法",
+    "legal_domain": "行政法",
     "pub_date": "2004-05-18",
     "effective_date": ""
   },
@@ -10921,7 +10921,7 @@
     "filename": "法律援助值班律师工作办法_20200820",
     "title": "法律援助值班律师工作办法",
     "category": "司法解释",
-    "legal_domain": "刑法",
+    "legal_domain": "诉讼与非诉讼程序法",
     "pub_date": "2020-08-20",
     "effective_date": ""
   },
@@ -11938,7 +11938,7 @@
     "filename": "森林和野生动物类型自然保护区管理办法_19850706",
     "title": "森林和野生动物类型自然保护区管理办法",
     "category": "行政法规",
-    "legal_domain": "经济法",
+    "legal_domain": "社会法",
     "pub_date": "1985-07-06",
     "effective_date": "1985-07-06"
   },
@@ -13891,7 +13891,7 @@
     "filename": "关于骗购外汇、非法套汇、逃汇、非法买卖外汇等违反外汇管理规定行为的行政处分或者纪律处分暂行规定_20110108",
     "title": "关于骗购外汇、非法套汇、逃汇、非法买卖外汇等违反外汇管理规定行为的行政处分或者纪律处分暂行规定",
     "category": "行政法规",
-    "legal_domain": "宪法相关法",
+    "legal_domain": "经济法",
     "pub_date": "2011-01-08",
     "effective_date": ""
   },
@@ -14368,7 +14368,7 @@
     "filename": "中华人民共和国水生野生动物保护实施条例_20131207",
     "title": "中华人民共和国水生野生动物保护实施条例",
     "category": "行政法规",
-    "legal_domain": "经济法",
+    "legal_domain": "社会法",
     "pub_date": "2013-12-07",
     "effective_date": ""
   },
@@ -14656,7 +14656,7 @@
     "filename": "中华人民共和国陆生野生动物保护实施条例_20160206",
     "title": "中华人民共和国陆生野生动物保护实施条例",
     "category": "行政法规",
-    "legal_domain": "经济法",
+    "legal_domain": "社会法",
     "pub_date": "2016-02-06",
     "effective_date": ""
   },
@@ -15556,7 +15556,7 @@
     "filename": "中华人民共和国国境口岸卫生监督办法_20190302",
     "title": "中华人民共和国国境口岸卫生监督办法",
     "category": "行政法规",
-    "legal_domain": "经济法",
+    "legal_domain": "社会法",
     "pub_date": "2019-03-02",
     "effective_date": ""
   },
@@ -16024,7 +16024,7 @@
     "filename": "中华人民共和国外资银行管理条例_20190930",
     "title": "中华人民共和国外资银行管理条例",
     "category": "行政法规",
-    "legal_domain": "民法商法",
+    "legal_domain": "经济法",
     "pub_date": "2019-09-30",
     "effective_date": "2019-09-30"
   },
@@ -16933,7 +16933,7 @@
     "filename": "生态保护补偿条例_20240406",
     "title": "生态保护补偿条例",
     "category": "行政法规",
-    "legal_domain": "经济法",
+    "legal_domain": "社会法",
     "pub_date": "2024-04-06",
     "effective_date": "2024-06-01"
   },
