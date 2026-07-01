@@ -102,8 +102,11 @@ def clean_punctuation(text: str) -> str:
     for zh_punct, en_punct in replacements.items():
         text = text.replace(zh_punct, en_punct)
 
-    # 清理多余空格
-    text = ' '.join(text.split())
+    # 清理多余空格（保留换行符）
+    # 分行处理，每行内部清理空格，但保留行间换行符
+    lines = text.split('\n')
+    cleaned_lines = [' '.join(line.split()) for line in lines]
+    text = '\n'.join(cleaned_lines)
 
     return text
 
@@ -140,6 +143,7 @@ def build_system_prompt(title_map: dict, glossary: dict) -> str:
         "- Use only English punctuation (NEVER use Chinese punctuation like " " ， 。)",
         "- Keep article numbers as-is (第一条 context implies Article 1)",
         "- For law titles cited in text (《xxx》), use the exact English title from the glossary below",
+        "- **CRITICAL: Preserve paragraph breaks** - When the Chinese text contains line breaks (\\n), maintain them in the English translation to preserve the article's structure",
         "- Output only the translated text, nothing else",
         "",
         "Examples of CORRECT usage:",
@@ -237,6 +241,7 @@ BATCH_ARTICLE_SUFFIX = """
 
 You will receive a JSON array of objects with "id" (article number) and "text" (Chinese legal text).
 Translate each "text" into English.
+IMPORTANT: If the "text" field contains line breaks (\\n), preserve them exactly in your translation to maintain the article's paragraph structure.
 Return a JSON array with the same objects, adding an "en" field with the English translation.
 Output only the JSON array, nothing else."""
 

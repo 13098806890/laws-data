@@ -1,0 +1,37 @@
+[
+  {
+    "law": "民法典",
+    "file": "法律/中华人民共和国民法典_20200528.json",
+    "article": "第四百九十九条",
+    "pattern": "\\bit will (not )?pay\\b",
+    "type": "will_verb"
+  },
+  {
+    "law": "民法典",
+    "file": "法律/中华人民共和国民法典_20200528.json",
+    "article": "第五百二十八条",
+    "pattern": "\\bit will (not )?perform\\b",
+    "type": "will_verb"
+  },
+  {
+    "law": "民法典",
+    "file": "法律/中华人民共和国民法典_20200528.json",
+    "article": "第五百六十三条",
+    "pattern": "\\bit will (not )?perform\\b",
+    "type": "will_verb"
+  },
+  {
+    "law": "民法典",
+    "file": "法律/中华人民共和国民法典_20200528.json",
+    "article": "第五百七十八条",
+    "pattern": "\\bit will (not )?perform\\b",
+    "type": "will_verb"
+  },
+  {
+    "law": "民法典",
+    "file": "法律/中华人民共和国民法典_20200528.json",
+    "article": "第九百九十七条",
+    "pattern": "\\bit will (not )?cause\\b",
+    "type": "will_verb"
+  }
+]
