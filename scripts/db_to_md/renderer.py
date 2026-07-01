@@ -115,6 +115,7 @@ def law_to_md(law: dict, nodes: list, ref_map: dict,
     for node in nodes:
         t       = node['type']
         content = (node['content'] or '').strip()
+        content_en = (node.get('content_en') or '').strip()
         art_num = node['article_num']
         if not content:
             continue
@@ -125,6 +126,7 @@ def law_to_md(law: dict, nodes: list, ref_map: dict,
         elif t == 'section':
             lines.append(f'#### {content}')
         else:
+            # 渲染中文条文
             anchor_tag = f'<a id="art-{art_num}"></a>' if art_num else ''
             linked     = _apply_refs(content, ref_map)
             sups       = _cited_by_superscripts(
@@ -133,6 +135,22 @@ def law_to_md(law: dict, nodes: list, ref_map: dict,
             ) if art_num else ''
             linked_br  = linked.replace('\n', '  \n')
             lines.append(f'{anchor_tag}{linked_br}{sups}')
+            lines.append('')
+
+            # 渲染英文翻译（如果有）
+            if content_en:
+                # 提取 Article X 前缀（如果有）
+                import re
+                art_en_match = re.match(r'(Article \d+)', content_en)
+                if art_en_match:
+                    art_en_label = art_en_match.group(0)
+                    en_body = content_en[len(art_en_label):].strip()
+                    en_with_br = en_body.replace('\n', '  \n')
+                    lines.append(f'**{art_en_label}** {en_with_br}')
+                else:
+                    # 没有 Article 前缀，自己添加
+                    en_with_br = content_en.replace('\n', '  \n')
+                    lines.append(f'**Article {art_num}** {en_with_br}')
         lines.append('')
 
     return '\n'.join(lines)
@@ -240,10 +258,10 @@ def build_markdown(db_path: Path = DB_PATH, md_dir: Path = MD_DIR,
                     continue
 
                 nodes_rows = conn.execute(
-                    'SELECT type, content, article_num FROM nodes WHERE law_id=? ORDER BY global_order',
+                    'SELECT type, content, article_num, content_en FROM nodes WHERE law_id=? ORDER BY global_order',
                     (law_id,)
                 ).fetchall()
-                node_list = [{'type': r[0], 'content': r[1], 'article_num': r[2]}
+                node_list = [{'type': r[0], 'content': r[1], 'article_num': r[2], 'content_en': r[3]}
                              for r in nodes_rows]
 
                 ref_map = _build_ref_map(conn, law_id, group, subgroup,
