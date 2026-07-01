@@ -4,17 +4,18 @@
 
 | 阶段 | 状态 | 详情 |
 |------|------|------|
-| **B1. 基础设施** | ✅ 完成 | json_en/ 目录已建立（1,529 个占位文件） |
-| **B2. 标题翻译** | ✅ 完成 | 1,568 条标题已翻译，⚠️ 需人工审核 |
-| **B3. 术语表** | ✅ 完成 | 159 条术语已生成，⚠️ 需人工审核 |
-| **B4. Pilot 翻译** | ⏳ 进行中 | 11部已完成，新增 劳动合同法、企业破产法、公司法（共 290 条），待人工审校 |
-| **B5. 脚本改造** | ✅ 完成 | translate_to_en.py 已改造完成 |
+| **B1. 基础设施** | ✅ 完成 | json_en/ 目录已建立 |
+| **B2. 标题翻译** | ✅ 完成 | 1,568 条标题已翻译（含标题 map 查找优先） |
+| **B3. 术语表** | ✅ 完成 | 159 条术语已生成，按需注入（仅注入文中出现的） |
+| **B4. Pilot 翻译** | ⏳ 进行中 | 14 部法律已翻译（共 2,465 条英文），待人工审校 |
+| **B5. 脚本改造** | ✅ 完成 | translate_to_en.py 支持 --tier/--max-laws/按需注入 |
 | **B6. 一致性校验** | ⏳ 待开发 | - |
-| **C1-C2. DB schema** | ⏳ 待开发 | 需添加英文字段 + FTS 表 |
-| **C3. builder.py** | ⏳ 待开发 | 需集成 json_en/ 加载逻辑 |
-| **C4. pipeline.py** | ⏳ 待开发 | 需集成 gen_en_templates.py |
-| **C5. 双语 Markdown** | ✅ 完成 | add_en_to_md.py 已实现，累计 1,043 条已插入 |
-| **全量翻译** | ⏳ 待执行 | T0 中 劳动合同法 ✅、企业破产法 ✅、公司法 ✅（共 290 条）；剩余 49,429 条 |
+| **C1. DB schema** | ✅ 完成 | nodes 表新增 content_en TEXT 列 |
+| **C2. 英文 FTS** | ⏳ 待开发 | nodes_fts_en 虚拟表（unicode61 分词） |
+| **C3. json_en → DB** | ✅ 完成 | builder.py 集成 sync_en_translations()，幂等写入 |
+| **C4. pipeline.py** | ✅ 完成 | 集成 gen_en_templates + builder + export_menu + renderer |
+| **C5. 双语 Markdown** | ✅ 完成 | renderer 统一从 DB 读取 content_en 生成，含引用链接 |
+| **已翻译条文** | 完成 | **2,465 条**英文（14 部法律），待翻译约 47,254 条 |
 
 ## 🎯 翻译优先级（按被引用次数排序）
 
@@ -32,21 +33,22 @@
 
 ### T0 — 核心高频（≥50次，11部）
 
-已翻译：劳动合同法 ✅、企业破产法 ✅、公司法 ✅
+已翻译：民法典 ✅、劳动合同法 ✅、企业破产法 ✅、公司法 ✅
+待翻译：7 部，共 332 条
 
 ```json
 {"tier":"T0","laws":[
-  {"cited_by":541,"law_id":1100329,"title":"中华人民共和国刑法","category":"法律","domain":"刑法"},
-  {"cited_by":347,"law_id":1100396,"title":"中华人民共和国民事诉讼法","category":"法律","domain":"诉讼与非诉讼程序法"},
-  {"cited_by":162,"law_id":1100313,"title":"中华人民共和国民法典","category":"法律","domain":"民法典"},
-  {"cited_by":131,"law_id":1100253,"title":"中华人民共和国刑事诉讼法","category":"法律","domain":"刑法"},
-  {"cited_by":99, "law_id":1100270,"title":"中华人民共和国企业所得税法","category":"法律","domain":"宪法相关法"},
-  {"cited_by":98, "law_id":1100292,"title":"中华人民共和国商标法","category":"法律","domain":"宪法相关法"},
-  {"cited_by":83, "law_id":1100320,"title":"中华人民共和国专利法","category":"法律","domain":"宪法相关法"},
-  {"cited_by":67, "law_id":1100438,"title":"中华人民共和国海商法","category":"法律","domain":"宪法相关法"},
-  {"cited_by":66, "law_id":1100055,"title":"中华人民共和国企业破产法","category":"法律","domain":"宪法相关法"},
-  {"cited_by":57, "law_id":1100400,"title":"中华人民共和国公司法","category":"法律","domain":"宪法相关法"},
-  {"cited_by":54, "law_id":1100126,"title":"中华人民共和国劳动合同法","category":"法律","domain":"宪法相关法"}
+  {"cited_by":541,"law_id":1100329,"title":"中华人民共和国刑法","category":"法律","domain":"刑法","translated":false},
+  {"cited_by":347,"law_id":1100396,"title":"中华人民共和国民事诉讼法","category":"法律","domain":"诉讼与非诉讼程序法","translated":false},
+  {"cited_by":162,"law_id":1100313,"title":"中华人民共和国民法典","category":"法律","domain":"民法典","translated":true},
+  {"cited_by":131,"law_id":1100253,"title":"中华人民共和国刑事诉讼法","category":"法律","domain":"刑法","translated":false},
+  {"cited_by":99, "law_id":1100270,"title":"中华人民共和国企业所得税法","category":"法律","domain":"经济法","translated":false},
+  {"cited_by":98, "law_id":1100292,"title":"中华人民共和国商标法","category":"法律","domain":"民法商法","translated":false},
+  {"cited_by":83, "law_id":1100320,"title":"中华人民共和国专利法","category":"法律","domain":"民法商法","translated":false},
+  {"cited_by":67, "law_id":1100438,"title":"中华人民共和国海商法","category":"法律","domain":"民法商法","translated":false},
+  {"cited_by":66, "law_id":1100055,"title":"中华人民共和国企业破产法","category":"法律","domain":"民法商法","translated":true},
+  {"cited_by":57, "law_id":1100400,"title":"中华人民共和国公司法","category":"法律","domain":"民法商法","translated":true},
+  {"cited_by":54, "law_id":1100126,"title":"中华人民共和国劳动合同法","category":"法律","domain":"民法商法","translated":true}
 ]}
 ```
 
@@ -124,10 +126,11 @@
 
 ---
 
-**阻塞项：**
-1. B2/B3 人工审核 → B4 Pilot 翻译
-2. B4 完成 → C1-C4 数据库集成
-3. C1-C4 完成 → T0 全量翻译（首批 11 部）
+**下一步：**
+1. T0 剩余 7 部翻译（332 条条文）→ 刑法、民事诉讼法、刑事诉讼法、企业所得税法、商标法、专利法、海商法
+2. C2 英文 FTS 表（nodes_fts_en）
+3. B6 一致性校验脚本
+4. T1 翻译
 
 ---
 
@@ -230,12 +233,11 @@
 - ✅ `fix_translations.sh`：一键修复脚本（清空→翻译→验证→更新MD）
 
 **当前进度（2026-07-01）：**
-- 法律总数：1,568 部（is_current=1）
-- 已完整翻译：11 部（待修复质量问题）
-- 待翻译条文：49,719 条（预计2,486批）
-- 质量验证：发现186个问题，预计修复后减少到≤30个
-
-**预期质量提升**：4/5 → 4.5/5（修复标点+will/would 问题）
+- 法律总数：1,255 部（is_current=1）
+- 已完整翻译：14 部（含 T0 中 4 部）
+- 已翻译条文：2,465 条英文
+- 待翻译条文：~47,254 条
+- 下一批：T0 剩余 7 部（332 条）
 
 **用法：**
 ```bash
@@ -265,47 +267,30 @@ python3 scripts/translate_to_en.py --dry-run               # 全部
 
 ## C. DB 集成
 
-### C1. DB schema：主库加英文字段
-- `laws` 表：加 `title_en TEXT`、`full_text_en TEXT`
-- `nodes` 表：加 `content_en TEXT`
-- `builder.py` 中加载时扫描对应 `json_en/` 文件，按 `law_id` + `article_number` 匹配写入
-- 未翻译的法律 → 英文字段为 NULL，App 端 fallback 显示中文
+### ✅ C1. DB schema：主库加英文字段
+- `nodes` 表：加 `content_en TEXT` ✅（已实现）
+- `laws` 表：未加 `title_en` / `full_text_en`（暂不需要，从 json_en/ 读取即可）
 
-### C2. DB schema：英文 FTS 表
+### ⏳ C2. DB schema：英文 FTS 表
 - 建 `nodes_fts_en` 虚拟表，`tokenize='unicode61 categories unicode'`
 - 索引 `content_en` + `article_number`
 - 与中文 `nodes_fts`（trigram）并行，互不干扰
 
-### C3. builder.py 增量集成
-**关键设计：英文字段从 `json_en/` 读取，主 pipeline 重跑不会清空已有翻译。**
+### ✅ C3. builder.py 增量集成
+- `build_db()` 在写完中文内容后，调用 `sync_en_translations()` ✅
+- 按 `article_number` 匹配条文，写入 `nodes.content_en` ✅
+- `json_en/` 文件不存在或字段为空 → 跳过，保持 NULL ✅
+- 幂等：`WHERE content_en IS NULL`，不覆盖已有翻译 ✅
 
-- `build_db()` 在写完中文内容后，扫描 `json_en/category/filename.json`
-- 按 `article_number` 匹配条文，写入 `nodes.content_en`
-- `json_en/` 文件不存在或字段为空 → 跳过，保持 NULL
-- 同步更新 `nodes_fts_en`
-
-### C4. pipeline.py 集成（新增 `--skip-en` 选项）
-- pipeline 末尾新增一步：调用 `gen_en_templates.py` 为新增法律生成占位文件
-- 默认不运行全量翻译（翻译成本高，按需手动触发）
-- 提供 `--skip-en` 跳过此步
+### ✅ C4. pipeline.py 集成
+- 全流程：converter → generate_law_index → builder（含 sync_en）→ export_menu → renderer ✅
+- 重跑 pipeline 不会清空 json_en/ 翻译（独立存储）✅
 
 ### ✅ C5. 双语 Markdown 生成
-已通过 `scripts/add_en_to_md.py` 实现：
-- ✅ 将 json_en/ 中的英文翻译插入到现有 Markdown 文件
-- ✅ 格式：中文条文 + 空行 + **Article X** 英文条文
-- ✅ 自动跳过已有英文的条文（幂等操作）
-- ✅ 支持 --dry-run 预览、--filter 关键词过滤
-
-**当前进度（2026-07-01）：**
-- 已处理：11 部法律
-- 条文总数：1,480 条
-- 已插入英文：1,261 条（85%）
-
-**用法：**
-```bash
-python3 scripts/add_en_to_md.py --dry-run  # 预览
-python3 scripts/add_en_to_md.py            # 执行插入
-```
+- **不再使用 add_en_to_md.py（已废弃）**
+- renderer.py 统一从 DB `nodes.content_en` 读取英文 ✅
+- 格式：中文条文 + 空行 + **Article X** 英文 ✅
+- markdown 同时包含英文和引用链接 ✅
 
 ### C6. App 端 FTS 搜索路由
 - 中文搜索（含 CJK 字符）→ `nodes_fts`（trigram）
