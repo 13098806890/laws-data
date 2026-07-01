@@ -1,0 +1,43 @@
+=== 加载辅助数据 ===
+xlsx 索引: 1901 条
+domain 映射: 118 条
+
+=== docx → JSON ===
+  法律: 489 个 docx（0 个被 txt 替换），0 个 txt 新增
+  司法解释: 682 个 docx（45 个被 txt 替换），45 个 txt 新增
+  行政法规: 727 个 docx（0 个被 txt 替换），0 个 txt 新增
+  宪法: 1 个 docx（0 个被 txt 替换），0 个 txt 新增
+  监察法规: 3 个 docx（0 个被 txt 替换），0 个 txt 新增
+JSON 生成完成: 1945 个，0 个错误
+law_index.json 生成完成：1945 条，更新 JSON 文件 1945 个
+
+=== JSON → 数据库 ===
+写入数据库: 1945 个文件
+  600/1945
+  800/1945
+  1000/1945
+  1200/1945
+  1400/1945
+  1600/1945
+  1800/1945
+法考标记完成：170 部法律标记为 is_flk=1
+数据库完成: laws=1526 nodes=80092 articles=71633 122.1MB
+
+=== 导入公报司法解释 ===
+
+导入公报司法解释：927 个文件
+  公报司法解释：插入 0 条，解析错误 927 条
+
+=== 写入引用关系 ===
+  引用关系写入失败（非致命）: FOREIGN KEY constraint failed
+Traceback (most recent call last):
+  File "/Users/doxie/Github/laws-data/scripts/pipeline.py", line 245, in <module>
+    main()
+    ~~~~^^
+  File "/Users/doxie/Github/laws-data/scripts/pipeline.py", line 206, in main
+    json_to_db()
+    ~~~~~~~~~~^^
+  File "/Users/doxie/Github/laws-data/scripts/json_to_db/builder.py", line 534, in run
+    conn.execute(f'PRAGMA user_version = {version}')
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: database is locked
