@@ -28,7 +28,12 @@ def main():
         out_path = cat_dir / f'{filename}.json'
 
         if out_path.exists():
-            continue
+            # 保留已有翻译（标题、条文），只补充新增的条文占位
+            existing = json.loads(out_path.read_text(encoding='utf-8'))
+            existing_articles = {a['article_number']: a for a in existing.get('articles', [])}
+        else:
+            existing = None
+            existing_articles = {}
 
         # 读中文 JSON 获取条文结构
         cn_path = JSON_DIR / category / f'{filename}.json'
@@ -61,11 +66,20 @@ def main():
         elif 'chapters' in cn_data:
             collect_articles(cn_data['chapters'])
 
+        # 合并已有翻译：保留 title_en/promulgation_info_en/content_en
+        merged_articles = []
+        for new_art in articles:
+            art_num = new_art['article_number']
+            if art_num in existing_articles:
+                merged_articles.append(existing_articles[art_num])
+            else:
+                merged_articles.append(new_art)
+
         tmpl = {
             'law_id': law_id,
-            'title_en': '',
-            'promulgation_info_en': '',
-            'articles': articles,
+            'title_en': existing.get('title_en', '') if existing else '',
+            'promulgation_info_en': existing.get('promulgation_info_en', '') if existing else '',
+            'articles': merged_articles,
         }
 
         out_path.write_text(

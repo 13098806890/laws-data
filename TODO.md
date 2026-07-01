@@ -7,7 +7,7 @@
 | **B1. 基础设施** | ✅ 完成 | json_en/ 目录已建立 |
 | **B2. 标题翻译** | ✅ 完成 | 1,568 条标题已翻译（含标题 map 查找优先） |
 | **B3. 术语表** | ✅ 完成 | 159 条术语已生成，按需注入（仅注入文中出现的） |
-| **B4. Pilot 翻译** | ⏳ 进行中 | 14 部法律已翻译（共 2,465 条英文），待人工审校 |
+| **B4. 全量翻译** | ✅ 完成 | T0 全部 11 部法律翻译完成（共 3,863 条英文），待人工审校 |
 | **B5. 脚本改造** | ✅ 完成 | translate_to_en.py 支持 --tier/--max-laws/按需注入 |
 | **B6. 一致性校验** | ⏳ 待开发 | - |
 | **C1. DB schema** | ✅ 完成 | nodes 表新增 content_en TEXT 列 |
@@ -15,7 +15,7 @@
 | **C3. json_en → DB** | ✅ 完成 | builder.py 集成 sync_en_translations()，幂等写入 |
 | **C4. pipeline.py** | ✅ 完成 | 集成 gen_en_templates + builder + export_menu + renderer |
 | **C5. 双语 Markdown** | ✅ 完成 | renderer 统一从 DB 读取 content_en 生成，含引用链接 |
-| **已翻译条文** | 完成 | **2,465 条**英文（14 部法律），待翻译约 47,254 条 |
+| **已翻译条文** | 完成 | **3,863 条**英文（T0 全部 11 部 + 相关司法解释），待翻译 T1-T4 约 45,856 条 |
 
 ## 🎯 翻译优先级（按被引用次数排序）
 
@@ -33,19 +33,18 @@
 
 ### T0 — 核心高频（≥50次，11部）
 
-已翻译：民法典 ✅、劳动合同法 ✅、企业破产法 ✅、公司法 ✅
-待翻译：7 部，共 332 条
+已翻译：全部 11 部 ✅（3,863 条英文）
 
 ```json
 {"tier":"T0","laws":[
-  {"cited_by":541,"law_id":1100329,"title":"中华人民共和国刑法","category":"法律","domain":"刑法","translated":false},
-  {"cited_by":347,"law_id":1100396,"title":"中华人民共和国民事诉讼法","category":"法律","domain":"诉讼与非诉讼程序法","translated":false},
+  {"cited_by":541,"law_id":1100329,"title":"中华人民共和国刑法","category":"法律","domain":"刑法","translated":true},
+  {"cited_by":347,"law_id":1100396,"title":"中华人民共和国民事诉讼法","category":"法律","domain":"诉讼与非诉讼程序法","translated":true},
   {"cited_by":162,"law_id":1100313,"title":"中华人民共和国民法典","category":"法律","domain":"民法典","translated":true},
-  {"cited_by":131,"law_id":1100253,"title":"中华人民共和国刑事诉讼法","category":"法律","domain":"刑法","translated":false},
-  {"cited_by":99, "law_id":1100270,"title":"中华人民共和国企业所得税法","category":"法律","domain":"经济法","translated":false},
-  {"cited_by":98, "law_id":1100292,"title":"中华人民共和国商标法","category":"法律","domain":"民法商法","translated":false},
-  {"cited_by":83, "law_id":1100320,"title":"中华人民共和国专利法","category":"法律","domain":"民法商法","translated":false},
-  {"cited_by":67, "law_id":1100438,"title":"中华人民共和国海商法","category":"法律","domain":"民法商法","translated":false},
+  {"cited_by":131,"law_id":1100253,"title":"中华人民共和国刑事诉讼法","category":"法律","domain":"刑法","translated":true},
+  {"cited_by":99, "law_id":1100270,"title":"中华人民共和国企业所得税法","category":"法律","domain":"经济法","translated":true},
+  {"cited_by":98, "law_id":1100292,"title":"中华人民共和国商标法","category":"法律","domain":"民法商法","translated":true},
+  {"cited_by":83, "law_id":1100320,"title":"中华人民共和国专利法","category":"法律","domain":"民法商法","translated":true},
+  {"cited_by":67, "law_id":1100438,"title":"中华人民共和国海商法","category":"法律","domain":"民法商法","translated":true},
   {"cited_by":66, "law_id":1100055,"title":"中华人民共和国企业破产法","category":"法律","domain":"民法商法","translated":true},
   {"cited_by":57, "law_id":1100400,"title":"中华人民共和国公司法","category":"法律","domain":"民法商法","translated":true},
   {"cited_by":54, "law_id":1100126,"title":"中华人民共和国劳动合同法","category":"法律","domain":"民法商法","translated":true}
@@ -127,10 +126,10 @@
 ---
 
 **下一步：**
-1. T0 剩余 7 部翻译（332 条条文）→ 刑法、民事诉讼法、刑事诉讼法、企业所得税法、商标法、专利法、海商法
-2. C2 英文 FTS 表（nodes_fts_en）
-3. B6 一致性校验脚本
-4. T1 翻译
+1. ✅ T0 全部 11 部翻译完成（3,863 条）
+2. ⏳ T1 翻译（23 部，~1,970 条）
+3. ⏳ C2 英文 FTS 表（nodes_fts_en）
+4. ⏳ B6 一致性校验脚本
 
 ---
 

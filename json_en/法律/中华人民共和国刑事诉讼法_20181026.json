@@ -2,5 +2,1238 @@
   "law_id": 1100253,
   "title_en": "Criminal Procedure Law of the People's Republic of China",
   "promulgation_info_en": "",
-  "articles": []
+  "articles": [
+    {
+      "article_number": "第一条",
+      "content_en": "Article 1 This Law is enacted in accordance with the Constitution to ensure the correct implementation of the Criminal Law, to punish crimes, to protect the people, to safeguard national security and public safety, and to maintain the socialist social order."
+    },
+    {
+      "article_number": "第二条",
+      "content_en": "Article 2 The tasks of the Criminal Procedure Law of the People's Republic of China are to ensure accurate and timely investigation of criminal facts, correct application of law, punishment of criminals, protection of innocent persons from criminal prosecution, education of citizens to voluntarily abide by the law and actively combat criminal acts, safeguard the socialist legal system, respect and protect human rights, protect citizens' personal rights, property rights, democratic rights and other rights, and ensure the smooth progress of socialist construction."
+    },
+    {
+      "article_number": "第三条",
+      "content_en": "Article 3 The public security organs are responsible for investigation, detention, execution of arrest, and preliminary interrogation of criminal cases. The People's Procuratorates are responsible for procuratorial work, approval of arrest, investigation of cases directly accepted by the procuratorial organs, and initiation of public prosecution. The People's Courts are responsible for adjudication. No other organs, organizations, or individuals shall have the authority to exercise these powers, except as otherwise provided by law.\nIn conducting criminal proceedings, the People's Courts, People's Procuratorates, and public security organs must strictly observe the relevant provisions of this Law and other laws."
+    },
+    {
+      "article_number": "第四条",
+      "content_en": "Article 4 State security organs shall, in accordance with law, handle criminal cases endangering state security and exercise the same functions and powers as public security organs."
+    },
+    {
+      "article_number": "第五条",
+      "content_en": "Article 5 The People's Courts shall independently exercise the adjudicative power in accordance with law, and the People's Procuratorates shall independently exercise the procuratorial power in accordance with law, and shall not be subject to interference by administrative organs, social organizations, or individuals."
+    },
+    {
+      "article_number": "第六条",
+      "content_en": "Article 6 In conducting criminal proceedings, the People's Courts, People's Procuratorates, and public security organs must rely on the masses, must base themselves on facts and take law as the criterion. All citizens shall be equal in the application of law, and no privileges shall be allowed before the law."
+    },
+    {
+      "article_number": "第七条",
+      "content_en": "Article 7 In conducting criminal proceedings, the People's Courts, People's Procuratorates, and public security organs shall divide their responsibilities, cooperate with each other, and check each other to ensure the accurate and effective enforcement of law."
+    },
+    {
+      "article_number": "第八条",
+      "content_en": "Article 8 The People's Procuratorates shall exercise legal supervision over criminal proceedings according to law."
+    },
+    {
+      "article_number": "第九条",
+      "content_en": "Article 9 Citizens of all nationalities shall have the right to use their own spoken and written languages in legal proceedings. The People's Courts, People's Procuratorates, and public security organs shall provide translation for any participant in the proceedings who is not familiar with the commonly used local spoken or written language.\nIn areas where ethnic minorities are concentrated or where multiple nationalities live together, interrogations shall be conducted in the commonly used local language, and judgments, notices, and other documents shall be published in the commonly used local script."
+    },
+    {
+      "article_number": "第十条",
+      "content_en": "Article 10 The People's Courts shall try cases under a system whereby the second instance is final."
+    },
+    {
+      "article_number": "第十一条",
+      "content_en": "Article 11 The People's Courts shall try cases in public unless otherwise provided by this Law. A defendant shall have the right to obtain a defense, and the People's Court shall have the obligation to ensure that the defendant obtains a defense."
+    },
+    {
+      "article_number": "第十二条",
+      "content_en": "Article 12 No person shall be found guilty without being adjudicated by a People's Court according to law."
+    },
+    {
+      "article_number": "第十三条",
+      "content_en": "Article 13 In adjudicating cases, the People's Courts shall adopt the system of people's assessors participating in adjudication in accordance with this Law."
+    },
+    {
+      "article_number": "第十四条",
+      "content_en": "Article 14 The People's Courts, People's Procuratorates, and public security organs shall safeguard the right to defense and other procedural rights enjoyed by criminal suspects, defendants, and other participants in proceedings according to law.\nParticipants in proceedings shall have the right to file complaints against adjudicators, procurators, and investigators who infringe upon citizens' procedural rights or commit acts of personal insult."
+    },
+    {
+      "article_number": "第十五条",
+      "content_en": "Article 15 Where a criminal suspect or defendant voluntarily and truthfully confesses his or her own crime, admits the alleged criminal facts, and is willing to accept punishment, he or she may be dealt with leniently according to law."
+    },
+    {
+      "article_number": "第十六条",
+      "content_en": "Article 16 Criminal liability shall not be investigated under any of the following circumstances; if investigation has already been commenced, the case shall be dismissed, or a decision not to prosecute shall be made, or the trial shall be terminated, or a verdict of not guilty shall be pronounced:\n(1) If the facts are obviously minor and the harm is not great, and the act is not considered a crime;\n(2) If the statute of limitations for criminal prosecution has expired;\n(3) If an amnesty order exempts the person from punishment;\n(4) If a crime is to be handled only upon complaint under the Criminal Law, and no complaint has been made or the complaint has been withdrawn;\n(5) If the criminal suspect or defendant is deceased;\n(6) If other laws provide that criminal liability shall not be investigated."
+    },
+    {
+      "article_number": "第十七条",
+      "content_en": "Article 17 Where a foreigner commits a crime for which criminal liability shall be investigated, the provisions of this Law shall apply.\nWhere a foreigner enjoying diplomatic privileges and immunity commits a crime for which criminal liability shall be investigated, the matter shall be resolved through diplomatic channels."
+    },
+    {
+      "article_number": "第十八条",
+      "content_en": "Article 18 In accordance with international treaties concluded or acceded to by the People's Republic of China, or under the principle of reciprocity, the judicial organs of China and those of foreign countries may request criminal judicial assistance from each other."
+    },
+    {
+      "article_number": "第十九条",
+      "content_en": "Article 19 Investigation of criminal cases shall be conducted by public security organs, except as otherwise provided by law.\nWhere, in exercising legal supervision over litigation activities, a People's Procuratorate discovers crimes committed by judicial officers by taking advantage of their functions, such as illegal detention, extortion of confessions by torture, or illegal search, which infringe upon citizens' rights or impair judicial justice, the People's Procuratorate may file and investigate the case. Where a major crime case under the jurisdiction of public security organs, committed by state functionaries by taking advantage of their functions, needs to be directly accepted by the People's Procuratorate, the People's Procuratorate may file and investigate the case upon the decision of a People's Procuratorate at or above the provincial level.\nCases of private prosecution shall be directly accepted by the People's Courts."
+    },
+    {
+      "article_number": "第二十条",
+      "content_en": "Article 20 Primary People's Courts shall have jurisdiction over ordinary criminal cases of first instance, except those otherwise under the jurisdiction of People's Courts at higher levels according to this Law."
+    },
+    {
+      "article_number": "第二十一条",
+      "content_en": "Article 21 Intermediate People's Courts shall have jurisdiction over the following criminal cases of first instance:\n(1) Cases involving endangering national security or terrorist activities;\n(2) Cases in which a sentence of life imprisonment or death penalty may be imposed."
+    },
+    {
+      "article_number": "第二十二条",
+      "content_en": "Article 22 Higher People's Courts shall have jurisdiction over major criminal cases of first instance that are of a province-wide (autonomous region or municipality directly under the Central Government) nature."
+    },
+    {
+      "article_number": "第二十三条",
+      "content_en": "Article 23 The Supreme People's Court shall have jurisdiction over major criminal cases of first instance that are of nationwide nature."
+    },
+    {
+      "article_number": "第二十四条",
+      "content_en": "Article 24 A People's Court at a higher level may, when necessary, adjudicate criminal cases of first instance that are under the jurisdiction of a People's Court at a lower level; where a People's Court at a lower level considers that the facts of a case are major or complex and need to be adjudicated by a People's Court at a higher level, it may request to transfer the case to the next higher People's Court for adjudication."
+    },
+    {
+      "article_number": "第二十五条",
+      "content_en": "Article 25 Criminal cases shall be under the jurisdiction of the People's Court of the place where the crime is committed. If it is more appropriate for the case to be tried by the People's Court of the place where the defendant resides, then it may be under the jurisdiction of the People's Court of the defendant's place of residence."
+    },
+    {
+      "article_number": "第二十六条",
+      "content_en": "Article 26 Where a case falls within the jurisdiction of several People's Courts at the same level, it shall be tried by the People's Court that first accepted the case. When necessary, the case may be transferred to the People's Court of the principal place where the crime was committed for trial."
+    },
+    {
+      "article_number": "第二十七条",
+      "content_en": "Article 27 A People's Court at a higher level may designate a People's Court at a lower level to try a case with unclear jurisdiction, and may also designate a People's Court at a lower level to transfer the case to another People's Court for trial."
+    },
+    {
+      "article_number": "第二十八条",
+      "content_en": "Article 28 Jurisdiction over cases of special People's Courts shall be separately provided."
+    },
+    {
+      "article_number": "第二十九条",
+      "content_en": "Article 29 An adjudicator, a procurator, or an investigator shall recuse himself or herself under any of the following circumstances, and the parties and their legal representatives shall have the right to request his or her recusal:\n(1) If the person is a party to the case or a close relative of a party;\n(2) If the person or a close relative of the person has an interest in the case;\n(3) If the person has served as a witness, expert evaluator, defender, or litigation agent in the case;\n(4) If the person has any other relationship with a party to the case that may affect the impartial handling of the case."
+    },
+    {
+      "article_number": "第三十条",
+      "content_en": "Article 30 Adjudicators, procurators, and investigators shall not accept the hospitality or gifts of parties and their entrusted persons, and shall not meet with parties and their entrusted persons in violation of regulations.\nWhere an adjudicator, a procurator, or an investigator violates the provisions of the preceding paragraph, legal liability shall be pursued according to law. The parties and their legal representatives shall have the right to request their recusal."
+    },
+    {
+      "article_number": "第三十一条",
+      "content_en": "Article 31 Recusal of an adjudicator, a procurator, or an investigator shall be decided respectively by the president of the court, the chief procurator, or the head of the public security organ; the recusal of the president of the court shall be decided by the judicial committee of that court; and the recusal of the chief procurator and the head of the public security organ shall be decided by the procuratorial committee of the corresponding People's Procuratorate.\nBefore a decision on the recusal of an investigator is made, the investigator shall not cease the investigation of the case.\nIf a decision to reject a request for recusal is made, the parties or their legal representatives may apply for reconsideration once."
+    },
+    {
+      "article_number": "第三十二条",
+      "content_en": "Article 32 The provisions of this Chapter on recusal shall apply to court clerks, interpreters, and expert evaluators.\nDefenders and litigation agents may request recusal and apply for reconsideration in accordance with the provisions of this Chapter."
+    },
+    {
+      "article_number": "第三十三条",
+      "content_en": "Article 33 In addition to exercising the right to defend themselves, criminal suspects and defendants may also entrust one to two persons as defenders. The following persons may be entrusted as defenders:\n(1) Lawyers;\n(2) Persons recommended by a people's organization or the unit of the criminal suspect or defendant;\n(3) Guardians or relatives or friends of the criminal suspect or defendant.\nPersons who are currently being subjected to criminal punishment or whose personal freedom is deprived or restricted according to law shall not serve as defenders.\nPersons who have been discharged from public office or whose lawyer or notary practice certificates have been revoked shall not serve as defenders, except where they are the guardians or close relatives of the criminal suspect or defendant."
+    },
+    {
+      "article_number": "第三十四条",
+      "content_en": "Article 34 A criminal suspect shall have the right to entrust a defender from the day he or she is first interrogated by an investigative organ or from the day a compulsory measure is taken against him or her; during the period of investigation, only a lawyer may be entrusted as a defender. A defendant shall have the right to entrust a defender at any time.\nWhen an investigative organ first interrogates a criminal suspect or takes a compulsory measure against him or her, it shall inform the criminal suspect of the right to entrust a defender. Within three days from the date of receiving the case materials transferred for examination before prosecution, the People's Procuratorate shall inform the criminal suspect of the right to entrust a defender. Within three days from the date of accepting a case, the People's Court shall inform the defendant of the right to entrust a defender. If a criminal suspect or defendant in custody requests to entrust a defender, the People's Court, People's Procuratorate, or public security organ shall convey the request in a timely manner.\nIf a criminal suspect or defendant is in custody, his or her guardian or close relative may also entrust a defender on his or her behalf.\nAfter accepting the entrustment by a criminal suspect or defendant, the defender shall promptly inform the organ handling the case."
+    },
+    {
+      "article_number": "第三十五条",
+      "content_en": "Article 35 Where a criminal suspect or defendant has not entrusted a defender due to financial difficulties or other reasons, he or she or his or her close relatives may apply to a legal aid agency. If the conditions for legal aid are met, the legal aid agency shall assign a lawyer to provide defense.\nWhere a criminal suspect or defendant is blind, deaf, or mute, or is a mentally ill person who has not completely lost the ability to recognize or control his or her conduct, and has not entrusted a defender, the People's Court, People's Procuratorate, or public security organ shall notify a legal aid agency to assign a lawyer to provide defense.\nWhere a criminal suspect or defendant may be sentenced to life imprisonment or the death penalty and has not entrusted a defender, the People's Court, People's Procuratorate, or public security organ shall notify a legal aid agency to assign a lawyer to provide defense."
+    },
+    {
+      "article_number": "第三十六条",
+      "content_en": "Article 36 Legal aid agencies may station duty lawyers at People's Courts, detention centers, and other places. Where a criminal suspect or defendant has not entrusted a defender and the legal aid agency has not assigned a lawyer to provide defense, the duty lawyer shall provide legal assistance to the criminal suspect or defendant, including legal consultation, advice on procedural choices, application for modification of compulsory measures, and opinions on case handling.\nThe People's Court, People's Procuratorate, or detention center shall inform the criminal suspect or defendant of the right to meet with a duty lawyer and shall facilitate the meeting between the criminal suspect or defendant and the duty lawyer."
+    },
+    {
+      "article_number": "第三十七条",
+      "content_en": "Article 37 The responsibility of a defender is to present, based on facts and law, materials and opinions indicating the innocence or lesser guilt of the criminal suspect or defendant, or the mitigation or exemption of his or her criminal liability, and to safeguard the procedural rights and other lawful rights and interests of the criminal suspect or defendant."
+    },
+    {
+      "article_number": "第三十八条",
+      "content_en": "Article 38 During the period of investigation, a defense lawyer may provide legal assistance to the criminal suspect; act as agent in filing petitions and complaints; apply for modification of compulsory measures; and inquire about the crime suspected of by the criminal suspect and other relevant circumstances of the case from the investigative organ, and present opinions."
+    },
+    {
+      "article_number": "第三十九条",
+      "content_en": "Article 39 A defense lawyer may meet and correspond with a criminal suspect or defendant in custody. Other defenders, with the permission of the People's Court or People's Procuratorate, may also meet and correspond with a criminal suspect or defendant in custody.\nWhere a defense lawyer, holding a lawyer's practice certificate, a certificate from the law firm, and a letter of entrustment or a legal aid letter, requests to meet with a criminal suspect or defendant in custody, the detention center shall arrange the meeting in a timely manner, no later than forty-eight hours.\nIn cases involving crimes endangering national security or terrorist activities, a defense lawyer meeting with a criminal suspect in custody during the investigation period shall be subject to permission from the investigative organ. The investigative organ shall notify the detention center in advance of such cases.\nWhen meeting with a criminal suspect or defendant in custody, a defense lawyer may learn about the relevant circumstances of the case and provide legal consultation, etc.; from the date the case is transferred for examination and prosecution, the defense lawyer may verify relevant evidence with the criminal suspect or defendant. The meeting between a defense lawyer and a criminal suspect or defendant shall not be monitored.\nThe provisions of paragraphs 1, 3, and 4 shall apply to the meeting and correspondence between a defense lawyer and a criminal suspect or defendant under residential surveillance."
+    },
+    {
+      "article_number": "第四十条",
+      "content_en": "Article 40 From the date the People's Procuratorate examines and prosecutes the case, a defense lawyer may consult, extract, and copy the case file materials of the case. Other defenders, with the permission of the People's Court or People's Procuratorate, may also consult, extract, and copy the above materials."
+    },
+    {
+      "article_number": "第四十一条",
+      "content_en": "Article 41 Where a defender believes that the evidence materials proving the innocence or minor guilt of a criminal suspect or defendant collected by a public security organ or a People's Procuratorate during investigation or examination for prosecution have not been submitted, the defender shall have the right to apply to the People's Procuratorate or the People's Court for their collection."
+    },
+    {
+      "article_number": "第四十二条",
+      "content_en": "Article 42 Where a defender collects evidence that a criminal suspect was not at the scene of the crime, had not attained the age of criminal responsibility, or was a mental patient who shall not bear criminal liability according to law, the defender shall promptly inform the public security organ and the People's Procuratorate."
+    },
+    {
+      "article_number": "第四十三条",
+      "content_en": "Article 43 A defense lawyer may, with the consent of a witness or any other relevant entity or individual, collect materials related to the case from them, and may also apply to the People's Procuratorate or the People's Court for the collection or procurement of evidence, or apply to the People's Court to notify a witness to appear in court to testify.\nA defense lawyer may, with the permission of the People's Procuratorate or the People's Court and with the consent of the victim, the victim's near relatives, or a witness produced by the victim, collect materials related to the case from them."
+    },
+    {
+      "article_number": "第四十四条",
+      "content_en": "Article 44 No defender or any other person may assist a criminal suspect or defendant in concealing, destroying, or falsifying evidence, or in colluding to make false statements, and may not threaten or induce a witness to give false testimony or engage in any other act that interferes with the litigation activities of the judicial authorities.\nFor violation of the provisions in the preceding paragraph, legal liability shall be pursued according to law. Where a defender is suspected of committing a crime, the case shall be handled by a criminal investigation authority other than the one handling the case undertaken by the defender. Where the defender is a lawyer, the law firm or the lawyers' association to which the lawyer belongs shall be promptly notified."
+    },
+    {
+      "article_number": "第四十五条",
+      "content_en": "Article 45 During the adjudication process, a defendant may refuse to have a defender continue to defend him or her, and may also appoint another defender."
+    },
+    {
+      "article_number": "第四十六条",
+      "content_en": "Article 46 The victim of a public prosecution case and the victim's legal representative or near relatives, as well as the parties to an incidental civil action and their legal representatives, shall have the right to appoint a litigation agent from the date when the case is transferred for examination for prosecution. The private prosecutor of a case instituted upon a complaint and the private prosecutor's legal representative, as well as the parties to an incidental civil action and their legal representatives, shall have the right to appoint a litigation agent at any time.\nThe People's Procuratorate shall, within three days of receiving the case materials transferred for examination for prosecution, inform the victim and the victim's legal representative or near relatives, as well as the parties to an incidental civil action and their legal representatives, of their right to appoint a litigation agent. The People's Court shall, within three days of accepting a case instituted upon a complaint, inform the private prosecutor and the private prosecutor's legal representative, as well as the parties to an incidental civil action and their legal representatives, of their right to appoint a litigation agent."
+    },
+    {
+      "article_number": "第四十七条",
+      "content_en": "Article 47 The appointment of a litigation agent shall be executed by reference to the provisions of Article 33 of this Law."
+    },
+    {
+      "article_number": "第四十八条",
+      "content_en": "Article 48 A defense lawyer shall have the right to keep confidential the relevant circumstances and information of the client learned in the practice of the profession. However, where a defense lawyer, in the practice of the profession, learns that the client or any other person is preparing or is committing a crime endangering national security, public security, or seriously endangering the personal safety of others, the defense lawyer shall promptly inform the judicial authorities."
+    },
+    {
+      "article_number": "第四十九条",
+      "content_en": "Article 49 Where a defender or a litigation agent believes that a public security organ, a People's Procuratorate, a People's Court, or their functionaries have obstructed the defender's or litigation agent's exercise of litigation rights according to law, the defender or litigation agent shall have the right to file a complaint or accusation with the People's Procuratorate at the same level or at the next higher level. The People's Procuratorate shall promptly examine the complaint or accusation; where the circumstances are verified as true, the People's Procuratorate shall notify the relevant authority to make a correction."
+    },
+    {
+      "article_number": "第五十条",
+      "content_en": "Article 50 Any material that may be used to prove the facts of a case shall be evidence.\nEvidence includes:\n(1) physical evidence;\n(2) documentary evidence;\n(3) testimony of witnesses;\n(4) statements of victims;\n(5) statements and exculpations of criminal suspects or defendants;\n(6) expert opinions;\n(7) records of inspection, examination, identification, investigative experiment, and the like;\n(8) audio-visual materials and electronic data.\nEvidence must be verified as true before it may be used as the basis for adjudication."
+    },
+    {
+      "article_number": "第五十一条",
+      "content_en": "Article 51 In a public prosecution case, the burden of adducing evidence of the defendant's guilt shall be borne by the People's Procuratorate. In a case instituted upon a complaint, the burden of adducing evidence of the defendant's guilt shall be borne by the private prosecutor."
+    },
+    {
+      "article_number": "第五十二条",
+      "content_en": "Article 52 Adjudicators, procurators, and investigators must, in accordance with the statutory procedures, collect various types of evidence that may prove the guilt or innocence of a criminal suspect or defendant, or the gravity of the crime. Extorting confessions by torture, and collecting evidence by threat, inducement, deception, or other illegal means are strictly prohibited. No one may be compelled to prove his or her own guilt. Conditions shall be ensured for all citizens who are involved in a case or who are aware of the circumstances of the case to objectively and fully provide evidence. Except in special circumstances, such persons may be allowed to assist in investigations."
+    },
+    {
+      "article_number": "第五十三条",
+      "content_en": "Article 53 The written request for approval of arrest submitted by a public security organ, the written indictment of the People's Procuratorate, and the written judgment of the People's Court must be faithful to the facts. Where the facts are intentionally concealed, liability shall be investigated."
+    },
+    {
+      "article_number": "第五十四条",
+      "content_en": "Article 54 The People's Court, the People's Procuratorate, and the public security organ shall have the authority to collect or procure evidence from relevant entities and individuals. Relevant entities and individuals shall truthfully provide evidence.\nPhysical evidence, documentary evidence, audio-visual materials, electronic data, and other evidence materials collected by administrative authorities in the course of administrative law enforcement and case investigation may be used as evidence in criminal proceedings.\nEvidence involving state secrets, trade secrets, or personal privacy shall be kept confidential.\nWhoever falsifies, conceals, or destroys evidence, regardless of which party is involved, shall be subject to legal recourse."
+    },
+    {
+      "article_number": "第五十五条",
+      "content_en": "Article 55 In the adjudication of all cases, emphasis shall be placed on evidence, investigation, and study, and no reliance shall be placed on confessions. Where there is only a defendant's statement and no other evidence, the defendant shall not be found guilty and punished. Where there is no defendant's statement and the evidence is reliable and sufficient, the defendant may be found guilty and punished.\nEvidence being reliable and sufficient shall meet the following conditions:\n(1) the facts for conviction and sentencing are all supported by evidence;\n(2) the evidence upon which the adjudication is based has been verified as true through statutory procedures;\n(3) taking all the evidence in the case as a whole, the facts found have been excluded from reasonable doubt."
+    },
+    {
+      "article_number": "第五十六条",
+      "content_en": "Article 56 Statements of criminal suspects or defendants collected by torture or other illegal means, and testimony of witnesses and statements of victims collected by violence, threat, or other illegal means shall be excluded. Where physical evidence or documentary evidence is collected not in compliance with statutory procedures and may seriously affect judicial justice, the defects shall be corrected or a reasonable explanation shall be provided; where the defects cannot be corrected or a reasonable explanation cannot be provided, such evidence shall be excluded.\nWhere evidence that should be excluded is discovered during investigation, examination for prosecution, or adjudication, it shall be excluded according to law and shall not be used as the basis for the opinion on prosecution, the decision to initiate a prosecution, or the judgment."
+    },
+    {
+      "article_number": "第五十七条",
+      "content_en": "Article 57 Where the People's Procuratorate receives a report, accusation, or tip, or discovers that an investigator has collected evidence by illegal means, it shall investigate and verify. Where there is indeed a situation of collecting evidence by illegal means, the People's Procuratorate shall issue an opinion for correction. Where a crime is constituted, criminal liability shall be investigated according to law."
+    },
+    {
+      "article_number": "第五十八条",
+      "content_en": "Article 58 During the court trial, where an adjudicator believes that there may be a situation of collecting evidence by illegal means as provided in Article 56 of this Law, a court investigation into the legality of the evidence collection shall be conducted.\nA party, the party's defender, or litigation agent shall have the right to apply to the People's Court for the exclusion of evidence collected by illegal means according to law. Any application for the exclusion of evidence collected by illegal means shall provide relevant leads or materials."
+    },
+    {
+      "article_number": "第五十九条",
+      "content_en": "Article 59 During the court investigation into the legality of evidence collection, the People's Procuratorate shall prove the legality of the evidence collection.\nWhere the existing evidence materials cannot prove the legality of the evidence collection, the People's Procuratorate may request the People's Court to notify the relevant investigator or other persons to appear in court to explain the circumstances; the People's Court may notify the relevant investigator or other persons to appear in court to explain the circumstances. The relevant investigator or other persons may also request to appear in court to explain the circumstances. Where notified by the People's Court, the relevant person shall appear in court."
+    },
+    {
+      "article_number": "第六十条",
+      "content_en": "Article 60 Where, after court trial, it is confirmed or cannot be excluded that there exists a situation of collecting evidence by illegal means as provided in Article 56 of this Law, the relevant evidence shall be excluded."
+    },
+    {
+      "article_number": "第六十一条",
+      "content_en": "Article 61 Testimony of a witness may be used as the basis for deciding a case only after it has been examined and verified in court through cross-examination by both the public prosecutor, the victim, and the defendant and his defender. If the court ascertains that a witness has intentionally given false testimony or concealed criminal evidence, it shall handle the matter according to law."
+    },
+    {
+      "article_number": "第六十二条",
+      "content_en": "Article 62 All persons who have information about a case shall have the obligation to testify.\nPersons who, due to physical or mental disability or infancy, are unable to distinguish right from wrong or to correctly express themselves shall not be qualified as witnesses."
+    },
+    {
+      "article_number": "第六十三条",
+      "content_en": "Article 63 The People's Courts, People's Procuratorates and public security organs shall ensure the safety of witnesses and their close relatives.\nThreatening, insulting, assaulting or retaliating against a witness or his close relatives, which constitutes a crime, shall be subject to criminal liability according to law; if such conduct does not constitute a crime, a public security penalty shall be imposed according to law."
+    },
+    {
+      "article_number": "第六十四条",
+      "content_en": "Article 64 In cases involving crimes of endangering national security, terrorist activities, organized crimes of a mafia-like nature, or drug crimes, if a witness, expert evaluator or victim is in danger to the personal safety of himself or his close relatives due to testifying in the proceedings, the People's Courts, People's Procuratorates and public security organs shall take one or more of the following protective measures:\n(1) Not disclosing personal information such as the true name, address and work unit;\n(2) Taking measures such as not revealing the appearance or true voice when testifying in court;\n(3) Prohibiting specific persons from contacting the witness, expert evaluator, victim and their close relatives;\n(4) Adopting special protective measures for the person and residence;\n(5) Other necessary protective measures.\nIf a witness, expert evaluator or victim considers that he or his close relative is in danger to personal safety due to testifying in the proceedings, he may request protection from the People's Court, People's Procuratorate or public security organ.\nWhen the People's Court, People's Procuratorate or public security organ takes protective measures according to law, the relevant entities and individuals shall cooperate."
+    },
+    {
+      "article_number": "第六十五条",
+      "content_en": "Article 65 Expenses such as transportation, accommodation and meals incurred by a witness in fulfilling his obligation to testify shall be subsidized. The subsidy for a witness's testimony shall be included in the operational funds of the judicial organs and guaranteed by the fiscal budget of the government at the same level.\nIf a witness is employed, the employer shall not deduct or withhold in any form his salary, bonuses or other welfare benefits due to the witness's giving testimony."
+    },
+    {
+      "article_number": "第六十六条",
+      "content_en": "Article 66 The People's Courts, People's Procuratorates and public security organs may, according to the circumstances of the case, summon a criminal suspect or defendant for interrogation by force, release him on bail pending investigation or trial, or place him under residential surveillance."
+    },
+    {
+      "article_number": "第六十七条",
+      "content_en": "Article 67 The People's Courts, People's Procuratorates and public security organs may release a criminal suspect or defendant on bail pending investigation or trial if he falls under any of the following circumstances:\n(1) He may be sentenced to public surveillance, criminal detention or independently subject to supplementary punishment;\n(2) He may be sentenced to fixed-term imprisonment or a heavier penalty, and releasing him on bail pending investigation or trial would not create a danger to society;\n(3) He has a serious illness, is unable to care for himself, or is a woman who is pregnant or is nursing her own infant, and releasing him on bail pending investigation or trial would not create a danger to society;\n(4) The period of custody has expired and the case has not been concluded, requiring a release on bail pending investigation or trial.\nRelease on bail pending investigation or trial shall be executed by the public security organ."
+    },
+    {
+      "article_number": "第六十八条",
+      "content_en": "Article 68 When a People's Court, People's Procuratorate or public security organ decides to release a criminal suspect or defendant on bail pending investigation or trial, it shall order the criminal suspect or defendant to provide a guarantor or pay a deposit."
+    },
+    {
+      "article_number": "第六十九条",
+      "content_en": "Article 69 A guarantor must meet the following conditions:\n(1) Having no connection with the case;\n(2) Having the ability to fulfill the guarantee obligations;\n(3) Enjoying political rights and not being subject to restrictions on personal freedom;\n(4) Having a fixed domicile and income."
+    },
+    {
+      "article_number": "第七十条",
+      "content_en": "Article 70 A guarantor shall perform the following obligations:\n(1) Supervising the person released on bail to comply with the provisions of Article 71 of this Law;\n(2) If discovering that the person released on bail may have committed or has committed a violation of Article 71 of this Law, promptly reporting to the executing authority.\nIf the person released on bail commits an act violating Article 71 of this Law and the guarantor has failed to fulfill the guarantee obligations, the guarantor shall be subject to a fine; if a crime is constituted, criminal liability shall be investigated according to law."
+    },
+    {
+      "article_number": "第七十一条",
+      "content_en": "Article 71 A criminal suspect or defendant released on bail pending investigation or trial shall comply with the following provisions:\n(1) Not leaving the city or county where he resides without the approval of the executing authority;\n(2) Reporting to the executing authority within 24 hours if his address, work unit or contact information changes;\n(3) Appearing before the authority in a timely manner when summoned;\n(4) Not interfering with witness testimony in any form;\n(5) Not destroying or forging evidence or colluding with others.\nThe People's Court, People's Procuratorate or public security organ may, according to the circumstances of the case, order the criminal suspect or defendant released on bail to comply with one or more of the following provisions:\n(1) Not entering specific premises;\n(2) Not meeting or communicating with specific persons;\n(3) Not engaging in specific activities;\n(4) Surrendering his passport and other exit-entry documents and driver's license to the executing authority for safekeeping.\nIf a criminal suspect or defendant released on bail violates the provisions of the preceding two paragraphs and has paid a deposit, the deposit shall be partially or wholly forfeited, and depending on the circumstances, the criminal suspect or defendant shall be ordered to make a statement of repentance, pay a new deposit, provide a new guarantor, or be placed under residential surveillance or arrested.\nIf a criminal suspect or defendant who has violated the provisions on release on bail needs to be arrested, he may be detained in advance."
+    },
+    {
+      "article_number": "第七十二条",
+      "content_en": "Article 72 The authority that decides to release a person on bail pending investigation or trial shall determine the amount of the deposit by comprehensively considering the need to ensure the normal conduct of the proceedings, the danger to society posed by the person released on bail, the nature and circumstances of the case, the severity of the possible punishment, and the economic situation of the person released on bail.\nThe person providing the deposit shall deposit it into a special account designated by the executing authority in a bank."
+    },
+    {
+      "article_number": "第七十三条",
+      "content_en": "Article 73 If a criminal suspect or defendant has not violated the provisions of Article 71 of this Law during the period of release on bail pending investigation or trial, upon the conclusion of the release on bail, he may collect the returned deposit from the bank by presenting the notice of release from bail or relevant legal documents."
+    },
+    {
+      "article_number": "第七十四条",
+      "content_en": "Article 74 The People's Courts, People's Procuratorates and public security organs may place a criminal suspect or defendant under residential surveillance if he meets the conditions for arrest and falls under any of the following circumstances:\n(1) He has a serious illness and is unable to care for himself;\n(2) He is a woman who is pregnant or is nursing her own infant;\n(3) He is the sole supporter of a person who is unable to care for himself;\n(4) Due to the special circumstances of the case or the needs of handling the case, residential surveillance is more appropriate;\n(5) The period of custody has expired and the case has not been concluded, requiring residential surveillance.\nIf a criminal suspect or defendant meets the conditions for release on bail pending investigation or trial but is unable to provide a guarantor or pay a deposit, he may be placed under residential surveillance.\nResidential surveillance shall be executed by the public security organ."
+    },
+    {
+      "article_number": "第七十五条",
+      "content_en": "Article 75 Residential surveillance shall be executed at the domicile of the criminal suspect or defendant; if he has no fixed domicile, it may be executed at a designated residence. For those suspected of crimes of endangering national security or terrorist activities, if execution at the domicile may hinder the investigation, it may also be executed at a designated residence with the approval of the public security organ at the next higher level. However, it shall not be executed in custody facilities or specialized case-handling sites.\nIf residential surveillance is executed at a designated residence, the family members of the person under residential surveillance shall be notified within 24 hours after the execution of the surveillance, unless it is impossible to do so.\nThe provisions of Article 34 of this Law shall apply to the entrustment of defense counsel by a criminal suspect or defendant under residential surveillance.\nThe People's Procuratorate shall supervise whether the decision and execution of designated residence surveillance are lawful."
+    },
+    {
+      "article_number": "第七十六条",
+      "content_en": "Article 76 The period of designated residence surveillance shall be deducted from the term of sentence. If sentenced to public surveillance, one day of residential surveillance shall be deducted from one day of the sentence; if sentenced to criminal detention or fixed-term imprisonment, two days of residential surveillance shall be deducted from one day of the sentence."
+    },
+    {
+      "article_number": "第七十七条",
+      "content_en": "Article 77 A criminal suspect or defendant under residential surveillance shall comply with the following provisions:\n(1) Not leaving the premises where he is under residential surveillance without the approval of the executing authority;\n(2) Not meeting or communicating with others without the approval of the executing authority;\n(3) Appearing before the authority in a timely manner when summoned;\n(4) Not interfering with witness testimony in any form;\n(5) Not destroying or forging evidence or colluding with others;\n(6) Surrendering his passport and other exit-entry documents, identity documents and driver's license to the executing authority for safekeeping.\nIf a criminal suspect or defendant under residential surveillance violates the provisions of the preceding paragraph and the circumstances are serious, he may be arrested; if an arrest is necessary, he may be detained in advance."
+    },
+    {
+      "article_number": "第七十八条",
+      "content_en": "Article 78 The executing authority may use electronic monitoring, irregular inspections and other surveillance methods to monitor the compliance of a criminal suspect or defendant under residential surveillance with the provisions on residential surveillance; during the investigation period, it may monitor the communications of the criminal suspect under residential surveillance."
+    },
+    {
+      "article_number": "第七十九条",
+      "content_en": "Article 79 The period of release on bail pending investigation or trial for a criminal suspect or defendant by the People's Court, People's Procuratorate or public security organ shall not exceed 12 months in total, and the period of residential surveillance shall not exceed 6 months in total.\nDuring the period of release on bail pending investigation or trial or residential surveillance, the investigation, prosecution and adjudication of the case shall not be interrupted. If it is discovered that criminal liability should not be investigated, or the period of release on bail or residential surveillance has expired, the release on bail or residential surveillance shall be promptly terminated. The person released on bail or under residential surveillance and the relevant entities shall be promptly notified of the termination."
+    },
+    {
+      "article_number": "第八十条",
+      "content_en": "Article 80 Arrest of a criminal suspect or defendant must be approved by the People's Procuratorate or decided by the People's Court, and shall be executed by the public security organ."
+    },
+    {
+      "article_number": "第八十一条",
+      "content_en": "Article 81 If there is evidence of criminal facts, and a criminal suspect or defendant may be sentenced to a punishment of not less than fixed-term imprisonment, and if release on bail pending investigation or trial is insufficient to prevent the following social dangers, he shall be arrested:\n(a) he may commit a new crime;\n(b) there is a real danger of jeopardizing national security, public safety, or social order;\n(c) he may destroy or fabricate evidence, interfere with witness testimony, or collude with others to make false statements;\n(d) he may retaliate against the victim, the reporting person, or the accuser;\n(e) he may attempt to commit suicide or escape.\nWhen approving or deciding on an arrest, the nature and circumstances of the crime suspected of being committed by the criminal suspect or defendant, as well as his admission of guilt and acceptance of punishment, shall be considered as factors in assessing whether there is a social danger.\nIf there is evidence of criminal facts and the criminal suspect or defendant may be sentenced to a punishment of not less than ten years of fixed-term imprisonment, or if there is evidence of criminal facts and the criminal suspect or defendant may be sentenced to a punishment of not less than fixed-term imprisonment and he has previously intentionally committed a crime or his identity is unknown, he shall be arrested.\nIf a criminal suspect or defendant who is released on bail pending investigation or trial or placed under residential surveillance violates the provisions on release on bail pending investigation or trial or residential surveillance, and the circumstances are serious, he may be arrested."
+    },
+    {
+      "article_number": "第八十二条",
+      "content_en": "Article 82 The public security organ may detain a culprit caught in the act or a major suspect if any of the following circumstances exists:\n(a) he is preparing to commit a crime, in the process of committing a crime, or is discovered immediately after committing a crime;\n(b) the victim or a person who witnessed the crime on the spot identifies him as having committed the crime;\n(c) evidence of a crime is found on his person or at his residence;\n(d) after committing a crime, he attempts to commit suicide, escape, or is in flight;\n(e) there is a possibility of destroying or fabricating evidence or colluding with others to make false statements;\n(f) he does not tell his true name or address, and his identity is unknown;\n(g) there is a major suspicion that he commits crimes while moving from place to place, repeatedly commits crimes, or commits crimes in partnership."
+    },
+    {
+      "article_number": "第八十三条",
+      "content_en": "Article 83 When a public security organ serves a detention or arrest warrant in a different locality, it shall notify the public security organ of the locality where the detained or arrested person is located, and that public security organ shall cooperate."
+    },
+    {
+      "article_number": "第八十四条",
+      "content_en": "Article 84 Any citizen may immediately seize and deliver to a public security organ, a People's Procuratorate, or a People's Court for handling any person falling under any of the following circumstances:\n(a) he is in the process of committing a crime or is discovered immediately after committing a crime;\n(b) he is wanted;\n(c) he escapes from prison;\n(d) he is being pursued."
+    },
+    {
+      "article_number": "第八十五条",
+      "content_en": "Article 85 When a public security organ detains a person, it must produce a detention warrant.\nAfter detention, the detained person shall be immediately delivered to a detention house for custody, and the time shall not exceed twenty-four hours. Unless it is impossible to notify or in cases where the crime involves national security or terrorist activities and notification may hinder the investigation, the family of the detained person shall be notified within twenty-four hours after detention. After the circumstances that hinder the investigation disappear, the family of the detained person shall be immediately notified."
+    },
+    {
+      "article_number": "第八十六条",
+      "content_en": "Article 86 The public security organ shall interrogate a detained person within twenty-four hours after detention. If it is discovered that the person should not have been detained, he must be immediately released and issued a release certificate."
+    },
+    {
+      "article_number": "第八十七条",
+      "content_en": "Article 87 When a public security organ requests approval for the arrest of a criminal suspect, it shall submit a written request for approval of arrest together with the case files and evidence to the People's Procuratorate at the same level for examination and approval. If necessary, the People's Procuratorate may send personnel to participate in the public security organ's discussion of major cases."
+    },
+    {
+      "article_number": "第八十八条",
+      "content_en": "Article 88 When a People's Procuratorate examines and approves an arrest, it may interrogate the criminal suspect; if any of the following circumstances exists, the criminal suspect shall be interrogated:\n(a) there are doubts about whether the conditions for arrest are met;\n(b) the criminal suspect requests to make a statement in person to the procuratorial personnel;\n(c) there may be major illegal activities in the investigation.\nWhen a People's Procuratorate examines and approves an arrest, it may question witnesses and other litigation participants and hear the opinions of defense counsel; if defense counsel makes a request, the opinions shall be heard."
+    },
+    {
+      "article_number": "第八十九条",
+      "content_en": "Article 89 The decision to approve or disapprove the arrest of a criminal suspect by the People's Procuratorate shall be made by the chief procurator. Major cases shall be submitted to the procuratorial committee for discussion and decision."
+    },
+    {
+      "article_number": "第九十条",
+      "content_en": "Article 90 After examining a case for which the public security organ requests approval of arrest, the People's Procuratorate shall, based on the circumstances, decide separately whether to approve or disapprove the arrest. For a decision to approve the arrest, the public security organ shall immediately execute it and notify the People's Procuratorate of the execution in a timely manner. If the arrest is disapproved, the People's Procuratorate shall state the reasons, and if supplementary investigation is needed, it shall simultaneously notify the public security organ."
+    },
+    {
+      "article_number": "第九十一条",
+      "content_en": "Article 91 If the public security organ considers it necessary to arrest a detained person, it shall, within three days after detention, submit a request to the People's Procuratorate for examination and approval. Under special circumstances, the time for submitting the request for examination and approval may be extended by one to four days.\nFor major suspects who commit crimes while moving from place to place, repeatedly commit crimes, or commit crimes in partnership, the time for submitting the request for examination and approval may be extended to thirty days.\nThe People's Procuratorate shall, within seven days after receiving the written request for approval of arrest from the public security organ, make a decision to approve or disapprove the arrest. If the People's Procuratorate disapproves the arrest, the public security organ shall immediately release the person after receiving the notice and notify the People's Procuratorate of the execution in a timely manner. If further investigation is needed and the conditions for release on bail pending investigation or trial or residential surveillance are met, release on bail pending investigation or trial or residential surveillance shall be granted according to law."
+    },
+    {
+      "article_number": "第九十二条",
+      "content_en": "Article 92 If the public security organ considers the decision of the People's Procuratorate to disapprove the arrest to be erroneous, it may request reconsideration, but the detained person must be immediately released. If the public security organ's opinion is not accepted, it may submit a request for review to the People's Procuratorate at the next higher level. The higher-level People's Procuratorate shall immediately conduct a review and decide whether to change the decision, and notify the lower-level People's Procuratorate and public security organ to execute it."
+    },
+    {
+      "article_number": "第九十三条",
+      "content_en": "Article 93 When a public security organ arrests a person, it must produce an arrest warrant.\nAfter arrest, the arrested person shall be immediately delivered to a detention house for custody. Unless it is impossible to notify, the family of the arrested person shall be notified within twenty-four hours after the arrest."
+    },
+    {
+      "article_number": "第九十四条",
+      "content_en": "Article 94 For a person whose arrest is decided by a People's Court or a People's Procuratorate, or for a person whose arrest is approved by the People's Procuratorate, the public security organ must, in each case, interrogate the person within twenty-four hours after the arrest. If it is discovered that the person should not have been arrested, he must be immediately released and issued a release certificate."
+    },
+    {
+      "article_number": "第九十五条",
+      "content_en": "Article 95 After a criminal suspect or defendant is arrested, the People's Procuratorate shall still review the necessity of custody. If continued custody is unnecessary, it shall recommend that the person be released or that the compulsory measures be changed. The relevant organ shall notify the People's Procuratorate of the handling within ten days."
+    },
+    {
+      "article_number": "第九十六条",
+      "content_en": "Article 96 If a People's Court, a People's Procuratorate, or a public security organ discovers that the compulsory measures taken against a criminal suspect or defendant are improper, it shall promptly revoke or change them. If the public security organ releases an arrested person or changes the arrest measures, it shall notify the original People's Procuratorate that approved the arrest."
+    },
+    {
+      "article_number": "第九十七条",
+      "content_en": "Article 97 A criminal suspect or defendant, his legal representative, close relative, or defense counsel has the right to apply for a change of compulsory measures. The People's Court, People's Procuratorate, or public security organ shall, after receiving the application, make a decision within three days; if the change of compulsory measures is not approved, the applicant shall be informed and the reasons for disapproval shall be stated."
+    },
+    {
+      "article_number": "第九十八条",
+      "content_en": "Article 98 If a case in which a criminal suspect or defendant is in custody cannot be concluded within the time limits for investigation and custody, examination and prosecution, first instance, and second instance provided by this Law, the criminal suspect or defendant shall be released; if further investigation or adjudication is necessary, the criminal suspect or defendant may be released on bail pending investigation or trial or placed under residential surveillance."
+    },
+    {
+      "article_number": "第九十九条",
+      "content_en": "Article 99 For a criminal suspect or defendant against whom compulsory measures have been taken and the statutory time limit expires, the People's Court, People's Procuratorate, or public security organ shall release the person, cancel the release on bail pending investigation or trial or residential surveillance, or change the compulsory measures according to law. A criminal suspect or defendant, his legal representative, close relative, or defense counsel has the right to request the cancellation of compulsory measures when the statutory time limit for compulsory measures taken by the People's Court, People's Procuratorate, or public security organ expires."
+    },
+    {
+      "article_number": "第一百条",
+      "content_en": "Article 100 If, in the process of examining and approving an arrest, the People's Procuratorate discovers any illegal activities in the investigation carried out by the public security organ, it shall notify the public security organ to rectify them, and the public security organ shall notify the People's Procuratorate of the rectification."
+    },
+    {
+      "article_number": "第一百零一条",
+      "content_en": "Article 101 If a victim has suffered material losses as a result of a criminal act committed by a defendant, the victim has the right to file an incidental civil action during the criminal action. If the victim dies or loses capacity, his legal representative or close relative has the right to file an incidental civil action.\nIf state property or collective property suffers losses, the People's Procuratorate may file an incidental civil action when initiating a public prosecution."
+    },
+    {
+      "article_number": "第一百零二条",
+      "content_en": "Article 102 When necessary, a People's Court may take preservation measures, such as sealing up, seizing, or freezing the property of the defendant. The plaintiff in the incidental civil action or the People's Procuratorate may apply to the People's Court for preservation measures. When a People's Court takes preservation measures, the relevant provisions of the Civil Procedure Law shall apply."
+    },
+    {
+      "article_number": "第一百零三条",
+      "content_en": "Article 103 When hearing an incidental civil action case, a People's Court may conduct mediation or make a judgment or ruling based on the material losses."
+    },
+    {
+      "article_number": "第一百零四条",
+      "content_en": "Article 104 An incidental civil action shall be adjudicated together with the criminal case. Only to prevent excessive delay in the adjudication of the criminal case may the same adjudication organization continue to hear the incidental civil action after the criminal case has been adjudicated."
+    },
+    {
+      "article_number": "第一百零五条",
+      "content_en": "Article 105 Time periods shall be calculated in hours, days, and months.\nThe hour or day on which a time period begins shall not be counted within the time period.\nThe statutory time period shall not include travel time. If an appeal or other document is already posted before the expiration of the time period, it shall not be considered overdue.\nIf the last day of a time period falls on a holiday, the first day after the holiday shall be considered the expiration date, except for a criminal suspect, defendant, or convict in custody, for whom the time period shall run until the expiration date and shall not be extended due to holidays."
+    },
+    {
+      "article_number": "第一百零六条",
+      "content_en": "Article 106 If a party misses a time limit due to irresistible reasons or other legitimate grounds, he may, within five days after the removal of the obstacles, apply to continue the procedural activities that should have been completed before the time limit expired.\nWhether to grant the application mentioned in the preceding paragraph shall be decided by the People's Court."
+    },
+    {
+      "article_number": "第一百零七条",
+      "content_en": "Article 107 Summons, notices, and other procedural documents shall be served on the addressee in person; if the addressee is absent, they may be received on his behalf by an adult family member or a responsible person of the unit where he works.\nIf the addressee or the person receiving the documents on his behalf refuses to accept or sign or seal the documents, the server may invite a neighbor or other witness to be present, explain the situation, leave the documents at the place of residence, note on the service certificate the reason for refusal and the date of service, and sign it, and the service shall be deemed to have been completed."
+    },
+    {
+      "article_number": "第一百零八条",
+      "content_en": "Article 108 For the purposes of this Law, the following terms shall have the meanings set forth below:\n(a) \"Investigation\" refers to the work of collecting evidence and ascertaining the facts of a criminal case as conducted according to law by a public security organ or People's Procuratorate, and the related compulsory measures;\n(b) \"Party\" refers to the victim, the private prosecutor, the criminal suspect, the defendant, the plaintiff in an incidental civil action, and the defendant in an incidental civil action;\n(c) \"Legal representative\" refers to the parent, adoptive parent, guardian of the represented person, and the representative of the organ or organization responsible for protection;\n(d) \"Litigation participant\" refers to the party, the legal representative, the litigation agent, the defense counsel, the witness, the expert evaluator, and the interpreter;\n(e) \"Litigation agent\" refers to a person entrusted to participate in the proceedings on behalf of the victim of a public prosecution case and his legal representative or close relative, on behalf of the private prosecutor of a private prosecution case and his legal representative, and on behalf of the parties to an incidental civil action and their legal representatives;\n(f) \"Close relative\" refers to husband, wife, father, mother, son, daughter, and full siblings."
+    },
+    {
+      "article_number": "第一百零九条",
+      "content_en": "Article 109 If a public security organ or People's Procuratorate discovers criminal facts or a criminal suspect, it shall open a case and conduct an investigation within its jurisdiction."
+    },
+    {
+      "article_number": "第一百一十条",
+      "content_en": "Article 110 Any unit or individual that discovers criminal facts or a criminal suspect has the right and the duty to report or provide information to a public security organ, People's Procuratorate, or People's Court.\nA victim has the right to report or file a complaint with a public security organ, People's Procuratorate, or People's Court regarding criminal facts or a criminal suspect that infringes upon his personal or property rights.\nA public security organ, People's Procuratorate, or People's Court shall accept all reports, complaints, and information. If the matter does not fall within its jurisdiction, it shall transfer the case to the competent authority for handling and inform the reporter, complainant, or informant; if the matter does not fall within its jurisdiction but emergency measures must be taken, it shall first take emergency measures and then transfer the case to the competent authority.\nIf a criminal voluntarily surrenders to a public security organ, People's Procuratorate, or People's Court, the provisions of paragraph 3 shall apply."
+    },
+    {
+      "article_number": "第一百一十一条",
+      "content_en": "Article 111 Reports, complaints, and information may be made in writing or orally. The personnel receiving oral reports, complaints, or information shall make a record, and after reading it to ensure accuracy, the reporter, complainant, or informant shall sign or seal it.\nThe personnel receiving complaints or information shall inform the complainant or informant of the legal liability for false accusation. However, as long as facts are not fabricated or evidence not forged, even if there are discrepancies in the facts of the complaint or information, or even if it is a mistaken accusation, it shall be strictly distinguished from false accusation.\nA public security organ, People's Procuratorate, or People's Court shall ensure the safety of the reporter, complainant, informant, and their close relatives. If the reporter, complainant, or informant does not wish to make his name and the act of reporting, complaining, or providing information public, confidentiality shall be maintained."
+    },
+    {
+      "article_number": "第一百一十二条",
+      "content_en": "Article 112 A People's Court, People's Procuratorate, or public security organ shall, within its jurisdiction, promptly examine the materials of reports, complaints, information, and voluntary surrenders. If it believes that there are criminal facts and that criminal liability shall be investigated, it shall open a case; if it believes that there are no criminal facts, or that the criminal facts are obviously minor and do not require the investigation of criminal liability, it shall not open a case and shall inform the complainant of the reasons for not opening a case. If the complainant disagrees, he may apply for reconsideration."
+    },
+    {
+      "article_number": "第一百一十三条",
+      "content_en": "Article 113 If a People's Procuratorate considers that a public security organ should have opened a case for investigation but fails to do so, or if a victim submits to the People's Procuratorate that a public security organ should have opened a case for investigation but fails to do so, the People's Procuratorate shall request the public security organ to provide the reasons for not opening a case. If the People's Procuratorate finds the reasons given by the public security organ for not opening a case to be untenable, it shall notify the public security organ to open a case, and the public security organ shall open a case upon receiving the notice."
+    },
+    {
+      "article_number": "第一百一十四条",
+      "content_en": "Article 114 For a private prosecution case, the victim has the right to directly file a lawsuit with the People's Court. If the victim dies or loses capacity, his legal representative or close relative has the right to file a lawsuit with the People's Court. The People's Court shall accept the case according to law."
+    },
+    {
+      "article_number": "第一百一十五条",
+      "content_en": "Article 115 A public security organ shall conduct an investigation into a criminal case that has been opened, collect and gather evidence materials proving whether the criminal suspect is guilty or innocent, or whether the crime is light or serious. A culprit caught in the act or a major suspect may be detained in advance according to law, and a criminal suspect who meets the conditions for arrest shall be arrested according to law."
+    },
+    {
+      "article_number": "第一百一十六条",
+      "content_en": "Article 116 After conducting an investigation into a case where there is evidence of criminal facts, a public security organ shall conduct a preliminary hearing to verify the evidence materials collected and gathered."
+    },
+    {
+      "article_number": "第一百一十七条",
+      "content_en": "Article 117 A party, defense counsel, litigation agent, or interested person has the right to file a complaint or accusation with the relevant authority against a judicial organ or its personnel for any of the following acts:\n(a) failing to release, cancel, or change compulsory measures after the statutory time limit for the compulsory measures has expired;\n(b) failing to return the release on bail pending investigation or trial deposit that should be returned;\n(c) taking measures to seal up, seize, or freeze property unrelated to the case;\n(d) failing to lift the sealing up, seizure, or freezing that should have been lifted;\n(e) embezzling, misappropriating, privately dividing, exchanging, or using property that has been sealed up, seized, or frozen in violation of regulations.\nThe authority that accepts the complaint or accusation shall handle it promptly. If a party is dissatisfied with the handling, he may file a complaint with the People's Procuratorate at the same level; for cases directly accepted by the People's Procuratorate, a complaint may be filed with the People's Procuratorate at the next higher level. The People's Procuratorate shall promptly examine the complaint, and if the facts are verified, it shall notify the relevant authority to make corrections."
+    },
+    {
+      "article_number": "第一百一十八条",
+      "content_en": "Article 118 The interrogation of a criminal suspect must be conducted by investigators from the People's Procuratorate or the public security organ. During interrogation, there shall be no fewer than two investigators.\nAfter a criminal suspect is delivered to a detention house for custody, the interrogation by investigators shall be conducted in the detention house."
+    },
+    {
+      "article_number": "第一百一十九条",
+      "content_en": "Article 119 A criminal suspect who does not need to be arrested or detained may be summoned to a designated location within the city or county where he is located or to his residence for interrogation, but the identity certificate of the People's Procuratorate or public security organ shall be produced. For a criminal suspect discovered at the scene, an oral summons may be made after presenting a work certificate, but this shall be noted in the interrogation record.\nThe duration of each summons or compulsory appearance shall not exceed twelve hours; if the case is exceptionally serious or complex and requires measures of detention or arrest, the duration of the summons or compulsory appearance shall not exceed twenty-four hours.\nA criminal suspect shall not be detained under duress by way of continuous summons or compulsory appearance. When summoning or compelling the appearance of a criminal suspect, the criminal suspect shall be given sufficient time for meals and necessary rest."
+    },
+    {
+      "article_number": "第一百二十条",
+      "content_en": "Article 120 When interrogating a criminal suspect, the investigator shall first ask the criminal suspect whether he has committed any crime, allow him to state the circumstances of the crime or provide a defense of innocence, and then ask him questions. The criminal suspect shall truthfully answer the investigator's questions. However, he has the right to refuse to answer questions that are irrelevant to the case.\nWhen interrogating a criminal suspect, the investigator shall inform the criminal suspect of the litigation rights he enjoys and the legal provisions that lenient treatment may be granted if he truthfully confesses his crimes and admits guilt and accepts punishment."
+    },
+    {
+      "article_number": "第一百二十一条",
+      "content_en": "Article 121 When interrogating a criminal suspect who is deaf or mute, an interpreter proficient in sign language shall be present, and such circumstance shall be recorded in the written record."
+    },
+    {
+      "article_number": "第一百二十二条",
+      "content_en": "Article 122 The record of interrogation shall be verified by the criminal suspect. If the criminal suspect is unable to read, the record shall be read aloud to him. If there are omissions or errors in the record, the criminal suspect may request supplements or corrections. After the criminal suspect acknowledges that the record is free of errors, he shall sign or affix his seal. The investigatory personnel shall also sign the record. If the criminal suspect requests to provide a written confession himself, such request shall be permitted. When necessary, the investigatory personnel may also request the criminal suspect to write a confession in his own hand."
+    },
+    {
+      "article_number": "第一百二十三条",
+      "content_en": "Article 123 When interrogating a criminal suspect, the investigatory personnel may make audio or video recordings of the interrogation process; for cases where the criminal suspect may be sentenced to life imprisonment or the death penalty, or other major criminal cases, audio or video recordings of the interrogation process shall be made.\nThe audio or video recording shall be made continuously and maintained in its entirety."
+    },
+    {
+      "article_number": "第一百二十四条",
+      "content_en": "Article 124 The investigatory personnel may question witnesses at the scene, or at the witness's entity, residence, or a location designated by the witness. When necessary, they may notify the witness to provide testimony at the People's Procuratorate or the public security organ. When questioning a witness at the scene, their work credentials shall be presented. When questioning a witness at the witness's entity, residence, or a designated location, the certification documents of the People's Procuratorate or the public security organ shall be presented.\nWitnesses shall be questioned individually."
+    },
+    {
+      "article_number": "第一百二十五条",
+      "content_en": "Article 125 When questioning a witness, he shall be informed that he shall truthfully provide evidence and testimony, and of the legal liability for knowingly giving false testimony or concealing incriminating evidence."
+    },
+    {
+      "article_number": "第一百二十六条",
+      "content_en": "Article 126 The provisions of Article 122 of this Law also apply to the questioning of witnesses."
+    },
+    {
+      "article_number": "第一百二十七条",
+      "content_en": "Article 127 The provisions of this Section apply to the questioning of victims."
+    },
+    {
+      "article_number": "第一百二十八条",
+      "content_en": "Article 128 The investigatory personnel shall conduct inspection or examination of the crime scene, articles, persons, and corpses related to a crime. When necessary, persons with specialized knowledge may be assigned or engaged to conduct the inspection or examination under the direction of the investigatory personnel."
+    },
+    {
+      "article_number": "第一百二十九条",
+      "content_en": "Article 129 Any entity or individual shall have the obligation to protect the crime scene and immediately notify the public security organ to dispatch personnel to conduct an inspection."
+    },
+    {
+      "article_number": "第一百三十条",
+      "content_en": "Article 130 When conducting an inspection or examination, the investigatory personnel must possess the certification documents of the People's Procuratorate or the public security organ."
+    },
+    {
+      "article_number": "第一百三十一条",
+      "content_en": "Article 131 For a corpse of unknown cause of death, the public security organ has the authority to decide on an autopsy and shall notify the family members of the deceased to be present."
+    },
+    {
+      "article_number": "第一百三十二条",
+      "content_en": "Article 132 To ascertain certain characteristics, injuries, or physiological conditions of a victim or criminal suspect, a physical examination may be conducted, and fingerprint information may be collected, along with biological samples such as blood and urine.\nIf the criminal suspect refuses the examination, the investigatory personnel may conduct a compulsory examination when they deem it necessary.\nAn examination of a woman's body shall be conducted by a female staff member or a physician."
+    },
+    {
+      "article_number": "第一百三十三条",
+      "content_en": "Article 133 The details of an inspection or examination shall be recorded in a written record, which shall be signed or affixed with the seal of the persons who participated in the inspection or examination and the witnesses."
+    },
+    {
+      "article_number": "第一百三十四条",
+      "content_en": "Article 134 When reviewing a case, if the People's Procuratorate considers that a re-inspection or re-examination of the public security organ's inspection or examination is necessary, it may request the public security organ to conduct a re-inspection or re-examination, and may send procuratorial personnel to participate."
+    },
+    {
+      "article_number": "第一百三十五条",
+      "content_en": "Article 135 To clarify the circumstances of a case, an investigative experiment may be conducted when necessary, with the approval of the person in charge of the public security organ.\nThe details of the investigative experiment shall be recorded in a written record, which shall be signed or affixed with the seal of the persons who participated in the experiment.\nInvestigative experiments shall prohibit any act that may cause danger, insult human dignity, or be contrary to public decency."
+    },
+    {
+      "article_number": "第一百三十六条",
+      "content_en": "Article 136 To collect criminal evidence and apprehend the criminal, the investigatory personnel may conduct searches of the persons, articles, residences, and other relevant places of criminal suspects and persons who may be hiding criminals or criminal evidence."
+    },
+    {
+      "article_number": "第一百三十七条",
+      "content_en": "Article 137 Any entity or individual shall have the obligation to, upon request of the People's Procuratorate or the public security organ, hand over material evidence, documentary evidence, audio-visual materials, and other evidence that may prove the guilt or innocence of the criminal suspect."
+    },
+    {
+      "article_number": "第一百三十八条",
+      "content_en": "Article 138 A search warrant must be presented to the person to be searched when conducting a search.\nWhen executing an arrest or detention, in case of an emergency, a search may be conducted without a separate search warrant."
+    },
+    {
+      "article_number": "第一百三十九条",
+      "content_en": "Article 139 During a search, the person to be searched or his family members, neighbors, or other witnesses shall be present.\nA search of a woman's body shall be conducted by female staff members."
+    },
+    {
+      "article_number": "第一百四十条",
+      "content_en": "Article 140 The details of a search shall be recorded in a written record, which shall be signed or affixed with the seal of the investigatory personnel, the person searched or his family members, and the neighbors or other witnesses. If the person searched or his family members are at large or refuse to sign or affix their seals, such fact shall be noted in the record."
+    },
+    {
+      "article_number": "第一百四十一条",
+      "content_en": "Article 141 Any property or documents discovered during investigative activities that may be used to prove the guilt or innocence of the criminal suspect shall be sealed or seized; property or documents unrelated to the case shall not be sealed or seized.\nSealed or seized property or documents shall be properly kept or stored under seal, and shall not be used, swapped, or damaged."
+    },
+    {
+      "article_number": "第一百四十二条",
+      "content_en": "Article 142 Sealed or seized property or documents shall be checked and counted in the presence of the witnesses present and the holder of the sealed or seized property or documents, and a list shall be made on the spot in duplicate, signed or affixed with the seals of the investigatory personnel, witnesses, and the holder. One copy shall be given to the holder, and the other shall be attached to the case file for reference."
+    },
+    {
+      "article_number": "第一百四十三条",
+      "content_en": "Article 143 When investigatory personnel deem it necessary to seize the mail or telegrams of a criminal suspect, upon approval by the public security organ or the People's Procuratorate, they may notify the postal and telecommunications authorities to inspect and hand over the relevant mail or telegrams for seizure.\nWhen continued seizure is no longer necessary, the postal and telecommunications authorities shall be notified promptly."
+    },
+    {
+      "article_number": "第一百四十四条",
+      "content_en": "Article 144 The People's Procuratorate or the public security organ may, according to the needs of criminal investigation, inquire into or freeze the property of a criminal suspect, including deposits, remittances, bonds, stocks, fund shares, etc., in accordance with regulations. Relevant entities and individuals shall cooperate.\nIf the property of a criminal suspect, including deposits, remittances, bonds, stocks, fund shares, etc., has already been frozen, it shall not be frozen again."
+    },
+    {
+      "article_number": "第一百四十五条",
+      "content_en": "Article 145 If, upon investigation, sealed or seized property, documents, mail, or telegrams, or frozen property such as deposits, remittances, bonds, stocks, or fund shares, are confirmed to be unrelated to the case, the sealing, seizure, or freezing shall be lifted within three days and the items shall be returned."
+    },
+    {
+      "article_number": "第一百四十六条",
+      "content_en": "Article 146 To clarify the circumstances of a case and resolve specific technical issues, persons with specialized knowledge shall be assigned or engaged to conduct expert evaluations."
+    },
+    {
+      "article_number": "第一百四十七条",
+      "content_en": "Article 147 After conducting an expert evaluation, the expert witness shall produce an expert opinion and sign it.\nIf an expert witness intentionally makes a false evaluation, he shall bear legal liability."
+    },
+    {
+      "article_number": "第一百四十八条",
+      "content_en": "Article 148 The investigative organ shall notify the criminal suspect and the victim of the expert opinion to be used as evidence. If the criminal suspect or victim makes a request, a supplementary evaluation or a new evaluation may be conducted."
+    },
+    {
+      "article_number": "第一百四十九条",
+      "content_en": "Article 149 The time period for conducting a psychiatric evaluation of a criminal suspect shall not be included in the case-handling time limit."
+    },
+    {
+      "article_number": "第一百五十条",
+      "content_en": "Article 150 After filing a case, the public security organ may, for crimes endangering national security, terrorist activities, organized crimes of a mafia nature, major drug crimes, or other crimes that seriously endanger society, and based on the needs of criminal investigation, adopt technical investigation measures after rigorous approval procedures.\nAfter filing a case, the People's Procuratorate may, for major crimes involving serious infringement of citizens' personal rights committed through the abuse of official position, and based on the needs of criminal investigation, adopt technical investigation measures after rigorous approval procedures, and shall hand them over to the relevant authorities for execution in accordance with regulations.\nFor the pursuit of a wanted criminal suspect or defendant who has been approved or decided to be arrested and is at large, technical investigation measures necessary for the pursuit may be adopted after approval."
+    },
+    {
+      "article_number": "第一百五十一条",
+      "content_en": "Article 151 The approval decision shall determine the type and the subjects of application of the technical investigation measures based on the needs of criminal investigation. The approval decision shall be valid for three months from the date of issuance. For cases where continued technical investigation measures are no longer necessary, they shall be promptly terminated. For complex or difficult cases where continued technical investigation measures remain necessary after the validity period expires, the validity period may be extended upon approval, with each extension not exceeding three months."
+    },
+    {
+      "article_number": "第一百五十二条",
+      "content_en": "Article 152 Technical investigation measures shall be executed strictly in accordance with the approved type of measures, subjects of application, and duration.\nInvestigatory personnel shall keep confidential any state secrets, trade secrets, and personal privacy learned during the implementation of technical investigation measures; materials obtained through technical investigation measures that are unrelated to the case must be promptly destroyed.\nMaterials obtained through technical investigation measures may only be used for the investigation, prosecution, and adjudication of crimes and shall not be used for other purposes.\nWhen the public security organ adopts technical investigation measures according to law, relevant entities and individuals shall cooperate and shall keep the relevant information confidential."
+    },
+    {
+      "article_number": "第一百五十三条",
+      "content_en": "Article 153 To clarify the circumstances of a case, when necessary, upon decision by the person in charge of the public security organ, relevant personnel may conduct investigations by concealing their identities. However, they shall not induce others to commit crimes, nor shall they adopt methods that may endanger public safety or cause significant personal danger.\nFor criminal activities involving the delivery of narcotics or other prohibited articles or property, the public security organ may, based on the needs of criminal investigation, carry out controlled delivery in accordance with regulations."
+    },
+    {
+      "article_number": "第一百五十四条",
+      "content_en": "Article 154 Materials collected through investigative measures adopted in accordance with the provisions of this Section may be used as evidence in criminal proceedings. If using such evidence may endanger the personal safety of relevant personnel or may cause other serious consequences, protective measures such as not revealing the identities of relevant personnel or technical methods shall be taken. When necessary, judicial personnel may verify the evidence outside the courtroom."
+    },
+    {
+      "article_number": "第一百五十五条",
+      "content_en": "Article 155 If a criminal suspect who should be arrested is at large, the public security organ may issue a wanted notice and take effective measures to pursue and bring him to justice.\nPublic security organs at all levels may directly issue wanted notices within their respective jurisdictions; where the wanted notice extends beyond their jurisdiction, approval shall be sought from the superior authority with decision-making power to issue it."
+    },
+    {
+      "article_number": "第一百五十六条",
+      "content_en": "Article 156 The period of investigative custody after the arrest of a criminal suspect shall not exceed two months. For cases that are complex and cannot be concluded upon expiry of the time limit, the period may be extended by one month upon approval by the People's Procuratorate at the next higher level."
+    },
+    {
+      "article_number": "第一百五十七条",
+      "content_en": "Article 157 For particularly major and complex cases that, due to special reasons, are not suitable for trial within a relatively long period of time, the Supreme People's Procuratorate shall submit a request to the Standing Committee of the National People's Congress for approval of an extension of the trial proceedings."
+    },
+    {
+      "article_number": "第一百五十八条",
+      "content_en": "Article 158 If the following cases cannot be concluded upon expiry of the time limit specified in Article 156 of this Law, the period may be extended by two months upon approval or decision by the People's Procuratorate of the province, autonomous region, or municipality directly under the Central Government:\n(1) major and complex cases in remote areas with extremely inconvenient transportation;\n(2) major cases involving criminal groups;\n(3) major and complex cases involving itinerant criminal activity; and\n(4) major and complex cases involving a wide scope of crime and difficulties in obtaining evidence."
+    },
+    {
+      "article_number": "第一百五十九条",
+      "content_en": "Article 159 If a criminal suspect may be sentenced to a fixed-term imprisonment of ten years or more, and the extended period in accordance with Article 158 of this Law expires but the investigation still cannot be concluded, the period may be further extended by two months upon approval or decision by the People's Procuratorate of the province, autonomous region, or municipality directly under the Central Government."
+    },
+    {
+      "article_number": "第一百六十条",
+      "content_en": "Article 160 If, during the investigation period, it is discovered that the criminal suspect has committed another major crime, the period of investigative custody shall be recalculated from the date of discovery in accordance with Article 156 of this Law.\nIf a criminal suspect fails to provide his true name or address, or his identity is unknown, his identity shall be investigated, and the period of investigative custody shall be calculated from the date his identity is clarified; however, the investigation and evidence collection regarding his criminal conduct shall not cease. Where the criminal facts are clear, the evidence is true and sufficient, and the identity cannot be verified, he may also be prosecuted and adjudicated under the name he gives."
+    },
+    {
+      "article_number": "第一百六十一条",
+      "content_en": "Article 161 Where a defense lawyer makes a request before the conclusion of investigation of a case, the investigative authority shall hear the opinions of the defense lawyer and record them in the case file. If the defense lawyer submits written opinions, they shall be attached to the case file."
+    },
+    {
+      "article_number": "第一百六十二条",
+      "content_en": "Article 162 Where a case investigated by a public security organ is concluded, the facts of the crime shall be clear, and the evidence shall be reliable and sufficient. The public security organ shall prepare a recommendation for prosecution and transfer it together with the case file materials and evidence to the People's Procuratorate at the same level for review and decision; at the same time, it shall notify the criminal suspect and his defense lawyer of the transfer.\nIf the criminal suspect voluntarily admits guilt and accepts punishment, this shall be recorded in the case file, transferred with the case, and the relevant circumstances shall be stated in the recommendation for prosecution."
+    },
+    {
+      "article_number": "第一百六十三条",
+      "content_en": "Article 163 During the investigation, if it is discovered that the criminal liability of the criminal suspect should not be investigated, the case shall be dismissed; if the criminal suspect has been arrested, he shall be released immediately, a release certificate shall be issued, and the People's Procuratorate that approved the arrest shall be notified."
+    },
+    {
+      "article_number": "第一百六十四条",
+      "content_en": "Article 164 The provisions of this Chapter shall apply to the investigation of cases directly accepted by the People's Procuratorate."
+    },
+    {
+      "article_number": "第一百六十五条",
+      "content_en": "Article 165 Where a case directly accepted by the People's Procuratorate falls under the circumstances specified in Article 81 or Item (4) or (5) of Article 82 of this Law and the arrest or detention of the criminal suspect is necessary, the People's Procuratorate shall make a decision, and the public security organ shall execute it."
+    },
+    {
+      "article_number": "第一百六十六条",
+      "content_en": "Article 166 The People's Procuratorate shall interrogate a person detained in a case directly accepted by it within twenty-four hours after the detention. If it is discovered that the person should not have been detained, he must be released immediately and a release certificate shall be issued."
+    },
+    {
+      "article_number": "第一百六十七条",
+      "content_en": "Article 167 Where the People's Procuratorate considers that a person detained in a case directly accepted by it needs to be arrested, it shall make a decision within fourteen days. Under special circumstances, the time limit for deciding on arrest may be extended by one to three days. If arrest is not necessary, the person shall be released immediately; if further investigation is necessary and the conditions for release on bail pending investigation or trial or residential surveillance are met, the person shall be released on bail pending investigation or trial or placed under residential surveillance according to law."
+    },
+    {
+      "article_number": "第一百六十八条",
+      "content_en": "Article 168 Where a case investigated by the People's Procuratorate is concluded, the People's Procuratorate shall make a decision to initiate a public prosecution, not to initiate a prosecution, or to dismiss the case."
+    },
+    {
+      "article_number": "第一百六十九条",
+      "content_en": "Article 169 All cases that require a public prosecution shall be reviewed and decided by the People's Procuratorate."
+    },
+    {
+      "article_number": "第一百七十条",
+      "content_en": "Article 170 The People's Procuratorate shall review cases transferred by a supervisory authority for prosecution in accordance with the relevant provisions of this Law and the Supervision Law. If, after review, the People's Procuratorate considers that supplementary verification is necessary, it shall return the case to the supervisory authority for supplementary investigation; if necessary, it may conduct supplementary investigation on its own.\nFor a case transferred by a supervisory authority for prosecution in which a custodial measure has been taken, the People's Procuratorate shall first detain the criminal suspect, and the custodial measure shall be automatically revoked. The People's Procuratorate shall, within ten days after the detention, make a decision on whether to arrest, release on bail pending investigation or trial, or place under residential surveillance. Under special circumstances, the time limit for making a decision may be extended by one to four days. The period during which the People's Procuratorate decides to take compulsory measures shall not be included in the time limit for review of prosecution."
+    },
+    {
+      "article_number": "第一百七十一条",
+      "content_en": "Article 171 When reviewing a case, the People's Procuratorate must ascertain:\n(1) Whether the facts and circumstances of the crime are clear, whether the evidence is reliable and sufficient, and whether the determination of the nature of the crime and the charge is correct;\n(2) Whether there are any omitted crimes or other persons whose criminal liability should be investigated;\n(3) Whether the case falls under circumstances where criminal liability should not be investigated;\n(4) Whether there is any incidental civil action;\n(5) Whether the investigation activities are lawful."
+    },
+    {
+      "article_number": "第一百七十二条",
+      "content_en": "Article 172 The People's Procuratorate shall, within one month, make a decision on a case transferred by a supervisory authority or public security organ for prosecution; for a major or complex case, the time limit may be extended by fifteen days. Where the criminal suspect admits guilt and accepts punishment and meets the conditions for applying the quick adjudication procedure, a decision shall be made within ten days; if the possible fixed-term imprisonment imposed exceeds one year, the time limit may be extended to fifteen days.\nFor a case under review for prosecution by the People's Procuratorate where the jurisdiction is changed, the time limit for review of prosecution shall be calculated from the date on which the case is received by the People's Procuratorate to which jurisdiction has been changed."
+    },
+    {
+      "article_number": "第一百七十三条",
+      "content_en": "Article 173 When reviewing a case, the People's Procuratorate shall interrogate the criminal suspect, hear the opinions of the defender or duty lawyer, the victim and his litigation agent, and record them in the case file. If the defender or duty lawyer, the victim or his litigation agent submits written opinions, they shall be attached to the case file.\nWhere the criminal suspect admits guilt and accepts punishment, the People's Procuratorate shall inform him of the procedural rights he enjoys and the legal provisions on admitting guilt and accepting punishment, and shall hear the opinions of the criminal suspect, the defender or duty lawyer, the victim and his litigation agent on the following matters, and record them in the case file:\n(1) The alleged facts, charges and the applicable legal provisions;\n(2) Recommendations for lenient punishment, such as a lighter, mitigated or exempted punishment;\n(3) The procedure applicable to the trial after admitting guilt and accepting punishment;\n(4) Other matters on which opinions need to be heard.\nWhere the People's Procuratorate hears the opinions of a duty lawyer in accordance with the preceding two paragraphs, it shall, in advance, provide the necessary convenience for the duty lawyer to understand the relevant circumstances of the case."
+    },
+    {
+      "article_number": "第一百七十四条",
+      "content_en": "Article 174 Where a criminal suspect voluntarily admits guilt and accepts the sentencing recommendation and the application of procedures, he shall sign a recognition of guilt and acceptance of punishment statement in the presence of a defender or duty lawyer.\nIf a criminal suspect admits guilt and accepts punishment in any of the following circumstances, he is not required to sign a recognition of guilt and acceptance of punishment statement:\n(1) The criminal suspect is blind, deaf, or mute, or is a person with a mental illness who has not completely lost the ability to recognize or control his conduct;\n(2) The legal representative or defender of a juvenile criminal suspect objects to the juvenile's admission of guilt and acceptance of punishment;\n(3) Other circumstances where signing a recognition of guilt and acceptance of punishment statement is not required."
+    },
+    {
+      "article_number": "第一百七十五条",
+      "content_en": "Article 175 When reviewing a case, the People's Procuratorate may request the public security organ to provide the evidence materials necessary for court adjudication; if it considers that there may be circumstances specified in Article 56 of this Law involving the collection of evidence by illegal methods, it may request the public security organ to explain the legality of the evidence collection.\nWhen reviewing a case, if supplementary investigation is necessary, the People's Procuratorate may return the case to the public security organ for supplementary investigation, or may conduct the supplementary investigation on its own.\nFor a case subject to supplementary investigation, the supplementary investigation shall be completed within one month. Supplementary investigation shall be limited to two times. After the supplementary investigation is completed and the case is transferred to the People's Procuratorate, the People's Procuratorate shall recalculate the time limit for review of prosecution.\nFor a case that has undergone supplementary investigation twice, if the People's Procuratorate still considers the evidence insufficient and that the conditions for prosecution are not met, it shall make a decision not to initiate a prosecution."
+    },
+    {
+      "article_number": "第一百七十六条",
+      "content_en": "Article 176 Where the People's Procuratorate considers that the facts of the crime of the criminal suspect have been clarified, the evidence is reliable and sufficient, and criminal liability shall be investigated according to law, it shall make a decision to initiate a prosecution, initiate a public prosecution before the People's Court in accordance with the provisions on adjudication jurisdiction, and transfer the case file materials and evidence to the People's Court.\nWhere the criminal suspect admits guilt and accepts punishment, the People's Procuratorate shall make a sentencing recommendation on matters such as the principal punishment, supplementary punishment, and whether probation shall apply, and shall transfer the recognition of guilt and acceptance of punishment statement and other materials together with the case."
+    },
+    {
+      "article_number": "第一百七十七条",
+      "content_en": "Article 177 Where there is no criminal fact of the criminal suspect, or the circumstances specified in Article 16 of this Law exist, the People's Procuratorate shall make a decision not to initiate a prosecution.\nFor a case where the criminal circumstances are minor and, according to the provisions of the Criminal Law, no punishment is required or punishment may be exempted, the People's Procuratorate may make a decision not to initiate a prosecution.\nWhere the People's Procuratorate decides not to initiate a prosecution, it shall, at the same time, lift the sealing, seizure, or freezing of the property sealed, seized, or frozen during the investigation. If it is necessary to impose an administrative penalty or disciplinary sanction on the person against whom no prosecution is initiated, or to confiscate his illegal gains, the People's Procuratorate shall issue a procuratorial opinion and transfer it to the relevant competent authority for handling. The relevant competent authority shall promptly notify the People's Procuratorate of the result of the handling."
+    },
+    {
+      "article_number": "第一百七十八条",
+      "content_en": "Article 178 A decision not to initiate a prosecution shall be publicly announced, and the written decision not to initiate a prosecution shall be served on the person against whom no prosecution is initiated and his work unit. If the person against whom no prosecution is initiated is in custody, he shall be released immediately."
+    },
+    {
+      "article_number": "第一百七十九条",
+      "content_en": "Article 179 Where the People's Procuratorate decides not to initiate a prosecution for a case transferred by a public security organ for prosecution, it shall serve the written decision not to initiate a prosecution on the public security organ. If the public security organ considers that the decision not to initiate a prosecution is erroneous, it may request a review; if its opinion is not accepted, it may petition the People's Procuratorate at the next higher level for a review."
+    },
+    {
+      "article_number": "第一百八十条",
+      "content_en": "Article 180 For a case involving a victim, where a decision not to initiate a prosecution is made, the People's Procuratorate shall serve the written decision not to initiate a prosecution on the victim. If the victim disagrees, he may, within seven days after receiving the written decision, petition the People's Procuratorate at the next higher level, requesting that a public prosecution be initiated. The People's Procuratorate shall inform the victim of the review decision. If the People's Procuratorate upholds the decision not to initiate a prosecution, the victim may file a lawsuit with the People's Court. The victim may also directly file a lawsuit with the People's Court without making a petition. After the People's Court accepts the case, the People's Procuratorate shall transfer the relevant case materials to the People's Court."
+    },
+    {
+      "article_number": "第一百八十一条",
+      "content_en": "Article 181 Where the People's Procuratorate makes a decision not to initiate a prosecution in accordance with the provisions of Paragraph 2 of Article 177 of this Law, and the person against whom no prosecution is initiated disagrees, he may, within seven days after receiving the written decision, petition the People's Procuratorate. The People's Procuratorate shall make a review decision, notify the person against whom no prosecution is initiated, and simultaneously send a copy to the public security organ."
+    },
+    {
+      "article_number": "第一百八十二条",
+      "content_en": "Article 182 Where a criminal suspect voluntarily and truthfully confesses the facts of the suspected crime and has performed major meritorious service, or the case involves major national interests, with the approval of the Supreme People's Procuratorate, the public security organ may dismiss the case, and the People's Procuratorate may make a decision not to initiate a prosecution, or may decide not to initiate a prosecution for one or more of the several offenses charged.\nWhere a decision not to initiate a prosecution or to dismiss a case is made in accordance with the preceding paragraph, the People's Procuratorate and the public security organ shall promptly deal with the sealed, seized, or frozen property and its fruits."
+    },
+    {
+      "article_number": "第一百八十三条",
+      "content_en": "Article 183 For adjudication of a case at first instance, a Primary People's Court or an Intermediate People's Court shall form a collegial panel composed of three judges or three or seven judges and people's assessors, except that a case to which the summary procedure or the quick adjudication procedure applies in a Primary People's Court may be adjudicated by a single judge alone.\nFor adjudication of a case at first instance, a Higher People's Court shall form a collegial panel composed of three to seven judges or three or seven judges and people's assessors.\nFor adjudication of a case at first instance, the Supreme People's Court shall form a collegial panel composed of three to seven judges.\nFor adjudication of an appeal case or a case of protest, a People's Court shall form a collegial panel composed of three or five judges.\nThe number of members of a collegial panel shall be odd."
+    },
+    {
+      "article_number": "第一百八十四条",
+      "content_en": "Article 184 When a collegial panel deliberates a case, if there is a difference of opinion, a decision shall be made in accordance with the opinion of the majority, but the opinion of the minority shall be recorded in the minutes. The minutes of the deliberation shall be signed by the members of the collegial panel."
+    },
+    {
+      "article_number": "第一百八十五条",
+      "content_en": "Article 185 After a collegial panel opens a court session and deliberates, it shall render a judgment. For a difficult, complex, or major case, if the collegial panel considers it difficult to make a decision, the collegial panel shall submit it to the president to decide on referring it to the adjudication committee for discussion and decision. The collegial panel shall implement the decision of the adjudication committee."
+    },
+    {
+      "article_number": "第一百八十六条",
+      "content_en": "Article 186 After reviewing a case submitted for public prosecution, the People's Court shall decide to open a court session for trial if the indictment explicitly states the facts of the alleged crime."
+    },
+    {
+      "article_number": "第一百八十七条",
+      "content_en": "Article 187 After deciding to open a court session for trial, the People's Court shall determine the composition of the collegial panel and serve a copy of the indictment of the People's Procuratorate on the defendant and his defender at the latest ten days before the court session.\nBefore the court session, the adjudicators may convene the public prosecutor, the parties, the defender, and the litigation agent to inquire about and hear opinions on issues related to the adjudication, such as withdrawal, the list of witnesses to appear in court, and the exclusion of illegally obtained evidence.\nAfter the People's Court determines the date of the court session, it shall notify the People's Procuratorate of the time and place of the court session, summon the parties, and notify the defender, litigation agent, witnesses, expert evaluators, and interpreters. The summonses and notices shall be served at the latest three days before the court session. For cases to be tried in public, the cause of action, the name of the defendant, the time, and the place of the court session shall be announced in advance at the latest three days before the court session.\nThe foregoing activities shall be recorded in the minutes, which shall be signed by the adjudicators and the court clerk."
+    },
+    {
+      "article_number": "第一百八十八条",
+      "content_en": "Article 188 A People's Court shall try a case at first instance in public. However, a case involving State secrets or personal privacy shall not be tried in public; a case involving trade secrets may not be tried in public if a party applies for it not to be tried in public.\nFor a case not tried in public, the reasons for not trying it in public shall be announced in court."
+    },
+    {
+      "article_number": "第一百八十九条",
+      "content_en": "Article 189 When a People's Court tries a case of public prosecution, the People's Procuratorate shall send a representative to appear in court to support the public prosecution."
+    },
+    {
+      "article_number": "第一百九十条",
+      "content_en": "Article 190 At the opening of a court session, the presiding judge shall ascertain whether the parties are present in court, announce the cause of action, announce the list of members of the collegial panel, the court clerk, the public prosecutor, the defender, the litigation agent, expert evaluators, and interpreters; inform the parties of their right to apply for the withdrawal of any member of the collegial panel, the court clerk, the public prosecutor, expert evaluators, or interpreters; and inform the defendant of his right to defense.\nWhere the defendant admits guilt and accepts punishment, the presiding judge shall inform the defendant of his procedural rights and the legal provisions on admitting guilt and accepting punishment, and shall examine the voluntariness of his admission of guilt and acceptance of punishment and the truthfulness and legality of the contents of the recognition of guilt and acceptance of punishment statement."
+    },
+    {
+      "article_number": "第一百九十一条",
+      "content_en": "Article 191 After the public prosecutor reads the indictment in court, the defendant and the victim may make statements on the crime alleged in the indictment, and the public prosecutor may interrogate the defendant.\nThe victim, the plaintiff in an incidental civil action, the defender, and the litigation agent may, with the permission of the presiding judge, question the defendant.\nThe adjudicators may interrogate the defendant."
+    },
+    {
+      "article_number": "第一百九十二条",
+      "content_en": "Article 192 Where the public prosecutor, a party, the defender, or the litigation agent objects to the testimony of a witness, and such testimony has a significant impact on the conviction and sentencing of the case, and the People's Court considers it necessary for the witness to testify in court, the witness shall appear in court to testify.\nThe provisions of the preceding paragraph shall apply to a people's police officer appearing in court as a witness to testify regarding a crime witnessed in the performance of his duties.\nWhere the public prosecutor, a party, the defender, or the litigation agent objects to an expert opinion, and the People's Court considers it necessary for the expert evaluator to appear in court, the expert evaluator shall appear in court to testify. If, after being notified by the People's Court, the expert evaluator refuses to appear in court to testify without justifiable reasons, the expert opinion shall not be used as the basis for a verdict."
+    },
+    {
+      "article_number": "第一百九十三条",
+      "content_en": "Article 193 If, after being notified by the People's Court, a witness fails to appear in court to testify without justifiable reasons, the People's Court may compel his appearance, except for the spouse, parents, or children of the defendant.\nIf a witness, without justifiable reasons, refuses to appear in court or, after appearing in court, refuses to testify, he shall be admonished; if the circumstances are serious, with the approval of the president, he may be detained for not more than ten days. If the punished person disagrees with the detention decision, he may apply to the People's Court at the next higher level for reconsideration. Execution shall not be suspended during the reconsideration period."
+    },
+    {
+      "article_number": "第一百九十四条",
+      "content_en": "Article 194 When a witness gives testimony, the adjudicator shall inform him of his obligation to provide truthful testimony and the legal liability he shall bear for intentionally giving false testimony or concealing incriminating evidence. The public prosecutor, the parties, the defender, and the litigation agent may, with the permission of the presiding judge, question the witnesses and expert evaluators. If the presiding judge considers that the content of the questions is unrelated to the case, he shall stop them.\nThe adjudicators may question the witnesses and expert evaluators."
+    },
+    {
+      "article_number": "第一百九十五条",
+      "content_en": "Article 195 The public prosecutor and the defender shall present the physical evidence to the court for the parties to identify. The records of testimony of witnesses who are not present in court, the opinions of expert evaluators, records of inspection, and other documents used as evidence shall be read out in court. The adjudicators shall hear the opinions of the public prosecutor, the parties, the defender, and the litigation agent."
+    },
+    {
+      "article_number": "第一百九十六条",
+      "content_en": "Article 196 During court proceedings, if the collegial panel has doubts about the evidence, it may announce an adjournment of the court session to investigate and verify the evidence.\nWhen the People's Court investigates and verifies evidence, it may conduct inspections, examinations, sealing, seizure, expert evaluations, inquiries, and freezing."
+    },
+    {
+      "article_number": "第一百九十七条",
+      "content_en": "Article 197 During court proceedings, the parties, the defender, and the litigation agent have the right to apply for the notification of new witnesses to appear in court, the procurement of new physical evidence, and the application for a new expert evaluation or inspection.\nThe public prosecutor, the parties, the defender, and the litigation agent may apply to the court to notify a person with specialized knowledge to appear in court to give an opinion on the opinion made by the expert evaluator.\nThe court shall decide whether to approve the foregoing applications.\nThe provisions concerning expert evaluators shall apply to the appearance in court of a person with specialized knowledge as provided for in Paragraph 2."
+    },
+    {
+      "article_number": "第一百九十八条",
+      "content_en": "Article 198 During court proceedings, all facts and evidence related to conviction and sentencing shall be investigated and debated.\nWith the permission of the presiding judge, the public prosecutor, the parties, the defender, and the litigation agent may express opinions on the evidence and the circumstances of the case, and may debate with each other.\nAfter the presiding judge announces the conclusion of the debate, the defendant has the right to make a final statement."
+    },
+    {
+      "article_number": "第一百九十九条",
+      "content_en": "Article 199 If, during the court proceedings, a participant in the proceedings or an observer violates the order of the court, the presiding judge shall warn him and order him to stop. If he does not heed the order, he may be forcibly removed from the court; if the circumstances are serious, a fine of not more than 1,000 yuan or detention of not more than fifteen days may be imposed. The fine or detention must be approved by the president. If the punished person disagrees with the decision on the fine or detention, he may apply to the People's Court at the next higher level for reconsideration. Execution shall not be suspended during the reconsideration period.\nIf a person assembles a crowd to create a disturbance, storm the court, or insult, slander, threaten, or beat judicial officers or participants in the proceedings, thereby seriously disrupting court order and constituting a crime, criminal liability shall be investigated according to law."
+    },
+    {
+      "article_number": "第二百条",
+      "content_en": "Article 200 After the defendant makes his final statement, the presiding judge shall announce the adjournment of the court session, and the collegial panel shall deliberate and, based on the facts, evidence, and relevant legal provisions that have been ascertained, render one of the following judgments:\n(1) If the facts of the case are clear, the evidence is reliable and sufficient, and the defendant is found guilty in accordance with the law, a conviction judgment shall be rendered;\n(2) If the defendant is found not guilty in accordance with the law, a judgment of acquittal shall be rendered;\n(3) If the evidence is insufficient and the defendant cannot be found guilty, a judgment of acquittal shall be rendered on the ground that the evidence is insufficient and the alleged crime cannot be established."
+    },
+    {
+      "article_number": "第二百零一条",
+      "content_en": "Article 201: In rendering a judgment according to law for a case in which a confession and acceptance of punishment are made, the People's Court shall generally adopt the crime charged and sentencing recommendation made by the People's Procuratorate, except under any of the following circumstances:\n(1) The conduct of the defendant does not constitute a crime or shall not be subject to criminal liability;\n(2) The defendant confessed and accepted punishment against his will;\n(3) The defendant denies the alleged criminal facts;\n(4) The crime charged in the prosecution differs from the crime established through trial; or\n(5) Other circumstances that may affect a fair trial.\nWhere upon trial the People's Court finds the sentencing recommendation clearly improper, or the defendant or defender raises an objection to the sentencing recommendation, the People's Procuratorate may adjust the sentencing recommendation. If the People's Procuratorate does not adjust the sentencing recommendation, or after adjustment the sentencing recommendation remains clearly improper, the People's Court shall render a judgment according to law."
+    },
+    {
+      "article_number": "第二百零二条",
+      "content_en": "Article 202: Judgments shall be pronounced publicly in all cases.\nWhere a judgment is pronounced in court, the written judgment shall be served on the parties and on the People's Procuratorate that initiated the public prosecution within five days; where a judgment is pronounced at a scheduled date, the written judgment shall be served on the parties and on the People's Procuratorate that initiated the public prosecution immediately after pronouncement. The written judgment shall also be served on the defender and litigation agent."
+    },
+    {
+      "article_number": "第二百零三条",
+      "content_en": "Article 203: The written judgment shall be signed by the judicial personnel and court clerk, and shall specify the time limit for appeal and the court to which appeal may be lodged."
+    },
+    {
+      "article_number": "第二百零四条",
+      "content_en": "Article 204: During court trial, where any of the following circumstances occurs and impedes the progress of the trial, the trial may be adjourned:\n(1) It is necessary to notify new witnesses to appear in court, to obtain new material evidence, or to conduct a new expert evaluation or inspection;\n(2) A prosecutor discovers that the case initiated for public prosecution requires supplementary investigation and makes a proposal to that effect; or\n(3) Trial cannot proceed due to a challenge filed for recusal."
+    },
+    {
+      "article_number": "第二百零五条",
+      "content_en": "Article 205: For a case in which the trial is adjourned pursuant to Item (2) of Article 204 of this Law, the People's Procuratorate shall complete the supplementary investigation within one month."
+    },
+    {
+      "article_number": "第二百零六条",
+      "content_en": "Article 206: During trial, where any of the following circumstances occurs and makes it impossible to continue the trial for a considerable period of time, the trial may be suspended:\n(1) The defendant suffers from a serious illness and is unable to appear in court;\n(2) The defendant escapes;\n(3) The private prosecutor suffers from a serious illness and is unable to appear in court and has not entrusted a litigation agent to appear in court; or\n(4) Due to force majeure.\nAfter the cause for suspension is eliminated, the trial shall be resumed. The period of suspension shall not be counted in the trial time limit."
+    },
+    {
+      "article_number": "第二百零七条",
+      "content_en": "Article 207: All activities during the court trial shall be recorded in writing by the court clerk, and after review by the presiding judge, the record shall be signed by the presiding judge and the court clerk.\nThe testimony of witnesses as recorded in the court record shall be read out in court or given to the witnesses for reading. After the witnesses confirm that the record is free of error, they shall sign or affix their seals.\nThe court record shall be given to the parties for reading or be read out to them. If the parties believe that the record contains omissions or errors, they may request additions or corrections. After the parties confirm that the record is free of error, they shall sign or affix their seals."
+    },
+    {
+      "article_number": "第二百零八条",
+      "content_en": "Article 208: The People's Court shall pronounce judgment in a case of public prosecution within two months from the date of acceptance, but in no case shall this exceed three months. For a case in which a sentence of death penalty may be imposed or a case with an incidental civil action, or for a case under any of the circumstances provided for in Article 158 of this Law, the time limit may be extended by three months with the approval of the People's Court at the next higher level; if further extension is necessary due to special circumstances, an application shall be submitted to the Supreme People's Court for approval.\nFor a case where jurisdiction is changed by the People's Court, the trial time limit shall be calculated from the date on which the case is received by the People's Court to which jurisdiction has been changed.\nFor a case in which the People's Procuratorate conducts supplementary investigation, after the supplementary investigation is completed and the case is transferred to the People's Court, the People's Court shall recalculate the trial time limit."
+    },
+    {
+      "article_number": "第二百零九条",
+      "content_en": "Article 209: Where the People's Procuratorate discovers that the People's Court has violated the legally prescribed procedure in trying a case, it has the authority to present corrective opinions to the People's Court."
+    },
+    {
+      "article_number": "第二百一十条",
+      "content_en": "Article 210: Cases of private prosecution include the following:\n(1) Cases to be handled only upon complaint;\n(2) Minor criminal cases for which the victim has evidence to prove the case;\n(3) Cases for which the victim has evidence to prove that the defendant has infringed upon the victim's personal or property rights and should be investigated for criminal liability according to law, but the public security organ or the People's Procuratorate does not investigate the defendant's criminal liability."
+    },
+    {
+      "article_number": "第二百一十一条",
+      "content_en": "Article 211: After reviewing a case of private prosecution, the People's Court shall handle it separately according to the following circumstances:\n(1) Where the criminal facts are clear and there is sufficient evidence, the case shall be tried in open court;\n(2) For a case of private prosecution that lacks criminal evidence, if the private prosecutor fails to produce supplementary evidence, the People's Court shall persuade the private prosecutor to withdraw the private prosecution or shall render a ruling to dismiss the case.\nWhere the private prosecutor, after being summoned twice according to law, refuses to appear in court without justifiable reasons, or withdraws from court without permission, the case shall be treated as withdrawn.\nWhere during court trial the judicial personnel have doubts about the evidence and need to investigate and verify it, the provisions of Article 196 of this Law shall apply."
+    },
+    {
+      "article_number": "第二百一十二条",
+      "content_en": "Article 212: The People's Court may conduct mediation in a case of private prosecution; before the judgment is pronounced, the private prosecutor may reach a settlement with the defendant or withdraw the private prosecution. Mediation shall not apply to cases specified in Item (3) of Article 210 of this Law.\nFor the time limit for the People's Court to try a case of private prosecution, where the defendant is placed in custody, the provisions of Paragraphs 1 and 2 of Article 208 of this Law shall apply; where the defendant is not placed in custody, the judgment shall be pronounced within six months from the date of acceptance."
+    },
+    {
+      "article_number": "第二百一十三条",
+      "content_en": "Article 213: During the proceedings of a case of private prosecution, the defendant may file a counterclaim against the private prosecutor. The provisions on private prosecution shall apply to counterclaims."
+    },
+    {
+      "article_number": "第二百一十四条",
+      "content_en": "Article 214: For a case under the jurisdiction of a Primary People's Court, where the following conditions are met, the summary procedure may be applied for trial:\n(1) The facts of the case are clear and evidence is sufficient;\n(2) The defendant confesses to the crime committed and has no objection to the alleged criminal facts; and\n(3) The defendant has no objection to the application of the summary procedure.\nWhen initiating a public prosecution, the People's Procuratorate may recommend that the People's Court apply the summary procedure."
+    },
+    {
+      "article_number": "第二百一十五条",
+      "content_en": "Article 215: The summary procedure shall not apply under any of the following circumstances:\n(1) The defendant is blind, deaf, or mute, or is a person with a mental illness who has not completely lost the capacity to recognize or control his conduct;\n(2) The case has major social impact;\n(3) In a joint crime, some defendants do not confess or object to the application of the summary procedure; or\n(4) Other circumstances under which it is inappropriate to apply the summary procedure."
+    },
+    {
+      "article_number": "第二百一十六条",
+      "content_en": "Article 216: In trying a case with the summary procedure, for a case in which a sentence of less than three years of fixed-term imprisonment may be imposed, the trial may be conducted by a collegial panel or by a single judge; for a case in which a sentence of more than three years of fixed-term imprisonment may be imposed, the trial shall be conducted by a collegial panel.\nFor a case of public prosecution tried with the summary procedure, the People's Procuratorate shall send a prosecutor to appear in court."
+    },
+    {
+      "article_number": "第二百一十七条",
+      "content_en": "Article 217: In trying a case with the summary procedure, the judicial personnel shall question the defendant about the alleged criminal facts, inform the defendant of the legal provisions on the application of the summary procedure, and confirm whether the defendant agrees to the application of the summary procedure."
+    },
+    {
+      "article_number": "第二百一十八条",
+      "content_en": "Article 218: In trying a case with the summary procedure, with the permission of the judicial personnel, the defendant and his defender may debate with the prosecutor, the private prosecutor, and their litigation agents."
+    },
+    {
+      "article_number": "第二百一十九条",
+      "content_en": "Article 219: In trying a case with the summary procedure, it shall not be subject to the restrictions of the provisions in Section 1 of this Chapter concerning time limits for service, interrogation of the defendant, examination of witnesses and expert witnesses, presentation of evidence, and court debate procedures. However, before the judgment is pronounced, the defendant's final statement shall be heard."
+    },
+    {
+      "article_number": "第二百二十条",
+      "content_en": "Article 220: In trying a case with the summary procedure, the People's Court shall conclude the case within twenty days from the date of acceptance; for a case in which a sentence of more than three years of fixed-term imprisonment may be imposed, the time limit may be extended to one and a half months."
+    },
+    {
+      "article_number": "第二百二十一条",
+      "content_en": "Article 221: Where during trial the People's Court finds that the summary procedure is not suitable, it shall retry the case in accordance with the provisions of Section 1 or Section 2 of this Chapter."
+    },
+    {
+      "article_number": "第二百二十二条",
+      "content_en": "Article 222: For a case under the jurisdiction of a Primary People's Court where a sentence of less than three years of fixed-term imprisonment may be imposed, and where the facts of the case are clear, evidence is reliable and sufficient, and the defendant confesses and accepts punishment and agrees to the application of the expedited procedure, the expedited procedure may be applied, and the trial shall be conducted by a single judge.\nWhen initiating a public prosecution, the People's Procuratorate may recommend that the People's Court apply the expedited procedure."
+    },
+    {
+      "article_number": "第二百二十三条",
+      "content_en": "Article 223: The expedited procedure shall not apply under any of the following circumstances:\n(1) The defendant is blind, deaf, or mute, or is a person with a mental illness who has not completely lost the capacity to recognize or control his conduct;\n(2) The defendant is a minor;\n(3) The case has major social impact;\n(4) In a joint crime, some defendants object to the alleged criminal facts, charges, sentencing recommendations, or the application of the expedited procedure;\n(5) The defendant and the victim or his legal representative have not reached a mediation or settlement agreement on matters such as compensation in the incidental civil action; or\n(6) Other circumstances under which it is inappropriate to try the case with the expedited procedure."
+    },
+    {
+      "article_number": "第二百二十四条",
+      "content_en": "Article 224: In trying a case with the expedited procedure, it shall not be subject to the restrictions of the time limits for service provided for in Section 1 of this Chapter. Generally, no court investigation or court debate shall be conducted, but before the judgment is pronounced, the opinions of the defender and the defendant's final statement shall be heard.\nA case tried with the expedited procedure shall have its judgment pronounced in court."
+    },
+    {
+      "article_number": "第二百二十五条",
+      "content_en": "Article 225: In trying a case with the expedited procedure, the People's Court shall conclude the case within ten days from the date of acceptance; for a case in which a sentence of more than one year of fixed-term imprisonment may be imposed, the time limit may be extended to fifteen days."
+    },
+    {
+      "article_number": "第二百二十六条",
+      "content_en": "Article 226: Where during trial the People's Court discovers that the defendant's conduct does not constitute a crime or shall not be subject to criminal liability, the defendant confessed and accepted punishment against his will, the defendant denies the alleged criminal facts, or there are other circumstances under which it is inappropriate to try the case with the expedited procedure, it shall retry the case in accordance with the provisions of Section 1 or Section 3 of this Chapter."
+    },
+    {
+      "article_number": "第二百二十七条",
+      "content_en": "Article 227: The defendant, the private prosecutor, and their legal representatives who refuse to accept a judgment or ruling of first instance rendered by a local People's Court at any level shall have the right to appeal in writing or orally to the People's Court at the next higher level. The defender and close relative of the defendant may, with the defendant's consent, file an appeal.\nA party to an incidental civil action and his legal representative may appeal against the part concerning the incidental civil action in a judgment or ruling of first instance rendered by a local People's Court at any level.\nThe defendant's right to appeal shall not be deprived on any pretext."
+    },
+    {
+      "article_number": "第二百二十八条",
+      "content_en": "Article 228: Where a local People's Procuratorate at any level considers that a judgment or ruling of first instance rendered by the People's Court at the corresponding level is indeed erroneous, it shall file a protest with the People's Court at the next higher level."
+    },
+    {
+      "article_number": "第二百二十九条",
+      "content_en": "Article 229: Where the victim and his legal representative refuse to accept a judgment of first instance rendered by a local People's Court at any level, they shall have the right, within five days from receipt of the written judgment, to request the People's Procuratorate to file a protest. The People's Procuratorate shall, within five days from receipt of the request from the victim and his legal representative, make a decision on whether to file a protest and shall reply to the requester."
+    },
+    {
+      "article_number": "第二百三十条",
+      "content_en": "Article 230: The time limit for appeal or protest against a judgment shall be ten days, and the time limit for appeal or protest against a ruling shall be five days, calculated from the day after the receipt of the written judgment or ruling."
+    },
+    {
+      "article_number": "第二百三十一条",
+      "content_en": "Article 231: Where the defendant, the private prosecutor, or the plaintiff or defendant in an incidental civil action files an appeal through the original trial People's Court, the original trial People's Court shall, within three days, transfer the petition of appeal together with the case file and evidence to the People's Court at the next higher level, and shall also serve a copy of the petition of appeal on the People's Procuratorate at the corresponding level and on the other party.\nWhere the defendant, the private prosecutor, or the plaintiff or defendant in an incidental civil action files an appeal directly with the second instance People's Court, the second instance People's Court shall, within three days, forward the petition of appeal to the original trial People's Court for service on the People's Procuratorate at the corresponding level and on the other party."
+    },
+    {
+      "article_number": "第二百三十二条",
+      "content_en": "Article 232: Where a local People's Procuratorate at any level files a protest against a judgment or ruling of first instance rendered by the People's Court at the corresponding level, it shall submit a written protest through the original trial People's Court and shall send a copy of the written protest to the People's Procuratorate at the next higher level. The original trial People's Court shall transfer the written protest together with the case file and evidence to the People's Court at the next higher level and shall serve a copy of the written protest on the parties.\nIf the People's Procuratorate at the next higher level considers the protest improper, it may withdraw the protest from the People's Court at the corresponding level and shall notify the People's Procuratorate at the lower level."
+    },
+    {
+      "article_number": "第二百三十三条",
+      "content_en": "Article 233: The second instance People's Court shall conduct a comprehensive review of the facts found and the law applied in the first instance judgment, without being limited to the scope of appeal or protest.\nFor a joint crime case in which only some of the defendants have appealed, the entire case shall be reviewed and handled together."
+    },
+    {
+      "article_number": "第二百三十四条",
+      "content_en": "Article 234: The second instance People's Court shall form a collegial panel and hold a hearing for the following cases:\n(1) An appeal case in which the defendant, the private prosecutor, or their legal representatives raise objections to the facts and evidence found in the first instance, which may affect the conviction and sentencing;\n(2) An appeal case in which the defendant has been sentenced to the death penalty;\n(3) A case protested by the People's Procuratorate; or\n(4) Other cases that shall be heard in court.\nWhere the second instance People's Court decides not to hold a hearing, it shall interrogate the defendant and hear the opinions of other parties, defenders, and litigation agents.\nThe second instance People's Court may hear appeal and protest cases at the place where the case occurred or at the location of the original trial People's Court."
+    },
+    {
+      "article_number": "第二百三十五条",
+      "content_en": "Article 235: For a case protested by the People's Procuratorate or a case of public prosecution heard in court by the second instance People's Court, the People's Procuratorate at the corresponding level shall send a prosecutor to appear in court. The second instance People's Court shall promptly notify the People's Procuratorate to review the case file after deciding to hold a hearing. The People's Procuratorate shall complete the review within one month. The time spent by the People's Procuratorate in reviewing the case file shall not be counted in the trial time limit."
+    },
+    {
+      "article_number": "第二百三十六条",
+      "content_en": "Article 236: After hearing an appeal or protest case against a first instance judgment, the second instance People's Court shall handle it separately according to the following circumstances:\n(1) Where the facts found and the law applied in the original judgment are correct and the sentence is appropriate, a ruling shall be made to dismiss the appeal or protest and affirm the original judgment;\n(2) Where there is no error in the facts found in the original judgment, but there is an error in the application of law or the sentence is inappropriate, the judgment shall be amended;\n(3) Where the facts in the original judgment are unclear or the evidence is insufficient, the judgment may be amended after the facts are clarified, or a ruling may be made to set aside the original judgment and remit the case to the original trial People's Court for retrial.\nAfter the original trial People's Court renders a judgment on a case remitted for retrial under the provisions of Item (3) of the preceding paragraph, if the defendant files an appeal or the People's Procuratorate files a protest, the second instance People's Court shall render a judgment or ruling according to law and shall not remit the case to the original trial People's Court for retrial again."
+    },
+    {
+      "article_number": "第二百三十七条",
+      "content_en": "Article 237: When the second instance People's Court tries an appeal case filed by the defendant or his legal representative, defender, or close relative, it shall not increase the defendant's punishment. For a case remitted by the second instance People's Court to the original trial People's Court for retrial, unless new criminal facts are discovered and the People's Procuratorate files a supplementary prosecution, the original trial People's Court shall not increase the defendant's punishment.\nThe restriction in the preceding paragraph shall not apply where the People's Procuratorate files a protest or the private prosecutor files an appeal."
+    },
+    {
+      "article_number": "第二百三十八条",
+      "content_en": "Article 238: Where the second instance People's Court discovers that the trial of the first instance People's Court is tainted by any of the following circumstances that violate the legally prescribed procedure, it shall render a ruling to set aside the original judgment and remit the case to the original trial People's Court for retrial:\n(1) Violation of the provisions of this Law regarding public trial;\n(2) Violation of the recusal system;\n(3) Deprivation or restriction of the parties' statutory litigation rights likely to affect a fair trial;\n(4) An unlawful composition of the trial organization; or\n(5) Other violations of the legally prescribed procedure likely to affect a fair trial."
+    },
+    {
+      "article_number": "第二百三十九条",
+      "content_en": "Article 239: For a case remitted for retrial, the original trial People's Court shall form a new collegial panel and conduct the trial in accordance with the first instance procedure. The judgment rendered after retrial may be appealed or protested in accordance with the provisions of Articles 227, 228, and 229 of this Law."
+    },
+    {
+      "article_number": "第二百四十条",
+      "content_en": "Article 240: After reviewing an appeal or protest against a first instance ruling, the second instance People's Court shall, by reference to the provisions of Article 236, Article 238, and Article 239 of this Law, render a ruling to dismiss the appeal or protest, or to set aside or modify the original ruling, as the case may be."
+    },
+    {
+      "article_number": "第二百四十一条",
+      "content_en": "Article 241 Where a case is remanded by the people's court of second instance to the original trial people's court for retrial, the original trial people's court shall recalculate the trial period from the date of receiving the remanded case."
+    },
+    {
+      "article_number": "第二百四十二条",
+      "content_en": "Article 242 The procedure for adjudicating appeals or protests by the people's court of second instance shall, unless otherwise provided in this Chapter, follow the provisions on the procedure of first instance."
+    },
+    {
+      "article_number": "第二百四十三条",
+      "content_en": "Article 243 A people's court of second instance that accepts an appeal or protest case shall conclude the trial within two months. For a case in which a sentence of death penalty may be imposed or a case attached with a civil action, or for a case under any of the circumstances provided for in Article 158 of this Law, the time limit may be extended by two months upon the approval or decision of the Higher People's Court of the relevant province, autonomous region, or municipality directly under the Central Government; if further extension is required due to special circumstances, the matter shall be submitted to the Supreme People's Court for approval.\nThe trial period for an appeal or protest case accepted by the Supreme People's Court shall be determined by the Supreme People's Court."
+    },
+    {
+      "article_number": "第二百四十四条",
+      "content_en": "Article 244 Judgments and orders of the second instance and judgments and orders of the Supreme People's Court shall be final judgments and orders."
+    },
+    {
+      "article_number": "第二百四十五条",
+      "content_en": "Article 245 The public security organ, the people's procuratorate, and the people's court shall properly preserve the sealed, seized, or frozen property and its fruits of a criminal suspect or defendant for verification, and shall prepare an inventory list to be transferred with the case. No entity or individual may misappropriate or dispose of them on its/his/her own. The victim's lawful property shall be returned in a timely manner. Contraband or articles unsuitable for long-term preservation shall be disposed of in accordance with the relevant provisions of the state.\nPhysical evidence shall be transferred with the case; if it is unsuitable for transfer, its inventory list, photographs, or other certification documents shall be transferred with the case.\nThe judgment rendered by the people's court shall address the disposal of the sealed, seized, or frozen property and its fruits.\nAfter a judgment rendered by the people's court takes effect, the relevant organ shall dispose of the sealed, seized, or frozen property and its fruits in accordance with the judgment. All illegal gains and their fruits that have been sealed, seized, or frozen shall, except those returned to the victim according to law, be turned over to the state treasury.\nIf a judicial officer embezzles, misappropriates, or privately disposes of the sealed, seized, or frozen property and its fruits, criminal liability shall be investigated according to law; if the act does not constitute a crime, sanctions shall be imposed."
+    },
+    {
+      "article_number": "第二百四十六条",
+      "content_en": "Article 246 A death penalty shall be subject to the approval of the Supreme People's Court."
+    },
+    {
+      "article_number": "第二百四十七条",
+      "content_en": "Article 247 Where an Intermediate People's Court imposes the death penalty in a case of first instance and the defendant does not appeal, the case shall be submitted to the Supreme People's Court for approval after being reviewed by the Higher People's Court. If the Higher People's Court does not agree to the death sentence, it may bring the case up for trial or remand it for retrial.\nIf a Higher People's Court imposes the death penalty in a case of first instance and the defendant does not appeal, and if it imposes the death penalty in a case of second instance, both shall be reported to the Supreme People's Court for approval."
+    },
+    {
+      "article_number": "第二百四十八条",
+      "content_en": "Article 248 A case in which an Intermediate People's Court imposes a death sentence with a two-year reprieve shall be subject to the approval of the Higher People's Court."
+    },
+    {
+      "article_number": "第二百四十九条",
+      "content_en": "Article 249 The Supreme People's Court, when reviewing a death penalty case, and the Higher People's Court, when reviewing a case of death sentence with a two-year reprieve, shall form a collegial panel composed of three judges."
+    },
+    {
+      "article_number": "第二百五十条",
+      "content_en": "Article 250 When reviewing a death penalty case, the Supreme People's Court shall render an order either approving or not approving the death penalty. For a case where the death penalty is not approved, the Supreme People's Court may remand it for retrial or amend the judgment."
+    },
+    {
+      "article_number": "第二百五十一条",
+      "content_en": "Article 251 When reviewing a death penalty case, the Supreme People's Court shall interrogate the defendant; if the defense lawyer so requests, the defense lawyer's opinions shall be heard.\nDuring the process of reviewing a death penalty case, the Supreme People's Procuratorate may present opinions to the Supreme People's Court. The Supreme People's Court shall notify the Supreme People's Procuratorate of the result of the death penalty review."
+    },
+    {
+      "article_number": "第二百五十二条",
+      "content_en": "Article 252 A party or the party's legal representative or near relative may present a petition to a people's court or a people's procuratorate against a legally effective judgment or order, but the execution of the judgment or order shall not be stayed."
+    },
+    {
+      "article_number": "第二百五十三条",
+      "content_en": "Article 253 If a petition presented by a party or the party's legal representative or near relative falls under any of the following circumstances, the people's court shall retry the case:\n(1) New evidence being sufficient to prove that the facts determined in the original judgment or order are indeed erroneous, which may affect the conviction and sentencing;\n(2) The evidence on which the conviction and sentencing were based being not credible or insufficient, and should be excluded according to law, or there being contradictions among the main evidence proving the facts of the case;\n(3) The application of law in the original judgment or order being indeed erroneous;\n(4) The litigation procedure violating the provisions of the law, which may affect the impartiality of adjudication; or\n(5) The judicial officer, during the trial of the case, having committed embezzlement, bribery, favoritism, or perversion of the law in rendering the judgment."
+    },
+    {
+      "article_number": "第二百五十四条",
+      "content_en": "Article 254 If the president of a people's court at any level discovers any definite error in the determination of facts or in the application of law in a legally effective judgment or order of the same court, the matter must be submitted to the judicial committee for handling.\nIf the Supreme People's Court discovers any definite error in a legally effective judgment or order of any people's court at a lower level, or if a people's court at a higher level discovers any definite error in a legally effective judgment or order of a people's court at a lower level, it/he/she shall have the power to bring the case up for trial or to direct the people's court at the lower level to conduct a retrial.\nIf the Supreme People's Procuratorate discovers any definite error in a legally effective judgment or order of any people's court at any level, or if a people's procuratorate at a higher level discovers any definite error in a legally effective judgment or order of a people's court at a lower level, it/he/she shall have the power to lodge a protest in accordance with the trial supervision procedure with the corresponding people's court.\nFor a case protested by a people's procuratorate, the people's court that accepts the protest shall form a collegial panel to retry the case; if the facts in the original judgment are unclear or the evidence is insufficient, it may direct the people's court at the lower level to conduct a retrial."
+    },
+    {
+      "article_number": "第二百五十五条",
+      "content_en": "Article 255 Where a people's court at a higher level directs a people's court at a lower level to conduct a retrial, it shall direct a lower-level people's court other than the court that originally tried the case to hear the case; if it is more appropriate for the original trial court to hear the case, it may also direct the original trial court to hear the case."
+    },
+    {
+      "article_number": "第二百五十六条",
+      "content_en": "Article 256 Where a case retried by a people's court in accordance with the trial supervision procedure is heard by the original trial court, it shall form a new collegial panel. If the case was originally one of first instance, it shall be tried in accordance with the procedure of first instance, and an appeal or protest may be lodged against the resulting judgment or order; if the case was originally one of second instance, or if the case was brought up for trial by a people's court at a higher level, it shall be tried in accordance with the procedure of second instance, and the resulting judgment or order shall be final.\nFor a retrial case heard in open court by a people's court, the corresponding people's procuratorate shall send personnel to attend the court session."
+    },
+    {
+      "article_number": "第二百五十七条",
+      "content_en": "Article 257 Where a people's court decides to retry a case and compulsory measures need to be taken against the defendant, the people's court shall decide according to law; for a retrial case for which the people's procuratorate files a protest, if compulsory measures need to be taken against the defendant, the people's procuratorate shall decide according to law.\nA people's court, when trying a case in accordance with the trial supervision procedure, may decide to suspend the execution of the original judgment or order."
+    },
+    {
+      "article_number": "第二百五十八条",
+      "content_en": "Article 258 A people's court that retries a case in accordance with the trial supervision procedure shall conclude the trial within three months from the date of the decision to bring the case up for trial or to conduct a retrial; where an extension of time is necessary, the extension shall not exceed six months.\nFor a protested case tried by the people's court that accepts the protest in accordance with the trial supervision procedure, the trial period shall be subject to the provisions of the preceding paragraph; where it is necessary to direct a people's court at a lower level to conduct a retrial, the decision shall be made within one month from the date of accepting the protest, and the trial period for the case tried by the lower-level people's court shall be subject to the provisions of the preceding paragraph."
+    },
+    {
+      "article_number": "第二百五十九条",
+      "content_en": "Article 259 Judgments and orders shall be executed after they take legal effect.\nThe following judgments and orders are legally effective judgments and orders:\n(1) Judgments and orders against which no appeal or protest has been filed within the legally prescribed time limit;\n(2) Final judgments and orders; and\n(3) Judgments imposing death penalty approved by the Supreme People's Court and judgments imposing death sentence with a two-year reprieve approved by the Higher People's Court."
+    },
+    {
+      "article_number": "第二百六十条",
+      "content_en": "Article 260 If a people's court of first instance renders a judgment declaring the defendant innocent or exempting the defendant from criminal punishment, and the defendant is in custody, the defendant shall be released immediately after the pronouncement of the judgment."
+    },
+    {
+      "article_number": "第二百六十一条",
+      "content_en": "Article 261: A sentence of immediate execution of the death penalty imposed and approved by the Supreme People's Court shall be accompanied by an order for execution of the death penalty signed by the President of the Supreme People's Court.\nFor a criminal sentenced to death with a two-year reprieve, if, during the period of the reprieve, he/she does not commit an intentional crime and should have his/her sentence commuted upon expiration of the reprieve, the executing organ shall submit a written opinion to the Higher People's Court for a ruling; if he/she commits an intentional crime with flagrant circumstances, which is verified, and should be executed, the Higher People's Court shall report to the Supreme People's Court for approval; if the death penalty is not executed for an intentional crime, the period of the death sentence with a two-year reprieve shall be recalculated, and the matter shall be reported to the Supreme People's Court for record."
+    },
+    {
+      "article_number": "第二百六十二条",
+      "content_en": "Article 262: Upon receiving the order for execution of the death penalty from the Supreme People's Court, the lower people's court shall deliver the criminal for execution within seven days. However, if any of the following circumstances is discovered, execution shall be suspended, and the matter shall be immediately reported to the Supreme People's Court for a ruling:\n(1) The judgment may be erroneous before execution;\n(2) Before execution, the criminal exposes major criminal facts or has other significant meritorious performances, which may necessitate a change of sentence;\n(3) The criminal is pregnant.\nAfter the causes for suspension under items (1) and (2) of the preceding paragraph cease to exist, an order for execution of the death penalty must be reissued by the President of the Supreme People's Court before execution may proceed; if execution is suspended due to the cause under item (3) of the preceding paragraph, the matter shall be reported to the Supreme People's Court for a change of sentence according to law."
+    },
+    {
+      "article_number": "第二百六十三条",
+      "content_en": "Article 263: Before delivering a criminal for execution of the death penalty, the people's court shall notify the people's procuratorate at the same level to dispatch an officer to supervise the execution on-site.\nThe death penalty shall be executed by methods such as shooting or injection.\nThe death penalty may be executed at an execution ground or a designated custodial facility.\nThe judicial officer directing the execution shall verify the identity of the criminal, inquire whether there are any last words or letters, and then deliver the criminal to the execution personnel for execution. If any possible error is discovered before execution, execution shall be suspended, and the matter shall be reported to the Supreme People's Court for a ruling.\nThe execution of the death penalty shall be announced but shall not be conducted in public.\nAfter the execution of the death penalty, the court clerk present shall make a record. The people's court that delivered the execution shall report the circumstances of the execution to the Supreme People's Court.\nAfter the execution of the death penalty, the people's court that delivered the execution shall notify the family of the criminal."
+    },
+    {
+      "article_number": "第二百六十四条",
+      "content_en": "Article 264: When a criminal is delivered for enforcement of a criminal punishment, the people's court that delivers the enforcement shall, within ten days after the judgment takes effect, serve the relevant legal documents to the public security organ, prison, or other executing organs.\nFor a criminal sentenced to death with a two-year reprieve, life imprisonment, or fixed-term imprisonment, the public security organ shall, according to law, deliver the criminal to a prison for enforcement of the criminal punishment. For a criminal sentenced to fixed-term imprisonment, if the remaining term of the sentence is less than three months before delivery for enforcement, the detention center shall execute the sentence on behalf of the prison. For a criminal sentenced to criminal detention, the public security organ shall enforce the sentence.\nFor a juvenile offender, the sentence shall be enforced in a juvenile correctional facility.\nThe executing organ shall take the criminal into custody promptly and notify the criminal's family.\nFor a criminal sentenced to fixed-term imprisonment or criminal detention, upon the expiration of the sentence, the executing organ shall issue a certificate of release."
+    },
+    {
+      "article_number": "第二百六十五条",
+      "content_en": "Article 265: For a criminal sentenced to fixed-term imprisonment or criminal detention, if any of the following circumstances exists, the criminal may be allowed to serve the sentence temporarily outside prison:\n(1) Having a serious illness requiring medical treatment outside prison;\n(2) Being a pregnant woman or a woman nursing her own infant;\n(3) Being unable to take care of oneself, and serving the sentence temporarily outside prison would not endanger society.\nFor a criminal sentenced to life imprisonment, if the circumstance under item (2) of the preceding paragraph exists, the criminal may be allowed to serve the sentence temporarily outside prison.\nFor a criminal for whom medical treatment outside prison may pose a social danger, or a criminal who inflicts self-injury or self-harm, medical treatment outside prison shall not be granted.\nIf a criminal truly has a serious illness and must receive medical treatment outside prison, a diagnosis and certificate shall be issued by a hospital designated by the provincial people's government.\nBefore delivery for enforcement, the decision on temporary service outside prison shall be made by the people's court that delivers the enforcement; after delivery for enforcement, the prison or detention center shall submit a written opinion to the prison administration authority at or above the provincial level or the public security organ at or above the level of a city divided into districts for approval."
+    },
+    {
+      "article_number": "第二百六十六条",
+      "content_en": "Article 266: When a prison or detention center submits a written opinion on temporary service outside prison, it shall send a copy of the written opinion to the people's procuratorate. The people's procuratorate may submit a written opinion to the deciding or approving authority."
+    },
+    {
+      "article_number": "第二百六十七条",
+      "content_en": "Article 267: The authority that decides or approves temporary service outside prison shall send a copy of the decision on temporary service outside prison to the people's procuratorate. If the people's procuratorate considers the temporary service outside prison improper, it shall, within one month from the date of receiving the notice, send a written opinion to the authority that decided or approved the temporary service outside prison. Upon receiving the written opinion from the people's procuratorate, the authority that decided or approved the temporary service outside prison shall immediately conduct a re-examination of the decision."
+    },
+    {
+      "article_number": "第二百六十八条",
+      "content_en": "Article 268: For a criminal serving a sentence temporarily outside prison, if any of the following circumstances exists, the criminal shall be promptly taken back into custody:\n(1) It is discovered that the conditions for temporary service outside prison are not met;\n(2) Serious violation of the supervisory and administrative provisions on temporary service outside prison;\n(3) The circumstances for temporary service outside prison cease to exist, and the criminal's sentence has not been completed.\nIf a criminal who was allowed temporary service outside prison by a people's court decision should be taken back into custody, the people's court shall make a decision and serve the relevant legal documents to the public security organ, prison, or other executing organs.\nIf a criminal who does not meet the conditions for temporary service outside prison is allowed temporary service outside prison through illegal means such as bribery, the period served outside prison shall not be counted toward the term of the sentence. If a criminal escapes during the period of temporary service outside prison, the period of escape shall not be counted toward the term of the sentence.\nIf a criminal dies during the period of temporary service outside prison, the executing organ shall promptly notify the prison or detention center."
+    },
+    {
+      "article_number": "第二百六十九条",
+      "content_en": "Article 269: For a criminal sentenced to public surveillance, granted probation, parole, or temporary service outside prison, community correction shall be implemented according to law, and the community correction institution shall be responsible for its enforcement."
+    },
+    {
+      "article_number": "第二百七十条",
+      "content_en": "Article 270: For a criminal sentenced to deprivation of political rights, the public security organ shall enforce the sentence. Upon the expiration of the sentence, the executing organ shall notify the criminal in writing, as well as the criminal's unit and the grassroots organization at the place of residence."
+    },
+    {
+      "article_number": "第二百七十一条",
+      "content_en": "Article 271: If a criminal sentenced to a fine fails to pay it upon expiration of the period, the people's court shall enforce payment; if, due to reasons such as an irresistible disaster, payment is truly difficult, the people's court may, by ruling, grant an extension, reduce the amount appropriately, or remit the fine."
+    },
+    {
+      "article_number": "第二百七十二条",
+      "content_en": "Article 272: A judgment of confiscation of property, whether applied as a supplementary punishment or independently, shall be enforced by the people's court; when necessary, it may be enforced jointly with the public security organ."
+    },
+    {
+      "article_number": "第二百七十三条",
+      "content_en": "Article 273: If a criminal commits another crime while serving a sentence, or if a crime not discovered at the time of judgment is discovered, the executing organ shall transfer the matter to the people's procuratorate for disposition.\nIf a criminal sentenced to public surveillance, criminal detention, fixed-term imprisonment, or life imprisonment demonstrates genuine repentance or meritorious performance during the period of enforcement, and should be granted commutation of punishment or parole according to law, the executing organ shall submit a proposal to the people's court for examination and ruling, and shall send a copy of the proposal to the people's procuratorate. The people's procuratorate may submit a written opinion to the people's court."
+    },
+    {
+      "article_number": "第二百七十四条",
+      "content_en": "Article 274: If the people's procuratorate considers the ruling on commutation of punishment or parole by the people's court improper, it shall, within twenty days after receiving a copy of the ruling, submit a written opinion of correction to the people's court. The people's court shall, within one month after receiving the correction opinion, form a new collegial panel to conduct a trial and make a final ruling."
+    },
+    {
+      "article_number": "第二百七十五条",
+      "content_en": "Article 275: If, during the enforcement of a criminal punishment, a prison or other executing organ considers the judgment erroneous, or if a criminal files a petition, the organ shall refer the matter to the people's procuratorate or the people's court that rendered the original judgment for disposition."
+    },
+    {
+      "article_number": "第二百七十六条",
+      "content_en": "Article 276: The people's procuratorate shall exercise supervision over the legality of the activities of the executing organs in enforcing criminal punishments. If any illegal circumstances are discovered, it shall notify the executing organ to correct them."
+    },
+    {
+      "article_number": "第二百七十七条",
+      "content_en": "Article 277: The policy of education, persuasion, and redemption shall be applied to minors who commit crimes, adhering to the principle of education as the mainstay and punishment as supplementary.\nWhen handling criminal cases involving minors, the people's courts, people's procuratorates, and public security organs shall ensure that minors exercise their procedural rights, ensure that minors receive legal assistance, and the cases shall be handled by judicial officers, procuratorial officers, and investigative officers who are familiar with the physical and psychological characteristics of minors."
+    },
+    {
+      "article_number": "第二百七十八条",
+      "content_en": "Article 278: If a juvenile criminal suspect or defendant has not retained a defender, the people's court, people's procuratorate, and public security organ shall notify a legal aid institution to assign a lawyer to provide defense."
+    },
+    {
+      "article_number": "第二百七十九条",
+      "content_en": "Article 279: When handling criminal cases involving minors, the public security organ, people's procuratorate, and people's court may, depending on the circumstances, conduct investigations into the growth experience, causes of the crime, guardianship and education, and other conditions of the juvenile criminal suspect or defendant."
+    },
+    {
+      "article_number": "第二百八十条",
+      "content_en": "Article 280: The application of arrest measures to juvenile criminal suspects and defendants shall be strictly limited. When the people's procuratorate examines and approves an arrest, and when the people's court decides on an arrest, it shall interrogate the juvenile criminal suspect or defendant and hear the opinions of the defense lawyer.\nJuveniles who are detained, arrested, or serving a sentence shall be held in separate custody, managed separately, and educated separately from adults."
+    },
+    {
+      "article_number": "第二百八十一条",
+      "content_en": "Article 281 For criminal cases involving minors, when interrogating and adjudicating, the legal representative of the juvenile criminal suspect or defendant shall be notified to be present. If the legal representative cannot be notified, cannot be present, or is an accomplice, other adult relatives of the juvenile criminal suspect or defendant, or representatives from the school, unit, grassroots organization of the place of residence, or juvenile protection organization may also be notified to be present, and the relevant information shall be recorded in the case file. The legal representative present may exercise the litigation rights of the juvenile criminal suspect or defendant on their behalf.\nIf the legal representative or other person present believes that the case handler has infringed the legitimate rights and interests of the juvenile during interrogation or adjudication, the person may raise an opinion. The interrogation record and court record shall be given to the legal representative or other person present for reading or shall be read aloud to them.\nWhen interrogating a female juvenile criminal suspect, a female staff member shall be present.\nWhen adjudicating a criminal case involving a minor, after the juvenile defendant makes a final statement, the legal representative may make a supplementary statement.\nWhen questioning a juvenile victim or witness, the provisions of paragraphs 1, 2, and 3 shall apply."
+    },
+    {
+      "article_number": "第二百八十二条",
+      "content_en": "Article 282 For a juvenile suspected of committing a crime specified in Chapters IV, V, or VI of the Specific Provisions of the Criminal Law, with a possible punishment of not more than one year of fixed-term imprisonment, who meets the conditions for prosecution but shows signs of repentance, the People's Procuratorate may make a decision to impose a conditional non-prosecution. Before making a decision to impose a conditional non-prosecution, the People's Procuratorate shall hear the opinions of the public security organ and the victim.\nWith respect to a decision on conditional non-prosecution, if the public security organ requests a reconsideration, applies for a review, or the victim petitions, the provisions of Articles 179 and 180 of this Law shall apply.\nIf the juvenile criminal suspect and the legal representative have objections to the decision by the People's Procuratorate to impose a conditional non-prosecution, the People's Procuratorate shall make a decision to institute a prosecution."
+    },
+    {
+      "article_number": "第二百八十三条",
+      "content_en": "Article 283 During the probation period for conditional non-prosecution, the People's Procuratorate shall supervise and examine the juvenile criminal suspect subject to conditional non-prosecution. The guardian of the juvenile criminal suspect shall strengthen discipline and supervision over the juvenile criminal suspect and cooperate with the People's Procuratorate in the supervision and examination work.\nThe probation period for conditional non-prosecution shall be not less than six months and not more than one year, calculated from the date the People's Procuratorate makes the decision to impose a conditional non-prosecution.\nA juvenile criminal suspect subject to conditional non-prosecution shall comply with the following provisions:\n(1) Comply with laws and regulations and submit to supervision;\n(2) Report on the activities in accordance with the provisions of the examining authority;\n(3) Leaving the city or county of residence or changing residence shall be reported to and approved by the examining authority;\n(4) Undergo correction and education as required by the examining authority."
+    },
+    {
+      "article_number": "第二百八十四条",
+      "content_en": "Article 284 If a juvenile criminal suspect subject to conditional non-prosecution falls under any of the following circumstances during the probation period, the People's Procuratorate shall revoke the decision on conditional non-prosecution and initiate a public prosecution:\n(1) Commits a new crime or it is discovered that there is another crime that requires prosecution committed before the decision to impose conditional non-prosecution was made;\n(2) Violates provisions on public security administration or the supervisory and administrative provisions regarding conditional non-prosecution of the examining authority, where the circumstances are serious.\nIf a juvenile criminal suspect subject to conditional non-prosecution does not fall under the abovementioned circumstances during the probation period and the probation period expires, the People's Procuratorate shall make a decision not to prosecute."
+    },
+    {
+      "article_number": "第二百八十五条",
+      "content_en": "Article 285 Cases in which the defendant is under the age of 18 at the time of adjudication shall not be heard in public. However, with the consent of the juvenile defendant and the legal representative, the school attended by the juvenile defendant and the juvenile protection organization may send representatives to be present."
+    },
+    {
+      "article_number": "第二百八十六条",
+      "content_en": "Article 286 If a person is under the age of 18 at the time of committing a crime and is sentenced to a punishment of not more than five years of fixed-term imprisonment, the relevant criminal record shall be sealed.\nA sealed criminal record shall not be provided to any unit or individual, except where a judicial authority needs it for case handling or a relevant unit makes an inquiry in accordance with state regulations. A unit making an inquiry according to law shall keep confidential the information contained in the sealed criminal record."
+    },
+    {
+      "article_number": "第二百八十七条",
+      "content_en": "Article 287 The handling of criminal cases involving minors, except where otherwise provided in this Chapter, shall be conducted in accordance with other provisions of this Law."
+    },
+    {
+      "article_number": "第二百八十八条",
+      "content_en": "Article 288 In the following cases of public prosecution, if the criminal suspect or defendant sincerely repents, obtains the victim's understanding by compensating the victim for losses, offering an apology, or other means, and the victim voluntarily reconciles, the parties may reach a settlement:\n(1) Cases arising from civil disputes involving crimes specified in Chapters IV or V of the Specific Provisions of the Criminal Law for which the possible punishment is not more than three years of fixed-term imprisonment;\n(2) Cases of negligent crimes, excluding crimes of dereliction of duty, for which the possible punishment is not more than seven years of fixed-term imprisonment.\nIf the criminal suspect or defendant has previously intentionally committed a crime within five years, the procedures provided for in this Chapter shall not apply."
+    },
+    {
+      "article_number": "第二百八十九条",
+      "content_en": "Article 289 If the parties reach a settlement, the public security organ, the People's Procuratorate, and the People's Court shall hear the opinions of the parties and other relevant persons, examine the voluntariness and legality of the settlement, and preside over the creation of a settlement agreement."
+    },
+    {
+      "article_number": "第二百九十条",
+      "content_en": "Article 290 For a case where a settlement agreement has been reached, the public security organ may recommend to the People's Procuratorate a lenient disposition. The People's Procuratorate may recommend to the People's Court a lenient punishment; where the circumstances of the crime are minor and a punishment is not necessary, the People's Procuratorate may make a decision not to prosecute. The People's Court may, according to law, impose a lenient punishment on the defendant."
+    },
+    {
+      "article_number": "第二百九十一条",
+      "content_en": "Article 291 For cases of embezzlement or bribery, as well as cases of crimes seriously endangering national security or terrorist activities that require prompt adjudication and are approved by the Supreme People's Procuratorate, where the criminal suspect or defendant is outside the territory, and after the supervisory authority or public security organ has transferred the case for prosecution, if the People's Procuratorate finds that the criminal facts have been fully investigated, the evidence is reliable and sufficient, and criminal liability shall be pursued according to law, the People's Procuratorate may initiate a public prosecution with the People's Court. After review by the People's Court, if the indictment contains clear allegations of criminal facts and meets the conditions for applying the absentee adjudication procedure, the People's Court shall decide to hold a trial.\nCases specified in the preceding paragraph shall be tried by a collegial panel formed by the Intermediate People's Court of the place of the crime, the place of residence of the defendant before departure, or designated by the Supreme People's Court."
+    },
+    {
+      "article_number": "第二百九十二条",
+      "content_en": "Article 292 The People's Court shall serve the summons and a copy of the indictment from the People's Procuratorate on the defendant through judicial assistance methods provided for in relevant international treaties or through diplomatic channels, or by other methods allowed by the law of the defendant's location. After the summons and a copy of the indictment are served, if the defendant fails to appear as required, the People's Court shall hold a trial according to law, render a judgment, and dispose of the illegal gains and other property involved in the case."
+    },
+    {
+      "article_number": "第二百九十三条",
+      "content_en": "Article 293 In a case tried by absentee adjudication, the defendant shall have the right to entrust a defender, and the close relatives of the defendant may entrust a defender on the defendant's behalf. If the defendant or the close relatives fail to entrust a defender, the People's Court shall notify a legal aid institution to appoint a lawyer to provide defense for the defendant."
+    },
+    {
+      "article_number": "第二百九十四条",
+      "content_en": "Article 294 The People's Court shall serve the judgment on the defendant, the close relatives, and the defender. If the defendant or the close relatives are dissatisfied with the judgment, they shall have the right to appeal to the next higher People's Court. With the consent of the defendant or the close relatives, the defender may file an appeal.\nIf the People's Procuratorate finds that the judgment of the People's Court is erroneous, it shall file a protest with the next higher People's Court."
+    },
+    {
+      "article_number": "第二百九十五条",
+      "content_en": "Article 295 During the trial process, if the defendant voluntarily surrenders or is captured, the People's Court shall retry the case.\nIf the offender appears after the judgment or ruling has taken legal effect, the People's Court shall deliver the offender for execution of the punishment. Before delivering the offender for execution of the punishment, the People's Court shall inform the offender of the right to raise objections to the judgment or ruling. If the offender raises objections to the judgment or ruling, the People's Court shall retry the case.\nIf the handling of the offender's property pursuant to an effective judgment or ruling is found to be erroneous, the property shall be returned or compensation shall be provided."
+    },
+    {
+      "article_number": "第二百九十六条",
+      "content_en": "Article 296 If due to a serious illness the defendant cannot appear in court, and the suspension of trial lasts for more than six months while the defendant still cannot appear, and the defendant or the legal representative or close relatives apply for or agree to resume the trial, the People's Court may, in the absence of the defendant, conduct an absentee trial and render a judgment according to law."
+    },
+    {
+      "article_number": "第二百九十七条",
+      "content_en": "Article 297 If the defendant dies, the People's Court shall rule to terminate the trial, except where there is evidence proving the defendant's innocence and the People's Court, through absentee trial, confirms the innocence, in which case the People's Court shall render a judgment according to law.\nIf the defendant dies in a case retried under the trial supervision procedure, the People's Court may conduct an absentee trial and render a judgment according to law."
+    },
+    {
+      "article_number": "第二百九十八条",
+      "content_en": "Article 298 For major criminal cases such as embezzlement or bribery, or terrorist activities, where the criminal suspect or defendant has absconded and cannot appear after being wanted for one year, or where the criminal suspect or defendant has died, and the illegal gains and other property involved in the case shall be confiscated according to the Criminal Law, the People's Procuratorate may apply to the People's Court for the confiscation of illegal gains.\nIf the public security organ believes that the circumstances specified in the preceding paragraph exist, it shall prepare a written opinion on the confiscation of illegal gains and transfer it to the People's Procuratorate.\nAn application for the confiscation of illegal gains shall provide evidence related to the criminal facts and illegal gains and shall specify the types, quantities, locations, and status of seizure, impoundment, or freezing of the property.\nThe People's Court may, when necessary, seize, impound, or freeze the property that is the subject of the application for confiscation."
+    },
+    {
+      "article_number": "第二百九十九条",
+      "content_en": "Article 299 An application for the confiscation of illegal gains shall be tried by a collegial panel formed by the Intermediate People's Court in the place of the crime or the place of residence of the criminal suspect or defendant.\nAfter accepting an application for the confiscation of illegal gains, the People's Court shall issue a public notice. The public notice period shall be six months. Close relatives of the criminal suspect or defendant and other interested parties shall have the right to apply to participate in the proceedings, and may also entrust litigation agents to participate in the proceedings.\nAfter the expiry of the public notice period, the People's Court shall conduct a trial on the application for the confiscation of illegal gains. If an interested party participates in the proceedings, the People's Court shall hold a hearing."
+    },
+    {
+      "article_number": "第三百条",
+      "content_en": "Article 300 After trial, if the property is verified to be illegal gains or other property involved in the case, the People's Court shall issue a ruling to confiscate it, unless it shall be returned to the victim according to law; if the property does not belong to what shall be recovered, the People's Court shall rule to reject the application and lift the seizure, impoundment, or freezing measures.\nFor a ruling made by the People's Court in accordance with the preceding paragraph, close relatives of the criminal suspect or defendant, other interested parties, or the People's Procuratorate may file an appeal or protest."
+    },
+    {
+      "article_number": "第三百零一条",
+      "content_en": "Article 301 During the trial process, if the absconded criminal suspect or defendant voluntarily surrenders or is captured, the People's Court shall terminate the trial.\nIf the confiscation of the property of the criminal suspect or defendant is found to be erroneous, the property shall be returned or compensation shall be provided."
+    },
+    {
+      "article_number": "第三百零二条",
+      "content_en": "Article 302 If a mental patient who, through the commission of a violent act, endangers public security or seriously endangers the personal safety of others, and is identified through statutory procedures as not bearing criminal liability according to law, and there is a possibility of continuing to endanger society, they may be subjected to compulsory medical treatment."
+    },
+    {
+      "article_number": "第三百零三条",
+      "content_en": "Article 303 The decision to subject a mental patient to compulsory medical treatment in accordance with the provisions of this Chapter shall be made by the People's Court.\nIf the public security organ discovers that a mental patient meets the conditions for compulsory medical treatment, the public security organ shall prepare a written opinion on compulsory medical treatment and transfer it to the People's Procuratorate. If, during the examination of a case transferred by the public security organ or during the review of a prosecution, it is discovered that a mental patient meets the conditions for compulsory medical treatment, the People's Procuratorate shall apply to the People's Court for compulsory medical treatment. If, during the trial of a case, the People's Court discovers that the defendant meets the conditions for compulsory medical treatment, the People's Court may make a decision to impose compulsory medical treatment.\nFor a mental patient who commits a violent act, before the People's Court decides on compulsory medical treatment, the public security organ may adopt temporary protective restraint measures."
+    },
+    {
+      "article_number": "第三百零四条",
+      "content_en": "Article 304 After accepting an application for compulsory medical treatment, the People's Court shall form a collegial panel to conduct the trial.\nWhen trying a case of compulsory medical treatment, the People's Court shall notify the legal representative of the respondent or defendant to be present. If the respondent or defendant has not retained a litigation agent, the People's Court shall notify a legal aid institution to appoint a lawyer to provide legal assistance."
+    },
+    {
+      "article_number": "第三百零五条",
+      "content_en": "Article 305 After trial, if the respondent or defendant meets the conditions for compulsory medical treatment, the People's Court shall make a decision on compulsory medical treatment within one month.\nIf the person subjected to compulsory medical treatment, the victim, and the legal representative or close relatives are dissatisfied with the decision on compulsory medical treatment, they may apply for reconsideration to the next higher People's Court."
+    },
+    {
+      "article_number": "第三百零六条",
+      "content_en": "Article 306 A compulsory medical treatment institution shall regularly conduct diagnostic assessments of the persons subjected to compulsory medical treatment. If a person no longer poses a risk of personal danger and is no longer in need of further compulsory medical treatment, the institution shall promptly propose an opinion on discharge and report it to the People's Court that made the decision on compulsory medical treatment for approval.\nThe person subjected to compulsory medical treatment and the close relatives shall have the right to apply for the lifting of the compulsory medical treatment."
+    },
+    {
+      "article_number": "第三百零七条",
+      "content_en": "Article 307 The People's Procuratorate shall exercise supervision over the decisions on and the enforcement of compulsory medical treatment.\nSupplementary Provisions"
+    },
+    {
+      "article_number": "第三百零八条",
+      "content_en": "Article 308 The security departments of the military shall exercise the power of investigation over criminal cases occurring within the military.\nThe China Coast Guard shall perform duties of safeguarding maritime rights and enforcing the law at sea, and exercise the power of investigation over criminal cases occurring at sea.\nCases in which an offender commits a crime within a prison shall be investigated by the prison.\nWhen the security departments of the military, the China Coast Guard, or a prison handle criminal cases, the relevant provisions of this Law shall apply."
+    }
+  ]
 }

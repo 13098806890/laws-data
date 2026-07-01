@@ -2,5 +2,1230 @@
   "law_id": 1100396,
   "title_en": "Civil Procedure Law of the People's Republic of China",
   "promulgation_info_en": "",
-  "articles": []
+  "articles": [
+    {
+      "article_number": "第一条",
+      "content_en": "Article 1 This Law is enacted in accordance with the Constitution, reflecting the experience and actual circumstances of civil trial work in China."
+    },
+    {
+      "article_number": "第二条",
+      "content_en": "Article 2 The objectives of this Law are to protect the exercise of litigation rights by parties, ensure that the People's Courts ascertain facts, distinguish right from wrong, correctly apply the law, promptly adjudicate civil cases, confirm civil rights and obligations relationships, impose sanctions on civil illegal acts, protect the lawful rights and interests of parties, educate citizens to voluntarily abide by the law, uphold social and economic order, and guarantee the smooth progress of socialist construction."
+    },
+    {
+      "article_number": "第三条",
+      "content_en": "Article 3 The provisions of this Law shall apply to civil actions initiated between citizens, between legal persons, between other organizations, and among them, concerning property relations and personal relations, which are accepted by the People's Courts."
+    },
+    {
+      "article_number": "第四条",
+      "content_en": "Article 4 All persons conducting civil actions within the territory of the People's Republic of China must abide by this Law."
+    },
+    {
+      "article_number": "第五条",
+      "content_en": "Article 5 Foreigners, stateless persons, foreign enterprises and organizations initiating or responding to lawsuits in the People's Courts shall enjoy equal litigation rights and obligations as Chinese citizens, legal persons and other organizations.\nWhere a foreign court imposes restrictions on the civil action rights of Chinese citizens, legal persons and other organizations, the People's Courts of the People's Republic of China shall apply the principle of reciprocity to the civil action rights of the citizens, enterprises and organizations of that country."
+    },
+    {
+      "article_number": "第六条",
+      "content_en": "Article 6 The adjudicative power over civil cases shall be exercised by the People's Courts.\nThe People's Courts shall independently adjudicate civil cases in accordance with the provisions of law, and shall not be subject to interference by administrative organs, social organizations or individuals."
+    },
+    {
+      "article_number": "第七条",
+      "content_en": "Article 7 When adjudicating civil cases, the People's Courts must take facts as the basis and the law as the criterion."
+    },
+    {
+      "article_number": "第八条",
+      "content_en": "Article 8 Parties to civil actions shall have equal litigation rights. When adjudicating civil cases, the People's Courts shall safeguard and facilitate the exercise of litigation rights by the parties, and shall apply the law equally to all parties."
+    },
+    {
+      "article_number": "第九条",
+      "content_en": "Article 9 When adjudicating civil cases, the People's Courts shall conduct mediation on the basis of voluntariness and legality; if mediation fails, they shall render a judgment in a timely manner."
+    },
+    {
+      "article_number": "第十条",
+      "content_en": "Article 10 When adjudicating civil cases, the People's Courts shall, in accordance with the provisions of law, implement the systems of collegial panels, withdrawal, open trial, and final instance of two trials."
+    },
+    {
+      "article_number": "第十一条",
+      "content_en": "Article 11 Citizens of all ethnic groups shall have the right to conduct civil actions in their own spoken and written languages.\nIn areas inhabited by minority ethnic groups or where multiple ethnic groups live together, the People's Courts shall conduct adjudication and issue legal instruments in the commonly used spoken and written languages of the local ethnic groups.\nThe People's Courts shall provide translation for litigation participants who do not understand the commonly used spoken and written languages of the local ethnic groups."
+    },
+    {
+      "article_number": "第十二条",
+      "content_en": "Article 12 When the People's Courts adjudicate civil cases, the parties shall have the right to argue."
+    },
+    {
+      "article_number": "第十三条",
+      "content_en": "Article 13 Civil actions shall adhere to the principle of good faith.\nParties shall have the right to dispose of their own civil rights and litigation rights within the scope provided for by law."
+    },
+    {
+      "article_number": "第十四条",
+      "content_en": "Article 14 The People's Procuratorates shall have the authority to exercise legal supervision over civil actions."
+    },
+    {
+      "article_number": "第十五条",
+      "content_en": "Article 15 Organs, social organizations, enterprises and institutions may support the injured unit or individual in initiating a lawsuit in the People's Court against acts that damage the civil rights and interests of the State, a collective or an individual."
+    },
+    {
+      "article_number": "第十六条",
+      "content_en": "Article 16 With the consent of the parties, civil action activities may be conducted online through information network platforms.\nCivil action activities conducted online through information network platforms shall have the same legal effect as offline litigation activities."
+    },
+    {
+      "article_number": "第十七条",
+      "content_en": "Article 17 The People's Congresses of national autonomous areas may, in accordance with the principles of the Constitution and this Law, and taking into account the specific circumstances of the local ethnic groups, formulate flexible or supplementary provisions. Provisions of autonomous regions shall be submitted to the Standing Committee of the National People's Congress for approval. Provisions of autonomous prefectures and autonomous counties shall be submitted to the Standing Committee of the People's Congress of the province or autonomous region for approval and shall be reported to the Standing Committee of the National People's Congress for the record."
+    },
+    {
+      "article_number": "第十八条",
+      "content_en": "Article 18 Primary People's Courts shall have jurisdiction over first instance civil cases, except as otherwise provided by this Law."
+    },
+    {
+      "article_number": "第十九条",
+      "content_en": "Article 19 Intermediate People's Courts shall have jurisdiction over the following first instance civil cases:\n(1) major cases involving foreign elements;\n(2) cases that have a significant impact within their respective jurisdictions;\n(3) cases that the Supreme People's Court designates as falling under the jurisdiction of Intermediate People's Courts."
+    },
+    {
+      "article_number": "第二十条",
+      "content_en": "Article 20 Higher People's Courts shall have jurisdiction over first instance civil cases that have a significant impact within their respective jurisdictions."
+    },
+    {
+      "article_number": "第二十一条",
+      "content_en": "Article 21 The Supreme People's Court shall have jurisdiction over the following first instance civil cases:\n(1) cases that have a significant impact nationwide;\n(2) cases it deems should be adjudicated by itself."
+    },
+    {
+      "article_number": "第二十二条",
+      "content_en": "Article 22 A civil action against a citizen shall be under the jurisdiction of the People's Court at the place of the defendant's domicile; if the defendant's domicile is inconsistent with the place of habitual residence, the action shall be under the jurisdiction of the People's Court at the place of habitual residence.\nA civil action against a legal person or other organization shall be under the jurisdiction of the People's Court at the place of the defendant's domicile.\nIf the places of domicile or habitual residence of several defendants in the same action fall within the jurisdictional areas of two or more People's Courts, each of those People's Courts shall have jurisdiction."
+    },
+    {
+      "article_number": "第二十三条",
+      "content_en": "Article 23 The following civil actions shall be under the jurisdiction of the People's Court at the place of the plaintiff's domicile; if the plaintiff's domicile is inconsistent with the place of habitual residence, the action shall be under the jurisdiction of the People's Court at the plaintiff's place of habitual residence:\n(1) actions concerning identity relations brought against a person who is not residing within the territory of the People's Republic of China;\n(2) actions concerning identity relations brought against a person whose whereabouts are unknown or who has been declared missing;\n(3) actions brought against a person who is subject to compulsory educational measures;\n(4) actions brought against a person who is imprisoned."
+    },
+    {
+      "article_number": "第二十四条",
+      "content_en": "Article 24 An action arising from a contract dispute shall be under the jurisdiction of the People's Court at the place of the defendant's domicile or at the place of performance of the contract."
+    },
+    {
+      "article_number": "第二十五条",
+      "content_en": "Article 25 An action arising from an insurance contract dispute shall be under the jurisdiction of the People's Court at the place of the defendant's domicile or at the location of the subject matter of the insurance."
+    },
+    {
+      "article_number": "第二十六条",
+      "content_en": "Article 26 An action arising from a negotiable instrument dispute shall be under the jurisdiction of the People's Court at the place of payment of the instrument or at the place of the defendant's domicile."
+    },
+    {
+      "article_number": "第二十七条",
+      "content_en": "Article 27 An action arising from a dispute over the establishment of a company, confirmation of shareholder qualification, distribution of profits, dissolution, or the like, shall be under the jurisdiction of the People's Court at the place of the company's domicile."
+    },
+    {
+      "article_number": "第二十八条",
+      "content_en": "Article 28 An action arising from a dispute over a contract for railway, road, water, air or combined transportation shall be under the jurisdiction of the People's Court at the place of departure, the place of destination, or the place of the defendant's domicile."
+    },
+    {
+      "article_number": "第二十九条",
+      "content_en": "Article 29 An action arising from a tort shall be under the jurisdiction of the People's Court at the place where the tort was committed or at the place of the defendant's domicile."
+    },
+    {
+      "article_number": "第三十条",
+      "content_en": "Article 30 An action seeking damages arising from a railway, road, water or air accident shall be under the jurisdiction of the People's Court at the place where the accident occurred, or at the place where the vehicle or vessel first arrived, or where the aircraft first landed, or at the place of the defendant's domicile."
+    },
+    {
+      "article_number": "第三十一条",
+      "content_en": "Article 31 An action seeking damages arising from a collision of ships or other maritime damage incidents shall be under the jurisdiction of the People's Court at the place where the collision occurred, or at the place where the colliding ship first arrived, or at the place where the offending ship was detained, or at the place of the defendant's domicile."
+    },
+    {
+      "article_number": "第三十二条",
+      "content_en": "Article 32 An action arising from salvage fees at sea shall be under the jurisdiction of the People's Court at the place where the salvage took place or at the place where the salved ship first arrived."
+    },
+    {
+      "article_number": "第三十三条",
+      "content_en": "Article 33 An action arising from general average shall be under the jurisdiction of the People's Court at the place where the ship first arrived, or at the place where the general average adjustment was conducted, or at the place where the voyage ended."
+    },
+    {
+      "article_number": "第三十四条",
+      "content_en": "Article 34 The following cases shall be subject to the exclusive jurisdiction of the People's Courts specified in this Article:\n(1) an action arising from a real property dispute shall be under the jurisdiction of the People's Court at the place where the real property is located;\n(2) an action arising from a dispute occurring during port operations shall be under the jurisdiction of the People's Court at the place where the port is located;\n(3) an action arising from a dispute over succession to an estate shall be under the jurisdiction of the People's Court at the place of the decedent's domicile at the time of death or at the place where the principal estate is located."
+    },
+    {
+      "article_number": "第三十五条",
+      "content_en": "Article 35 Parties to a dispute over a contract or other property rights and interests may, by written agreement, select the jurisdiction of the People's Court at the place of the defendant's domicile, the place of performance of the contract, the place of conclusion of the contract, the place of the plaintiff's domicile, the place where the subject matter is located, or any other place that has a substantial connection with the dispute; however, this shall not violate the provisions of this Law concerning hierarchy jurisdiction and exclusive jurisdiction."
+    },
+    {
+      "article_number": "第三十六条",
+      "content_en": "Article 36 In an action over which two or more People's Courts have jurisdiction, the plaintiff may initiate the lawsuit in any one of those People's Courts; if the plaintiff initiates the lawsuit in two or more of those People's Courts that have jurisdiction, the People's Court that first places the case on file shall have jurisdiction."
+    },
+    {
+      "article_number": "第三十七条",
+      "content_en": "Article 37 If a People's Court discovers that a case it has accepted does not fall within its jurisdiction, it shall transfer the case to the People's Court that has jurisdiction, and the transferee People's Court shall accept the case. If the transferee People's Court considers that the transferred case does not fall within its jurisdiction according to the provisions, it shall submit a report to the superior People's Court for designation of jurisdiction and may not further transfer the case on its own."
+    },
+    {
+      "article_number": "第三十八条",
+      "content_en": "Article 38 If a People's Court that has jurisdiction is unable to exercise its jurisdiction due to special reasons, the superior People's Court shall designate another court to have jurisdiction.\nIf a dispute over jurisdiction arises between People's Courts, the disputing parties shall resolve it through consultation; if consultation fails, they shall submit a report to their common superior People's Court for designation of jurisdiction."
+    },
+    {
+      "article_number": "第三十九条",
+      "content_en": "Article 39 A superior People's Court shall have the authority to adjudicate first instance civil cases under the jurisdiction of a lower People's Court; if it is truly necessary to transfer a first instance civil case under its own jurisdiction to a lower People's Court for adjudication, it shall submit a report to its superior People's Court for approval.\nIf a lower People's Court considers that a first instance civil case under its jurisdiction needs to be adjudicated by a superior People's Court, it may submit a report to the superior People's Court for adjudication."
+    },
+    {
+      "article_number": "第四十条",
+      "content_en": "Article 40 When adjudicating first instance civil cases, the People's Courts shall form a collegial panel composed of judges and people's assessors jointly, or a collegial panel composed of judges alone. The number of members in a collegial panel shall be odd.\nCivil cases adjudicated using the summary procedure shall be tried by a single judge alone. First instance civil cases adjudicated by a Primary People's Court with clear basic facts and well-defined rights and obligations relationships may be tried by a single judge alone applying the ordinary procedure.\nWhen participating in adjudicative activities, people's assessors shall have equal rights and obligations as judges, except as otherwise provided by law."
+    },
+    {
+      "article_number": "第四十一条",
+      "content_en": "Article 41 When a People's Court tries a civil case of second instance, it shall form a collegial panel composed of judges. The number of members of a collegial panel shall be an odd number.\nFor a civil case of second instance that was concluded by the Intermediate People's Court in first instance using summary procedure or upon an appeal against a ruling, where the facts are clear and the rights and obligations are definite, with the consent of both parties, the case may be tried by a single judge alone.\nFor a case remanded for retrial, the original trial People's Court shall form a collegial panel separately in accordance with the procedure of first instance.\nFor a case tried on retrial, if it was originally tried in first instance, a collegial panel shall be formed separately in accordance with the procedure of first instance; if it was originally tried in second instance or if it is brought up for trial by a superior People's Court, a collegial panel shall be formed separately in accordance with the procedure of second instance."
+    },
+    {
+      "article_number": "第四十二条",
+      "content_en": "Article 42 A People's Court shall not try the following civil cases by a single judge alone:\n(1) Cases involving national interests or public interests;\n(2) Cases involving group disputes which may affect social stability;\n(3) Cases that are of wide public concern or have other relatively significant social impact;\n(4) Cases that are of a new type or are difficult and complex;\n(5) Cases that shall be tried by a collegial panel as provided by law; and\n(6) Other cases that are not suitable for trial by a single judge alone."
+    },
+    {
+      "article_number": "第四十三条",
+      "content_en": "Article 43 Where a People's Court, in the course of trial, finds that a case is not suitable for trial by a single judge alone, it shall rule to transfer the case to a collegial panel for trial.\nIf a party considers that trial of a case by a single judge alone violates legal provisions, it may raise an objection to the People's Court. The People's Court shall examine the objection raised by the party; if the objection is established, it shall rule to transfer the case to a collegial panel for trial; if the objection is not established, it shall rule to reject the objection."
+    },
+    {
+      "article_number": "第四十四条",
+      "content_en": "Article 44 The presiding judge of a collegial panel shall be designated by the president or the division chief from among the judges; if the president or the division chief participates in the trial, he or she shall serve as the presiding judge."
+    },
+    {
+      "article_number": "第四十五条",
+      "content_en": "Article 45 When a collegial panel deliberates on a case, the principle of the minority being subordinate to the majority shall apply. A record of the deliberation shall be made and signed by the members of the collegial panel. Different opinions expressed during the deliberation shall be truthfully recorded in the record."
+    },
+    {
+      "article_number": "第四十六条",
+      "content_en": "Article 46 Adjudicators shall handle cases impartially in accordance with law.\nAdjudicators shall not accept any treat or gifts from parties or their litigation agents.\nIf an adjudicator commits acts of corruption, bribery, favoritism, or rendering a judgment contrary to law, legal liability shall be pursued; if such acts constitute a crime, criminal liability shall be investigated in accordance with law."
+    },
+    {
+      "article_number": "第四十七条",
+      "content_en": "Article 47 An adjudicator shall withdraw himself or herself under any of the following circumstances, and the parties shall have the right to apply for his or her withdrawal orally or in writing:\n(1) He or she is a close relative of a party or a litigation agent in the case;\n(2) He or she has an interest in the case; or\n(3) He or she has another relationship with a party or a litigation agent in the case that may affect the impartial trial of the case.\nIf an adjudicator accepts treats or gifts from a party or a litigation agent, or meets with a party or a litigation agent in violation of regulations, the party shall have the right to request his or her withdrawal.\nIf an adjudicator commits acts as provided in the preceding paragraph, legal liability shall be pursued in accordance with law.\nThe provisions of the preceding three paragraphs shall apply to judge assistants, court clerks, judicial technical personnel, interpreters, expert witnesses, and inspectors."
+    },
+    {
+      "article_number": "第四十八条",
+      "content_en": "Article 48 A party applying for withdrawal shall state the reasons and shall make the application at the commencement of the trial; if the grounds for withdrawal become known after the commencement of the trial, the application may also be made before the conclusion of the court debate.\nThe person whose withdrawal is applied for shall suspend participation in the work of the case pending a decision by the People's Court on whether to grant the withdrawal, except in cases where the case requires urgent measures."
+    },
+    {
+      "article_number": "第四十九条",
+      "content_en": "Article 49 Withdrawal of the president of the court when he or she serves as the presiding judge or as a sole judge shall be decided by the judicial committee; withdrawal of an adjudicator shall be decided by the president; withdrawal of other personnel shall be decided by the presiding judge or the sole judge."
+    },
+    {
+      "article_number": "第五十条",
+      "content_en": "Article 50 A People's Court shall, within three days after the application for withdrawal is made, render a decision orally or in writing. If the applicant is dissatisfied with the decision, he or she may apply for one reconsideration at the time of receiving the decision. During the period of reconsideration, the person whose withdrawal is applied for shall not cease participation in the work of the case. The People's Court shall, within three days, render a reconsideration decision and notify the person applying for reconsideration."
+    },
+    {
+      "article_number": "第五十一条",
+      "content_en": "Article 51 Citizens, legal persons, and other organizations may serve as parties in a civil action.\nA legal person shall conduct litigation through its legal representative. Other organizations shall conduct litigation through their principal responsible persons."
+    },
+    {
+      "article_number": "第五十二条",
+      "content_en": "Article 52 A party shall have the right to appoint an agent, apply for withdrawal, collect and provide evidence, engage in debate, request mediation, file an appeal, and apply for enforcement.\nA party may consult the relevant materials of the case and may reproduce the relevant materials and legal documents of the case. The scope and methods for consulting and reproducing the relevant materials of the case shall be specified by the Supreme People's Court.\nA party must exercise litigation rights in accordance with law, observe the litigation order, and perform legally effective judgments, rulings, and mediation documents."
+    },
+    {
+      "article_number": "第五十三条",
+      "content_en": "Article 53 The parties may reach a settlement between themselves."
+    },
+    {
+      "article_number": "第五十四条",
+      "content_en": "Article 54 The plaintiff may waive or modify his or her claims. The defendant may admit or rebut the claims and shall have the right to file a counterclaim."
+    },
+    {
+      "article_number": "第五十五条",
+      "content_en": "Article 55 Where one party or both parties consist of two or more persons, and the object of action is the same, or the object of action is of the same category and the People's Court considers that the cases may be tried jointly and the parties consent, it shall be a joint action.\nIf a party to a joint action has joint rights and obligations in respect of the object of action, the litigation act of one of them shall be effective for the other joint litigants only if it is admitted by the other joint litigants; if a party has no joint rights or obligations in respect of the object of action, the litigation act of one of them shall not be effective for the other joint litigants."
+    },
+    {
+      "article_number": "第五十六条",
+      "content_en": "Article 56 For a joint action in which a large number of persons on one party are involved, the parties may elect representatives to conduct the litigation. The litigation acts of the representatives shall be effective for the parties they represent; however, if the representatives modify or waive claims, admit the claims of the opposing party, or settle the case, they must obtain the consent of the parties they represent."
+    },
+    {
+      "article_number": "第五十七条",
+      "content_en": "Article 57 Where the object of action is of the same category, one party consists of a large number of persons, and the exact number of persons is unknown at the time of filing the action, the People's Court may issue a public notice, explaining the case situation and the claims, and notifying the right holders to register with the People's Court within a specified period.\nThe right holders who have registered with the People's Court may elect representatives to conduct the litigation; if no representatives are elected, the People's Court may appoint representatives in consultation with the registered right holders.\nThe litigation acts of the representatives shall be effective for the parties they represent; however, if the representatives modify or waive claims, admit the claims of the opposing party, or settle the case, they must obtain the consent of the parties they represent.\nThe judgments and rulings made by the People's Court shall be effective for all the right holders who have registered. If a right holder who has not registered files an action within the limitation of action, such judgment or ruling shall apply."
+    },
+    {
+      "article_number": "第五十八条",
+      "content_en": "Article 58 For acts that damage the public interest, such as polluting the environment or infringing upon the lawful rights and interests of a large number of consumers, the authorities and relevant organizations as provided by law may institute an action in a People's Court.\nWhere a People's Procuratorate, in the course of performing its duties, discovers acts that damage the public interest, such as damaging the ecological environment and resource protection, or infringing upon the lawful rights and interests of a large number of consumers in the fields of food and drug safety, it may institute an action in a People's Court, provided that there is no authority or organization as provided in the preceding paragraph, or if such authority or organization fails to institute an action. If the authority or organization provided in the preceding paragraph institutes an action, the People's Procuratorate may support the action."
+    },
+    {
+      "article_number": "第五十九条",
+      "content_en": "Article 59 If a third party considers that it has an independent claim to the object of action of both parties, it shall have the right to institute an action.\nIf a third party does not have an independent claim to the object of action of both parties, but the outcome of the case has a legal interest in relation to it, it may apply to participate in the proceedings, or the People's Court shall notify it to participate. If a People's Court renders a judgment holding a third party liable for civil liability, such third party shall have the litigation rights and obligations of a party.\nIf a third party as provided in the preceding two paragraphs fails to participate in the proceedings for reasons not attributable to itself, but has evidence proving that part or all of the legally effective judgment, ruling, or mediation document is erroneous and damages its civil rights and interests, it may, within six months from the date it becomes aware or should have become aware of the damage to its civil rights and interests, institute an action before the People's Court that rendered such judgment, ruling, or mediation document. If, after trial, the claims are established, the People's Court shall modify or revoke the original judgment, ruling, or mediation document; if the claims are not established, it shall dismiss the claims."
+    },
+    {
+      "article_number": "第六十条",
+      "content_en": "Article 60 A person without capacity for litigation shall have his or her guardian act as legal agent to conduct litigation on his or her behalf. If the legal agents shift their responsibility to each other, the People's Court shall designate one of them to conduct the litigation."
+    },
+    {
+      "article_number": "第六十一条",
+      "content_en": "Article 61 A party or legal agent may appoint one or two persons as litigation agents.\nThe following persons may be appointed as litigation agents:\n(1) Lawyers and basic-level legal service workers;\n(2) Near relatives or staff members of the party; and\n(3) Citizens recommended by the community, unit, or relevant social organization to which the party belongs."
+    },
+    {
+      "article_number": "第六十二条",
+      "content_en": "Article 62 To appoint another person to conduct litigation on its behalf, a party must submit a power of attorney signed or sealed by the appointing party to the People's Court.\nThe power of attorney must clearly specify the matters entrusted and the scope of authority. For a litigation agent to admit, waive, or modify claims, reach a settlement, file a counterclaim, or file an appeal, the appointing party must provide special authorization.\nA power of attorney sent or delivered from abroad by a citizen of the People's Republic of China residing abroad must be certified by the embassy or consulate of the People's Republic of China in that country; if there is no such embassy or consulate, it shall be certified by the embassy or consulate of a third country that has diplomatic relations with the People's Republic of China in that country, and then further certified by the embassy or consulate of the People's Republic of China in that third country, or certified by a local patriotic overseas Chinese organization."
+    },
+    {
+      "article_number": "第六十三条",
+      "content_en": "Article 63 If the authority of a litigation agent is modified or revoked, the party shall inform the People's Court in writing, and the People's Court shall notify the opposing party."
+    },
+    {
+      "article_number": "第六十四条",
+      "content_en": "Article 64 Lawyers and other litigation agents representing a party in litigation shall have the right to investigate and collect evidence and may consult the relevant materials of the case. The scope and methods for consulting the relevant materials of the case shall be specified by the Supreme People's Court."
+    },
+    {
+      "article_number": "第六十五条",
+      "content_en": "Article 65 In a divorce case where a litigation agent is appointed, the party personally shall still appear in court, unless he or she is unable to express his or her will; if the party is truly unable to appear in court due to special circumstances, he or she must submit a written opinion to the People's Court."
+    },
+    {
+      "article_number": "第六十六条",
+      "content_en": "Article 66 Evidence shall include:\n(1) Statements of the parties;\n(2) Documentary evidence;\n(3) Physical evidence;\n(4) Audio-visual materials;\n(5) Electronic data;\n(6) Testimony of witnesses;\n(7) Expert opinions; and\n(8) Records of inspection.\nEvidence must be verified to be truthful before it may be used as a basis for finding facts."
+    },
+    {
+      "article_number": "第六十七条",
+      "content_en": "Article 67 A party shall have the responsibility to provide evidence for its own claims.\nIf evidence that a party or its litigation agent cannot collect on its own due to objective reasons, or evidence that the People's Court considers necessary for trial, the People's Court shall investigate and collect it.\nThe People's Court shall examine and verify evidence comprehensively and objectively in accordance with legal procedures."
+    },
+    {
+      "article_number": "第六十八条",
+      "content_en": "Article 68 A party shall provide evidence for its own claims in a timely manner.\nThe People's Court shall, based on the claims of the parties and the circumstances of the case, determine the evidence that the parties shall provide and the time limit therefor. If a party truly has difficulty providing evidence within such time limit, it may apply to the People's Court for an extension, and the People's Court shall appropriately extend the time limit based on the party's application. If a party provides evidence beyond the time limit, the People's Court shall order it to state the reasons; if it refuses to state the reasons or the reasons are not established, the People's Court may, depending on the circumstances, either refuse to admit the evidence, or admit the evidence but impose a reprimand or fine."
+    },
+    {
+      "article_number": "第六十九条",
+      "content_en": "Article 69 Upon receiving evidence materials submitted by a party, the People's Court shall issue a receipt specifying the names, number of pages, number of copies, whether they are originals or copies, and the time of receipt, among other things, and the receipt shall be signed or sealed by the handling personnel."
+    },
+    {
+      "article_number": "第七十条",
+      "content_en": "Article 70 A People's Court shall have the authority to investigate and collect evidence from relevant units and individuals, and such units and individuals shall not refuse.\nThe People's Court shall distinguish the authenticity of certifying documents submitted by relevant units and individuals and shall examine and determine their validity."
+    },
+    {
+      "article_number": "第七十一条",
+      "content_en": "Article 71 Evidence shall be presented in court and subject to cross-examination by the parties. Evidence involving state secrets, trade secrets, or personal privacy shall be kept confidential; if it needs to be presented in court, it shall not be presented during an open hearing."
+    },
+    {
+      "article_number": "第七十二条",
+      "content_en": "Article 72 Legal facts and documents that have been notarized through legal procedures shall be used by the People's Court as a basis for finding facts, unless there is evidence to the contrary sufficient to overturn the notarized proof."
+    },
+    {
+      "article_number": "第七十三条",
+      "content_en": "Article 73 Documentary evidence shall be submitted in its original form. Physical evidence shall be submitted in its original form. If it is truly difficult to submit the original form, reproductions, photographs, copies, or extracts may be submitted.\nIf documentary evidence in a foreign language is submitted, a Chinese translation must be attached."
+    },
+    {
+      "article_number": "第七十四条",
+      "content_en": "Article 74 A People's Court shall distinguish the authenticity of audio-visual materials and, in conjunction with other evidence in the case, examine and determine whether they may be used as a basis for finding facts."
+    },
+    {
+      "article_number": "第七十五条",
+      "content_en": "Article 75 Any unit or individual that knows the circumstances of a case shall have the obligation to testify in court. The responsible persons of relevant units shall support witnesses in testifying.\nA person who cannot correctly express his or her will may not testify."
+    },
+    {
+      "article_number": "第七十六条",
+      "content_en": "Article 76 Upon notification by the People's Court, a witness shall appear in court to testify. Under any of the following circumstances, with the permission of the People's Court, the witness may testify by means of a written deposition, audio-visual transmission technology, or audio-visual materials:\n(1) Unable to appear in court due to health reasons;\n(2) Unable to appear in court due to long distance and inconvenient transportation;\n(3) Unable to appear in court due to force majeure, such as natural disasters; or\n(4) Unable to appear in court for other legitimate reasons."
+    },
+    {
+      "article_number": "第七十七条",
+      "content_en": "Article 77 The necessary expenses, including transportation, accommodation, and meals, as well as the loss of wages, incurred by a witness in fulfilling the obligation to testify in court shall be borne by the losing party. If a party applies for a witness to testify, that party shall advance the payment; if no party applies and the People's Court notifies a witness to testify, the People's Court shall advance the payment."
+    },
+    {
+      "article_number": "第七十八条",
+      "content_en": "Article 78 A People's Court shall, in conjunction with other evidence in the case, examine and determine whether a party's statements may be used as a basis for finding facts.\nA party's refusal to make statements shall not affect the People's Court's determination of the case facts based on evidence."
+    },
+    {
+      "article_number": "第七十九条",
+      "content_en": "Article 79 A party may apply to the People's Court for an expert evaluation on a specialized issue for the purpose of ascertaining the facts. If a party applies for an expert evaluation, the parties shall consult to determine a qualified expert evaluator; if consultation fails, the People's Court shall designate an expert evaluator.\nIf a party does not apply for an expert evaluation, and the People's Court considers that an expert evaluation is necessary for a specialized issue, it shall entrust a qualified expert evaluator to conduct the evaluation."
+    },
+    {
+      "article_number": "第八十条",
+      "content_en": "Article 80 An expert evaluator shall have the right to access the case materials necessary for the evaluation and may, when necessary, question the parties or witnesses.\nThe expert evaluator shall submit a written expert opinion and sign or seal the evaluation report."
+    },
+    {
+      "article_number": "第八十一条",
+      "content_en": "Article 81 If a party disagrees with an expert opinion or a People's Court considers it necessary for an expert to appear in court, the expert shall testify in court. Where an expert, after being notified by the People's Court, refuses to testify in court, the expert opinion shall not be used as the basis for ascertaining facts; and the party that has paid the appraisal fees may request the return of the appraisal fees."
+    },
+    {
+      "article_number": "第八十二条",
+      "content_en": "Article 82 A party may apply to the People's Court to notify a person with specialized knowledge to appear in court and give opinions on the expert opinion made by the expert or on specialized issues."
+    },
+    {
+      "article_number": "第八十三条",
+      "content_en": "Article 83 In examining physical evidence or the scene, the inspector must show the credentials of the People's Court and invite local grassroots organizations or the unit to which a party belongs to send persons to participate. A party or his/her adult family member shall be present; if they refuse to be present, such refusal shall not affect the progress of the inspection.\nThe relevant entities and individuals shall, pursuant to the notification of the People's Court, have the obligation to preserve the scene and assist in the inspection.\nThe inspector shall make a record of the inspection status and results, which shall be signed or sealed by the inspector, the party, and the invited participants."
+    },
+    {
+      "article_number": "第八十四条",
+      "content_en": "Article 84 Where evidence may be lost or become difficult to obtain later, a party may, during the litigation, apply to the People's Court for preservation of evidence, and the People's Court may also take preservation measures on its own motion.\nIn urgent circumstances, where evidence may be lost or become difficult to obtain later, an interested party may, before filing a lawsuit or applying for arbitration, apply to the People's Court at the place where the evidence is located, the domicile of the respondent, or the People's Court having jurisdiction over the case for preservation of evidence.\nFor other procedures for the preservation of evidence, refer to the relevant provisions on preservation in Chapter IX of this Law."
+    },
+    {
+      "article_number": "第八十五条",
+      "content_en": "Article 85 Time periods include statutory time periods and time periods designated by the People's Court.\nTime periods shall be calculated by hours, days, months, and years. The hour and day from which a time period begins shall not be counted within the time period.\nIf the last day of a time period falls on a statutory holiday, the day following the statutory holiday shall be deemed as the expiration date of the time period.\nTime periods shall not include time in transit; if litigation documents are posted before the expiration date, they shall not be deemed as overdue."
+    },
+    {
+      "article_number": "第八十六条",
+      "content_en": "Article 86 Where a party misses a deadline due to force majeure or other justifiable reasons, he/she may, within ten days after the obstacle is removed, apply for an extension of the time period, and whether to grant such extension shall be decided by the People's Court."
+    },
+    {
+      "article_number": "第八十七条",
+      "content_en": "Article 87 Service of litigation documents must be accompanied by a service receipt, on which the recipient shall record the date of receipt and sign or affix his/her seal.\nThe date of signing by the recipient on the service receipt shall be the date of service."
+    },
+    {
+      "article_number": "第八十八条",
+      "content_en": "Article 88 Service of litigation documents shall be made directly to the recipient. If the recipient is a citizen, and he/she is not present, the documents may be served on his/her adult family member living with him/her for signature; if the recipient is a legal person or any other organization, the documents shall be served on the legal representative of the legal person, the principal of such other organization, or the person responsible for receiving documents in such legal person or organization for signature; if the recipient has a litigation agent, the documents may be served on such agent for signature; if the recipient has designated a person to receive documents to the People's Court, the documents shall be served on such designated person for signature.\nThe date of signature on the service receipt by the adult family member living with the recipient, the person responsible for receiving documents in the legal person or other organization, the litigation agent, or the designated recipient shall be the date of service."
+    },
+    {
+      "article_number": "第八十九条",
+      "content_en": "Article 89 Where the recipient or his/her adult family member living with him/her refuses to accept litigation documents, the server may invite representatives from the relevant grassroots organization or the recipient's work unit to be present, explain the situation, record on the service receipt the reasons for refusal and the date, have the server and witnesses sign or affix their seals, and leave the litigation documents at the recipient's domicile; alternatively, the server may leave the litigation documents at the recipient's domicile and record the service process by means such as taking photos or videos, and the documents shall be deemed as served."
+    },
+    {
+      "article_number": "第九十条",
+      "content_en": "Article 90 With the consent of the recipient, a People's Court may serve litigation documents by electronic means capable of confirming receipt by the recipient. Where judgments, rulings, or mediation documents are served by electronic means, and the recipient requests paper documents, the People's Court shall provide them.\nWhere service is effected by the method in the preceding paragraph, the date on which the service information reaches the recipient's specified system shall be the date of service."
+    },
+    {
+      "article_number": "第九十一条",
+      "content_en": "Article 91 Where direct service of litigation documents is difficult, service may be entrusted to another People's Court, or service may be made by mail. For service by mail, the date of receipt noted on the return receipt shall be the date of service."
+    },
+    {
+      "article_number": "第九十二条",
+      "content_en": "Article 92 Where the recipient is a military serviceman, the documents shall be forwarded through the political department of the unit at or above the regimental level to which he/she belongs."
+    },
+    {
+      "article_number": "第九十三条",
+      "content_en": "Article 93 Where the recipient is imprisoned, the documents shall be forwarded through the prison where he/she is held.\nWhere the recipient is subjected to compulsory educational measures, the documents shall be forwarded through the compulsory educational institution where he/she is held."
+    },
+    {
+      "article_number": "第九十四条",
+      "content_en": "Article 94 After receiving litigation documents, the authorities or entities that forward them must immediately deliver them to the recipient for signing, and the date of signature on the service receipt shall be the date of service."
+    },
+    {
+      "article_number": "第九十五条",
+      "content_en": "Article 95 Where the recipient's whereabouts are unknown, or service cannot be effected by other methods provided in this Section, service shall be made by public announcement. Service shall be deemed to have been completed thirty days after the date the announcement is published.\nFor service by public announcement, the reasons and process shall be recorded in the case file."
+    },
+    {
+      "article_number": "第九十六条",
+      "content_en": "Article 96 When a People's Court hears civil cases, it shall conduct mediation based on the principle of voluntariness of the parties, on the basis of clear facts, and after distinguishing right from wrong."
+    },
+    {
+      "article_number": "第九十七条",
+      "content_en": "Article 97 Mediation by a People's Court may be presided over by a single judge or by a collegial panel, and shall, to the extent possible, be conducted at the location.\nWhen a People's Court conducts mediation, it may notify parties and witnesses to appear in court by simple means."
+    },
+    {
+      "article_number": "第九十八条",
+      "content_en": "Article 98 When a People's Court conducts mediation, it may invite relevant entities and individuals to assist. The invited entities and individuals shall assist the People's Court in conducting mediation."
+    },
+    {
+      "article_number": "第九十九条",
+      "content_en": "Article 99 For a mediation agreement to be reached, both parties must do so voluntarily, and no party shall be coerced. The content of the mediation agreement shall not violate the provisions of law."
+    },
+    {
+      "article_number": "第一百条",
+      "content_en": "Article 100 Where a mediation agreement is reached, the People's Court shall prepare a mediation document. The mediation document shall state the claims, the facts of the case, and the result of the mediation.\nThe mediation document shall be signed by the judge and the court clerk, affixed with the seal of the People's Court, and served on both parties.\nThe mediation document shall have legal effect after it is signed by both parties."
+    },
+    {
+      "article_number": "第一百零一条",
+      "content_en": "Article 101 For the following cases where a mediation agreement is reached, the People's Court may not prepare a mediation document:\n(1) divorce cases where reconciliation is achieved through mediation;\n(2) cases where the adoptive relationship is maintained through mediation;\n(3) cases that can be performed immediately;\n(4) other cases for which a mediation document is not necessary.\nAn agreement for which no mediation document is necessary shall be recorded in the record, and after the record is signed or sealed by both parties, the judge, and the court clerk, it shall have legal effect."
+    },
+    {
+      "article_number": "第一百零二条",
+      "content_en": "Article 102 Where a mediation agreement is not reached or a party retracts before the mediation document is served, the People's Court shall render a judgment in a timely manner."
+    },
+    {
+      "article_number": "第一百零三条",
+      "content_en": "Article 103 For cases where, due to the conduct of one party or other reasons, it may become difficult to enforce a judgment or cause other damage to a party, the People's Court may, upon the application of the other party, rule to preserve the party's property, order him/her to perform a certain act, or prohibit him/her from performing a certain act; if the party does not apply, the People's Court may, when necessary, also rule to take preservation measures.\nWhen taking preservation measures, the People's Court may order the applicant to provide security; if the applicant fails to provide security, the court shall rule to dismiss the application.\nAfter accepting an application, if there is an emergency, the People's Court must make a ruling within forty-eight hours; if the court rules to take preservation measures, the measures shall be implemented immediately."
+    },
+    {
+      "article_number": "第一百零四条",
+      "content_en": "Article 104 Where, due to an emergency, failure to apply for preservation immediately would cause irreparable damage to the legitimate rights and interests of an interested party, the party may, before filing a lawsuit or applying for arbitration, apply to the People's Court at the place where the property to be preserved is located, the domicile of the respondent, or the People's Court having jurisdiction over the case for preservation measures. The applicant shall provide security; if the applicant fails to provide security, the court shall rule to dismiss the application.\nAfter accepting an application, the People's Court must make a ruling within forty-eight hours; if the court rules to take preservation measures, the measures shall be implemented immediately.\nIf the applicant fails to file a lawsuit or apply for arbitration in accordance with the law within thirty days after the People's Court takes preservation measures, the People's Court shall lift the preservation."
+    },
+    {
+      "article_number": "第一百零五条",
+      "content_en": "Article 105 Preservation shall be limited to the scope of the request or to the property relevant to the case."
+    },
+    {
+      "article_number": "第一百零六条",
+      "content_en": "Article 106 Property preservation is effected by sealing up, distraining, freezing, or other methods as provided by law. After preserving property, the People's Court shall immediately notify the person whose property is preserved.\nAny property that has been sealed up or frozen shall not be sealed up or frozen again."
+    },
+    {
+      "article_number": "第一百零七条",
+      "content_en": "Article 107 In property dispute cases, if the respondent provides security, the People's Court shall rule to lift the preservation."
+    },
+    {
+      "article_number": "第一百零八条",
+      "content_en": "Article 108 If an application is erroneous, the applicant shall compensate the respondent for any losses suffered as a result of the preservation."
+    },
+    {
+      "article_number": "第一百零九条",
+      "content_en": "Article 109 For the following cases, the People's Court may, upon the application of a party, rule to grant advance execution:\n(1) cases seeking payment of alimony, support, child support, pension, or medical expenses;\n(2) cases seeking payment of labor remuneration;\n(3) cases where advance execution is necessary due to urgent circumstances."
+    },
+    {
+      "article_number": "第一百一十条",
+      "content_en": "Article 110 For a People's Court to rule to grant advance execution, the following conditions shall be met:\n(1) the rights and obligations between the parties are clear, and failure to grant advance execution would seriously affect the applicant's livelihood or production and business operations;\n(2) the respondent has the ability to perform.\nThe People's Court may order the applicant to provide security; if the applicant fails to provide security, the court shall dismiss the application. If the applicant loses the case, he/she shall compensate the respondent for any property losses suffered as a result of the advance execution."
+    },
+    {
+      "article_number": "第一百一十一条",
+      "content_en": "Article 111 If a party disagrees with a ruling on preservation or advance execution, he/she may apply for reconsideration once. The execution of the ruling shall not be suspended during the reconsideration period."
+    },
+    {
+      "article_number": "第一百一十二条",
+      "content_en": "Article 112 For a defendant who must appear in court, if the defendant, after being summoned twice by summons, refuses to appear in court without justifiable reasons, the People's Court may compel his/her appearance."
+    },
+    {
+      "article_number": "第一百一十三条",
+      "content_en": "Article 113 Participants in proceedings and other persons shall observe the courtroom rules.\nA People's Court may, for a person who violates the courtroom rules, issue a reprimand, order him/her to leave the courtroom, or impose a fine or detention.\nFor a person who makes a disturbance or rushes into the courtroom, insults, slanders, threatens, or assaults judicial personnel, or severely disrupts the order of the courtroom, the People's Court shall, in accordance with the law, investigate criminal liability; if the circumstances are relatively minor, a fine or detention shall be imposed."
+    },
+    {
+      "article_number": "第一百一十四条",
+      "content_en": "Article 114 Where participants in proceedings or other persons commit any of the following acts, the People's Court may, depending on the seriousness of the circumstances, impose a fine or detention; if the act constitutes a crime, criminal liability shall be investigated in accordance with the law:\n(1) forging or destroying important evidence, thereby obstructing the People's Court from trying a case;\n(2) by means of violence, threats, or bribery, preventing a witness from testifying, or instigating, bribing, or coercing another person to give false testimony;\n(3) concealing, transferring, selling, or destroying property that has been sealed up or distrained, or property that has been inventoried and ordered to be kept in custody, or transferring property that has been frozen;\n(4) insulting, slandering, framing, assaulting, or taking revenge against judicial personnel, participants in proceedings, witnesses, interpreters, expert witnesses, inspectors, or persons assisting in enforcement;\n(5) by means of violence, threats, or other methods, obstructing judicial personnel from performing their duties;\n(6) refusing to perform a judgment or ruling of the People's Court that has already taken legal effect.\nFor an entity that commits any of the acts specified in the preceding paragraph, the People's Court may impose a fine or detention on its principal or the person directly responsible; if the act constitutes a crime, criminal liability shall be investigated in accordance with the law."
+    },
+    {
+      "article_number": "第一百一十五条",
+      "content_en": "Article 115 Where parties maliciously collude with each other, attempting through litigation, mediation, or other means to infringe upon the State interests, social public interests, or the legitimate rights and interests of others, the People's Court shall dismiss their request and, depending on the seriousness of the circumstances, impose a fine or detention; if the act constitutes a crime, criminal liability shall be investigated in accordance with the law.\nWhere a party unilaterally fabricates the basic facts of a civil case and files a lawsuit with the People's Court, attempting to infringe upon the State interests, social public interests, or the legitimate rights and interests of others, the provisions of the preceding paragraph shall apply."
+    },
+    {
+      "article_number": "第一百一十六条",
+      "content_en": "Article 116 Where a person subject to enforcement maliciously colludes with another person and, through litigation, arbitration, mediation, or other means, evades performing the obligations determined in a legal instrument, the People's Court shall, depending on the seriousness of the circumstances, impose a fine or detention; if the act constitutes a crime, criminal liability shall be investigated in accordance with the law."
+    },
+    {
+      "article_number": "第一百一十七条",
+      "content_en": "Article 117 Where an entity having the obligation to assist in investigation or enforcement commits any of the following acts, the People's Court may, in addition to ordering it to perform its obligation to assist, impose a fine:\n(1) the relevant entity refuses or obstructs the People's Court from investigating and collecting evidence;\n(2) the relevant entity, after receiving a notice of assistance in enforcement from the People's Court, refuses to assist in inquiring, distraining, freezing, transferring, or converting property into money;\n(3) the relevant entity, after receiving a notice of assistance in enforcement from the People's Court, refuses to assist in withholding the income of the person subject to enforcement, handling the transfer of property rights certificates, or delivering relevant instruments, certificates, or other property;\n(4) other instances of refusing to assist in enforcement.\nFor an entity that commits any of the acts specified in the preceding paragraph, the People's Court may impose a fine on its principal or the person directly responsible; if the entity still fails to perform its obligation to assist, detention may be imposed; and the court may submit a judicial suggestion to the supervisory authority or the relevant authority for disciplinary sanctions."
+    },
+    {
+      "article_number": "第一百一十八条",
+      "content_en": "Article 118 The amount of a fine imposed on an individual shall be not more than 100,000 yuan. The amount of a fine imposed on an entity shall be not less than 50,000 yuan and not more than 1,000,000 yuan.\nThe duration of detention shall be not more than 15 days.\nA person detained shall be handed over by the People's Court to the public security organ for custody. During the detention period, if the detained person admits and corrects his/her mistake, the People's Court may decide to lift the detention early."
+    },
+    {
+      "article_number": "第一百一十九条",
+      "content_en": "Article 119 Compulsory appearance, a fine, and detention must be approved by the president of the court.\nA compulsory appearance warrant shall be issued for a compulsory appearance.\nA written decision shall be used for a fine or detention. If a party disagrees with the decision, he/she may apply to the next higher People's Court for reconsideration once. The enforcement shall not be suspended during the reconsideration period."
+    },
+    {
+      "article_number": "第一百二十条",
+      "content_en": "Article 120 Compulsory measures against obstruction of civil actions must be decided by the People's Court. If any entity or individual illegally detains another person or illegally distrains another person's property in private to recover a debt, criminal liability shall be investigated in accordance with the law, or detention or a fine shall be imposed."
+    },
+    {
+      "article_number": "第一百二十一条",
+      "content_en": "Article 121: A party engaging in a civil action shall pay the case acceptance fee in accordance with the provisions. For a property case, in addition to the case acceptance fee, other litigation costs shall be paid in accordance with the provisions.\nIf a party indeed has difficulty paying the litigation costs, the party may, in accordance with the provisions, apply to the People's Court for a deferred payment, a reduced payment, or an exemption.\nThe measures for collecting litigation costs shall be formulated separately."
+    },
+    {
+      "article_number": "第一百二十二条",
+      "content_en": "Article 122: The prosecution must meet the following conditions:\n(1) The plaintiff is a citizen, legal person, or any other organization that has a direct interest in the case;\n(2) There is a definite defendant;\n(3) There are specific claims, facts, and reasons;\n(4) The case falls within the scope of civil actions accepted by the People's Court and the jurisdiction of the People's Court hearing the case."
+    },
+    {
+      "article_number": "第一百二十三条",
+      "content_en": "Article 123: The prosecution shall file a statement of complaint with the People's Court and provide copies of the complaint according to the number of defendants.\nIf a party indeed has difficulty in writing a statement of complaint, the party may prosecute orally, and the People's Court shall record it in the record and inform the opposing party."
+    },
+    {
+      "article_number": "第一百二十四条",
+      "content_en": "Article 124: The statement of complaint shall specify the following matters:\n(1) The plaintiff's name, gender, age, ethnicity, occupation, work unit, domicile, and contact information; the name, domicile, and the name, position, and contact information of the legal representative or principal person in charge of a legal person or any other organization;\n(2) The defendant's name, gender, work unit, domicile, and other information; the name, domicile, and other information of a legal person or any other organization;\n(3) The claims and the facts and reasons on which they are based;\n(4) The evidence and the sources of evidence, and the names and domiciles of witnesses."
+    },
+    {
+      "article_number": "第一百二十五条",
+      "content_en": "Article 125: For civil disputes brought by the parties to the People's Court, if mediation is suitable, mediation shall be conducted first, unless the parties refuse mediation."
+    },
+    {
+      "article_number": "第一百二十六条",
+      "content_en": "Article 126: The People's Court shall protect the right of the parties to prosecute in accordance with the provisions of the law. For a prosecution that meets the requirements of Article 122 of this Law, the court must accept the case. If the conditions for prosecution are met, the court shall docket the case within seven days and notify the parties; if the conditions for prosecution are not met, the court shall issue a ruling within seven days and refuse to accept the case. If the plaintiff refuses to accept the ruling, the plaintiff may file an appeal."
+    },
+    {
+      "article_number": "第一百二十七条",
+      "content_en": "Article 127: The People's Court shall handle the following prosecutions according to the circumstances:\n(1) If, in accordance with the provisions of the Administrative Procedure Law, the case falls within the scope of administrative actions, the court shall inform the plaintiff to initiate an administrative action;\n(2) If, in accordance with the provisions of the law, the parties have reached a written arbitration agreement to apply for arbitration and may not file a lawsuit with the People's Court, the court shall inform the plaintiff to apply for arbitration with the arbitration institution;\n(3) If, in accordance with the provisions of the law, the dispute should be handled by another authority, the court shall inform the plaintiff to apply for resolution with the relevant authority;\n(4) For a case not under the jurisdiction of this court, the court shall inform the plaintiff to file a lawsuit with the People's Court that has jurisdiction;\n(5) For a case where a judgment, ruling, or mediation instrument has already become legally effective, and the parties file another lawsuit, the court shall inform the plaintiff to apply for a retrial, except for a ruling by the People's Court allowing the withdrawal of the lawsuit;\n(6) For a case where, in accordance with the provisions of the law, a lawsuit may not be filed within a certain time limit, if a lawsuit is filed within the period during which prosecution is prohibited, the court shall not accept the case;\n(7) For a divorce case where divorce is not allowed by judgment or reconciliation is reached through mediation, or a case where an adoption relationship is maintained by judgment or mediation, if no new circumstances or new reasons arise and the plaintiff files another lawsuit within six months, the court shall not accept the case."
+    },
+    {
+      "article_number": "第一百二十八条",
+      "content_en": "Article 128: The People's Court shall, within five days from the date of docketing the case, send a copy of the statement of complaint to the defendant, and the defendant shall, within fifteen days from the date of receipt, submit a statement of defense. The statement of defense shall specify the defendant's name, gender, age, ethnicity, occupation, work unit, domicile, and contact information; the name, domicile, and the name, position, and contact information of the legal representative or principal person in charge of a legal person or any other organization. The People's Court shall, within five days from the date of receiving the statement of defense, send a copy of the statement of defense to the plaintiff.\nIf the defendant fails to submit a statement of defense, this shall not affect the adjudication by the People's Court."
+    },
+    {
+      "article_number": "第一百二十九条",
+      "content_en": "Article 129: For a case that the People's Court decides to accept, the court shall, in the notice of case acceptance and the notice of responding to the lawsuit, inform the parties of the relevant litigation rights and obligations, or may inform them orally."
+    },
+    {
+      "article_number": "第一百三十条",
+      "content_en": "Article 130: After the People's Court accepts a case, if a party raises an objection to jurisdiction, the party shall raise it within the period for submitting the statement of defense. The People's Court shall examine the objection raised by the party. If the objection is established, the court shall rule to transfer the case to the People's Court that has jurisdiction; if the objection is not established, the court shall rule to reject it.\nIf a party does not raise a jurisdictional objection and responds to the lawsuit by submitting a defense or filing a counterclaim, the People's Court hearing the case shall be deemed to have jurisdiction, unless the provisions on hierarchical jurisdiction and exclusive jurisdiction are violated."
+    },
+    {
+      "article_number": "第一百三十一条",
+      "content_en": "Article 131: After the adjudication personnel are determined, the parties shall be informed within three days."
+    },
+    {
+      "article_number": "第一百三十二条",
+      "content_en": "Article 132: The adjudication personnel must carefully examine the litigation materials and investigate and collect necessary evidence."
+    },
+    {
+      "article_number": "第一百三十三条",
+      "content_en": "Article 133: When personnel dispatched by the People's Court conduct an investigation, they shall present their credentials to the person under investigation.\nAfter the investigation record is reviewed by the person under investigation, it shall be signed or sealed by the person under investigation and the investigator."
+    },
+    {
+      "article_number": "第一百三十四条",
+      "content_en": "Article 134: The People's Court may, when necessary, entrust a People's Court in another location to conduct an investigation.\nFor an entrusted investigation, clear items and requirements must be specified. The entrusted People's Court may proactively supplement the investigation.\nAfter receiving the letter of entrustment, the entrusted People's Court shall complete the investigation within thirty days. If it cannot be completed for any reason, it shall notify the entrusting People's Court by letter within the aforementioned time limit."
+    },
+    {
+      "article_number": "第一百三十五条",
+      "content_en": "Article 135: If a party who must jointly participate in the proceedings fails to do so, the People's Court shall notify that party to participate in the proceedings."
+    },
+    {
+      "article_number": "第一百三十六条",
+      "content_en": "Article 136: The People's Court shall handle the accepted cases according to the circumstances:\n(1) If the parties have no dispute and the conditions for the expedited procedure are met, the case may be transferred to the expedited procedure;\n(2) If mediation is possible before trial, mediation shall be used to timely resolve the dispute;\n(3) Based on the circumstances of the case, determine whether to apply the summary procedure or the ordinary procedure;\n(4) If a trial hearing is necessary, the court shall clarify the focus of the dispute by requiring the parties to exchange evidence and by other means."
+    },
+    {
+      "article_number": "第一百三十七条",
+      "content_en": "Article 137: The People's Court shall conduct the adjudication of civil cases openly, except where state secrets, personal privacy, or otherwise provided by law are involved.\nFor divorce cases and cases involving trade secrets, if the parties apply for a closed hearing, a closed hearing may be conducted."
+    },
+    {
+      "article_number": "第一百三十八条",
+      "content_en": "Article 138: The People's Court, when adjudicating civil cases, may conduct circuit trials and handle cases on-site as needed."
+    },
+    {
+      "article_number": "第一百三十九条",
+      "content_en": "Article 139: The People's Court, when adjudicating a civil case, shall notify the parties and other participants in the proceedings three days before the trial. If a trial is open to the public, the court shall announce the names of the parties, the subject matter of the case, and the time and place of the trial."
+    },
+    {
+      "article_number": "第一百四十条",
+      "content_en": "Article 140: Before the trial hearing, the court clerk shall ascertain whether the parties and other participants in the proceedings are present, and announce the courtroom discipline.\nAt the commencement of the trial hearing, the presiding judge or the sole judge shall verify the parties, announce the subject matter of the case, announce the list of adjudication personnel, judge's assistants, court clerks, etc., inform the parties of the relevant litigation rights and obligations, and ask the parties whether they have requests for withdrawal."
+    },
+    {
+      "article_number": "第一百四十一条",
+      "content_en": "Article 141: The court investigation shall be conducted in the following order:\n(1) Statements by the parties;\n(2) Informing witnesses of their rights and obligations, witnesses testifying, and reading the testimony of witnesses who are not present in court;\n(3) Presenting documentary evidence, physical evidence, audio-visual materials, and electronic data;\n(4) Reading the expert evaluation opinions;\n(5) Reading the inspection records."
+    },
+    {
+      "article_number": "第一百四十二条",
+      "content_en": "Article 142: The parties may present new evidence in court.\nWith the permission of the court, the parties may question witnesses, expert evaluators, and inspectors.\nIf a party requests a new investigation, expert evaluation, or inspection, the People's Court shall decide whether to grant the request."
+    },
+    {
+      "article_number": "第一百四十三条",
+      "content_en": "Article 143: If the plaintiff increases its claims, the defendant files a counterclaim, or a third party files claims related to the case, these may be tried jointly."
+    },
+    {
+      "article_number": "第一百四十四条",
+      "content_en": "Article 144: The court debate shall be conducted in the following order:\n(1) The plaintiff and its litigation agent make statements;\n(2) The defendant and its litigation agent respond to the allegations;\n(3) The third party and its litigation agent make statements or respond to the allegations;\n(4) Mutual debate.\nAfter the court debate is concluded, the presiding judge or the sole judge shall, in the order of plaintiff, defendant, and third party, solicit the final opinions of each party."
+    },
+    {
+      "article_number": "第一百四十五条",
+      "content_en": "Article 145: After the court debate is concluded, a judgment shall be made according to law. If mediation is possible before the judgment is made, mediation may still be conducted. If mediation fails, a judgment shall be made promptly."
+    },
+    {
+      "article_number": "第一百四十六条",
+      "content_en": "Article 146: If the plaintiff, after being summoned by a subpoena, refuses to appear in court without justifiable reasons, or leaves the courtroom during the trial without permission, the case may be treated as withdrawn; if the defendant has filed a counterclaim, a default judgment may be made."
+    },
+    {
+      "article_number": "第一百四十七条",
+      "content_en": "Article 147: If the defendant, after being summoned by a subpoena, refuses to appear in court without justifiable reasons, or leaves the courtroom during the trial without permission, a default judgment may be made."
+    },
+    {
+      "article_number": "第一百四十八条",
+      "content_en": "Article 148: Before the judgment is pronounced, if the plaintiff applies for withdrawal of the lawsuit, the People's Court shall decide by ruling whether to permit it.\nIf the People's Court rules not to permit the withdrawal of the lawsuit, and the plaintiff, after being summoned by a subpoena, refuses to appear in court without justifiable reasons, a default judgment may be made."
+    },
+    {
+      "article_number": "第一百四十九条",
+      "content_en": "Article 149: The trial hearing may be postponed in any of the following circumstances:\n(1) A party or other participant in the proceedings who must appear in court fails to appear for a justifiable reason;\n(2) A party makes a last-minute request for withdrawal;\n(3) It is necessary to summon a new witness to appear in court, to obtain new evidence, to conduct a new expert evaluation or inspection, or to supplement an investigation;\n(4) Other circumstances that warrant a postponement."
+    },
+    {
+      "article_number": "第一百五十条",
+      "content_en": "Article 150: The court clerk shall record all activities of the court hearing in the record, which shall be signed by the adjudication personnel and the court clerk.\nThe court record shall be read aloud in court, or the parties and other participants in the proceedings may be informed to read it in court or within five days. If the parties or other participants in the proceedings believe that there are omissions or errors in the record of their statements, they have the right to apply for corrections. If corrections are not made, the application shall be recorded in the file.\nThe court record shall be signed or sealed by the parties and other participants in the proceedings. If a party refuses to sign or seal, the circumstance shall be noted and attached to the file."
+    },
+    {
+      "article_number": "第一百五十一条",
+      "content_en": "Article 151: The People's Court shall publicly pronounce judgments in all cases, whether tried openly or in a closed hearing.\nIf the judgment is pronounced in court, the written judgment shall be served within ten days; if the judgment is pronounced on a scheduled date, the written judgment shall be issued immediately after pronouncement.\nWhen pronouncing a judgment, the court must inform the parties of their right to appeal, the appeal period, and the court to which the appeal shall be filed.\nWhen pronouncing a divorce judgment, the court must inform the parties that they shall not remarry before the judgment takes legal effect."
+    },
+    {
+      "article_number": "第一百五十二条",
+      "content_en": "Article 152: For a case tried by the People's Court under the ordinary procedure, the trial shall be concluded within six months from the date of docketing. If there are special circumstances requiring an extension, with the approval of the president of the court, the extension may be for up to six months; if further extension is needed, the approval of the higher People's Court shall be obtained."
+    },
+    {
+      "article_number": "第一百五十三条",
+      "content_en": "Article 153: The action shall be suspended in any of the following circumstances:\n(1) A party dies and it is necessary to wait for the heir to indicate whether to participate in the action;\n(2) A party loses capacity for litigation and a legal representative has not yet been determined;\n(3) A legal person or any other organization that is a party terminates and a bearer of rights and obligations has not yet been determined;\n(4) A party is unable to participate in the action due to a force majeure event;\n(5) The outcome of this case must be based on the outcome of another case, and that other case has not yet been concluded;\n(6) Other circumstances that warrant the suspension of the action.\nAfter the reason for suspension is eliminated, the action shall be resumed."
+    },
+    {
+      "article_number": "第一百五十四条",
+      "content_en": "Article 154: The action shall be terminated in any of the following circumstances:\n(1) The plaintiff dies without an heir, or the heir waives the right to sue;\n(2) The defendant dies, leaving no estate and no person who shall bear the obligations;\n(3) A party in a divorce case dies;\n(4) A party in a case involving a claim for alimony, spousal support, child support, or dissolution of an adoption relationship dies."
+    },
+    {
+      "article_number": "第一百五十五条",
+      "content_en": "Article 155: The written judgment shall specify the judgment result and the reasons for the judgment. The content of the written judgment shall include:\n(1) The subject matter of the case, the claims, the disputed facts, and the reasons;\n(2) The facts and reasons found by the judgment, the applicable laws, and the reasons;\n(3) The judgment result and the allocation of litigation costs;\n(4) The period for appeal and the court to which the appeal shall be filed.\nThe written judgment shall be signed by the adjudication personnel and the court clerk, and sealed with the seal of the People's Court."
+    },
+    {
+      "article_number": "第一百五十六条",
+      "content_en": "Article 156: If, during the trial of a case by the People's Court, some of the facts are already clear, a judgment may be made on that part first."
+    },
+    {
+      "article_number": "第一百五十七条",
+      "content_en": "Article 157: A ruling shall apply to the following matters:\n(1) Refusal to accept a case;\n(2) Objection to jurisdiction;\n(3) Dismissal of a lawsuit;\n(4) Preservation and advance execution;\n(5) Permission or refusal of withdrawal of a lawsuit;\n(6) Suspension or termination of an action;\n(7) Correction of clerical errors in written judgments;\n(8) Suspension or termination of enforcement;\n(9) Revocation or refusal of enforcement of an arbitral award;\n(10) Refusal of enforcement of a debt instrument that has been granted compulsory enforcement effect by a notarization authority;\n(11) Other matters requiring resolution by ruling.\nA ruling under items (1) to (3) of the preceding paragraph may be appealed.\nThe written ruling shall specify the result of the ruling and the reasons for the ruling. The written ruling shall be signed by the adjudication personnel and the court clerk, and sealed with the seal of the People's Court. If a ruling is made orally, it shall be recorded in the record."
+    },
+    {
+      "article_number": "第一百五十八条",
+      "content_en": "Article 158: Judgments and rulings of the Supreme People's Court, and judgments and rulings that are not subject to appeal according to law or that have not been appealed within the time limit for appeal, are legally effective judgments and rulings."
+    },
+    {
+      "article_number": "第一百五十九条",
+      "content_en": "Article 159: The public may access legally effective written judgments and written rulings, except for content involving state secrets, trade secrets, or personal privacy."
+    },
+    {
+      "article_number": "第一百六十条",
+      "content_en": "Article 160: For simple civil cases where the facts are clear, the rights and obligations are definite, and the dispute is minor, tried by a Primary People's Court and its dispatched tribunals, the provisions of this Chapter shall apply.\nFor civil cases other than those specified in the preceding paragraph, tried by a Primary People's Court and its dispatched tribunals, the parties may also agree to apply the summary procedure."
+    },
+    {
+      "article_number": "第一百六十一条",
+      "content_en": "Article 161 In a simple civil action, the plaintiff may file an oral complaint.\nThe parties may simultaneously appear before the Primary People's Court or its dispatched tribunal to request settlement of the dispute. The Primary People's Court or its dispatched tribunal may hear the case immediately or set a later date for hearing."
+    },
+    {
+      "article_number": "第一百六十二条",
+      "content_en": "Article 162 When the Primary People's Court and its dispatched tribunal hear a simple civil action, they may summon the parties and witnesses, serve litigation documents, and hear the case in a simplified manner, provided that the parties' right to state their opinions shall be protected."
+    },
+    {
+      "article_number": "第一百六十三条",
+      "content_en": "Article 163 A simple civil action shall be tried by a single judge alone, and shall not be subject to the restrictions provided in Articles 139, 141, and 144 of this Law."
+    },
+    {
+      "article_number": "第一百六十四条",
+      "content_en": "Article 164 When a People's Court tries a case under the summary procedure, it shall conclude the case within three months from the date of case filing. If an extension is necessary due to special circumstances, it may be extended by one month upon approval by the president of the court."
+    },
+    {
+      "article_number": "第一百六十五条",
+      "content_en": "Article 165 When the Primary People's Court and its dispatched tribunal hear a simple civil case involving monetary payment with clear facts, definite rights and obligations, and minor disputes, where the subject matter amount does not exceed 50% of the average annual salary of employed persons in the relevant province, autonomous region, or municipality directly under the Central Government in the previous year, the small-claim procedure shall be applied, and the judgment shall be final.\nWhen the Primary People's Court and its dispatched tribunal hear a civil case as provided in the preceding paragraph, where the subject matter amount exceeds 50% but is less than twice the average annual salary of employed persons in the relevant province, autonomous region, or municipality directly under the Central Government in the previous year, the parties may agree to apply the small-claim procedure."
+    },
+    {
+      "article_number": "第一百六十六条",
+      "content_en": "Article 166 A People's Court shall not apply the small-claim procedure to the following civil cases:\n(1) Cases concerning personal relationships or confirmation of property rights;\n(2) Cases involving foreign elements;\n(3) Cases requiring evaluation, expert evaluation, or where there is objection to pre-litigation evaluation or expert evaluation results;\n(4) Cases where one party's whereabouts are unknown;\n(5) Cases where a counterclaim is filed;\n(6) Other cases unsuitable for trial under the small-claim procedure."
+    },
+    {
+      "article_number": "第一百六十七条",
+      "content_en": "Article 167 When a People's Court tries a case under the small-claim procedure, it may conclude the case in a single hearing and pronounce the judgment in court."
+    },
+    {
+      "article_number": "第一百六十八条",
+      "content_en": "Article 168 When a People's Court tries a case under the small-claim procedure, it shall conclude the case within two months from the date of case filing. If an extension is necessary due to special circumstances, it may be extended by one month upon approval by the president of the court."
+    },
+    {
+      "article_number": "第一百六十九条",
+      "content_en": "Article 169 If, during the trial, a People's Court finds that a case is unsuitable for the small-claim procedure, it shall apply other provisions of the summary procedure or rule to convert to the ordinary procedure.\nIf a party considers that the trial of a case under the small-claim procedure violates legal provisions, it may raise an objection with the People's Court. The People's Court shall examine the objection raised by the party; if the objection is established, it shall apply other provisions of the summary procedure or rule to convert to the ordinary procedure; if the objection is not established, it shall rule to dismiss it."
+    },
+    {
+      "article_number": "第一百七十条",
+      "content_en": "Article 170 If, during the trial, a People's Court finds that a case is unsuitable for the summary procedure, it shall rule to convert to the ordinary procedure."
+    },
+    {
+      "article_number": "第一百七十一条",
+      "content_en": "Article 171 A party who refuses to accept a first-instance judgment of a local People's Court shall have the right to file an appeal with the next higher People's Court within fifteen days from the date of service of the written judgment.\nA party who refuses to accept a first-instance ruling of a local People's Court shall have the right to file an appeal with the next higher People's Court within ten days from the date of service of the written ruling."
+    },
+    {
+      "article_number": "第一百七十二条",
+      "content_en": "Article 172 An appeal shall be filed by submitting a written appeal petition. The contents of the written appeal petition shall include the names of the parties, the name of the legal person and the name of its legal representative, or the name of any other organization and the name of its principal responsible person; the name of the original People's Court, the case number, and the cause of action; and the requests and grounds for the appeal."
+    },
+    {
+      "article_number": "第一百七十三条",
+      "content_en": "Article 173 The written appeal petition shall be submitted through the original People's Court, and copies thereof shall be provided in accordance with the number of the opposing parties or representatives.\nIf a party files an appeal directly with the second-instance People's Court, the second-instance People's Court shall, within five days, transmit the written appeal petition to the original People's Court."
+    },
+    {
+      "article_number": "第一百七十四条",
+      "content_en": "Article 174 Upon receipt of the written appeal petition, the original People's Court shall, within five days, serve a copy thereof on the opposing party, who shall file a written defense within fifteen days from the date of receipt. The People's Court shall, within five days from the date of receipt of the written defense, serve a copy thereof on the appellant. The failure of the opposing party to file a written defense shall not affect the trial by the People's Court.\nUpon receipt of the written appeal petition and the written defense, the original People's Court shall, within five days, transmit them together with the entire case file and evidence to the second-instance People's Court."
+    },
+    {
+      "article_number": "第一百七十五条",
+      "content_en": "Article 175 The second-instance People's Court shall examine the facts and the application of the law relating to the appeal requests."
+    },
+    {
+      "article_number": "第一百七十六条",
+      "content_en": "Article 176 The second-instance People's Court shall hear an appealed case in open court. After reviewing the case file, conducting investigations, and questioning the parties, if no new facts, evidence, or grounds are presented and the People's Court considers that an open court trial is unnecessary, it may hold a hearing without an open court trial.\nThe second-instance People's Court may hear an appealed case at its own seat or at the place where the case arose or the seat of the original People's Court."
+    },
+    {
+      "article_number": "第一百七十七条",
+      "content_en": "Article 177 After hearing an appealed case, the second-instance People's Court shall handle it separately according to the following circumstances:\n(1) If the facts found and the application of law in the original judgment or ruling are correct, the appeal shall be dismissed by judgment or ruling, and the original judgment or ruling shall be affirmed;\n(2) If the facts found or the application of law in the original judgment or ruling are erroneous, the judgment or ruling shall be amended, set aside, or varied according to law;\n(3) If the basic facts found in the original judgment are unclear, the original judgment shall be set aside by ruling and remanded to the original People's Court for retrial, or the judgment shall be amended after the facts are clarified;\n(4) If the original judgment omits a party or is rendered by default in violation of the law, or there are other serious violations of legal procedures, the original judgment shall be set aside by ruling and remanded to the original People's Court for retrial.\nIf a party files an appeal against a judgment rendered by the original People's Court upon remand, the second-instance People's Court may not remand the case again."
+    },
+    {
+      "article_number": "第一百七十八条",
+      "content_en": "Article 178 A ruling shall uniformly be used in handling appealed cases against rulings of the first-instance People's Court by the second-instance People's Court."
+    },
+    {
+      "article_number": "第一百七十九条",
+      "content_en": "Article 179 The second-instance People's Court may conduct mediation in hearing an appealed case. If a mediation agreement is reached, a mediation document shall be prepared, signed by the trial judges and the clerk, and sealed with the seal of the People's Court. Upon service of the mediation document, the judgment of the original People's Court shall be deemed revoked."
+    },
+    {
+      "article_number": "第一百八十条",
+      "content_en": "Article 180 Before a judgment is pronounced by the second-instance People's Court, if the appellant applies to withdraw the appeal, whether to permit such withdrawal shall be determined by the second-instance People's Court by ruling."
+    },
+    {
+      "article_number": "第一百八十一条",
+      "content_en": "Article 181 The second-instance People's Court shall, in hearing an appealed case, apply the first-instance ordinary procedure, except as otherwise provided in this Chapter."
+    },
+    {
+      "article_number": "第一百八十二条",
+      "content_en": "Article 182 The judgments and rulings of the second-instance People's Court are final."
+    },
+    {
+      "article_number": "第一百八十三条",
+      "content_en": "Article 183 When a People's Court hears an appealed case against a judgment, it shall conclude the case within three months from the date of case filing for the second instance. If an extension is necessary due to special circumstances, it shall be approved by the president of the court.\nWhen a People's Court hears an appealed case against a ruling, it shall render a final ruling within thirty days from the date of case filing for the second instance."
+    },
+    {
+      "article_number": "第一百八十四条",
+      "content_en": "Article 184 The provisions of this Chapter shall apply when a People's Court hears cases concerning the qualifications of voters, declaration of disappearance or death, designation of estate administrators, determination of a citizen as having no or limited civil capacity, determination of ownerless property, confirmation of mediation agreements, and realization of security interests. Matters not provided for in this Chapter shall be governed by the relevant provisions of this Law and other laws."
+    },
+    {
+      "article_number": "第一百八十五条",
+      "content_en": "Article 185 Cases adjudicated under the procedure of this Chapter shall be finally adjudicated at first instance. Cases concerning voter qualifications or major and difficult cases shall be tried by a collegial panel composed of judges; other cases shall be tried by a single judge alone."
+    },
+    {
+      "article_number": "第一百八十六条",
+      "content_en": "Article 186 If, in the course of trying a case under the procedure of this Chapter, a People's Court finds that the case involves a dispute over civil rights and interests, it shall rule to terminate the special procedure and inform interested parties that they may file a separate prosecution."
+    },
+    {
+      "article_number": "第一百八十七条",
+      "content_en": "Article 187 When a People's Court tries a case under the special procedure, it shall conclude the case within thirty days from the date of case filing or within thirty days after the expiration of the period of public notice. If an extension is necessary due to special circumstances, it shall be approved by the president of the court, except for cases concerning voter qualifications."
+    },
+    {
+      "article_number": "第一百八十八条",
+      "content_en": "Article 188 A citizen who refuses to accept the decision made by the election committee regarding a complaint about voter qualifications may file a lawsuit with the Primary People's Court in the place where the electoral district is located within five days before the election day."
+    },
+    {
+      "article_number": "第一百八十九条",
+      "content_en": "Article 189 After accepting a case concerning voter qualifications, the People's Court must conclude the case before the election day.\nDuring the hearing, the plaintiff, the representative of the election committee, and the relevant citizens must appear.\nThe written judgment of the People's Court shall be served on the election committee and the plaintiff before the election day, and the relevant citizens shall be notified."
+    },
+    {
+      "article_number": "第一百九十条",
+      "content_en": "Article 190 If a citizen has been missing for two full years, an interested party applying for declaration of his or her disappearance shall submit the application to the Primary People's Court in the place of domicile of the missing person.\nThe application shall state the facts, time, and request of disappearance, and shall attach a written certification from the public security organ or other relevant organ regarding the missing citizen's whereabouts."
+    },
+    {
+      "article_number": "第一百九十一条",
+      "content_en": "Article 191 If a citizen has been missing for four full years, or has been missing due to an accident for two full years, or has been missing due to an accident and the relevant organ certifies that the citizen is unlikely to survive, an interested party applying for declaration of his or her death shall submit the application to the Primary People's Court in the place of domicile of the missing person.\nThe application shall state the facts, time, and request of disappearance, and shall attach a written certification from the public security organ or other relevant organ regarding the missing citizen's whereabouts."
+    },
+    {
+      "article_number": "第一百九十二条",
+      "content_en": "Article 192 After accepting a case for declaration of disappearance or death, the People's Court shall issue a public notice seeking the missing person. The period of public notice for declaration of disappearance shall be three months, and the period of public notice for declaration of death shall be one year. If the person is missing due to an accident and the relevant organ certifies that the citizen is unlikely to survive, the period of public notice for declaration of death shall be three months.\nUpon expiration of the period of public notice, the People's Court shall render a judgment declaring disappearance or death or dismiss the application, based on whether the facts of disappearance or death are confirmed."
+    },
+    {
+      "article_number": "第一百九十三条",
+      "content_en": "Article 193 If a citizen declared disappeared or dead reappears, upon application by the citizen or an interested party, the People's Court shall render a new judgment revoking the original judgment."
+    },
+    {
+      "article_number": "第一百九十四条",
+      "content_en": "Article 194 If there is a dispute over the appointment of an estate administrator, an interested party applying for designation of an estate administrator shall submit the application to the Primary People's Court in the place of domicile of the deceased at the time of death or the place where the principal estate is located.\nThe application shall state the time of death of the deceased, the grounds for application, and specific requests, and shall attach relevant evidence of the deceased's death."
+    },
+    {
+      "article_number": "第一百九十五条",
+      "content_en": "Article 195 After accepting an application, the People's Court shall examine and verify the matter, and shall render a judgment designating the estate administrator in accordance with the principle of facilitating estate administration."
+    },
+    {
+      "article_number": "第一百九十六条",
+      "content_en": "Article 196 If a designated estate administrator dies, terminates, loses civil capacity, or is otherwise unable to continue performing estate administration duties, the People's Court may designate another estate administrator upon application by an interested party or the administrator himself or herself."
+    },
+    {
+      "article_number": "第一百九十七条",
+      "content_en": "Article 197 If an estate administrator violates estate administration duties and seriously infringes upon the lawful rights and interests of heirs, legatees, or creditors, the People's Court may, upon application by an interested party, revoke the qualification of the estate administrator and designate a new estate administrator according to law."
+    },
+    {
+      "article_number": "第一百九十八条",
+      "content_en": "Article 198 An application for determining a citizen as having no or limited civil capacity shall be submitted to the Primary People's Court in the place of domicile of the citizen by an interested party or a relevant organization.\nThe application shall state the facts and grounds for the citizen's lack or limitation of civil capacity."
+    },
+    {
+      "article_number": "第一百九十九条",
+      "content_en": "Article 199 After accepting an application, the People's Court shall, when necessary, have the citizen sought to be determined as having no or limited civil capacity undergo an expert evaluation. If the applicant has already provided an opinion of expert evaluation, the People's Court shall examine such opinion."
+    },
+    {
+      "article_number": "第二百条",
+      "content_en": "Article 200 When a People's Court tries a case for determining a citizen as having no or limited civil capacity, a close relative of the citizen shall serve as the agent ad litem, except for the applicant. If the close relatives shift responsibility among themselves, the People's Court shall designate one of them as the agent ad litem. If the citizen's health permits, the citizen's own opinion shall also be sought.\nIf, after trial, the People's Court finds that the application is supported by factual grounds, it shall render a judgment determining the citizen as having no or limited civil capacity; if it finds that the application is not supported by factual grounds, it shall render a judgment dismissing the application."
+    },
+    {
+      "article_number": "第二百零一条",
+      "content_en": "Article 201 Where a People's Court, upon the application of a person who has been determined to be a person without or with limited capacity for civil conduct, an interested party, or a relevant organization, verifies that the causes for such person to be without or with limited capacity for civil conduct have been eliminated, it shall render a new judgment and revoke the original judgment."
+    },
+    {
+      "article_number": "第二百零二条",
+      "content_en": "Article 202 An application for determining property as ownerless shall be filed by a citizen, legal person or any other organization with the Primary People's Court of the place where the property is located. The application shall state the type and quantity of the property and the grounds for requesting the determination of the property as ownerless."
+    },
+    {
+      "article_number": "第二百零三条",
+      "content_en": "Article 203 After accepting an application and upon examination and verification, the People's Court shall issue a public notice for claiming the property. If no claim is made within one year from the issuance of the public notice, the court shall, by judgment, determine the property as ownerless and vest it in the State or a collective."
+    },
+    {
+      "article_number": "第二百零四条",
+      "content_en": "Article 204 After a judgment has determined property as ownerless, if the original owner or heir of the property appears and makes a claim within the limitation of action prescribed by the Civil Code, the People's Court shall, after verifying the claim, render a new judgment and revoke the original judgment."
+    },
+    {
+      "article_number": "第二百零五条",
+      "content_en": "Article 205 Where a mediation agreement is reached through mediation by a mediation organization established according to law and an application is made for judicial confirmation, both parties shall, within thirty days from the date the mediation agreement takes effect, jointly file the application with the following People's Courts:\n(1) Where a People's Court has invited a mediation organization to conduct pre-litigation mediation, the application shall be filed with the court that made the invitation;\n(2) Where a mediation organization conducts mediation on its own, the application shall be filed with the Primary People's Court of the place of the domicile of the parties, the place where the subject matter is located, or the place where the mediation organization is located; if the dispute involved in the mediation agreement shall be under the jurisdiction of an Intermediate People's Court, the application shall be filed with the corresponding Intermediate People's Court."
+    },
+    {
+      "article_number": "第二百零六条",
+      "content_en": "Article 206 After accepting an application and upon examination, if the application complies with the provisions of law, the People's Court shall rule that the mediation agreement is effective; if one party refuses to perform or fails to fully perform the agreement, the other party may apply to the People's Court for enforcement. If the application does not comply with the provisions of law, the court shall rule to dismiss the application; the parties may modify the original mediation agreement or reach a new mediation agreement through mediation, or may initiate an action in the People's Court."
+    },
+    {
+      "article_number": "第二百零七条",
+      "content_en": "Article 207 An application for realizing a security interest shall be filed by the security interest holder and any other person entitled to request the realization of the security interest with the Primary People's Court of the place where the secured property is located or where the security interest is registered, in accordance with laws such as the Civil Code."
+    },
+    {
+      "article_number": "第二百零八条",
+      "content_en": "Article 208 After accepting an application and upon examination, if the application complies with the provisions of law, the People's Court shall rule to auction or sell off the secured property, and the parties may apply to the People's Court for enforcement based on the ruling; if the application does not comply with the provisions of law, the court shall rule to dismiss the application, and the parties may initiate an action in the People's Court."
+    },
+    {
+      "article_number": "第二百零九条",
+      "content_en": "Article 209 Where the president of a People's Court at any level finds that a legally effective judgment, ruling, or mediation document of that court indeed contains an error and deems it necessary to conduct a retrial, the matter shall be submitted to the judicial committee for discussion and decision.\nWhere the Supreme People's Court finds that a legally effective judgment, ruling, or mediation document of a local People's Court at any level indeed contains an error, or where a People's Court at a higher level finds that a legally effective judgment, ruling, or mediation document of a People's Court at a lower level indeed contains an error, it has the authority to bring the case up for trial or to direct the lower People's Court to conduct a retrial."
+    },
+    {
+      "article_number": "第二百一十条",
+      "content_en": "Article 210 Where a party to a legally effective judgment or ruling considers that it contains an error, the party may apply for a retrial with the People's Court at the next higher level; however, in cases where one party involves a large number of persons or both parties are citizens, the application may also be filed with the original trial People's Court. The filing of an application for retrial by a party shall not suspend the enforcement of the judgment or ruling."
+    },
+    {
+      "article_number": "第二百一十一条",
+      "content_en": "Article 211 A People's Court shall conduct a retrial if the application of a party falls under any of the following circumstances:\n(1) There is new evidence sufficient to overturn the original judgment or ruling;\n(2) The basic facts determined in the original judgment or ruling lack evidentiary support;\n(3) The main evidence for the facts determined in the original judgment or ruling is forged;\n(4) The main evidence for the facts determined in the original judgment or ruling was not cross-examined;\n(5) The party, due to objective reasons, could not collect on its own the main evidence necessary for the trial of the case and filed a written application with the People's Court for investigation and collection, but the court failed to investigate and collect it;\n(6) The application of law in the original judgment or ruling is indeed erroneous;\n(7) The composition of the trial organization is illegal, or a judicial officer who shall withdraw according to law fails to do so;\n(8) A person without capacity for litigation was not represented by a legal agent in the proceedings, or a party that should have participated in the proceedings did not do so due to reasons not attributable to the party or the party's litigation agent;\n(9) In violation of legal provisions, the party was deprived of the right to debate;\n(10) A default judgment was rendered without service of a summons;\n(11) The original judgment or ruling omits or exceeds the claims;\n(12) The legal document based on which the original judgment or ruling was rendered has been revoked or modified;\n(13) The judicial officers involved in the trial of the case committed acts of graft or bribery, engaged in favoritism or other malpractice, or rendered a judgment perverting the law."
+    },
+    {
+      "article_number": "第二百一十二条",
+      "content_en": "Article 212 Where a party to a legally effective mediation document submits evidence proving that the mediation violated the principle of voluntariness or that the content of the mediation agreement violates the law, the party may apply for a retrial. If the People's Court, upon examination, verifies the facts, it shall conduct a retrial."
+    },
+    {
+      "article_number": "第二百一十三条",
+      "content_en": "Article 213 A party shall not apply for retrial of a legally effective judgment or mediation document dissolving a marital relationship."
+    },
+    {
+      "article_number": "第二百一十四条",
+      "content_en": "Article 214 Where a party applies for a retrial, the party shall submit a written application for retrial and other materials. The People's Court shall, within five days from receipt of the application for retrial, send a copy of the application to the other party. The other party shall submit a written opinion within fifteen days from receipt of the copy of the application; failure to submit a written opinion shall not affect the examination by the People's Court. The People's Court may require the applicant and the other party to supplement relevant materials and inquire about relevant matters."
+    },
+    {
+      "article_number": "第二百一十五条",
+      "content_en": "Article 215 The People's Court shall examine the application for retrial within three months from receipt of the application; if it complies with the provisions of this Law, it shall rule to conduct a retrial; if it does not comply, it shall rule to dismiss the application. In exceptional circumstances requiring an extension, such extension shall be approved by the president of the court.\nCases in which a retrial is ordered upon the application of a party shall be tried by a People's Court at or above the level of an Intermediate People's Court, except where the party, in accordance with Article 210 of this Law, elects to apply for retrial to a Primary People's Court. Cases in which a retrial is ordered by the Supreme People's Court or a Higher People's Court shall be retried by that court or referred to another People's Court for retrial, and may also be referred to the original trial People's Court for retrial."
+    },
+    {
+      "article_number": "第二百一十六条",
+      "content_en": "Article 216 A party applying for a retrial shall file the application within six months after the judgment or ruling takes legal effect; in circumstances falling under items (1), (3), (12), or (13) of Article 211 of this Law, the application shall be filed within six months from the date the party knows or should have known of such circumstances."
+    },
+    {
+      "article_number": "第二百一十七条",
+      "content_en": "Article 217 For a case in which a retrial is decided in accordance with the trial supervision procedure, the court shall rule to suspend the enforcement of the original judgment, ruling, or mediation document; however, for cases involving claims for alimony, maintenance, child support, pensions for the disabled or survivors of the deceased, medical expenses, or labor remuneration, the enforcement may not be suspended."
+    },
+    {
+      "article_number": "第二百一十八条",
+      "content_en": "Article 218 Where a People's Court retries a case in accordance with the trial supervision procedure, if the legally effective judgment or ruling was rendered by a court of first instance, the case shall be tried in accordance with the procedure of first instance, and the parties may appeal the judgment or ruling rendered; if the legally effective judgment or ruling was rendered by a court of second instance, the case shall be tried in accordance with the procedure of second instance, and the judgment or ruling rendered shall be legally effective; if a People's Court at a higher level brings the case up for trial in accordance with the trial supervision procedure, the case shall be tried in accordance with the procedure of second instance, and the judgment or ruling rendered shall be legally effective.\nWhen a People's Court retries a case, it shall form a new collegial panel."
+    },
+    {
+      "article_number": "第二百一十九条",
+      "content_en": "Article 219 Where the Supreme People's Procuratorate finds that a legally effective judgment or ruling of a People's Court at any level, or a People's Procuratorate at a higher level finds that a legally effective judgment or ruling of a People's Court at a lower level, falls under any of the circumstances specified in Article 211 of this Law, or discovers that a mediation document impairs the national interest or the public interest, it shall file a protest.\nWhere a local People's Procuratorate at any level finds that a legally effective judgment or ruling of a People's Court at the corresponding level falls under any of the circumstances specified in Article 211 of this Law, or discovers that a mediation document impairs the national interest or the public interest, it may issue a procuratorial recommendation to the People's Court at the corresponding level and report it to the People's Procuratorate at a higher level for record; it may also request the People's Procuratorate at a higher level to file a protest with the People's Court at the corresponding level.\nPeople's Procuratorates at all levels have the authority to issue a procuratorial recommendation to the People's Court at the corresponding level regarding the illegal conduct of judicial officers in trial procedures other than the trial supervision procedure."
+    },
+    {
+      "article_number": "第二百二十条",
+      "content_en": "Article 220 Under any of the following circumstances, a party may apply to the People's Procuratorate for a procuratorial recommendation or a protest:\n(1) The People's Court dismisses the application for retrial;\n(2) The People's Court fails to rule on the application for retrial within the prescribed time limit;\n(3) The judgment or ruling rendered upon retrial contains a manifest error.\nThe People's Procuratorate shall examine the application of the party within three months and decide whether to issue or not to issue a procuratorial recommendation or file a protest. The party shall not apply again to the People's Procuratorate for a procuratorial recommendation or protest."
+    },
+    {
+      "article_number": "第二百二十一条",
+      "content_en": "Article 221 Where necessary for fulfilling the duty of legal supervision in issuing a procuratorial recommendation or filing a protest, the People's Procuratorate may investigate and verify relevant circumstances with the parties or persons outside the case."
+    },
+    {
+      "article_number": "第二百二十二条",
+      "content_en": "Article 222 For a case in which the People's Procuratorate files a protest, the People's Court that accepts the protest shall, within thirty days from receipt of the protest letter, rule to conduct a retrial; if the case falls under any of the circumstances specified in items (1) through (5) of Article 211 of this Law, the court may refer the case to the next lower People's Court for retrial, except where such lower court has already conducted a retrial."
+    },
+    {
+      "article_number": "第二百二十三条",
+      "content_en": "Article 223 Where the People's Procuratorate decides to file a protest against a judgment, ruling, or mediation document of a People's Court, it shall prepare a protest letter."
+    },
+    {
+      "article_number": "第二百二十四条",
+      "content_en": "Article 224 For a case in which the People's Procuratorate files a protest, when the People's Court conducts the retrial, it shall notify the People's Procuratorate to send a representative to appear in court."
+    },
+    {
+      "article_number": "第二百二十五条",
+      "content_en": "Article 225 Where a creditor requests the debtor to pay a sum of money or negotiable instruments, and the following conditions are met, the creditor may apply for an order for payment to the Primary People's Court that has jurisdiction:\n(1) There is no other debt dispute between the creditor and the debtor;\n(2) The order for payment can be served on the debtor.\nThe application shall clearly state the amount of money or negotiable instruments requested and the facts and evidence on which the request is based."
+    },
+    {
+      "article_number": "第二百二十六条",
+      "content_en": "Article 226 After a creditor files an application, the People's Court shall, within five days, notify the creditor whether the application is accepted."
+    },
+    {
+      "article_number": "第二百二十七条",
+      "content_en": "Article 227 After accepting an application and examining the facts and evidence provided by the creditor, if the debt relationship is clear and lawful, the People's Court shall, within fifteen days from the date of acceptance, issue an order for payment to the debtor; if the application is unfounded, the court shall rule to dismiss it.\nThe debtor shall, within fifteen days from receipt of the order for payment, pay off the debt or submit a written objection to the People's Court.\nIf the debtor neither raises an objection nor complies with the order for payment within the time limit specified in the preceding paragraph, the creditor may apply to the People's Court for enforcement."
+    },
+    {
+      "article_number": "第二百二十八条",
+      "content_en": "Article 228 After receiving a written objection submitted by the debtor, the People's Court shall, upon examination, if the objection is valid, rule to terminate the supervision procedure, and the order for payment shall automatically lose effect.\nIf the order for payment loses effect, the case shall be transferred to an action procedure, except where the party that applied for the order for payment does not consent to initiating an action."
+    },
+    {
+      "article_number": "第二百二十九条",
+      "content_en": "Article 229 Where an instrument that may be transferred by endorsement according to relevant provisions is stolen, lost, or destroyed, the holder of the instrument may apply for a public notice of exhortation to the Primary People's Court of the place of payment of the instrument. The provisions of this Chapter shall apply to other matters for which a public notice of exhortation may be applied for according to law.\nThe applicant shall submit an application to the People's Court, stating the face amount, the drawer, the holder, the endorsers and other main contents of the instrument, as well as the reasons and facts for the application."
+    },
+    {
+      "article_number": "第二百三十条",
+      "content_en": "Article 230 Where the People's Court decides to accept an application, it shall simultaneously notify the payer to suspend payment, and shall, within three days, issue a public notice urging interested parties to claim their rights. The period of the public notice of exhortation shall be determined by the People's Court based on the circumstances, but shall not be less than sixty days."
+    },
+    {
+      "article_number": "第二百三十一条",
+      "content_en": "Article 231 Upon receipt of the notice from the People's Court to suspend payment, the payer shall suspend payment until the conclusion of the public notice of exhortation procedure.\nAny act of transferring rights under the instrument during the period of the public notice of exhortation shall be void."
+    },
+    {
+      "article_number": "第二百三十二条",
+      "content_en": "Article 232 An interested party shall make a claim to the People's Court during the period of the public notice of exhortation.\nAfter receiving the claim from an interested party, the People's Court shall rule to terminate the public notice of exhortation procedure and notify the applicant and the payer.\nThe applicant or the claimant may initiate an action in the People's Court."
+    },
+    {
+      "article_number": "第二百三十三条",
+      "content_en": "Article 233 If no claim is made, the People's Court shall, upon the application of the applicant, render a judgment declaring the instrument void. The judgment shall be publicly announced and the payer shall be notified. From the date of the public announcement of the judgment, the applicant has the right to request payment from the payer."
+    },
+    {
+      "article_number": "第二百三十四条",
+      "content_en": "Article 234 If an interested party, for good reason, was unable to make a claim to the People's Court before the judgment, the party may, within one year from the date the party knows or should have known of the public announcement of the judgment, initiate an action in the People's Court that rendered the judgment."
+    },
+    {
+      "article_number": "第二百三十五条",
+      "content_en": "Article 235 Legally effective civil judgments and rulings, as well as the property-related parts of criminal judgments and rulings, shall be enforced by the People's Court of first instance or by the People's Court at the same level as the court of first instance of the place where the property subject to enforcement is located.\nOther legal documents that shall be enforced by a People's Court according to law shall be enforced by the People's Court of the place of the domicile of the person subject to enforcement or the place where the property subject to enforcement is located."
+    },
+    {
+      "article_number": "第二百三十六条",
+      "content_en": "Article 236 Where a party or an interested party considers that an enforcement act violates legal provisions, the party may submit a written objection to the People's Court responsible for enforcement. Where a party or an interested party submits a written objection, the People's Court shall examine it within fifteen days from receipt of the written objection; if the reasons are valid, the court shall rule to rescind or correct the act; if the reasons are not valid, the court shall rule to dismiss the objection. If a party or an interested party is dissatisfied with the ruling, the party may, within ten days from the date the ruling is served, apply to the People's Court at the next higher level for reconsideration."
+    },
+    {
+      "article_number": "第二百三十七条",
+      "content_en": "Article 237 Where a People's Court fails to enforce within six months from receipt of the application for enforcement, the applicant for enforcement may apply to the People's Court at the next higher level for enforcement. Upon examination, the People's Court at the next higher level may order the original People's Court to enforce within a specified period, or may decide to enforce the matter itself or direct another People's Court to enforce it."
+    },
+    {
+      "article_number": "第二百三十八条",
+      "content_en": "Article 238 During the enforcement process, if a person outside the case submits a written objection to the subject matter of enforcement, the People's Court shall examine it within fifteen days from receipt of the written objection; if the reasons are valid, the court shall rule to suspend enforcement against that subject matter; if the reasons are not valid, the court shall rule to dismiss the objection. If the person outside the case or the party is dissatisfied with the ruling and believes that the original judgment or ruling contains an error, the matter shall be handled in accordance with the trial supervision procedure; if the matter is unrelated to the original judgment or ruling, the party may, within fifteen days from the date the ruling is served, initiate an action in the People's Court."
+    },
+    {
+      "article_number": "第二百三十九条",
+      "content_en": "Article 239 Enforcement work shall be carried out by an enforcement officer.\nWhen taking compulsory enforcement measures, the enforcement officer shall present identification. After enforcement is completed, a record of the enforcement shall be made, signed or sealed by the relevant persons present.\nA People's Court may establish an enforcement organ as needed."
+    },
+    {
+      "article_number": "第二百四十条",
+      "content_en": "Article 240 Where the person subject to enforcement or the property subject to enforcement is located in another locality, the original court may entrust the local People's Court with the enforcement. The entrusted People's Court shall, within fifteen days from receipt of the letter of entrustment, commence enforcement and shall not refuse to do so. After completing enforcement, the entrusted court shall promptly inform the entrusting court of the enforcement result in writing; if enforcement is not completed within thirty days, the entrusted court shall also inform the entrusting court of the enforcement status in writing.\nIf the entrusted People's Court fails to enforce within fifteen days from receipt of the letter of entrustment, the entrusting People's Court may request the People's Court at a higher level over the entrusted court to direct the entrusted court to enforce."
+    },
+    {
+      "article_number": "第二百四十一条",
+      "content_en": "Article 241 During enforcement, if the parties reach a settlement agreement on their own, the enforcement officer shall record the contents of the agreement in the笔录, and the parties shall sign or affix their seals thereto.\nIf the applicant for execution reaches a settlement agreement with the person subject to execution due to fraud or duress, or if any party fails to perform the settlement agreement, the People's Court may, upon application by the party, resume enforcement of the original effective legal document."
+    },
+    {
+      "article_number": "第二百四十二条",
+      "content_en": "Article 242 During enforcement, if the person subject to execution provides a guaranty to the People's Court with the consent of the applicant for execution, the People's Court may decide to suspend the enforcement and the period of such suspension. If the person subject to execution fails to perform within the extended period, the People's Court shall have the authority to enforce against the guaranty property of the person subject to execution or the property of the guarantor."
+    },
+    {
+      "article_number": "第二百四十三条",
+      "content_en": "Article 243 If a citizen who is the person subject to execution dies, the estate shall be used to satisfy the debts. If a legal person or other organization that is the person subject to execution is terminated, the successor of its rights and obligations shall perform the obligations."
+    },
+    {
+      "article_number": "第二百四十四条",
+      "content_en": "Article 244 After enforcement is completed, if the judgment, ruling, or other legal document on the basis of which enforcement was carried out is indeed erroneous and is revoked by the People's Court, the People's Court shall issue a ruling ordering the person who obtained the property to return it; if the person refuses to return it, compulsory execution shall be carried out."
+    },
+    {
+      "article_number": "第二百四十五条",
+      "content_en": "Article 245 The enforcement of a mediation agreement made by the People's Court shall be governed by the provisions of this Part."
+    },
+    {
+      "article_number": "第二百四十六条",
+      "content_en": "Article 246 The People's Procuratorate shall have the authority to exercise legal supervision over civil enforcement activities."
+    },
+    {
+      "article_number": "第二百四十七条",
+      "content_en": "Article 247 A party shall perform a legally effective civil judgment or ruling. If one party refuses to perform, the other party may apply to the People's Court for enforcement, or the adjudicator may refer the matter to the enforcement officer for enforcement.\nA party shall perform a mediation agreement or other legal document that shall be enforced by the People's Court. If one party refuses to perform, the other party may apply to the People's Court for enforcement."
+    },
+    {
+      "article_number": "第二百四十八条",
+      "content_en": "Article 248 For an award made by an arbitration institution established according to law, if one party fails to perform, the other party may apply to the competent People's Court for enforcement. The People's Court to which application is made shall enforce the award.\nIf the respondent provides evidence proving that the arbitration award falls under any of the following circumstances, the People's Court shall, after forming a collegial panel to examine and verify, rule not to enforce the award:\n(1) The parties did not include an arbitration clause in the contract or did not subsequently reach a written arbitration agreement;\n(2) The matters decided are beyond the scope of the arbitration agreement or the arbitration institution has no authority to arbitrate;\n(3) The formation of the arbitration tribunal or the arbitration procedure violated statutory procedures;\n(4) The evidence on which the award is based is forged;\n(5) The other party concealed evidence sufficient to affect the fair award from the arbitration institution;\n(6) An arbitrator engaged in graft, bribery, favoritism, or perversion of law in making the award.\nIf the People's Court determines that enforcement of the award violates the public interest, it shall rule not to enforce it.\nThe ruling shall be served on the parties and the arbitration institution.\nIf the arbitration award is ruled not to be enforced by the People's Court, the parties may reapply for arbitration based on the written arbitration agreement reached by them, or may institute proceedings in the People's Court."
+    },
+    {
+      "article_number": "第二百四十九条",
+      "content_en": "Article 249 For a notarized debt document that is given compulsory enforcement effect according to law by the notarial authority, if one party fails to perform, the other party may apply to the competent People's Court for enforcement, and the People's Court to which application is made shall enforce.\nIf the notarized debt document is indeed erroneous, the People's Court shall rule not to enforce it, and shall serve the ruling on the parties and the notarial authority."
+    },
+    {
+      "article_number": "第二百五十条",
+      "content_en": "Article 250 The period for applying for enforcement shall be two years. The suspension or interruption of the limitation period for applying for enforcement shall be governed by the provisions of law regarding the suspension or interruption of limitation of action.\nThe period provided in the preceding paragraph shall be calculated from the last day of the period for performance specified in the legal document; if the legal document provides for performance in installments, it shall be calculated from the date on which the period for performance of the last installment expires; if the legal document does not specify a period for performance, it shall be calculated from the date on which the legal document takes effect."
+    },
+    {
+      "article_number": "第二百五十一条",
+      "content_en": "Article 251 Upon receipt of a written application for enforcement or a written referral for enforcement, the enforcement officer shall issue an enforcement notice to the person subject to execution, and may immediately take compulsory enforcement measures."
+    },
+    {
+      "article_number": "第二百五十二条",
+      "content_en": "Article 252 If the person subject to execution fails to perform the obligations specified in the legal document in accordance with the enforcement notice, the person shall report the current state of property and the state of property for the year prior to the date of receipt of the enforcement notice. If the person subject to execution refuses to report or makes a false report, the People's Court may, depending on the gravity of the circumstances, impose a fine or detention on the person subject to execution, or on the legal representative of the person or the principal leading person or directly responsible person of the relevant unit."
+    },
+    {
+      "article_number": "第二百五十三条",
+      "content_en": "Article 253 If the person subject to execution fails to perform the obligations specified in the legal document in accordance with the enforcement notice, the People's Court shall have the authority to inquire with relevant units about the property of the person subject to execution, such as deposits, bonds, stocks, fund shares, etc. The People's Court shall have the authority to seize, freeze, transfer, or sell off the property of the person subject to execution under different circumstances. The property inquired about, seized, frozen, transferred, or sold off by the People's Court shall not exceed the scope of the obligations that the person subject to execution shall perform.\nWhen the People's Court decides to seize, freeze, transfer, or sell off property, it shall issue a ruling and issue a notice of assistance in enforcement, and the relevant unit must comply."
+    },
+    {
+      "article_number": "第二百五十四条",
+      "content_en": "Article 254 If the person subject to execution fails to perform the obligations specified in the legal document in accordance with the enforcement notice, the People's Court shall have the authority to withhold or withdraw the portion of the income of the person subject to execution that shall be used to perform the obligations. However, the necessary living expenses for the person subject to execution and the dependents supported by the person shall be reserved.\nWhen the People's Court withholds or withdraws income, it shall issue a ruling and issue a notice of assistance in enforcement, and the unit where the person subject to execution works, the bank, the credit cooperative, and other units with savings business must comply."
+    },
+    {
+      "article_number": "第二百五十五条",
+      "content_en": "Article 255 If the person subject to execution fails to perform the obligations specified in the legal document in accordance with the enforcement notice, the People's Court shall have the authority to seal up, seize, freeze, auction, or sell off the portion of the property of the person subject to execution that shall be used to perform the obligations. However, the daily necessities for the person subject to execution and the dependents supported by the person shall be reserved.\nWhen taking the measures provided in the preceding paragraph, the People's Court shall issue a ruling."
+    },
+    {
+      "article_number": "第二百五十六条",
+      "content_en": "Article 256 When the People's Court seals up or seizes property, if the person subject to execution is a citizen, the person subject to execution or his adult family members shall be notified to be present; if the person subject to execution is a legal person or other organization, its legal representative or principal leading person shall be notified to be present. Refusal to be present shall not affect the enforcement. If the person subject to execution is a citizen, the work unit of the person or the grass-roots organization in the place where the property is located shall send personnel to participate.\nFor the property sealed up or seized, the enforcement officer must prepare an inventory, which shall be signed or affixed with seals by the persons present, and then a copy shall be given to the person subject to execution. If the person subject to execution is a citizen, a copy may also be given to his adult family members."
+    },
+    {
+      "article_number": "第二百五十七条",
+      "content_en": "Article 257 For property sealed up, the enforcement officer may designate the person subject to execution to be responsible for custody. Losses caused by the fault of the person subject to execution shall be borne by the person subject to execution."
+    },
+    {
+      "article_number": "第二百五十八条",
+      "content_en": "Article 258 After property is sealed up or seized, the enforcement officer shall order the person subject to execution to perform the obligations specified in the legal document within a specified period. If the person subject to execution fails to perform within the extended period, the People's Court shall auction the sealed-up or seized property; if the property is not suitable for auction or if the parties agree not to conduct an auction, the People's Court may entrust a relevant unit to sell off the property or sell it off itself. Articles prohibited by the State from free trading shall be delivered to the relevant unit for purchase at the price prescribed by the State."
+    },
+    {
+      "article_number": "第二百五十九条",
+      "content_en": "Article 259 If the person subject to execution fails to perform the obligations specified in the legal document and conceals property, the People's Court shall have the authority to issue a search warrant to search the person subject to execution and the premises of the person or the place where property is concealed.\nWhen taking the measures provided in the preceding paragraph, the search warrant shall be signed by the president of the court."
+    },
+    {
+      "article_number": "第二百六十条",
+      "content_en": "Article 260 For money or goods or negotiable instruments designated for delivery in a legal document, the enforcement officer shall summon the parties to deliver them face to face, or the enforcement officer shall transfer them, and the person to whom they are delivered shall sign a receipt.\nIf a relevant unit holds such money or goods or negotiable instruments, it shall transfer them in accordance with the notice of assistance in enforcement of the People's Court, and the person to whom they are delivered shall sign a receipt.\nIf a relevant citizen holds such money or goods or negotiable instruments, the People's Court shall notify the citizen to surrender them. If the citizen refuses to surrender them, compulsory execution shall be carried out."
+    },
+    {
+      "article_number": "第二百六十一条",
+      "content_en": "Article 261 For compulsory removal from a house or compulsory vacation of land, the president of the court shall issue a public notice, ordering the person subject to execution to perform within a specified period. If the person subject to execution fails to perform within the extended period, the enforcement officer shall carry out compulsory execution.\nDuring compulsory execution, if the person subject to execution is a citizen, the person subject to execution or his adult family members shall be notified to be present; if the person subject to execution is a legal person or other organization, its legal representative or principal leading person shall be notified to be present. Refusal to be present shall not affect the enforcement. If the person subject to execution is a citizen, the work unit of the person or the grass-roots organization in the place where the house or land is located shall send personnel to participate. The enforcement officer shall record the circumstances of the compulsory execution in the笔录, which shall be signed or affixed with seals by the persons present.\nThe property removed during compulsory removal from the house shall be transported by personnel of the People's Court to a designated location and delivered to the person subject to execution. If the person subject to execution is a citizen, it may also be delivered to his adult family members. Losses caused by refusal to accept delivery shall be borne by the person subject to execution."
+    },
+    {
+      "article_number": "第二百六十二条",
+      "content_en": "Article 262 During enforcement, if it is necessary to go through the formalities for the transfer of certificates of property rights, the People's Court may issue a notice of assistance in enforcement to the relevant unit, and the relevant unit must comply."
+    },
+    {
+      "article_number": "第二百六十三条",
+      "content_en": "Article 263 For acts designated in judgments, rulings, or other legal documents, if the person subject to execution fails to perform in accordance with the enforcement notice, the People's Court may carry out compulsory execution or entrust the act to a relevant unit or other person to complete, and the expenses shall be borne by the person subject to execution."
+    },
+    {
+      "article_number": "第二百六十四条",
+      "content_en": "Article 264 If the person subject to execution fails to perform the obligation to pay money within the period specified in a judgment, ruling, or other legal document, the person shall pay double the interest on the debt for the period of delayed performance. If the person subject to execution fails to perform other obligations within the period specified in a judgment, ruling, or other legal document, the person shall pay a surcharge for delayed performance."
+    },
+    {
+      "article_number": "第二百六十五条",
+      "content_en": "Article 265 After the People's Court has taken the enforcement measures provided for in Article 253, Article 254, and Article 255 of this Law, if the person subject to execution is still unable to repay the debt, the person shall continue to perform the obligation. If the creditor discovers that the person subject to execution has other property, the creditor may at any time request the People's Court to enforce."
+    },
+    {
+      "article_number": "第二百六十六条",
+      "content_en": "Article 266 If the person subject to execution fails to perform the obligations specified in the legal document, the People's Court may impose or notify the relevant unit to assist in imposing measures such as restricting the person from leaving the country, recording the information in the credit reference system, publishing the information of non-performance through media, and other measures provided by law."
+    },
+    {
+      "article_number": "第二百六十七条",
+      "content_en": "Article 267 In any of the following circumstances, the People's Court shall rule to suspend enforcement:\n(1) The applicant indicates that enforcement may be postponed;\n(2) A person not involved in the case raises a well-founded objection to the subject matter of enforcement;\n(3) A citizen who is a party dies and it is necessary to await the successor to succeed to the rights or assume the obligations;\n(4) A legal person or other organization that is a party terminates and the successor of rights and obligations has not yet been determined;\n(5) Other circumstances where the People's Court considers that enforcement shall be suspended.\nEnforcement shall resume after the circumstances for suspension disappear."
+    },
+    {
+      "article_number": "第二百六十八条",
+      "content_en": "Article 268 In any of the following circumstances, the People's Court shall rule to terminate enforcement:\n(1) The applicant withdraws the application;\n(2) The legal document on the basis of which enforcement is carried out is revoked;\n(3) The citizen who is the person subject to execution dies, leaving no estate for enforcement and no person to assume the obligation;\n(4) The right holder in a case for recovery of alimony, support, or child support dies;\n(5) The citizen who is the person subject to execution is unable to repay the loan due to financial difficulties, has no source of income, and has lost the ability to work;\n(6) Other circumstances where the People's Court considers that enforcement shall be terminated."
+    },
+    {
+      "article_number": "第二百六十九条",
+      "content_en": "Article 269 The ruling to suspend or terminate enforcement shall take immediate effect upon service on the parties."
+    },
+    {
+      "article_number": "第二百七十条",
+      "content_en": "Article 270 Civil actions involving foreign element conducted within the territory of the People's Republic of China shall be governed by the provisions of this Part. Where this Part does not provide otherwise, the other relevant provisions of this Law shall apply."
+    },
+    {
+      "article_number": "第二百七十一条",
+      "content_en": "Article 271 Where an international treaty concluded or acceded to by the People's Republic of China contains provisions that differ from those of this Law, the provisions of that international treaty shall apply, except for the provisions on which the People's Republic of China has declared reservations."
+    },
+    {
+      "article_number": "第二百七十二条",
+      "content_en": "Article 272 Civil actions instituted against a foreign national, foreign organization, or international organization enjoying diplomatic privileges and immunities shall be handled in accordance with the relevant laws of the People's Republic of China and the provisions of international treaties concluded or acceded to by the People's Republic of China."
+    },
+    {
+      "article_number": "第二百七十三条",
+      "content_en": "Article 273 When adjudicating a civil case involving foreign element, the People's Court shall use the spoken and written languages commonly used in the People's Republic of China. If a party requests the provision of interpretation, it may be provided, and the expenses shall be borne by the party."
+    },
+    {
+      "article_number": "第二百七十四条",
+      "content_en": "Article 274 If a foreign national, stateless person, foreign enterprise, or organization instructs a lawyer to represent the party in prosecution or defense before the People's Court, the party must instruct a lawyer of the People's Republic of China."
+    },
+    {
+      "article_number": "第二百七十五条",
+      "content_en": "Article 275 If a foreign national, stateless person, foreign enterprise, or organization with no domicile within the territory of the People's Republic of China instructs a lawyer of the People's Republic of China or any other person to represent the party in litigation, the power of attorney sent or entrusted from outside the territory of the People's Republic of China shall become effective only after it is notarized by a notarial authority in the country of domicile and authenticated by the embassy or consulate of the People's Republic of China in that country, or after the certification formalities prescribed in the relevant treaty concluded between the People's Republic of China and that country are fulfilled."
+    },
+    {
+      "article_number": "第二百七十六条",
+      "content_en": "Article 276 For a civil dispute involving foreign element, if an action is instituted against a defendant with no domicile within the territory of the People's Republic of China, other than an action concerning personal status, and if the place of contracting of the contract, the place of performance of the contract, the location of the subject matter of the action, the location of the property available for seizure, the location of the tortious act, or the location of the representative office is within the territory of the People's Republic of China, the action may be under the jurisdiction of the People's Court of the place of contracting, place of performance, location of the subject matter, location of property available for seizure, location of the tortious act, or location of the representative office.\nIn addition to the provisions of the preceding paragraph, if a civil dispute involving foreign element has any other appropriate connection with the People's Republic of China, it may be under the jurisdiction of the People's Court."
+    },
+    {
+      "article_number": "第二百七十七条",
+      "content_en": "Article 277 If the parties to a civil dispute involving foreign element agree in writing to choose the People's Court for jurisdiction, the dispute may be under the jurisdiction of the People's Court."
+    },
+    {
+      "article_number": "第二百七十八条",
+      "content_en": "Article 278 If a party does not raise an objection to jurisdiction and responds to the action or files a counterclaim, the People's Court shall be deemed to have jurisdiction."
+    },
+    {
+      "article_number": "第二百七十九条",
+      "content_en": "Article 279 The following civil cases shall be under the exclusive jurisdiction of the People's Court:\n(1) Actions instituted arising from disputes over the establishment, dissolution, or liquidation of a legal person or other organization established within the territory of the People's Republic of China, or over the validity of resolutions made by such legal person or other organization;\n(2) Actions instituted arising from disputes relating to the validity of intellectual property rights examined and granted within the territory of the People's Republic of China;\n(3) Actions instituted arising from disputes over the performance of contracts for Chinese-foreign equity joint ventures, contracts for Chinese-foreign contractual joint ventures, or contracts for Chinese-foreign cooperative exploration and development of natural resources within the territory of the People's Republic of China."
+    },
+    {
+      "article_number": "第二百八十条",
+      "content_en": "Article 280 For the same dispute between the parties, if one party institutes an action in a foreign court and the other party institutes an action in the People's Court, or if one party institutes an action both in a foreign court and in the People's Court, the People's Court may accept the case if it has jurisdiction according to this Law. If the parties have entered into an exclusive jurisdiction agreement choosing the jurisdiction of a foreign court and this does not violate the provisions of this Law on exclusive jurisdiction and does not involve the sovereignty, security, or public interest of the People's Republic of China, the People's Court may rule not to accept the case; if it has already accepted the case, it shall rule to dismiss the action."
+    },
+    {
+      "article_number": "第二百八十一条",
+      "content_en": "If, after the People's Court accepts a case pursuant to the preceding article, a party applies in writing for the People's Court to suspend the action on the ground that a foreign court has already accepted the case prior to the People's Court, the People's Court may order suspension of the action, unless any of the following circumstances exists:\n(1) the parties have agreed by agreement to choose the jurisdiction of the People's Court, or the dispute falls within the exclusive jurisdiction of the People's Court;\n(2) it is manifestly more convenient for the People's Court to adjudicate the case.\nIf the foreign court fails to take necessary measures to adjudicate the case or fails to conclude the case within a reasonable period, upon the party's written application, the People's Court shall resume the action.\nIf a legally effective judgment or ruling made by a foreign court has been wholly or partially recognized by the People's Court, and the party institutes a new action before the People's Court with respect to the part that has been recognized, the People's Court shall rule that the prosecution is not to be accepted; if it has already been accepted, the People's Court shall rule that the prosecution is to be dismissed."
+    },
+    {
+      "article_number": "第二百八十二条",
+      "content_en": "If, in a foreign-related civil action accepted by the People's Court, the defendant raises an objection to jurisdiction and the following circumstances concurrently exist, the People's Court may rule to dismiss the prosecution and inform the plaintiff to institute an action before a more convenient foreign court:\n(1) the basic facts in dispute of the case do not occur within the territory of the People's Republic of China, and it is manifestly inconvenient for the People's Court to adjudicate the case and for the parties to participate in the action;\n(2) there is no agreement between the parties choosing the jurisdiction of the People's Court;\n(3) the case does not fall within the exclusive jurisdiction of the People's Court;\n(4) the case does not involve the sovereignty, security, or public interests of the People's Republic of China;\n(5) it is more convenient for a foreign court to adjudicate the case.\nAfter the prosecution is dismissed by ruling, if the foreign court refuses to exercise jurisdiction over the dispute, or fails to take necessary measures to adjudicate the case, or fails to conclude the case within a reasonable period, and the party institutes an action before the People's Court again, the People's Court shall accept the case."
+    },
+    {
+      "article_number": "第二百八十三条",
+      "content_en": "The People's Court may use the following methods for service of litigation documents on a party who has no domicile within the territory of the People's Republic of China:\n(1) service in the manner prescribed in the international treaties concluded or jointly acceded to by the country where the person on whom service is to be made is located and the People's Republic of China;\n(2) service through diplomatic channels;\n(3) for a person on whom service is to be made who is a national of the People's Republic of China, entrusting the embassy or consulate of the People's Republic of China in the country where the person is located to serve on the person's behalf;\n(4) service on the litigation agent authorized by the person on whom service is to be made in the case;\n(5) service on the wholly-owned enterprise, representative office, branch office, or business agent authorized to accept service established by the person on whom service is to be made within the territory of the People's Republic of China;\n(6) if the person on whom service is to be made is a foreigner or a stateless person, who serves as the legal representative or principal responsible person of a legal person or other organization established within the territory of the People's Republic of China, and is a co-defendant with such legal person or other organization, service on such legal person or other organization;\n(7) if the person on whom service is to be made is a foreign legal person or other organization, whose legal representative or principal responsible person is within the territory of the People's Republic of China, service on such legal representative or principal responsible person;\n(8) if the law of the country where the person on whom service is to be made is located permits service by mail, service may be made by mail; if the receipt of service is not returned after three full months from the date of mailing, but it can be sufficiently determined based on all circumstances that service has been made, the date upon which the period expires shall be deemed the date of service;\n(9) service by electronic means that can confirm receipt by the person on whom service is to be made, unless prohibited by the law of the country where the person is located;\n(10) service by other means agreed by the person on whom service is to be made, unless prohibited by the law of the country where the person is located.\nIf none of the above methods of service can be used, service by public announcement shall be made; sixty days after the date of the issuance of the announcement, service shall be deemed to have been made."
+    },
+    {
+      "article_number": "第二百八十四条",
+      "content_en": "If the evidence that a party applies to the People's Court to investigate and collect is located outside the territory of the People's Republic of China, the People's Court may investigate and collect it in the manner prescribed in the international treaties concluded or jointly acceded to by the country where the evidence is located and the People's Republic of China, or through diplomatic channels.\nIf not prohibited by the law of the country where the evidence is located, the People's Court may investigate and collect evidence using the following methods:\n(1) for a party or witness who is a national of the People's Republic of China, entrusting the embassy or consulate of the People's Republic of China in the country where such party or witness is located to take evidence on its behalf;\n(2) with the consent of both parties, taking evidence through instant communication tools;\n(3) taking evidence by other means agreed by both parties."
+    },
+    {
+      "article_number": "第二百八十五条",
+      "content_en": "If the defendant has no domicile within the territory of the People's Republic of China, the People's Court shall serve a copy of the statement of complaint on the defendant and notify the defendant to submit a statement of defense within thirty days after receipt of the copy of the statement of complaint. Whether an extension applied for by the defendant shall be granted shall be decided by the People's Court."
+    },
+    {
+      "article_number": "第二百八十六条",
+      "content_en": "A party who has no domicile within the territory of the People's Republic of China and who is dissatisfied with a judgment or ruling of a first-instance People's Court shall have the right to file an appeal within thirty days from the date of service of the judgment or ruling. The respondent shall, after receiving a copy of the statement of appeal, submit a statement of defense within thirty days. Whether an extension applied for by a party who is unable to file an appeal or submit a statement of defense within the statutory period shall be granted shall be decided by the People's Court."
+    },
+    {
+      "article_number": "第二百八十七条",
+      "content_en": "The time periods for the People's Court to adjudicate foreign-related civil actions shall not be subject to the restrictions provided for in Articles 152 and 183 of this Law."
+    },
+    {
+      "article_number": "第二百八十八条",
+      "content_en": "For disputes arising from foreign-related economic and trade, transport, and maritime activities, if the parties have included an arbitration clause in the contract or subsequently concluded a written arbitration agreement to submit the dispute for arbitration to a foreign-related arbitration institution of the People's Republic of China or another arbitration institution, the parties shall not institute an action before the People's Court.\nIf the parties have not included an arbitration clause in the contract or have not subsequently concluded a written arbitration agreement, they may institute an action before the People's Court."
+    },
+    {
+      "article_number": "第二百八十九条",
+      "content_en": "If a party applies for preservation measures, the foreign-related arbitration institution of the People's Republic of China shall submit the party's application to the Intermediate People's Court of the place where the respondent has its domicile or where the property is located for a ruling."
+    },
+    {
+      "article_number": "第二百九十条",
+      "content_en": "If a dispute has been arbitrated by a foreign-related arbitration institution of the People's Republic of China, the parties shall not institute an action before the People's Court. If one party fails to perform the arbitration award, the other party may apply for enforcement to the Intermediate People's Court of the place where the respondent has its domicile or where the property is located."
+    },
+    {
+      "article_number": "第二百九十一条",
+      "content_en": "For an award made by a foreign-related arbitration institution of the People's Republic of China, if the respondent presents evidence proving that the arbitration award falls under any of the following circumstances, the People's Court shall, after examination and verification by a collegial panel formed by the People's Court, rule that the award shall not be enforced:\n(1) the parties have not included an arbitration clause in the contract or have not subsequently concluded a written arbitration agreement;\n(2) the respondent has not received notice of the appointment of an arbitrator or of the arbitration proceedings, or was unable to present its case due to reasons for which the respondent is not responsible;\n(3) the composition of the arbitration tribunal or the arbitration procedure was not in accordance with the arbitration rules;\n(4) the matters decided in the award fall outside the scope of the arbitration agreement or the arbitration institution has no authority to arbitrate.\nIf the People's Court determines that the enforcement of the award would be contrary to the social and public interests, the People's Court shall rule that the award shall not be enforced."
+    },
+    {
+      "article_number": "第二百九十二条",
+      "content_en": "If an arbitration award is ruled by the People's Court not to be enforced, the parties may apply for arbitration again pursuant to a written arbitration agreement reached between them, or may institute an action before the People's Court."
+    },
+    {
+      "article_number": "第二百九十三条",
+      "content_en": "Pursuant to international treaties concluded or acceded to by the People's Republic of China, or in accordance with the principle of reciprocity, the People's Court and a foreign court may request each other to serve documents, investigate and collect evidence, and carry out other litigation acts on their behalf.\nIf the matters for which a foreign court requests assistance are detrimental to the sovereignty, security, or social and public interests of the People's Republic of China, the People's Court shall not execute them."
+    },
+    {
+      "article_number": "第二百九十四条",
+      "content_en": "Requests for and provision of judicial assistance shall be carried out through the channels provided for in international treaties concluded or acceded to by the People's Republic of China; in the absence of such treaty relations, they shall be carried out through diplomatic channels.\nAn embassy or consulate of a foreign country in the People's Republic of China may serve documents and investigate and collect evidence on its nationals, provided that the laws of the People's Republic of China are not violated and no compulsory measures are taken.\nExcept as provided for in the preceding paragraph, no foreign organ or individual shall serve documents or investigate and collect evidence within the territory of the People's Republic of China without the permission of the competent authorities of the People's Republic of China."
+    },
+    {
+      "article_number": "第二百九十五条",
+      "content_en": "A request letter submitted by a foreign court to the People's Court for judicial assistance and the documents attached thereto shall be accompanied by a Chinese translation or a version in another language as prescribed by an international treaty.\nA request letter submitted by the People's Court to a foreign court for judicial assistance and the documents attached thereto shall be accompanied by a translation in the language of that country or a version in another language as prescribed by an international treaty."
+    },
+    {
+      "article_number": "第二百九十六条",
+      "content_en": "When providing judicial assistance, the People's Court shall proceed in accordance with the procedures prescribed by the laws of the People's Republic of China. If a foreign court requests that a special method be used, it may also be carried out in the special method requested, provided that the special method requested does not violate the laws of the People's Republic of China."
+    },
+    {
+      "article_number": "第二百九十七条",
+      "content_en": "If, with respect to a legally effective judgment or ruling made by the People's Court, the person subject to enforcement or its property is not within the territory of the People's Republic of China, and a party requests enforcement, the party may directly apply to a competent foreign court for recognition and enforcement, or the People's Court may request the foreign court for recognition and enforcement in accordance with the provisions of international treaties concluded or acceded to by the People's Republic of China, or in accordance with the principle of reciprocity.\nIf a legally effective arbitration award is made in accordance with law within the territory of the People's Republic of China, and a party requests enforcement, and the person subject to enforcement or its property is not within the territory of the People's Republic of China, the party may directly apply to a competent foreign court for recognition and enforcement."
+    },
+    {
+      "article_number": "第二百九十八条",
+      "content_en": "If a legally effective judgment or ruling made by a foreign court requires recognition and enforcement by the People's Court, a party may directly apply to a competent Intermediate People's Court for recognition and enforcement, or the foreign court may request the People's Court for recognition and enforcement in accordance with the provisions of international treaties concluded or acceded to by that country and the People's Republic of China, or in accordance with the principle of reciprocity."
+    },
+    {
+      "article_number": "第二百九十九条",
+      "content_en": "After examining a legally effective judgment or ruling made by a foreign court for which recognition and enforcement is applied for or requested, the People's Court, in accordance with international treaties concluded or acceded to by the People's Republic of China, or in accordance with the principle of reciprocity, shall rule to recognize its validity if it considers that the judgment or ruling does not violate the fundamental principles of the laws of the People's Republic of China and does not harm national sovereignty, security, or social and public interests; if enforcement is required, the People's Court shall issue an enforcement order and enforce it in accordance with the relevant provisions of this Law."
+    },
+    {
+      "article_number": "第三百条",
+      "content_en": "With respect to a legally effective judgment or ruling made by a foreign court for which recognition and enforcement is applied for or requested, the People's Court shall, after examination, rule not to recognize and enforce it if any of the following circumstances exists:\n(1) in accordance with the provisions of Article 301 of this Law, the foreign court has no jurisdiction over the case;\n(2) the respondent has not been legally summoned, or although legally summoned, has not been given a reasonable opportunity to present its case or to be heard, or a party who lacks legal capacity has not been properly represented;\n(3) the judgment or ruling was obtained by fraud;\n(4) the People's Court has already made a judgment or ruling on the same dispute, or has already recognized a judgment or ruling made by a court of a third state on the same dispute;\n(5) the judgment or ruling violates the fundamental principles of the laws of the People's Republic of China or harms national sovereignty, security, or social and public interests."
+    },
+    {
+      "article_number": "第三百零一条",
+      "content_en": "The People's Court shall determine that a foreign court has no jurisdiction over a case if any of the following circumstances exists:\n(1) the foreign court has no jurisdiction over the case under its own law, or although it has jurisdiction under its own law, it has no appropriate connection with the dispute involved in the case;\n(2) the foreign court's jurisdiction violates the provisions of this Law on exclusive jurisdiction;\n(3) the foreign court's jurisdiction violates an agreement between the parties exclusively selecting the jurisdiction of a court."
+    },
+    {
+      "article_number": "第三百零二条",
+      "content_en": "If a party applies to the People's Court for recognition and enforcement of a legally effective judgment or ruling made by a foreign court, and the dispute involved in such judgment or ruling is the same as the dispute being adjudicated by the People's Court, the People's Court may order suspension of the action.\nIf a legally effective judgment or ruling made by a foreign court does not meet the conditions for recognition provided for in this Law, the People's Court shall rule not to recognize and enforce it, and shall resume the action that has been suspended; if it meets the conditions for recognition provided for in this Law, the People's Court shall rule to recognize its validity; if enforcement is required, the People's Court shall issue an enforcement order and enforce it in accordance with the relevant provisions of this Law; with respect to the action that has been suspended, the People's Court shall rule to dismiss the prosecution."
+    },
+    {
+      "article_number": "第三百零三条",
+      "content_en": "If a party is dissatisfied with a ruling on recognition and enforcement or on non-recognition and non-enforcement, it may apply for reconsideration to the People's Court at the next higher level within ten days from the date of service of the ruling."
+    },
+    {
+      "article_number": "第三百零四条",
+      "content_en": "If a legally effective arbitration award made outside the territory of the People's Republic of China requires recognition and enforcement by the People's Court, a party may directly apply to the Intermediate People's Court of the place where the person subject to enforcement has its domicile or where its property is located. If the domicile of the person subject to enforcement or its property is not within the territory of the People's Republic of China, the party may apply to the Intermediate People's Court of the place where the applicant has its domicile or of the place that has an appropriate connection with the dispute in the award. The People's Court shall handle the matter in accordance with international treaties concluded or acceded to by the People's Republic of China, or in accordance with the principle of reciprocity."
+    },
+    {
+      "article_number": "第三百零五条",
+      "content_en": "Civil actions involving foreign states shall be governed by the legal provisions of the People's Republic of China on foreign state immunity; where there are no such provisions in the relevant laws, this Law shall apply."
+    },
+    {
+      "article_number": "第三百零六条",
+      "content_en": "This Law shall come into force as of the date of its promulgation, and the Civil Procedure Law of the People's Republic of China (for Trial Implementation) shall be abolished simultaneously."
+    }
+  ]
 }
