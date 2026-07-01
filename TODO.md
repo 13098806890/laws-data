@@ -7,19 +7,127 @@
 | **B1. 基础设施** | ✅ 完成 | json_en/ 目录已建立（1,529 个占位文件） |
 | **B2. 标题翻译** | ✅ 完成 | 1,568 条标题已翻译，⚠️ 需人工审核 |
 | **B3. 术语表** | ✅ 完成 | 159 条术语已生成，⚠️ 需人工审核 |
-| **B4. Pilot 翻译** | ⏳ 进行中 | 11部已完成，待补充4部+人工审校 |
+| **B4. Pilot 翻译** | ⏳ 进行中 | 11部已完成，新增 劳动合同法、企业破产法、公司法（共 290 条），待人工审校 |
 | **B5. 脚本改造** | ✅ 完成 | translate_to_en.py 已改造完成 |
 | **B6. 一致性校验** | ⏳ 待开发 | - |
 | **C1-C2. DB schema** | ⏳ 待开发 | 需添加英文字段 + FTS 表 |
 | **C3. builder.py** | ⏳ 待开发 | 需集成 json_en/ 加载逻辑 |
 | **C4. pipeline.py** | ⏳ 待开发 | 需集成 gen_en_templates.py |
-| **C5. 双语 Markdown** | ✅ 完成 | add_en_to_md.py 已实现，1,261条已插入 |
-| **全量翻译** | ⏳ 待执行 | 49,719 条条文（预计 2,486 批次） |
+| **C5. 双语 Markdown** | ✅ 完成 | add_en_to_md.py 已实现，累计 1,043 条已插入 |
+| **全量翻译** | ⏳ 待执行 | T0 中 劳动合同法 ✅、企业破产法 ✅、公司法 ✅（共 290 条）；剩余 49,429 条 |
+
+## 🎯 翻译优先级（按被引用次数排序）
+
+> 数据来源：`article_references` 表，统计范围：1,255 部现行法律（is_current=1）。
+> **被引用次数 = 其他法条中提及该法的次数**，次数越高优先翻译。
+
+| 层级 | 被引次数 | 法律数 | 策略 |
+|------|---------|--------|------|
+| **T0** | ≥50次 | 11 | 首批翻译 |
+| **T1** | 20-49次 | 23 | 次批翻译 |
+| **T2** | 10-19次 | 58 | 第三批 |
+| **T3** | 5-9次 | 106 | 第四批 |
+| **T4** | 1-4次 | 454 | 按需翻译 |
+| **T5** | 0次 | 603 | 跳过/不翻译 |
+
+### T0 — 核心高频（≥50次，11部）
+
+已翻译：劳动合同法 ✅、企业破产法 ✅、公司法 ✅
+
+```json
+{"tier":"T0","laws":[
+  {"cited_by":541,"law_id":1100329,"title":"中华人民共和国刑法","category":"法律","domain":"刑法"},
+  {"cited_by":347,"law_id":1100396,"title":"中华人民共和国民事诉讼法","category":"法律","domain":"诉讼与非诉讼程序法"},
+  {"cited_by":162,"law_id":1100313,"title":"中华人民共和国民法典","category":"法律","domain":"民法典"},
+  {"cited_by":131,"law_id":1100253,"title":"中华人民共和国刑事诉讼法","category":"法律","domain":"刑法"},
+  {"cited_by":99, "law_id":1100270,"title":"中华人民共和国企业所得税法","category":"法律","domain":"宪法相关法"},
+  {"cited_by":98, "law_id":1100292,"title":"中华人民共和国商标法","category":"法律","domain":"宪法相关法"},
+  {"cited_by":83, "law_id":1100320,"title":"中华人民共和国专利法","category":"法律","domain":"宪法相关法"},
+  {"cited_by":67, "law_id":1100438,"title":"中华人民共和国海商法","category":"法律","domain":"宪法相关法"},
+  {"cited_by":66, "law_id":1100055,"title":"中华人民共和国企业破产法","category":"法律","domain":"宪法相关法"},
+  {"cited_by":57, "law_id":1100400,"title":"中华人民共和国公司法","category":"法律","domain":"宪法相关法"},
+  {"cited_by":54, "law_id":1100126,"title":"中华人民共和国劳动合同法","category":"法律","domain":"宪法相关法"}
+]}
+```
+
+### T1 — 高频（20-49次，23部）
+
+```json
+{"tier":"T1","laws":[
+  {"cited_by":49, "law_id":1100311,"title":"中华人民共和国证券法"},
+  {"cited_by":49, "law_id":1100327,"title":"中华人民共和国著作权法"},
+  {"cited_by":44, "law_id":1100048,"title":"中华人民共和国票据法"},
+  {"cited_by":43, "law_id":1100435,"title":"中华人民共和国食品安全法"},
+  {"cited_by":42, "law_id":3500463,"title":"人民检察院刑事诉讼规则"},
+  {"cited_by":39, "law_id":1100144,"title":"中华人民共和国保险法"},
+  {"cited_by":33, "law_id":1100340,"title":"中华人民共和国广告法"},
+  {"cited_by":32, "law_id":1100388,"title":"中华人民共和国野生动物保护法"},
+  {"cited_by":32, "law_id":1100423,"title":"中华人民共和国监察法"},
+  {"cited_by":31, "law_id":1100205,"title":"中华人民共和国行政诉讼法"},
+  {"cited_by":31, "law_id":1100376,"title":"中华人民共和国期货和衍生品法"},
+  {"cited_by":30, "law_id":1100397,"title":"中华人民共和国行政复议法"},
+  {"cited_by":27, "law_id":1100302,"title":"中华人民共和国土地管理法"},
+  {"cited_by":26, "law_id":1100422,"title":"中华人民共和国增值税法"},
+  {"cited_by":24, "law_id":1100016,"title":"中华人民共和国香港特别行政区基本法"},
+  {"cited_by":24, "law_id":1100304,"title":"中华人民共和国药品管理法"},
+  {"cited_by":23, "law_id":1100137,"title":"中华人民共和国政府采购法"},
+  {"cited_by":23, "law_id":1100287,"title":"中华人民共和国预算法"},
+  {"cited_by":22, "law_id":1100219,"title":"中华人民共和国公路法"},
+  {"cited_by":22, "law_id":1100246,"title":"中华人民共和国电子商务法"},
+  {"cited_by":22, "law_id":3500709,"title":"公安机关办理刑事案件程序规定"},
+  {"cited_by":21, "law_id":1100372,"title":"中华人民共和国种子法"},
+  {"cited_by":20, "law_id":1100440,"title":"中华人民共和国网络安全法"}
+]}
+```
+
+### T2 — 中频（10-19次，58部）
+
+详见 CSV 导出：`scripts/translation_tiers.csv`
+
+### T3 — 低频（5-9次，106部）
+
+详见 CSV 导出
+
+### T4 — 边缘（1-4次，454部）
+
+按需翻译
+
+### T5 — 零引用（0次，603部）
+
+**不翻译。** 分类分布：行政法规 268、司法解释 216、法律 85、法律解释 20、修正案 12、宪法 1、决定 1
+
+---
+
+## ⚡ Token 优化策略
+
+### 核心思路：按需注入，不灌全集
+
+旧方案问题：每批 API 调用都塞入 **50 条标题 + 300 条术语**（~15K tokens），无论当前法律是否需要。
+
+优化后：
+
+| 注入内容 | 旧方案 | 优化后 | 节省 |
+|---------|--------|--------|------|
+| 法律标题 | 前 50 条（~7K tokens） | 仅当前法引用的法律（0-5 条） | ~90% |
+| 术语表 | 全部 159 条（~5K tokens） | 仅文中出现的术语（5-20 条） | ~85% |
+| **合计** | **~15K tokens/批** | **~3-5K tokens/批** | **~70%** |
+
+### 批次策略
+
+| 参数 | 推荐值 | 说明 |
+|------|--------|------|
+| `--batch-size` | 100 | 每批 100 条条文，均摊 system prompt 开销 |
+| `--workers` | 4 | 4 线程并行，注意 API rate limit |
+| `--tier` | T0→T1→T2→T3 | 按引用层级分批，每批完成后可审校再继续 |
+
+一次翻译**一部法律**为单位（每部法律单独构建按需 prompt），一部法律内的条文分 100 条一批同时翻译。
+
+---
 
 **阻塞项：**
 1. B2/B3 人工审核 → B4 Pilot 翻译
 2. B4 完成 → C1-C4 数据库集成
-3. C1-C4 完成 → 全量翻译
+3. C1-C4 完成 → T0 全量翻译（首批 11 部）
 
 ---
 
@@ -131,16 +239,18 @@
 
 **用法：**
 ```bash
-# 统计待翻译量
-python3 scripts/translate_to_en.py --dry-run
-
-# 修复现有翻译（推荐先做）
 export DEEPSEEK_API_KEY=sk-...
-bash scripts/fix_translations.sh  # 一键修复，约$2-3，10-20分钟
 
-# 全量翻译
-export DEEPSEEK_API_KEY=sk-...
-python3 scripts/translate_to_en.py
+# 按层级分批翻译
+python3 scripts/translate_to_en.py --tier T0               # 首批：11 部核心法
+python3 scripts/translate_to_en.py --tier T1               # 次批：23 部高频法
+python3 scripts/translate_to_en.py --tier T2               # 第三批：58 部中频法
+python3 scripts/translate_to_en.py --tier T0,T1 --max-laws 5  # 前5部先试水
+
+# 统计
+python3 scripts/translate_to_en.py --dry-run --tier T0
+python3 scripts/translate_to_en.py --dry-run --tier T0,T1
+python3 scripts/translate_to_en.py --dry-run               # 全部
 ```
 
 ### ⏳ B6. Phase 5：一致性校验脚本

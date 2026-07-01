@@ -74,6 +74,46 @@ ORG_MAP = {
 }
 
 
+# ── 数据库辅助 ───────────────────────────────────────────────────────────────
+
+def get_referenced_laws(law_id: int) -> set[int]:
+    """返回某法律引用的所有其他法律 ID（跨法引用，不含自引用）。"""
+    import sqlite3
+    try:
+        conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)
+        rows = conn.execute(
+            "SELECT DISTINCT to_law_id FROM article_references WHERE from_law_id=? AND ref_type='cross_law'",
+            (law_id,)
+        ).fetchall()
+        conn.close()
+        return {r[0] for r in rows}
+    except Exception:
+        return set()
+
+
+def get_law_title_en_map(law_ids: set[int], full_map: dict, all_laws: list) -> dict:
+    """从全量 title_map 中筛选出指定 law_id 对应的标题翻译。"""
+    id_to_title = {lid: title for lid, _, _, title in all_laws}
+    result = {}
+    for lid in law_ids:
+        title = id_to_title.get(lid)
+        if title and title in full_map:
+            result[title] = full_map[title]
+    return result
+
+
+def find_glossary_terms(article_texts: list[str], glossary: dict) -> dict:
+    """扫描条文文本，只返回实际出现的术语。"""
+    if not glossary:
+        return {}
+    combined = '\n'.join(article_texts)
+    found = {}
+    for zh, en in glossary.items():
+        if zh in combined:
+            found[zh] = en
+    return found
+
+
 # ── 参考资料加载 ────────────────────────────────────────────────────────────
 
 def clean_punctuation(text: str) -> str:
@@ -123,7 +163,9 @@ def load_glossary() -> dict:
     return {}
 
 
-def build_system_prompt(title_map: dict, glossary: dict) -> str:
+def build_system_prompt(title_map: dict, glossary: dict,
+                        per_law_title_map: dict | None = None,
+                        per_law_glossary: dict | None = None) -> str:
     lines = [
         "You are a professional legal translator specializing in Chinese law.",
         "Translate Chinese legal text into English with precision and consistency.",
@@ -155,18 +197,17 @@ def build_system_prompt(title_map: dict, glossary: dict) -> str:
         "- ✓ 'would have been entitled' (past conditional - CORRECT)",
     ]
 
-    if title_map:
+    # 按需注入：只注入当前法律引用的其他法律标题
+    if per_law_title_map:
         lines += ["", "## Law Title Translations (use these exact translations when citing laws in text)"]
-        # 优化：只注入最常被引用的 50 条（从 200 减少），节省约 7500 tokens
-        for zh, en in list(title_map.items())[:50]:
+        for zh, en in per_law_title_map.items():
             lines.append(f"  {zh} → {en}")
 
-    if glossary:
+    # 按需注入：只注入当前法律中实际出现的术语
+    if per_law_glossary:
         lines += ["", "## Legal Term Glossary (use these exact translations for these terms)"]
-        if isinstance(glossary, dict):
-            # 术语表保持 300 条（已经比较精简）
-            for zh, en in list(glossary.items())[:300]:
-                lines.append(f"  {zh} → {en}")
+        for zh, en in per_law_glossary.items():
+            lines.append(f"  {zh} → {en}")
 
     return "\n".join(lines)
 
@@ -182,7 +223,7 @@ def api_call(api_key: str, messages: list, system: str) -> str:
         # DeepSeek OpenAI-compatible API
         payload = json.dumps({
             "model": DEEPSEEK_MODEL,
-            "max_tokens": 4096,
+            "max_tokens": 8192,
             "messages": [{"role": "system", "content": system}] + messages,
         }).encode()
         req = urllib.request.Request(
@@ -193,13 +234,13 @@ def api_call(api_key: str, messages: list, system: str) -> str:
             },
             method="POST",
         )
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=180) as resp:
             return json.loads(resp.read())["choices"][0]["message"]["content"]
     else:
         # Anthropic API
         payload = json.dumps({
             "model": ANTHROPIC_MODEL,
-            "max_tokens": 4096,
+            "max_tokens": 8192,
             "system": system,
             "messages": messages,
         }).encode()
@@ -331,13 +372,14 @@ def load_cn_articles(filename: str, category: str) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description='翻译法条到 json_en/')
-    # 优化：batch_size 从 20 提升到 100，可节省 56% 的 token 消耗
-    # 原因：System Prompt（15K tokens）在每批都要重复发送，batch_size 越大，重复开销越小
-    parser.add_argument('--batch-size', type=int, default=100, help='每次 API 调用的条文数（默认100，最优化token消耗）')
+    parser.add_argument('--batch-size', type=int, default=100, help='每次 API 调用的条文数（默认100）')
     parser.add_argument('--workers',    type=int, default=4,  help='并行 API 线程数')
     parser.add_argument('--dry-run',    action='store_true',  help='统计待翻译量，不调用 API')
     parser.add_argument('--laws-only',  action='store_true',  help='只翻译法律标题')
     parser.add_argument('--filter',     type=str, default='', help='只处理标题含此关键词的法律')
+    parser.add_argument('--max-laws',   type=int, default=0,  help='最多翻译 N 部法律（0=不限）')
+    parser.add_argument('--tier',       type=str, default='', 
+                        help='按引用层级过滤: T0/T1/T2/T3/T4/T5，逗号分隔如 T0,T1')
     args = parser.parse_args()
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "")
@@ -352,11 +394,39 @@ def main():
     glossary  = load_glossary()
     print(f"已加载标题 map：{len(title_map)} 条，术语表：{len(glossary)} 条")
 
-    system = build_system_prompt(title_map, glossary)
-    article_system = system + BATCH_ARTICLE_SUFFIX
+    # 基准 system prompt（不含按需注入的标题和术语）
+    base_system = build_system_prompt(title_map, glossary, per_law_title_map=None, per_law_glossary=None)
+    article_system_base = base_system + BATCH_ARTICLE_SUFFIX
 
     laws = get_laws(args.filter)
-    print(f"法律总数：{len(laws)} 部")
+
+    # 按引用层级过滤
+    if args.tier:
+        # 层级边界：每个层级定义 [lower, upper)
+        tier_bounds = {
+            'T0': (50,  99999),
+            'T1': (20,  50),
+            'T2': (10,  20),
+            'T3': (5,   10),
+            'T4': (1,   5),
+            'T5': (0,   1),
+        }
+        selected_tiers = [t.strip().upper() for t in args.tier.split(',')]
+        lower = min(tier_bounds.get(t, (0, 0))[0] for t in selected_tiers)
+        upper = max(tier_bounds.get(t, (0, 0))[1] for t in selected_tiers)
+        import sqlite3
+        conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)
+        cited_counts = dict(conn.execute(
+            "SELECT to_law_id, COUNT(*) FROM article_references GROUP BY to_law_id"
+        ).fetchall())
+        conn.close()
+        laws = [r for r in laws if lower <= cited_counts.get(r[0], 0) < upper]
+
+    # 限制数量
+    if args.max_laws > 0:
+        laws = laws[:args.max_laws]
+
+    print(f"法律总数：{len(laws)} 部" + (f"（层级={args.tier}）" if args.tier else ""))
 
     # ── dry-run：统计待翻译量 ──
     if args.dry_run:
@@ -391,10 +461,9 @@ def main():
     def translate_one_title(row):
         law_id, filename, category, title = row
         try:
-            # 优先从 title_map 取（已人工确认）
             if title in title_map:
                 return law_id, filename, category, title_map[title]
-            return law_id, filename, category, translate_title(api_key, title, system)
+            return law_id, filename, category, translate_title(api_key, title, base_system)
         except Exception as exc:
             return law_id, filename, category, f"[Translation error: {exc}]"
 
@@ -429,20 +498,36 @@ def main():
     total_done = total_errors = 0
 
     for idx, (law_id, filename, category, title) in enumerate(laws_with_pending, 1):
-        en_path    = JSON_EN_DIR / category / f'{filename}.json'
-        en_data    = load_en_file(en_path)
+        en_path     = JSON_EN_DIR / category / f'{filename}.json'
+        en_data     = load_en_file(en_path)
         cn_articles = load_cn_articles(filename, category)
 
         pending = pending_articles(en_data, cn_articles)
         if not pending:
             continue
 
-        print(f"[{idx}/{len(laws_with_pending)}] {title}（{len(pending)} 条待翻译）")
+        # ── 按需构建 system prompt ──
+        # 只注入当前法律引用的其他法律标题
+        ref_law_ids = get_referenced_laws(law_id)
+        per_law_title_map = get_law_title_en_map(ref_law_ids, title_map, laws)
 
-        # 构建 article_number → index 映射，便于回写
+        # 只注入当前法律中实际出现的术语
+        article_texts = [content for _, content in pending]
+        per_law_glossary = find_glossary_terms(article_texts, glossary)
+
+        article_system = build_system_prompt(
+            title_map, glossary,
+            per_law_title_map=per_law_title_map or None,
+            per_law_glossary=per_law_glossary or None
+        ) + BATCH_ARTICLE_SUFFIX
+
+        ref_count = len(ref_law_ids)
+        term_count = len(per_law_glossary)
+        article_count = len(pending)
+        print(f"[{idx}/{len(laws_with_pending)}] {title}（{article_count} 条待翻译，引用 {ref_count} 部法律，{term_count} 个术语注入）")
+
         art_index = {a['article_number']: i for i, a in enumerate(en_data['articles'])}
 
-        # 分批翻译
         batches = [pending[i:i + args.batch_size] for i in range(0, len(pending), args.batch_size)]
 
         def translate_batch(batch):
