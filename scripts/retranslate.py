@@ -60,7 +60,7 @@ def main():
     args = parser.parse_args()
 
     import sqlite3
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)  # 只读模式
 
     query = "SELECT filename, category, title FROM laws WHERE is_current=1"
     if args.filter:

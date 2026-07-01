@@ -5,6 +5,7 @@ __pycache__/
 
 # macOS
 .DS_Store
-scripts/law_content.db
+
+# SQLite 临时文件
 *.db-shm
 *.db-wal

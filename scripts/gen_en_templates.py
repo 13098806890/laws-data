@@ -14,7 +14,7 @@ CATEGORY_DIRS = sorted(d.name for d in JSON_DIR.iterdir() if d.is_dir())
 
 
 def main():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)  # 只读模式
     rows = conn.execute(
         'SELECT id, filename, category, title FROM laws WHERE is_current=1'
     ).fetchall()

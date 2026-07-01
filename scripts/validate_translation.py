@@ -258,7 +258,7 @@ def main():
     validator = TranslationValidator()
 
     # 获取已翻译的法律列表
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)  # 只读模式
     rows = conn.execute(
         "SELECT filename, category, title FROM laws WHERE is_current=1"
     ).fetchall()

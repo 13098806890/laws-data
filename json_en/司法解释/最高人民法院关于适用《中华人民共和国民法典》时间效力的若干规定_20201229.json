@@ -5,115 +5,115 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": "Article 1: Civil dispute cases arising from legal facts that occurred after the Civil Code came into force shall be governed by the provisions of the Civil Code.\nCivil dispute cases arising from legal facts that occurred before the Civil Code came into force shall be governed by the provisions of the laws and judicial interpretations in effect at that time, except as otherwise provided by laws and judicial interpretations.\nWhere legal facts that occurred before the Civil Code came into force continue until after the Civil Code came into force, the civil dispute cases arising from such legal facts shall be governed by the provisions of the Civil Code, except as otherwise provided by laws and judicial interpretations."
+      "content_en": "Article 1: Civil dispute cases arising from legal facts occurring after the Civil Code comes into force shall be governed by the provisions of the Civil Code. Civil dispute cases arising from legal facts occurring before the Civil Code comes into force shall be governed by the laws and judicial interpretations in effect at that time, unless otherwise provided by laws or judicial interpretations. Where legal facts occurring before the Civil Code comes into force continue after the Civil Code comes into force, civil dispute cases arising from such legal facts shall be governed by the provisions of the Civil Code, unless otherwise provided by laws or judicial interpretations."
     },
     {
       "article_number": "第二条",
-      "content_en": "Article 2: For civil dispute cases arising from legal facts that occurred before the Civil Code came into force, if the laws and judicial interpretations in effect at that time contain provisions, those provisions shall apply, unless the application of the provisions of the Civil Code is more conducive to protecting the legitimate rights and interests of civil subjects, maintaining social and economic order, and promoting the core socialist values."
+      "content_en": "Article 2: For civil dispute cases arising from legal facts occurring before the Civil Code comes into force, if the laws and judicial interpretations in effect at that time contain provisions, those provisions shall apply; except where the application of the provisions of the Civil Code is more conducive to protecting the lawful rights and interests of civil subjects, maintaining social and economic order, or promoting core socialist values."
     },
     {
       "article_number": "第三条",
-      "content_en": "Article 3: For civil dispute cases arising from legal facts that occurred before the Civil Code came into force, if the laws and judicial interpretations in effect at that time have no provisions but the Civil Code does, the provisions of the Civil Code may apply, unless doing so would obviously harm the legitimate rights and interests of the parties, increase the legal obligations of the parties, or deviate from the reasonable expectations of the parties."
+      "content_en": "Article 3: For civil dispute cases arising from legal facts occurring before the Civil Code comes into force, if the laws and judicial interpretations in effect at that time contain no provisions but the Civil Code does, the provisions of the Civil Code may apply; except where this would clearly impair the lawful rights and interests of the parties, increase the legal obligations of the parties, or deviate from the reasonable expectations of the parties."
     },
     {
       "article_number": "第四条",
-      "content_en": "Article 4: For civil dispute cases arising from legal facts that occurred before the Civil Code came into force, if the laws and judicial interpretations in effect at that time only contain general provisions but the Civil Code has specific provisions, the provisions of the laws and judicial interpretations in effect at that time shall apply, but the specific provisions of the Civil Code may be used for reasoning in the adjudication."
+      "content_en": "Article 4: For civil dispute cases arising from legal facts occurring before the Civil Code comes into force, if the laws and judicial interpretations in effect at that time contain only principles but the Civil Code has specific provisions, the provisions of the laws and judicial interpretations in effect at that time shall apply; however, adjudication reasoning may be based on the specific provisions of the Civil Code."
     },
     {
       "article_number": "第五条",
-      "content_en": "Article 5: For cases that have already been finally adjudicated before the Civil Code came into force, if the parties apply for a retrial or if a retrial is decided pursuant to the trial supervision procedure, the provisions of the Civil Code shall not apply.\nII. Specific Provisions on Retroactive Application"
+      "content_en": "Article 5: For cases for which a final judgment has been rendered before the Civil Code comes into force, if a party applies for retrial or a retrial is decided pursuant to the trial supervision procedure, the provisions of the Civil Code shall not apply. II. Specific Provisions on Retroactive Application"
     },
     {
       "article_number": "第六条",
-      "content_en": "Article 6: Civil dispute cases arising from acts that occurred before the General Principles of the Civil Law of the People's Republic of China came into force, involving infringement of the name, portrait, reputation, or honor of heroes and martyrs, etc., and harming the public interest, shall be governed by Article 185 of the Civil Code."
+      "content_en": "Article 6: Before the General Part of the Civil Law of the People's Republic of China comes into force, civil dispute cases arising from infringement upon the names, portraits, reputation, or honor of heroes and martyrs, thereby harming the public interest, shall be governed by Article 185 of the Civil Code."
     },
     {
       "article_number": "第七条",
-      "content_en": "Article 7: Where, before the Civil Code came into force, the parties agreed before the expiration of the debt performance period that the mortgaged property or pledged property would belong to the creditor if the debtor failed to perform the due debt, Articles 401 and 428 of the Civil Code shall apply."
+      "content_en": "Article 7: Before the Civil Code comes into force, if the parties agreed prior to the maturity of the debt performance period that mortgaged or pledged property shall vest in the creditor upon the debtor's failure to perform the due debt, the provisions of Articles 401 and 428 of the Civil Code shall apply."
     },
     {
       "article_number": "第八条",
-      "content_en": "Article 8: For contracts concluded before the Civil Code came into force, if the contract is invalid under the provisions of the laws and judicial interpretations in effect at that time but is valid under the provisions of the Civil Code, the relevant provisions of the Civil Code shall apply."
+      "content_en": "Article 8: For contracts concluded before the Civil Code comes into force, if the application of the laws and judicial interpretations in effect at that time would render the contract void, whereas the application of the Civil Code would render it valid, the relevant provisions of the Civil Code shall apply."
     },
     {
       "article_number": "第九条",
-      "content_en": "Article 9: For contracts concluded before the Civil Code came into force, if the party providing the standard terms failed to fulfill the obligation to draw attention or provide explanations, and the validity of the standard terms is at issue, Article 496 of the Civil Code shall apply."
+      "content_en": "Article 9: For contracts concluded before the Civil Code comes into force, if the party providing standard terms fails to perform the obligation of drawing attention or providing explanations, and the validity of the standard terms is at issue, the provisions of Article 496 of the Civil Code shall apply."
     },
     {
       "article_number": "第十条",
-      "content_en": "Article 10: Where, before the Civil Code came into force, one party sought to dissolve the contract by directly filing a lawsuit without notifying the other party in accordance with the law, Article 565(2) of the Civil Code shall apply."
+      "content_en": "Article 10: Before the Civil Code comes into force, if one party, without notifying the other party, directly claims dissolution of the contract by filing a lawsuit according to law, the provisions of Article 565, paragraph 2 of the Civil Code shall apply."
     },
     {
       "article_number": "第十一条",
-      "content_en": "Article 11: For contracts concluded before the Civil Code came into force, if one party fails to perform a non-monetary obligation or performs a non-monetary obligation in a manner inconsistent with the agreement, and the other party may request performance, but one of the exceptions under Article 580(1)(i), (ii), or (iii) of the Civil Code exists, making it impossible to achieve the purpose of the contract, and the party requests termination of the contractual rights and obligations, Article 580(2) of the Civil Code shall apply."
+      "content_en": "Article 11: For a contract concluded before the Civil Code comes into force, if one party fails to perform a non-monetary obligation or the performance of a non-monetary obligation does not conform to the agreement, the other party may demand performance; however, if any of the exceptional circumstances under Article 580, paragraph 1, items (1), (2), or (3) of the Civil Code exists, rendering the purpose of the contract unattainable, and a party requests termination of the contractual rights and obligations, the provisions of Article 580, paragraph 2 of the Civil Code shall apply."
     },
     {
       "article_number": "第十二条",
-      "content_en": "Article 12: Disputes arising from factoring contracts concluded before the Civil Code came into force shall be governed by the provisions of Chapter 16, Part III of the Civil Code."
+      "content_en": "Article 12: Disputes arising from factoring contracts concluded before the Civil Code comes into force shall be governed by the provisions of Chapter 16 of Part III of the Civil Code."
     },
     {
       "article_number": "第十三条",
-      "content_en": "Article 13: Where, before the Civil Code came into force, a heir committed one of the acts specified in Article 1125(1)(iv) and (v) of the Civil Code, and there is a dispute over whether the heir has lost the right of inheritance, Articles 1125(1) and (2) of the Civil Code shall apply.\nWhere, before the Civil Code came into force, a legatee committed one of the acts specified in Article 1125(1) of the Civil Code, and there is a dispute over whether the legatee has lost the right to receive the legacy, Articles 1125(1) and (3) of the Civil Code shall apply."
+      "content_en": "Article 13: Before the Civil Code comes into force, if a successor has committed any of the acts specified in Article 1125, paragraph 1, items (4) and (5) of the Civil Code, and a dispute arises as to whether the successor has lost the right of succession, the provisions of Article 1125, paragraph 1 and paragraph 2 of the Civil Code shall apply. Before the Civil Code comes into force, if a devisee has committed any of the acts specified in Article 1125, paragraph 1 of the Civil Code, and a dispute arises as to whether the devisee has lost the right to take under the will, the provisions of Article 1125, paragraph 1 and paragraph 3 of the Civil Code shall apply."
     },
     {
       "article_number": "第十四条",
-      "content_en": "Article 14: Where the decedent died before the Civil Code came into force, leaving no heir or legatee, and the children of the decedent's siblings request subrogation inheritance, Articles 1128(2) and (3) of the Civil Code shall apply, unless the estate had already been disposed of before the Civil Code came into force."
+      "content_en": "Article 14: If the decedent dies before the Civil Code comes into force, and the estate is left without any successor or devisee, the children of the decedent's siblings who request subrogation shall be governed by the provisions of Article 1128, paragraph 2 and paragraph 3 of the Civil Code; except where the estate has already been disposed of before the Civil Code comes into force."
     },
     {
       "article_number": "第十五条",
-      "content_en": "Article 15: Where, before the Civil Code came into force, a testator made a will by printing, and the parties dispute the validity of the will, Article 1136 of the Civil Code shall apply, unless the estate had already been disposed of before the Civil Code came into force."
+      "content_en": "Article 15: Before the Civil Code comes into force, if a testator makes a will by printing, and a dispute arises between the parties as to the validity of the will, the provisions of Article 1136 of the Civil Code shall apply; except where the estate has already been disposed of before the Civil Code comes into force."
     },
     {
       "article_number": "第十六条",
-      "content_en": "Article 16: Civil dispute cases arising from injuries suffered by victims who voluntarily participated in recreational activities with certain risks before the Civil Code came into force shall be governed by Article 1176 of the Civil Code."
+      "content_en": "Article 16: Before the Civil Code comes into force, civil dispute cases arising from injury to a victim who voluntarily participates in recreational or sports activities with certain risks shall be governed by the provisions of Article 1176 of the Civil Code."
     },
     {
       "article_number": "第十七条",
-      "content_en": "Article 17: Civil dispute cases arising from victims taking measures to detain the infringer's property, etc. to protect their own legitimate rights and interests before the Civil Code came into force shall be governed by Article 1177 of the Civil Code."
+      "content_en": "Article 17: Before the Civil Code comes into force, civil dispute cases arising from measures taken by a victim to detain the property of the infringer to protect his or her own lawful rights and interests shall be governed by the provisions of Article 1177 of the Civil Code."
     },
     {
       "article_number": "第十八条",
-      "content_en": "Article 18: Civil dispute cases arising from injuries to unpaid passengers caused by traffic accidents involving non-operating motor vehicles before the Civil Code came into force shall be governed by Article 1217 of the Civil Code."
+      "content_en": "Article 18: Before the Civil Code comes into force, civil dispute cases arising from damage caused to a gratuitous passenger due to a traffic accident involving a non-operating motor vehicle shall be governed by the provisions of Article 1217 of the Civil Code."
     },
     {
       "article_number": "第十九条",
-      "content_en": "Article 19: Civil dispute cases arising from injuries to others caused by objects thrown from a building or objects falling from a building before the Civil Code came into force shall be governed by Article 1254 of the Civil Code.\nIII. Specific Provisions on Transitional Application"
+      "content_en": "Article 19: Before the Civil Code comes into force, civil dispute cases arising from damage caused to others by objects thrown from a building or objects falling from a building shall be governed by the provisions of Article 1254 of the Civil Code. III. Specific Provisions on Transitional Application"
     },
     {
       "article_number": "第二十条",
-      "content_en": "Article 20: For contracts concluded before the Civil Code came into force, if the performance of the contract continues after the Civil Code came into force in accordance with the law or the agreement of the parties, disputes arising from the performance of the contract before the Civil Code came into force shall be governed by the provisions of the laws and judicial interpretations in effect at that time; disputes arising from the performance of the contract after the Civil Code came into force shall be governed by the relevant provisions of Chapters 4 and 5, Part III of the Civil Code."
+      "content_en": "Article 20: For a contract concluded before the Civil Code comes into force, where the performance of the contract continues after the Civil Code comes into force according to law or the agreement of the parties, disputes arising from performance of the contract before the Civil Code comes into force shall be governed by the laws and judicial interpretations in effect at that time; disputes arising from performance of the contract after the Civil Code comes into force shall be governed by the relevant provisions of Chapters 4 and 5 of Part III of the Civil Code."
     },
     {
       "article_number": "第二十一条",
-      "content_en": "Article 21 Where a lease term expires before the entry into force of the Civil Code, and a party claims the application of paragraph 2 of Article 734 of the Civil Code, the People's Court shall not support such claim; where a lease term expires after the entry into force of the Civil Code, and a party claims the application of paragraph 2 of Article 734 of the Civil Code, the People's Court shall support such claim in accordance with the law."
+      "content_en": "Article 21 Where the lease term expires before the Civil Code comes into force, and a party claims that Article 734(2) of the Civil Code shall apply, the People's Court shall not uphold such claim; where the lease term expires after the Civil Code comes into force, and a party claims that Article 734(2) of the Civil Code shall apply, the People's Court shall uphold such claim according to law."
     },
     {
       "article_number": "第二十二条",
-      "content_en": "Article 22 Where, before the entry into force of the Civil Code, a people's court has rendered a judgment dismissing a divorce claim, and thereafter the parties have been living apart for a full year, and one party files another divorce action, the provisions of paragraph 5 of Article 1079 of the Civil Code shall apply."
+      "content_en": "Article 22 Where, before the Civil Code comes into force, after the People's Court has rendered a judgment dismissing a divorce action, the parties have lived separately for a full year, and one party files a divorce action again, the provisions of Article 1,079(5) of the Civil Code shall apply."
     },
     {
       "article_number": "第二十三条",
-      "content_en": "Article 23 Where a decedent made a notarized will before the entry into force of the Civil Code and made a new will after the entry into force of the Civil Code, and a dispute arises after his or her death due to conflicting contents among these multiple wills, the provisions of paragraph 3 of Article 1142 of the Civil Code shall apply."
+      "content_en": "Article 23 Where a decedent has made a notarized will before the Civil Code comes into force and has made a new will after the Civil Code comes into force, and after his or her death, a dispute arises due to the conflicting contents of such multiple wills, the provisions of Article 1,142(3) of the Civil Code shall apply."
     },
     {
       "article_number": "第二十四条",
-      "content_en": "Article 24 For a civil dispute case where the tortious act occurred before the entry into force of the Civil Code, but the harmful consequence arises after the entry into force of the Civil Code, the provisions of the Civil Code shall apply."
+      "content_en": "Article 24 For a civil dispute case in which the tortious act occurs before the Civil Code comes into force, but the harmful consequences arise after the Civil Code comes into force, the provisions of the Civil Code shall apply."
     },
     {
       "article_number": "第二十五条",
-      "content_en": "Article 25 For a contract concluded before the entry into force of the Civil Code, if the laws and judicial interpretations at that time had no provisions, and the parties did not agree on the period for exercising the right to rescind, and the other party did not serve a reminder, and the person holding the right to rescind knew or should have known the grounds for rescission before the entry into force of the Civil Code but failed to exercise the right within one year from the date of the Civil Code's entry into force, the People's Court shall determine in accordance with the law that such right to rescind is extinguished; if the person holding the right to rescind knew or should have known the grounds for rescission after the entry into force of the Civil Code, the provisions of paragraph 2 of Article 564 of the Civil Code concerning the period for exercising the right to rescind shall apply."
+      "content_en": "Article 25 For a contract concluded before the Civil Code comes into force, where the laws or judicial interpretations in effect at that time contain no provisions and the parties have not agreed upon the time limit for exercising the right of dissolution, and the other party has not served a demand, if the person entitled to dissolution knows or should have known of the cause for dissolution before the Civil Code comes into force but fails to exercise such right within one year from the date the Civil Code comes into force, the People's Court shall determine according to law that such right of dissolution is extinguished; if the person entitled to dissolution knows or should have known of the cause for dissolution after the Civil Code comes into force, the provisions of Article 564(2) of the Civil Code on the time limit for exercising the right of dissolution shall apply."
     },
     {
       "article_number": "第二十六条",
-      "content_en": "Article 26 Where a party requests the People's Court to annul a marriage on the ground that the marriage was entered into under duress before the entry into force of the Civil Code, the period for exercising the right to annulment shall be governed by the provisions of paragraph 2 of Article 1052 of the Civil Code."
+      "content_en": "Article 26 Where a party requests the People's Court to annul a marriage on the grounds of being coerced into marriage before the Civil Code comes into force, the time limit for exercising the right to annulment shall be governed by the provisions of Article 1,052(2) of the Civil Code."
     },
     {
       "article_number": "第二十七条",
-      "content_en": "Article 27 For a suretyship contract concluded before the entry into force of the Civil Code, if the parties' agreement on the suretyship period is unclear, and the period from the expiration of the performance term of the principal obligation to the date of entry into force of the Civil Code is less than two years, and a party claims that the suretyship period shall be two years from the date of expiration of the performance term of the principal obligation, the People's Court shall support such claim in accordance with the law; if the parties have not agreed on the suretyship period, and the period from the expiration of the performance term of the principal obligation to the date of entry into force of the Civil Code is less than six months, and a party claims that the suretyship period shall be six months from the date of expiration of the performance term of the principal obligation, the People's Court shall support such claim in accordance with the law.\nIV. Supplementary Provisions"
+      "content_en": "Article 27 For a suretyship contract concluded before the Civil Code comes into force, where the parties have not clearly agreed upon the suretyship period, and the period from the expiration of the time limit for performance of the principal debt to the date the Civil Code comes into force is less than two years, if a party claims that the suretyship period shall be two years from the date of expiration of the time limit for performance of the principal debt, the People's Court shall uphold such claim according to law; where the parties have not agreed upon the suretyship period, and the period from the expiration of the time limit for performance of the principal debt to the date the Civil Code comes into force is less than six months, if a party claims that the suretyship period shall be six months from the date of expiration of the time limit for performance of the principal debt, the People's Court shall uphold such claim according to law. IV. Supplementary Provisions"
     },
     {
       "article_number": "第二十八条",
-      "content_en": "Article 28 These Provisions shall come into force as of January 1, 2021.\nAfter the entry into force of these Provisions, cases of first instance and second instance that have not yet been finally adjudicated by the People's Court shall be governed by these Provisions."
+      "content_en": "Article 28 These Provisions shall come into force on January 1, 2021. After these Provisions come into force, cases of first instance and second instance that have not been finally concluded by the People's Court shall be governed by these Provisions."
     }
   ]
 }
