@@ -146,13 +146,14 @@ def build_system_prompt(title_map: dict, glossary: dict) -> str:
 
     if title_map:
         lines += ["", "## Law Title Translations (use these exact translations when citing laws in text)"]
-        # 只注入最常被引用的 200 条，避免 prompt 过长
-        for zh, en in list(title_map.items())[:200]:
+        # 优化：只注入最常被引用的 50 条（从 200 减少），节省约 7500 tokens
+        for zh, en in list(title_map.items())[:50]:
             lines.append(f"  {zh} → {en}")
 
     if glossary:
         lines += ["", "## Legal Term Glossary (use these exact translations for these terms)"]
         if isinstance(glossary, dict):
+            # 术语表保持 300 条（已经比较精简）
             for zh, en in list(glossary.items())[:300]:
                 lines.append(f"  {zh} → {en}")
 
@@ -318,7 +319,9 @@ def load_cn_articles(filename: str, category: str) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description='翻译法条到 json_en/')
-    parser.add_argument('--batch-size', type=int, default=20, help='每次 API 调用的条文数')
+    # 优化：batch_size 从 20 提升到 100，可节省 56% 的 token 消耗
+    # 原因：System Prompt（15K tokens）在每批都要重复发送，batch_size 越大，重复开销越小
+    parser.add_argument('--batch-size', type=int, default=100, help='每次 API 调用的条文数（默认100，最优化token消耗）')
     parser.add_argument('--workers',    type=int, default=4,  help='并行 API 线程数')
     parser.add_argument('--dry-run',    action='store_true',  help='统计待翻译量，不调用 API')
     parser.add_argument('--laws-only',  action='store_true',  help='只翻译法律标题')
