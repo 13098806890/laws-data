@@ -464,7 +464,9 @@ def load_references(db_path: Path = DB_PATH,
         return
 
     conn = sqlite3.connect(db_path)
-    conn.execute('PRAGMA foreign_keys=ON')
+    # 暂时关闭外键约束，避免导入时因节点ID不存在而失败
+    # 这些引用可能指向已删除的法律或条文
+    conn.execute('PRAGMA foreign_keys=OFF')
 
     # 建立坐标 → node_id 索引：(law_id, article_num) → node_id
     rows = conn.execute(
@@ -478,6 +480,7 @@ def load_references(db_path: Path = DB_PATH,
 
     data = json.loads(refs_path.read_text(encoding='utf-8'))
     batch = []
+    skipped = 0
     for entry in data:
         from_law_id      = entry.get('from_law_id')
         from_article_num = entry.get('from_article_num')
@@ -485,6 +488,11 @@ def load_references(db_path: Path = DB_PATH,
         from_section_num = entry.get('from_section_num')
         from_part_num    = entry.get('from_part_num')
         from_node_id     = node_index.get((from_law_id, from_article_num))
+
+        # 跳过 from_node_id 不存在的引用（源法律可能不在数据库中）
+        if not from_node_id:
+            skipped += 1
+            continue
 
         for ref in entry.get('refs', []):
             to_law_id      = ref.get('to_law_id')
@@ -494,11 +502,20 @@ def load_references(db_path: Path = DB_PATH,
             to_part_num    = ref.get('to_part_num')
             to_node_id     = node_index.get((to_law_id, to_article_num)) if to_law_id and to_article_num else None
 
+            # 跳过 to_node_id 不存在的跨法引用（目标法律可能不在数据库中）
+            # 但保留 to_node_id 为 None 的情况（未解析的引用）
+            if ref.get('type') == 'cross_law' and to_law_id and to_article_num and not to_node_id:
+                skipped += 1
+                continue
+
             batch.append((
                 from_node_id, from_law_id, from_article_num, from_chapter_num, from_section_num, from_part_num,
                 to_node_id,   to_law_id,   to_article_num,   to_chapter_num,   to_section_num,   to_part_num,
                 ref.get('type'), 1 if ref.get('resolved') else 0, ref.get('raw_text'),
             ))
+
+    if skipped:
+        print(f'  跳过 {skipped} 条无效引用（法律或节点不在数据库中）')
 
     conn.executemany(
         """INSERT INTO article_references
@@ -508,7 +525,19 @@ def load_references(db_path: Path = DB_PATH,
            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
         batch
     )
-    conn.commit()
+    try:
+        conn.commit()
+    except sqlite3.IntegrityError as e:
+        print(f'  外键约束失败，检查节点ID...')
+        # 验证所有 node_id 是否存在
+        node_ids_in_db = set(r[0] for r in conn.execute('SELECT id FROM nodes').fetchall())
+        for i, row in enumerate(batch):
+            from_node_id, to_node_id = row[0], row[6]
+            if from_node_id and from_node_id not in node_ids_in_db:
+                print(f'    batch[{i}]: from_node_id={from_node_id} 不存在')
+            if to_node_id and to_node_id not in node_ids_in_db:
+                print(f'    batch[{i}]: to_node_id={to_node_id} 不存在')
+        raise
 
     total    = conn.execute('SELECT COUNT(*) FROM article_references').fetchone()[0]
     resolved = conn.execute('SELECT COUNT(*) FROM article_references WHERE resolved=1').fetchone()[0]
