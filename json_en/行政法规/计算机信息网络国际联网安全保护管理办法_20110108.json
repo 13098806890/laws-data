@@ -5,103 +5,103 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 These Measures are formulated in accordance with the Regulations of the People's Republic of China on the Security Protection of Computer Information Systems, the Interim Provisions of the People's Republic of China on the Administration of International Networking of Computer Information Networks, and other laws and administrative regulations, for the purpose of strengthening the security protection of international networking of computer information networks and maintaining public order and social stability."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 These Measures shall apply to the security protection administration of international networking of computer information networks within the territory of the People's Republic of China."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 The computer management and supervision institution of the Ministry of Public Security shall be responsible for the security protection administration of international networking of computer information networks.\nThe computer management and supervision institution of the public security organ shall protect the public security of international networking of computer information networks and safeguard the legitimate rights and interests of entities and individuals engaged in international networking services as well as the public interest."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 No entity or individual may use international networking to endanger national security, divulge state secrets, infringe upon the interests of the State, society, or collective, or the legitimate rights and interests of citizens, or engage in illegal or criminal activities."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 No entity or individual may use international networking to produce, reproduce, browse, or disseminate the following information:\n(1) inciting resistance to or undermining the implementation of the Constitution, laws, and administrative regulations;\n(2) inciting the overthrow of the state political power or the subversion of the socialist system;\n(3) inciting secession or undermining national unity;\n(4) inciting ethnic hatred or ethnic discrimination, or undermining ethnic solidarity;\n(5) fabricating or distorting facts, spreading rumors, or disrupting social order;\n(6) promoting feudal superstition, obscenity, pornography, gambling, violence, murder, or terror, or instigating crimes;\n(7) publicly insulting others or fabricating facts to defame others;\n(8) damaging the credibility of state organs;\n(9) other information that violates the Constitution, laws, and administrative regulations."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 No entity or individual may engage in any of the following activities that endanger computer information network security:\n(1) entering a computer information network or using computer information network resources without permission;\n(2) deleting, modifying, or adding computer information network functions without permission;\n(3) deleting, modifying, or adding data and application programs stored, processed, or transmitted in a computer information network without permission;\n(4) intentionally creating or spreading destructive programs such as computer viruses;\n(5) other activities that endanger computer information network security."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 The freedom and secrecy of communication of users shall be protected by law. No entity or individual may violate legal provisions and use international networking to infringe upon the freedom and secrecy of communication of users."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 Entities and individuals engaged in international networking services shall accept the security supervision, inspection, and guidance of the public security organ, truthfully provide the public security organ with relevant security protection information, materials, and data files, and assist the public security organ in investigating and punishing illegal and criminal acts through computer information networks connected to international networking."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Entities providing international gateway channels, competent authorities or responsible units of internetworking units shall, in accordance with the law and relevant state provisions, be responsible for the security protection administration of international gateway channels and their respective internetworks."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Internetworking units, access units, and legal persons and other organizations using international networking of computer information networks shall perform the following security protection duties:\n(1) being responsible for the security protection administration of their own networks, and establishing and improving security protection management systems;\n(2) implementing security protection technical measures to ensure the operational security and information security of their own networks;\n(3) being responsible for the security education and training of users of their own networks;\n(4) registering entities and individuals commissioning the release of information, and reviewing the content of the information provided in accordance with Article 5 of these Measures;\n(5) establishing user registration and information management systems for computer information network electronic bulletin board systems;\n(6) upon discovering any of the circumstances listed in Article 4, 5, 6, or 7 of these Measures, retaining the relevant original records and reporting to the local public security organ within 24 hours;\n(7) in accordance with relevant state provisions, deleting addresses or directories containing content specified in Article 5 of these Measures from their networks, or closing the servers."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 When a user goes through network access procedures at an access unit, the user shall fill in a user registration form. The registration form shall be produced under the supervision of the Ministry of Public Security."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Internetworking units, access units, legal persons and other organizations using international networking of computer information networks (including entities connected across provinces, autonomous regions, or municipalities directly under the Central Government and their subordinate branches) shall, within 30 days from the date of formal network connection, go through registration formalities at the accepting organ designated by the public security organ of the people's government of the province, autonomous region, or municipality directly under the Central Government where they are located.\nThe units specified in the preceding paragraph shall report to the local public security organ for registration the information on access units and users accessing their networks, and shall promptly report any changes in access units and users within their networks."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 The registrant of a shared account shall strengthen the management of the shared account and establish an account usage registration system. User accounts may not be lent or transferred."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 When units involved in important fields such as state affairs, economic construction, national defense construction, and advanced science and technology go through registration formalities, they shall produce the approval certificate from their administrative competent department.\nComputer information networks of the units specified in the preceding paragraph that are connected to international networking shall adopt corresponding security protection measures."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 The public security departments (bureaus) of provinces, autonomous regions, and municipalities directly under the Central Government, as well as the public security bureaus of prefectures (cities) and counties (cities), shall have corresponding institutions responsible for the security protection administration of international networking."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 The computer management and supervision institution of the public security organ shall keep abreast of the registration status of internetworking units, access units, and users, establish registration archives, conduct registration statistics, and report to higher levels level by level in accordance with relevant state provisions."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 The computer management and supervision institution of the public security organ shall urge internetworking units, access units, and relevant users to establish and improve security protection management systems, and supervise and inspect the implementation of network security protection management and technical measures.\nWhen the computer management and supervision institution of the public security organ organizes security inspections, relevant units shall send personnel to participate. The computer management and supervision institution of the public security organ shall propose improvement opinions on problems discovered during security inspections, make detailed records, and file them for future reference."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 When the computer management and supervision institution of the public security organ discovers addresses, directories, or servers containing content listed in Article 5 of these Measures, it shall notify the relevant units to close or delete them."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 The computer management and supervision institution of the public security organ shall be responsible for tracking and investigating illegal acts through computer information networks and criminal cases targeting computer information networks. For illegal and criminal acts violating Articles 4 and 7 of these Measures, they shall be transferred to relevant departments or judicial organs for handling in accordance with relevant state provisions."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Where any act listed in Article 5 or Article 6 of these Measures is committed in violation of laws and administrative regulations, the public security organ shall give a warning; if there are illegal gains, the illegal gains shall be confiscated; a fine of not more than 5,000 yuan may be imposed concurrently on an individual, and a fine of not more than 15,000 yuan may be imposed concurrently on a unit; if the circumstances are serious, a penalty of suspension of network connection or shutdown for rectification for not more than six months may also be imposed, and when necessary, the original licensing or approval authority may be recommended to revoke the business license or cancel the network connection qualification; if the act constitutes a violation of public security administration, punishment shall be imposed in accordance with the Public Security Administration Punishments Law; if the act constitutes a crime, criminal liability shall be investigated according to law."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Where any of the following acts is committed, the public security organ shall order corrections within a time limit, give a warning, and confiscate any illegal gains if any; if corrections are not made within the prescribed time limit, the person in charge and other directly responsible persons of the unit may be concurrently fined not more than 5,000 yuan, and the unit may be concurrently fined not more than 15,000 yuan; if the circumstances are serious, the penalty of suspension of network connection or shutdown for rectification for not more than six months may also be imposed, and if necessary, the original issuing or approving authority may be recommended to revoke the business license or cancel the network connection qualification.\n(1) failing to establish a security protection management system;\n(2) failing to adopt security technical protection measures;\n(3) failing to conduct security education and training for network users;\n(4) failing to provide information, data and data files required for security protection management, or the content provided is untrue;\n(5) failing to review the information content entrusted to be published or failing to register the entrusting units and individuals;\n(6) failing to establish a user registration and information management system for electronic bulletin board systems;\n(7) failing to delete network addresses, directories or shut down servers in accordance with relevant state regulations;\n(8) failing to establish a registration system for the use of public accounts;\n(9) lending or transferring user accounts."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Any violation of the provisions of Article 4 and Article 7 of these Measures shall be punished in accordance with relevant laws and regulations."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Where any violation of the provisions of Article 11 and Article 12 of these Measures occurs, and the obligation to file for record is not performed, the public security organ shall impose a penalty of a warning or shutdown for rectification for not more than six months."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 The security protection management of computer information networks connected to the Hong Kong Special Administrative Region and the regions of Taiwan and Macao shall be implemented by reference to these Measures."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 These Measures shall come into force as of December 30, 1997."
     }
   ]
 }

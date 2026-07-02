@@ -5,107 +5,107 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 For the purposes of these Provisions, an independent guarantee refers to a written undertaking issued by a bank or non-bank financial institution as the issuer to the beneficiary, agreeing to pay a specified amount or an amount within the maximum amount of the guarantee to the beneficiary upon the beneficiary's request for payment and submission of documents that comply with the requirements of the guarantee.\nThe documents referred to in the preceding paragraph mean the written documents specified in the independent guarantee that the beneficiary shall submit, such as a demand for payment, a statement of default, a document issued by a third party, a court judgment, an arbitral award, a bill of exchange, an invoice, etc., which indicate the occurrence of a payment due event.\nAn independent guarantee may be issued upon the application of the applicant for the guarantee, or upon the instruction of another financial institution. Where the issuer issues an independent guarantee upon instruction, it may request the instructing party to issue to it an independent guarantee to secure its right of recourse."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 For the purposes of these Provisions, a dispute over an independent guarantee refers to a dispute arising from the issuance, revocation, amendment, transfer, payment, recourse, or other aspects of an independent guarantee."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 Where a guarantee has any of the following circumstances, and the party claims that the nature of the guarantee is an independent guarantee, the People's Court shall support such claim, except where the guarantee does not specify the documents for payment and the maximum amount:\n(1) The guarantee specifies that it is payable upon first demand;\n(2) The guarantee specifies the application of the Uniform Rules for Demand Guarantees of the International Chamber of Commerce or other model rules for independent guarantee transactions;\n(3) According to the content of the guarantee text, the issuer's obligation to pay is independent of the underlying transaction relationship and the legal relationship of the guarantee application, and the issuer only bears the payment obligation upon presentation of conforming documents.\nWhere a party, on the ground that the independent guarantee records the corresponding underlying transaction, claims that the nature of the guarantee is a general suretyship or joint and several suretyship, the People's Court shall not support such claim.\nWhere a party claims that the independent guarantee is subject to the provisions of the Security Law regarding general suretyship or joint and several suretyship, the People's Court shall not support such claim."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 The time of issuance of an independent guarantee shall be the time when the issuer sends the independent guarantee.\nAn independent guarantee shall take effect upon issuance, except where an effective date or event is specified in the independent guarantee.\nWhere an independent guarantee does not specify that it is revocable, and a party claims that the independent guarantee is irrevocable after issuance, the People's Court shall support such claim."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 Where an independent guarantee specifies the application of the Uniform Rules for Demand Guarantees or other model rules for independent guarantee transactions, or the issuer and the beneficiary unanimously cite such rules before the conclusion of the debate at the first instance trial, the People's Court shall determine that the content of the model rules constitutes a part of the terms of the independent guarantee.\nWhere the circumstances in the preceding paragraph do not exist, and a party claims that the independent guarantee is subject to the relevant model rules, the People's Court shall not support such claim."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 Where the documents submitted by the beneficiary are on their face consistent with the terms of the independent guarantee and with each other, and the beneficiary requests the issuer to assume the payment obligation pursuant to the independent guarantee, the People's Court shall support such request.\nWhere the issuer raises a defense against the payment obligation based on the underlying transaction relationship or the independent guarantee application relationship, the People's Court shall not support such defense, except where the circumstances in Article 12 of these Provisions exist."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 When determining whether there is conformity on the face, the People's Court shall review the documents in accordance with the examination standards specified in the independent guarantee; where the independent guarantee does not specify such standards, it may, by reference, apply the relevant examination standards established by the International Chamber of Commerce.\nWhere documents are not completely consistent on their face with the terms of the independent guarantee or with each other, but do not cause ambiguity between them, the People's Court shall determine that there is conformity on the face."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 The issuer shall have the right and obligation to independently examine the documents, and shall have the right to decide whether the documents are on their face consistent with the terms of the independent guarantee and with each other, and to decide to accept or reject discrepancies.\nWhere the issuer has expressly indicated to the beneficiary that it accepts the discrepancies, and the beneficiary requests the issuer to assume the payment obligation, the People's Court shall support such request.\nWhere the issuer refuses to accept discrepancies, and the beneficiary, on the ground that the applicant for the guarantee has accepted the discrepancies, requests the issuer to assume the payment obligation, the People's Court shall not support such request."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Where the issuer, after making payment pursuant to the independent guarantee, seeks recourse against the applicant for the guarantee, the People's Court shall support such claim, except where the documents submitted by the beneficiary contain discrepancies."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Where an independent guarantee does not simultaneously specify that it is transferable and the documents for determining the new beneficiary, and the issuer claims that the transfer of the beneficiary's right to demand payment is not effective against it, the People's Court shall support such claim. Where the independent guarantee has special provisions on the transfer of the beneficiary's right to demand payment, such provisions shall prevail."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 Where an independent guarantee has any of the following circumstances, and a party claims that the rights and obligations under the independent guarantee are terminated, the People's Court shall support such claim:\n(1) The expiry date or expiry event specified in the independent guarantee has occurred, and the beneficiary has not submitted documents that comply with the requirements of the independent guarantee;\n(2) The payable amount under the independent guarantee has been fully paid;\n(3) The amount of the independent guarantee has been reduced to zero;\n(4) The issuer has received a document issued by the beneficiary exempting the payment obligation under the independent guarantee;\n(5) Other circumstances under which termination is provided for by law or agreed upon by the parties.\nWhere the independent guarantee has the circumstances of termination of rights and obligations in the preceding paragraph, and the beneficiary claims to have the right to demand payment on the ground that it holds the text of the independent guarantee, the People's Court shall not support such claim."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Where any of the following circumstances exists, the People's Court shall determine that fraud in the independent guarantee is constituted:\n(1) The beneficiary colludes with the applicant for the guarantee or others to fabricate the underlying transaction;\n(2) The documents submitted by the beneficiary from a third party are forged or their content is false;\n(3) A court judgment or arbitral award determines that the debtor of the underlying transaction has no payment or compensation obligation;\n(4) The beneficiary confirms that the debt of the underlying transaction has been fully performed or that the payment due event specified in the independent guarantee has not occurred;\n(5) Other circumstances where the beneficiary, knowing that it has no right to demand payment, nevertheless abuses such right."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 Where the applicant, issuer, or instructing party of an independent guarantee discovers the circumstances set forth in Article 12 of these Provisions, it may, before filing a lawsuit or applying for arbitration, apply to the People's Court in the place of the issuer's domicile or another People's Court that has jurisdiction over the dispute of fraud in the independent guarantee for a stay of payment of the amount under the independent guarantee, or may file such an application during the lawsuit or arbitration proceedings."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 When the People's Court rules to stay payment of the amount under the independent guarantee, the following conditions must be satisfied simultaneously:\n(1) The evidence submitted by the applicant for the stay proves that the existence of the circumstances set forth in Article 12 of these Provisions is highly probable;\n(2) The situation is urgent, and failure to take immediate stay measures would cause irreparable damage to the lawful rights and interests of the applicant for the stay;\n(3) The applicant for the stay provides security sufficient to compensate for the losses that the respondent may suffer due to the stay.\nWhere the applicant for the stay requests the stay on the ground that the beneficiary has breached the underlying transaction, the People's Court shall not support such request.\nWhere the issuer has already made payment in good faith under an independent guarantee issued upon instruction, the People's Court shall not rule to stay payment on the independent guarantee that secures the issuer's right of recourse."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 Where losses are caused by an erroneous application for a stay, and a party requests compensation from the applicant for the stay, the People's Court shall support such request."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 After accepting an application for a stay, the People's Court shall make a written ruling within forty-eight hours. The ruling shall list the applicant, the respondent, and the third party, and shall include the facts initially ascertained and the reasons for whether to grant the application for a stay.\nIf the ruling orders a stay of payment, it shall be executed immediately.\nWhere the applicant for the stay fails to file a lawsuit for fraud in the independent guarantee or apply for arbitration within thirty days after the ruling on the stay is made, the People's Court shall lift the stay ruling."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 Where a party has an objection to the ruling made by the People's Court on the application for a stay, it may apply for reconsideration to the People's Court that made the ruling within ten days from the date of service of the ruling. During the period of reconsideration, the execution of the ruling shall not be suspended.\nThe People's Court shall review the application for reconsideration within ten days after receiving it, and shall inquire of the parties."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 When hearing a case concerning a dispute over fraud in an independent guarantee or handling an application for a stay, the People's Court may examine and determine the relevant facts of the underlying transaction with respect to the specific circumstances under Article 12 of these Provisions claimed by the parties."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 Where the applicant for the guarantee only sues the beneficiary in a lawsuit concerning fraud in an independent guarantee, the issuer and the instructing party of the independent guarantee may apply to participate as a third party, or the People's Court may notify them to participate."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Where, after hearing a case concerning a dispute over fraud in an independent guarantee, the People's Court can determine beyond a reasonable doubt that fraud in the independent guarantee is constituted, and there is no circumstance under paragraph 3 of Article 14 of these Provisions, it shall render a judgment ordering the issuer to terminate payment of the demanded amount under the independent guarantee."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Dispute cases between a beneficiary and an issuer arising from an independent guarantee shall be under the jurisdiction of the People's Court of the place where the issuer is domiciled or the defendant is domiciled, unless the independent guarantee provides that another court has jurisdiction or that the dispute shall be submitted to arbitration. Where a party claims that the competent court or arbitration shall be determined in accordance with the dispute resolution clause of the underlying transaction contract, the People's Court shall not support such claim.\n\nDispute cases concerning fraud in an independent guarantee shall be under the jurisdiction of the People's Court of the place where the issuer of the independent guarantee against which payment is requested to be stopped is domiciled or the defendant is domiciled, unless the parties have agreed in writing that another court has jurisdiction or that the dispute shall be submitted to arbitration. Where a party claims that the competent court or arbitration shall be determined in accordance with the dispute resolution clause of the underlying transaction contract or the independent guarantee, the People's Court shall not support such claim."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Where a foreign-related independent guarantee does not specify the applicable law, and the issuer and the beneficiary fail to reach an agreement on the applicable law before the conclusion of the first-instance court debate, the law of the place of the issuer's habitual residence shall apply to disputes between the issuer and the beneficiary arising from the foreign-related independent guarantee; where the independent guarantee is issued by a branch legally registered and established by a financial institution, the law of the place where the branch is registered shall apply.\n\nWhere the parties fail to reach an agreement on the applicable law for a dispute concerning fraud in a foreign-related independent guarantee, the law of the place of the issuer's habitual residence of the independent guarantee against which payment is requested to be stopped shall apply; where the independent guarantee is issued by a branch legally registered and established by a financial institution, the law of the place where the branch is registered shall apply; where the parties have a common habitual residence, the law of the common habitual residence shall apply.\n\nThe procedures for the preservation of payment stoppage of a foreign-related independent guarantee shall be governed by the laws of the People's Republic of China."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Where the parties agree to apply an independent guarantee in a domestic transaction, and one party claims that the agreement on the independence of the guarantee is invalid on the ground that the independent guarantee does not have a foreign-related element, the People's Court shall not support such claim."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 For the deposit for issuance of an independent guarantee that is managed under a special account and delivered to the possession of the issuer, the People's Court may adopt freezing measures, but shall not deduct or transfer the funds. When the funds in the deposit account cease to function as a deposit for issuance, the People's Court may adopt deduction or transfer measures according to law.\n\nWhere the issuer has fulfilled its external payment obligations, upon application by the issuer, the People's Court shall lift the freezing measures on the corresponding part of the deposit for issuance."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 Cases for which the final judgment has not been rendered after these Provisions come into force shall be governed by these Provisions; cases for which the final judgment has been rendered before these Provisions come into force, where a party applies for retrial or the People's Court conducts a retrial in accordance with the trial supervision procedure, these Provisions shall not apply."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 These Provisions shall come into force as of December 1, 2016."
     }
   ]
 }
