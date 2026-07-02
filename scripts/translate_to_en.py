@@ -38,7 +38,7 @@ ANTHROPIC_API_URL = "https://api.anthropic.com/v1/messages"
 ANTHROPIC_MODEL   = "claude-haiku-4-5-20251001"
 # DeepSeek (OpenAI-compatible)
 DEEPSEEK_API_URL  = "https://api.deepseek.com/chat/completions"
-DEEPSEEK_MODEL    = "deepseek-chat"
+DEEPSEEK_MODEL    = "deepseek-v4-flash"
 
 # ── 静态枚举翻译 ────────────────────────────────────────────────────────────
 
