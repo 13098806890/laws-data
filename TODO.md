@@ -15,7 +15,7 @@
 | **C3. json_en → DB** | ✅ 完成 | builder.py 集成 sync_en_translations()，幂等写入 |
 | **C4. pipeline.py** | ✅ 完成 | 集成 gen_en_templates + builder + export_menu + renderer |
 | **C5. 双语 Markdown** | ✅ 完成 | renderer 统一从 DB 读取 content_en 生成，含引用链接 |
-| **已翻译条文** | 完成 | **3,863 条**英文（T0 全部 11 部 + 相关司法解释），待翻译 T1-T4 约 45,856 条 |
+| **已翻译条文** | 完成 | **4,038 条**英文（36 部法律，含 T0 全部 11 部 + 之前 Pilot 翻译），待翻译约 52,119 条 |
 
 ## 🎯 翻译优先级（按被引用次数排序）
 
@@ -126,10 +126,12 @@
 ---
 
 **下一步：**
-1. ✅ T0 全部 11 部翻译完成（3,863 条）
+1. ✅ T0 全部 11 部翻译完成（4,038 条，36 部法律）
 2. ⏳ T1 翻译（23 部，~1,970 条）
 3. ⏳ C2 英文 FTS 表（nodes_fts_en）
 4. ⏳ B6 一致性校验脚本
+
+> **费用参考：** T0 剩余 7 部（~1,300 条）使用 DeepSeek API、batch-size 40/20，约消耗 70 万 tokens，成本约 **$0.15 USD**（DeepSeek $0.14/M input + $0.28/M output）。T1 如果继续用 DeepSeek，23 部 ~1,970 条预计成本类似。
 
 ---
 
