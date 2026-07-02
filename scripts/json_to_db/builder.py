@@ -397,10 +397,27 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
     inserted = parse_errors = 0
 
+    # 预建标题 → law_id 映射（从主库查）
+    title_to_id: dict[str, int] = {}
+    for row in conn.execute("SELECT id, title FROM laws WHERE category='司法解释'").fetchall():
+        title_to_id[row[1]] = row[0]
+
     for i, f in enumerate(files):
         d = json.loads(f.read_text(encoding='utf-8'))
         law_id = d.get('law_id')
         if not law_id:
+            title = d.get('title', '').strip()
+            if title in title_to_id:
+                law_id = title_to_id[title]
+            else:
+                # 模糊匹配：取标题前 30 字
+                prefix = title[:30]
+                for db_title, db_id in title_to_id.items():
+                    if db_title[:30] == prefix:
+                        law_id = db_id
+                        break
+        if not law_id:
+            print(f'  ⚠ 无法匹配 law_id: {f.name}')
             parse_errors += 1
             continue
 
@@ -438,7 +455,7 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
         try:
             conn.execute(
-                """INSERT INTO laws
+                """INSERT OR IGNORE INTO laws
                    (id, title, filename, category, legal_domain, subject_area, pub_date,
                     effective_date, promulgation_info, issuing_org, doc_number,
                     total_articles, full_text, version_date, is_current, aliases, is_flk, source)
