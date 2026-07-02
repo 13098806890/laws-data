@@ -223,7 +223,7 @@ def api_call(api_key: str, messages: list, system: str) -> str:
         # DeepSeek OpenAI-compatible API
         payload = json.dumps({
             "model": DEEPSEEK_MODEL,
-            "max_tokens": 8192,
+            "max_tokens": 16384,
             "messages": [{"role": "system", "content": system}] + messages,
         }).encode()
         req = urllib.request.Request(
@@ -240,7 +240,7 @@ def api_call(api_key: str, messages: list, system: str) -> str:
         # Anthropic API
         payload = json.dumps({
             "model": ANTHROPIC_MODEL,
-            "max_tokens": 8192,
+            "max_tokens": 16384,
             "system": system,
             "messages": messages,
         }).encode()

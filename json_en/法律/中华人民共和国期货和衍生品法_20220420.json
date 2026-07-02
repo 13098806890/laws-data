@@ -5,511 +5,511 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 This Law is enacted for the purposes of regulating futures trading and derivatives trading activities, safeguarding the legitimate rights and interests of all parties, maintaining market order and public interests, promoting the futures market and the derivatives market to serve the national economy, preventing and mitigating financial risks, and maintaining national economic security."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 This Law shall apply to futures trading and derivatives trading and related activities within the territory of the People's Republic of China.\nFutures trading and derivatives trading and related activities outside the territory of the People's Republic of China that disrupt the market order within the territory of the People's Republic of China or harm the legitimate rights and interests of domestic traders shall be handled and legal liability shall be investigated in accordance with the relevant provisions of this Law."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 For the purposes of this Law, \"futures trading\" means trading activities with futures contracts or standardized option contracts as the trading subject matter.\n\"Derivatives trading\" means trading activities other than futures trading, with swap contracts, forward contracts, non-standardized option contracts, and combinations thereof as the trading subject matter.\n\"Futures contract\" means a standardized contract uniformly formulated by a futures trading venue, stipulating the delivery of a certain quantity of subject matter at a specific time and place in the future.\n\"Option contract\" means a standardized or non-standardized contract stipulating that the buyer has the right to buy or sell a specified subject matter (including futures contracts) at a specific price at a future time.\n\"Swap contract\" means a financial contract stipulating the mutual exchange of specified subject matters at a specific future time.\n\"Forward contract\" means a financial contract other than a futures contract, stipulating the delivery of a certain quantity of subject matter at a specific time and place in the future."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 The State supports the healthy development of the futures market and gives play to its functions of price discovery, risk management, and resource allocation.\nThe State encourages the use of the futures market and the derivatives market to engage in risk management activities such as hedging.\nThe State takes measures to promote the development of agricultural product futures markets and derivatives markets, and to guide the production and operation of domestic agricultural products.\nFor the purposes of this Law, \"hedging\" means the activity of a trader entering into futures trading and derivatives trading that substantially matches the aforementioned assets, liabilities, etc. for the purpose of managing risks arising from changes in the value of its assets, liabilities, etc."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 The futures market and the derivatives market shall establish and improve systems and mechanisms for monitoring, controlling, and resolving risks, restrict excessive speculation according to law, and prevent systemic risks in the market."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 Futures trading and derivatives trading activities shall comply with laws, administrative regulations, and relevant provisions of the State, follow the principles of openness, fairness, and impartiality, and prohibit acts of fraud, market manipulation, and insider trading."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 All parties participating in futures trading and derivatives trading activities shall have equal legal status and shall observe the principles of voluntariness, compensation, good faith, and credit."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 The futures regulatory authority of the State Council shall exercise centralized and unified supervision and administration over the national futures market according to law. Where the State Council has otherwise provided for the supervision and administration of interest rate and exchange rate futures, such provisions shall apply.\nThe derivatives market shall be subject to supervision and administration by the futures regulatory authority of the State Council or the department authorized by the State Council in accordance with the division of responsibilities."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 The futures and derivatives industry association shall exercise self-regulation according to law."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 The State audit authority shall conduct audit supervision over futures operating institutions, futures trading venues, futures clearing institutions, and the futures regulatory authority of the State Council according to law."
     },
     {
       "article_number": "第三十九条",
-      "content_en": ""
+      "content_en": "Article 39 Futures trading shall implement a daily mark-to-market settlement system. At the time prescribed by the futures trading venue, the futures clearing institution shall settle with clearing participants on the same day based on the settlement price; clearing participants shall settle with traders based on the settlement results of the futures clearing institution. The settlement results shall be promptly notified to the clearing participants and traders on the same day."
     },
     {
       "article_number": "第四十条",
-      "content_en": ""
+      "content_en": "Article 40 The margin, premiums, and other funds collected by futures clearing institutions and clearing participants shall be kept separate from their own funds, deposited in dedicated accounts at margin depository institutions in accordance with the provisions of the futures regulatory authority of the State Council, managed separately, and misappropriation in violation of regulations is prohibited."
     },
     {
       "article_number": "第四十一条",
-      "content_en": ""
+      "content_en": "Article 41 If the margin of a clearing participant does not meet the standards prescribed by the business rules of the futures clearing institution, the futures clearing institution shall, in accordance with the provisions of the business rules, notify the clearing participant to add margin or close positions on its own within a prescribed time limit; if the clearing participant fails to add margin or close positions within the prescribed time limit, the futures trading venue shall be notified to forcibly close positions.\nIf the margin of a trader does not meet the standards agreed upon between the clearing participant and the trader, the clearing participant shall, in accordance with the agreement, notify the trader to add margin or close positions on its own within the agreed time limit; if the trader fails to add margin or close positions within the agreed time limit, the positions shall be forcibly closed in accordance with the agreement.\nWhere marketable securities, etc. are used as margin, and the futures clearing institution or clearing participant forcibly closes positions in accordance with the preceding two paragraphs, the marketable securities, etc. may be disposed of."
     },
     {
       "article_number": "第四十二条",
-      "content_en": ""
+      "content_en": "Article 42 If a clearing participant defaults during settlement, the futures clearing institution shall, in accordance with the business rules, use the clearing participant's margin, clearing guarantee funds, and the clearing institution's risk reserve, own funds, etc. to complete the settlement; if the futures clearing institution completes the settlement using its risk reserve, own funds, etc., it may seek recourse from the clearing participant according to law.\nIf a trader defaults during settlement, the clearing participant entrusted by the trader shall, in accordance with the provisions of the contract, use the trader's margin and the clearing participant's risk reserve and own funds to complete the settlement; if the clearing participant completes the settlement using its risk reserve and own funds, it may seek recourse from the trader according to law.\nFor the purposes of this Law, \"clearing guarantee fund\" means the funds paid by a clearing participant to the futures clearing institution with its own funds for the guarantee of performance."
     },
     {
       "article_number": "第四十三条",
-      "content_en": ""
+      "content_en": "Article 43 The margin, premiums, clearing guarantee funds, risk reserves, and other assets collected and withdrawn by the futures clearing institution in accordance with its business rules shall be used preferentially for settlement and delivery, and shall not be sealed up, frozen, detained, or subject to compulsory execution.\nBefore settlement and delivery are completed, no person may use the margin used to guarantee performance and delivery or the delivery property that has entered the delivery link.\nSettlement and delivery carried out according to law shall not be suspended, be void, or be revoked due to the fact that any party involved in the settlement enters into bankruptcy proceedings according to law."
     },
     {
       "article_number": "第四十四条",
-      "content_en": ""
+      "content_en": "Article 44 When a futures contract expires, the trader shall close out the open contracts that have not been closed out at expiry through physical delivery or cash settlement.\nAt the time prescribed in a standardized option contract, the buyer of the contract shall have the right to buy or sell the subject matter at the agreed price, or settle the cash difference in accordance with the agreement, and the seller of the contract shall perform the corresponding obligations in accordance with the agreement. The exercise of standardized option contracts shall be organized by the futures clearing institution."
     },
     {
       "article_number": "第四十五条",
-      "content_en": ""
+      "content_en": "Article 45 Where a futures contract adopts physical delivery, the futures clearing institution shall be responsible for organizing the delivery of the payment and the title documents of the contract subject matter such as standard warrants.\nWhere a futures contract adopts cash settlement, the futures clearing institution shall, based on the delivery settlement price, allocate the profit and loss amounts between the parties with long and short positions.\nFor the purposes of this Law, \"standard warrant\" means a standardized delivery certificate issued by a delivery warehouse and registered with the futures trading venue."
     },
     {
       "article_number": "第四十六条",
-      "content_en": ""
+      "content_en": "Article 46 Physical delivery under futures trading shall be conducted at the delivery warehouse, delivery port, or other locations designated by the futures trading venue and meeting the requirements of the futures trading venue. Physical delivery shall not limit the total delivery quantity. Where physical delivery is carried out using documents other than standard warrants or other methods, the futures trading venue shall clearly stipulate the rights and obligations of each delivery party."
     },
     {
       "article_number": "第四十七条",
-      "content_en": ""
+      "content_en": "Article 47 If a clearing participant defaults during delivery, the futures clearing institution shall have the right to dispose of the clearing participant's standard warrants and other title documents of the contract subject matter.\nIf a trader defaults during delivery, the clearing participant shall have the right to dispose of the trader's standard warrants and other title documents of the contract subject matter."
     },
     {
       "article_number": "第四十八条",
-      "content_en": ""
+      "content_en": "Article 48 A futures operating institution that does not meet the conditions for a clearing participant may entrust a clearing participant to settle on behalf of its clients. The rights and obligations between such a futures operating institution and the clearing participant and the trader shall be handled by reference to the provisions of this Chapter on the rights and obligations between clearing participants and traders."
     },
     {
       "article_number": "第四十九条",
-      "content_en": ""
+      "content_en": "Article 49 Futures traders refer to natural persons, legal persons, and unincorporated organizations that engage in futures trading in accordance with this Law and bear the trading results.\nWhen engaging in futures trading, futures traders shall entrust a futures operating institution to conduct the trading, unless otherwise provided by the futures regulatory authority of the State Council."
     },
     {
       "article_number": "第五十条",
-      "content_en": ""
+      "content_en": "Article 50 When providing services to traders, a futures operating institution shall, in accordance with regulations, fully understand the basic information, property status, financial asset status, trading knowledge and experience, professional competence, and other relevant information of the trader; faithfully explain the important contents of the services, and fully disclose the trading risks; and provide services that match the aforementioned conditions of the trader.\nWhen participating in futures trading and receiving services, a trader shall provide truthful information as listed in the preceding paragraph in accordance with the explicit requirements of the futures operating institution. If the trader refuses to provide or fails to provide information as required, the futures operating institution shall inform the trader of the consequences and refuse to provide services in accordance with regulations.\nIf a futures operating institution violates the provisions of the first paragraph and causes losses to a trader, it shall bear the corresponding compensation liability."
     },
     {
       "article_number": "第五十一条",
-      "content_en": ""
+      "content_en": "Article 51 Based on factors such as property status, financial asset status, trading knowledge and experience, and professional competence, traders may be classified as ordinary traders and professional traders. The standards for professional traders shall be prescribed by the futures regulatory authority of the State Council.\nIf a dispute arises between an ordinary trader and a futures operating institution, the futures operating institution shall prove that its conduct complies with laws, administrative regulations, and the provisions of the futures regulatory authority of the State Council, and that there is no misleading, fraud, or other such circumstances. If the futures operating institution fails to prove this, it shall bear the corresponding compensation liability."
     },
     {
       "article_number": "第五十二条",
-      "content_en": ""
+      "content_en": "Article 52 Legal persons and unincorporated organizations participating in futures trading shall establish internal control systems and risk control systems that are appropriate to the type, scale, purpose, etc., of their trading contracts."
     },
     {
       "article_number": "第五十三条",
-      "content_en": ""
+      "content_en": "Article 53 Employees of futures operating institutions, futures trading venues, and futures clearing institutions; staff members of the futures regulatory authority of the State Council and the futures industry association; and other persons who are prohibited from participating in futures trading by laws, administrative regulations, and the provisions of the futures regulatory authority of the State Council shall not engage in futures trading."
     },
     {
       "article_number": "第五十四条",
-      "content_en": ""
+      "content_en": "Article 54 A trader shall have the right to query its entrustment records, trading records, margin balance, and other important information related to the services it receives."
     },
     {
       "article_number": "第五十五条",
-      "content_en": ""
+      "content_en": "Article 55 Futures operating institutions, futures trading venues, futures clearing institutions, futures service institutions, and their staff members shall keep the information of traders confidential according to law, and shall not illegally buy, sell, provide, or disclose traders' information.\nFutures operating institutions, futures trading venues, futures clearing institutions, futures service institutions, and their staff members shall not disclose any trade secrets known to them."
     },
     {
       "article_number": "第五十六条",
-      "content_en": ""
+      "content_en": "Article 56 If a dispute arises between a trader and a futures operating institution, etc., both parties may apply for mediation to the industry association, etc. If an ordinary trader has a futures business dispute with a futures operating institution and submits a mediation request, the futures operating institution shall not refuse."
     },
     {
       "article_number": "第五十七条",
-      "content_en": ""
+      "content_en": "Article 57 When a trader initiates a civil compensation lawsuit for futures such as market manipulation or insider trading, if the subject matter of the action is of the same kind and one party involves a large number of persons, representatives may be elected according to law to conduct the litigation."
     },
     {
       "article_number": "第五十八条",
-      "content_en": ""
+      "content_en": "Article 58 The State establishes a futures trader protection fund. The specific measures for the raising, management, and use of the futures trader protection fund shall be formulated by the futures regulatory authority of the State Council together with the finance department of the State Council."
     },
     {
       "article_number": "第五十九条",
-      "content_en": ""
+      "content_en": "Article 59 Futures operating institutions refer to futures companies established in accordance with the Company Law of the People's Republic of China and this Law, and other institutions approved by the futures regulatory authority of the State Council to engage in futures business."
     },
     {
       "article_number": "第六十条",
-      "content_en": ""
+      "content_en": "Article 60 To establish a futures company, the following conditions shall be satisfied, and approval shall be obtained from the futures regulatory authority of the State Council:\n(1) having articles of association that comply with the provisions of laws and administrative regulations;\n(2) the principal shareholders and actual controllers have good financial conditions and integrity records, with net assets not lower than the standards prescribed by the futures regulatory authority of the State Council, and no record of major illegal or non-compliant acts in the last three years;\n(3) the registered capital is not less than RMB 100 million yuan and shall be fully paid-in monetary capital;\n(4) the personnel engaged in futures business meet the conditions prescribed by this Law, and the directors, supervisors, and senior officers have the corresponding qualifications for their positions;\n(5) having a good corporate governance structure, a sound risk management system, and a complete internal control system;\n(6) having qualified business premises, business facilities, and information technology systems;\n(7) other conditions prescribed by laws, administrative regulations, and the futures regulatory authority of the State Council.\nThe futures regulatory authority of the State Council may raise the minimum registered capital limit based on the prudential supervision principle and the risk level of each business.\nThe futures regulatory authority of the State Council shall, within six months from the date of accepting the application for establishment of a futures company, conduct a review in accordance with the statutory conditions, statutory procedures, and the prudential supervision principle, make a decision to approve or disapprove, and notify the applicant; if the application is disapproved, the reasons shall be stated."
     },
     {
       "article_number": "第六十一条",
-      "content_en": ""
+      "content_en": "Article 61 A futures company shall indicate the word \"futures\" in its name, unless otherwise provided by the futures regulatory authority of the State Council."
     },
     {
       "article_number": "第六十二条",
-      "content_en": ""
+      "content_en": "Article 62 A futures company that handles the following matters shall obtain approval from the futures regulatory authority of the State Council:\n(1) merger, division, suspension of business, dissolution, or filing for bankruptcy;\n(2) change of principal shareholders or the actual controller of the company;\n(3) change of registered capital and adjustment of equity structure;\n(4) change of business scope;\n(5) other major matters prescribed by the futures regulatory authority of the State Council.\nFor the matters listed in items (3) and (5) of the preceding paragraph, the futures regulatory authority of the State Council shall make a decision to approve or disapprove within twenty days from the date of accepting the application; for other matters listed in the preceding paragraph, the futures regulatory authority of the State Council shall make a decision to approve or disapprove within sixty days from the date of accepting the application."
     },
     {
       "article_number": "第六十三条",
-      "content_en": ""
+      "content_en": "Article 63 A futures company, upon approval by the futures regulatory authority of the State Council, may engage in the following futures businesses:\n(1) futures brokerage;\n(2) futures trading consultation;\n(3) futures market-making trading;\n(4) other futures businesses.\nIf a futures company engages in asset management business, it shall comply with the provisions of the Securities Investment Fund Law of the People's Republic of China and other laws and administrative regulations.\nWithout the approval of the futures regulatory authority of the State Council, no entity or individual may establish or establish a futures company in disguised form, operate or operate in disguised form futures brokerage business or futures trading consultation business, nor use the terms \"futures,\" \"options,\" or other names that may cause confusion or misunderstanding for business purposes."
     },
     {
       "article_number": "第六十四条",
-      "content_en": ""
+      "content_en": "Article 64 The directors, supervisors, and senior officers of a futures company shall be upright, honest, of good conduct, familiar with futures laws and administrative regulations, and possess the operational management capabilities necessary to perform their duties. The appointment and removal of directors, supervisors, and senior officers of a futures company shall be reported to the futures regulatory authority of the State Council for recordation.\nNo person under any of the following circumstances may serve as a director, supervisor, or senior officer of a futures company:\n(1) having a circumstance provided in the Company Law of the People's Republic of China under which a person may not serve as a director, supervisor, or senior officer of a company;\n(2) having been removed from position as a director, supervisor, or senior officer of a futures operating institution, or as a responsible person of a futures trading venue or futures clearing institution due to illegal acts or disciplinary violations, where less than five years have elapsed since the date of removal;\n(3) having had their practice certificate revoked or their qualification cancelled as a certified public accountant, lawyer, or other professional of a futures service institution due to illegal acts or disciplinary violations, where less than five years have elapsed since the date of revocation or cancellation."
     },
     {
       "article_number": "第六十五条",
-      "content_en": ""
+      "content_en": "Article 65 A futures operating institution shall operate according to law, be diligent and responsible, and act in good faith. A futures operating institution shall establish and improve internal control systems, and adopt effective segregation measures to prevent conflicts of interest between the institution and clients and between different clients.\nA futures operating institution shall handle its futures brokerage business, futures market-making trading business, asset management business, and other related businesses separately, and shall not commingle operations.\nA futures operating institution shall establish and implement an anti-money laundering system according to law."
     },
     {
       "article_number": "第六十六条",
-      "content_en": ""
+      "content_en": "Article 66 When a futures operating institution accepts a trader's entrustment to conduct futures trading on its behalf, it shall enter into a written entrustment contract, conduct futures trading in its own name for the trader, and the trading results shall be borne by the trader.\nWhen engaging in brokerage business, a futures operating institution shall not accept a trader's discretionary entrustment."
     },
     {
       "article_number": "第六十七条",
-      "content_en": ""
+      "content_en": "Article 67 When engaging in asset management business, accepting client entrustment, and using client assets for investment, a futures operating institution shall treat the different client assets it manages fairly, and shall not breach its fiduciary duties."
     },
     {
       "article_number": "第六十八条",
-      "content_en": ""
+      "content_en": "Article 68 A futures operating institution shall not, in violation of regulations, provide financing or guarantees for its shareholders, actual controllers, or related persons of its shareholders or actual controllers, and shall not provide external guarantees in violation of regulations."
     },
     {
       "article_number": "第六十九条",
-      "content_en": ""
+      "content_en": "Article 69 Personnel engaging in futures business at a futures operating institution shall be honest and trustworthy, have good conduct, and possess the professional competence necessary for engaging in futures business.\nPersonnel engaging in futures business at a futures operating institution shall not privately accept client mandates to engage in futures trading.\nWhere personnel engaging in futures business at a futures operating institution, in the course of engaging in futures business activities, follow instructions of the futures operating institution to which they belong or take advantage of their positions to violate futures trading rules, the futures operating institution to which they belong shall bear all liability."
     },
     {
       "article_number": "第七十条",
-      "content_en": ""
+      "content_en": "Article 70 The futures regulatory authority of the State Council shall formulate rules for the sustainable operation of futures operating institutions, and make provisions regarding the operating conditions, risk management, internal control, margin custody, compliance management, risk supervision indicators, connected transactions, etc., of futures operating institutions and their branches. Futures operating institutions shall comply with the rules for sustainable operation."
     },
     {
       "article_number": "第七十一条",
-      "content_en": ""
+      "content_en": "Article 71 A futures operating institution shall, in accordance with the provisions, submit business, financial, and other operational management information and materials to the futures regulatory authority of the State Council. The futures regulatory authority of the State Council shall have the authority to require the futures operating institution and its principal shareholders, actual controllers, and other related persons to provide relevant information and materials within a specified period.\nThe information and materials submitted or provided by the futures operating institution and its principal shareholders, actual controllers, or other related persons to the futures regulatory authority of the State Council shall be truthful, accurate, and complete."
     },
     {
       "article_number": "第七十二条",
-      "content_en": ""
+      "content_en": "Article 72 Where a futures operating institution is involved in major litigation or arbitration, its equity interests are frozen or used for security, or any other major event occurs, it shall submit a written report to the futures regulatory authority of the State Council within five days from the date of occurrence of such event.\nThe controlling shareholder or actual controller of a futures operating institution shall cooperate with the futures operating institution in performing the obligation specified in the preceding paragraph."
     },
     {
       "article_number": "第七十三条",
-      "content_en": ""
+      "content_en": "Article 73 Where a futures operating institution fails to comply with the rules for sustainable operation or experiences operational risks, the futures regulatory authority of the State Council shall order it to rectify within a specified period; if the futures operating institution fails to rectify within the specified period, or its conduct seriously endangers the sound operation of the futures operating institution or damages the legitimate rights and interests of traders, or if it is suspected of serious violations of laws or regulations and is under investigation by the futures regulatory authority of the State Council, the futures regulatory authority of the State Council may, depending on the circumstances, take the following measures against it:\n(1) restrict or suspend part of its business;\n(2) cease approving new business;\n(3) restrict profit distribution, restrict the payment of remuneration and provision of benefits to directors, supervisors, and senior officers;\n(4) restrict the transfer of property or the creation of other rights over property;\n(5) order the replacement of directors, supervisors, senior officers, or responsible persons of relevant business departments or branches, or restrict their rights;\n(6) restrict the allocation and use of the futures operating institution's own funds or risk reserves;\n(7) determine that responsible directors, supervisors, or senior officers are unsuitable persons;\n(8) order the responsible shareholders to transfer their equity interests, and restrict the exercise of shareholders' rights by responsible shareholders.\nFor a futures operating institution that, after rectification, complies with relevant laws, administrative regulations, and the requirements of the rules for sustainable operation, the futures regulatory authority of the State Council shall, within three days from the date of completion of inspection, lift the relevant measures taken against it.\nFor a futures operating institution that, after rectification, still fails to meet the requirements of the rules for sustainable operation and severely affects its normal operation, the futures regulatory authority of the State Council shall have the authority to revoke part or all of its futures business permits and close part or all of its branches."
     },
     {
       "article_number": "第七十四条",
-      "content_en": ""
+      "content_en": "Article 74 Where a futures operating institution engages in illegal operations or experiences major risks, seriously endangering the order of the futures market and harming the interests of traders, the futures regulatory authority of the State Council may take regulatory measures against the futures operating institution, such as ordering it to suspend business for rectification, designating another institution to take over its custody or management.\nWhere a futures operating institution falls under the circumstances specified in the preceding paragraph, with the approval of the futures regulatory authority of the State Council, the following measures may be taken against the directly responsible directors, supervisors, senior officers, and other directly responsible persons of the futures operating institution:\n(1) decide and notify the exit and entry administrative authority to prevent their exit from the country according to law;\n(2) apply to a judicial authority to prohibit them from transferring, assigning, or otherwise disposing of property, or creating other rights over property."
     },
     {
       "article_number": "第七十五条",
-      "content_en": ""
+      "content_en": "Article 75 Where a shareholder of a futures operating institution makes a false capital contribution or withdraws capital contribution, the futures regulatory authority of the State Council shall order it to rectify within a specified period, and may order it to transfer its equity interests in the futures operating institution.\nBefore a shareholder corrects its illegal conduct and transfers its equity interests in the futures operating institution in accordance with the requirements of the preceding paragraph, the futures regulatory authority of the State Council may restrict its shareholders' rights."
     },
     {
       "article_number": "第七十六条",
-      "content_en": ""
+      "content_en": "Article 76 Where a futures operating institution falls under any of the following circumstances, the futures regulatory authority of the State Council shall handle the cancellation of the relevant business license according to law:\n(1) its business license is revoked according to law;\n(2) it fails to commence business without justifiable reasons for more than three months after establishment, or after commencing business, it suspends business without justifiable reasons for three consecutive months or more;\n(3) it voluntarily applies for cancellation;\n(4) other circumstances under which the Administrative License Law of the People's Republic of China and the provisions of the futures regulatory authority of the State Council stipulate that the administrative license shall be cancelled.\nBefore cancelling the relevant business license, the futures operating institution shall settle the relevant futures business and return the margin and other assets of the traders according to law."
     },
     {
       "article_number": "第七十七条",
-      "content_en": ""
+      "content_en": "Article 77 Where the futures regulatory authority of the State Council deems it necessary, it may entrust a futures service institution to audit or evaluate the financial condition, internal control condition, and asset value of a futures operating institution. The specific measures shall be formulated by the futures regulatory authority of the State Council jointly with the relevant competent authorities."
     },
     {
       "article_number": "第七十八条",
-      "content_en": ""
+      "content_en": "Article 78 Futures operating institutions are prohibited from engaging in the following acts that harm the interests of traders:\n(1) making commitments to traders guaranteeing that their principal will not be lost or that they will obtain minimum returns;\n(2) agreeing with traders to share benefits and bear risks jointly;\n(3) conducting futures trading in violation of the traders' mandates;\n(4) concealing important matters or using other improper means to induce traders to trade;\n(5) providing trading advice to traders based on false or uncertain material information;\n(6) providing false trade confirmation to traders;\n(7) failing to transmit traders' trading orders to the futures trading venue;\n(8) misappropriating traders' margin;\n(9) failing to open a margin account with a margin custody institution in accordance with the provisions, or illegally transferring traders' margin;\n(10) taking advantage of the convenience of providing services to traders to obtain illegitimate benefits or pass on risks;\n(11) other acts that harm the rights and interests of traders."
     },
     {
       "article_number": "第七十九条",
-      "content_en": ""
+      "content_en": "Article 79 A futures trading venue shall follow the principle of prioritizing social public interests, provide venues and facilities for futures trading, organize and supervise futures trading, maintain a fair, orderly, and transparent market, and exercise self-regulation."
     },
     {
       "article_number": "第八十条",
-      "content_en": ""
+      "content_en": "Article 80 The establishment, change, and dissolution of a futures exchange shall be subject to the approval of the futures regulatory authority of the State Council.\nA futures exchange shall formulate its articles of association upon establishment. The formulation and amendment of the articles of association of a futures exchange shall be subject to the approval of the futures regulatory authority of the State Council."
     },
     {
       "article_number": "第八十一条",
-      "content_en": ""
+      "content_en": "Article 81 A futures exchange shall indicate the words \"commodity exchange\" or \"futures exchange\" in its name. No other entity or individual may use the name of a futures exchange or any other name that may cause confusion or misrepresentation."
     },
     {
       "article_number": "第八十二条",
-      "content_en": ""
+      "content_en": "Article 82 A futures exchange may adopt a membership-based or a corporate organizational form.\nThe organizational structure of a membership-based futures exchange shall be prescribed by its articles of association."
     },
     {
       "article_number": "第八十三条",
-      "content_en": ""
+      "content_en": "Article 83 A futures exchange shall formulate relevant business rules in accordance with laws, administrative regulations, and the provisions of the futures regulatory authority of the State Council; the formulation and amendment of trading rules therein shall be reported to the futures regulatory authority of the State Council for approval.\nThe business rules of a futures exchange shall reflect the principle of fairly protecting the lawful rights and interests of members, traders, and other relevant parties in the market.\nAny person engaging in futures trading and related activities on a futures exchange shall comply with the business rules formulated by the futures exchange according to law. Anyone violating the business rules shall be subject to disciplinary sanctions or other self-regulatory measures imposed by the futures exchange."
     },
     {
       "article_number": "第八十四条",
-      "content_en": ""
+      "content_en": "Article 84 The responsible persons of a futures exchange shall be nominated or appointed and removed by the futures regulatory authority of the State Council.\nA person who is under any of the circumstances specified in the Company Law of the People's Republic of China that renders him or her unsuitable to serve as a director, supervisor, or senior officer of a company, or falls under any of the following circumstances, shall not serve as a responsible person of a futures exchange:\n(1) having been removed from the position of director, supervisor, or senior officer of a futures operating institution, or as a responsible person of a futures trading venue or a futures clearing institution due to illegal or disciplinary acts, where less than five years have elapsed since the date of such removal;\n(2) having had his or her practice certificate revoked or his or her qualification cancelled as a certified public accountant, lawyer, or other professional of a futures service institution due to illegal or disciplinary acts, where less than five years have elapsed since the date of such revocation or cancellation."
     },
     {
       "article_number": "第八十五条",
-      "content_en": ""
+      "content_en": "Article 85 A futures trading venue shall, in accordance with this Law and the provisions of the futures regulatory authority of the State Council, strengthen risk control over trading activities and supervision and management over members and staff of the trading venue, and perform the following duties according to law:\n(1) providing trading venues, facilities, and services;\n(2) designing futures contracts and standardized options contract varieties, and arranging for the listing of futures contracts and standardized options contract varieties;\n(3) conducting real-time monitoring and risk surveillance of futures trading;\n(4) exercising self-regulation over members, traders, futures service institutions, etc., in accordance with the articles of association and business rules;\n(5) carrying out trader education and market cultivation;\n(6) other duties prescribed by the futures regulatory authority of the State Council.\nA futures trading venue shall not participate directly or indirectly in futures trading. Without the approval of the State Council, a futures trading venue shall not engage in trust investment, stock investment, non-self-use real estate investment, or any other business unrelated to its duties."
     },
     {
       "article_number": "第八十六条",
-      "content_en": ""
+      "content_en": "Article 86 The income derived by a futures exchange shall be managed and used in accordance with the relevant provisions of the State, and shall first be used to ensure the operation and improvement of the futures trading venues and facilities."
     },
     {
       "article_number": "第八十七条",
-      "content_en": ""
+      "content_en": "Article 87 A futures trading venue shall strengthen risk surveillance of futures trading. If an abnormal situation occurs, the futures trading venue may, in accordance with the business rules, take the following emergency measures alone or jointly with the futures clearing institution, and immediately report to the futures regulatory authority of the State Council:\n(1) adjusting margin;\n(2) adjusting the price limit range;\n(3) adjusting the trading or position limits for members or traders;\n(4) restricting the opening of positions;\n(5) forced liquidation;\n(6) temporary suspension of trading;\n(7) other emergency measures.\nAfter the abnormal situation disappears, the futures trading venue shall promptly cancel the emergency measures."
     },
     {
       "article_number": "第八十八条",
-      "content_en": ""
+      "content_en": "Article 88 A futures trading venue shall publish real-time quotes of futures trading in a timely manner, and produce a futures market quotation table on each trading day and publish it.\nThe rights and interests in futures trading quotes shall be enjoyed by the futures trading venue. Without the permission of the futures trading venue, no entity or individual may release futures trading quotes.\nA futures trading venue shall not release price forecast information.\nA futures trading venue shall fulfill its obligation to report information in accordance with the provisions of the futures regulatory authority of the State Council."
     },
     {
       "article_number": "第八十九条",
-      "content_en": ""
+      "content_en": "Article 89 Where a sudden event affects the normal conduct of futures trading, in order to maintain the normal order of futures trading and market fairness, a futures trading venue may take necessary disposal measures in accordance with this Law and its business rules, and shall promptly report to the securities regulatory authority of the State Council.\nWhere a sudden event as specified in the preceding paragraph causes material anomalies in the results of futures trading, and settlement or delivery based on the trading results would materially affect the normal order of futures trading and market fairness, the futures trading venue may take measures such as canceling transactions in accordance with its business rules, and shall promptly report to the securities regulatory authority of the State Council and make a public announcement."
     },
     {
       "article_number": "第九十条",
-      "content_en": ""
+      "content_en": "Article 90 A futures trading venue shall not bear civil compensation liability for losses caused by measures taken in accordance with Articles 87 and 89 of this Law, unless there is gross negligence."
     },
     {
       "article_number": "第九十一条",
-      "content_en": ""
+      "content_en": "Article 91 A futures clearing institution means a legal person established according to law that provides settlement and delivery services for futures trading and conducts self-regulation.\nFutures clearing institutions include futures trading venues with an internal settlement department, independent futures clearing institutions, and securities clearing institutions approved by the securities regulatory authority of the State Council to engage in settlement and delivery services for futures trading related to securities business."
     },
     {
       "article_number": "第九十二条",
-      "content_en": ""
+      "content_en": "Article 92 The establishment, alteration, and dissolution of an independent futures clearing institution shall be subject to approval by the securities regulatory authority of the State Council.\nThe establishment of an independent futures clearing institution shall meet the following conditions:\n(1) Having a sound financial condition, with the minimum registered capital complying with the provisions of the securities regulatory authority of the State Council;\n(2) Having senior officers with the requisite professional knowledge and business work experience;\n(3) Having a complete governance structure, internal control system, and risk control system;\n(4) Having business premises, information technology systems, and other facilities related to the settlement of futures trading that meet the requirements;\n(5) Other conditions prescribed by the securities regulatory authority of the State Council.\nA futures trading venue assuming the functions of a futures clearing institution shall meet the conditions specified in paragraph 2 of this Article.\nThe securities regulatory authority of the State Council shall conduct review in accordance with the principle of prudential supervision and shall make a decision on approval or disapproval within six months."
     },
     {
       "article_number": "第九十三条",
-      "content_en": ""
+      "content_en": "Article 93 A futures clearing institution, as a central counterparty, is the common counterparty of clearing participants, conducts netting settlement, and provides centralized performance guarantee for futures trading."
     },
     {
       "article_number": "第九十四条",
-      "content_en": ""
+      "content_en": "Article 94 A futures clearing institution performs the following duties:\n(1) Organizing the settlement and delivery of futures trading;\n(2) Conducting self-regulation of traders, futures operating institutions, futures service institutions, non-futures operating institution clearing participants, etc. in accordance with its articles of association and business rules;\n(3) Handling information inquiry services related to the settlement and delivery of futures trading;\n(4) Other duties prescribed by the securities regulatory authority of the State Council."
     },
     {
       "article_number": "第九十五条",
-      "content_en": ""
+      "content_en": "Article 95 A futures clearing institution shall, in accordance with the provisions of the securities regulatory authority of the State Council, prescribe in its business rules matters such as the clearing participant system, risk control system, information security management system, violation and default handling system, emergency handling and temporary disposal measures. The formulation and amendment of the articles of association and business rules of a futures clearing institution shall be approved by the securities regulatory authority of the State Council. Participation in futures clearing shall comply with the business rules formulated by the futures clearing institution.\nThe formulation and implementation of business rules by a futures clearing institution shall be consistent and coordinated with the relevant systems of the futures trading venue."
     },
     {
       "article_number": "第九十六条",
-      "content_en": ""
+      "content_en": "Article 96 A futures clearing institution shall establish a liquidity management system to ensure the stable operation of settlement activities."
     },
     {
       "article_number": "第九十七条",
-      "content_en": ""
+      "content_en": "Article 97 The provisions of Article 84, paragraph 2 of Article 85, Article 86, and paragraphs 3 and 4 of Article 88 of this Law shall apply to independent futures clearing institutions and securities clearing institutions approved to engage in futures trading settlement and delivery services."
     },
     {
       "article_number": "第九十八条",
-      "content_en": ""
+      "content_en": "Article 98 Futures service institutions such as accounting firms, law firms, asset appraisal institutions, futures margin depository institutions, delivery warehouses, and information technology service institutions shall be diligent and conscientious, provide services for futures trading and related activities in accordance with the relevant business rules, and provide relevant materials as required by the securities regulatory authority of the State Council."
     },
     {
       "article_number": "第九十九条",
-      "content_en": ""
+      "content_en": "Article 99 Where futures service institutions such as accounting firms, law firms, and asset appraisal institutions accept entrustment from futures operating institutions, futures trading venues, or futures clearing institutions to issue audit reports, legal opinions, or other documents, they shall verify and validate the authenticity, accuracy, and completeness of the content of the documents and materials relied upon."
     },
     {
       "article_number": "第一百条",
-      "content_en": ""
+      "content_en": "Article 100 Delivery warehouses include delivery storage facilities and delivery factories, among others. A delivery warehouse that provides relevant services for the delivery of futures trading shall meet the conditions prescribed by the futures trading venue. A futures trading venue shall enter into an agreement with the delivery warehouse, specifying the rights and obligations of both parties.\nA delivery warehouse shall not engage in the following acts:\n(1) Issuing false warehouse receipts;\n(2) Violating the business rules of the futures trading venue by restricting the outbound or inbound delivery of commodities;\n(3) Disclosing trade secrets related to futures trading;\n(4) Participating in futures trading in violation of relevant state provisions;\n(5) Other acts violating the provisions of the securities regulatory authority of the State Council."
     },
     {
       "article_number": "第一百零一条",
-      "content_en": ""
+      "content_en": "Article 101 An institution providing information technology system services for futures trading and related activities shall comply with the technical management regulations and standards of the state and the futures industry on information security, and shall file with the securities regulatory authority of the State Council.\nThe securities regulatory authority of the State Council may, according to law, require an information technology service institution to provide relevant materials concerning the information technology system as specified in the preceding paragraph."
     },
     {
       "article_number": "第一百零二条",
-      "content_en": ""
+      "content_en": "Article 102 The Futures Industry Association is a self-regulatory organization of the futures industry and a social organization legal person.\nFutures operating institutions shall join the Futures Industry Association. Futures service institutions may join the Futures Industry Association."
     },
     {
       "article_number": "第一百零三条",
-      "content_en": ""
+      "content_en": "Article 103 The authority body of the Futures Industry Association is the general assembly of members.\nThe articles of association of the Futures Industry Association shall be formulated by the general assembly of members and filed with the securities regulatory authority of the State Council.\nThe Futures Industry Association shall have a council. Members of the council shall be elected in accordance with the provisions of the articles of association."
     },
     {
       "article_number": "第一百零四条",
-      "content_en": ""
+      "content_en": "Article 104 The Futures Industry Association performs the following duties:\n(1) Formulating and implementing industry self-regulatory rules, supervising and inspecting the business activities of members and the practice conduct of practitioners, and imposing disciplinary sanctions or implementing other self-regulatory management measures according to regulations on those who violate laws, administrative regulations, relevant state provisions, the articles of association, or self-regulatory rules;\n(2) Mediating disputes between members, and between members and traders;\n(3) Safeguarding the legitimate rights and interests of members according to law, and reflecting the suggestions and demands of members to the securities regulatory authority of the State Council;\n(4) Organizing professional training for futures practitioners and conducting business exchanges among members;\n(5) Educating members and futures practitioners to comply with futures laws, regulations, and policies, organizing and carrying out industry integrity building, and establishing an industry integrity incentive and restraint mechanism;\n(6) Conducting trader education and protection work, urging members to implement the trader suitability management system, and conducting futures market publicity;\n(7) Exercising self-regulation over members' information security work, and urging members to implement relevant national and industry information security regulations and technical standards;\n(8) Organizing members to conduct research on the development, operation, and related content of the futures industry, collecting, collating, and publishing futures-related information, providing member services, organizing industry exchanges, and guiding industry innovation and development;\n(9) Other duties as specified in the articles of association of the Futures Industry Association."
     },
     {
       "article_number": "第一百零五条",
-      "content_en": ""
+      "content_en": "Article 105 The securities regulatory authority of the State Council shall exercise supervision and administration over the futures market according to law, maintain openness, fairness, and impartiality in the futures market, prevent systemic risks, protect the legitimate rights and interests of traders, and promote the healthy development of the futures market.\nIn exercising supervision and administration over the futures market, the securities regulatory authority of the State Council shall perform the following duties according to law:\n(1) Formulating regulations and rules concerning the supervision and administration of the futures market, and conducting examination, approval, verification, registration, and filing according to law;\n(2) Supervising and administering the listing, trading, settlement, delivery, and other futures trading and related activities of varieties;\n(3) Supervising and administering the futures business activities of market participants such as futures operating institutions, futures trading venues, futures clearing institutions, futures service institutions, and non-futures operating institution clearing participants;\n(4) Formulating codes of conduct for futures practitioners and supervising their implementation;\n(5) Supervising and inspecting the information disclosure of futures trading;\n(6) Safeguarding the legitimate rights and interests of traders and conducting trader education;\n(7) Investigating and punishing violations of futures laws;\n(8) Monitoring, preventing, and disposing of futures market risks;\n(9) Supervising the financial technology and information security of the futures industry;\n(10) Guiding and supervising the self-regulatory activities of the Futures Industry Association;\n(11) Other duties as provided by laws and administrative regulations.\nThe securities regulatory authority of the State Council may, as needed, establish dispatched agencies to perform supervision and administration duties as authorized."
     },
     {
       "article_number": "第一百零六条",
-      "content_en": ""
+      "content_en": "Article 106 When performing its duties according to law, the securities regulatory authority of the State Council shall have the authority to take the following measures:\n(1) Conducting on-site inspections of futures operating institutions, futures trading venues, and futures clearing institutions, and requiring them to submit relevant financial accounting, business activity, internal control, and other materials;\n(2) Entering the place where an alleged illegal act occurs to investigate and collect evidence;\n(3) Inquiring of parties and units and individuals related to the matter under investigation, and requiring them to explain matters related to the matter under investigation, or to submit documents and materials related to the matter under investigation in a specified manner;\n(4) Inspecting and copying documents and materials such as property rights registration records and communication records related to the matter under investigation;\n(5) Inspecting and copying the futures trading records, financial accounting materials, and other relevant documents and materials of the parties and units and individuals related to the matter under investigation; sealing or seizing documents and materials that may be transferred, concealed, or destroyed;\n(6) Inquiring into the margin accounts, bank accounts, and other accounts with payment, custody, settlement, or other functions of the parties and units and individuals related to the matter under investigation, and copying relevant documents and materials; where there is evidence that illegal funds or other property involved in the case has been or may be transferred or concealed, or that important evidence has been or may be concealed, falsified, or destroyed, freezing or sealing such property with the approval of the principal responsible person of the securities regulatory authority of the State Council or another responsible person authorized thereby, for a period of six months; where an extension is necessary due to special reasons, each extension shall not exceed three months, and the maximum period shall not exceed two years;\n(7) When investigating major illegal acts such as market manipulation or insider trading, with the approval of the principal responsible person of the securities regulatory authority of the State Council or another responsible person authorized thereby, restricting the trading of the parties under investigation, but the restriction period shall not exceed three months; if the case is complex, it may be extended by three months;\n(8) Deciding and notifying the exit-entry administration authority to prevent, according to law, the departure from the country of persons suspected of illegal acts, the principal responsible persons of units suspected of illegal acts, and other persons directly responsible.\nIn order to prevent risks in the futures market and maintain market order, the securities regulatory authority of the State Council may take measures such as ordering corrections, supervisory interviews, and issuing warning letters."
     },
     {
       "article_number": "第一百零七条",
-      "content_en": ""
+      "content_en": "Article 107 When the securities regulatory authority of the State Council performs its duties according to law and conducts supervision, inspection, or investigation, the number of personnel conducting such supervision, inspection, or investigation shall be no less than two, and they shall produce law enforcement credentials and relevant law enforcement documents such as inspection, investigation, and inquiry documents. Where the number of personnel conducting supervision, inspection, or investigation is less than two, or where they fail to produce law enforcement credentials and relevant law enforcement documents, the unit or individual under inspection or investigation shall have the right to refuse."
     },
     {
       "article_number": "第一百零八条",
-      "content_en": ""
+      "content_en": "Article 108 The staff of the securities regulatory authority of the State Council shall act according to law, be faithful to their duties, be impartial and honest, keep state secrets and the trade secrets of the parties concerned, and shall not seek illegitimate benefits by taking advantage of their positions."
     },
     {
       "article_number": "第一百零九条",
-      "content_en": ""
+      "content_en": "Article 109 The futures regulatory authority of the State Council shall perform its duties according to law, and the entities and individuals subject to inspection or investigation shall cooperate, truthfully provide explanations or relevant documents and materials, and shall not refuse, obstruct, or conceal.\nThe futures regulatory authority of the State Council and other relevant departments shall establish coordination and cooperation mechanisms for supervision and administration, such as information sharing. When the futures regulatory authority of the State Council performs its duties according to law and conducts supervision, inspection, or investigation, the relevant departments shall cooperate."
     },
     {
       "article_number": "第一百一十条",
-      "content_en": ""
+      "content_en": "Article 110 Any entity or individual may report to the futures regulatory authority of the State Council any suspected illegal or irregular futures activities.\nWhere a real-name report clue involving suspected major illegal or irregular activities is verified as true, the futures regulatory authority of the State Council shall, in accordance with the provisions, give a reward to the whistleblower.\nThe futures regulatory authority of the State Council shall keep the identity information of the whistleblower confidential."
     },
     {
       "article_number": "第一百一十一条",
-      "content_en": ""
+      "content_en": "Article 111 The rules, regulations, and supervision and administration work systems formulated by the futures regulatory authority of the State Council shall be made public according to law.\nThe penalty decisions made by the futures regulatory authority of the State Council on futures illegal activities based on the results of investigations shall be made public according to law."
     },
     {
       "article_number": "第一百一十二条",
-      "content_en": ""
+      "content_en": "Article 112 During the period when the futures regulatory authority of the State Council investigates an entity or individual suspected of futures illegal activities, if the investigated party makes a written application and undertakes to rectify the suspected illegal activities within a time limit recognized by the futures regulatory authority of the State Council, compensate the losses of relevant traders, and eliminate the harm or adverse effects, the futures regulatory authority of the State Council may decide to suspend the investigation. If the investigated party fulfills the undertaking, the futures regulatory authority of the State Council may decide to terminate the investigation; if the investigated party fails to fulfill the undertaking or there are other circumstances prescribed by the State Council, the investigation shall be resumed. Specific measures shall be prescribed by the State Council.\nIf the futures regulatory authority of the State Council suspends or terminates the investigation, it shall make relevant information public in accordance with the provisions."
     },
     {
       "article_number": "第一百一十三条",
-      "content_en": ""
+      "content_en": "Article 113 The futures regulatory authority of the State Council shall, according to law, incorporate the information on whether relevant futures market entities comply with this Law into the futures market good faith records."
     },
     {
       "article_number": "第一百一十四条",
-      "content_en": ""
+      "content_en": "Article 114 When performing its duties according to law, if the futures regulatory authority of the State Council discovers that a futures illegal activity is suspected of constituting a crime, it shall transfer the case to the judicial authorities for handling according to law; if it discovers that a public official is suspected of job-related illegality or job-related crime, it shall transfer the case to the supervisory authorities for handling according to law."
     },
     {
       "article_number": "第一百一十五条",
-      "content_en": ""
+      "content_en": "Article 115 The futures regulatory authority of the State Council shall establish and improve a futures market monitoring and control system, and strengthen the safe deposit monitoring and control of margin through specialized institutions."
     },
     {
       "article_number": "第一百一十六条",
-      "content_en": ""
+      "content_en": "Article 116 For the purpose of preventing risks in trading and clearing, futures operating institutions, futures trading venues, futures clearing institutions, and clearing participants that are not futures operating institutions shall, in accordance with the provisions of the futures regulatory authority of the State Council and the finance department of the State Council, set aside, manage, and use risk reserves from their business income."
     },
     {
       "article_number": "第一百一十七条",
-      "content_en": ""
+      "content_en": "Article 117 Futures operating institutions, futures trading venues, futures clearing institutions, futures service institutions, and clearing participants that are not futures operating institutions shall, in accordance with the provisions, properly preserve materials and information related to their business operations. No person shall disclose, conceal, forge, tamper with, or destroy them. The retention period for information and materials of futures operating institutions, futures trading venues, futures clearing institutions, and clearing participants that are not futures operating institutions shall not be less than twenty years; the retention period for information and materials of futures service institutions shall not be less than ten years."
     },
     {
       "article_number": "第一百一十八条",
-      "content_en": ""
+      "content_en": "Article 118 Where an overseas futures trading venue provides services for entities or individuals within the territory to directly access its trading system for trading, it shall apply for registration with the futures regulatory authority of the State Council and accept the supervision and administration of the futures regulatory authority of the State Council, unless otherwise provided by the futures regulatory authority of the State Council."
     },
     {
       "article_number": "第一百一十九条",
-      "content_en": ""
+      "content_en": "Article 119 Where futures contracts, options contracts, and derivative contracts listed on overseas futures trading venues are settled by linking to the prices of contracts listed on domestic futures trading venues, they shall comply with the provisions of the futures regulatory authority of the State Council."
     },
     {
       "article_number": "第一百二十条",
-      "content_en": ""
+      "content_en": "Article 120 Where any domestic entity or individual engages in overseas futures trading, it/he shall entrust a domestic futures operating institution with the qualification for overseas futures brokerage business to conduct such trading, unless otherwise provided by the State Council.\nWhere a domestic futures operating institution sub-entrusts an overseas futures operating institution to engage in overseas futures trading, such overseas futures operating institution shall apply for registration with the futures regulatory authority of the State Council and accept the supervision and administration of the futures regulatory authority of the State Council, unless otherwise provided by the futures regulatory authority of the State Council."
     },
     {
       "article_number": "第一百二十一条",
-      "content_en": ""
+      "content_en": "Article 121 Where an overseas futures trading venue establishes a representative office within the territory, it shall file with the futures regulatory authority of the State Council.\nThe representative office of an overseas futures trading venue and its staff members shall not engage in or engage in any business activities in disguised form."
     },
     {
       "article_number": "第一百二十二条",
-      "content_en": ""
+      "content_en": "Article 122 Where an overseas institution engages in futures marketing, promotion, and solicitation activities within the territory, it shall be approved by the futures regulatory authority of the State Council, and the relevant provisions of this Law shall apply.\nWhere a domestic institution engages in futures marketing, promotion, and solicitation activities within the territory on behalf of an overseas institution, it shall be approved by the futures regulatory authority of the State Council.\nNo entity or individual may engage in futures marketing, promotion, and solicitation activities in violation of the provisions of the preceding two paragraphs."
     },
     {
       "article_number": "第一百二十三条",
-      "content_en": ""
+      "content_en": "Article 123 The futures regulatory authority of the State Council may establish supervision and administration cooperation mechanisms with overseas futures regulatory authorities, or join international organizations, to implement cross-border supervision and administration.\nWhere the futures regulatory authority of the State Council provides assistance at the request of an overseas futures regulatory authority, it shall comply with the provisions of national laws and regulations and the principle of reciprocity, and shall not disclose state secrets or harm national interests and social public interests."
     },
     {
       "article_number": "第一百二十四条",
-      "content_en": ""
+      "content_en": "Article 124 The futures regulatory authority of the State Council may, in accordance with the regulatory cooperation arrangement reached with the overseas futures regulatory authority, accept a request from the overseas futures regulatory authority and conduct investigations and evidence collection for it in accordance with the functions and procedures specified in this Law. The overseas futures regulatory authority shall provide relevant case materials and explain that it is investigating the party concerned for suspected violation of the local futures laws and regulations of the requesting party. The overseas futures regulatory authority shall not directly conduct investigations, evidence collection, or other activities within the territory of the People's Republic of China.\nWithout the consent of the futures regulatory authority of the State Council and the relevant competent department of the State Council, no entity or individual may provide documents and materials related to futures business activities to an overseas regulatory authority without authorization.\nThe futures regulatory authority of the State Council may, in accordance with the regulatory cooperation arrangement reached with the overseas futures regulatory authority, request the overseas futures regulatory authority to conduct investigations and evidence collection."
     },
     {
       "article_number": "第一百二十五条",
-      "content_en": ""
+      "content_en": "Article 125 Whoever violates the provisions of Article 12 of this Law by manipulating the futures market or the derivatives market shall be ordered to make corrections, have the illegal gains confiscated, and be imposed a fine of not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 1 million, a fine of not less than RMB 1 million but not more than RMB 10 million shall be imposed. Where an entity manipulates the market, the directly responsible person in charge and other directly liable persons shall also be given a warning and imposed a fine of not less than RMB 500,000 but not more than RMB 5 million.\nWhere the act of market manipulation causes losses to traders, the perpetrator shall bear compensation liability according to law."
     },
     {
       "article_number": "第一百二十六条",
-      "content_en": ""
+      "content_en": "Article 126 Whoever violates the provisions of Article 13 of this Law by engaging in insider trading shall be ordered to make corrections, have the illegal gains confiscated, and be imposed a fine of not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 500,000, a fine of not less than RMB 500,000 but not more than RMB 5 million shall be imposed. Where an entity engages in insider trading, the directly responsible person in charge and other directly liable persons shall also be given a warning and imposed a fine of not less than RMB 200,000 but not more than RMB 2 million.\nWhere staff members of the futures regulatory authority of the State Council, the department authorized by the State Council, a futures trading venue, or a futures clearing institution engage in insider trading, they shall be given a severe punishment.\nWhere the act of insider trading causes losses to traders, the perpetrator shall bear compensation liability according to law."
     },
     {
       "article_number": "第一百二十七条",
-      "content_en": ""
+      "content_en": "Article 127 Whoever violates the provisions of paragraphs 1 and 3 of Article 16 of this Law by fabricating and disseminating false information or misleading information, disrupting the futures market or the derivatives market, shall have the illegal gains confiscated and be imposed a fine of not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 200,000, a fine of not less than RMB 200,000 but not more than RMB 2 million shall be imposed. The directly responsible person in charge and other directly liable persons shall be given a warning and imposed a fine of not less than RMB 100,000 but not more than RMB 1 million.\nWhoever violates the provisions of paragraph 2 of Article 16 of this Law by making false statements or providing misleading information in futures trading or derivatives trading activities shall be ordered to make corrections and imposed a fine of not less than RMB 200,000 but not more than RMB 2 million; if the violator is a state functionary, he shall also be given a sanction according to law.\nWhere a communication medium or its staff member engaged in reporting information on the futures market or the derivatives market violates the provisions of paragraph 3 of Article 16 of this Law by engaging in futures trading or derivatives trading that conflicts with his work duties, the illegal gains shall be confiscated and a fine of not more than one time the illegal gains shall be imposed; if there are no illegal gains or the illegal gains are less than RMB 100,000, a fine of not more than RMB 100,000 shall be imposed.\nWhere the fabrication and dissemination of false information regarding futures trading or derivatives trading, or the provision of misleading information in futures trading or derivatives trading, causes losses to traders, the perpetrator shall bear compensation liability according to law."
     },
     {
       "article_number": "第一百二十八条",
-      "content_en": ""
+      "content_en": "Article 128 Whoever violates the provisions of paragraph 2 of Article 18 of this Law by lending his own futures account or borrowing another person's futures account to engage in futures trading shall be ordered to make corrections, given a warning, and may be imposed a fine of not more than RMB 500,000."
     },
     {
       "article_number": "第一百二十九条",
-      "content_en": ""
+      "content_en": "Article 129 Any person who, in violation of the provisions of Article 21 of this Law, engages in programmatic trading that affects the system security or normal trading order of a futures trading venue shall be ordered to make corrections and be fined not less than RMB 500,000 but not more than RMB 5,000,000. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 100,000 but not more than RMB 1,000,000."
     },
     {
       "article_number": "第一百三十条",
-      "content_en": ""
+      "content_en": "Article 130 Any person who, in violation of the provisions of Article 27 of this Law, fails to report relevant material matters shall be ordered to make corrections, given a warning, and may be fined not more than RMB 1,000,000."
     },
     {
       "article_number": "第一百三十一条",
-      "content_en": ""
+      "content_en": "Article 131 Any person who is prohibited by laws, administrative regulations, or the provisions of the futures regulatory authority of the State Council from participating in futures trading, but directly or under an alias or in the name of another person, in violation of the provisions of Article 53 of this Law, participates in futures trading shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than RMB 50,000 but not more than RMB 500,000; if such person is a state functionary, disciplinary action shall also be taken according to law."
     },
     {
       "article_number": "第一百三十二条",
-      "content_en": ""
+      "content_en": "Article 132 Any person who illegally establishes a futures company, or engages in relevant futures business without approval, shall be banned, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 1,000,000, a fine of not less than RMB 1,000,000 but not more than RMB 10,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 200,000 but not more than RMB 2,000,000."
     },
     {
       "article_number": "第一百三十三条",
-      "content_en": ""
+      "content_en": "Article 133 Any person who submits false application documents or uses other fraudulent means to obtain a license for the establishment of a futures company, approval for a material change, or a license for futures business of a futures operating institution shall have the relevant license revoked, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 200,000, a fine of not less than RMB 200,000 but not more than RMB 2,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 200,000 but not more than RMB 2,000,000."
     },
     {
       "article_number": "第一百三十四条",
-      "content_en": ""
+      "content_en": "Article 134 A futures operating institution that violates Articles 40, 62, 65, 68, 71, or 72 of this Law shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 200,000, a fine of not less than RMB 200,000 but not more than RMB 2,000,000 shall be imposed; if the circumstances are serious, it shall be ordered to suspend business for rectification or have its futures business license revoked. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 50,000 but not more than RMB 500,000.\n\nIf a futures operating institution commits any of the illegal acts listed in the preceding paragraph and causes losses to traders, it shall bear compensation liability according to law.\n\nIf a major shareholder, actual controller, or other related person of a futures operating institution violates the provisions of Article 71 of this Law, the penalty shall be imposed in accordance with the provisions of the first paragraph of this Article."
     },
     {
       "article_number": "第一百三十五条",
-      "content_en": ""
+      "content_en": "Article 135 A futures operating institution that violates the provisions on trader suitability management in Article 50 of this Law, or violates the provisions of Article 66 of this Law by engaging in brokerage business and accepting discretionary authorization from traders, or commits any act under Article 78 that harms the interests of traders shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 500,000, a fine of not less than RMB 500,000 but not more than RMB 5,000,000 shall be imposed; if the circumstances are serious, the relevant business license shall be revoked. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 200,000 but not more than RMB 2,000,000.\n\nIf a futures operating institution commits any act specified in Article 78 of this Law and causes losses to traders, it shall bear compensation liability according to law."
     },
     {
       "article_number": "第一百三十六条",
-      "content_en": ""
+      "content_en": "Article 136 Any person who, in violation of the provisions of Articles 11, 80, and 92 of this Law, illegally establishes a futures trading venue or a futures clearing institution, or organizes futures trading in other forms shall have the illegal gains confiscated and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 1,000,000, a fine of not less than RMB 1,000,000 but not more than RMB 10,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 200,000 but not more than RMB 2,000,000. If a futures trading venue is illegally established, it shall be banned by the people's government at or above the county level.\n\nAny person who, in violation of the provisions of Article 30 of this Law, organizes derivative transactions without approval, or any financial institution that, in violation of the provisions of Article 31 of this Law, conducts derivative transactions without approval or authorization shall be penalized in accordance with the provisions of the preceding paragraph."
     },
     {
       "article_number": "第一百三十七条",
-      "content_en": ""
+      "content_en": "Article 137 A futures trading venue or futures clearing institution that violates the provisions of Article 17, Article 40, or paragraph 2 of Article 85 of this Law shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 200,000, a fine of not less than RMB 200,000 but not more than RMB 2,000,000 shall be imposed; if the circumstances are serious, it shall be ordered to suspend business for rectification. The directly responsible supervisor and other directly liable persons shall be fined not less than RMB 50,000 but not more than RMB 500,000."
     },
     {
       "article_number": "第一百三十八条",
-      "content_en": ""
+      "content_en": "Article 138 A futures trading venue or futures clearing institution that, in violation of the provisions of paragraph 3 of Article 88 of this Law, releases price forecast information shall be ordered to make corrections, given a warning, and be fined not less than RMB 200,000 but not more than RMB 2,000,000. The directly responsible supervisor and other directly liable persons shall be fined not less than RMB 50,000 but not more than RMB 500,000."
     },
     {
       "article_number": "第一百三十九条",
-      "content_en": ""
+      "content_en": "Article 139 A futures service institution that, in violation of the provisions of Article 98 of this Law, fails to provide relevant materials as required when engaging in futures service business shall be ordered to make corrections and may be fined not more than RMB 200,000."
     },
     {
       "article_number": "第一百四十条",
-      "content_en": ""
+      "content_en": "Article 140 An accounting firm, law firm, asset appraisal institution, or other futures service institution that, in violation of the provisions of Article 99 of this Law, fails to discharge its duties with due diligence, and the documents produced or issued contain false records, misleading statements, or material omissions shall be ordered to make corrections, have the business income confiscated, and be fined not less than one time but not more than ten times the business income; if there is no business income or the business income is less than RMB 500,000, a fine of not less than RMB 500,000 but not more than RMB 5,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 200,000 but not more than RMB 2,000,000.\n\nIf a futures service institution commits any of the illegal acts listed in the preceding paragraph and causes losses to others, it shall bear compensation liability according to law."
     },
     {
       "article_number": "第一百四十一条",
-      "content_en": ""
+      "content_en": "Article 141 A delivery warehouse that commits any of the acts listed in Article 100 of this Law shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 100,000, a fine of not less than RMB 100,000 but not more than RMB 1,000,000 shall be imposed; if the circumstances are serious, the futures trading venue shall be ordered to suspend or revoke its qualification as a delivery warehouse. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 50,000 but not more than RMB 500,000."
     },
     {
       "article_number": "第一百四十二条",
-      "content_en": ""
+      "content_en": "Article 142 An information technology service institution that, in violation of the provisions of Article 101 of this Law, fails to file for recordation shall be ordered to make corrections and may be fined not more than RMB 200,000.\n\nAn information technology service institution that, in violation of the provisions of Article 101 of this Law, provides services that do not comply with the national and futures industry technical management regulations and standards on information security shall be ordered to make corrections, have the business income confiscated, and be fined not less than one time but not more than ten times the business income; if there is no business income or the business income is less than RMB 500,000, a fine of not less than RMB 500,000 but not more than RMB 5,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 200,000 but not more than RMB 2,000,000."
     },
     {
       "article_number": "第一百四十三条",
-      "content_en": ""
+      "content_en": "Article 143 A futures operating institution, futures trading venue, futures clearing institution, or non-futures operating institution clearing participant that, in violation of the provisions of Article 116 of this Law, fails to set aside, manage, and use the risk reserve fund in accordance with regulations shall be ordered to make corrections and given a warning. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 100,000 but not more than RMB 1,000,000."
     },
     {
       "article_number": "第一百四十四条",
-      "content_en": ""
+      "content_en": "Article 144 A futures operating institution, futures trading venue, futures clearing institution, futures service institution, or non-futures operating institution clearing participant that, in violation of the provisions of Article 117 of this Law, fails to properly retain materials and information related to business operations in accordance with regulations shall be ordered to make corrections, given a warning, and be fined not less than RMB 100,000 but not more than RMB 1,000,000; if such person divulges, conceals, forges, alters, or destroys relevant documents or materials, it shall be ordered to make corrections, given a warning, and be fined not less than RMB 200,000 but not more than RMB 2,000,000; if the circumstances are serious, a fine of not less than RMB 500,000 but not more than RMB 5,000,000 shall be imposed, and the relevant business license shall be suspended or revoked, or it shall be prohibited from engaging in the relevant business. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 100,000 but not more than RMB 1,000,000."
     },
     {
       "article_number": "第一百四十五条",
-      "content_en": ""
+      "content_en": "Article 145 An overseas futures trading venue or futures operating institution that, in violation of the provisions of Articles 118 and 120 of this Law, fails to apply for registration with the futures regulatory authority of the State Council shall be ordered to make corrections, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 500,000, a fine of not less than RMB 500,000 but not more than RMB 5,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 100,000 but not more than RMB 1,000,000."
     },
     {
       "article_number": "第一百四十六条",
-      "content_en": ""
+      "content_en": "Article 146 Any domestic entity or individual that violates the provisions of paragraph 1 of Article 120 of this Law shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than RMB 100,000 but not more than RMB 1,000,000; if the circumstances are serious, its or his overseas futures trading shall be suspended. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 50,000 but not more than RMB 500,000."
     },
     {
       "article_number": "第一百四十七条",
-      "content_en": ""
+      "content_en": "Article 147 A representative office established in China by an overseas futures trading venue and its staff members that, in violation of the provisions of Article 121 of this Law, engage in or engage in any business activities in disguised form shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 500,000, a fine of not less than RMB 500,000 but not more than RMB 5,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 100,000 but not more than RMB 1,000,000."
     },
     {
       "article_number": "第一百四十八条",
-      "content_en": ""
+      "content_en": "Article 148 Any person who, in violation of the provisions of Article 122 of this Law, engages in marketing, promotion, or solicitation activities within the territory of China shall be ordered to make corrections, given a warning, have the illegal gains confiscated, and be fined not less than one time but not more than ten times the illegal gains; if there are no illegal gains or the illegal gains are less than RMB 500,000, a fine of not less than RMB 500,000 but not more than RMB 5,000,000 shall be imposed. The directly responsible supervisor and other directly liable persons shall be given a warning and be fined not less than RMB 100,000 but not more than RMB 1,000,000."
     },
     {
       "article_number": "第一百四十九条",
-      "content_en": ""
+      "content_en": "Article 149 Where a party refuses or obstructs the State Council's futures regulatory authority or a department authorized by the State Council and its staff members from exercising their supervisory inspection or investigation powers according to law, the party shall be ordered to make corrections, shall be imposed with a fine of not less than 100,000 yuan but not more than 1,000,000 yuan, and the public security organ shall impose a public security penalty according to law."
     },
     {
       "article_number": "第一百五十条",
-      "content_en": ""
+      "content_en": "Article 150 Where a party violates laws, administrative regulations, or the relevant provisions of the State Council's futures regulatory authority, and the circumstances are serious, the State Council's futures regulatory authority may impose a measure of futures market ban on the relevant responsible persons.\nThe term \"futures market ban\" as mentioned in the preceding paragraph refers to a system under which a person is prohibited from engaging in futures trading or futures business, and from serving as a director, supervisor, senior officer, or person-in-charge of a futures operating institution, futures exchange or futures clearing institution, for a specified period or for life."
     },
     {
       "article_number": "第一百五十一条",
-      "content_en": ""
+      "content_en": "Article 151 The administrative penalties provided for in this Law shall be decided by the State Council's futures regulatory authority or the department authorized by the State Council in accordance with the division of functions and duties as prescribed by the State Council; where laws or administrative regulations provide otherwise, those provisions shall apply."
     },
     {
       "article_number": "第一百五十二条",
-      "content_en": ""
+      "content_en": "Article 152 Where a staff member of the State Council's futures regulatory authority or the department authorized by the State Council fails to perform the duties as prescribed by this Law, abuses authority, neglects duty, takes advantage of his position to seek illegitimate interests, or discloses the trade secrets of relevant entities or individuals that he has come to know, he shall be subject to legal liability according to law."
     },
     {
       "article_number": "第一百五十三条",
-      "content_en": ""
+      "content_en": "Article 153 Where a violation of the provisions of this Law constitutes a crime, criminal liability shall be investigated according to law."
     },
     {
       "article_number": "第一百五十四条",
-      "content_en": ""
+      "content_en": "Article 154 Where a party violates the provisions of this Law, and shall bear civil compensation liability and pay fines, penalty monies, or illegal gains, if his property is insufficient to cover such payments, it shall be used first to satisfy the civil compensation liability."
     },
     {
       "article_number": "第一百五十五条",
-      "content_en": ""
+      "content_en": "Article 155 This Law shall come into force as of August 1, 2022."
     }
   ]
 }
