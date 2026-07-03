@@ -107,10 +107,18 @@ def extract_content(doc_path: Path) -> dict:
 
     promulgation_info = ''
     start_idx = 0
-    for i, text in enumerate(paras[:5]):
+    for i, text in enumerate(paras[:30]):
         if re.search(r'通过|公布|发布|施行|颁布|批准', text):
-            # 去除排版换行和多余空格
-            promulgation_info = re.sub(r'[\r\n]+', '', text).strip()
+            # 收集后续段落直到找到闭合括号或连续非段落文本
+            parts = [re.sub(r'[\r\n]+', '', text).strip()]
+            for j in range(i + 1, min(i + 15, len(paras))):
+                nxt = re.sub(r'[\r\n]+', '', paras[j]).strip()
+                if not nxt:
+                    break
+                parts.append(nxt)
+                if nxt.endswith('）') or nxt.endswith(')'):
+                    break
+            promulgation_info = ' '.join(parts)
             start_idx = i + 1
             break
 

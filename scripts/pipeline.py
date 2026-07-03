@@ -164,7 +164,7 @@ def _write_log(report_lines: list[str], db_path: Path):
 
 def main():
     parser = argparse.ArgumentParser(description='laws_data pipeline')
-    parser.add_argument('--skip-docx',    action='store_true', help='跳过 docx → JSON')
+    parser.add_argument('--docx',         action='store_true', help='运行 docx → JSON（默认跳过，仅更新源文件时才需要）')
     parser.add_argument('--skip-index',   action='store_true', help='跳过 law_index 生成')
     parser.add_argument('--skip-db',      action='store_true', help='跳过 JSON → DB')
     parser.add_argument('--skip-md',      action='store_true', help='跳过 DB → Markdown')
@@ -193,7 +193,7 @@ def main():
     before_refs    = _snapshot_db_refs(DB_PATH)
     before_current = _snapshot_db_laws(DB_PATH)
 
-    if not args.skip_docx:
+    if args.docx:
         from docx_to_json.converter import run as docx_to_json
         docx_to_json()
 
