@@ -300,7 +300,7 @@ def get_topic_law_hints(keywords: list[str]) -> list[str]:
 
 def search_layered(keywords: list[str], domains: list[str],
                    limit_per_kw: int = 10,
-                   hint_laws: list[str] | None = None) -> dict:
+                   hint_laws: =None) -> dict:
     """
     分两层检索：
       Layer 1 - 法律原文（category IN 法律/宪法/修正案）

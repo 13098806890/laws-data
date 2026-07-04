@@ -101,7 +101,7 @@ def get_zh_paragraphs(law_id: int, article_num: str) -> list[str]:
     return [p.strip() for p in content.split('\n') if p.strip()]
 
 
-def split_english_into_paragraphs(en_text: str, target_count: int) -> list[str] | None:
+def split_english_into_paragraphs(en_text: str, target_count: int):
     """
     尝试将英文文本分割成指定数量的段落
 
@@ -163,7 +163,7 @@ def split_english_into_paragraphs(en_text: str, target_count: int) -> list[str] 
     return None
 
 
-def fix_article_newlines(law_id: int, article: dict) -> dict | None:
+def fix_article_newlines(law_id: int, article: dict) -> dict:
     """
     修复单个条文的换行符
     返回修改后的 article dict，如果无需修改则返回 None

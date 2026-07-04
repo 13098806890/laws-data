@@ -52,7 +52,7 @@ _CN_MAP = {
     '六':6,'七':7,'八':8,'九':9,'十':10,'百':100,'千':1000,'两':2
 }
 
-def cn2int(s: str) -> int | None:
+def cn2int(s: str):
     try:
         s = s.strip()
         result = 0

@@ -150,7 +150,7 @@ def _call_llm(title: str, content: str, existing_kw: str) -> dict:
     return normalized
 
 
-def _call_with_retry(title: str, content: str, existing_kw: str) -> dict | None:
+def _call_with_retry(title: str, content: str, existing_kw: str) -> dict:
     for attempt in range(1, RETRY_LIMIT + 1):
         try:
             return _call_llm(title, content, existing_kw)

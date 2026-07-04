@@ -164,8 +164,8 @@ def load_glossary() -> dict:
 
 
 def build_system_prompt(title_map: dict, glossary: dict,
-                        per_law_title_map: dict | None = None,
-                        per_law_glossary: dict | None = None) -> str:
+                        per_law_title_map: dict = None,
+                        per_law_glossary: dict = None) -> str:
     lines = [
         "You are a professional legal translator specializing in Chinese law.",
         "Translate Chinese legal text into English with precision and consistency.",

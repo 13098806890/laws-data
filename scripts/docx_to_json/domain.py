@@ -162,7 +162,7 @@ def build_domain_index() -> dict:
     return idx
 
 
-def get_legal_domain(title: str, data: dict, domain_idx: dict) -> str | None:
+def get_legal_domain(title: str, data: dict, domain_idx: dict):
     clean = lambda s: re.sub(r'\s+', '', s)
     for key in [clean(title), clean(title.replace('中华人民共和国', ''))]:
         if key in domain_idx:

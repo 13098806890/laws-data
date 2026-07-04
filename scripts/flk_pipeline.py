@@ -120,7 +120,7 @@ def download_all(subjects: dict, verbose: bool = True):
 # 3. 解析单个法律 JSON → 结构化数据
 # ════════════════════════════════════════════════════════════════════════════
 
-def parse_law(law_node: dict, subject: str) -> dict | None:
+def parse_law(law_node: dict, subject: str) -> dict:
     """
     解析缓存的 jsonUrl JSON，返回结构化法律 dict。
 
@@ -288,7 +288,7 @@ def _build_main_title_index(main_conn) -> dict:
     return index
 
 
-def _lookup_main_id(index: dict, title: str) -> int | None:
+def _lookup_main_id(index: dict, title: str):
     """按四种变体顺序查找主库 law_id，找不到返回 None。先查手动映射表。"""
     # 手动映射优先
     mapped = TITLE_OVERRIDES.get(title)

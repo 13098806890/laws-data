@@ -25,7 +25,7 @@ def _cn_num_to_int(s: str) -> int:
     return int(CN_NUM.get(s, s))
 
 
-def extract_effective_date(data: dict) -> str | None:
+def extract_effective_date(data: dict):
     texts = [data.get('promulgation_info', '')]
     for ch in data.get('chapters', []):
         for art in ch.get('articles', []):

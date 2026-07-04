@@ -131,10 +131,11 @@ def main():
 
     print(f'扫描含英文字母条文，发现 {total_issues} 处明确问题\n')
 
+    sep = '=' * 60
     for issue_type, items in sorted(by_type.items()):
-        print(f'{'='*60}')
+        print(sep)
         print(f'【{issue_type}】共 {len(items)} 处')
-        print(f'{'='*60}')
+        print(sep)
         for law_title, art_num, content in items[:20]:
             # 找出问题片段的上下文
             snippet = content[:200].replace('\n', ' ')
@@ -145,9 +146,10 @@ def main():
             print(f'  ...（共 {len(items)} 处，仅显示前 20）\n')
 
     # ── 额外：统计所有含英文但未被标记问题的条文（仅统计数量） ──────────────
-    print(f'\n{"="*60}')
+    print()
+    print(sep)
     print('含英文字母但未被标记为问题的条文（按法律统计）:')
-    print(f'{"="*60}')
+    print(sep)
 
     conn2 = sqlite3.connect(DB_PATH)
     rows2 = conn2.execute("""

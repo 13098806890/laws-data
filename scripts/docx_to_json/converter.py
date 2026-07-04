@@ -321,7 +321,7 @@ def extract_content(doc_path: Path) -> dict:
 
 
 def process_docx(docx_path: Path, category: str,
-                 xlsx_index: dict, domain_idx: dict) -> dict | None:
+                 xlsx_index: dict, domain_idx: dict) -> dict:
     try:
         content = extract_content(docx_path)
     except Exception as e:

@@ -239,7 +239,7 @@ _RULES: list[tuple[str, list[str]]] = [
 ]
 
 
-def get_subject_area(title: str, category: str) -> str | None:
+def get_subject_area(title: str, category: str):
     """返回行政法规的主题分类，其他 category 返回 None。"""
     if category != '行政法规':
         return None

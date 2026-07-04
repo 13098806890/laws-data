@@ -47,7 +47,7 @@ def load_en_articles(filename: str, category: str) -> dict:
     return result
 
 
-def find_md_file(title: str, legal_domain: str) -> Path | None:
+def find_md_file(title: str, legal_domain: str) -> Path:
     """查找法律对应的 Markdown 文件"""
     # 标题去掉日期和版本号
     clean_title = re.sub(r'（\d{4}.*?）$', '', title).strip()

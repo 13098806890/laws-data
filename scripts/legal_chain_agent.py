@@ -202,7 +202,7 @@ def _conn():
     return sqlite3.connect(DB_PATH)
 
 
-def get_law_id(title: str) -> int | None:
+def get_law_id(title: str):
     """精确匹配法律 id"""
     with _conn() as conn:
         row = conn.execute(
@@ -252,7 +252,7 @@ def get_articles_in_node(node_id: int, law_id: int) -> list[dict]:
 
 
 def fts_search_in_law(keyword: str, law_title: str,
-                      categories: list[str] | None = None,
+                      categories: =None,
                       limit: int = 10) -> list[dict]:
     """在指定法律内 FTS 检索"""
     cjk = [c for c in keyword if '一' <= c <= '鿿']
@@ -311,7 +311,7 @@ def fts_search_domains(keyword: str, domains: list[str],
     ]
 
 
-def find_article_by_ref(law_title_fragment: str, article_number_str: str) -> dict | None:
+def find_article_by_ref(law_title_fragment: str, article_number_str: str) -> dict:
     """根据法律名称片段和条号（文字或数字）查找条文"""
     # 标准化：第X条 中的汉字数字 → 尝试直接匹配 article_number 字段
     with _conn() as conn:
