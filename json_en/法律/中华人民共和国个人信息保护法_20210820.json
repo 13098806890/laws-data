@@ -53,103 +53,103 @@
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 A personal information processor may process personal information only if it meets any of the following circumstances:\n(1) obtaining the consent of the individual;\n(2) it is necessary for the conclusion or performance of a contract to which the individual is a party, or it is necessary for implementing human resources management in accordance with labor rules and regulations formulated according to law and collective contracts concluded according to law;\n(3) it is necessary for performing statutory duties or statutory obligations;\n(4) it is necessary for responding to public health emergencies, or for protecting the life, health, and property safety of natural persons in emergency situations;\n(5) it is for carrying out news reporting, public opinion supervision, and other acts in the public interest, and the processing of personal information is within a reasonable scope;\n(6) processing personal information that has been voluntarily disclosed by the individual or otherwise lawfully disclosed, within a reasonable scope in accordance with the provisions of this Law;\n(7) other circumstances as provided by laws and administrative regulations.\nWhere, in accordance with other relevant provisions of this Law, the processing of personal information shall obtain the consent of the individual, but if the circumstances specified in items (2) to (7) of the preceding paragraph exist, the consent of the individual is not required."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Where personal information is processed based on the consent of the individual, such consent shall be voluntarily and explicitly given by the individual on the premise of being fully informed. Where laws and administrative regulations provide that the processing of personal information shall obtain the individual's separate consent or written consent, such provisions shall prevail.\nIf the purpose, method, or categories of personal information to be processed change, the consent of the individual shall be obtained anew."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 Where personal information is processed based on the consent of the individual, the individual has the right to withdraw his or her consent. The personal information processor shall provide a convenient method for withdrawing consent.\nThe withdrawal of consent by the individual shall not affect the validity of the personal information processing activities that have already been carried out based on the consent before the withdrawal."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 A personal information processor shall not refuse to provide products or services on the grounds that the individual does not consent to the processing of his or her personal information or withdraws his or her consent, unless the processing of personal information is necessary for providing the products or services."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 Before processing personal information, the personal information processor shall, in a conspicuous manner and in clear and understandable language, inform the individual of the following items in a true, accurate, and complete manner:\n(1) the name or title and contact information of the personal information processor;\n(2) the purpose and method of processing personal information, the categories of personal information to be processed, and the retention period;\n(3) the methods and procedures for individuals to exercise the rights provided for in this Law;\n(4) other matters that shall be informed as provided by laws and administrative regulations.\nIf the matters specified in the preceding paragraph change, the changed part shall be informed to the individual.\nWhere the personal information processor informs the individual of the matters specified in the first paragraph by formulating personal information processing rules, such rules shall be made public and be convenient for review and retention."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 Where there are circumstances provided for by laws or administrative regulations under which confidentiality is required or informing is not necessary, a personal information processor may not inform the individual of the matters specified in the first paragraph of the preceding article when processing personal information.\nIf, in an emergency situation, it is impossible to inform the individual in a timely manner in order to protect the life, health, and property safety of a natural person, the personal information processor shall inform the individual promptly after the emergency situation is eliminated."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 Unless otherwise provided by laws or administrative regulations, the retention period for personal information shall be the shortest time necessary to achieve the purpose of processing."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Where two or more personal information processors jointly determine the purpose and method of processing personal information, they shall agree on their respective rights and obligations. However, such agreement shall not affect the individual's right to request any of such personal information processors to exercise the rights provided for in this Law.\nWhere personal information processors jointly process personal information and cause damage to the rights and interests of personal information, they shall bear joint and several liability according to law."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Where a personal information processor entrusts the processing of personal information to another party, it shall agree with the受托人 (entrusted party) on the purpose, duration, method, categories of personal information, protection measures, and the rights and obligations of both parties, and shall supervise the personal information processing activities of the受托人 (entrusted party).\nThe受托人 (entrusted party) shall process personal information in accordance with the agreement and shall not process personal information beyond the agreed purpose, method, etc.; if the entrustment contract does not take effect, is invalid, is revoked, or is terminated, the受托人 (entrusted party) shall return the personal information to the personal information processor or delete it, and shall not retain it.\nWithout the consent of the personal information processor, the受托人 (entrusted party) shall not sub-entrust the processing of personal information to another person."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Where a personal information processor needs to transfer personal information due to merger, division, dissolution, declaration of bankruptcy, or other reasons, it shall inform the individual of the name or title and contact information of the recipient. The recipient shall continue to perform the obligations of the personal information processor. If the recipient changes the original purpose or method of processing, it shall obtain the individual's consent anew in accordance with the provisions of this Law."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Where a personal information processor provides the personal information it processes to another personal information processor, it shall inform the individual of the name or title, contact information, processing purpose, processing method, and categories of personal information of the recipient, and shall obtain the individual's separate consent. The recipient shall process the personal information within the scope of the above-mentioned processing purpose, processing method, and categories of personal information. If the recipient changes the original processing purpose or method, it shall obtain the individual's consent anew in accordance with the provisions of this Law."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Where a personal information processor uses personal information for automated decision-making, it shall ensure the transparency of the decision-making and the fairness and justness of the results, and shall not impose unreasonable differential treatment on individuals in terms of transaction prices and other transaction conditions.\nWhere information push or commercial marketing is conducted to individuals through automated decision-making methods, options that do not target the individual's personal characteristics shall be provided simultaneously, or a convenient method for the individual to refuse shall be provided.\nWhere a decision that has a significant impact on the rights and interests of an individual is made through automated decision-making, the individual has the right to require the personal information processor to provide an explanation and has the right to refuse the personal information processor from making the decision solely through automated decision-making."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 A personal information processor shall not disclose the personal information it processes, unless it has obtained the individual's separate consent."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 The installation of image collection and personal identification devices in public places shall be necessary for maintaining public security, shall comply with the relevant state provisions, and shall be accompanied by conspicuous signage. The collected personal images and identification information may only be used for the purpose of maintaining public security and shall not be used for any other purposes, unless the individual's separate consent has been obtained."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 A personal information processor may process personal information that has been voluntarily disclosed by the individual or otherwise lawfully disclosed, within a reasonable scope, unless the individual explicitly refuses. Where the processing of disclosed personal information by a personal information processor has a significant impact on the individual's rights and interests, the personal information processor shall obtain the individual's consent in accordance with the provisions of this Law."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Sensitive personal information is personal information that, once leaked or illegally used, may easily infringe upon the personal dignity of a natural person or endanger personal or property safety, including information such as biometrics, religious beliefs, specific identities, medical health, financial accounts, location tracking, and personal information of minors under the age of fourteen.\nOnly where there is a specific purpose and sufficient necessity, and strict protection measures are taken, may a personal information processor process sensitive personal information."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 The processing of sensitive personal information shall obtain the individual's separate consent; where laws or administrative regulations provide that the processing of sensitive personal information shall obtain written consent, such provisions shall prevail."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 Where a personal information processor processes sensitive personal information, in addition to the matters specified in the first paragraph of Article 17 of this Law, it shall also inform the individual of the necessity of processing the sensitive personal information and the impact on the individual's rights and interests, unless it may not inform the individual in accordance with the provisions of this Law."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 Where a personal information processor processes personal information of a minor under the age of fourteen, it shall obtain the consent of the minor's parents or other guardians.\nWhere a personal information processor processes personal information of a minor under the age of fourteen, it shall formulate special personal information processing rules."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 Where laws or administrative regulations provide that the processing of sensitive personal information shall obtain the relevant administrative license or be subject to other restrictions, such provisions shall prevail."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 The activities of state organs in processing personal information shall be governed by this Law; where there are special provisions in this Section, such provisions shall apply."
     },
     {
       "article_number": "第三十四条",
-      "content_en": ""
+      "content_en": "Article 34 Where state organs process personal information for the performance of statutory duties, they shall do so in accordance with the powers and procedures prescribed by laws and administrative regulations, and shall not exceed the scope and limits necessary for the performance of statutory duties."
     },
     {
       "article_number": "第三十五条",
-      "content_en": ""
+      "content_en": "Article 35 Where state organs process personal information for the performance of statutory duties, they shall perform the obligation to inform in accordance with the provisions of this Law, except where the circumstances set forth in Article 18, paragraph 1 of this Law exist, or where the notification would hinder the state organ from performing its statutory duties."
     },
     {
       "article_number": "第三十六条",
-      "content_en": ""
+      "content_en": "Article 36 Personal information processed by state organs shall be stored within the territory of the People's Republic of China; where it is truly necessary to provide it overseas, a security assessment shall be conducted. The security assessment may require relevant departments to provide support and assistance."
     },
     {
       "article_number": "第三十七条",
-      "content_en": ""
+      "content_en": "Article 37 Where organizations authorized by laws or regulations to have the function of managing public affairs process personal information for the performance of statutory duties, the provisions of this Law concerning state organs' processing of personal information shall apply."
     },
     {
       "article_number": "第三十八条",

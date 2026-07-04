@@ -93,79 +93,79 @@
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 The State shall implement a cybersecurity level protection system. Network operators shall, in accordance with the requirements of the cybersecurity level protection system, perform the following security protection obligations to ensure that the network is free from interference, destruction, or unauthorized access, and to prevent network data from being leaked, stolen, or tampered with:\n(1) formulate internal security management systems and operating procedures, designate cybersecurity responsible persons, and implement cybersecurity protection responsibilities;\n(2) adopt technical measures to prevent computer viruses, network attacks, network intrusions, and other acts endangering cybersecurity;\n(3) adopt technical measures to monitor and record network operation status and cybersecurity incidents, and retain relevant network logs for not less than six months in accordance with regulations;\n(4) adopt measures such as data classification, backup of important data, and encryption;\n(5) other obligations as prescribed by laws and administrative regulations."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Network products and services shall comply with the mandatory requirements of relevant national standards. The providers of network products and services shall not set up malicious programs; where they discover that their network products or services have security defects, vulnerabilities, or other risks, they shall immediately take remedial measures, and promptly inform users and report to the relevant competent authorities in accordance with regulations.\nThe providers of network products and services shall continuously provide security maintenance for their products and services; they shall not terminate the provision of security maintenance within the period prescribed by regulations or agreed by the parties.\nWhere network products or services have the function of collecting user information, their providers shall clearly inform users and obtain their consent; where personal information of users is involved, they shall also comply with the provisions of this Law and relevant laws and administrative regulations on the protection of personal information."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 Key network equipment and specialized cybersecurity products shall, in accordance with the mandatory requirements of relevant national standards, be sold or provided only after they have passed security certification or security testing by qualified institutions. The national cyberspace administration department shall, together with the relevant departments of the State Council, formulate and publish a catalogue of key network equipment and specialized cybersecurity products, and promote mutual recognition of security certification and security testing results to avoid repeated certification and testing."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 When network operators handle network access or domain name registration services for users, handle network access procedures for fixed-line telephones, mobile telephones, etc., or provide services such as information publication and instant messaging for users, they shall require users to provide true identity information when entering into an agreement with the user or confirming the provision of services. Where users do not provide true identity information, network operators shall not provide relevant services for them.\nThe State implements a trusted network identity strategy, supports research and development of safe and convenient electronic identity authentication technologies, and promotes mutual recognition among different electronic identity authentications."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 Network operators shall formulate cybersecurity incident emergency response plans, and promptly address security risks such as system vulnerabilities, computer viruses, network attacks, and network intrusions; upon the occurrence of an incident endangering cybersecurity, they shall immediately activate the emergency response plan, take corresponding remedial measures, and report to the relevant competent authorities in accordance with regulations."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Activities such as conducting cybersecurity certification, testing, and risk assessment, and releasing to the public cybersecurity information such as system vulnerabilities, computer viruses, network attacks, and network intrusions shall comply with the relevant provisions of the State."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 No individual or organization may engage in activities endangering cybersecurity such as illegally intruding into others' networks, interfering with the normal functions of others' networks, or stealing network data; may not provide programs or tools specifically used for engaging in activities endangering cybersecurity such as intruding into networks, interfering with the normal functions of networks and protective measures, or stealing network data; where they clearly know that others engage in activities endangering cybersecurity, they shall not provide assistance such as technical support, advertising promotion, payment and settlement for them."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 Network operators shall provide technical support and assistance to the public security organs and the state security organs in their activities to safeguard national security and investigate crimes according to law."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 The State supports cooperation among network operators in the collection, analysis, notification, and emergency response of cybersecurity information, so as to improve the security assurance capabilities of network operators.\nRelevant industry organizations shall establish and improve the cybersecurity protection norms and cooperation mechanisms within their industries, strengthen the analysis and assessment of cybersecurity risks, provide regular risk warnings to their members, and support and assist their members in responding to cybersecurity risks."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 Information obtained by the cyberspace administration department and relevant departments in the performance of their cybersecurity protection duties may only be used for the needs of maintaining cybersecurity, and shall not be used for other purposes."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 The State shall, on the basis of the cybersecurity level protection system, implement key protection for critical information infrastructure in important industries and fields such as public communications and information services, energy, transportation, water conservancy, finance, public services, and e-government, as well as other critical information infrastructure that, once damaged, loses functionality, or suffers data leakage, may seriously endanger national security, the national economy and people's livelihood, or the public interest. The specific scope of critical information infrastructure and the security protection measures shall be formulated by the State Council.\nThe State encourages network operators other than those of critical information infrastructure to voluntarily participate in the critical information infrastructure protection system."
     },
     {
       "article_number": "第三十四条",
-      "content_en": ""
+      "content_en": "Article 34 In accordance with the division of responsibilities stipulated by the State Council, the departments responsible for the security protection of critical information infrastructure shall respectively compile and organize the implementation of security plans for critical information infrastructure in their respective industries and fields, and direct and supervise the security protection of the operation of critical information infrastructure."
     },
     {
       "article_number": "第三十五条",
-      "content_en": ""
+      "content_en": "Article 35 The construction of critical information infrastructure shall ensure that it has the performance to support stable and continuous operation of services, and shall ensure that security technical measures are planned, constructed, and used simultaneously."
     },
     {
       "article_number": "第三十六条",
-      "content_en": ""
+      "content_en": "Article 36 In addition to the provisions of Article 23 of this Law, the operators of critical information infrastructure shall also perform the following security protection obligations:\n(1) establish specialized security management institutions and security management responsible persons, and conduct security background checks on such responsible persons and personnel in key positions;\n(2) regularly provide cybersecurity education, technical training, and skill assessments for employees;\n(3) implement disaster recovery backups for important systems and databases;\n(4) formulate cybersecurity incident emergency response plans and conduct regular drills;\n(5) other obligations as prescribed by laws and administrative regulations."
     },
     {
       "article_number": "第三十七条",
-      "content_en": ""
+      "content_en": "Article 37 Where the procurement of network products and services by operators of critical information infrastructure may affect national security, they shall pass the national security review organized by the national cyberspace administration department together with the relevant departments of the State Council."
     },
     {
       "article_number": "第三十八条",
-      "content_en": ""
+      "content_en": "Article 38 When procuring network products and services, operators of critical information infrastructure shall, in accordance with regulations, enter into security and confidentiality agreements with the providers, specifying the security and confidentiality obligations and responsibilities."
     },
     {
       "article_number": "第三十九条",
-      "content_en": ""
+      "content_en": "Article 39 Personal information and important data collected and generated by operators of critical information infrastructure during their operations within the territory of the People's Republic of China shall be stored within the territory. Where it is truly necessary to provide such information and data abroad due to business needs, a security assessment shall be conducted in accordance with the measures formulated by the national cyberspace administration department together with the relevant departments of the State Council; where laws and administrative regulations provide otherwise, those provisions shall prevail."
     },
     {
       "article_number": "第四十条",
-      "content_en": ""
+      "content_en": "Article 40 Operators of critical information infrastructure shall, on their own or by entrusting a cybersecurity service institution, conduct at least one detection and assessment each year of the security of their networks and possible risks, and report the detection and assessment results and improvement measures to the departments responsible for the security protection of critical information infrastructure."
     },
     {
       "article_number": "第四十一条",
-      "content_en": ""
+      "content_en": "Article 41 The national cyberspace administration department shall coordinate the relevant departments to take the following measures for the security protection of critical information infrastructure:\n(1) conduct random inspections and testing on the security risks of critical information infrastructure, propose improvement measures, and when necessary, may entrust a cybersecurity service institution to detect and assess the security risks existing in the networks;\n(2) regularly organize operators of critical information infrastructure to conduct cybersecurity emergency drills to improve the level of response to cybersecurity incidents and the capability of coordination and cooperation;\n(3) promote the sharing of cybersecurity information among relevant departments, operators of critical information infrastructure, relevant research institutions, and cybersecurity service institutions;\n(4) provide technical support and assistance for the emergency response to cybersecurity incidents and the restoration of network functions."
     },
     {
       "article_number": "第四十二条",
