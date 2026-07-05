@@ -285,6 +285,29 @@ def main():
         from generate_law_index import run as gen_law_index
         gen_law_index()
 
+    # ── 2b. 安全校验：JSON law_id 与 law_index 一致 ──
+    if INDEX_PATH.exists():
+        index = json.loads(INDEX_PATH.read_text("utf-8"))
+        idx_map = {e["filename"]: e["law_id"] for e in index}
+        mismatches = []
+        for p in sorted(JSON_DIR.rglob("*.json")):
+            if "index" in p.name:
+                continue
+            data = json.loads(p.read_text("utf-8"))
+            fn = p.stem
+            expected = idx_map.get(fn)
+            actual = data.get("law_id")
+            if expected is not None and actual != expected:
+                mismatches.append((fn, actual, expected))
+        if mismatches:
+            print("\n❌ 严重错误：以下 JSON 文件的 law_id 与 law_index.json 不一致：")
+            for fn, actual, expected in mismatches:
+                print(f"    {fn}: JSON 中为 {actual}，law_index 为 {expected}")
+            sys.exit(1)
+        print(f"  ✅ law_id 校验通过：{len(idx_map)} 条索引，0 个不匹配")
+    else:
+        print("  ⚠  law_index.json 不存在，跳过 law_id 校验")
+
     # ── 3. JSON → DB ──
     if not args.skip_db:
         print("\n=== 阶段三：JSON → DB ===")

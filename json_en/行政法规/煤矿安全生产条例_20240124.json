@@ -4,66 +4,6 @@
   "promulgation_info_en": "",
   "articles": [
     {
-      "article_number": "第一条",
-      "content_en": "Article 1 These Regulations are formulated for the purpose of strengthening the safety of production in coal mines, preventing and reducing coal mine production safety accidents, and ensuring the safety of people's lives and property."
-    },
-    {
-      "article_number": "第二条",
-      "content_en": "Article 2 These Regulations shall apply to the safety of production in coal mines within the territory of the People's Republic of China and other sea areas under the jurisdiction of the People's Republic of China."
-    },
-    {
-      "article_number": "第三条",
-      "content_en": "Article 3 The work of coal mine safety production shall adhere to the leadership of the Communist Party of China.\nThe work of coal mine safety production shall be people-oriented, put people and life first, prioritize the protection of people's life safety, implement the concept of safe development, adhere to the policy of safety first, prevention foremost, and comprehensive management, and prevent and defuse major safety risks at the source.\nThe work of coal mine safety production shall follow the principle that those in charge of the industry must be responsible for safety, those in charge of business must be responsible for safety, and those in charge of production and operation must be responsible for safety. The responsibility for safety production shall be strengthened and implemented through national supervision, local regulation, and enterprise accountability."
-    },
-    {
-      "article_number": "第四条",
-      "content_en": "Article 4 Coal mining enterprises shall fulfill their primary responsibility for safety production, strengthen safety production management, establish, improve, and implement a safety production responsibility system covering all employees and safety production rules and regulations, increase the input and guarantee of funds, materials, technology, and personnel for safety production, improve safety production conditions, strengthen the standardization and informatization of safety production, establish a dual prevention mechanism of graded risk control and hidden danger investigation and management, improve the risk prevention and defusing mechanism, enhance the level of safety production, and ensure safety production.\nThe principal responsible person of a coal mining enterprise (including the actual controller, the same below) is the first responsible person for safety production of the enterprise and shall be fully responsible for the work of safety production of the enterprise. Other responsible persons shall be responsible for the safety production work within their respective scope of duties."
-    },
-    {
-      "article_number": "第五条",
-      "content_en": "Article 5 People's governments at or above the county level shall strengthen leadership over the work of coal mine safety production, establish and improve a work coordination mechanism, support and supervise relevant departments in performing their duties of coal mine safety production in accordance with the law, and promptly coordinate and resolve major issues in the work of coal mine safety production."
-    },
-    {
-      "article_number": "第六条",
-      "content_en": "Article 6 Departments of the people's governments at or above the county level that are responsible for the supervision and administration of coal mine safety production shall exercise supervision and administration over coal mine safety production. Other relevant departments shall perform their corresponding duties related to coal mine safety production in accordance with the law according to their respective functions and responsibilities."
-    },
-    {
-      "article_number": "第七条",
-      "content_en": "Article 7 The State shall implement a coal mine safety supervision system. The National Mine Safety Supervision Institution and its local mine safety supervision institutions shall be responsible for the work of coal mine safety supervision and shall, in accordance with the law, supervise and inspect the work of local people's governments in supervising and managing coal mine safety production.\nThe National Mine Safety Supervision Institution and its local mine safety supervision institutions shall perform their duties of coal mine safety supervision in accordance with the law and shall not be interfered with by any unit or individual."
-    },
-    {
-      "article_number": "第八条",
-      "content_en": "Article 8 The State shall implement a system of accountability for coal mine production safety accidents. Legal liability shall be imposed on units and persons responsible for coal mine production safety accidents in accordance with the provisions of these Regulations and relevant laws and regulations.\nThe National Mine Safety Supervision Institution and its local mine safety supervision institutions shall, in accordance with the law, organize or participate in the investigation and handling of coal mine production safety accidents."
-    },
-    {
-      "article_number": "第九条",
-      "content_en": "Article 9 Departments of the people's governments at or above the county level responsible for the supervision and administration of coal mine safety production, the National Mine Safety Supervision Institution, and its local mine safety supervision institutions shall establish a reporting system, make public the reporting telephone numbers, mailboxes, or email addresses and other online reporting platforms, accept reports on coal mine safety production, and handle them promptly in accordance with the law; where investigation and handling by other relevant departments are necessary, such reports shall be transferred to the relevant departments for handling.\nAny unit or individual shall have the right to report to the departments and institutions specified in the preceding paragraph any hidden dangers or illegal acts related to safety production. Rewards shall be given in accordance with laws and regulations if the reported matters are verified as true."
-    },
-    {
-      "article_number": "第十条",
-      "content_en": "Article 10 Employees of coal mining enterprises shall have the right to obtain safety production guarantees in accordance with the law, and shall perform their obligations regarding safety production in accordance with the law."
-    },
-    {
-      "article_number": "第十一条",
-      "content_en": "Article 11 The National Mine Safety Supervision Institution shall, in accordance with the requirements of ensuring coal mine safety production, under the guidance of the emergency management department of the State Council, promptly draft national standards or industry standards for coal mine safety production in accordance with the law, and shall be responsible for the proposal, organization of drafting, solicitation of opinions, and technical review of mandatory national standards for coal mine safety production."
-    },
-    {
-      "article_number": "第十二条",
-      "content_en": "Article 12 The State shall encourage and support scientific and technological research on coal mine safety production and the promotion and application of advanced technologies and processes for coal mine safety production, enhance the level of intelligent mining in coal mines, promote scientific management of coal mine safety production, and improve the level of safety production."
-    },
-    {
-      "article_number": "第十三条",
-      "content_en": "Article 13 Coal mining enterprises shall comply with the relevant laws and regulations on safety production and coal mine safety rules, and implement the national standards or industry standards for ensuring safety production."
-    },
-    {
-      "article_number": "第十四条",
-      "content_en": "Article 14 The construction entity of a new, renovated, or expanded coal mine engineering project (hereinafter collectively referred to as a coal mine construction project) shall entrust a design unit with the qualification of construction engineering design enterprise to carry out the design of safety facilities.\nThe design of safety facilities shall include prevention measures for major disasters such as water, fire, gas, rock burst, coal dust, and roof in coal mines, comply with the requirements of national standards or industry standards, and be submitted to the department of the people's government of the province, autonomous region, or municipality directly under the Central Government that is responsible for the supervision and administration of coal mine safety production for review. If the design of safety facilities needs to be significantly altered, it shall be resubmitted to the original review department for re-review; construction shall not be carried out before approval, nor shall modifications be made during construction without approval."
-    },
-    {
-      "article_number": "第十五条",
-      "content_en": "Article 15 The construction entity of a coal mine construction project shall conduct unified coordination and management over the design, construction, supervision, and other units participating in the coal mine construction project, and shall bear overall responsibility for the safety management of the coal mine construction project.\nThe construction unit shall carry out construction in accordance with the approved design of safety facilities and shall not alter the design content without authorization."
-    },
-    {
       "article_number": "第十六条",
       "content_en": "Article 16 Before a completed coal mine construction project is put into production or use, the construction entity shall be responsible for organizing the acceptance inspection of the safety facilities and shall be responsible for the acceptance results; the project may be put into production and use only after it has passed the acceptance inspection."
     },
