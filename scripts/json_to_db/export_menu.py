@@ -249,17 +249,19 @@ def _sort_subgroups(group: str, subgroups: list[str]) -> list[str]:
 def export_menu(db_path: Path = DB_PATH, menu_path: Path = MENU_PATH):
     conn = sqlite3.connect(db_path)
     rows = conn.execute(
-        """SELECT id, title, category, legal_domain, subject_area FROM laws
+        """SELECT id, title, title_en, category, legal_domain, subject_area FROM laws
            WHERE is_current=1 AND (source='flk' OR (source='gongbao' AND legal_domain != ''))"""
     ).fetchall()
     conn.close()
 
     tree: dict[str, dict[str, list[dict]]] = {}
-    for law_id, title, category, legal_domain, subject_area in rows:
+    for row in rows:
+        law_id, title, title_en, category, legal_domain, subject_area = row
         group, subgroup = compute_display(title, category, legal_domain, subject_area)
-        tree.setdefault(group, {}).setdefault(subgroup, []).append(
-            {'id': law_id, 'title': title}
-        )
+        law_entry = {'id': law_id, 'title': title}
+        if title_en:
+            law_entry['title_en'] = title_en
+        tree.setdefault(group, {}).setdefault(subgroup, []).append(law_entry)
 
     sorted_groups = (
         [g for g in _GROUP_ORDER if g in tree]

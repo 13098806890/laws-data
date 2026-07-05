@@ -56,6 +56,7 @@ def create_schema(conn):
         CREATE TABLE IF NOT EXISTS laws (
             id INTEGER PRIMARY KEY,
             title TEXT NOT NULL,
+            title_en TEXT,
             filename TEXT UNIQUE NOT NULL,
             category TEXT,
             legal_domain TEXT,
