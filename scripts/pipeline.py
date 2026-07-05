@@ -329,6 +329,20 @@ def main():
         print("\n=== 阶段四：导入公报数据 ===")
         from build_gongbao_db import run as build_gongbao
         build_gongbao(drop=True)
+        # 校验 gongbao_docs 表存在且有数据
+        _conn = sqlite3.connect(DB_PATH)
+        try:
+            n_docs = _conn.execute("SELECT COUNT(*) FROM gongbao_docs").fetchone()[0]
+            n_links = _conn.execute("SELECT COUNT(*) FROM gongbao_case_law_links").fetchone()[0]
+            if n_docs == 0:
+                print("\n❌ 严重错误：gongbao_docs 表无数据，公报数据导入失败")
+                sys.exit(1)
+            print(f"  ✅ 公报数据校验通过：gongbao_docs={n_docs} 条, gongbao_case_law_links={n_links} 条")
+        except sqlite3.OperationalError as e:
+            print(f"\n❌ 严重错误：gongbao_docs 表不存在: {e}")
+            sys.exit(1)
+        finally:
+            _conn.close()
 
     # ── 5. en_json → content_en ──
     if not args.skip_db and not args.skip_en:
