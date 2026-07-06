@@ -5,71 +5,71 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "These Provisions are formulated to strengthen the administration of international networking of computer information networks and to ensure the healthy development of international computer information exchange."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "For international networking of computer information networks within the territory of the People's Republic of China, the matter shall be handled in accordance with these Provisions."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "For the purpose of these Provisions, the following terms mean:\n(1) International networking of computer information networks (hereinafter referred to as international networking) means the connection of computer information networks within the territory of the People's Republic of China with foreign computer information networks for the purpose of international exchange of information.\n(2) Interconnection network means a computer information network that directly conducts international networking; interconnection unit means the unit responsible for the operation of an interconnection network.\n(3) Access network means a computer information network that conducts international networking through connection to an interconnection network; access unit means the unit responsible for the operation of an access network."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "The State shall implement the principles of unified planning, unified standards, hierarchical administration, and promotion of development for international networking."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "The Informatization Work Leading Group of the State Council (hereinafter referred to as the Leading Group) shall be responsible for coordinating and resolving major issues relating to international networking.\nThe office of the Leading Group shall, in accordance with these Provisions, formulate specific administrative measures, specify the rights, obligations and responsibilities of international gateway channel providers, interconnection units, access units and users, and shall be responsible for the inspection and supervision of international networking."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "For computer information networks to conduct direct international networking, they must use the international gateway channels provided by the national public telecommunications network.\nNo unit or individual may establish or use other channels for international networking without authorization."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "The existing interconnection networks, after being adjusted in accordance with the relevant regulations of the State Council, shall be administered respectively by the telecommunications competent department of the State Council, the education administrative department, and the Chinese Academy of Sciences.\nNew interconnection networks must be submitted to the State Council for approval."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Access networks must conduct international networking through interconnection networks.\nAn access unit that intends to engage in international networking operations shall apply to the competent department or responsible unit of the interconnection unit that is authorized to accept applications for engaging in international networking operations for an international networking operation permit; without obtaining the international networking operation permit, it shall not engage in international networking operations.\nAn access unit that intends to engage in non-operational activities shall submit to the competent department or responsible unit of the interconnection unit that is authorized to accept applications for non-operational activities for examination and approval; without approval, it shall not connect to an interconnection network for international networking.\nWhen applying for an international networking operation permit or going through the examination and approval procedures, it shall provide information such as the nature, scope of application, and host addresses of its computer information network.\nThe format of the international networking operation permit shall be uniformly formulated by the Leading Group."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "All access units engaging in international networking operations and those engaging in non-operational activities must meet the following conditions:\n(1) It is an enterprise legal person or an institutional legal person established according to law;\n(2) It possesses the corresponding computer information network, equipment, and the corresponding technical and administrative personnel;\n(3) It has a sound security and confidentiality management system and technical protection measures;\n(4) It meets other conditions prescribed by law and the State Council.\nAn access unit engaging in international networking operations shall, in addition to the conditions specified in the preceding paragraph of this Article, also have the capability to provide long-term services to users.\nIf the circumstances of an access unit engaging in international networking operations change such that it no longer meets the conditions set out in the first and second paragraphs of this Article, its international networking operation permit shall be revoked by the issuing authority; if the circumstances of an access unit engaging in non-operational activities change such that it no longer meets the conditions set out in the first paragraph of this Article, its international networking qualification shall be cancelled by the examination and approval authority."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Computers or computer information networks used by individuals, legal persons, and other organizations (hereinafter collectively referred to as users) that need to conduct international networking must do so through access networks.\nComputers or computer information networks as specified in the preceding paragraph that need to connect to access networks shall obtain the consent of the access unit and go through registration procedures."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "International gateway channel providers, interconnection units, and access units shall establish corresponding network management centers, strengthen the administration of their own units and their users in accordance with laws and the relevant regulations of the State, perform network information security administration work, and ensure the provision of good and safe services to users."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Interconnection units and access units shall be responsible for the technical training and management education of their own units and their users relating to international networking."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Units and individuals engaged in international networking business shall abide by the relevant laws and administrative regulations of the State, strictly implement the security and confidentiality system, and shall not use international networking to engage in illegal or criminal activities such as endangering national security or divulging State secrets, and shall not produce, browse, reproduce, or disseminate information that disrupts public order or obscene and pornographic information."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Whoever violates the provisions of Article 6, Article 8, and Article 10 of these Provisions shall be ordered by the public security organ to stop networking, given a warning, and may also be imposed a fine of not more than 15,000 yuan; if there are illegal gains, the illegal gains shall be confiscated."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Whoever violates these Provisions and also contravenes other relevant laws and administrative regulations shall be punished in accordance with the provisions of such laws and administrative regulations; if a crime is constituted, criminal liability shall be investigated according to law."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "For networking with computer information networks in the Taiwan, Hong Kong, and Macao regions, these Provisions shall be applied mutatis mutandis."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "These Provisions shall come into force as of the date of promulgation."
     }
   ]
 }

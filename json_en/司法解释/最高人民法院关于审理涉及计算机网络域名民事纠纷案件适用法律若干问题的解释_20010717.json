@@ -5,35 +5,35 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 For civil disputes involving acts such as registration and use of computer network domain names, where a party initiates a prosecution with a People's Court, and upon review, the case meets the requirements of Article 108 of the Civil Procedure Law, the People's Court shall accept the case."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 Infringement dispute cases involving domain names shall be under the jurisdiction of the Intermediate People's Court of the place of the infringing act or the place of the defendant's domicile. Where it is difficult to determine the place of the infringing act and the place of the defendant's domicile, the place where the computer terminal or other equipment on which the plaintiff discovered the domain name is located may be deemed as the place of the infringing act.\nForeign-related domain name dispute cases include those in which one or both parties are foreigners, stateless persons, foreign enterprises or organizations, or international organizations, or where the domain name is registered in a foreign country. For foreign-related domain name dispute cases occurring within the territory of the People's Republic of China, jurisdiction shall be determined in accordance with the provisions of Part Four of the Civil Procedure Law."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 The cause of action in a domain name dispute case shall be determined according to the nature of the legal relationship in dispute between the two parties, and shall be prefixed with \"computer network domain name\"; where the nature of the legal relationship in dispute is difficult to determine, it may be generally referred to as a computer network domain name dispute case."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 When hearing a domain name dispute case, the People's Court shall find that the defendant's registration and use of a domain name constitute infringement or unfair competition if all of the following conditions are met:\n(1) The civil rights and interests for which the plaintiff seeks protection are lawful and valid;\n(2) The defendant's domain name or its essential part constitutes reproduction, imitation, translation, or transliteration of the plaintiff's well-known trademark; or is identical or similar to the plaintiff's registered trademark or domain name, sufficient to cause misidentification by the relevant public;\n(3) The defendant has no rights or interests in the domain name or its essential part, nor any justifiable reason for registering or using the domain name;\n(4) The defendant's registration or use of the domain name is done in bad faith."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 Where the defendant's act is proven to fall under any of the following circumstances, the People's Court shall find that the defendant acted in bad faith:\n(1) Registering another person's well-known trademark as a domain name for commercial purposes;\n(2) Registering or using a domain name identical or similar to the plaintiff's registered trademark or domain name for commercial purposes, intentionally creating confusion with the products, services, or website of the plaintiff, and misleading internet users to access their website or other online sites;\n(3) Previously offering to sell, lease, or otherwise transfer the domain name at a high price for illegitimate gains;\n(4) After registering the domain name, the defendant does not use it nor intends to use it, but intentionally prevents the right holder from registering the domain name;\n(5) Other circumstances of bad faith.\nWhere the defendant adduces evidence proving that the domain name it holds had already acquired a certain degree of recognition before the dispute arose and can be distinguished from the plaintiff's registered trademark or domain name, or has other circumstances sufficient to prove that it does not act in bad faith, the People's Court may find that the defendant does not have bad faith."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 When hearing a domain name dispute case, the People's Court may, upon the request of a party and in light of the specific circumstances of the case, make a determination according to law as to whether the involved registered trademark is well-known."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 When hearing a domain name dispute case, if the circumstances specified in Article 4 of this Interpretation are met and constitute infringement under relevant legal provisions, the People's Court shall apply the corresponding legal provisions; if the act constitutes unfair competition, it may apply the provisions of Article 4 of the General Principles of Civil Law and Article 2, paragraph 1 of the Anti-Unfair Competition Law.\nForeign-related domain name dispute cases shall be handled in accordance with the relevant provisions of Chapter VIII of the General Principles of Civil Law."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 Where the People's Court finds that acts such as domain name registration or use constitute infringement or unfair competition, it may order the defendant to cease the infringement and cancel the domain name, or, upon the plaintiff's request, order that the plaintiff register and use the domain name; if actual damage has been caused to the right holder, it may order the defendant to compensate for the losses."
     }
   ]
 }

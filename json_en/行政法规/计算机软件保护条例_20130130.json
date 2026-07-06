@@ -5,135 +5,135 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 These Regulations are formulated in accordance with the Copyright Law of the People's Republic of China for the purpose of protecting the rights and interests of copyright owners of computer software, regulating the interests arising from the development, dissemination and use of computer software, encouraging the development and application of computer software, and promoting the development of the software industry and the informatization of the national economy."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 For the purposes of these Regulations, \"computer software\" (hereinafter referred to as \"software\") means computer programs and their related documentation."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 For the purposes of these Regulations, the following definitions shall apply:\n(1) \"Computer program\" means a coded instruction sequence that can be executed by a computer or other device with information processing capability to achieve a certain result, or a symbolic instruction sequence or symbolic statement sequence that can be automatically converted into a coded instruction sequence. The source program and object program of the same computer program shall be deemed as one work.\n(2) \"Documentation\" means written materials and diagrams, such as program design specifications, flow charts, and user manuals, used to describe the content, composition, design, functional specifications, development status, test results, and usage methods of the program.\n(3) \"Software developer\" means a legal person or other organization that actually organizes the development, directly carries out the development, and bears responsibility for the developed software; or a natural person who independently completes the software development with his or her own conditions and bears responsibility for the software.\n(4) \"Software copyright owner\" means a natural person, legal person, or other organization that enjoys copyright in the software in accordance with these Regulations."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 Software protected under these Regulations must be independently developed by the developer and fixed on some tangible medium."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 Chinese citizens, legal persons, or other organizations shall enjoy copyright in the software they develop, whether published or not, in accordance with these Regulations.\nSoftware of foreigners or stateless persons that is first published within the territory of China shall enjoy copyright in accordance with these Regulations.\nCopyright in software of foreigners or stateless persons, enjoyed in accordance with agreements concluded between the country of which the developer is a national or in which he or she has habitual residence and China, or in accordance with international treaties to which China is a party, shall be protected under these Regulations."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 The protection of software copyright under these Regulations shall not extend to the ideas, processing procedures, methods of operation, or mathematical concepts used in the development of the software."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 A software copyright owner may apply for registration with a software registration institution recognized by the copyright administration department under the State Council. The registration certificate issued by the software registration institution shall be prima facie evidence of the matters registered.\nFees shall be paid for software registration. The fee standards for software registration shall be prescribed by the copyright administration department under the State Council jointly with the competent pricing department under the State Council."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 A software copyright owner shall enjoy the following rights:\n(1) the right of publication, i.e., the right to decide whether to make the software public;\n(2) the right of authorship, i.e., the right to indicate the developer's identity and to affix his or her name on the software;\n(3) the right of modification, i.e., the right to supplement, delete, or change the order of instructions or statements in the software;\n(4) the right of reproduction, i.e., the right to make one or more copies of the software;\n(5) the right of distribution, i.e., the right to provide the original or copies of the software to the public by means of sale or gift;\n(6) the right of rental, i.e., the right to license others to temporarily use the software for a fee, except where the software is not the main subject of the rental;\n(7) the right of information network dissemination, i.e., the right to provide the software to the public by wire or wireless means, enabling the public to obtain the software at a time and place individually chosen;\n(8) the right of translation, i.e., the right to convert the original software from one natural language into another;\n(9) other rights that shall be enjoyed by the software copyright owner.\nA software copyright owner may license others to exercise his or her software copyright and shall be entitled to receive remuneration.\nA software copyright owner may transfer all or part of his or her software copyright and shall be entitled to receive remuneration."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 The copyright in software shall belong to the software developer, unless otherwise provided in these Regulations.\nIn the absence of proof to the contrary, the natural person, legal person, or other organization whose name is affixed on the software shall be deemed to be the developer."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 The ownership of copyright in software developed jointly by two or more natural persons, legal persons, or other organizations shall be stipulated in a written contract signed by the joint developers. In the absence of a written contract or where the contract does not explicitly stipulate the ownership, if the jointly developed software can be used separately, each developer may independently enjoy copyright in the part developed by himself or herself; however, the exercise of such copyright shall not extend to the copyright in the jointly developed software as a whole. If the jointly developed software cannot be used separately, the copyright shall be jointly owned by all the joint developers and exercised by consensus; if consensus cannot be reached and there is no legitimate reason, none of the parties may prevent the other parties from exercising rights other than the right of transfer, provided that the proceeds arising therefrom shall be reasonably distributed among all the joint developers."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 The ownership of copyright in software developed under commission shall be stipulated in a written contract signed by the commissioning party and the commissioned party; in the absence of a written contract or where the contract does not explicitly stipulate the ownership, the copyright shall be owned by the commissioned party."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 The ownership and exercise of copyright in software developed under a task assigned by a state organ shall be stipulated in the project task document or contract; if the project task document or contract does not explicitly stipulate the ownership, the software copyright shall be owned by the legal person or other organization that undertook the task."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 Where a natural person, during his or her period of employment in a legal person or other organization, develops software under any of the following circumstances, the copyright in such software shall be owned by the legal person or other organization, and the legal person or other organization may give rewards to the natural person who developed the software:\n(1) the software is developed in pursuance of a development goal explicitly specified in the scope of his or her job duties;\n(2) the software developed is a predictable or natural result of his or her job duties;\n(3) the software is developed mainly by using the material and technical conditions, such as funds, specialized equipment, and undisclosed specialized information, of the legal person or other organization, and the legal person or other organization assumes responsibility for the software."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Software copyright shall arise from the date on which the software development is completed.\nThe term of protection of software copyright of a natural person shall be the lifetime of the natural person and 50 years after his or her death, expiring on December 31 of the 50th year after the death of the natural person; where the software is jointly developed, it shall expire on December 31 of the 50th year after the death of the last surviving natural person.\nThe term of protection of software copyright of a legal person or other organization shall be 50 years, expiring on December 31 of the 50th year after the first publication of the software; however, if the software has not been published within 50 years from the date on which its development is completed, it shall no longer be protected under these Regulations."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 Where the software copyright belongs to a natural person, after the death of the natural person, within the term of protection of the software copyright, the successor of the software copyright may, in accordance with the relevant provisions of the Succession Law of the People's Republic of China, inherit the rights provided for in Article 8 of these Regulations, other than the right of authorship.\nWhere the software copyright belongs to a legal person or other organization, after the change or termination of the legal person or other organization, the copyright shall, within the term of protection provided for in these Regulations, be owned by the legal person or other organization that succeeds to its rights and obligations; if there is no legal person or other organization that succeeds to its rights and obligations, the copyright shall be owned by the State."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 The owner of a lawful copy of software shall enjoy the following rights:\n(1) to install the software into a computer or other device with information processing capability as necessary for use;\n(2) to make backup copies to prevent damage to the copy; such backup copies shall not be provided to others for use in any manner, and when the owner loses ownership of the lawful copy, he or she shall be responsible for destroying the backup copies;\n(3) to make necessary modifications to the software for the purpose of applying it to an actual computer application environment or improving its functions or performance; however, unless otherwise agreed in the contract, the modified software shall not be provided to any third party without the permission of the software copyright owner."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 Where software is used by means of installation, display, transmission, or storage for the purpose of studying and researching the design ideas and principles embodied in the software, such use may be done without the permission of, and without payment of remuneration to, the software copyright owner."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 Where a software copyright owner licenses another person to exercise the software copyright, a license agreement shall be concluded.\nAny right not explicitly licensed by the software copyright owner in the license agreement shall not be exercised by the licensee."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 Where a software copyright owner licenses another person to exclusively exercise the software copyright, the parties shall conclude a written contract.\nIf no written contract is concluded or the contract does not explicitly stipulate that the license is exclusive, the rights licensed to be exercised shall be deemed non-exclusive rights."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Where a software copyright is transferred, the parties shall conclude a written contract."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 The parties that conclude a license contract for exclusive exercise of software copyright or a contract for transfer of software copyright may register with a software registration institution recognized by the copyright administration department under the State Council."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Where a Chinese citizen, legal person, or other organization licenses or transfers software copyright to a foreigner, it shall comply with the relevant provisions of the Regulations of the People's Republic of China on Administration of Import and Export of Technologies."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Except as otherwise provided in the Copyright Law of the People's Republic of China or these Regulations, anyone who commits any of the following acts of infringement shall, depending on the circumstances, bear civil liability for cessation of the infringement, elimination of the adverse effects, making an apology, and compensating for losses:\n(1) publishing or registering the software without the permission of the software copyright owner;\n(2) publishing or registering another person's software as one's own;\n(3) publishing or registering software jointly developed with another person as one's own independently completed software without the permission of the co-developer;\n(4) affixing one's name on another person's software or altering the name affixed on another person's software;\n(5) modifying or translating the software without the permission of the software copyright owner;\n(6) other acts of infringing upon software copyright."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Except as otherwise provided in the Copyright Law of the People's Republic of China, these Regulations, or other laws or administrative regulations, anyone who, without the permission of the software copyright owner, commits any of the following acts of infringement shall, depending on the circumstances, bear civil liability for cessation of the infringement, elimination of the adverse effects, making an apology, and compensating for losses; if the act also harms the public interest, the copyright administration department shall order the cessation of the infringing act, confiscate the illegal gains, confiscate and destroy the infringing copies, and may impose a fine concurrently; if the circumstances are serious, the copyright administration department may also confiscate the materials, tools, and equipment mainly used for making the infringing copies; if the act constitutes a crime, criminal liability shall be investigated in accordance with the provisions of the Criminal Law on the crime of infringing copyright and the crime of selling infringing copies:\n(1) reproducing or partially reproducing the software of the copyright owner;\n(2) distributing, renting, or disseminating the software of the copyright owner to the public through an information network;\n(3) intentionally circumventing or destroying the technical measures adopted by the copyright owner to protect his or her software copyright;\n(4) intentionally deleting or altering the electronic information on rights management in the software;\n(5) transferring or licensing others to exercise the software copyright of the copyright owner.\nWhere the act falls under item (1) or (2) of the preceding paragraph, a fine of not less than 100 yuan per piece or not less than one time and not more than five times the value of the goods may be imposed concurrently; where the act falls under item (3), (4), or (5) of the preceding paragraph, a fine of not more than 200,000 yuan may be imposed concurrently."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 The amount of compensation for infringement of software copyright shall be determined in accordance with the provisions of Article 49 of the Copyright Law of the People's Republic of China."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 Where a software copyright owner has evidence to prove that another person is committing or is about to commit an act infringing upon his or her rights, and that if such act is not stopped promptly, his or her lawful rights and interests will suffer irreparable harm, he or she may, in accordance with the provisions of Article 50 of the Copyright Law of the People's Republic of China, apply to the People's Court for an order to stop the relevant act and for property preservation before instituting legal proceedings."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 For the purpose of stopping an infringing act, if the evidence may be lost or becomes difficult to obtain later, the software copyright owner may, in accordance with the provisions of Article 51 of the Copyright Law of the People's Republic of China, apply to the People's Court for evidence preservation before instituting legal proceedings."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 If the publisher or producer of a software copy cannot prove that its publication or production is legally authorized, or if the distributor or lessor of a software copy cannot prove that the copy distributed or leased has a lawful source, they shall bear legal liability."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 Where software developed by a software developer is similar to an existing software due to the limited availability of expression forms, it shall not constitute an infringement of the copyright of the existing software."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 Where the holder of a software copy does not know and has no reasonable ground to know that such copy is an infringing copy, he or she shall not bear liability for compensation; however, he or she shall cease using and destroy such infringing copy. If ceasing the use and destroying the infringing copy would cause significant losses to the user of the copy, the user may continue to use it after paying a reasonable fee to the software copyright owner."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 Disputes over infringement of software copyright may be mediated.\nDisputes over software copyright contracts may be submitted to an arbitration institution for arbitration in accordance with the arbitration clause in the contract or a written arbitration agreement reached afterwards.\nIf the parties have not included an arbitration clause in the contract and have not reached a written arbitration agreement afterwards, they may directly institute legal proceedings with the People's Court."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 Infringing acts committed before the coming into force of these Regulations shall be dealt with in accordance with the relevant provisions of the State in effect at the time when the infringing acts were committed."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 These Regulations shall come into force as of January 1, 2002. The Regulations on the Protection of Computer Software promulgated by the State Council on June 4, 1991 shall be abolished simultaneously."
     }
   ]
 }

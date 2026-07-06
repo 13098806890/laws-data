@@ -5,63 +5,63 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 These Measures are formulated to regulate the arbitration fees charged by arbitration commissions."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 When a party applies for arbitration, it shall pay arbitration fees to the arbitration commission in accordance with these Measures. Arbitration fees include case acceptance fees and case handling fees."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 Case acceptance fees shall be used for paying remuneration to arbitrators and for necessary expenses to maintain the normal operation of the arbitration commission."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 The applicant shall, within 15 days from the date of receipt of the notice of acceptance of the arbitration case from the arbitration commission, prepay the case acceptance fee in accordance with the Arbitration Case Acceptance Fee Schedule. When the respondent files a counterclaim, it shall also prepay the case acceptance fee in accordance with the Arbitration Case Acceptance Fee Schedule.\nThe specific standards for case acceptance fees shall be determined by the arbitration commission within the range specified in the Arbitration Case Acceptance Fee Schedule, and shall be submitted to the price administration department of the people's government of the province, autonomous region, or municipality directly under the Central Government where the arbitration commission is located for approval."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 The amount in dispute in the Arbitration Case Acceptance Fee Schedule shall be based on the amount claimed by the applicant; if the claimed amount is inconsistent with the actual amount in dispute, the actual amount in dispute shall prevail.\nIf the amount in dispute is not determined when applying for arbitration, the arbitration commission shall determine the amount of case acceptance fee to be collected in advance based on the specific circumstances of the rights and interests involved in the dispute."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 If a party genuinely has difficulty in prepaying the case acceptance fee, the party may submit an application and, with the approval of the arbitration commission, may defer payment.\nIf a party fails to prepay the case acceptance fee within the time limit specified in paragraph 1 of Article 4 of these Measures and does not apply for deferment, it shall be deemed to have withdrawn the arbitration application."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 Case handling fees include:\n(1) accommodation, meals, transportation, and other reasonable expenses incurred by arbitrators for travel and hearings in handling arbitration cases;\n(2) accommodation, meals, transportation, and compensation for lost working time incurred by witnesses, expert evaluators, interpreters, etc. for appearing in court;\n(3) fees for consultation, expert evaluation, inspection, translation, etc.;\n(4) fees for copying and serving case materials and documents;\n(5) other reasonable expenses that shall be borne by the parties.\nThe case handling fees specified in items (2) and (3) of this Article shall be prepaid by the party making the application."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 The charging standards for case handling fees shall be implemented in accordance with the relevant provisions of the State; where there are no such provisions, the fees shall be collected based on reasonable actual expenses."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Arbitration fees shall in principle be borne by the losing party; if a party partially wins and partially loses, the arbitral tribunal shall determine the proportion of arbitration fees to be borne by each party based on their respective responsibilities. If the parties reach a settlement on their own or the case is concluded through mediation by the arbitral tribunal, the parties may negotiate and determine the proportion of arbitration fees to be borne by each party.\nThe arbitral tribunal shall specify in the mediation statement or arbitral award the amount of arbitration fees that both parties shall ultimately pay."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 In accordance with Article 61 of the Arbitration Law, if the arbitral tribunal agrees to re-arbitration, the arbitration commission shall not collect the case acceptance fee again.\nIf the arbitral tribunal makes corrections according to law to clerical or computational errors in the arbitral award or matters that have been decided but omitted from the arbitral award, no fee shall be charged."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 If the applicant, after written notice, fails to appear in court without justifiable reasons or leaves the hearing without the permission of the arbitral tribunal, it may be deemed to have withdrawn the arbitration application, and the case acceptance fee and handling fee shall not be refunded."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 After the arbitration commission accepts the arbitration application but before the formation of the arbitral tribunal, if the applicant withdraws the arbitration application, or the parties reach a settlement agreement on their own and withdraw the arbitration application, the case acceptance fee shall be fully refunded.\nAfter the formation of the arbitral tribunal, if the applicant withdraws the arbitration application or the parties reach a settlement agreement on their own and withdraw the arbitration application, part of the case acceptance fee shall be refunded as appropriate based on the actual circumstances."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 The provisions of Articles 5 and 12 of these Measures shall apply mutatis mutandis to the case where the respondent files a counterclaim."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 When collecting arbitration case acceptance fees, the arbitration commission shall use fee receipts uniformly printed by the finance department of the people's government of the province, autonomous region, or municipality directly under the Central Government, and shall, in accordance with the relevant provisions of the State, establish and improve the financial accounting system, strengthen financial and revenue-expenditure management, and accept supervision from departments of finance, audit, taxation, pricing, etc."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 These Measures shall come into force as of September 1, 1995.\nAttachment:\nSchedule of Arbitration Case Acceptance Fees of the Arbitration Commission\nAmount in Dispute (RMB) Case Acceptance Fee (RMB)\nNot exceeding 1,000 yuan 40-100 yuan\nFrom 1,001 to 50,000 yuan 4%-5%\nFrom 50,001 to 100,000 yuan 3%-4%\nFrom 100,001 to 200,000 yuan 2%-3%\nFrom 200,001 to 500,000 yuan 1%-2%\nFrom 500,001 to 1,000,000 yuan 0.5%-1%\nOver 1,000,000 yuan 0.25%-0.5%"
     }
   ]
 }

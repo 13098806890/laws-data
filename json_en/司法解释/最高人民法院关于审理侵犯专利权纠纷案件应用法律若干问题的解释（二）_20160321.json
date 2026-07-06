@@ -5,127 +5,127 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 Where a patent claim has two or more claims, the right holder shall specify in the statement of claim the claim on which the prosecution is based against the alleged infringer for infringement of the patent right. If the statement of claim fails to record or unclearly records this, the People's Court shall require the right holder to clarify. If the right holder still fails to clarify after explanation, the People's Court may rule to reject the prosecution."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 If the claim asserted by the right holder in a patent infringement action is declared invalid by the Patent Reexamination Board, the People's Court handling the dispute over infringement of a patent right may rule to reject the prosecution based on the invalid claim.\nIf there is evidence proving that the decision declaring the aforesaid claim invalid is revoked by an effective administrative judgment, the right holder may separately file a prosecution.\nIf the patentee separately files a prosecution, the limitation of action shall be calculated from the date of service of the administrative judgment referred to in the second paragraph of this Article."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 If the specification cannot be used to interpret the claims due to an obvious violation of Article 26, paragraphs 3 and 4 of the Patent Law, and the circumstances do not fall under the circumstances specified in Article 4 of this Interpretation, and thus the patent right is requested to be declared invalid, the People's Court handling the dispute over infringement of a patent right shall generally rule to suspend the action; if the patent right is not requested to be declared invalid within a reasonable period, the People's Court may determine the scope of protection of the patent right based on the records in the claims."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 If there are ambiguities in grammar, words, punctuation, graphics, symbols, etc., in the claims, specification, and drawings, but a person of ordinary skill in the art can reach a unique understanding by reading the claims, specification, and drawings, the People's Court shall make determination based on that unique understanding."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 When the People's Court determines the scope of protection of a patent right, the technical features recorded in the preamble part and the characterizing part of an independent claim, as well as the reference part and the limiting part of a dependent claim, shall all have a limiting effect."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 The People's Court may use other patents that have a divisional application relationship with the patent involved in the case, and their patent examination files, as well as effective judicial decisions on patent grant and validation, to interpret the claims of the patent involved in the case.\nPatent examination files include written materials submitted by the patent applicant or patentee in patent examination, reexamination, and invalidation procedures, examination opinion notices, meeting records, oral hearing records, effective patent reexamination request examination decisions, and patent invalidation request examination decisions, etc., made by the patent administrative department of the State Council and its Patent Reexamination Board."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 If the alleged infringing technical solution adds other technical features on the basis of including all the technical features of a closed composition claim, the People's Court shall determine that the alleged infringing technical solution does not fall within the scope of protection of the patent right, unless the added technical features are routine inevitable quantitative impurities.\nThe closed composition claim referred to in the preceding paragraph generally does not include claims for traditional Chinese medicine compositions."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 Functional features refer to technical features that define structure, components, steps, conditions, or their relationships by the functions or effects they perform in the invention-creation, unless a person of ordinary skill in the art can directly and clearly determine the specific implementation manner for realizing the aforesaid functions or effects merely by reading the claims.\nIf, compared with the technical features indispensable for realizing the functions or effects referred to in the preceding paragraph as recorded in the specification and drawings, the corresponding technical features of the alleged infringing technical solution achieve the same function and the same effect by substantially the same means, and a person of ordinary skill in the art could have conceived of them without creative work at the time of the alleged infringing act, the People's Court shall determine that the corresponding technical features are identical or equivalent to the functional features."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 If the alleged infringing technical solution cannot be applied to the use environment defined by the use environment feature in the claim, the People's Court shall determine that the alleged infringing technical solution does not fall within the scope of protection of the patent right."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 For a technical feature of a product defined by a preparation method in a claim, if the preparation method of the alleged infringing product is neither identical nor equivalent to it, the People's Court shall determine that the alleged infringing technical solution does not fall within the scope of protection of the patent right."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 If a method claim does not explicitly record the order of the technical steps, but a person of ordinary skill in the art, after reading the claims, specification, and drawings, directly and clearly considers that the technical steps should be performed in a specific order, the People's Court shall determine that the order of the steps has a limiting effect on the scope of protection of the patent right."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 If a claim uses expressions such as \"at least,\" \"not exceeding,\" etc., to define a numerical feature, and a person of ordinary skill in the art, after reading the claims, specification, and drawings, considers that the patented technical solution particularly emphasizes the limiting effect of such expressions on the technical feature, and the right holder asserts that a different numerical feature is an equivalent feature, the People's Court shall not support such assertion."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 If the right holder proves that the patent applicant or patentee's limiting amendment or statement made during the patent grant and validation proceedings with respect to the claims, specification, and drawings has been explicitly denied, the People's Court shall determine that such amendment or statement has not resulted in the abandonment of the technical solution."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 When determining the level of knowledge and cognitive ability of an ordinary consumer with respect to a design, the People's Court shall generally consider the design space of products of the same or similar type to which the granted design pertains at the time of the alleged infringing act. If the design space is large, the People's Court may determine that an ordinary consumer usually does not easily notice minor differences between different designs; if the design space is small, the People's Court may determine that an ordinary consumer usually more easily notices minor differences between different designs."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 For a design patent for a set of products, if the alleged infringing design is identical or similar to one of its designs, the People's Court shall determine that the alleged infringing design falls within the scope of protection of the patent right."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 For a design patent for a component product with a unique assembly relationship, if the alleged infringing design is identical or similar to the design in its assembled state, the People's Court shall determine that the alleged infringing design falls within the scope of protection of the patent right.\nFor a design patent for a component product where there is no assembly relationship among the components or the assembly relationship is not unique, if the alleged infringing design is identical or similar to all the designs of the individual components, the People's Court shall determine that the alleged infringing design falls within the scope of protection of the patent right; if the alleged infringing design lacks the design of an individual component or is neither identical nor similar to it, the People's Court shall determine that the alleged infringing design does not fall within the scope of protection of the patent right."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 For a design patent for a product with variable states, if the alleged infringing design is identical or similar to the designs shown in the various states of use in the state-of-use drawings, the People's Court shall determine that the alleged infringing design falls within the scope of protection of the patent right; if the alleged infringing design lacks the design of one state of use or is neither identical nor similar to it, the People's Court shall determine that the alleged infringing design does not fall within the scope of protection of the patent right."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 If the right holder, pursuant to Article 13 of the Patent Law, files a lawsuit requesting a reasonable fee from the entity or individual that implemented the invention during the period from the publication date of the patent application to the announcement date of the patent grant, the People's Court may reasonably determine the fee by reference to the patent license fee.\nIf the scope of protection requested by the applicant at the time of publication of the patent application for invention is inconsistent with the scope of protection of the patent right at the time of announcement and grant of the patent for invention, and the alleged technical solution falls within both scopes, the People's Court shall determine that the defendant implemented the invention during the period referred to in the preceding paragraph; if the alleged technical solution falls within only one of the scopes, the People's Court shall determine that the defendant did not implement the invention during the period referred to in the preceding paragraph.\nAfter the announcement and grant of the patent for invention, if, without the permission of the patentee, for production and business purposes, a person uses, offers to sell, or sells a product that was manufactured, sold, or imported by another person during the period referred to in the first paragraph of this Article, and that other person has paid or made a written commitment to pay the reasonable fee specified in Article 13 of the Patent Law, the People's Court shall not support the right holder's claim that the aforesaid use, offer to sell, or sale infringes the patent right."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 If a product sales contract is established according to law, the People's Court shall determine that it constitutes a sale as specified in Article 11 of the Patent Law."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 If further processing or treatment of a subsequent product obtained by further processing or treating a product directly obtained by the patented method, the People's Court shall determine that it does not constitute \"use of the product directly obtained by the patented method\" as specified in Article 11 of the Patent Law."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 If a person knows that a product is specifically used for implementing a patent, such as materials, equipment, parts, intermediates, etc., and without the permission of the patentee, for production and business purposes, provides the product to another person who has committed an act of infringing the patent right, and the right holder claims that the act of the provider constitutes assisting another person in committing an infringing act as specified in Article 9 of the Tort Liability Law, the People's Court shall support the claim.\nIf a person knows that a product or method is granted a patent right, and without the permission of the patentee, for production and business purposes, actively induces another person to commit an act of infringing the patent right, and the right holder claims that the act of the inducer constitutes instigating another person to commit an infringing act as specified in Article 9 of the Tort Liability Law, the People's Court shall support the claim."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 For a prior art defense or prior design defense asserted by the alleged infringer, the People's Court shall define the prior art or prior design in accordance with the Patent Law in force at the time of the patent application date."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 If the alleged infringing technical solution or design falls within the scope of protection of the prior patent right involved, and the alleged infringer defends that it does not infringe the patent right involved on the ground that its technical solution or design has been granted a patent right, the People's Court shall not support such defense."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 If a recommended national, industry, or local standard explicitly discloses information on the essential patents involved, and the alleged infringer defends that it does not infringe the patent right on the ground that implementing the standard does not require permission from the patentee, the People's Court shall generally not support such defense.\nIf a recommended national, industry, or local standard explicitly discloses information on the essential patents involved, and during the negotiation of the implementation license conditions for the patent between the patentee and the alleged infringer, the patentee intentionally violates the fair, reasonable, and non-discriminatory licensing obligation it committed during the standard-setting process, resulting in the failure to reach a patent implementation license contract, and the alleged infringer has no obvious fault in the negotiation, the People's Court shall generally not support the right holder's claim to stop the standard implementation act.\nThe implementation license conditions referred to in the second paragraph of this Article shall be negotiated by the patentee and the alleged infringer. If, after full negotiation, an agreement still cannot be reached, the parties may request the People's Court to determine them. When determining the aforesaid implementation license conditions, the People's Court shall, in accordance with the principle of fairness, reasonableness, and non-discrimination, comprehensively consider factors such as the degree of innovation of the patent and its role in the standard, the technical field to which the standard belongs, the nature of the standard, the scope of implementation of the standard, and relevant licensing conditions.\nIf laws or administrative regulations have other provisions on the implementation of patents in standards, those provisions shall prevail."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 If a person, for production and business purposes, uses, offers to sell, or sells a patented infringing product that was manufactured and sold without the permission of the patentee and without knowing it, and proves the lawful source of the product, the People's Court shall support the right holder's claim to stop the aforesaid use, offer to sell, or sale, unless the user of the alleged infringing product proves that it has paid a reasonable consideration for the product.\nThe term \"without knowing\" in the first paragraph of this Article means that the person actually did not know and should not have known.\nThe term \"lawful source\" in the first paragraph of this Article means that the product was obtained through a normal commercial manner, such as a lawful sales channel or a usual sales contract. For the lawful source, the user, offeror, or seller shall provide relevant evidence consistent with trade practices."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 If the defendant constitutes infringement of the patent right, and the right holder requests a court order to stop the infringing act, the People's Court shall support the claim, unless, based on considerations of national interest or public interest, the People's Court may not order the defendant to stop the alleged act and instead order it to pay corresponding reasonable expenses."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 If the actual losses suffered by the right holder due to the infringement are difficult to determine, the People's Court shall, in accordance with the provisions of Article 65, paragraph 1 of the Patent Law, require the right holder to provide evidence of the profits obtained by the infringer from the infringement; if the right holder has provided preliminary evidence of the profits obtained by the infringer, and the account books and materials related to the patent infringement are mainly in the possession of the infringer, the People's Court may order the infringer to provide such account books and materials; if the infringer, without justifiable reasons, refuses to provide or provides false account books and materials, the People's Court may determine the profits obtained by the infringer from the infringement based on the right holder's claims and the evidence provided."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 If the right holder and the infringer have lawfully agreed on the amount of damages or the method of calculating damages for patent infringement and assert in the patent infringement action that the damages shall be determined in accordance with such agreement, the People's Court shall support the claim."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 After a decision declaring the patent right invalid is made, if a party, based on that decision, applies for a retrial according to law and requests the revocation of a judgment or mediation statement on patent infringement made by the People's Court before the declaration of invalidity of the patent right but not yet enforced, the People's Court may rule to suspend the retrial review and suspend the enforcement of the original judgment or mediation statement.\nIf the patentee provides sufficient and effective security to the People's Court and requests continued enforcement of the judgment or mediation statement referred to in the preceding paragraph, the People's Court shall continue enforcement; if the infringer provides sufficient and effective counter-security to the People's Court and requests suspension of enforcement, the People's Court shall grant the request. If the effective judgment of the People's Court does not revoke the decision declaring the patent right invalid, the patentee shall compensate for the losses caused to the other party by the continued enforcement; if the decision declaring the patent right invalid is revoked by an effective judgment of the People's Court and the patent right remains valid, the People's Court may directly enforce the aforesaid counter-security property based on the judgment or mediation statement referred to in the preceding paragraph."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 If, within the statutory period, a party does not file a lawsuit with the People's Court against a decision declaring the patent right invalid, or after filing a lawsuit, the effective judgment does not revoke the decision, and the party, based on that decision, applies for a retrial according to law and requests the revocation of a judgment or mediation statement on patent infringement made by the People's Court before the declaration of invalidity of the patent right but not yet enforced, the People's Court shall conduct a retrial. If the party, based on that decision, applies according to law for the termination of enforcement of a judgment or mediation statement on patent infringement made by the People's Court before the declaration of invalidity of the patent right but not yet enforced, the People's Court shall rule to terminate enforcement."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 This Interpretation shall come into force as of April 1, 2016. If any relevant judicial interpretation previously issued by the Supreme People's Court is inconsistent with this Interpretation, this Interpretation shall prevail."
     }
   ]
 }

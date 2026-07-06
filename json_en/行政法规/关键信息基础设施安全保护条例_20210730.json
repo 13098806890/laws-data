@@ -5,207 +5,207 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 These Regulations are formulated in accordance with the Cybersecurity Law of the People's Republic of China to ensure the security of critical information infrastructure and safeguard cybersecurity."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 For the purposes of these Regulations, critical information infrastructure refers to important network facilities and information systems in important industries and fields such as public communication and information services, energy, transportation, water conservancy, finance, public services, e-government, national defense science, technology, and industry, and others that, once damaged, lose functionality, or have data leakage, may seriously endanger national security, the national economy, people's livelihood, and public interest."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 Under the overall coordination of the national cyberspace administration department, the public security department of the State Council shall be responsible for guiding and supervising the security protection of critical information infrastructure. The telecommunications authority of the State Council and other relevant departments shall, in accordance with these Regulations and the provisions of relevant laws and administrative regulations, be responsible for the security protection and supervision of critical information infrastructure within their respective functions and duties.\nThe relevant departments of provincial people's governments shall carry out security protection and supervision of critical information infrastructure pursuant to their respective functions and duties."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 The security protection of critical information infrastructure shall adhere to comprehensive coordination, division of responsibilities, and protection according to law, strengthen and implement the primary responsibility of operators of critical information infrastructure (hereinafter referred to as operators), and fully leverage the roles of the government and all sectors of society to jointly protect the security of critical information infrastructure."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 The State shall provide focused protection to critical information infrastructure, take measures to monitor, defend against, and handle cybersecurity risks and threats originating from within and outside the territory of the People's Republic of China, protect critical information infrastructure from attacks, intrusions, interference, and destruction, and punish, according to law, illegal and criminal activities that endanger the security of critical information infrastructure.\nNo individual or organization shall engage in activities such as illegal intrusion, interference, or destruction of critical information infrastructure, or endanger the security of critical information infrastructure."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 Operators shall, in accordance with these Regulations and the provisions of relevant laws and administrative regulations as well as mandatory requirements of national standards, and on the basis of cybersecurity classified protection, take technical protection measures and other necessary measures to respond to cybersecurity incidents, prevent network attacks and illegal and criminal activities, ensure the secure and stable operation of critical information infrastructure, and maintain the integrity, confidentiality, and availability of data."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 Units and individuals that have achieved notable results or made outstanding contributions in the work of critical information infrastructure security protection shall be commended in accordance with the relevant provisions of the State."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 The competent departments and regulatory departments of the important industries and fields mentioned in Article 2 of these Regulations shall be the departments responsible for the security protection of critical information infrastructure (hereinafter referred to as protection work departments)."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Protection work departments shall, based on the actual conditions of their respective industries and fields, formulate rules for the identification of critical information infrastructure and report them to the public security department of the State Council for recordation.\nThe following factors shall mainly be considered in formulating identification rules:\n(1) the importance of network facilities, information systems, etc. to the key core businesses of the industry or field;\n(2) the degree of harm that may be caused if network facilities, information systems, etc. are damaged, lose functionality, or suffer data leakage;\n(3) the impact on other industries and fields by association."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Protection work departments shall be responsible for organizing the identification of critical information infrastructure in their respective industries and fields in accordance with the identification rules, promptly notify operators of the identification results, and report them to the public security department of the State Council."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 Where a critical information infrastructure undergoes significant changes that may affect its identification result, the operator shall promptly report the relevant circumstances to the protection work department. The protection work department shall complete re-identification within three months from the date of receipt of the report, notify the operator of the identification result, and report it to the public security department of the State Council."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Security protection measures shall be planned, constructed, and used synchronously with the critical information infrastructure."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 Operators shall establish and improve cybersecurity protection systems and responsibility systems, and ensure the input of human, financial, and material resources. The principal head of an operator shall assume overall responsibility for the security protection of critical information infrastructure, lead the work of security protection of critical information infrastructure and the handling of major cybersecurity incidents, and organize the research and resolution of major cybersecurity issues."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Operators shall set up a dedicated security management department, and conduct security background checks on the head of the dedicated security management department and personnel in key positions. When conducting the checks, the public security organs and the state security organs shall provide assistance."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 The dedicated security management department shall be specifically responsible for the security protection of the critical information infrastructure of its own unit, and perform the following duties:\n(1) establish and improve network security management and evaluation and assessment systems, and draft plans for the security protection of critical information infrastructure;\n(2) organize and promote the building of network security protection capabilities, and carry out network security monitoring, testing, and risk assessment;\n(3) formulate emergency response plans for its own unit in accordance with the national and industry emergency response plans for cybersecurity incidents, regularly conduct emergency drills, and handle cybersecurity incidents;\n(4) identify key positions in network security, organize and conduct network security work assessments, and propose recommendations for rewards and punishments;\n(5) organize network security education and training;\n(6) fulfill the responsibility for the protection of personal information and data security, and establish and improve personal information and data security protection systems;\n(7) implement security management over services such as the design, construction, operation, and maintenance of critical information infrastructure;\n(8) report cybersecurity incidents and important matters according to regulations."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 Operators shall ensure the operating funds for the dedicated security management department and equip it with appropriate personnel. When making decisions related to network security and informatization, personnel from the dedicated security management department shall participate."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 Operators shall conduct, by themselves or by entrusting a network security service institution, a network security test and risk assessment on the critical information infrastructure at least once a year, timely rectify the discovered security problems, and report the relevant information as required by the protection work department."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 When a major cybersecurity incident occurs in a critical information infrastructure or a major cybersecurity threat is discovered, the operator shall report to the protection work department and the public security organ in accordance with the relevant provisions.\nWhen a particularly major cybersecurity incident such as the complete interruption of operation or failure of main functions of a critical information infrastructure, leakage of national basic information and other important data, large-scale leakage of personal information, causing relatively large economic losses, or wide dissemination of illegal information occurs, or a particularly major cybersecurity threat is discovered, the protection work department shall, after receiving the report, promptly report to the national cyberspace administration department and the public security department of the State Council."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 Operators shall give priority to purchasing secure and trustworthy network products and services; where the purchase of network products and services may affect national security, they shall undergo a security review in accordance with the national cybersecurity regulations."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Operators purchasing network products and services shall, in accordance with the relevant provisions of the State, enter into security and confidentiality agreements with the network product and service providers, specifying the providers' technical support and security and confidentiality obligations and responsibilities, and supervise the performance of such obligations and responsibilities."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 When an operator undergoes merger, division, dissolution, or other circumstances, it shall promptly report to the protection work department and dispose of the critical information infrastructure as required by the protection work department to ensure security."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Protection work departments shall formulate security plans for critical information infrastructure in their respective industries and fields, specifying protection objectives, basic requirements, work tasks, and specific measures."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 The national cyberspace administration department shall coordinate with relevant departments to establish a network security information sharing mechanism, timely collect, analyze, share, and publish information on cybersecurity threats, vulnerabilities, incidents, etc., and promote network security information sharing among relevant departments, protection work departments, operators, and network security service institutions."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Protection work departments shall establish and improve a network security monitoring and early warning system for critical information infrastructure in their respective industries and fields, timely grasp the operation status and security situation of critical information infrastructure in their industries and fields, issue early warnings and notifications on cybersecurity threats and risks, and provide guidance on security prevention work."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 Protection work departments shall, in accordance with the requirements of the national emergency response plan for cybersecurity incidents, establish and improve emergency response plans for cybersecurity incidents in their respective industries and fields, and regularly organize emergency drills; guide operators in the response and handling of cybersecurity incidents, and organize the provision of technical support and assistance as needed."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 Protection work departments shall regularly organize and carry out network security inspection and testing of critical information infrastructure in their respective industries and fields, and guide and supervise operators to timely rectify security risks and improve security measures."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 The national cyberspace administration department shall coordinate with the public security department of the State Council and protection work departments to carry out network security inspection and testing of critical information infrastructure and propose improvement measures.\nWhen carrying out network security inspections of critical information infrastructure, the relevant departments shall strengthen coordination and information communication, and avoid unnecessary inspections and repeated inspections. The inspection work shall not charge fees, and shall not require the inspected unit to purchase products and services of specified brands or from specified manufacturers or sellers."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Operators shall cooperate with the network security inspection and testing work carried out by protection work departments on critical information infrastructure, as well as the network security inspection work on critical information infrastructure carried out by public security, state security, confidentiality administration, cryptology management, and other relevant departments according to law."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 In the work of critical information infrastructure security protection, the national cyberspace administration department, the telecommunications authority of the State Council, the public security department of the State Council, and others shall, based on the needs of protection work departments, promptly provide technical support and assistance."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 The cyberspace administration departments, public security organs, protection work departments, and other relevant departments, as well as network security service institutions and their staff, shall use information obtained in the work of critical information infrastructure security protection only for maintaining network security, and shall strictly ensure information security in accordance with the requirements of relevant laws and administrative regulations, and shall not disclose, sell, or illegally provide it to others."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 Without the approval of the national cyberspace administration department or the public security department of the State Council, or the authorization of the protection work department or the operator, no individual or organization shall carry out activities such as vulnerability detection and penetration testing that may affect or endanger the security of critical information infrastructure. Activities such as vulnerability detection and penetration testing on basic telecommunications networks shall be reported in advance to the telecommunications authority of the State Council."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 The State shall take measures to give priority to ensuring the secure operation of critical information infrastructure such as energy and telecommunications.\nThe energy and telecommunications industries shall take measures to provide key guarantees for the secure operation of critical information infrastructure in other industries and fields."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 The public security organs and the state security organs shall, in accordance with their respective functions and duties, strengthen the security protection of critical information infrastructure according to law, and prevent and combat illegal and criminal activities targeting or using critical information infrastructure."
     },
     {
       "article_number": "第三十四条",
-      "content_en": ""
+      "content_en": "Article 34 The State shall formulate and improve security standards for critical information infrastructure, and guide and regulate the work of critical information infrastructure security protection."
     },
     {
       "article_number": "第三十五条",
-      "content_en": ""
+      "content_en": "Article 35 The State shall take measures to encourage specialized network security talents to engage in the work of critical information infrastructure security protection; and incorporate the training of operators' security management personnel and security technical personnel into the national continuing education system."
     },
     {
       "article_number": "第三十六条",
-      "content_en": ""
+      "content_en": "Article 36 The State shall support innovation in security protection technology and industrial development for critical information infrastructure, and organize efforts to carry out key technology research for critical information infrastructure security."
     },
     {
       "article_number": "第三十七条",
-      "content_en": ""
+      "content_en": "Article 37 The State shall strengthen the construction and management of network security service institutions, formulate management requirements and strengthen supervision and guidance, continuously improve the capability level of service institutions, and fully leverage their role in the security protection of critical information infrastructure."
     },
     {
       "article_number": "第三十八条",
-      "content_en": ""
+      "content_en": "Article 38 The State shall strengthen the civil-military integration of network security, and coordinate military and local efforts to protect the security of critical information infrastructure."
     },
     {
       "article_number": "第三十九条",
-      "content_en": ""
+      "content_en": "Article 39 Where an operator falls under any of the following circumstances, the relevant competent department shall, according to its functions and duties, order correction and give a warning; if the operator refuses to correct or causes consequences such as endangering network security, a fine of not less than RMB 100,000 but not more than RMB 1 million shall be imposed, and a fine of not less than RMB 10,000 but not more than RMB 100,000 shall be imposed on the directly responsible person in charge:\n(1) failing to promptly report the relevant circumstances to the protection work department when the critical information infrastructure undergoes significant changes that may affect its identification result;\n(2) security protection measures are not planned, constructed, and used synchronously with the critical information infrastructure;\n(3) failing to establish and improve cybersecurity protection systems and responsibility systems;\n(4) failing to set up a dedicated security management department;\n(5) failing to conduct security background checks on the head of the dedicated security management department and personnel in key positions;\n(6) making decisions related to network security and informatization without the participation of personnel from the dedicated security management department;\n(7) the dedicated security management department fails to perform the duties stipulated in Article 15 of these Regulations;\n(8) failing to conduct a network security test and risk assessment on the critical information infrastructure at least once a year, failing to timely rectify the discovered security problems, or failing to report the relevant information as required by the protection work department;\n(9) purchasing network products and services without entering into security and confidentiality agreements with the network product and service providers in accordance with the relevant provisions of the State;\n(10) failing to promptly report to the protection work department when undergoing merger, division, dissolution, or other circumstances, or failing to dispose of the critical information infrastructure as required by the protection work department."
     },
     {
       "article_number": "第四十条",
-      "content_en": ""
+      "content_en": "Article 40 Where an operator fails to report to the protection work department or the public security organ in accordance with the relevant provisions when a major cybersecurity incident occurs in a critical information infrastructure or a major cybersecurity threat is discovered, the protection work department or the public security organ shall, according to its functions and duties, order correction and give a warning; if the operator refuses to correct or causes consequences such as endangering network security, a fine of not less than RMB 100,000 but not more than RMB 1 million shall be imposed, and a fine of not less than RMB 10,000 but not more than RMB 100,000 shall be imposed on the directly responsible person in charge."
     },
     {
       "article_number": "第四十一条",
-      "content_en": ""
+      "content_en": "Article 41 Where an operator purchases network products and services that may affect national security without undergoing a security review in accordance with the national cybersecurity regulations, the national cyberspace administration department and other relevant competent departments shall, according to their functions and duties, order correction and impose a fine of not less than one time but not more than ten times the purchase amount, and impose a fine of not less than RMB 10,000 but not more than RMB 100,000 on the directly responsible person in charge and other directly responsible persons."
     },
     {
       "article_number": "第四十二条",
-      "content_en": ""
+      "content_en": "Article 42 Where an operator fails to cooperate with the network security inspection and testing work carried out by protection work departments on critical information infrastructure, or the network security inspection work on critical information infrastructure carried out by public security, state security, confidentiality administration, cryptology management, and other relevant departments according to law, the relevant competent department shall order correction; if the operator refuses to correct, a fine of not less than RMB 50,000 but not more than RMB 500,000 shall be imposed, and a fine of not less than RMB 10,000 but not more than RMB 100,000 shall be imposed on the directly responsible person in charge and other directly responsible persons; if the circumstances are serious, corresponding legal liability shall be investigated according to law."
     },
     {
       "article_number": "第四十三条",
-      "content_en": ""
+      "content_en": "Article 43 Where activities such as illegal intrusion, interference, or destruction of critical information infrastructure endangering its security are committed but do not constitute a crime, the public security organ shall, in accordance with the relevant provisions of the Cybersecurity Law of the People's Republic of China, confiscate the illegal gains, impose detention of not more than five days, and may also impose a fine of not less than RMB 50,000 but not more than RMB 500,000; if the circumstances are relatively serious, impose detention of not less than five days but not more than fifteen days, and may also impose a fine of not less than RMB 100,000 but not more than RMB 1 million.\nWhere a unit commits the act mentioned in the preceding paragraph, the public security organ shall confiscate the illegal gains, impose a fine of not less than RMB 100,000 but not more than RMB 1 million, and impose penalties on the directly responsible person in charge and other directly responsible persons in accordance with the provisions of the preceding paragraph.\nPersons who have been subjected to public security penalties for violating Paragraph 2 of Article 5 and Article 31 of these Regulations shall not engage in network security management and key positions in network operation for five years; persons who have been subjected to criminal penalties shall not engage in network security management and key positions in network operation for life."
     },
     {
       "article_number": "第四十四条",
-      "content_en": ""
+      "content_en": "Article 44 Where the cyberspace administration departments, public security organs, protection work departments, and other relevant departments and their staff fail to perform their duties of security protection and supervision of critical information infrastructure, or are derelict of duty, abuse their power, or engage in malpractices for personal gain, the directly responsible person in charge and other directly responsible persons shall be given sanctions according to law."
     },
     {
       "article_number": "第四十五条",
-      "content_en": ""
+      "content_en": "Article 45 Where public security organs, protection work departments, and other relevant departments charge fees in carrying out network security inspections of critical information infrastructure, or require the inspected unit to purchase products and services of specified brands or from specified manufacturers or sellers, their superior organs shall order correction and refund the fees collected; if the circumstances are serious, the directly responsible person in charge and other directly responsible persons shall be given sanctions according to law."
     },
     {
       "article_number": "第四十六条",
-      "content_en": ""
+      "content_en": "Article 46 Where the cyberspace administration departments, public security organs, protection work departments, and other relevant departments, as well as network security service institutions and their staff, use information obtained in the work of critical information infrastructure security protection for other purposes, or disclose, sell, or illegally provide it to others, the directly responsible person in charge and other directly responsible persons shall be given sanctions according to law."
     },
     {
       "article_number": "第四十七条",
-      "content_en": ""
+      "content_en": "Article 47 Where a major or particularly major cybersecurity incident occurs in a critical information infrastructure and is determined to be a liability accident after investigation, in addition to investigating the liability of the operator and pursuing it according to law, the liability of the relevant network security service institution and relevant departments shall also be investigated, and those with dereliction of duty, malfeasance, or other illegal acts shall be held liable according to law."
     },
     {
       "article_number": "第四十八条",
-      "content_en": ""
+      "content_en": "Article 48 Where an operator of e-government critical information infrastructure fails to perform the network security protection obligations stipulated in these Regulations, it shall be dealt with in accordance with the relevant provisions of the Cybersecurity Law of the People's Republic of China."
     },
     {
       "article_number": "第四十九条",
-      "content_en": ""
+      "content_en": "Article 49 Where a violation of these Regulations causes damage to others, civil liability shall be borne according to law.\nWhere a violation of these Regulations constitutes a public security violation, a public security penalty shall be given according to law; where it constitutes a crime, criminal liability shall be investigated according to law."
     },
     {
       "article_number": "第五十条",
-      "content_en": ""
+      "content_en": "Article 50 The security protection of critical information infrastructure that stores or processes information involving State secrets shall also comply with the provisions of secrecy laws and administrative regulations.\nThe use and management of cryptography in critical information infrastructure shall also comply with the provisions of relevant laws and administrative regulations."
     },
     {
       "article_number": "第五十一条",
-      "content_en": ""
+      "content_en": "Article 51 These Regulations shall come into force as of September 1, 2021."
     }
   ]
 }

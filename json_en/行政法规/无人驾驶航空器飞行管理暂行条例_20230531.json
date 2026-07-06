@@ -5,231 +5,231 @@
   "articles": [
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 The standardization administrative department of the State Council and other relevant departments of the State Council shall, according to their respective functions and duties, organize the formulation of national and industry standards for the design, production and use of civil unmanned aircraft systems."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 A person engaged in the design, production, import, flight and maintenance of medium-sized or large civil unmanned aircraft systems shall apply to the civil aviation主管部门 of the State Council for airworthiness certification according to law.\nA person engaged in the design, production, import, flight, maintenance, assembly and integration of micro, light or small civil unmanned aircraft systems need not obtain airworthiness certification, provided that the relevant products conform to the relevant provisions of laws and regulations on product quality and the relevant compulsory national standards.\nA person engaged in the design, production or use of civil unmanned aircraft systems shall comply with the state provisions on real-name registration activation, flight area restrictions, emergency response, network information security, etc., and take effective measures to reduce the discharge of atmospheric pollutants and noise."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 A producer of civil unmanned aircraft systems shall set a unique product identification code for the unmanned aircraft it produces in accordance with the provisions of the competent industry and information technology department of the State Council.\nA producer of micro, light or small civil unmanned aircraft systems shall mark on the airframe the product type and the unique product identification code and other information, and indicate on the prominent position of the outer package the requirements for lawful operation and risk warnings."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 The owner of a civil unmanned aircraft shall carry out real-name registration according to law. The specific measures shall be formulated by the civil aviation authority of the State Council in conjunction with the relevant departments.\nA civil unmanned aircraft involved in overseas flight shall undergo nationality registration according to law."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 A unit that uses a civil unmanned aircraft other than a micro one to conduct flight activities shall meet the following conditions and apply to the civil aviation authority of the State Council or the regional civil aviation administration (hereinafter collectively referred to as the civil aviation administrative department) for obtaining a civil unmanned aircraft operation certificate (hereinafter referred to as the operation certificate):\n(1) having the management agencies, management personnel and operators that meet the requirements of these Regulations for safe operation;\n(2) having unmanned aircraft and related facilities and equipment that meet the requirements for safe operation;\n(3) having the management systems and operating procedures necessary for safe operation, and ensuring the continuous capability to implement safe operation in accordance with such systems and procedures;\n(4) a unit engaged for-profit activities shall also be a for-profit legal person.\nUpon receipt of an application, the civil aviation administrative department shall conduct an operational safety assessment and, based on the assessment result, make a decision on whether to grant or deny the license according to law. If granted, the operation certificate shall be issued; if denied, the applicant shall be notified in writing and the reasons shall be stated.\nA unit that uses an agricultural unmanned aircraft with a maximum take-off weight not exceeding 150 kilograms to conduct agricultural, forestry, animal husbandry or fishery operation flight activities in the flyable airspace above the agricultural, forestry, animal husbandry or fishery areas (hereinafter referred to as conventional agricultural unmanned aircraft operation flight activities) need not obtain an operation certificate.\nAfter obtaining an operation certificate, a unit that engages in for-profit general aviation flight activities or conducts conventional agricultural unmanned aircraft operation flight activities need not obtain a general aviation business license or a flight operations certificate."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 A person who uses a civil unmanned aircraft to engage in for-profit flight activities, or uses a small, medium-sized or large civil unmanned aircraft to engage in non-profit flight activities, shall take out liability insurance according to law."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 If a defect is found in a micro, light or small civil unmanned aircraft system after being placed on the market, its producer or importer shall stop production and sale, recall the defective product, and notify the relevant operators and users to stop sale and use. If the producer or importer fails to implement the recall according to law, the market supervision and administration department of the State Council shall order the recall according to law.\nIf a medium-sized or large civil unmanned aircraft system fails to continuously maintain airworthiness status, the civil aviation authority of the State Council shall handle it in accordance with the relevant provisions on airworthiness management."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Where a major design change is made to a civil unmanned aircraft system that has obtained an airworthiness certification and it is intended to be used for flight activities, a new application for airworthiness certification shall be submitted.\nWhere a micro, light or small civil unmanned aircraft system is modified, the relevant compulsory national standards shall be complied with. If the airspace holding capability, reliable monitored capability, speed or altitude and other出厂性能 and parameters of the civil unmanned aircraft system change, the owner shall promptly update the performance and parameter information on the integrated unmanned aircraft comprehensive supervision and service platform.\nWhere a civil unmanned aircraft is modified, the management provisions applicable to the category after modification shall be complied with."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 The production, maintenance and use of civil unmanned aircraft systems shall comply with the laws, regulations and relevant state provisions on radio management. However, if a civil unmanned aircraft system uses a specific radio frequency determined by the state radio regulatory authority and the relevant radio transmitting equipment has obtained type approval for radio transmitting equipment, no radio frequency use license or radio station license need be obtained."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 A person who operates a small, medium-sized or large civil unmanned aircraft for flight shall meet the following conditions and apply to the civil aviation authority of the State Council for obtaining the corresponding civil unmanned aircraft operator's license (hereinafter referred to as the operator's license):\n(1) having full civil capacity;\n(2) having received safety operation training and passed the assessment conducted by the civil aviation administrative department;\n(3) having no medical history that may affect the operation of a civil unmanned aircraft, and no record of drug abuse;\n(4) having no record of criminal punishment within the past five years for intentional crimes endangering national security, public security, infringing upon citizens' personal rights, or disturbing public order.\nA person engaged in conventional agricultural unmanned aircraft operation flight activities need not obtain an operator's license, but shall be trained and assessed by the producer of the agricultural unmanned aircraft system in accordance with the contents prescribed by the civil aviation and agriculture and rural affairs authorities of the State Council, and obtain an operation certificate upon passing the assessment."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 A person who operates a micro or light civil unmanned aircraft for flight need not obtain an operator's license, but shall have a thorough command of the operation method for the relevant model, and understand the risk warning information and relevant management systems.\nA person without civil capacity may only operate a micro civil unmanned aircraft for flight; a person with limited civil capacity may only operate a micro or light civil unmanned aircraft for flight. When a person without civil capacity operates a micro civil unmanned aircraft or a person with limited civil capacity operates a light civil unmanned aircraft, the operation shall be guided on site by a person with full civil capacity who meets the conditions specified in the preceding paragraph.\nA person who operates a light civil unmanned aircraft for flight within the controlled airspace for unmanned aircraft shall have full civil capacity and shall have passed the training in accordance with the provisions of the civil aviation authority of the State Council."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 The delineation of flight airspace for unmanned aircraft shall follow the principles of overall planning and allocation, safety and efficiency, prioritize isolated flights, take into account the needs of integrated flights, and fully consider flight safety and public interests.\nThe delineation of flight airspace for unmanned aircraft shall specify the horizontal and vertical scope and the time of use.\nThe air traffic management authority shall give priority to delineating airspace for unmanned aircraft performing military, police, customs or emergency management flight missions."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 The state shall, as necessary, designate controlled airspace for unmanned aircraft (hereinafter referred to as controlled airspace).\nThe airspace above 120 meters above true altitude, airspace of prohibited areas, restricted areas and surrounding airspace, military aviation ultra-low altitude flight airspace, and the airspace above the following areas shall be designated as controlled airspace:\n(1) airports and surrounding areas within a certain range;\n(2) areas within a certain range on the side of the national boundary, the actual line of control or the border line facing our side;\n(3) military restricted zones, military management zones, supervision places and other units involving secrets and surrounding areas within a certain range;\n(4) protection areas of important military industrial facilities, control areas of nuclear facilities, production and storage areas of flammable, explosive and other dangerous goods, and large storage areas of important combustible materials;\n(5) public infrastructure such as power plants, substations, gas stations, water supply plants, public transport hubs, navigation and power hubs, major water conservancy facilities, ports, highways, railway electrification lines, and surrounding areas within a certain range, as well as drinking water source protection areas;\n(6) facilities requiring special electromagnetic environment protection such as radio astronomy observatories, satellite measurement and control (navigation) stations, aeronautical radio navigation stations, radar stations, and surrounding areas within a certain range;\n(7) important revolutionary memorial sites, important immovable cultural relics and surrounding areas within a certain range;\n(8) other areas prescribed by the national air traffic management leading authority.\nThe specific scope of controlled airspace shall be determined by air traffic management authorities at all levels in accordance with the provisions of the national air traffic management leading authority, published by the people's governments at the level of a city divided into districts or above, and the civil aviation administrative department and the units undertaking corresponding responsibilities shall issue aeronautical information.\nWithout the approval of the air traffic management authority, no person shall conduct unmanned aircraft flight activities in controlled airspace.\nAirspace outside the scope of controlled airspace shall be the flyable airspace for micro, light and small unmanned aircraft (hereinafter referred to as flyable airspace)."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Under special circumstances, controlled airspace may be temporarily added, and the horizontal and vertical scope and the time of use of the relevant airspace shall be determined by the air traffic management authority in accordance with the relevant state provisions.\nWhere a major state activity or other large-scale activity is to be secured, a notice shall be published by the local people's government at the level of a city divided into districts or above, and the civil aviation administrative department and the units undertaking corresponding responsibilities shall issue aeronautical information, 24 hours before the temporarily added controlled airspace takes effect.\nWhere a military mission or other emergency tasks such as counter-terrorism and stability maintenance, rescue and disaster relief, or medical rescue are to be secured, an emergency notice shall be issued by the local people's government at the level of a city divided into districts or above, and the civil aviation administrative department and the units undertaking corresponding responsibilities shall issue aeronautical information, 30 minutes before the temporarily added controlled airspace takes effect."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Where ground warning signs for controlled airspace are required to be installed in accordance with the provisions of the national air traffic management leading authority, the people's government at the level of a city divided into districts shall organize the installation and strengthen daily inspections."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Unmanned aircraft shall generally fly in isolation from manned aircraft.\nWhere any of the following circumstances exists, integrated flight may be conducted upon approval by the air traffic management authority:\n(1) flights by unmanned aircraft under the administration of the police, customs or emergency management departments with manned aircraft used by the same department or unit in the same airspace or the same airport area as required by tasks or flight subjects;\n(2) flights of large unmanned aircraft that have obtained airworthiness certification;\n(3) flights of medium-sized unmanned aircraft that have obtained airworthiness certification not exceeding 300 meters above true altitude;\n(4) flights of small unmanned aircraft not exceeding 300 meters above true altitude;\n(5) flights of light unmanned aircraft not exceeding 300 meters above true altitude above the flyable airspace.\nWhere any of the following circumstances exists, integrated flight may be conducted without approval from the air traffic management authority:\n(1) flights of micro or light unmanned aircraft within flyable airspace;\n(2) conventional agricultural unmanned aircraft operation flight activities."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 The national air traffic management leading authority shall coordinate the construction of an integrated unmanned aircraft comprehensive supervision and service platform to conduct dynamic supervision and provide services for unmanned aircraft nationwide.\nThe air traffic management authority and the departments and units of civil aviation, public security, industry and information technology shall, according to their respective functions and duties, collect relevant information on the production, registration and use of unmanned aircraft, share it through the integrated unmanned aircraft comprehensive supervision and service platform, and take corresponding measures to ensure information security."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Where a flight activity is conducted with an unmanned aircraft other than a micro one, the operator shall ensure that the unmanned aircraft can report identification information to the integrated unmanned aircraft comprehensive supervision and service platform in accordance with the relevant state provisions.\nMicro, light and small unmanned aircraft shall automatically broadcast and transmit identification information during flight."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 A unit or individual that organizes unmanned aircraft flight activities shall comply with the relevant laws, regulations and rules, proactively take accident prevention measures, and bear the primary responsibility for flight safety."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 Unless otherwise provided in Article 31 of these Regulations, a unit or individual that organizes unmanned aircraft flight activities shall submit a flight activity application to the air traffic management authority before 12:00 on the day prior to the intended flight. The air traffic management authority shall make a decision on approval or disapproval before 21:00 on the day prior to the flight.\nWhere routine flight activities are conducted in fixed airspace in accordance with the provisions of the national air traffic management leading authority, a long-term flight activity application may be submitted, and the activities shall be implemented after approval; the flight plan shall be reported to the air traffic management authority for record before 12:00 on the day prior to the intended flight."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 An application for unmanned aircraft flight activities shall include the following:\n(1) information on the unit or individual organizing the flight activity, the operator, and relevant qualification certificates;\n(2) the type, quantity, main performance indicators and registration management information of the unmanned aircraft;\n(3) the nature of the flight mission and the flight method; if a special general aviation flight mission as prescribed by the state is to be executed, a valid mission approval document shall also be provided;\n(4) the take-off, landing and alternate airports (sites);\n(5) communication contact methods;\n(6) the expected start and end times of the flight;\n(7) the flight route, altitude, speed and airspace scope, and the method of entering and leaving the airspace;\n(8) the radio frequency of the command and control link and the occupied bandwidth;\n(9) communication, navigation and monitored capabilities;\n(10) if a secondary surveillance radar transponder or relevant automatic surveillance equipment is installed, the code application shall be indicated;\n(11) emergency response procedures;\n(12) special flight support needs;\n(13) other necessary information related to airspace use and flight safety as prescribed by the national air traffic management leading authority."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Applications for unmanned aircraft flight activities shall be approved in accordance with the following authority:\n(1) if the flight is within a flight control sub-area, it shall be approved by the air traffic management authority responsible for that flight control sub-area;\n(2) if the flight exceeds a flight control sub-area but is within a flight control area, it shall be approved by the air traffic management authority responsible for that flight control area;\n(3) if the flight exceeds a flight control area, it shall be approved by the air traffic management authority authorized by the national air traffic management leading authority."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 Where an unmanned aircraft is used to execute emergency missions such as counter-terrorism and stability maintenance, rescue and disaster relief, or medical rescue, a flight activity application shall be submitted to the air traffic management authority no later than 30 minutes before the planned take-off. The air traffic management authority shall make a decision on approval or disapproval no later than 10 minutes before take-off. Where an exceptionally urgent mission is executed, the using unit may submit a flight activity application at any time."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 Where a unit or individual whose flight activity has been approved organizes an unmanned aircraft flight activity, it shall report the estimated take-off time and readiness to the air traffic management authority one hour before the planned take-off, and may take off only after confirmation by the air traffic management authority."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 Where the following flight activities are organized with unmanned aircraft, no flight activity application need be submitted to the air traffic management authority:\n(1) flight activities of micro, light and small unmanned aircraft within flyable airspace;\n(2) conventional agricultural unmanned aircraft operation flight activities;\n(3) flight activities of unmanned aircraft under the administration of the police, customs or emergency management departments within the airspace not exceeding 120 meters above true altitude above their stations, ground (water surface) training grounds, shooting ranges, etc.; however, take-off may only occur after confirmation by the air traffic management authority one hour before the planned take-off;\n(4) flight missions such as inspection, survey and calibration conducted by civil unmanned aircraft within the control zone of a civil transport airport; however, they shall be reported to the air traffic management authority for record on a regular basis, and take-off may only occur after confirmation by the air traffic management authority one hour before the planned take-off.\nIf any of the following circumstances exists in the flight activities specified in the preceding paragraph, a flight activity application shall be submitted in accordance with Article 26 of these Regulations:\n(1) conducting relay flights of unmanned aircraft through communication base stations or the Internet;\n(2) carrying dangerous goods or dropping articles (except for conventional agricultural unmanned aircraft operation flight activities);\n(3) flying over the area where a gathering crowd is located;\n(4) operating an unmanned aircraft on a moving vehicle;\n(5) implementing distributed operation or cluster flight.\nMicro and light unmanned aircraft flying within flyable airspace need not obtain approval documents for special general aviation flight missions."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 When operating an unmanned aircraft to conduct flight activities, the following rules of conduct shall be observed:\n(1) obtaining the relevant licenses and certificates according to law, and carrying them for inspection during flight activities;\n(2) making preparations for safe flight before conducting flight activities, checking the condition of the unmanned aircraft, and promptly updating the electronic fence and other information;\n(3) monitoring the flight dynamics of the unmanned aircraft in real time; where a flight activity requiring approval is conducted, maintaining smooth communication with the air traffic management authority, complying with air traffic control, and reporting promptly after the flight ends;\n(4) maintaining the necessary safe separation in accordance with the provisions of the national air traffic management leading authority;\n(5) when operating a micro unmanned aircraft, maintaining flight within visual line of sight;\n(6) when operating a small unmanned aircraft in flyable airspace, complying with the provisions of the national air traffic management leading authority on speed limits, communication, navigation, etc.;\n(7) when flying at night or under low-visibility meteorological conditions, turning on the lighting system and ensuring it is in good working condition;\n(8) when conducting beyond visual line of sight flight, monitoring the flight dynamics of other aircraft in the flight airspace and taking measures to avoid collisions;\n(9) not operating an unmanned aircraft when under the influence of alcoholic beverages, narcotics or other drugs;\n(10) other rules of conduct for flight activities prescribed by the national air traffic management leading authority."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 When operating an unmanned aircraft to conduct flight activities, the following avoidance rules shall be observed:\n(1) giving way to manned aircraft, unpowered aircraft and ground or water vehicles;\n(2) single aircraft flight giving way to cluster flight;\n(3) micro unmanned aircraft giving way to other unmanned aircraft;\n(4) other avoidance rules prescribed by the national air traffic management leading authority."
     },
     {
       "article_number": "第三十四条",
-      "content_en": ""
+      "content_en": "Article 34 It is prohibited to use an unmanned aircraft to commit any of the following acts:\n(1) illegally photographing military installations, military industrial facilities or other places involving secrets;\n(2) disrupting the work order of state organs, organizations, enterprises or institutions, or the order of public places;\n(3) obstructing state functionaries from performing their duties according to law;\n(4) dropping propaganda materials or other objects containing content that violates laws or regulations;\n(5) endangering the property safety of public facilities, units or individuals;\n(6) endangering the life or health of others, illegally collecting information, or infringing upon other personal rights and interests of others;\n(7) illegally obtaining or disclosing state secrets, or illegally providing data or information to overseas parties;\n(8) other acts prohibited by laws or regulations."
     },
     {
       "article_number": "第三十五条",
-      "content_en": ""
+      "content_en": "Article 35 A unit that uses civil unmanned aircraft to engage in surveying and mapping activities may only conduct such activities after obtaining a surveying and mapping qualification certificate according to law.\nForeign unmanned aircraft or unmanned aircraft operated by foreign personnel shall not conduct flight activities such as surveying and mapping or radio wave parameter testing within the territory of China."
     },
     {
       "article_number": "第三十六条",
-      "content_en": ""
+      "content_en": "Article 36 Model aircraft shall fly within the airspace delineated by the air traffic management authority for aviation flight camps, unless otherwise provided by the national air traffic management leading authority."
     },
     {
       "article_number": "第三十七条",
-      "content_en": ""
+      "content_en": "Article 37 The national air traffic management leading authority shall organize the relevant departments and units to publish on the integrated unmanned aircraft comprehensive supervision and service platform information such as approval items, application procedures, accepting units, contact methods, and methods for accepting reports, and update such information in a timely manner."
     },
     {
       "article_number": "第三十八条",
-      "content_en": ""
+      "content_en": "Article 38 Any unit or individual that discovers any act violating the provisions of these Regulations may report it to the air traffic management authority, the civil aviation administrative department or the local public security organ. The department or unit that receives the report shall promptly handle it according to law; if it is not within the functions and duties of that department or unit, it shall promptly transfer the matter to the department or unit with competent authority."
     },
     {
       "article_number": "第三十九条",
-      "content_en": ""
+      "content_en": "Article 39 The air traffic management authority, the civil aviation administrative department and the public security organs at or above the county level shall formulate emergency plans for the safety management of unmanned aircraft flights, conduct regular drills, and enhance emergency response capabilities.\nLocal people's governments at or above the county level shall incorporate the safety emergency management of unmanned aircraft into the emergency management system for emergencies, and improve the emergency response work mechanism for information exchange and coordinated cooperation.\nDesigners and producers of unmanned aircraft systems shall ensure that unmanned aircraft are equipped with emergency response functions such as emergency avoidance and landing, so as to avoid or mitigate damage to life and property in the event of an unmanned aircraft accident.\nUnits or individuals that use unmanned aircraft shall, in accordance with the relevant provisions, formulate emergency response plans for flight emergencies, implement risk prevention measures, and promptly eliminate safety hazards."
     },
     {
       "article_number": "第四十条",
-      "content_en": ""
+      "content_en": "Article 40 When an abnormal situation occurs during an unmanned aircraft flight, the unit or individual organizing the flight activity shall promptly handle it and comply with the instructions of the air traffic management authority; if a flight safety problem results, the unit or individual organizing the flight activity shall also report the relevant circumstances to the air traffic management authority within 24 hours after the unmanned aircraft lands."
     },
     {
       "article_number": "第四十一条",
-      "content_en": ""
+      "content_en": "Article 41 With respect to unidentified situations in the air and illegal flights of unmanned aircraft, the public security organ may, when conditions are favorable, conduct preliminary disposal of low-altitude targets and shall be responsible for on-site disposal after the illegally flying unmanned aircraft lands. The relevant military organs, public security organs, state security organs and other units shall organize investigation and disposal according to their respective functions and duties, and the civil aviation administration and other relevant departments shall provide cooperation."
     },
     {
       "article_number": "第四十二条",
-      "content_en": ""
+      "content_en": "Article 42 Where an unmanned aircraft violates flight management provisions, disturbs public order or endangers public safety, the air traffic management authority, the civil aviation administrative department and the public security organ may take emergency disposal measures according to law, such as necessary technical prevention and control, seizure of relevant articles, ordering the suspension of flight, and sealing the premises of illegal activities."
     },
     {
       "article_number": "第四十三条",
-      "content_en": ""
+      "content_en": "Article 43 The military, the police, and high-risk counter-terrorism key target management units authorized by the public security organs in accordance with the relevant provisions of the national counter-terrorism work leadership authority may be equipped with unmanned aircraft countermeasure equipment according to law, and shall strictly control the installation and use under the guidance and supervision of the public security organ or the relevant military organ.\nMeasures for the management of the equipping, installation, use and authorization of unmanned aircraft countermeasure equipment shall be formulated by the competent departments of industry and information technology, public security, state security and market supervision and administration of the State Council in conjunction with the relevant departments of the State Council and the relevant military organs.\nNo unit or individual shall illegally possess or use unmanned aircraft countermeasure equipment."
     },
     {
       "article_number": "第四十四条",
-      "content_en": ""
+      "content_en": "Article 44 Where a person, in violation of these Regulations, engages in the design, production, import, flight or maintenance of medium-sized or large civil unmanned aircraft systems without obtaining an airworthiness certification according to law, the civil aviation administrative department shall order the cessation of the relevant activities, confiscate the illegal gains, and impose a fine of not less than one time but not more than five times the value of the unmanned aircraft systems; if the circumstances are serious, it shall order the suspension of business for rectification."
     },
     {
       "article_number": "第四十五条",
-      "content_en": ""
+      "content_en": "Article 45 Where a producer of civil unmanned aircraft systems, in violation of these Regulations, fails to set a unique product identification code for the unmanned aircraft it produces in accordance with the provisions of the competent industry and information technology department of the State Council, the competent industry and information technology department of the people's government at or above the county level shall order it to make corrections, confiscate the illegal gains, and impose a fine of not less than 30,000 yuan but not more than 300,000 yuan; if it refuses to make corrections, it shall be ordered to suspend business for rectification."
     },
     {
       "article_number": "第四十六条",
-      "content_en": ""
+      "content_en": "Article 46 Where a person, in violation of these Regulations, makes a major design change to a civil unmanned aircraft system that has obtained an airworthiness certification, and fails to re-apply for airworthiness certification and uses it for flight activities, the civil aviation administrative department shall order it to make corrections and impose a fine of not less than one time but not more than five times the value of the unmanned aircraft system.\nWhere a person, in violation of these Regulations, changes the factory performance and parameters of a micro, light or small civil unmanned aircraft system, such as the airspace holding capability, reliable monitored capability, speed or altitude, and fails to promptly update the performance and parameter information on the integrated unmanned aircraft comprehensive supervision and service platform, the civil aviation administrative department shall order it to make corrections; if it refuses to make corrections, a fine of not less than 2,000 yuan but not more than 20,000 yuan shall be imposed."
     },
     {
       "article_number": "第四十七条",
-      "content_en": ""
+      "content_en": "Article 47 Where a civil unmanned aircraft, in violation of these Regulations, conducts a flight activity without real-name registration, the public security organ shall order it to make corrections and may impose a fine of not more than 200 yuan; if the circumstances are serious, a fine of not less than 2,000 yuan but not more than 20,000 yuan shall be imposed.\nWhere a civil unmanned aircraft involved in overseas flight, in violation of these Regulations, fails to undergo nationality registration according to law, the civil aviation administrative department shall order it to make corrections and impose a fine of not less than 10,000 yuan but not more than 100,000 yuan."
     },
     {
       "article_number": "第四十八条",
-      "content_en": ""
+      "content_en": "Article 48 Where a civil unmanned aircraft, in violation of these Regulations, fails to take out liability insurance according to law, the civil aviation administrative department shall order it to make corrections and impose a fine of not less than 2,000 yuan but not more than 20,000 yuan; if the circumstances are serious, the unit engaged in flight activities shall be ordered to suspend business for rectification until its operation certificate is revoked."
     },
     {
       "article_number": "第四十九条",
-      "content_en": ""
+      "content_en": "Article 49 Where a person, in violation of these Regulations, conducts a flight activity without obtaining an operation certificate or in violation of the requirements of the operation certificate, the civil aviation administrative department shall order it to make corrections and impose a fine of not less than 50,000 yuan but not more than 500,000 yuan; if the circumstances are serious, it shall be ordered to suspend business for rectification until its operation certificate is revoked."
     },
     {
       "article_number": "第五十条",
-      "content_en": ""
+      "content_en": "Article 50 Where a person without civil capacity or with limited civil capacity, in violation of these Regulations, operates a civil unmanned aircraft for flight, the public security organ shall impose a fine of not less than 500 yuan but not more than 5,000 yuan on the guardian thereof; if the circumstances are serious, the unmanned aircraft used for the illegal flight shall be confiscated.\nWhere a person, in violation of these Regulations, operates a civil unmanned aircraft for flight without obtaining an operator's license, the civil aviation administrative department shall impose a fine of not less than 5,000 yuan but not more than 50,000 yuan; if the circumstances are serious, a fine of not less than 10,000 yuan but not more than 100,000 yuan shall be imposed.\nWhere a person, in violation of these Regulations, operates a civil unmanned aircraft for flight beyond the scope indicated in the operator's license, the civil aviation administrative department shall impose a fine of not less than 2,000 yuan but not more than 20,000 yuan and also suspend the operator's license for a period of not less than six months but not more than twelve months; if the circumstances are serious, the operator's license shall be revoked, and no application for an operator's license shall be accepted within two years.\nWhere a person, in violation of these Regulations, engages in conventional agricultural unmanned aircraft operation flight activities without obtaining an operation certificate, the competent agriculture and rural affairs department of the local people's government at or above the county level shall order the cessation of the operation and impose a fine of not less than 1,000 yuan but not more than 10,000 yuan."
     },
     {
       "article_number": "第五十一条",
-      "content_en": ""
+      "content_en": "Article 51 Where a unit or individual organizing flight activities violates the provisions of Article 32 or Article 33 of these Regulations, the civil aviation administrative department shall order it to make corrections and may impose a fine of not more than 10,000 yuan; if it refuses to make corrections, a fine of not less than 10,000 yuan but not more than 50,000 yuan shall be imposed, and the operation certificate or operator's license shall be suspended for a period of not less than one month but not more than three months; if the circumstances are serious, the air traffic management authority shall order the suspension of flight for a period of not less than six months but not more than twelve months, and the civil aviation administrative department shall impose a fine of not less than 50,000 yuan but not more than 100,000 yuan, and may revoke the relevant license, and no corresponding license application shall be accepted within two years.\nWhere a person, in violation of these Regulations, operates a micro, light or small civil unmanned aircraft for flight in controlled airspace without approval, or operates a model aircraft to fly outside the airspace delineated by the air traffic management authority, the public security organ shall order the cessation of flight and may impose a fine of not more than 500 yuan; if the circumstances are serious, the unmanned aircraft used for the illegal flight shall be confiscated, and a fine of not less than 1,000 yuan but not more than 10,000 yuan shall be imposed."
     },
     {
       "article_number": "第五十二条",
-      "content_en": ""
+      "content_en": "Article 52 Where a person, in violation of these Regulations, illegally possesses or uses unmanned aircraft countermeasure equipment, the radio regulatory authority or the public security organ shall confiscate the equipment according to their respective duties and may impose a fine of not more than 50,000 yuan; if the circumstances are serious, a fine of not less than 50,000 yuan but not more than 200,000 yuan shall be imposed."
     },
     {
       "article_number": "第五十三条",
-      "content_en": ""
+      "content_en": "Article 53 Where a foreign unmanned aircraft or an unmanned aircraft operated by foreign personnel, in violation of these Regulations, conducts surveying and mapping flight activities within the territory of China, the competent surveying, mapping and geographic information department of the people's government at or above the county level shall order the cessation of the illegal act, confiscate the illegal gains, the surveying and mapping results and the unmanned aircraft used for the illegal flight, and impose a fine of not less than 100,000 yuan but not more than 500,000 yuan; if the circumstances are serious, a fine of not less than 500,000 yuan but not more than 1,000,000 yuan shall also be imposed, and the public security organ or the state security organ shall, according to their respective duties, decide on a time limit for departure or expulsion."
     },
     {
       "article_number": "第五十四条",
-      "content_en": ""
+      "content_en": "Article 54 Where the production, modification, assembly, integration, sale or recall of micro, light or small civil unmanned aircraft systems violates the relevant laws and regulations on product quality or standardization management, the market supervision and administration department of the people's government at or above the county level shall impose punishment according to law.\nExcept for the circumstances where no radio frequency use license or radio station license is required under Article 15 of these Regulations, if the production, maintenance or use of civil unmanned aircraft systems violates the laws, regulations and relevant state provisions on radio management, the radio regulatory authority shall impose punishment according to law.\nWhere an unmanned aircraft flight activity violates the laws and regulations on the protection of military installations, the matter shall be handled in accordance with the provisions of the relevant laws and regulations."
     },
     {
       "article_number": "第五十五条",
-      "content_en": ""
+      "content_en": "Article 55 Where a relevant department, unit or its staff member, in violation of these Regulations, abuses its power, neglects its duties, engages in malpractices for personal gain or commits any other illegal act in the management of unmanned aircraft flights and related activities, it shall be given a sanction according to law."
     },
     {
       "article_number": "第五十六条",
-      "content_en": ""
+      "content_en": "Article 56 Where a violation of these Regulations constitutes a violation of public security administration, the public security organ shall impose a public security administration punishment according to law; if a crime is constituted, criminal liability shall be investigated according to law; if personal injury, property damage or other damage is caused, civil liability shall be borne according to law."
     },
     {
       "article_number": "第五十七条",
-      "content_en": ""
+      "content_en": "Article 57 The relevant provisions of these Regulations shall be complied with when conducting unmanned aircraft flight activities in other airspace under the jurisdiction of China.\nThese Regulations shall not apply to indoor flights of unmanned aircraft.\nFlying toys with their own power systems shall be subject to the relevant provisions of these Regulations, and the specific measures shall be formulated by the competent industry and information technology department of the State Council and the relevant air traffic management authority in conjunction with the public security and civil aviation authorities of the State Council."
     },
     {
       "article_number": "第五十八条",
-      "content_en": ""
+      "content_en": "Article 58 For matters concerning unmanned aircraft flights and related activities not covered by these Regulations, the Civil Aviation Law of the People's Republic of China, the Basic Rules of Flight of the People's Republic of China, the Regulations on the Control of General Aviation Flights, and the relevant laws and administrative regulations shall apply."
     },
     {
       "article_number": "第五十九条",
-      "content_en": ""
+      "content_en": "Article 59 Where the State Council and the Central Military Commission have other provisions on the management of military unmanned aircraft, such provisions shall apply.\nMeasures for the management of airworthiness, registration, operators and other matters concerning unmanned aircraft under the administration of the police, customs or emergency management departments shall be separately formulated by the relevant departments of the State Council."
     },
     {
       "article_number": "第六十条",
-      "content_en": ""
+      "content_en": "Article 60 Measures for the management of the classification, production, registration, operators, aviation flight camps and other matters concerning model aircraft shall be separately formulated by the competent sports department of the State Council in conjunction with the relevant air traffic management authority and the competent departments of industry and information technology, public security and civil aviation of the State Council."
     },
     {
       "article_number": "第六十一条",
-      "content_en": ""
+      "content_en": "Article 61 Where a civil unmanned aircraft produced before the coming into force of these Regulations cannot automatically report identification information to the integrated unmanned aircraft comprehensive supervision and service platform in accordance with the relevant state provisions, the flight activity shall be conducted only after a flight activity application is submitted to the air traffic management authority in accordance with the provisions of these Regulations and approved."
     },
     {
       "article_number": "第六十二条",
-      "content_en": ""
+      "content_en": "Article 62 For the purposes of these Regulations, the following terms have the meanings ascribed to them:\n(1) \"Air traffic management authority\" means the organizations within the military and the civil aviation administrative department responsible for the air traffic management in the relevant responsible airspace.\n(2) \"Micro unmanned aircraft\" means an unmanned aircraft with an empty weight of less than 0.25 kg, a maximum flight true altitude not exceeding 50 m, a maximum level flight speed not exceeding 40 km/h, radio transmitting equipment that meets the technical requirements for micro-power short-distance communication, and which can be manually intervened at any time throughout the flight.\n(3) \"Light unmanned aircraft\" means an unmanned aircraft with an empty weight not exceeding 4 kg and a maximum take-off weight not exceeding 7 kg, a maximum level flight speed not exceeding 100 km/h, having airspace holding capability and reliable monitored capability that meet airspace management requirements, and which can be manually intervened at any time throughout the flight, but excluding micro unmanned aircraft.\n(4) \"Small unmanned aircraft\" means an unmanned aircraft with an empty weight not exceeding 15 kg and a maximum take-off weight not exceeding 25 kg, having airspace holding capability and reliable monitored capability that meet airspace management requirements, and which can be manually intervened at any time throughout the flight, but excluding micro and light unmanned aircraft.\n(5) \"Medium-sized unmanned aircraft\" means an unmanned aircraft with a maximum take-off weight not exceeding 150 kg, but excluding micro, light and small unmanned aircraft.\n(6) \"Large unmanned aircraft\" means an unmanned aircraft with a maximum take-off weight exceeding 150 kg.\n(7) \"Unmanned aircraft system\" means a system composed of an unmanned aircraft and its associated remote control station(s), mission payloads and control links. Among them, \"remote control station(s)\" means the assembly of various control devices (means) for remotely controlling the unmanned aircraft and the related systems.\n(8) \"Agricultural unmanned aircraft\" means an unmanned aircraft with a maximum flight true altitude not exceeding 30 m, a maximum level flight speed not exceeding 50 km/h, a maximum flight radius not exceeding 2,000 m, having airspace holding capability and reliable monitored capability, specially used for plant protection, seeding, baiting and other agricultural, forestry, animal husbandry and fishery operations, and which can be manually intervened at any time throughout the flight.\n(9) \"Isolated flight\" means a flight in which an unmanned aircraft and a manned aircraft are not simultaneously in the same airspace.\n(10) \"Integrated flight\" means a flight in which an unmanned aircraft and a manned aircraft are simultaneously in the same airspace.\n(11) \"Distributed operation\" means a mode in which the operation of an unmanned aircraft system is decomposed into multiple sub-tasks and deployed at multiple stations or terminals for coordinated operation.\n(12) \"Cluster\" means an unmanned aircraft operation mode in which a single system or platform capable of controlling multiple unmanned aircraft is used, characterized by the interconnected and coordinated processing of control data for each unmanned aircraft to handle the same task, and multiple unmanned aircraft are operated in parallel in a relatively physically concentrated manner within the same time period.\n(13) \"Model aircraft\", also known as aviation model, means an unmanned aircraft with size and weight restrictions, incapable of carrying persons, and without altitude hold or position hold flight functions, including free-flight, line-controlled, direct visual line-of-sight continuous manual remote control, and first-person-view continuous manual remote control model aircraft, etc.\n(14) \"Unmanned aircraft countermeasure equipment\" means equipment specially used for preventing and controlling illegal flights of unmanned aircraft, having functions such as jamming, interception and control, capture, and destruction.\n(15) \"Airspace holding capability\" means the capability to control the altitude and horizontal range of an unmanned aircraft through technical measures such as electronic fences."
     },
     {
       "article_number": "第六十三条",
-      "content_en": ""
+      "content_en": "Article 63 These Regulations shall come into force on January 1, 2024."
     }
   ]
 }

@@ -223,7 +223,7 @@ def api_call(api_key: str, messages: list, system: str) -> str:
         # DeepSeek OpenAI-compatible API
         payload = json.dumps({
             "model": DEEPSEEK_MODEL,
-            "max_tokens": 16384,
+            "max_tokens": 32768,
             "messages": [{"role": "system", "content": system}] + messages,
         }).encode()
         req = urllib.request.Request(
@@ -269,11 +269,36 @@ def translate_articles_batch(api_key: str, items: list, system: str) -> dict:
         ensure_ascii=False
     )
     raw = api_call(api_key, [{"role": "user", "content": payload}], system)
+    # 尝试从响应中提取 JSON
     s = raw.find("[")
     e = raw.rfind("]") + 1
     if s < 0 or e <= s:
-        raise ValueError(f"No JSON array in response: {raw[:200]}")
-    result = json.loads(raw[s:e])
+        # 响应可能被截断，尝试更宽松的解析
+        s = raw.find("[")
+        if s < 0:
+            raise ValueError(f"No JSON array in response: {raw[:200]}")
+        # 从末尾向前找最后一个完整的对象
+        truncated = raw[s:]
+        # 尝试补全为合法 JSON 数组
+        for i in range(len(truncated), s, -1):
+            candidate = truncated[:i-s] + "]"
+            try:
+                result = json.loads(candidate)
+                break
+            except json.JSONDecodeError:
+                continue
+        else:
+            raise ValueError(f"Cannot parse JSON from truncated response: {raw[:200]}")
+    else:
+        try:
+            result = json.loads(raw[s:e])
+        except json.JSONDecodeError:
+            # 最后尝试补全
+            candidate = raw[s:] + "]" if not raw.rstrip().endswith("]") else raw[s:]
+            try:
+                result = json.loads(candidate)
+            except json.JSONDecodeError:
+                raise ValueError(f"JSON parse failed: {raw[:200]}")
     # 应用标点清理
     return {obj["id"]: clean_punctuation(obj["en"]) for obj in result if "id" in obj and "en" in obj}
 
@@ -342,7 +367,12 @@ def load_cn_articles(filename: str, category: str) -> dict:
     """从中文 json/ 文件中提取 article_number → 中文content 的映射。"""
     cn_path = JSON_DIR / category / f'{filename}.json'
     if not cn_path.exists():
-        return {}
+        # 有时 DB 的 category 与实际文件路径不一致，尝试递归搜索
+        matches = list(JSON_DIR.rglob(f'{filename}.json'))
+        if matches:
+            cn_path = matches[0]
+        else:
+            return {}
     cn_data = json.loads(cn_path.read_text(encoding='utf-8'))
 
     mapping = {}
@@ -372,12 +402,14 @@ def load_cn_articles(filename: str, category: str) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description='翻译法条到 json_en/')
-    parser.add_argument('--batch-size', type=int, default=100, help='每次 API 调用的条文数（默认100）')
+    parser.add_argument('--batch-size', type=int, default=50, help='每次 API 调用的条文数（默认50）')
     parser.add_argument('--workers',    type=int, default=4,  help='并行 API 线程数')
     parser.add_argument('--dry-run',    action='store_true',  help='统计待翻译量，不调用 API')
     parser.add_argument('--laws-only',  action='store_true',  help='只翻译法律标题')
     parser.add_argument('--filter',     type=str, default='', help='只处理标题含此关键词的法律')
     parser.add_argument('--max-laws',   type=int, default=0,  help='最多翻译 N 部法律（0=不限）')
+    parser.add_argument('--max-laws-per-run', type=int, default=0,
+                        help='每轮最多处理 N 部法律后自动退出（0=不限），用于定期重启避免卡住')
     parser.add_argument('--tier',       type=str, default='', 
                         help='按引用层级过滤: T0/T1/T2/T3/T4/T5，逗号分隔如 T0,T1')
     args = parser.parse_args()
@@ -496,6 +528,7 @@ def main():
     print(f"待翻译法律：{len(laws_with_pending)} 部")
 
     total_done = total_errors = 0
+    laws_processed_in_run = 0
 
     for idx, (law_id, filename, category, title) in enumerate(laws_with_pending, 1):
         en_path     = JSON_EN_DIR / category / f'{filename}.json'
@@ -505,6 +538,11 @@ def main():
         pending = pending_articles(en_data, cn_articles)
         if not pending:
             continue
+
+        # 达到本轮上限则退出，留给下一轮处理
+        if args.max_laws_per_run and laws_processed_in_run >= args.max_laws_per_run:
+            print(f"  达到本轮上限（{laws_processed_in_run} 部），退出进程以便重启")
+            break
 
         # ── 按需构建 system prompt ──
         # 只注入当前法律引用的其他法律标题
@@ -556,8 +594,9 @@ def main():
 
         save_en_file(en_path, en_data)
         print(f"    已写回 {en_path.name}")
+        laws_processed_in_run += 1
 
-    print(f"\n完成：{total_done} 条翻译，{total_errors} 条失败")
+    print(f"\n完成：{total_done} 条翻译，{total_errors} 条失败（本轮处理 {laws_processed_in_run} 部）")
 
 
 if __name__ == "__main__":

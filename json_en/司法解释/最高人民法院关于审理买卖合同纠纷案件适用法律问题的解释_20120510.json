@@ -5,187 +5,187 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 Where there is no written contract between the parties, and one party claims the existence of a sales contract relationship by virtue of delivery notes, receipt notes, settlement statements, invoices, etc., the People's Court shall, in light of the transaction method, transaction practices, and other relevant evidence between the parties, make a determination as to whether the sales contract is formed.\nWhere a confirmation letter of account reconciliation, a debt confirmation letter, or other such letters or documents do not record the name of the creditor, and a party to the sales contract uses such documents to prove the existence of a sales contract relationship, the People's Court shall uphold it, unless there is sufficient evidence to the contrary to rebut it."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 Where the parties sign a subscription agreement, order agreement, booking agreement, letter of intent, memorandum, or other preliminary contract, agreeing to conclude a sales contract within a certain period in the future, and one party fails to perform the obligation to conclude the sales contract, and the other party requests that it bear liability for breach of the preliminary contract or demands dissolution of the preliminary contract and claims damages, the People's Court shall uphold it."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 Where one party claims that the contract is void on the ground that the seller had no ownership or right of disposal over the subject matter at the time of contracting, the People's Court shall not uphold it.\nWhere the seller's failure to obtain ownership or right of disposal results in the inability to transfer ownership of the subject matter, and the buyer demands that the seller bear liability for breach of contract or demands dissolution of the contract and claims damages, the People's Court shall uphold it."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 When determining the formation and validity of an electronic transaction contract in accordance with the provisions of the Contract Law, the People's Court shall also apply the relevant provisions of the Electronic Signature Law.\nII. Delivery of Subject Matter and Transfer of Ownership"
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 Where the subject matter is an electronic information product that does not need to be delivered by tangible medium, and the parties' agreement on the method of delivery is unclear, and it still cannot be determined in accordance with Article 61 of the Contract Law, the buyer's receipt of the agreed electronic information product or rights certificate shall constitute delivery."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 In accordance with Article 162 of the Contract Law, where the buyer refuses to accept the excess part of the subject matter, it may keep the excess part of the subject matter on behalf of the seller. Where the buyer claims that the seller shall bear the reasonable expenses during the period of custody on behalf, the People's Court shall uphold it.\nWhere the buyer claims that the seller shall bear the losses caused during the period of custody on behalf not due to the buyer's intentional act or gross negligence, the People's Court shall uphold it."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 The 'relevant documents and materials other than the documents for taking delivery of the subject matter' as provided in Article 136 of the Contract Law shall mainly include insurance policies, warranty certificates, ordinary invoices, special VAT invoices, product certificates of conformity, quality assurance certificates, quality appraisal certificates, quality inspection certificates, product import and export quarantine certificates, certificates of origin, instruction manuals, packing lists, etc."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 Where the seller only proves that it has performed the obligation of delivering the subject matter by using a special VAT invoice and tax deduction materials, and the buyer does not recognize it, the seller shall provide other evidence to prove the fact of delivery of the subject matter.\nWhere the contract agrees or it is customary between the parties to use ordinary invoices as payment vouchers, and the buyer proves that it has performed the payment obligation by using an ordinary invoice, the People's Court shall uphold it, unless there is sufficient evidence to the contrary to rebut it."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Where the seller concludes multiple sales contracts for the same ordinary movable property, and all the sales contracts are valid, and all buyers demand actual performance of the contract, it shall be dealt with according to the following circumstances:\n(1) Where a buyer that first takes delivery requests a confirmation that the ownership has been transferred, the People's Court shall uphold it;\n(2) Where none has taken delivery, and a buyer that first pays the price requests the seller to perform the obligation of delivering the subject matter and other contractual obligations, the People's Court shall uphold it;\n(3) Where none has taken delivery nor paid the price, and a buyer whose contract is first validly formed requests the seller to perform the obligation of delivering the subject matter and other contractual obligations, the People's Court shall uphold it."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Where the seller concludes multiple sales contracts for the same special movable property such as a ship, aircraft, motor vehicle, etc., and all the sales contracts are valid, and all buyers demand actual performance of the contract, it shall be dealt with according to the following circumstances:\n(1) Where a buyer that first takes delivery requests the seller to perform the contractual obligation of undergoing the formalities for registration of ownership transfer, etc., the People's Court shall uphold it;\n(2) Where none has taken delivery, and a buyer that first undergoes the formalities for registration of ownership transfer requests the seller to perform the obligation of delivering the subject matter and other contractual obligations, the People's Court shall uphold it;\n(3) Where none has taken delivery nor undergone the formalities for registration of ownership transfer, and a buyer whose contract is first validly formed requests the seller to perform the obligation of delivering the subject matter and undergoing the formalities for registration of ownership transfer, etc., the People's Court shall uphold it;\n(4) Where the seller delivers the subject matter to one of the buyers and also undergoes the registration of ownership transfer for another buyer, and the buyer that has taken delivery requests that the ownership of the subject matter be registered in its own name, the People's Court shall uphold it.\nIII. Risk Burden of Subject Matter"
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 The phrase 'the subject matter needs to be transported' as provided in Article 141, paragraph 2, item (1) of the Contract Law refers to the situation where the seller is responsible for arranging shipment, and the carrier is a transport operator independent of the parties to the sales contract. The risk of damage to or loss of the subject matter shall be dealt with in accordance with Article 145 of the Contract Law."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Where the seller, in accordance with the contract, transports the subject matter to the place designated by the buyer and delivers it to the carrier, the risk of damage to or loss of the subject matter shall be borne by the buyer, unless the parties agree otherwise."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 Where the seller sells the subject matter in transit that is being transported by a carrier, and at the time the contract is formed, it knows or should have known that the subject matter has been damaged or lost but fails to inform the buyer, and the buyer claims that the seller shall bear the risk of damage to or loss of the subject matter, the People's Court shall uphold it."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Where the parties have no agreement on the risk burden, the subject matter is fungible goods, and the seller has not clearly identified the subject matter to the sales contract by identifiable means such as shipping documents, affixing marks, notifying the buyer, etc., and the buyer claims that it shall not bear the risk of damage to or loss of the subject matter, the People's Court shall uphold it.\nIV. Inspection of Subject Matter"
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 Where the parties have not agreed on the inspection period for the subject matter, and the delivery note, confirmation note, etc. signed and received by the buyer specify the quantity, model, and specifications of the subject matter, the People's Court shall, in accordance with Article 157 of the Contract Law, determine that the buyer has inspected the quantity and apparent defects, unless there is sufficient evidence to the contrary to rebut it."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 Where the seller delivers the subject matter to a third party according to the buyer's instructions, and the inspection standard agreed between the seller and the buyer is inconsistent with the inspection standard agreed between the buyer and the third party, the People's Court shall, in accordance with Article 64 of the Contract Law, take the inspection standard agreed between the seller and the buyer as the inspection standard for the subject matter."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 When specifically determining the 'reasonable period' as provided in Article 158, paragraph 2 of the Contract Law, the People's Court shall comprehensively consider the nature of the transaction, purpose of the transaction, method of transaction, transaction practices, type, quantity, nature, installation and usage of the subject matter, nature of the defects, reasonable duty of care that the buyer should exercise, inspection methods and difficulty, the specific environment and skills of the buyer or inspector, and other reasonable factors, and make a judgment in accordance with the principle of good faith.\nThe 'two years' as provided in Article 158, paragraph 2 of the Contract Law is the longest reasonable period. That period is an unchangeable period and shall not be subject to the suspension, interruption, or extension of the limitation of action."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 Where the agreed inspection period is too short, and in light of the nature of the subject matter and transaction practices, it is difficult for the buyer to complete a full inspection within the inspection period, the People's Court shall determine that such period is the period for the buyer to raise objections to apparent defects, and shall determine the reasonable period for the buyer to raise objections to latent defects in accordance with Article 17, paragraph 1 of this Interpretation.\nWhere the agreed inspection period or quality guarantee period is shorter than the inspection period or quality guarantee period prescribed by laws or administrative regulations, the People's Court shall take the inspection period or quality guarantee period prescribed by laws or administrative regulations as the standard."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 Where the buyer raises an objection within a reasonable period, and the seller claims that the buyer has waived the objection on the ground that the buyer has paid the price, confirmed the amount of debt, used the subject matter, etc., the People's Court shall not uphold it, unless the parties agree otherwise."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 After the passage of the inspection period, reasonable period, or two-year period as provided in Article 158 of the Contract Law, if the buyer claims that the quantity or quality of the subject matter does not conform to the agreement, the People's Court shall not uphold it.\nWhere the seller voluntarily assumes liability for breach of contract and later reneges on the ground that the aforesaid periods have elapsed, the People's Court shall not uphold it.\nV. Liability for Breach of Contract"
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Where the buyer retains part of the price as quality guarantee money in accordance with the contract, and the seller fails to timely resolve the quality problem within the quality guarantee period, thereby affecting the value or use effect of the subject matter, and the seller claims payment of that part of the price, the People's Court shall not uphold it."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Where the buyer raises a quality objection within the inspection period, quality guarantee period, or reasonable period, and the seller fails to make repairs as required, or due to an urgent situation, the buyer repairs the subject matter itself or through a third party, and claims that the seller shall bear the reasonable expenses incurred thereby, the People's Court shall uphold it."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Where the quality of the subject matter does not conform to the agreement, and the buyer demands a reduction in price in accordance with Article 111 of the Contract Law, the People's Court shall uphold it. Where a party claims to calculate the price difference based on the market value at the time of delivery between the subject matter conforming to the agreement and the subject matter actually delivered, the People's Court shall uphold it.\nWhere the price has been paid, and the buyer claims a refund of the excess price after the reduction, the People's Court shall uphold it."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 A change in the payment period under a sales contract shall not affect the parties' agreement on liquidated damages for overdue payment, but the starting point for calculating such liquidated damages shall be changed accordingly.\nWhere a sales contract provides for liquidated damages for overdue payment, and the buyer refuses to pay such liquidated damages on the ground that the seller did not claim liquidated damages for overdue payment when accepting the price, the People's Court shall not uphold it.\nWhere a sales contract provides for liquidated damages for overdue payment, but the statement of account, repayment agreement, etc. do not involve the liability for overdue payment, and the seller, when claiming the amount owed based on the statement of account, repayment agreement, etc., requests the buyer to pay liquidated damages for overdue payment in accordance with the contract, the People's Court shall uphold it, except where the statement of account, repayment agreement, etc. explicitly contain the principal amount and the amount of interest for overdue payment or have changed the contents regarding the principal amount, interest, etc. in the sales contract.\nWhere a sales contract does not provide for liquidated damages for overdue payment or the method for calculating such liquidated damages, and the seller claims compensation for losses due to overdue payment on the ground that the buyer has breached the contract, the People's Court may calculate based on the benchmark interest rate for RMB loans of the same type and term issued by the People's Bank of China at the same time, with reference to the standard interest rate for overdue penalty."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 Where the seller fails to perform or improperly performs its ancillary payment obligation, causing the buyer to be unable to achieve the purpose of the contract, and the buyer claims dissolution of the contract, the People's Court shall uphold it in accordance with Article 94, item (4) of the Contract Law."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 After a sales contract is dissolved due to breach of contract, if the non-breaching party claims that the liquidated damages clause shall continue to apply, the People's Court shall uphold it; however, if the agreed liquidated damages are excessively higher than the losses caused, the People's Court may deal with it by reference to the provisions of Article 114, paragraph 2 of the Contract Law."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 Where one party to a sales contract claims payment of liquidated damages on the ground that the other party has breached the contract, and the other party raises a defense of exemption from liability on the ground that the contract is not formed, has not taken effect, is void, or does not constitute a breach of contract, etc., without claiming adjustment of the excessive liquidated damages, the People's Court shall provide an explanation as to whether the party needs to claim adjustment of the liquidated damages if the court does not uphold the defense of exemption from liability.\nWhere the court of first instance considers that the defense of exemption from liability is established and does not provide an explanation, and the court of second instance considers that a judgment should be made to order payment of liquidated damages, it may directly provide an explanation and amend the judgment."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Where the deposit agreed in a sales contract is insufficient to compensate for the losses caused by one party's breach of contract, and the other party requests compensation for the losses exceeding the deposit, the People's Court may award both, but the total amount of the deposit and the compensation for losses shall not exceed the losses caused by the breach of contract."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 Where one party to a sales contract breaches the contract and causes losses to the other party, and the other party claims compensation for loss of expected benefits, the People's Court shall make a determination based on the party's claim and in accordance with the provisions of Articles 113 and 119 of the Contract Law and Articles 30 and 31 of this Interpretation."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 Where one party to a sales contract breaches the contract and causes losses to the other party, and the other party also has fault for the occurrence of the losses, and the breaching party claims a reduction of the corresponding amount of compensation for losses, the People's Court shall uphold it."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 Where one party to a sales contract obtains benefits due to the other party's breach of contract, and the breaching party claims to deduct such benefits from the amount of compensation for losses, the People's Court shall uphold it."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 Where the contract provides for the reduction or exemption of the seller's warranty liability against defects in the subject matter, but the seller intentionally or due to gross negligence fails to inform the buyer of the defects in the subject matter, and the seller claims reduction or exemption of the warranty liability against defects in accordance with the contract, the People's Court shall not uphold it."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 Where the buyer knows or should have known that there are defects in the quality of the subject matter at the time of contracting, and claims that the seller shall bear the warranty liability against defects, the People's Court shall not uphold it, except where the buyer did not know at the time of contracting that such defects would significantly reduce the basic utility of the subject matter.\nVI. Retention of Ownership"
     },
     {
       "article_number": "第三十四条",
-      "content_en": ""
+      "content_en": "Article 34 Where a party to a sales contract claims that the provisions of Article 134 of the Contract Law regarding retention of ownership of the subject matter apply to immovable property, the People's Court shall not uphold it."
     },
     {
       "article_number": "第三十五条",
-      "content_en": ""
+      "content_en": "Article 35 Where the parties agree on retention of ownership, before the transfer of ownership of the subject matter, if the buyer commits any of the following circumstances, causing damage to the seller, and the seller claims to take back the subject matter, the People's Court shall uphold it:\n(1) Failing to pay the price as agreed;\n(2) Failing to fulfill specific conditions as agreed;\n(3) Selling, pledging, or otherwise improperly disposing of the subject matter.\nWhere the value of the recovered subject matter has significantly decreased, and the seller demands that the buyer compensate for the losses, the People's Court shall uphold it."
     },
     {
       "article_number": "第三十六条",
-      "content_en": ""
+      "content_en": "Article 36 Where the buyer has paid seventy-five percent or more of the total price of the subject matter, and the seller claims to take back the subject matter, the People's Court shall not uphold it.\nIn the circumstance under Article 35, paragraph 1, item (3) of this Interpretation, if a third party has bona fide acquired the ownership or other real rights in the subject matter in accordance with Article 106 of the Property Law, and the seller claims to take back the subject matter, the People's Court shall not uphold it."
     },
     {
       "article_number": "第三十七条",
-      "content_en": ""
+      "content_en": "Article 37 After the seller takes back the subject matter, if the buyer, within the redemption period agreed by the parties or designated by the seller, eliminates the reasons for the seller's taking back of the subject matter and claims to redeem the subject matter, the People's Court shall uphold it.\nIf the buyer does not redeem the subject matter within the redemption period, the seller may sell the subject matter separately.\nWhere the seller sells the subject matter separately, if there is a surplus after deducting in order the costs of taking back and storage, retransaction costs, interest, and unpaid price from the proceeds of sale, such surplus shall be returned to the original buyer; if there is a deficiency, and the seller demands that the original buyer make up the deficiency, the People's Court shall uphold it, unless the original buyer has evidence to prove that the price at which the seller separately sold the subject matter was significantly lower than the market price.\nVII. Special Types of Sales"
     },
     {
       "article_number": "第三十八条",
-      "content_en": ""
+      "content_en": "Article 38 The 'installment payment' as provided in Article 167, paragraph 1 of the Contract Law means that the buyer shall pay the total amount payable to the seller in at least three installments within a certain period.\nWhere the provisions of an installment payment sales contract violate Article 167, paragraph 1 of the Contract Law and harm the buyer's interests, and the buyer claims that such provisions are void, the People's Court shall uphold it."
     },
     {
       "article_number": "第三十九条",
-      "content_en": ""
+      "content_en": "Article 39 Where an installment payment sales contract provides that the seller may retain the price already received upon dissolution of the contract, and the amount retained by the seller exceeds the usage fee for the subject matter and the compensation for damage to the subject matter, and the buyer requests a refund of the excess, the People's Court shall uphold it.\nWhere the parties have no agreement on the usage fee for the subject matter, the People's Court may determine it by reference to the rental standard for similar subject matter in the locality."
     },
     {
       "article_number": "第四十条",
-      "content_en": ""
+      "content_en": "Article 40 Where the quality of the sample agreed in the contract is inconsistent with the written description, and the parties cannot reach an agreement when a dispute arises, if the appearance and intrinsic quality of the sample have not changed after sealing, the People's Court shall take the sample as the standard; if the appearance and intrinsic quality have changed, or if there is a dispute between the parties as to whether they have changed and it cannot be ascertained, the People's Court shall take the written description as the standard."
     },
     {
       "article_number": "第四十一条",
-      "content_en": ""
+      "content_en": "Article 41 Where the buyer in a trial sale has paid part of the price within the trial period, the People's Court shall determine that the buyer agrees to purchase, unless the contract provides otherwise.\nWhere, within the trial period, the buyer has committed acts such as selling, leasing, or creating security interests in the subject matter that are not for trial use, the People's Court shall determine that the buyer agrees to purchase."
     },
     {
       "article_number": "第四十二条",
-      "content_en": ""
+      "content_en": "Article 42 Where a sales contract contains any of the following provisions, it shall not be a trial sale. If the buyer claims that it is a trial sale, the People's Court shall not uphold it:\n(1) It is agreed that when the subject matter meets certain requirements after trial or inspection, the buyer shall purchase the subject matter;\n(2) It is agreed that when a third party approves the subject matter after trial, the buyer shall purchase the subject matter;\n(3) It is agreed that the buyer may exchange the subject matter within a certain period;\n(4) It is agreed that the buyer may return the subject matter within a certain period."
     },
     {
       "article_number": "第四十三条",
-      "content_en": ""
+      "content_en": "Article 43 Where the parties to a trial sale have no agreement on the usage fee or the agreement is unclear, and the seller claims that the buyer shall pay a usage fee, the People's Court shall not uphold it.\nVIII. Other Issues"
     },
     {
       "article_number": "第四十四条",
-      "content_en": ""
+      "content_en": "Article 44 After the seller performs its delivery obligation, it sues the buyer for payment of the price, and the buyer raises an objection on the ground that the seller breached the contract first, the People's Court shall deal with it according to the following circumstances:\n(1) Where the buyer refuses to pay liquidated damages, refuses to compensate for losses, or claims that the seller shall take remedial measures such as reducing the price, it constitutes raising a defense;\n(2) Where the buyer claims that the seller shall pay liquidated damages, compensate for losses, or demands dissolution of the contract, it shall file a counterclaim."
     },
     {
       "article_number": "第四十五条",
-      "content_en": ""
+      "content_en": "Article 45 Where laws or administrative regulations have provisions on contracts for the transfer of rights such as assignment of claims and transfer of equity, those provisions shall be followed; where there are no provisions, the People's Court may, in accordance with Articles 124 and 174 of the Contract Law, apply the relevant provisions of the sales contract by reference.\nWhere a contract for the transfer of rights or other onerous contract applies the relevant provisions of the sales contract by reference, the People's Court shall first cite Article 174 of the Contract Law, and then cite the relevant provisions of the sales contract."
     },
     {
       "article_number": "第四十六条",
-      "content_en": ""
+      "content_en": "Article 46 Where the provisions previously issued by this Court before the coming into force of this Interpretation regarding contracts such as purchase and sales contracts and sales contracts for the onerous transfer of ownership of the subject matter conflict with this Interpretation, they shall no longer apply from the date this Interpretation comes into force.\nFor cases of dispute over sales contracts that have not been finally adjudicated after the coming into force of this Interpretation, this Interpretation shall apply; for cases that have been finally adjudicated before the coming into force of this Interpretation, where a party applies for retrial or a decision is made to retry the case in accordance with the trial supervision procedure, this Interpretation shall not apply."
     }
   ]
 }

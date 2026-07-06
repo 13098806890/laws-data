@@ -5,147 +5,147 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 This Law is enacted for the purposes of regulating electronic signature conduct, establishing the legal effect of electronic signatures, and safeguarding the lawful rights and interests of relevant parties."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 For the purposes of this Law, an electronic signature refers to data in electronic form contained in or attached to a data message for the purpose of identifying the signer and indicating the signer's approval of the content therein.\nFor the purposes of this Law, a data message refers to information generated, sent, received or stored by electronic, optical, magnetic or similar means."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 In a contract or other document, instrument, certificate, etc. in civil activities, the parties may agree on the use or non-use of electronic signatures or data messages.\nThe legal effect of a document in which the parties have agreed to use electronic signatures or data messages shall not be denied solely on the ground that it is in the form of electronic signatures or data messages.\nThe preceding paragraph shall not apply to the following documents:\n(1) those involving personal relationships such as marriage, adoption or succession;\n(2) those involving the cessation of public utility services such as water supply, heat supply or gas supply; and\n(3) other circumstances as prescribed by laws or administrative regulations where electronic documents are not applicable."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 A data message that can tangibly represent the content contained therein and can be accessed and used at any time shall be deemed to meet the requirements for written form prescribed by laws and regulations."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 A data message that meets the following conditions shall be deemed to satisfy the requirements for original form prescribed by laws and regulations:\n(1) it can effectively represent the content contained therein and can be accessed and used at any time; and\n(2) it can reliably ensure that the content remains complete and unaltered from the time it is finally formed. However, the addition of endorsements to a data message, and any formal changes occurring in the course of data exchange, storage or display, shall not affect the integrity of the data message."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 A data message that meets the following conditions shall be deemed to satisfy the requirements for record retention prescribed by laws and regulations:\n(1) it can effectively represent the content contained therein and can be accessed and used at any time;\n(2) the format of the data message is the same as the format when it was generated, sent or received, or if the format is different, it can accurately represent the content originally generated, sent or received; and\n(3) the sender, recipient and the time of sending and receiving of the data message can be identified."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 A data message shall not be rejected as evidence solely on the ground that it is generated, sent, received or stored by electronic, optical, magnetic or similar means."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 In examining the authenticity of a data message as evidence, the following factors shall be considered:\n(1) the reliability of the method by which the data message was generated, stored or transmitted;\n(2) the reliability of the method for maintaining the integrity of the content;\n(3) the reliability of the method used to identify the sender; and\n(4) other relevant factors."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 A data message shall be deemed to have been sent by the sender in any of the following circumstances:\n(1) it is sent by an authorized person of the sender;\n(2) it is automatically sent by the sender's information system; or\n(3) after verification by the recipient in a manner agreed by the sender, the result is consistent.\nIf the parties have otherwise agreed on the matters specified in the preceding paragraph, such agreement shall prevail."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 If laws or administrative regulations provide, or the parties agree, that a data message requires an acknowledgement of receipt, the receipt shall be acknowledged. When the sender receives the acknowledgement of receipt from the recipient, the data message shall be deemed to have been received."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 The time when a data message enters an information system outside the sender's control shall be deemed the time of sending of such data message.\nIf the recipient designates a specific system for receiving data messages, the time when the data message enters that specific system shall be deemed the time of receipt of such data message; if no specific system is designated, the time when the data message first enters any system of the recipient shall be deemed the time of receipt.\nIf the parties have otherwise agreed on the time of sending or time of receipt of a data message, such agreement shall prevail."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 The place of business of the sender shall be deemed the place of sending of the data message, and the place of business of the recipient shall be deemed the place of receipt. If there is no place of business, the habitual residence shall be deemed the place of sending or receipt.\nIf the parties have otherwise agreed on the place of sending or place of receipt of a data message, such agreement shall prevail."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 An electronic signature shall be deemed a reliable electronic signature if it meets all of the following conditions:\n(1) when the electronic signature creation data are used for the electronic signature, they are unique to the electronic signer;\n(2) at the time of signing, the electronic signature creation data are under the sole control of the electronic signer;\n(3) any alteration to the electronic signature after signing can be detected; and\n(4) any alteration to the content and form of the data message after signing can be detected.\nThe parties may also choose to use an electronic signature that meets the reliability conditions agreed upon by them."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 A reliable electronic signature shall have the same legal effect as a handwritten signature or a seal."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 An electronic signer shall properly keep the electronic signature creation data. When the electronic signer becomes aware that the electronic signature creation data have been or may have been compromised, the electronic signer shall promptly inform all relevant parties and cease using such electronic signature creation data."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 Where an electronic signature requires certification by a third party, the certification service shall be provided by an electronic certification service provider established according to law."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 To provide electronic certification services, the following conditions shall be satisfied:\n(1) obtaining the status of an enterprise legal person;\n(2) having professional technical and managerial personnel appropriate to providing electronic certification services;\n(3) having funds and business premises appropriate to providing electronic certification services;\n(4) having technology and equipment that meet national security standards;\n(5) having certification documents from the state cryptography administration authority approving the use of cryptography; and\n(6) other conditions prescribed by laws and administrative regulations."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 To engage in electronic certification services, an application shall be submitted to the competent department of information industry of the State Council, together with the relevant materials that meet the conditions provided in Article 17 of this Law. After receiving the application, the competent department of information industry of the State Council shall, after examining it according to law and consulting the opinions of the competent department of commerce of the State Council and other relevant departments, make a decision on whether to grant permission within forty-five days from the date of receipt of the application. If permission is granted, an electronic certification license certificate shall be issued; if permission is not granted, the applicant shall be notified in writing and the reasons shall be stated.\nAn electronic certification service provider that has obtained certification qualification shall publish its name, license number and other information on the Internet in accordance with the provisions of the competent department of information industry of the State Council."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 An electronic certification service provider shall formulate and publish electronic certification business rules that comply with the relevant provisions of the State, and file them with the competent department of information industry of the State Council.\nThe electronic certification business rules shall include matters such as the scope of liability, operational specifications, and information security safeguards."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Where an electronic signer applies to an electronic certification service provider for an electronic signature certification certificate, the electronic signer shall provide true, complete and accurate information.\nAfter receiving the application for an electronic signature certification certificate, the electronic certification service provider shall verify the identity of the applicant and examine the relevant materials."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 The electronic signature certification certificate issued by an electronic certification service provider shall be accurate and error-free, and shall contain the following:\n(1) the name of the electronic certification service provider;\n(2) the name of the certificate holder;\n(3) the serial number of the certificate;\n(4) the validity period of the certificate;\n(5) the electronic signature verification data of the certificate holder;\n(6) the electronic signature of the electronic certification service provider; and\n(7) other matters prescribed by the competent department of information industry of the State Council."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 An electronic certification service provider shall ensure that the content of the electronic signature certification certificate is complete and accurate during its validity period, and shall ensure that an electronic signature relying party can verify or become aware of the content of the electronic signature certification certificate and other relevant matters."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Where an electronic certification service provider intends to suspend or terminate its electronic certification services, it shall notify all relevant parties ninety days prior to the suspension or termination regarding business succession and other relevant matters.\nWhere an electronic certification service provider intends to suspend or terminate its electronic certification services, it shall report to the competent department of information industry of the State Council sixty days prior to the suspension or termination, and shall negotiate with other electronic certification service providers concerning business succession and make proper arrangements.\nIf an electronic certification service provider fails to reach an agreement with other electronic certification service providers on business succession, it shall apply to the competent department of information industry of the State Council to arrange for another electronic certification service provider to succeed its business.\nWhere an electronic certification service provider's electronic certification license certificate is revoked according to law, the handling of its business succession matters shall be governed by the provisions of the competent department of information industry of the State Council."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 An electronic certification service provider shall properly keep information related to certification, and the retention period for such information shall be at least five years after the electronic signature certification certificate ceases to have effect."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 The competent department of information industry of the State Council shall formulate specific administrative measures for the electronic certification service industry in accordance with this Law, and shall exercise supervision and administration over electronic certification service providers according to law."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 Upon approval by the competent department of information industry of the State Council under relevant agreements or the principle of reciprocity, electronic signature certification certificates issued outside the People's Republic of China by electronic certification service providers outside the territory shall have the same legal effect as electronic signature certification certificates issued by electronic certification service providers established in accordance with this Law."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 Where an electronic signer, having become aware that the electronic signature creation data have been or may have been compromised, fails to promptly inform all relevant parties and cease using such data, fails to provide true, complete and accurate information to the electronic certification service provider, or has other faults, thereby causing losses to the electronic signature relying party or the electronic certification service provider, the electronic signer shall bear compensation liability."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Where an electronic signer or an electronic signature relying party suffers losses in engaging in civil activities based on the electronic signature certification services provided by an electronic certification service provider, the electronic certification service provider shall bear compensation liability if it cannot prove that it is not at fault."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 Where any person provides electronic certification services without permission, the competent department of information industry of the State Council shall order cessation of the illegal act; if there are illegal gains, the illegal gains shall be confiscated; if the illegal gains are 300,000 yuan or more, a fine of not less than one time but not more than three times the illegal gains shall be imposed; if there are no illegal gains or the illegal gains are less than 300,000 yuan, a fine of not less than 100,000 yuan but not more than 300,000 yuan shall be imposed."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 Where an electronic certification service provider suspends or terminates electronic certification services without reporting to the competent department of information industry of the State Council sixty days prior to the suspension or termination, the competent department of information industry of the State Council shall impose a fine of not less than 10,000 yuan but not more than 50,000 yuan on the person directly in charge."
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 Where an electronic certification service provider fails to comply with the certification business rules, fails to properly keep information related to certification, or commits other illegal acts, the competent department of information industry of the State Council shall order rectification within a prescribed time limit; if rectification is not made within the time limit, the electronic certification license certificate shall be revoked, and the person directly in charge and other persons directly responsible shall not engage in electronic certification services for ten years. Where an electronic certification license certificate is revoked, a public announcement shall be made and the administrative department for industry and commerce shall be notified."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 Where any person forges, fraudulently uses or steals another person's electronic signature, if a crime is constituted, criminal liability shall be investigated according to law; if losses are caused to others, civil liability shall be borne according to law."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 Where any staff member of the department responsible for the supervision and administration of the electronic certification service industry in accordance with this Law fails to perform the duties of administrative licensing and supervision according to law, an administrative sanction shall be imposed according to law; if a crime is constituted, criminal liability shall be investigated according to law."
     },
     {
       "article_number": "第三十四条",
-      "content_en": ""
+      "content_en": "Article 34 For the purposes of this Law, the following terms have the meanings ascribed to them:\n(1) “electronic signer” means a person who holds the electronic signature creation data and executes an electronic signature in his or her own name or in the name of the person represented;\n(2) “electronic signature relying party” means a person who engages in relevant activities based on reliance on an electronic signature certification certificate or an electronic signature;\n(3) “electronic signature certification certificate” means a data message or other electronic record that can confirm the connection between the electronic signer and the electronic signature creation data;\n(4) “electronic signature creation data” means data, such as characters or codes, used in the process of creating an electronic signature to reliably associate the electronic signature with the electronic signer; and\n(5) “electronic signature verification data” means data used to verify an electronic signature, including codes, passwords, algorithms or public keys."
     },
     {
       "article_number": "第三十五条",
-      "content_en": ""
+      "content_en": "Article 35 The State Council or a department prescribed by the State Council may formulate specific measures for the use of electronic signatures and data messages in government affairs and other social activities in accordance with this Law."
     },
     {
       "article_number": "第三十六条",
-      "content_en": ""
+      "content_en": "Article 36 This Law shall come into force as of April 1, 2005."
     }
   ]
 }
