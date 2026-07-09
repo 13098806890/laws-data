@@ -313,6 +313,7 @@ def main():
                         help='文档来源: al=指导案例, cpwsxd=裁判文书, sfwj=司法文件')
     parser.add_argument('--workers', type=int, default=4, help='并行线程数')
     parser.add_argument('--max-docs', type=int, default=0, help='最多翻译 N 篇（0=不限）')
+    parser.add_argument('--offset', type=int, default=0, help='跳过前 N 篇')
     parser.add_argument('--dry-run', action='store_true', help='统计待翻译量')
     args = parser.parse_args()
 
@@ -323,6 +324,8 @@ def main():
     docs = get_docs(args.source)
     label = SOURCE_LABELS.get(args.source, 'all') if args.source else 'all'
 
+    if args.offset > 0:
+        docs = docs[args.offset:]
     if args.max_docs > 0:
         docs = docs[:args.max_docs]
 
