@@ -5,67 +5,67 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 These Provisions are formulated for the purpose of comprehensively improving the standardization and facilitation of government services, providing efficient and convenient government services to enterprises and the public (hereinafter referred to as administrative counterparts), and optimizing the business environment."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 The State shall accelerate the construction of a nationwide integrated online government service platform (hereinafter referred to as the integrated online platform), promote the standardized, standardized, and intensive construction and interconnection of government service platforms in all regions and departments, advance the nationwide unification of standards and full-process online handling of government service items, facilitate cross-regional, cross-departmental, and cross-level data sharing and business collaboration in government services, and rely on the integrated online platform to promote the deep integration of online and offline government services.\nThe integrated online platform shall consist of the national government service platform, the government service platforms of the relevant departments of the State Council, and the government service platforms of all regions."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 The General Office of the State Council shall be responsible for taking the lead in advancing the construction of the national government service platform and promoting the development of the standard specification system, security assurance system, and operation management system of the integrated online platform.\nThe people's governments of provinces, autonomous regions, and municipalities directly under the Central Government, and the relevant departments of the State Council, shall be responsible for the construction, security assurance, and operation management of the government service platforms in their respective regions and departments, and shall properly handle the connection with the national government service platform."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 Unless otherwise provided by laws or regulations or involving State secrets or other circumstances, government service items shall be included in the integrated online platform for handling in accordance with the steps determined by the State Council.\nGovernment service items include administrative power items and public service items."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 The national government service platform shall, based on resources such as the identity information of natural persons and the information of legal persons, build a unified national identity authentication system, provide unified identity authentication services for government service platforms in all regions and departments, and achieve the goal of one-time authentication and universal handling across the entire network."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 Administrative organs and other institutions responsible for government services (hereinafter collectively referred to as government service institutions) shall, in accordance with the requirements of standardization and normalization, compile service guides to specify the acceptance conditions, required materials, handling procedures, and other information for government service items. The service guides shall be published on the government service platform."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 An administrative counterpart who handles government service items online shall submit truthful and valid materials; information that can be obtained by a government service institution through data sharing shall not be required to be provided separately by the administrative counterpart.\nA government service institution shall not use the materials submitted by an administrative counterpart for purposes unrelated to government services."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 A reliable electronic signature used in government services that meets the conditions prescribed in the Electronic Signature Law of the People's Republic of China shall have the same legal effect as a handwritten signature or seal."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 The State shall establish an authoritative, standardized, and trustworthy unified electronic seal system. The relevant departments of the State Council, local people's governments, and their relevant departments shall use electronic seals issued by the national unified electronic seal system.\nAn electronic seal shall have the same legal effect as a physical seal, and electronic materials affixed with an electronic seal shall be lawful and valid."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 The State shall establish an electronic certificate sharing service system to achieve cross-regional and cross-departmental sharing of electronic certificates and mutual trust and recognition nationwide.\nThe relevant departments of the State Council, local people's governments, and their relevant departments shall produce and manage electronic certificates in accordance with national standards and technical specifications for electronic certificates, and electronic certificates shall adopt a standard document format.\nAn electronic certificate shall have the same legal effect as a paper certificate."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 Unless otherwise provided by laws or administrative regulations, electronic certificates and electronic materials with electronic seals may serve as the basis for handling government service matters."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Government service agencies shall conduct standardized management of electronic documents formed in the course of performing their duties, and shall promptly archive them in electronic form and transfer them to the archives department in accordance with archival management requirements.\nElectronic archives that meet archival management requirements shall have the same legal effect as paper archives."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 Where electronic signatures, electronic seals, electronic certificates, and government service data security involve electronic authentication or cryptographic applications, such matters shall be handled in accordance with laws, administrative regulations, and relevant state provisions."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Where government service agencies or their staff members disclose, sell, or illegally provide to others personal information, privacy, or trade secrets learned of in the course of performing their duties, or fail to perform their duties according to law, are negligent, abuse their power, or engage in graft, legal liability shall be pursued according to law."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 For the purposes of these Provisions, the following terms have the meanings set forth below:\n(1) \"Electronic signature\" refers to data contained or attached in electronic form in a data message, used to identify the signatory and indicate that the signatory approves the content thereof.\n(2) \"Electronic seal\" refers to a seal expressed in the form of electronic data graphics, the identity identifier of which is generated based on trusted cryptographic technology.\n(3) \"Electronic certificate\" refers to electronic documents such as certificates and licenses formed, transmitted, and stored by computer and other electronic devices.\n(4) \"Electronic archive\" refers to electronic documents that have evidentiary, reference, and preservation value and are archived for preservation."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 These Provisions shall come into force as of the date of promulgation."
     }
   ]
 }

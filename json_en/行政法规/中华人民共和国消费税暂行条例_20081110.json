@@ -5,71 +5,71 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 Units and individuals that produce, process on commission, or import the taxable consumer goods specified in these Regulations within the territory of the People's Republic of China, as well as other units and individuals that sell the taxable consumer goods specified in these Regulations as determined by the State Council, shall be the taxpayers of consumption tax and shall pay consumption tax in accordance with these Regulations."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 The items and rates of consumption tax shall be implemented in accordance with the \"Schedule of Consumption Tax Items and Rates\" attached to these Regulations.\nAdjustments to the items and rates of consumption tax shall be determined by the State Council."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 Where a taxpayer concurrently operates taxable consumer goods with different tax rates (hereinafter referred to as taxable consumer goods), the taxpayer shall separately account for the sales value and sales volume of taxable consumer goods at different tax rates; where the sales value and sales volume are not separately accounted for, or where taxable consumer goods at different tax rates are combined into sets for sale, the higher tax rate shall apply."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 The taxable consumer goods produced by a taxpayer shall be subject to tax at the time of sale. Where the taxpayer uses self-produced taxable consumer goods for further production of taxable consumer goods, no tax shall be paid; where used for other purposes, tax shall be paid at the time of transfer for use.\nFor taxable consumer goods processed on commission, except where the trustee is an individual, the trustee shall withhold and remit the tax when delivering the goods to the trustor. Where the trustor uses the commissioned processed taxable consumer goods for further production of taxable consumer goods, the tax paid may be deducted in accordance with regulations.\nImported taxable consumer goods shall be subject to tax at the time of customs declaration for import."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 Consumption tax shall be calculated using the ad valorem rate method, the specific duty method, or the composite method (hereinafter referred to as the composite method). The formulas for calculating the tax payable are as follows:\nTax payable calculated using the ad valorem rate method = sales value × proportional tax rate\nTax payable calculated using the specific duty method = sales volume × fixed tax rate\nTax payable calculated using the composite method = sales value × proportional tax rate + sales volume × fixed tax rate\nThe sales value of taxable consumer goods sold by a taxpayer shall be calculated in Renminbi. Where the taxpayer settles the sales value in a currency other than Renminbi, it shall be converted into Renminbi for calculation."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 The sales value means the total price and additional charges collected by the taxpayer from the purchaser for the sale of taxable consumer goods."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 For self-produced taxable consumer goods used by the taxpayer, tax shall be calculated based on the sales price of similar consumer goods produced by the taxpayer; where there is no sales price of similar consumer goods, tax shall be calculated based on the composite taxable price.\nThe formula for calculating the composite taxable price under the ad valorem rate method:\nComposite taxable price = (cost + profit) ÷ (1 - proportional tax rate)\nThe formula for calculating the composite taxable price under the composite method:\nComposite taxable price = (cost + profit + volume of self-production and self-use × fixed tax rate) ÷ (1 - proportional tax rate)"
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 For commissioned processed taxable consumer goods, tax shall be calculated based on the sales price of similar consumer goods of the trustee; where there is no sales price of similar consumer goods, tax shall be calculated based on the composite taxable price.\nThe formula for calculating the composite taxable price under the ad valorem rate method:\nComposite taxable price = (material cost + processing fee) ÷ (1 - proportional tax rate)\nThe formula for calculating the composite taxable price under the composite method:\nComposite taxable price = (material cost + processing fee + quantity of commissioned processing × fixed tax rate) ÷ (1 - proportional tax rate)"
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 For imported taxable consumer goods, tax shall be calculated based on the composite taxable price.\nThe formula for calculating the composite taxable price under the ad valorem rate method:\nComposite taxable price = (duty-paid value of customs + customs duty) ÷ (1 - proportional consumption tax rate)\nThe formula for calculating the composite taxable price under the composite method:\nComposite taxable price = (duty-paid value of customs + customs duty + quantity imported × fixed consumption tax rate) ÷ (1 - proportional consumption tax rate)"
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Where the taxable price of the taxpayer's taxable consumer goods is obviously low without justifiable reasons, the competent tax authority shall determine the taxable price."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 The export of taxable consumer goods by a taxpayer shall be exempted from consumption tax, unless otherwise provided by the State Council. The exemption method for exported taxable consumer goods shall be prescribed by the finance and tax authorities under the State Council."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Consumption tax shall be collected by the tax authorities, and the consumption tax on imported taxable consumer goods shall be collected by the Customs on behalf of the tax authorities.\nConsumption tax on taxable consumer goods brought or mailed into the country by individuals shall be assessed together with customs duties. The specific measures shall be formulated by the Customs Tariff Commission of the State Council in conjunction with relevant departments."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 For taxable consumer goods sold by a taxpayer and self-produced taxable consumer goods used by the taxpayer, unless otherwise provided by the finance and tax authorities under the State Council, the taxpayer shall file a tax return and pay tax to the competent tax authority at the place of the taxpayer's institution or residence.\nFor commissioned processed taxable consumer goods, except where the trustee is an individual, the trustee shall pay the consumption tax to the competent tax authority at the place of its institution or residence.\nFor imported taxable consumer goods, a tax return shall be filed with the Customs at the place of declaration for import."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 The tax payment periods for consumption tax shall be 1 day, 3 days, 5 days, 10 days, 15 days, 1 month, or 1 quarter. The specific tax payment period for a taxpayer shall be determined separately by the competent tax authority based on the amount of tax payable by the taxpayer; where a taxpayer cannot pay tax on a fixed period basis, it may pay tax on a per-transaction basis.\nWhere a taxpayer adopts a tax payment period of 1 month or 1 quarter, it shall file a tax return and pay tax within 15 days from the date of expiration of the period; where a taxpayer adopts a tax payment period of 1 day, 3 days, 5 days, 10 days, or 15 days, it shall prepay the tax within 5 days from the date of expiration of the period, and file a tax return and pay the balance of the tax payable for the previous month within 15 days from the 1st day of the following month."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 A taxpayer importing taxable consumer goods shall pay the tax within 15 days from the date of issuance of the special payment letter for customs import consumption tax by the Customs."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 The collection and administration of consumption tax shall be implemented in accordance with the \"Tax Collection Administration Law of the People's Republic of China\" and the relevant provisions of these Regulations."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 These Regulations shall come into force as of January 1, 2009.\nAppendix:\nSchedule of Consumption Tax Items and Rates\n(Continued)\n(Continued)\n(Continued)"
     }
   ]
 }

@@ -1,425 +1,343 @@
 #!/usr/bin/env python3
-"""Real-time T4 translation dashboard with SSE.
-Usage:
-  python3 scripts/status_server.py [--port 8080]
-Open http://localhost:8080 (or http://<lan-ip>:8080 from phone)
-"""
+"""HTTP status server for translation progress monitoring."""
 
+import http.server
 import json
-import queue
-import re
-import sqlite3
-import subprocess
-import sys
-import threading
+import os
 import time
-from datetime import datetime
-from http.server import HTTPServer, BaseHTTPRequestHandler
 from pathlib import Path
-from socketserver import ThreadingMixIn
 
-DB_PATH = Path(__file__).resolve().parent.parent / "law_content.db"
-JSON_DIR = Path(__file__).resolve().parent.parent / "json"
-JSON_EN_DIR = Path(__file__).resolve().parent.parent / "json_en"
-LOG_PATH = "/tmp/t4_translation.log"
-POLL_INTERVAL = 3
+JSON_EN_DIR = Path(__file__).parent.parent / 'json_en'
+JSON_EN_GONGBAO_DIR = Path(__file__).parent.parent / 'json_en_gongbao'
+DB_PATH = str(Path(__file__).parent.parent / 'law_content.db')
 
-broadcast_queue = queue.Queue()
-previous = ""
-
-class ThreadingHTTPServer(ThreadingMixIn, HTTPServer):
-    allow_reuse_address = True
+PORT = int(os.environ.get('STATUS_PORT', '8080'))
+LAST_N_MINUTES = 5
 
 
-def get_translate_pid():
-    r = subprocess.run(
-        ["pgrep", "-f", "translate_to_en.py"],
-        capture_output=True, text=True, timeout=5
-    )
-    for p in r.stdout.strip().split():
-        p = p.strip()
-        if p:
-            return p
-    return None
-
-
-def get_process_start_time(pid):
-    if not pid:
-        return None
-    r = subprocess.run(
-        ["ps", "-o", "lstart=", "-p", pid],
-        capture_output=True, text=True, timeout=3
-    )
-    return r.stdout.strip()
-
-
-def read_json_en_counts():
-    conn = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
-    rows = conn.execute(
-        "SELECT id, filename, category, title FROM laws WHERE is_current=1"
-    ).fetchall()
-    conn.close()
-
-    conn2 = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
-    cited = dict(conn2.execute(
-        "SELECT to_law_id, COUNT(*) FROM article_references GROUP BY to_law_id"
-    ).fetchall())
-    conn2.close()
-
-    tier_bounds = {
-        "T0": (50, 99999), "T1": (20, 50), "T2": (10, 20),
-        "T3": (5, 10), "T4": (1, 5), "T5": (0, 1),
+def count_t5_progress():
+    """只统计 T5 层级的法律（citation < 1），从 DB 读取列表。"""
+    total_laws = 0
+    done = 0
+    total_articles = 0
+    done_articles = 0
+    try:
+        import sqlite3
+        conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)
+        rows = conn.execute('''
+            SELECT l.id, l.filename, l.category, COUNT(r.id) as refs
+            FROM laws l
+            LEFT JOIN article_references r ON r.to_law_id = l.id
+            WHERE l.is_current=1
+            GROUP BY l.id HAVING refs < 1
+        ''').fetchall()
+        conn.close()
+    except Exception:
+        rows = []
+    total_laws = len(rows)
+    for law_id, filename, category, refs in rows:
+        f = JSON_EN_DIR / category / f'{filename}.json'
+        if not f.exists():
+            continue
+        try:
+            data = json.loads(f.read_text(encoding='utf-8'))
+        except Exception:
+            continue
+        articles = data.get('articles', []) or []
+        total_articles += len(articles)
+        has_en = sum(1 for a in articles if a.get('content_en', '').strip())
+        done_articles += has_en
+        if has_en == len(articles) and len(articles) > 0:
+            done += 1
+        elif len(articles) == 0:
+            # 无文章结构的法律：full_text_en 或 stub（无中文内容）都算完成
+            done += 1
+    return {
+        'total': total_laws,
+        'done': done,
+        'total_articles': total_articles,
+        'done_articles': done_articles,
     }
-    tiers = {t: {"total": 0, "done": 0} for t in tier_bounds}
-    t4_laws_info = []
 
-    for law_id, filename, category, title in rows:
-        refs = cited.get(law_id, 0)
-        for t, (lo, hi) in tier_bounds.items():
-            if lo <= refs < hi:
-                tiers[t]["total"] += 1
-                en_path = JSON_EN_DIR / category / f"{filename}.json"
+
+GONGBAO_TOTALS = {}
+try:
+    import sqlite3
+    conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)
+    for row in conn.execute("SELECT source, COUNT(*) FROM gongbao_docs GROUP BY source"):
+        GONGBAO_TOTALS[row[0]] = row[1]
+    conn.close()
+except Exception:
+    pass
+
+
+def count_gongbao_progress():
+    done_by_source = {}
+    if JSON_EN_GONGBAO_DIR.is_dir():
+        for source_dir in JSON_EN_GONGBAO_DIR.iterdir():
+            if not source_dir.is_dir():
+                continue
+            done_count = 0
+            for f in source_dir.glob('*.json'):
                 try:
-                    data = json.loads(en_path.read_text(encoding="utf-8"))
-                    arts = data.get("articles", [])
-                    if not arts:
-                        tiers[t]["done"] += 1
-                    elif all(a.get("content_en", "").strip() for a in arts):
-                        tiers[t]["done"] += 1
-                    elif t == "T4":
-                        # Store incomplete T4 law for detail
-                        missing = sum(1 for a in arts if not a.get("content_en", "").strip())
-                        cn_path = JSON_DIR / category / f"{filename}.json"
-                        cn_arts = 0
-                        if cn_path.exists():
-                            cn_data = json.loads(cn_path.read_text(encoding="utf-8"))
-                            cn_arts = len([
-                                1 for pt in cn_data.get("parts", [])
-                                for ch in pt.get("chapters", [])
-                                for sec in ch.get("sections", [])
-                                for _ in sec.get("articles", [])
-                            ]) or len([
-                                1 for ch in cn_data.get("chapters", [])
-                                for sec in ch.get("sections", [])
-                                for _ in sec.get("articles", [])
-                            ])
-                        t4_laws_info.append({
-                            "title": title,
-                            "done": len(arts) - missing,
-                            "total": len(arts),
-                        })
+                    data = json.loads(f.read_text(encoding='utf-8'))
+                    if data.get('full_text_en', '').strip():
+                        done_count += 1
                 except Exception:
                     pass
-                break
-
-    return tiers, t4_laws_info
-
-
-def parse_log():
-    lines = []
-    current_law = ""
-    current_idx = 0
-    current_total = 0
-    current_articles = 0
-    start_time = None
-    try:
-        text = Path(LOG_PATH).read_text(encoding="utf-8", errors="replace")
-        lines = text.strip().split("\n")
-
-        # Find first relevant line for start time
-        for line in lines:
-            m = re.search(r'^\[(\d+)/(\d+)\]', line)
-            if m:
-                start_time = lines[0]  # first log line
-                break
-
-        recent = lines[-40:]
-        for line in reversed(lines):
-            m = re.search(
-                r'^\[(\d+)/(\d+)\]\s+(.+?)\s*（(\d+)\s*条',
-                line,
-            )
-            if m:
-                current_law = m.group(3)
-                current_idx = int(m.group(1))
-                current_total = int(m.group(2))
-                break
-        # Count articles in current law from log
-        for line in reversed(lines):
-            m = re.search(r'（(\d+)\s*条', line)
-            if m and current_law and current_law in line:
-                current_articles = int(m.group(1))
-                break
-    except (FileNotFoundError, OSError):
-        pass
-    return recent, current_law, current_idx, current_total, current_articles
+            done_by_source[source_dir.name] = done_count
+    total = sum(GONGBAO_TOTALS.values())
+    done = sum(done_by_source.values())
+    sources = {}
+    for src, src_total in GONGBAO_TOTALS.items():
+        sources[src] = {'total': src_total, 'done': done_by_source.get(src, 0)}
+    return {'total': total, 'done': done, 'sources': sources}
 
 
-def get_lan_ip():
-    r = subprocess.run(
-        ["ifconfig"],
-        capture_output=True, text=True, timeout=3
-    )
-    for m in re.finditer(r'inet (\d+\.\d+\.\d+\.\d+)', r.stdout):
-        ip = m.group(1)
-        if not ip.startswith("127."):
-            return ip
-    return "unknown"
+def count_recent_chars(minutes=5):
+    cutoff = time.time() - minutes * 60
+    chars = 0
+    files = 0
+    for root, dirs, files_list in os.walk(JSON_EN_GONGBAO_DIR):
+        for fname in files_list:
+            if not fname.endswith('.json'):
+                continue
+            fpath = Path(root) / fname
+            mtime = fpath.stat().st_mtime
+            if mtime < cutoff:
+                continue
+            try:
+                data = json.loads(fpath.read_text(encoding='utf-8'))
+                ft = data.get('full_text_en', '') or ''
+                chars += len(ft)
+                files += 1
+            except Exception:
+                pass
+    for root, dirs, files_list in os.walk(JSON_EN_DIR):
+        for fname in files_list:
+            if not fname.endswith('.json'):
+                continue
+            fpath = Path(root) / fname
+            mtime = fpath.stat().st_mtime
+            if mtime < cutoff:
+                continue
+            try:
+                data = json.loads(fpath.read_text(encoding='utf-8'))
+                for a in data.get('articles', []) or []:
+                    content = a.get('title_en', '') or ''
+                    chars += len(content)
+                    content = a.get('content_en', '') or ''
+                    chars += len(content)
+                ft = data.get('full_text_en', '') or ''
+                chars += len(ft)
+                files += 1
+            except Exception:
+                pass
+    return chars, files
+
+def estimate_remaining(t5, gongbao, recent_chars, recent_seconds=300):
+    speed = recent_chars / recent_seconds if recent_seconds > 0 else 0
+    gc_remaining_docs = GONGBAO_TOTALS.get('al', 986) - gongbao['sources'].get('al', {}).get('done', 0)
+    gc_remaining_chars = gc_remaining_docs * 4714
+    t5_remaining_laws = t5['total'] - t5['done']
+    t5_remaining_articles = t5['total_articles'] - t5['done_articles']
+    t5_remaining_chars = t5_remaining_articles * 500
+    total_remaining_chars = gc_remaining_chars + t5_remaining_chars
+    eta = total_remaining_chars / speed if speed > 0 else 0
+    return {
+        'gc_remaining_docs': gc_remaining_docs,
+        'gc_remaining_chars': gc_remaining_chars,
+        't5_remaining_laws': t5_remaining_laws,
+        't5_remaining_articles': t5_remaining_articles,
+        'total_remaining_chars': total_remaining_chars,
+        'eta_seconds': eta,
+        'speed_chars_per_sec': round(speed, 1),
+    }
 
 
-# ── HTML ──
-SSE_HTML = r"""<!DOCTYPE html>
+index_html = """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<title>T4 翻译进度</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>翻译进度</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0d1117;color:#c9d1d9;padding:16px;max-width:800px;margin:auto}
-h1{font-size:18px;font-weight:600;margin-bottom:12px;color:#f0f6fc}
-.card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:14px 16px;margin-bottom:10px}
-.row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.dot{display:inline-block;width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.dot.green{background:#3fb950;box-shadow:0 0 6px #3fb950}
-.dot.red{background:#f85149;animation:pulse 1.5s infinite}
-.dot.yellow{background:#d29922}
-.dot.gray{background:#8b949e}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500}
-.badge.green{background:#2ea04333;color:#3fb950;border:1px solid #2ea043}
-.badge.red{background:#f8514933;color:#f85149;border:1px solid #f85149}
-.badge.yellow{background:#d2992233;color:#d29922;border:1px solid #d29922}
-.badge.gray{background:#8b949e33;color:#8b949e;border:1px solid #8b949e}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
-.stat-item .l{font-size:11px;color:#8b949e}
-.stat-item .v{font-size:18px;font-weight:600;margin-top:1px}
-.stat-item .v.green{color:#3fb950}
-.stat-item .v.yellow{color:#d29922}
-.stat-item .v.blue{color:#58a6ff}
-.bar-wrap{background:#21262d;border-radius:10px;height:18px;overflow:hidden;margin:6px 0 2px}
-.bar-fill{height:100%;border-radius:10px;transition:width 1s ease}
-.bar-fill.t4{background:linear-gradient(90deg,#2ea043,#3fb950)}
-.bar-label{font-size:11px;color:#8b949e;text-align:center;margin-bottom:10px}
-.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px;color:#8b949e}
-.info-grid span{color:#c9d1d9}
-.section-title{font-size:12px;color:#8b949e;text-transform:uppercase;letter-spacing:.5px;margin:12px 0 6px}
-.log{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:12px 14px}
-.log h2{font-size:12px;color:#8b949e;margin-bottom:6px}
-.log pre{font-family:"SF Mono","Fira Code",monospace;font-size:10px;line-height:1.5;color:#8b949e;overflow-x:auto;white-space:pre-wrap;word-break:break-all;max-height:300px}
-.tier-grid{display:grid;gap:4px}
-.tier-item{display:flex;justify-content:space-between;font-size:12px;padding:5px 8px;background:#21262d;border-radius:6px}
-.tier-item .pct{font-weight:600}
-.tier-item.full .pct{color:#3fb950}
-.tier-item.partial .pct{color:#d29922}
-.tier-item.empty .pct{color:#8b949e}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px; }
+  h1 { font-size: 24px; margin-bottom: 20px; color: #f0f6fc; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  .card h2 { font-size: 14px; color: #8b949e; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px; }
+  .stat-row { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; }
+  .stat-row + .stat-row { border-top: 1px solid #21262d; }
+  .label { font-size: 14px; color: #c9d1d9; }
+  .value { font-size: 20px; font-weight: 600; color: #f0f6fc; font-variant-numeric: tabular-nums; }
+  .value.green { color: #3fb950; }
+  .value.blue { color: #58a6ff; }
+  .value.orange { color: #d29922; }
+  .bar-bg { background: #21262d; border-radius: 4px; height: 8px; margin-top: 8px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 4px; transition: width 2s ease; }
+  .bar-fill.green { background: linear-gradient(90deg, #2ea043, #3fb950); }
+  .bar-fill.blue { background: linear-gradient(90deg, #1f6feb, #58a6ff); }
+  .footer { text-align: center; color: #484f58; font-size: 12px; margin-top: 24px; }
+  .recent { font-size: 32px; font-weight: 700; }
+  .recent.green { color: #3fb950; }
+  .updated { font-size: 12px; color: #484f58; text-align: right; margin-top: 4px; }
+  @media (prefers-color-scheme: light) {
+    body { background: #ffffff; color: #24292f; }
+    h1 { color: #0969da; }
+    .card { background: #f6f8fa; border-color: #d0d7de; }
+    .card h2 { color: #57606a; }
+    .label { color: #24292f; }
+    .value { color: #24292f; }
+    .stat-row + .stat-row { border-color: #d0d7de; }
+    .bar-bg { background: #d0d7de; }
+    .footer { color: #8c959f; }
+    .updated { color: #8c959f; }
+  }
 </style>
 </head>
 <body>
-
-<h1>T4 翻译进度</h1>
-
-<div class="card">
-  <div class="row">
-    <span class="dot red" id="dot"></span>
-    <span style="font-weight:500" id="statusLabel">连接中...</span>
-    <span class="badge" id="statusBadge"></span>
+<h1>翻译进度监控</h1>
+<div class="grid">
+  <div class="card">
+    <h2>T5 法律翻译</h2>
+    <div class="stat-row">
+      <span class="label">进度</span>
+      <span class="value" id="t5-pct">--</span>
+    </div>
+    <div class="bar-bg">
+      <div class="bar-fill green" id="t5-bar" style="width:0%"></div>
+    </div>
+    <div class="stat-row">
+      <span class="label">完成</span>
+      <span class="value green" id="t5-done">--</span>
+    </div>
+    <div class="stat-row">
+      <span class="label">条文</span>
+      <span class="value blue" id="t5-articles">--</span>
+    </div>
   </div>
-  <div class="info-grid">
-    <div>PID：<span id="pidInfo">-</span></div>
-    <div>启动时间：<span id="startTime">-</span></div>
-    <div>当前批次：<span id="batchSize">-</span></div>
-    <div>局域网：<span id="lanIp">-</span></div>
+  <div class="card">
+    <h2>指导案例翻译</h2>
+    <div class="stat-row">
+      <span class="label">进度</span>
+      <span class="value" id="gc-pct">--</span>
+    </div>
+    <div class="bar-bg">
+      <div class="bar-fill blue" id="gc-bar" style="width:0%"></div>
+    </div>
+    <div class="stat-row">
+      <span class="label">完成</span>
+      <span class="value green" id="gc-done">--</span>
+    </div>
+    <div class="stat-row">
+      <span class="label">待翻译</span>
+      <span class="value orange" id="gc-pending">--</span>
+    </div>
+    <div class="stat-row">
+      <span class="label">剩余字符</span>
+      <span class="value orange" id="gc-remaining-chars">--</span>
+    </div>
+  </div>
+  <div class="card">
+    <h2>近5分钟翻译量</h2>
+    <div class="stat-row">
+      <span class="label">字符数</span>
+      <span class="value recent green" id="recent-chars">--</span>
+    </div>
+    <div class="stat-row">
+      <span class="label">文件数</span>
+      <span class="value blue" id="recent-files">--</span>
+    </div>
+    <div class="stat-row">
+      <span class="label">速率</span>
+      <span class="value orange" id="recent-rate">--</span>
+    </div>
+    <div class="stat-row">
+      <span class="label">预计剩余</span>
+      <span class="value" id="eta-display">--</span>
+    </div>
   </div>
 </div>
-
-<div class="stat-grid">
-  <div class="stat-item"><div class="l">T4 完成</div><div class="v green" id="t4Done">-</div></div>
-  <div class="stat-item"><div class="l">T4 剩余</div><div class="v yellow" id="t4Remain">-</div></div>
-  <div class="stat-item"><div class="l">T4 总计</div><div class="v blue" id="t4Total">-</div></div>
-  <div class="stat-item"><div class="l">总完成</div><div class="v blue" id="allDone">-</div></div>
-</div>
-
-<div class="bar-label" id="t4BarLabel">-</div>
-<div class="bar-wrap"><div class="bar-fill t4" id="t4Bar" style="width:0%"></div></div>
-
-<div class="card">
-  <div class="row">
-    <div style="font-size:13px;color:#8b949e;flex-shrink:0">正在处理</div>
-    <span class="badge" id="currentPos" style="margin-left:auto">-</span>
-  </div>
-  <div style="font-size:15px;font-weight:500;margin:6px 0" id="currentLaw">-</div>
-  <div style="font-size:11px;color:#8b949e" id="currentArticles">-</div>
-</div>
-
-<div class="section-title">各层级进度</div>
-<div class="card" style="padding:10px 14px">
-  <div class="tier-grid" id="tierGrid"></div>
-</div>
-
-<div class="section-title">实时日志</div>
-<div class="log">
-  <h2>translate_to_en.py 输出（最近 40 行）</h2>
-  <pre id="logContent">等待数据...</pre>
-</div>
-
+<div class="updated" id="updated">加载中...</div>
+<div class="footer">5分钟自动刷新</div>
 <script>
-let prevLog="";
-const evt=new EventSource("/events");
-evt.onmessage=e=>{
-  const s=JSON.parse(e.data);
-  const el=i=>document.getElementById(i);
-  const dot=el("dot");
+function fmt(n) { return n.toLocaleString('zh-CN'); }
+function update() {
+  fetch('/api/status').then(r => r.json()).then(d => {
+    const t5 = d.t5;
+    const t5pct = t5.total > 0 ? (t5.done / t5.total * 100) : 0;
+    document.getElementById('t5-pct').textContent = t5pct.toFixed(1) + '%';
+    document.getElementById('t5-bar').style.width = t5pct + '%';
+    document.getElementById('t5-done').textContent = fmt(t5.done) + ' / ' + fmt(t5.total) + ' 部';
+    document.getElementById('t5-articles').textContent = fmt(t5.done_articles) + ' / ' + fmt(t5.total_articles) + ' 条';
 
-  // Task status
-  if(!s.running && s.all_done){dot.className="dot green";el("statusLabel").textContent="已完成";el("statusBadge").className="badge green";el("statusBadge").textContent="全部翻译完成"}
-  else if(!s.running && s.t4_done>0){dot.className="dot yellow";el("statusLabel").textContent="已终止";el("statusBadge").className="badge yellow";el("statusBadge").textContent="T4 未完成"}
-  else if(!s.running){dot.className="dot gray";el("statusLabel").textContent="未启动";el("statusBadge").className="badge gray";el("statusBadge").textContent="等待开始"}
-  else {dot.className="dot green";el("statusLabel").textContent="运行中";el("statusBadge").className="badge green";el("statusBadge").textContent="T4 翻译中"}
+    const gc = d.gongbao;
+    const gcpct = gc.total > 0 ? (gc.done / gc.total * 100) : 0;
+    document.getElementById('gc-pct').textContent = gcpct.toFixed(1) + '%';
+    document.getElementById('gc-bar').style.width = gcpct + '%';
+    document.getElementById('gc-done').textContent = fmt(gc.done) + ' / ' + fmt(gc.total) + ' 篇';
+    document.getElementById('gc-pending').textContent = fmt(gc.total - gc.done) + ' 篇';
+    const eta = d.eta;
+    document.getElementById('gc-remaining-chars').textContent = fmt(eta.gc_remaining_chars) + ' 字';
 
-  el("pidInfo").textContent=s.pid||"-";
-  el("startTime").textContent=s.start_time||"-";
-  el("batchSize").textContent=s.batch_size!=null?s.batch_size+" 条/批":"-";
-  el("lanIp").textContent=s.lan_ip||"-";
+    document.getElementById('recent-chars').textContent = fmt(d.recent_chars) + ' 字';
+    document.getElementById('recent-files').textContent = d.recent_files + ' 篇';
+    const rate = d.recent_chars / 300;
+    document.getElementById('recent-rate').textContent = rate.toFixed(0) + ' 字/秒';
+    const etaSec = eta.eta_seconds;
+    if (etaSec > 0) {
+      const hours = Math.floor(etaSec / 3600);
+      const mins = Math.floor((etaSec % 3600) / 60);
+      document.getElementById('eta-display').textContent = hours + 'h ' + mins + 'm';
+    } else {
+      document.getElementById('eta-display').textContent = '计算中...';
+    }
 
-  el("t4Done").textContent=s.t4_done;
-  el("t4Remain").textContent=s.t4_total-s.t4_done;
-  el("t4Total").textContent=s.t4_total;
-  el("allDone").textContent=s.all_done;
-
-  const pct=s.t4_pct||0;
-  el("t4BarLabel").textContent="T4 进度："+s.t4_done+" / "+s.t4_total+" ("+pct+"%)";
-  el("t4Bar").style.width=Math.min(pct,100)+"%";
-
-  el("currentLaw").textContent=s.current_law||"(等待中)";
-  el("currentPos").textContent=s.current_idx?"["+s.current_idx+"/"+s.current_total+"]":"-";
-  el("currentArticles").textContent=s.current_articles?s.current_law+" — "+s.current_articles+" 条待翻译":"";
-  el("currentPos").className="badge "+(s.running?"green":"gray");
-
-  // Tier grid
-  const tl={T0:"50+ 引用",T1:"20-50",T2:"10-20",T3:"5-10",T4:"1-5",T5:"0"};
-  const ts=s.tiers||{};
-  el("tierGrid").innerHTML=["T0","T1","T2","T3","T4","T5"].map(t=>{
-    const d=ts[t]||{done:0,total:0};
-    const p=d.total?(d.done/d.total*100).toFixed(1):0;
-    const cls=d.total&&d.done===d.total?"full":(d.done>0?"partial":"empty");
-    return '<div class="tier-item '+cls+'"><span>'+t+" ("+tl[t]+')</span><span class="pct">'+d.done+"/"+d.total+" ("+p+"%)</span></div>"
-  }).join("");
-
-  const ls=(s.log_lines||[]).join("\n");
-  if(ls!==prevLog){const lc=el("logContent");lc.textContent=ls||"(无日志)";lc.scrollTop=lc.scrollHeight;prevLog=ls}
-};
-evt.onerror=()=>{document.getElementById("statusLabel").textContent="断开";document.getElementById("dot").className="dot red"};
+    document.getElementById('updated').textContent = '更新于 ' + new Date(d.timestamp * 1000).toLocaleTimeString('zh-CN');
+  }).catch(e => {
+    document.getElementById('updated').textContent = '连接失败: ' + e.message;
+  });
+}
+update();
+setInterval(update, 300000);
 </script>
 </body>
 </html>"""
 
 
-class Handler(BaseHTTPRequestHandler):
+class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
-        if self.path == "/events":
+        if self.path == '/api/status':
             self.send_response(200)
-            self.send_header("Content-Type", "text/event-stream")
-            self.send_header("Cache-Control", "no-cache")
-            self.send_header("Connection", "keep-alive")
+            self.send_header('Content-Type', 'application/json; charset=utf-8')
+            self.send_header('Access-Control-Allow-Origin', '*')
             self.end_headers()
-            try:
-                while True:
-                    data = broadcast_queue.get()
-                    self.wfile.write(f"data: {data}\n\n".encode())
-                    self.wfile.flush()
-            except (BrokenPipeError, ConnectionResetError):
-                pass
+            t5 = count_t5_progress()
+            gc = count_gongbao_progress()
+            recent_chars, recent_files = count_recent_chars(LAST_N_MINUTES)
+            eta = estimate_remaining(t5, gc, recent_chars, LAST_N_MINUTES * 60)
+            data = {
+                't5': t5,
+                'gongbao': gc,
+                'recent_chars': recent_chars,
+                'recent_files': recent_files,
+                'eta': eta,
+                'timestamp': int(time.time()),
+            }
+            self.wfile.write(json.dumps(data, ensure_ascii=False).encode())
         else:
             self.send_response(200)
-            self.send_header("Content-Type", "text/html; charset=utf-8")
-            self.send_header("Cache-Control", "no-cache")
+            self.send_header('Content-Type', 'text/html; charset=utf-8')
             self.end_headers()
-            self.wfile.write(SSE_HTML.encode("utf-8"))
+            self.wfile.write(index_html.encode())
 
-    def log_message(self, *a):
+    def log_message(self, fmt, *args):
         pass
 
 
-def poll_status():
-    global previous
-    start_time_cache = None
-    lan_ip = get_lan_ip()
-    while True:
-        try:
-            pid = get_translate_pid()
-            running = pid is not None
-
-            # Process start time
-            if running:
-                st = get_process_start_time(pid)
-                if st:
-                    start_time_cache = st
-
-            batch_size = None
-            if pid:
-                r = subprocess.run(
-                    ["ps", "-p", pid, "-o", "args="],
-                    capture_output=True, text=True, timeout=3
-                )
-                m = re.search(r'--batch-size\s+(\d+)', r.stdout)
-                batch_size = int(m.group(1)) if m else None
-
-            log_lines, current_law, current_idx, current_total, current_articles = parse_log()
-            tiers, t4_incomplete = read_json_en_counts()
-
-            t4 = tiers.get("T4", {})
-            t4_done = t4.get("done", 0)
-            t4_total = t4.get("total", 0)
-
-            # All tiers done count
-            all_done = sum(v["done"] for v in tiers.values())
-
-            # Determine if translation is fully complete
-            fully_done = not running and t4_total > 0 and t4_done >= t4_total
-
-            status = json.dumps({
-                "running": running,
-                "fully_done": fully_done,
-                "pid": pid,
-                "start_time": start_time_cache or "",
-                "batch_size": batch_size,
-                "lan_ip": lan_ip,
-                "current_law": current_law,
-                "current_idx": current_idx,
-                "current_total": current_total,
-                "current_articles": current_articles,
-                "t4_done": t4_done,
-                "t4_total": t4_total,
-                "t4_pct": round(t4_done / t4_total * 100, 1) if t4_total else 0,
-                "all_done": all_done,
-                "tiers": tiers,
-                "t4_incomplete": t4_incomplete,
-                "log_lines": log_lines,
-            }, ensure_ascii=False)
-
-            if status != previous:
-                previous = status
-                broadcast_queue.put(status)
-
-        except Exception as e:
-            broadcast_queue.put(json.dumps({"error": str(e)}, ensure_ascii=False))
-
-        time.sleep(POLL_INTERVAL)
-
-
-def main():
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8080
-    t = threading.Thread(target=poll_status, daemon=True)
-    t.start()
-    server = ThreadingHTTPServer(("0.0.0.0", port), Handler)
-    print(f"Dashboard → http://localhost:{port}")
-    print(f"手机访问 → http://{get_lan_ip()}:{port}")
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        print("Stopped")
-
-
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    server = http.server.HTTPServer(('0.0.0.0', PORT), Handler)
+    print(f'Status server at http://localhost:{PORT}')
+    server.serve_forever()

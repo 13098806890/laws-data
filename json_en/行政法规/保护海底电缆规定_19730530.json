@@ -2,5 +2,10 @@
   "law_id": 5000734,
   "title_en": "Provisions on Protection of Submarine Cables",
   "promulgation_info_en": "",
-  "articles": []
+  "articles": [
+    {
+      "article_number": "_1",
+      "content_en": "(1) Protecting submarine cables is an important measure for strengthening coastal defense construction. All relevant departments such as naval forces, transportation and shipping, aquatic products and salvage, oceanographic surveys, coastal communes and production brigades shall regularly educate their personnel to understand the important significance of protecting submarine cables, heighten vigilance, and strictly prevent sabotage.\n(2) Naval vessels, merchant ships, foreign vessels, and other ships mooring or engaging in fishing operations shall avoid anchoring in prohibited areas where submarine cables are laid (surface buoy markers may be used in cable landing areas near docks). Large-scale projects such as submarine surveys and dock construction shall contact the local military leadership in advance so that corresponding measures may be taken and proper solutions reached.\n(3) When a ship's anchor or fishing gear accidentally hooks a submarine cable, the cable shall be slowly lifted to the water surface, the anchor (or hooked object) removed, and after confirming no damage, the cable shall be placed back into the sea. If the cable cannot be lifted to the water surface, it shall not be towed or cut off; if necessary, the anchor (or hooked object) may be abandoned.\n(4) When a cable is hooked or damaged, surface buoy markers shall be placed at that location, and the position and extent of damage shall be promptly reported to the local government leadership or relevant departments for handling.\n(5) No unit, vessel, or individual shall salvage, cut, retrieve, or steal submarine cables without authorization; otherwise, it shall be deemed as sabotage.\nAfter a submarine cable is damaged or destroyed, the local public security and armed forces departments shall vigorously assist the user unit to promptly ascertain the cause. If damage is caused due to negligence or improper measures, the responsible unit shall compensate and criticize and educate the offender; if the circumstances are serious, disciplinary action shall be taken."
+    }
+  ]
 }

@@ -5,123 +5,123 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 Electronic data refers to data formed during the occurrence of a case, stored, processed, and transmitted in digital form, which may prove the facts of the case.\nElectronic data includes but is not limited to the following information and electronic documents:\n(1) Information published on network platforms such as web pages, blogs, microblogs, Moments (Pengyouquan), tieba, and cloud drives;\n(2) Communication information of network application services such as SMS, email, instant messaging, and communication groups;\n(3) Information such as user registration information, identity authentication information, electronic transaction records, communication records, and login logs;\n(4) Electronic documents such as documents, pictures, audio and video, digital certificates, and computer programs.\nEvidence such as witness testimony, victim statements, and confessions and explanations of criminal suspects and defendants recorded in digital form shall not be electronic data. If truly necessary, these Provisions may be referenced and applied to the collection, extraction, transfer, and review of relevant evidence."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 An investigative authority shall comply with statutory procedures and follow relevant technical standards to collect and extract electronic data comprehensively, objectively, and in a timely manner; the People's Procuratorate and the People's Court shall review and determine electronic data centering on authenticity, legality, and relevance."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 The People's Court, the People's Procuratorate, and the public security organ shall have the right to collect and obtain electronic data from relevant entities and individuals according to law. Relevant entities and individuals shall truthfully provide such data."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 Where electronic data involves state secrets, trade secrets, or personal privacy, it shall be kept confidential."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 For electronic data used as evidence, one or more of the following methods shall be adopted to protect the integrity of the electronic data:\n(1) Seizing and sealing up the original storage medium of the electronic data;\n(2) Calculating the integrity verification value of the electronic data;\n(3) Making and sealing up a backup of the electronic data;\n(4) Freezing the electronic data;\n(5) Videotaping the relevant activities of collecting and extracting the electronic data;\n(6) Other methods for protecting the integrity of electronic data."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 Electronic data collected and extracted during preliminary investigation, as well as electronic data extracted online via the network, may be used as evidence.\nII. Collection and Extraction of Electronic Data"
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 The collection and extraction of electronic data shall be conducted by two or more investigators. The evidence-collection methods shall comply with relevant technical standards."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 When collecting and extracting electronic data, if the original storage medium of the electronic data can be seized, the original storage medium shall be seized and sealed up, and a record shall be made documenting the sealing status of the original storage medium.\nThe sealing up of the original storage medium of electronic data shall ensure that the electronic data cannot be added, deleted, or modified without lifting the sealing. Photographs of the sealed original storage medium shall be taken before and after sealing, clearly showing the condition of the seal or affixed tape.\nFor storage media with wireless communication functions such as mobile phones, measures such as signal shielding, signal blocking, or power disconnection shall be adopted."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Under any of the following circumstances, where the original storage medium cannot be seized, electronic data may be extracted, provided that the reasons for the inability to seize the original storage medium, the storage location of the original storage medium or the source of the electronic data, among other information, shall be noted in the record, and the integrity verification value of the electronic data shall be calculated:\n(1) The original storage medium is inconvenient to seal up;\n(2) Extracting electronic data not stored on a storage medium, such as computer memory data or network transmission data;\n(3) The original storage medium is located abroad;\n(4) Other circumstances where the original storage medium cannot be seized.\nFor electronic data where the original storage medium is located abroad or on a remote computer information system, it may be extracted online via the network.\nTo further ascertain relevant circumstances, if necessary, a network remote inspection may be conducted on the remote computer information system. If technical investigation measures are required for the network remote inspection, strict approval procedures shall be followed according to law."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Where electronic data cannot be collected or extracted in accordance with Articles 8 and 9 due to objective reasons or is not appropriate to do so, relevant evidence may be fixed by means such as printing, photographing, or videotaping, and the reasons shall be stated in the record."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 Under any of the following circumstances, with the approval of the head of a public security organ at or above the county level or the chief procurator, the electronic data may be frozen:\n(1) The data volume is large and cannot be extracted or is inconvenient to extract;\n(2) The extraction time is long and may result in the electronic data being tampered with or lost;\n(3) The electronic data can be displayed more intuitively through network applications;\n(4) Other circumstances requiring freezing."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 To freeze electronic data, a notice of assistance in freezing shall be prepared, specifying information such as the network application account whose electronic data is to be frozen, and delivered to the electronic data holder, network service provider, or relevant authority for assistance. For the release of a freeze, a notice of assistance in releasing the freeze shall be prepared within three days and delivered to the electronic data holder, network service provider, or relevant authority for assistance.\nTo freeze electronic data, one or more of the following methods shall be adopted:\n(1) Calculating the integrity verification value of the electronic data;\n(2) Locking the network application account;\n(3) Other measures to prevent the addition, deletion, or modification of electronic data."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 To obtain electronic data, a notice of evidence-obtaining shall be prepared, specifying the relevant information of the electronic data to be obtained, and the electronic data holder, network service provider, or relevant authority shall be notified to execute it."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 The collection and extraction of electronic data shall be documented in a record stating the case cause, target, content, time, location, method, and process of collecting and extracting electronic data, accompanied by a list of electronic data specifying the category, file format, integrity verification value, etc., and shall be signed or sealed by the investigators and the electronic data holder (provider); if the electronic data holder (provider) is unable to sign or refuses to sign, it shall be noted in the record, and the witness shall sign or seal. Where conditions permit, relevant activities shall be videotaped."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 The collection and extraction of electronic data shall, in accordance with the provisions of the Criminal Procedure Law, have a qualified person serve as a witness. If it is impossible for a qualified person to serve as a witness due to objective reasons, the circumstances shall be noted in the record, and the relevant activities shall be videotaped.\nFor the collection and extraction of electronic data from multiple computer information systems at the same scene, a single witness may serve as the witness."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 The seized original storage medium or extracted electronic data may be examined by means such as restoration, decryption, statistics, correlation, and comparison. If necessary, an investigative experiment may be conducted.\nFor the examination of electronic data, the process of unsealing the electronic data storage medium shall be videotaped, and the electronic data storage medium shall be connected to the examination device via a write-protection device for examination; where conditions permit, a backup of the electronic data shall be made, and the backup shall be examined; if the write-protection device cannot be used and a backup cannot be made, the reasons shall be stated, and the relevant activities shall be videotaped.\nA record of the electronic data examination shall be made, stating the method, process, and results of the examination, and shall be signed or sealed by the relevant personnel. If an investigative experiment is conducted, a record of the investigative experiment shall be made, stating the conditions, process, and results of the experiment, and shall be signed or sealed by the personnel participating in the experiment."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 If it is difficult to determine the specialized issues involved in electronic data, a judicial authentication institution shall issue an expert opinion, or an institution designated by the Ministry of Public Security shall issue a report. For cases directly accepted by the People's Procuratorate, an institution designated by the Supreme People's Procuratorate may also issue a report.\nSpecific measures shall be formulated separately by the Ministry of Public Security and the Supreme People's Procuratorate.\nIII. Transfer and Presentation of Electronic Data"
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 The collected or extracted original storage medium or electronic data shall be transferred together with the case in a sealed state, and a backup of the electronic data shall be made and transferred together.\nFor electronic data that can be directly displayed, such as web pages, documents, and pictures, printed copies may not be transferred with the case; if the People's Court or the People's Procuratorate cannot directly display the electronic data due to limitations in equipment or other conditions, the investigative authority shall transfer printed copies with the case, or attach a description of the display tools and display methods.\nFor frozen electronic data, a list of the frozen electronic data shall be transferred, specifying the category, file format, freezing entity, key points of evidence, and relevant network application accounts, accompanied by a description of viewing tools and methods."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 For electronic data that cannot be directly displayed, such as programs and tools for intruding into or illegally controlling computer information systems, and computer viruses, a description of the attributes, functions, and other circumstances of the electronic data shall be attached.\nWith respect to issues such as data statistics and data identity, the investigative authority shall issue a description."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 When a public security organ submits a request to the People's Procuratorate for approval of arrest of a criminal suspect, or transfers a case where investigation has been concluded to the People's Procuratorate for examination and prosecution, it shall transfer electronic data and other evidence together to the People's Procuratorate. If during the process of examining approval of arrest or examining prosecution, the People's Procuratorate discovers that electronic data that should have been transferred has not been transferred or that the transferred electronic data does not meet relevant requirements, it shall notify the public security organ to supplement the transfer or make corrections.\nFor cases submitted for public prosecution, if the People's Court discovers that electronic data that should have been transferred has not been transferred or that the transferred electronic data does not meet relevant requirements, it shall notify the People's Procuratorate.\nThe public security organ or the People's Procuratorate shall transfer the electronic data or supplement the relevant materials within three days after receiving the notice."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Where electronic data submitted to the court by the prosecution and defense needs to be presented, it may be shown, played, or demonstrated with the aid of multimedia equipment according to the specific type of electronic data. If necessary, a person with specialized knowledge may be engaged to operate it and provide explanations on relevant technical issues.\nIV. Review and Determination of Electronic Data"
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Whether electronic data is authentic shall be reviewed with emphasis on the following:\n(1) Whether the original storage medium has been transferred; when the original storage medium cannot be sealed up or is inconvenient to move, whether reasons have been stated and the collection and extraction process, as well as the storage location of the original storage medium or the source of the electronic data, have been noted;\n(2) Whether the electronic data has special identifiers such as digital signatures or digital certificates;\n(3) Whether the process of collecting and extracting the electronic data can be reproduced;\n(4) Where the electronic data has been added, deleted, or modified, whether a description is attached;\n(5) Whether the integrity of the electronic data can be ensured."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Whether electronic data is complete shall be verified in accordance with the corresponding methods for protecting the integrity of electronic data:\n(1) Reviewing the seizure and sealing status of the original storage medium;\n(2) Reviewing the process of collecting and extracting the electronic data and viewing the videotape;\n(3) Comparing the integrity verification value of the electronic data;\n(4) Comparing with the backup electronic data;\n(5) Reviewing the access operation log after freezing;\n(6) Other methods."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Whether the collection and extraction of electronic data is lawful shall be reviewed with emphasis on the following:\n(1) Whether the collection and extraction of electronic data was conducted by two or more investigators, and whether the evidence-collection methods comply with relevant technical standards;\n(2) Whether the collection and extraction of electronic data is accompanied by a record and a list, and whether it has been signed or sealed by the investigators, the electronic data holder (provider), and the witness; if there is no signature or seal of the holder (provider), whether the reason is stated; whether the category and file format of the electronic data, among other things, are clearly specified;\n(3) Whether a qualified person served as a witness in accordance with relevant provisions, and whether the relevant activities were videotaped;\n(4) Whether the electronic data examination was conducted by connecting the electronic data storage medium to the examination device via a write-protection device; where conditions permit, whether a backup of the electronic data was made and examined; if a backup could not be made and the write-protection device could not be used, whether videotape is attached."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 The identity of a criminal suspect or defendant between his or her online identity and real-world identity may be determined through a comprehensive assessment based on verification of relevant IP addresses, network activity records, attribution of the internet terminal, relevant witness testimony, as well as the confessions and explanations of the criminal suspect or defendant.\nThe relevance between a criminal suspect or defendant and a storage medium may be determined through a comprehensive assessment based on verification of relevant witness testimony, as well as the confessions and explanations of the criminal suspect or defendant."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 If a public prosecutor, a party, a defender, or a litigation agent disagrees with an expert opinion on electronic data, he or she may apply to the People's Court to notify the expert to appear in court to testify. If the People's Court considers it necessary for the expert to appear, the expert shall so testify.\nIf, upon notification by the People's Court, the expert refuses to appear in court to testify without justifiable reasons, the expert opinion shall not be used as the basis for adjudication. If an expert refuses to appear in court to testify without justifiable reasons, the People's Court shall notify the judicial administrative authority or relevant department.\nA public prosecutor, a party, a defender, or a litigation agent may apply to the court to notify a person with specialized knowledge to appear in court to provide opinions on the expert opinion.\nFor reports on specialized issues involved in electronic data, the preceding three paragraphs shall apply mutatis mutandis."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 Where the procedure for collecting and extracting electronic data has the following defects, if corrections are made or a reasonable explanation is provided, the electronic data may be adopted; if corrections cannot be made or a reasonable explanation cannot be provided, it shall not be used as the basis for adjudication:\n(1) It was not transferred in a sealed state;\n(2) The record or list lacks the signature or seal of the investigators, the electronic data holder (provider), or the witness;\n(3) The name, category, format, etc., of the electronic data are unclearly specified;\n(4) There are other defects."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Where electronic data falls under any of the following circumstances, it shall not be used as the basis for adjudication:\n(1) The electronic data has been tampered with, forged, or its authenticity cannot be determined;\n(2) The electronic data has been added, deleted, or modified, affecting the authenticity of the electronic data;\n(3) Other circumstances where the authenticity of the electronic data cannot be ensured.\nV. Supplementary Provisions"
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 For the purposes of these Provisions, the following terms shall have the meanings ascribed to them:\n(1) \"Storage medium\" means carriers with data information storage functions, such as electronic devices, hard drives, optical discs, USB flash drives, memory sticks, memory cards, and memory chips.\n(2) \"Integrity verification value\" means a data value calculated by applying a specific algorithm such as a hash algorithm to electronic data, for the purpose of verifying data integrity to prevent tampering or destruction.\n(3) \"Network remote inspection\" means an investigative activity conducted via a network to inspect a remote computer information system, discover and extract electronic data related to a crime, record the status of the computer information system, determine the nature of the case, analyze the criminal process, identify the direction and scope of investigation, and provide leads and evidence for case investigation and criminal proceedings.\n(4) \"Digital signature\" means a data value calculated by applying a specific algorithm to electronic data, for the purpose of verifying the source and integrity of the electronic data.\n(5) \"Digital certificate\" means an electronic document that contains a digital signature and certifies the source and integrity of electronic data.\n(6) \"Access operation log\" means a detailed record of accesses and operations on electronic data, automatically generated by a computer information system, for the purpose of reviewing whether electronic data has been added, deleted, or modified."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 These Provisions shall come into force on October 1, 2016. Where previously issued normative documents are inconsistent with these Provisions, these Provisions shall prevail."
     }
   ]
 }

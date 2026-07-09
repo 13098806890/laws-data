@@ -5,43 +5,43 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1. A commercial case arising from a futures exchange's performance of its duties, in which the futures exchange is the defendant or a third party, shall be under the jurisdiction of the Intermediate People's Court at the domicile of the futures exchange."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2. The commercial cases arising from a futures exchange's performance of its duties refer to:\n(1) commercial litigation cases filed by members of the futures exchange and their relevant personnel, the margin depository bank and its relevant personnel, clients, or other participants in the futures market on the grounds that the futures exchange, by violating laws, regulations, and the rules of the securities regulatory authority under the State Council, improperly performed its supervisory and administrative duties, thereby causing damage to them;\n(2) commercial litigation cases filed by members of the futures exchange and their relevant personnel, the margin depository bank and its relevant personnel, clients, or other participants in the futures market on the grounds that the futures exchange, by violating its articles of association, trading rules, detailed implementation rules, and the stipulations of business agreements, improperly performed its supervisory and administrative duties, thereby causing damage to them;\n(3) other commercial litigation cases arising from a futures exchange's performance of its duties."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3. Where a futures exchange is the debtor and a creditor requests the freezing or transfer of funds or securities in any of the following accounts, the People's Court shall not support the request:\n(1) the funds in the margin account of a member of the futures exchange held with the futures exchange;\n(2) the securities submitted by a member of the futures exchange to the futures exchange for the purpose of offsetting margin."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4. Where a futures company is the debtor and a creditor requests the freezing or transfer of funds or securities in any of the following accounts, the People's Court shall not support the request:\n(1) the funds in the margin account of a client held with the futures company;\n(2) the securities submitted by a client to the futures company for the purpose of offsetting margin."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5. Where a clearing member of a futures exchange that adopts a member-based tiered clearing system is the debtor and a creditor requests the freezing or transfer of the following funds or securities of the clearing member, the People's Court shall not support the request:\n(1) the funds in the margin account of a non-clearing member held with the clearing member;\n(2) the securities submitted by a non-clearing member to the clearing member for the purpose of offsetting margin."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6. If there is evidence proving that the margin account contains funds or securities exceeding the portions of rights and interests specified in Articles 3, 4, and 5 above, and the futures exchange, futures company, or clearing member of the futures exchange cannot produce contrary evidence within a reasonable period designated by the People's Court, the People's Court may, according to law, freeze or transfer the funds or securities for the excess part.\nIf there is evidence proving that the own funds of the futures exchange, futures company, or clearing member of the futures exchange are commingled with the margin, and the futures exchange, futures company, or clearing member of the futures exchange cannot produce contrary evidence within a reasonable period designated by the People's Court, the People's Court may, according to law, freeze or transfer the funds or securities in the relevant accounts."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7. Where a futures exchange that adopts a member-based tiered clearing system or its clearing member is the debtor and a creditor requests the freezing or transfer of the clearing guarantee deposits collected by the futures exchange from its clearing members according to law, the People's Court shall not support the request.\nIf there is evidence proving that the clearing member has funds in the dedicated account for clearing guarantee deposits that exceed the amount of clearing guarantee deposits required by the exchange, and the clearing member cannot produce contrary evidence within a reasonable period designated by the People's Court, the People's Court may, according to law, freeze or transfer the funds in excess."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8. When a People's Court, in the course of handling a case, needs to inquire about, freeze, or transfer funds or securities through a futures exchange or futures company according to law, the futures exchange or futures company shall provide assistance. If it is obligated to provide assistance but refuses to do so, the matter shall be handled in accordance with Article 103 of the Civil Procedure Law of the People's Republic of China."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9. The aforementioned cases already accepted before the coming into force of these Provisions shall no longer be transferred."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10. Where any relevant judicial interpretation issued by this Court before the coming into force of these Provisions is inconsistent with these Provisions, these Provisions shall prevail."
     }
   ]
 }

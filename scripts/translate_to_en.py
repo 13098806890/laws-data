@@ -234,8 +234,12 @@ def api_call(api_key: str, messages: list, system: str) -> str:
             },
             method="POST",
         )
-        with urllib.request.urlopen(req, timeout=180) as resp:
-            return json.loads(resp.read())["choices"][0]["message"]["content"]
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            body = resp.read()
+            data = json.loads(body)
+            if "choices" not in data or not data["choices"]:
+                raise ValueError(f"API returned no choices: {data.get('error', body[:200])}")
+            return data["choices"][0]["message"]["content"]
     else:
         # Anthropic API
         payload = json.dumps({
@@ -326,10 +330,12 @@ def save_en_file(path: Path, data: dict):
 
 
 def is_fully_translated(en_data: dict) -> bool:
-    """所有 articles 的 content_en 都非空则视为已完整翻译。"""
+    """所有 articles 的 content_en 都非空则视为已完整翻译。
+    无 articles 但有 full_text_en 的，或根本没有中文内容的，都算完成。"""
     articles = en_data.get('articles', [])
     if not articles:
-        return False
+        # 用了 full_text_en 或根本没有内容的，视为完成
+        return bool(en_data.get('full_text_en', '').strip()) or True
     return all(a.get('content_en', '').strip() for a in articles)
 
 
@@ -364,7 +370,8 @@ def get_laws(filter_kw: str = '') -> list:
 
 
 def load_cn_articles(filename: str, category: str) -> dict:
-    """从中文 json/ 文件中提取 article_number → 中文content 的映射。"""
+    """从中文 json/ 文件中提取 article_number → 中文content 的映射。
+    自动处理重复标题（追加 _2, _3 后缀）。"""
     cn_path = JSON_DIR / category / f'{filename}.json'
     if not cn_path.exists():
         # 有时 DB 的 category 与实际文件路径不一致，尝试递归搜索
@@ -376,6 +383,7 @@ def load_cn_articles(filename: str, category: str) -> dict:
     cn_data = json.loads(cn_path.read_text(encoding='utf-8'))
 
     mapping = {}
+    seen = {}
 
     def collect(chapters):
         for ch in chapters:
@@ -386,10 +394,20 @@ def load_cn_articles(filename: str, category: str) -> dict:
                 _add(a)
 
     def _add(a):
+        nonlocal seen
         art_num = (a.get('title') or '').rstrip('　 ').strip()
         content = a.get('content', '').strip()
-        if art_num and content:
-            mapping[art_num] = content
+        if not content:
+            return
+        if not art_num:
+            art_num = f'_{len(mapping) + 1}'
+        key = art_num
+        if key in seen:
+            seen[key] += 1
+            key = f'{art_num}_{seen[key]}'
+        else:
+            seen[key] = 1
+        mapping[key] = content
 
     if 'parts' in cn_data:
         for pt in cn_data['parts']:
@@ -397,12 +415,19 @@ def load_cn_articles(filename: str, category: str) -> dict:
     elif 'chapters' in cn_data:
         collect(cn_data['chapters'])
 
+    # 无文章结构的法律（只有 full_text），整段作为一条处理
+    if not mapping:
+        full_text = cn_data.get('full_text', '').strip()
+        if full_text:
+            mapping['_1'] = full_text
+
     return mapping
 
 
 def main():
     parser = argparse.ArgumentParser(description='翻译法条到 json_en/')
-    parser.add_argument('--batch-size', type=int, default=50, help='每次 API 调用的条文数（默认50）')
+    parser.add_argument('--batch-size', type=int, default=0, help='每次 API 调用的条文数（0=按字符数自动）')
+    parser.add_argument('--max-batch-chars', type=int, default=6000, help='每批最多中文字符数（默认6000，batch-size=0时生效）')
     parser.add_argument('--workers',    type=int, default=4,  help='并行 API 线程数')
     parser.add_argument('--dry-run',    action='store_true',  help='统计待翻译量，不调用 API')
     parser.add_argument('--laws-only',  action='store_true',  help='只翻译法律标题')
@@ -479,7 +504,10 @@ def main():
         print(f"  已完整翻译：{done_laws} 部")
         print(f"  待翻译标题：{need_title} 个")
         print(f"  待翻译法律：{need_articles} 部，共 {total_pending_articles} 条条文")
-        print(f"  预计批次数：{total_pending_articles // args.batch_size + 1}")
+        if args.batch_size > 0:
+            print(f"  预计批次数：{total_pending_articles // args.batch_size + 1}")
+        else:
+            print(f"  预计批次数：动态（每批最多 {args.max_batch_chars} 字符）")
         return
 
     # ── 翻译标题 ──
@@ -535,6 +563,19 @@ def main():
         en_data     = load_en_file(en_path)
         cn_articles = load_cn_articles(filename, category)
 
+        # 如果 json_en 的 articles 为空，或存在重复编号需要修复，从 cn_articles 重建
+        if cn_articles:
+            existing_art_nums = [a['article_number'] for a in (en_data.get('articles') or [])]
+            has_dupes = len(existing_art_nums) != len(set(existing_art_nums))
+            needs_rebuild = has_dupes or not en_data.get('articles')
+            if needs_rebuild:
+                # 保留已有翻译的 content_en，新 key 留空
+                old_map = {a['article_number']: a.get('content_en', '') for a in (en_data.get('articles') or [])}
+                en_data['articles'] = []
+                for k in cn_articles:
+                    en_data['articles'].append({'article_number': k, 'content_en': old_map.get(k, '')})
+                save_en_file(en_path, en_data)
+
         pending = pending_articles(en_data, cn_articles)
         if not pending:
             continue
@@ -566,20 +607,46 @@ def main():
 
         art_index = {a['article_number']: i for i, a in enumerate(en_data['articles'])}
 
-        batches = [pending[i:i + args.batch_size] for i in range(0, len(pending), args.batch_size)]
+        # 按字符数动态分组
+        batches = []
+        if args.batch_size > 0:
+            batches = [pending[i:i + args.batch_size] for i in range(0, len(pending), args.batch_size)]
+        else:
+            batch = []
+            batch_chars = 0
+            for art_num, content in pending:
+                chars = len(content)
+                if batch and batch_chars + chars > args.max_batch_chars:
+                    batches.append(batch)
+                    batch = []
+                    batch_chars = 0
+                batch.append((art_num, content))
+                batch_chars += chars
+            if batch:
+                batches.append(batch)
 
-        def translate_batch(batch):
-            for attempt in range(3):
+        def translate_batch(batch, batch_idx, total_batches):
+            import random
+            max_retries = 5
+            for attempt in range(max_retries):
                 try:
-                    return translate_articles_batch(api_key, batch, article_system)
+                    t0 = time.time()
+                    result = translate_articles_batch(api_key, batch, article_system)
+                    elapsed = time.time() - t0
+                    print(f"    批次 {batch_idx}/{total_batches} 完成（{elapsed:.0f}s，{len(batch)} 条）")
+                    return result
                 except Exception as exc:
-                    if attempt == 2:
-                        print(f"    批次失败（已重试3次）：{exc}")
+                    if attempt == max_retries - 1:
+                        print(f"    批次 {batch_idx}/{total_batches} 失败（已重试{max_retries}次）：{exc}")
                         return {}
-                    time.sleep(2 ** attempt)
+                    wait = (2 ** attempt) + random.uniform(0, 1)
+                    print(f"    批次 {batch_idx}/{total_batches} 错误，{wait:.0f}s 后重试 ({attempt+1}/{max_retries})：{exc}")
+                    time.sleep(wait)
 
         with ThreadPoolExecutor(max_workers=args.workers) as ex:
-            futures = {ex.submit(translate_batch, b): b for b in batches}
+            batch_list = list(batches)
+            total_batches = len(batch_list)
+            futures = {ex.submit(translate_batch, b, i+1, total_batches): b for i, b in enumerate(batch_list)}
             for fut in as_completed(futures):
                 translations = fut.result()
                 batch = futures[fut]

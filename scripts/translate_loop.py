@@ -57,15 +57,15 @@ while True:
         [sys.executable, str(SCRIPT)] + filtered + ['--dry-run'],
         capture_output=True, text=True, env=env
     )
-    print(check.stdout.strip())
+    out = check.stdout.strip()
+    print(out)
 
-    if "待翻译法律：0 部" in check.stdout or "待翻译法律：0" in check.stdout.split("共")[-1] if "共" in check.stdout else False:
-        # 检查是否所有 pending 都为 0
-        if "待翻译法律：0" in check.stdout or "共 0 条条文" in check.stdout:
-            print("\n✅ 全部翻译完成！")
-            break
+    # 待翻译法律 0 部 且 共 0 条条文 → 全部完成
+    if "待翻译法律：0 部" in out and "共 0 条条文" in out:
+        print("\n✅ 全部翻译完成！")
+        break
 
     # 简要等待后继续
-    time.sleep(2)
+    time.sleep(3)
 
 print(f"共运行 {run_count} 轮，任务结束。")

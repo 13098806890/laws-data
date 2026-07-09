@@ -5,255 +5,255 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 When hearing futures dispute cases, the People's Court shall protect the lawful rights and interests of the parties according to law, correctly determine the risk liability they shall bear, and maintain the order of the futures market."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 When hearing futures contract dispute cases, the People's Court shall strictly determine the liability to be borne by the breaching party according to the agreement of the parties in the contract, unless the agreement of the parties violates the mandatory provisions of laws or administrative regulations."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 When hearing futures tort dispute cases and void futures transaction contract dispute cases, the People's Court shall determine the civil liability to be borne by the faulty party based on whether each party is at fault, the nature and extent of the fault, and the causal relationship between the fault and the loss.\nII. Jurisdiction"
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 The People's Court shall determine the jurisdiction over futures dispute cases pursuant to Articles 24, 25 and 29 of the Civil Procedure Law."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 Where futures transactions are conducted at a branch, business department or other branch office of a futures company, the domicile of such branch office shall be the place of performance of the contract.\nWhere a dispute arises from physical delivery, the domicile of the futures exchange shall be the place of performance of the contract."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 For a futures dispute case where tort and breach of contract concur, jurisdiction shall be determined according to the cause of action chosen by the party. Where a party prosecutes on both grounds of breach of contract and tort, jurisdiction shall be determined by the claim that appears first in the party's complaint."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 Futures dispute cases shall be under the jurisdiction of the Intermediate People's Court.\nThe Higher People's Court may, as needed, designate certain Primary People's Courts to accept futures dispute cases.\nIII. Subject Bearing Liability"
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 The civil liability arising from the futures trading activities conducted by an employee of a futures company within the scope of the company's business shall be borne by the futures company with which he or she is employed."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Where a futures company authorizes a person who is not its employee to engage in futures trading activities in the name of the company, the futures company shall bear the civil liability arising therefrom; where a person who is not an employee of a futures company engages in futures trading activities in the name of the futures company, and the conditions for apparent agency as prescribed in Article 49 of the Contract Law are satisfied, the futures company shall bear the civil liability arising therefrom."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Where a citizen or legal person, entrusted by a futures company or a client, acts as an intermediary to provide the opportunity for concluding a contract or intermediary services for concluding a futures brokerage contract, the futures company or the client shall pay remuneration to the intermediary according to the agreement. The intermediary shall independently bear the civil liability arising from the intermediary brokerage relationship."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 Where an entity or individual engages in futures trading without using their true identity, and the trading activities comply with the trading rules of the futures exchange, the trading results shall be borne by themselves."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Where a branch, business department or other branch office established by a futures company that has obtained a business license and an operating permit carries out business activities beyond its scope of operation, and such branch office cannot bear the civil liability arising therefrom, the futures company shall bear such liability.\nWhere the client is at fault, it shall bear the corresponding civil liability.\nIV. Liability for Void Contracts"
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 A futures brokerage contract shall be determined void under any of the following circumstances:\n(1) engaging in futures brokerage business without having the subject qualification for such business;\n(2) a client who does not have the subject qualification for engaging in futures transactions engages in futures trading;\n(3) violating the prohibitive provisions of laws or regulations."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Where economic losses are caused to a client due to a void futures brokerage contract, the liability shall be determined based on the causal relationship between the void act and the loss. If the loss of one party is caused by the other party's act, the other party shall compensate for the loss; if both parties are at fault, each shall bear the corresponding civil liability according to the extent of their respective fault."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 Where an operating institution without subject qualification causes a futures brokerage contract to be void due to its engagement in futures brokerage business, and such institution enters the market for trading according to the client's trading instructions, the commissions collected shall be returned to the client, and the trading results shall be borne by the client.\nWhere such institution fails to enter the market for trading according to the client's trading instructions, and the client is not at fault, such institution shall return the client's margin and compensate for the client's losses. The scope of compensation for losses includes trading fees, taxes and interest.\nV. Liability for Trading Activities"
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 Where, when concluding a futures brokerage contract with a client, a futures company fails to draw the client's attention to the contents of the \"Risk Disclosure Statement for Futures Trading\" and have the client sign or affix its seal, the futures company shall bear the corresponding compensation liability for the client's losses in trading pursuant to Article 42(3) of the Contract Law. However, if it is proven by the records of previous trading results that the client has had trading experience, the futures company's liability shall be exempted."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 Where a futures company accepts a client's full authority to conduct futures trading, it shall bear the primary compensation liability for the losses arising from the trading, with the amount of compensation not exceeding 80% of the losses, unless otherwise provided by laws or administrative regulations."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 Where the futures brokerage contract concluded between a futures company and a client does not stipulate or does not clearly stipulate the method for giving trading instructions, and the futures company cannot prove that the transaction conducted was based on the client's trading instructions, the futures company shall bear the compensation liability for the losses caused to the client by such transaction, unless the client subsequently ratifies it."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 Where a futures company executes a trading instruction given by a person other than the authorized person and causes losses to the client, the futures company shall bear the compensation liability, and the person other than the authorized person shall bear joint and several liability, unless the client subsequently ratifies it."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 Where a client gives a trading instruction that lacks the variety, quantity, or direction of buying or selling, and the futures company fails to reject it but conducts the transaction, thereby causing losses to the client, the futures company shall bear the compensation liability, unless the client subsequently ratifies it."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Where a client gives a trading instruction with clear quantity and direction of buying or selling but without a validity period, it shall be deemed valid for the current day; where no transaction price is given, it shall be deemed as a market price transaction; where no opening or closing direction is given, it shall be deemed as an opening transaction."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 Where a futures company erroneously executes a client's trading instruction, unless the client approves, the consequences of the transaction shall be borne by the futures company, and shall be dealt with separately in the following manner:\n(1) if an error occurs in the transaction quantity, the portion exceeding the instructed quantity shall be borne by the futures company, and the portion falling short of the instructed quantity shall be made up by the futures company or the direct losses shall be compensated;\n(2) if the transaction price exceeds the range of the client's instructed price, the transaction price difference loss or the transaction result shall be borne by the futures company."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Where a futures company improperly delays the execution of a client's trading instruction and causes losses to the client, it shall bear the compensation liability; however, if due to market reasons the client's trading instruction cannot be wholly or partially executed, the futures company shall not bear liability."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Where a futures company, beyond the range of the client's instructed price, appropriates the price difference benefit obtained from selling at a price higher than the client's instructed price or buying at a price lower than the client's instructed price, and the client requests the futures company to return such benefit, the People's Court shall support such request, unless otherwise agreed between the futures company and the client."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 Where a futures exchange fails to notify a futures company of the settlement results of transactions or open positions within the time limit and in the manner prescribed by the trading rules, thereby causing losses to the futures company, the futures exchange shall bear the compensation liability.\nWhere a futures company fails to notify a client of the settlement results of transactions or open positions within the time limit and in the manner stipulated in the futures brokerage contract, thereby causing losses to the client, the futures company shall bear the compensation liability."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 Where a futures company and a client have not agreed or have not clearly agreed on the method of notification of trading settlement results, and the futures company fails to provide evidence proving that the above-mentioned notification has been sent, the futures company shall bear the primary compensation liability for the losses that are expanded due to the client's continued holding of positions, with the amount of compensation not exceeding 80% of the losses."
     },
     {
       "article_number": "第二十七条",
-      "content_en": ""
+      "content_en": "Article 27 A client's confirmation of the settlement results of the current day's transactions shall be deemed as confirmation of all positions and transaction settlement results prior to that day, and the resulting consequences of the transactions shall be borne by the client itself."
     },
     {
       "article_number": "第二十八条",
-      "content_en": ""
+      "content_en": "Article 28 Where a futures company raises an objection to the trading settlement results, and the futures exchange fails to take timely measures, resulting in the expansion of losses, the futures exchange shall bear the compensation liability for the losses expanded to the futures company.\nWhere a client raises an objection to the trading settlement results, and the futures company fails to take timely measures, resulting in the expansion of losses, the futures company shall bear the compensation liability for the losses expanded to the client."
     },
     {
       "article_number": "第二十九条",
-      "content_en": ""
+      "content_en": "Article 29 Where a futures company has an objection to the trading settlement results of a futures exchange, or a client has an objection to the trading settlement results of a futures company, but fails to raise it within the time limit prescribed by the trading rules of the futures exchange or stipulated in the futures brokerage contract, it shall be deemed that the futures company or the client has confirmed the trading settlement results."
     },
     {
       "article_number": "第三十条",
-      "content_en": ""
+      "content_en": "Article 30 Where a futures company conducts mixed-code transactions, the client shall not bear liability; however, if the futures company can adduce evidence to prove that it has entered the market for trading in accordance with the client's trading instructions, the client shall bear the corresponding trading results.\nVI. Liability for Overdraft Transactions"
     },
     {
       "article_number": "第三十一条",
-      "content_en": ""
+      "content_en": "Article 31 Where a futures exchange permits a futures company to open a position or continue holding positions when the futures company has no margin or insufficient margin, it shall be determined as an overdraft transaction.\nWhere a futures company permits a client to open a position or continue holding positions when the client has no margin or insufficient margin, it shall be determined as an overdraft transaction.\nThe examination of whether a futures company or a client engages in an overdraft transaction shall be based on the margin ratio prescribed by the futures exchange."
     },
     {
       "article_number": "第三十二条",
-      "content_en": ""
+      "content_en": "Article 32 Where the trading margin of a futures company is insufficient, and the futures exchange fails to notify the futures company to increase the margin according to the regulations, resulting in expanded losses caused by the futures company's overdraft due to market movements unfavorable to the positions, the futures exchange shall bear the primary compensation liability, with the amount of compensation not exceeding 60% of the losses.\nWhere the trading margin of a client is insufficient, and the futures company fails to notify the client to increase the margin according to the agreement, resulting in expanded losses caused by the client's overdraft due to market movements unfavorable to the positions, the futures company shall bear the primary compensation liability, with the amount of compensation not exceeding 80% of the losses."
     },
     {
       "article_number": "第三十三条",
-      "content_en": ""
+      "content_en": "Article 33 Where the trading margin of a futures company is insufficient, the futures exchange has performed its obligation to notify, but the futures company fails to increase the margin in time, and the futures company requests to retain the positions and the parties reach a written agreement, the losses incurred during the period of retaining the positions shall be borne by the futures company; the losses caused by a blowout shall be borne by the futures exchange.\nWhere the trading margin of a client is insufficient, the futures company has performed its obligation to notify, but the client fails to increase the margin in time, and the client requests to retain the positions and the parties reach a written agreement, the losses incurred during the period of retaining the positions shall be borne by the client; the losses caused by a blowout shall be borne by the futures company."
     },
     {
       "article_number": "第三十四条",
-      "content_en": ""
+      "content_en": "Article 34 Where a futures exchange permits a futures company to open a position through an overdraft transaction, the futures exchange shall bear the primary compensation liability for the losses caused by the overdraft transaction, with the amount of compensation not exceeding 60% of the losses.\nWhere a futures company permits a client to open a position through an overdraft transaction, the futures company shall bear the primary compensation liability for the losses caused by the overdraft transaction, with the amount of compensation not exceeding 80% of the losses."
     },
     {
       "article_number": "第三十五条",
-      "content_en": ""
+      "content_en": "Article 35 Where a futures exchange permits a futures company to engage in overdraft transactions and agrees with it to share profits and jointly bear risks, the futures exchange shall bear the corresponding compensation liability for the losses caused by the overdraft transactions.\nWhere a futures company permits a client to engage in overdraft transactions and agrees with it to share profits and jointly bear risks, the futures company shall bear the corresponding compensation liability for the losses caused by the overdraft transactions.\nVII. Liability for Forced Liquidation"
     },
     {
       "article_number": "第三十六条",
-      "content_en": ""
+      "content_en": "Article 36 Where the trading margin of a futures company is insufficient and it fails to increase the margin within the time limit prescribed by the futures exchange, the matter shall be dealt with according to the provisions of the trading rules; if the provisions are not clear, the futures exchange shall have the right to forcibly liquidate the futures company's open futures contracts, and the losses caused by the forced liquidation shall be borne by the futures company.\nWhere the trading margin of a client is insufficient and it fails to increase the margin within the time limit stipulated in the futures brokerage contract, the matter shall be dealt with according to the stipulations of the futures brokerage contract; if the stipulations are not clear, the futures company shall have the right to forcibly liquidate the client's open futures contracts, and the losses caused by the forced liquidation shall be borne by the client."
     },
     {
       "article_number": "第三十七条",
-      "content_en": ""
+      "content_en": "Article 37 Where a futures exchange must forcibly liquidate positions due to a futures company's violation of position limits or other violations, the losses caused by the forced liquidation shall be borne by the futures company.\nWhere a futures company must forcibly liquidate positions due to a client's violation of position limits or other violations, the losses caused by the forced liquidation shall be borne by the client."
     },
     {
       "article_number": "第三十八条",
-      "content_en": ""
+      "content_en": "Article 38 Where the trading margin of a futures company or a client is insufficient and the conditions for forced liquidation are satisfied, the expanded losses caused by failure to voluntarily liquidate positions when they should have done so shall be borne by the futures company or the client itself, unless otherwise provided by laws or administrative regulations or otherwise agreed by the parties."
     },
     {
       "article_number": "第三十九条",
-      "content_en": ""
+      "content_en": "Article 39 The amount of forced liquidation by a futures exchange or a futures company shall be basically equivalent to the amount of margin required to be increased by the futures company or the client. Losses caused by excessive liquidation shall be borne by the party that conducted the forced liquidation."
     },
     {
       "article_number": "第四十条",
-      "content_en": ""
+      "content_en": "Article 40 Where a futures exchange conducts forced liquidation against a futures company, or a futures company conducts forced liquidation against a client, not in accordance with the conditions, time, and methods for forced liquidation as prescribed by the trading rules of the futures exchange or stipulated in the futures brokerage contract, thereby causing losses to the futures company or the client, the futures exchange or the futures company shall bear the compensation liability."
     },
     {
       "article_number": "第四十一条",
-      "content_en": ""
+      "content_en": "Article 41 The expenses incurred by a futures exchange in conducting forced liquidation according to law or pursuant to trading rules shall be borne by the futures company whose positions were liquidated; after bearing such liability, the futures company shall have the right to seek recourse against the client at fault.\nThe expenses incurred by a futures company in conducting forced liquidation according to law or pursuant to agreement shall be borne by the client.\nVIII. Liability for Physical Delivery"
     },
     {
       "article_number": "第四十二条",
-      "content_en": ""
+      "content_en": "Article 42 Where a delivery warehouse fails to perform its duty of inspecting the goods or causes losses to the holder of a warehouse receipt due to improper storage, it shall bear the compensation liability."
     },
     {
       "article_number": "第四十三条",
-      "content_en": ""
+      "content_en": "Article 43 Where a futures company fails to perform the obligation of applying for delivery on behalf of the client, it shall bear the liability for breach of contract; if it causes losses to the client, it shall bear the compensation liability."
     },
     {
       "article_number": "第四十四条",
-      "content_en": ""
+      "content_en": "Article 44 On the delivery date, if the selling futures company fails to deliver standard warehouse receipts to the futures exchange, or the buying futures company fails to deliver sufficient payment to the futures exchange account, a delivery default is constituted.\nWhere a delivery default is constituted, the defaulting party shall bear the liability for breach of contract; if the circumstances provided in Article 94(4) of the Contract Law exist, the other party shall have the right to demand termination of the delivery or demand that the defaulting party continue the delivery.\nIf the purchase or competitive sale fails, the defaulting party shall bear the compensation liability in accordance with the relevant provisions on compensation of the exchange."
     },
     {
       "article_number": "第四十五条",
-      "content_en": ""
+      "content_en": "Article 45 During the delivery period of a futures contract, if the buyer or seller client defaults, the futures exchange shall assume the liability for breach of contract on behalf of the futures company, and the futures company shall assume such liability on behalf of the client to the other party."
     },
     {
       "article_number": "第四十六条",
-      "content_en": ""
+      "content_en": "Article 46 If a buyer client fails to raise an objection to the quality or quantity of the goods within the time limit prescribed by the trading rules of the futures exchange, it shall be deemed that it has no objection to the quantity or quality of the goods."
     },
     {
       "article_number": "第四十七条",
-      "content_en": ""
+      "content_en": "Article 47 Where a delivery warehouse fails to deliver goods that meet the requirements of the futures contract to the holder of a standard warehouse receipt within the time limit prescribed by the trading rules of the futures exchange, thereby causing losses to the holder of the standard warehouse receipt, the delivery warehouse shall bear liability, and the futures exchange shall bear joint and several liability.\nAfter the futures exchange bears liability, it shall have the right to seek recourse against the delivery warehouse.\nIX. Liability for Guaranteeing Contract Performance"
     },
     {
       "article_number": "第四十八条",
-      "content_en": ""
+      "content_en": "Article 48 Where a futures company fails to perform the corresponding monetary payment obligation in accordance with the requirements of the daily mark-to-market settlement system, and the futures exchange also fails to perform on behalf of the futures company, causing losses to the counterparty, the futures exchange shall bear the compensation liability.\nAfter the futures exchange performs the obligation or bears the compensation liability on behalf of the futures company, it shall have the right to seek recourse against the party that failed to perform the obligation."
     },
     {
       "article_number": "第四十九条",
-      "content_en": ""
+      "content_en": "Article 49 Where a futures exchange fails to perform the futures contract on behalf of the futures company, the futures company shall assert the rights against the futures exchange at the request of the client.\nWhere the futures company refuses to assert the rights against the futures exchange on behalf of the client, the client may directly prosecute the futures exchange, and the futures company may participate in the proceedings as a third party."
     },
     {
       "article_number": "第五十条",
-      "content_en": ""
+      "content_en": "Article 50 Where, due to the fault of a futures exchange, errors occur in information release or trading instruction processing, causing direct economic losses to a futures company or a client, the futures exchange shall bear the compensation liability, unless it can prove that such losses are caused by force majeure."
     },
     {
       "article_number": "第五十一条",
-      "content_en": ""
+      "content_en": "Article 51 Where a futures exchange takes reasonable emergency measures against abnormal situations occurring in the futures market according to relevant provisions and causes losses to a client, the futures exchange shall not bear compensation liability.\nWhere a futures company executes the reasonable emergency measures of a futures exchange and causes losses to a client, the futures company shall not bear compensation liability.\nX. Tort Liability"
     },
     {
       "article_number": "第五十二条",
-      "content_en": ""
+      "content_en": "Article 52 Where a futures exchange or a futures company intentionally provides false information to mislead a client into placing orders, the economic losses thus caused to the client shall be borne by the futures exchange or the futures company."
     },
     {
       "article_number": "第五十三条",
-      "content_en": ""
+      "content_en": "Article 53 Acts such as a futures company conducting off-exchange offset or betting against a client, or failing to enter a client's instruction into market trading, shall be deemed void, and the futures company shall compensate the economic losses thus caused to the client; if both the futures company and the client are at fault, they shall, according to the degree of fault, respectively bear corresponding compensation liability."
     },
     {
       "article_number": "第五十四条",
-      "content_en": ""
+      "content_en": "Article 54 Where a futures company trades in the name of a client without authorization, and the client does not ratify the trading results, the losses thus caused shall be borne by the futures company."
     },
     {
       "article_number": "第五十五条",
-      "content_en": ""
+      "content_en": "Article 55 Where a futures company misappropriates a client's margin, or transfers a client's margin in violation of relevant provisions and causes losses to the client, it shall bear compensation liability.\nXI. Burden of Adducing Evidence"
     },
     {
       "article_number": "第五十六条",
-      "content_en": ""
+      "content_en": "Article 56 A futures company shall bear the burden of adducing evidence as to whether a client's trading instruction has been entered into market trading.\nTo determine whether a futures company has entered a client's trading instruction into market trading, the standard shall be whether the variety and direction of trading in the futures exchange's trading records and the settlement results notified by the futures company are consistent with those in the client's trading instruction records, and whether the price and trading time match; the quantity of instruction trades may serve as reference, except where the client has evidence to the contrary proving that its trading instruction was not entered into market trading."
     },
     {
       "article_number": "第五十七条",
-      "content_en": ""
+      "content_en": "Article 57 Where a futures exchange notifies a futures company to increase margin, and the futures company denies receipt of the said notice, the futures exchange shall bear the burden of adducing evidence.\nWhere a futures company issues a notice to a client to increase margin, and the client denies receipt of the said notice, the futures company shall bear the burden of adducing evidence.\nXII. Preservation and Enforcement"
     },
     {
       "article_number": "第五十八条",
-      "content_en": ""
+      "content_en": "Article 58 Where a People's Court preserves the membership qualification fee or trading seat corresponding to the membership qualification, it shall, according to law, rule that the membership qualification shall not be transferred, but shall not stop the use of the member's trading seat. During enforcement, the People's Court shall have the right to take compulsory measures according to law to transfer the trading seat."
     },
     {
       "article_number": "第五十九条",
-      "content_en": ""
+      "content_en": "Article 59 Where a futures exchange or a futures company is a debtor, a People's Court shall not freeze or transfer the funds in the margin account of a futures company at a futures exchange or of a client at a futures company.\nWhere there is evidence proving that there is a part of the margin account exceeding the rights and interests of the futures company or client, and the futures exchange or futures company fails to provide contrary evidence within a reasonable period designated by the People's Court, the People's Court may, according to law, freeze or transfer the self-owned funds in such account belonging to the futures exchange or futures company."
     },
     {
       "article_number": "第六十条",
-      "content_en": ""
+      "content_en": "Article 60 Where a futures company is a debtor, a People's Court shall not freeze or transfer the minimum amount of settlement reserves in the special settlement account that are not occupied by futures contracts and are used to guarantee the performance of futures contracts; if the futures company has closed out all positions and settled client funds, the People's Court may, according to law, freeze or transfer the settlement reserves.\nWhere the futures company has other property, the People's Court shall, according to law, first freeze, seize, or enforce the other property of the futures company."
     },
     {
       "article_number": "第六十一条",
-      "content_en": ""
+      "content_en": "Article 61 Where a client or a self-operating member is a debtor, a People's Court may take preservation and enforcement measures against its margin and positions according to law.\nXIII. Miscellaneous"
     },
     {
       "article_number": "第六十二条",
-      "content_en": ""
+      "content_en": "Article 62 For the purposes of these Provisions, 'futures company' means a business institution approved according to law to act as an agent for investors in engaging in futures trading business, and its branches, such as branch companies and business departments. 'Client' means an investor that entrusts a futures company to engage in futures trading."
     },
     {
       "article_number": "第六十三条",
-      "content_en": ""
+      "content_en": "Article 63 These Provisions shall come into force as of July 1, 2003.\nFor futures trading acts or tortious acts occurring before July 1, 2003, the relevant provisions then in force shall apply; where the provisions then in force are unclear, these Provisions shall be referred to for handling."
     }
   ]
 }

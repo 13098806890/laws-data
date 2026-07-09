@@ -5,83 +5,83 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 Units and individuals that execute taxable instruments or conduct securities trading within the territory of the People's Republic of China shall be taxpayers of stamp tax, and shall pay stamp tax in accordance with the provisions of this Law.\nUnits and individuals that execute taxable instruments outside the territory of the People's Republic of China but use them within the territory shall pay stamp tax in accordance with the provisions of this Law."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 For the purposes of this Law, \"taxable instruments\" means contracts, documents of title transfer, and account books of business as listed in the Stamp Tax Tax Items and Tax Rates Table attached to this Law."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 For the purposes of this Law, \"securities trading\" means the transfer of stocks and stock-based depositary receipts traded on a stock exchange established according to law or other national securities trading venues approved by the State Council.\nStamp tax on securities trading shall be levied on the transferor of the securities trading, and shall not be levied on the transferee."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 The tax items and tax rates of stamp tax shall be implemented in accordance with the Stamp Tax Tax Items and Tax Rates Table attached to this Law."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 The tax basis for stamp tax is as follows:\n(1) for taxable contracts, the tax basis shall be the amount stated in the contract, excluding the stated value-added tax amount;\n(2) for taxable documents of title transfer, the tax basis shall be the amount stated in the document of title transfer, excluding the stated value-added tax amount;\n(3) for taxable account books of business, the tax basis shall be the total amount of paid-in capital (share capital) and capital surplus recorded in the account books;\n(4) for securities trading, the tax basis shall be the transaction amount."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 Where the amount is not stated in a taxable contract or document of title transfer, the tax basis for stamp tax shall be determined based on the amount actually settled.\nIf the tax basis still cannot be determined in accordance with the preceding paragraph, it shall be determined based on the market price at the time of executing the contract or document of title transfer; if government pricing or government-guided pricing shall be implemented according to law, it shall be determined in accordance with the relevant provisions of the State."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 Where there is no transfer price in securities trading, the tax basis shall be calculated and determined based on the closing price of the security on the previous trading day at the time of handling the transfer registration procedures; if there is no closing price, it shall be calculated and determined based on the face value of the security."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 The amount of stamp tax payable shall be calculated by multiplying the tax basis by the applicable tax rate."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 Where the same taxable instrument contains two or more tax item matters and the amounts are separately stated, the amount of tax payable shall be calculated separately according to the applicable tax item and tax rate for each; where the amounts are not separately stated, the higher tax rate shall apply."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 Where the same taxable instrument is executed by two or more parties, the amount of tax payable shall be calculated separately according to the respective amounts involved."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 For business account books on which stamp tax has been paid, if the total amount of paid-in capital (share capital) and capital surplus recorded in subsequent years increases compared with the total amount on which stamp tax has been paid, the amount of tax payable shall be calculated based on the increased portion."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 The following instruments shall be exempted from stamp tax:\n(1) duplicates or copies of taxable instruments;\n(2) taxable instruments executed by foreign embassies, consulates and representative offices of international organizations in China for obtaining premises, which shall be exempted from tax according to legal provisions;\n(3) taxable instruments executed by the Chinese People's Liberation Army and the Chinese People's Armed Police Force;\n(4) purchase and sale contracts and agricultural insurance contracts executed by farmers, family farms, specialized farmer cooperatives, rural collective economic organizations, and villagers committees for the purchase of agricultural production materials or the sale of agricultural products;\n(5) interest-free or discounted loan contracts, and loan contracts executed by international financial organizations for providing preferential loans to China;\n(6) documents of title transfer executed by property owners for donating property to the government, schools, social welfare institutions, or charitable organizations;\n(7) purchase and sale contracts executed by non-profit medical and health institutions for the procurement of pharmaceuticals or medical materials;\n(8) electronic orders concluded between individuals and e-commerce operators.\nAccording to the needs of national economic and social development, the State Council may prescribe reduction or exemption of stamp tax for circumstances such as ensuring residents' housing needs, enterprise restructuring and reorganization, bankruptcy, and supporting the development of small and micro enterprises, and shall report to the Standing Committee of the National People's Congress for recordation."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 Where a taxpayer is a unit, it shall declare and pay stamp tax to the competent tax authority at the place where its organization is located; where a taxpayer is an individual, he or she shall declare and pay stamp tax to the competent tax authority at the place where the taxable instrument is executed or where the taxpayer resides.\nWhere the title to immovable property is transferred, the taxpayer shall declare and pay stamp tax to the competent tax authority at the place where the immovable property is located."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Where a taxpayer is an overseas unit or individual and has an agent within the territory, the domestic agent shall be the withholding agent; where there is no agent within the territory, the taxpayer shall declare and pay stamp tax on its own, and the specific measures shall be prescribed by the tax authority under the State Council.\nThe securities registration and settlement institution shall be the withholding agent for stamp tax on securities trading, and shall declare and pay the tax and the interest on bank settlement to the competent tax authority at the place where its organization is located."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 The time when the tax liability for stamp tax arises shall be the date on which the taxpayer executes the taxable instrument or completes the securities trading.\nThe time when the withholding obligation for stamp tax on securities trading arises shall be the date on which the securities trading is completed."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 Stamp tax shall be levied on a quarterly, annual, or per-transaction basis. Where stamp tax is levied on a quarterly or annual basis, the taxpayer shall declare and pay the tax within fifteen days from the end of the quarter or year; where stamp tax is levied on a per-transaction basis, the taxpayer shall declare and pay the tax within fifteen days from the date when the tax liability arises.\nStamp tax on securities trading shall be paid on a weekly basis. The withholding agent for stamp tax on securities trading shall declare and pay the tax and the interest on bank settlement within five days from the end of each week."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 Stamp tax may be paid by affixing stamp tax stamps or by the tax authority issuing other tax payment certificates according to law.\nWhere stamp tax stamps are affixed on a taxable instrument, the taxpayer shall cancel each stamp by stamping or drawing across the perforations.\nStamp tax stamps shall be printed under the supervision of the tax authority under the State Council."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 Stamp tax shall be collected and administered by the tax authority in accordance with the provisions of this Law and the Law of the People's Republic of China on the Administration of Tax Collection."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 Where taxpayers, withholding agents, and tax authorities and their staff violate the provisions of this Law, legal liability shall be pursued in accordance with the provisions of the Law of the People's Republic of China on the Administration of Tax Collection and relevant laws and administrative regulations."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "Article 20 This Law shall come into force as of July 1, 2022. The Interim Regulations of the People's Republic of China on Stamp Tax promulgated by the State Council on August 6, 1988 shall be abolished simultaneously.\nAppendix:\nStamp Tax Tax Items and Tax Rates Table"
     }
   ]
 }

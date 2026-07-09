@@ -2,5 +2,10 @@
   "law_id": 3500179,
   "title_en": "Notice of the Supreme People's Court on Issues concerning the Handling of Appeal Cases Involving Firearms and Explosives",
   "promulgation_info_en": "",
-  "articles": []
+  "articles": [
+    {
+      "article_number": "_1",
+      "content_en": "After the promulgation of the Interpretation, where a party files a petition according to law with respect to a criminal case involving illegal manufacture, sale, transport of firearms, ammunition, explosives, or the like, for which the People's Court has, after trial, already rendered an effective judgment, and upon examination it is found that the effective judgment does not comply with the provisions of the Notice, the People's Court may, based on the specific circumstances of the case, retry the case in accordance with the trial supervision procedure and amend the judgment in accordance with the spirit of the provisions of the Notice."
+    }
+  ]
 }

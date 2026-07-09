@@ -5,79 +5,79 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 For the purposes of these Provisions, civil dispute cases involving infringement upon personal rights and interests through the use of information networks refer to dispute cases arising from the infringement upon a natural or legal person's rights to name, title, reputation, honor, portrait, privacy, and other personal rights and interests through the use of information networks."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 Actions instituted for infringement upon personal rights and interests through the use of information networks shall be under the jurisdiction of the People's Court of the place where the infringing act was committed or where the defendant has his domicile.\nThe place where the infringing act was committed includes the place where the computer or other terminal equipment used to commit the alleged infringing act is located, and the place where the consequences of the infringement occurred includes the domicile of the infringed party."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 Where a plaintiff prosecutes a network user or a network service provider pursuant to Article 36, paragraphs 2 and 3 of the Tort Liability Law, the People's Court shall accept the case.\nWhere the plaintiff prosecutes only the network user, and the network user requests to join the network service provider allegedly involved in the infringement as a co-defendant or a third party, the People's Court shall grant the request.\nWhere the plaintiff prosecutes only the network service provider, and the network service provider requests to join the identifiable network user as a co-defendant or a third party, the People's Court shall grant the request."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 Where a plaintiff prosecutes a network service provider, and the network service provider defends on the ground that the allegedly infringing information was published by a network user, the People's Court may, based on the plaintiff's request and the specific circumstances of the case, order the network service provider to provide to the People's Court the name, contact information, network address, and other information sufficient to identify the allegedly infringing network user.\nIf the network service provider, without legitimate reasons, refuses to provide such information, the People's Court may, pursuant to Article 114 of the Civil Procedure Law, impose penalties or take other measures against the network service provider.\nWhere the plaintiff requests to join the network user as a defendant based on the information provided by the network service provider, the People's Court shall grant the request."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 A notice sent by the infringed party to the network service provider in writing or in the manner published by the network service provider, which contains the following contents, shall be deemed effective by the People's Court:\n(1) the name and contact information of the notifying party;\n(2) the network address or sufficient relevant information to accurately locate the infringing content for which necessary measures are requested;\n(3) the reasons for the notifying party's request to delete the relevant information.\nIf the notice sent by the infringed party does not satisfy the above conditions, and the network service provider claims exemption from liability, the People's Court shall support such claim."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 When applying Article 36, paragraph 2 of the Tort Liability Law, the People's Court shall comprehensively determine whether the necessary measures such as deletion, blocking, or disconnection of links taken by the network service provider were timely, based on factors including the nature of the network service, the form and accuracy of the effective notice, and the type and degree of the infringement of rights and interests by the network information."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 Where a network user whose published information has been subjected to measures such as deletion, blocking, or disconnection of links claims that the network service provider shall bear liability for breach of contract or tort liability, and the network service provider defends on the ground of having received a notice, the People's Court shall support the network service provider's defense.\nWhere a network user whose information has been subjected to measures such as deletion, blocking, or disconnection of links requests the network service provider to provide the content of the notice, the People's Court shall support such request."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 Where a network service provider erroneously takes measures such as deletion, blocking, or disconnection of links as a result of the notifying party's notice, and the network user subjected to such measures requests the notifying party to bear tort liability, the People's Court shall support such request.\nWhere a network user who has been erroneously subjected to measures requests the network service provider to take corresponding restoration measures, the People's Court shall support such request, unless restoration is impossible due to technical limitations."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 When determining whether a network service provider \"knew\" pursuant to Article 36, paragraph 3 of the Tort Liability Law, the People's Court shall comprehensively consider the following factors:\n(1) whether the network service provider processed the infringing network information manually or automatically by means such as recommendation, ranking, selection, editing, collation, or modification;\n(2) the capacity of the network service provider to manage information, as well as the nature and manner of the services it provides and the likelihood of infringement arising therefrom;\n(3) the type and obviousness of the infringement upon personal rights and interests by the network information;\n(4) the degree of social impact of the network information or its browsing volume within a certain period;\n(5) the technical feasibility for the network service provider to take preventive measures against infringement and whether it has taken corresponding reasonable measures;\n(6) whether the network service provider has taken corresponding reasonable measures against repeated infringement by the same network user or against the same infringing information;\n(7) other factors relevant to the case."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 When determining the fault and its degree of a network user or network service provider in republishing network information, the People's Court shall comprehensively consider the following factors:\n(1) the duty of care borne by the republishing party commensurate with its nature and scope of influence;\n(2) the obviousness of the infringement upon another's personal rights and interests by the republished information;\n(3) whether substantial modifications were made to the republished information, whether the article title was added or altered, resulting in a serious mismatch with the content and the likelihood of misleading the public."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "Article 11 Where a network user or network service provider, by means such as defamation or slander, damages the public's trust in a business entity or reduces the social evaluation of its products or services, and the business entity requests the network user or network service provider to bear tort liability, the People's Court shall support such request according to law."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "Article 12 Where a network user or network service provider uses a network to disclose the genetic information, medical records, health examination data, criminal records, home address, private activities, and other personal privacy and personal information of a natural person, causing harm to others, and the infringed party requests the network user or network service provider to bear tort liability, the People's Court shall support such request, except in the following circumstances:\n(1) the disclosure is with the written consent of the natural person and within the agreed scope;\n(2) the disclosure is for the promotion of public interest and within the necessary scope;\n(3) schools, scientific research institutions, or the like, for the purpose of academic research or statistics based on public interest, with the written consent of the natural person, and the manner of disclosure is insufficient to identify a specific natural person;\n(4) information voluntarily disclosed by the natural person on the network or other personal information that has been lawfully made public;\n(5) personal information obtained through lawful channels;\n(6) otherwise provided by laws or administrative regulations.\nWhere a network user or network service provider discloses personal information specified in items (4) and (5) of the preceding paragraph in a manner that violates social public interest or social morality, or the disclosure infringes upon a significant interest of the right holder worthy of protection, and the right holder requests the network user or network service provider to bear tort liability, the People's Court shall support such request.\nWhere a state organ discloses personal information in the exercise of its functions, this Article shall not apply."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Article 13 Where a network user or network service provider publishes information based on sources such as documents prepared by state organs in the exercise of their functions and official acts publicly performed, and any of the following circumstances exists, causing infringement upon another's personal rights and interests, and the infringed party requests the infringer to bear tort liability, the People's Court shall support such request:\n(1) the information published by the network user or network service provider is inconsistent with the content of the aforementioned sources;\n(2) the network user or network service provider causes misunderstanding by adding insulting content, defamatory information, improper titles, or by adding or deleting information, adjusting the structure, or altering the order;\n(3) the aforementioned sources have been publicly corrected, but the network user refuses to correct or the network service provider fails to correct;\n(4) the aforementioned sources have been publicly corrected, but the network user or network service provider still publishes the information before the correction."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "Article 14 Where an infringed party enters into an agreement with a network user or network service provider who has committed infringement, whereby one party pays remuneration and the other party provides services such as deletion, blocking, or disconnection of links, the People's Court shall deem such agreement void.\nWhere a network user or network service provider that published the information requests the infringer to bear tort liability for unauthorized alteration, deletion, blocking of specific network information, or preventing others from accessing network information by disconnecting links, the People's Court shall support such request. If a person engages in such conduct upon the commission of another, the principal and the agent shall bear joint and several liability."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "Article 15 Where a person employs, organizes, instigates, or assists another in publishing or republishing network information that infringes upon another's personal rights and interests, and the infringed party requests the actor to bear joint and several liability, the People's Court shall support such request."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "Article 16 Where the People's Court renders a judgment ordering the infringer to assume forms of liability such as making an apology, eliminating the effects, or restoring reputation, such liability shall be commensurate with the specific manner of the infringement and the scope of the effects caused. If the infringer refuses to perform, the People's Court may enforce the judgment by reasonable means such as publishing an announcement on the network or publishing the adjudicative document, and the costs incurred therefrom shall be borne by the infringer."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "Article 17 Where a network user or network service provider infringes upon another's personal rights and interests, causing property loss or serious mental harm, and the infringed party requests the infringer to bear compensation liability pursuant to Articles 20 and 22 of the Tort Liability Law, the People's Court shall support such request."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Article 18 The reasonable expenses paid by the infringed party to stop the infringing act may be determined as the property loss under Article 20 of the Tort Liability Law. Reasonable expenses include the reasonable costs incurred by the infringed party or the authorized agent in investigating and collecting evidence of the infringing act. Upon the party's request and based on the specific circumstances of the case, the People's Court may include attorneys' fees that comply with the provisions of the relevant state authorities within the scope of compensation.\nIf the property loss suffered by the infringed party due to the infringement of personal rights and interests, or the benefits obtained by the infringer therefrom, cannot be determined, the People's Court may determine the amount of compensation within the range of not more than RMB 500,000 yuan based on the specific circumstances of the case.\nThe amount of compensation for mental harm shall be determined pursuant to Article 10 of the Supreme People's Court's Interpretation on Several Issues Concerning the Determination of Compensation Liability for Mental Harm in Civil Torts."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "Article 19 These Provisions shall apply to cases of first instance and second instance that are being tried by the People's Court after these Provisions come into force.\nThese Provisions shall not apply to cases that have already been finally adjudicated before these Provisions come into force and for which a party applies for a retrial after these Provisions come into force, or for which a retrial is decided according to the trial supervision procedure."
     }
   ]
 }

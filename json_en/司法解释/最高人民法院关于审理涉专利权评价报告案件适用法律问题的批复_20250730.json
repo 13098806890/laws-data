@@ -2,5 +2,10 @@
   "law_id": 3500677,
   "title_en": "Reply of the Supreme People's Court on the Application of Law in the Trial of Cases involving Patent Evaluation Reports",
   "promulgation_info_en": "",
-  "articles": []
+  "articles": [
+    {
+      "article_number": "_1",
+      "content_en": "Guizhou Higher People's Court:\nYour court's Request for Instructions on the Application of Law in Patent Right Evaluation Reports (Qian Gao Fa Qing [2024] No. 1) has been received. Upon study, the reply is as follows:\nPursuant to the provisions of Article 66, Paragraph 2 of the Patent Law of the People's Republic of China, the patent right evaluation report issued by the patent administrative department of the State Council shall serve as evidence for the People's Court when trying cases involving infringement disputes over patent rights. Where the patent right evaluation report considers that the patent involved does not meet the conditions for granting patent rights as prescribed by the Patent Law of the People's Republic of China, the People's Court shall not directly issue a ruling to dismiss the prosecution solely based on this; it shall provide explanations in light of the specific case circumstances and render a judgment according to law."
+    }
+  ]
 }

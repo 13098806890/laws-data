@@ -5,107 +5,107 @@
   "articles": [
     {
       "article_number": "第一条",
-      "content_en": ""
+      "content_en": "Article 1 These Regulations are formulated in accordance with the Environmental Protection Tax Law of the People's Republic of China (hereinafter referred to as the Environmental Protection Tax Law)."
     },
     {
       "article_number": "第二条",
-      "content_en": ""
+      "content_en": "Article 2 The specific scope of other solid wastes referred to in the Tax Items and Tax Amounts Table of Environmental Protection Tax attached to the Environmental Protection Tax Law shall be determined in accordance with the procedures prescribed in Paragraph 2 of Article 6 of the Environmental Protection Tax Law."
     },
     {
       "article_number": "第三条",
-      "content_en": ""
+      "content_en": "Article 3 The centralized urban and rural sewage treatment sites specified in Article 5, Paragraph 1 and Article 12, Paragraph 1, Item 3 of the Environmental Protection Tax Law refer to sites that provide domestic sewage treatment services to the public, excluding sites that provide sewage treatment services to enterprises, institutions, and other producers and operators within industrial parks, development zones, and other industrial agglomeration areas, as well as sewage treatment sites self-built and self-used by enterprises, institutions, and other producers and operators."
     },
     {
       "article_number": "第四条",
-      "content_en": ""
+      "content_en": "Article 4 Livestock and poultry farms that meet the scale standards determined by the provincial people's government and have pollutant discharge outlets shall pay environmental protection tax according to law; if comprehensive utilization and harmless treatment of livestock and poultry breeding waste are carried out according to law, such treatment shall not be deemed as directly discharging pollutants to the environment, and no environmental protection tax shall be paid."
     },
     {
       "article_number": "第五条",
-      "content_en": ""
+      "content_en": "Article 5 The tax basis for taxable solid wastes shall be determined based on the discharge amount of solid wastes. The discharge amount of solid wastes shall be the balance of the generation amount of taxable solid wastes in the current period minus the storage amount, disposal amount, and comprehensive utilization amount of taxable solid wastes in the current period.\nThe storage amount and disposal amount of solid wastes as mentioned in the preceding paragraph refer to the amount of solid wastes stored or disposed of in facilities or sites that meet the national and local environmental protection standards; the comprehensive utilization amount of solid wastes refers to the amount of solid wastes comprehensively utilized in accordance with the requirements of the development and reform, industry and information technology departments of the State Council on resource comprehensive utilization and the national and local environmental protection standards."
     },
     {
       "article_number": "第六条",
-      "content_en": ""
+      "content_en": "Article 6 Where a taxpayer falls under any of the following circumstances, the generation amount of taxable solid wastes in the current period shall be deemed as the discharge amount of solid wastes:\n(1) illegally dumping taxable solid wastes;\n(2) making false tax declarations."
     },
     {
       "article_number": "第七条",
-      "content_en": ""
+      "content_en": "Article 7 The tax basis for taxable air pollutants and water pollutants shall be determined based on the pollution equivalent numbers converted from the discharge amount of pollutants.\nWhere a taxpayer falls under any of the following circumstances, the generation amount of taxable air pollutants or water pollutants in the current period shall be deemed as the discharge amount of pollutants:\n(1) failing to install and use automatic pollutant monitoring equipment according to law, or failing to connect the automatic pollutant monitoring equipment to the monitoring equipment of the competent environmental protection department;\n(2) damaging, or without authorization moving or altering the automatic pollutant monitoring equipment;\n(3) tampering with or falsifying pollutant monitoring data;\n(4) illegally discharging taxable pollutants through concealed pipes, seepage wells, seepage pits, injection or dilution, or by not operating pollution prevention facilities normally, or through other means;\n(5) making false tax declarations."
     },
     {
       "article_number": "第八条",
-      "content_en": ""
+      "content_en": "Article 8 Where taxable pollutants are discharged from two or more discharge outlets, the environmental protection tax shall be calculated and levied separately for the taxable pollutants discharged from each discharge outlet; if the taxpayer holds a pollutant discharge permit, the pollutant discharge outlets shall be determined according to the pollutant discharge outlets specified in the pollutant discharge permit."
     },
     {
       "article_number": "第九条",
-      "content_en": ""
+      "content_en": "Article 9 For taxpayers falling under the circumstances specified in Item 2 of Article 10 of the Environmental Protection Tax Law, if the monitoring data obtained by the taxpayer's own monitoring of pollutants comply with the relevant national provisions and monitoring specifications, such data shall be deemed as monitoring data issued by the monitoring institutions specified in Item 2 of Article 10 of the Environmental Protection Tax Law."
     },
     {
       "article_number": "第十条",
-      "content_en": ""
+      "content_en": "Article 10 The concentration value of taxable air pollutants or water pollutants referred to in Article 13 of the Environmental Protection Tax Law means the numerical value obtained by averaging the hourly average concentrations of taxable air pollutants automatically monitored by the automatic pollutant monitoring equipment installed and used by the taxpayer in the current month, or the numerical value obtained by averaging the daily average concentrations of taxable water pollutants, or the average of the concentrations of taxable air pollutants or water pollutants monitored by the monitoring institution in the current month.\nWhere environmental protection tax is reduced in accordance with Article 13 of the Environmental Protection Tax Law, the hourly average concentration of taxable air pollutants or the daily average concentration of taxable water pollutants as specified in the preceding paragraph, as well as the concentration of taxable air pollutants or water pollutants monitored each time by the monitoring institution in the current month, shall not exceed the pollutant discharge standards prescribed by the state and the local authorities."
     },
     {
       "article_number": "第十一条",
-      "content_en": ""
+      "content_en": "For taxpayers that reduce their environmental protection tax in accordance with Article 13 of the Environmental Protection Tax Law, they shall calculate separately for different taxable pollutants discharged from each discharge outlet."
     },
     {
       "article_number": "第十二条",
-      "content_en": ""
+      "content_en": "The tax authorities shall, according to law, perform duties such as accepting environmental protection tax declaration, comparing tax-related information, and organizing tax payment into the state treasury.\nThe competent department of environmental protection shall, according to law, be responsible for the monitoring and management of taxable pollutants and formulate and improve pollutant monitoring norms."
     },
     {
       "article_number": "第十三条",
-      "content_en": ""
+      "content_en": "Local people's governments at or above the county level shall strengthen leadership over the collection and management of environmental protection tax, and promptly coordinate and resolve major issues in the collection and management of environmental protection tax."
     },
     {
       "article_number": "第十四条",
-      "content_en": ""
+      "content_en": "The tax and environmental protection competent departments of the State Council shall formulate technical standards for the tax-related information sharing platform and norms for data collection, storage, transmission, query, and use."
     },
     {
       "article_number": "第十五条",
-      "content_en": ""
+      "content_en": "The competent department of environmental protection shall, through the tax-related information sharing platform, deliver the following information obtained from environmental protection supervision and management to the tax authorities:\n(1) Basic information such as the name, unified social credit code, pollutant discharge outlets, and types of pollutants discharged by the pollutant discharging entity;\n(2) Pollutant discharge data of the pollutant discharging entity (including data such as the amount of pollutants discharged and the concentration of air pollutants and water pollutants);\n(3) Environmental violations and administrative penalties received by the pollutant discharging entity;\n(4) Review opinions on abnormalities in the tax declaration data submitted by taxpayers that the tax authorities request for review or on taxpayers failing to make tax declarations within the prescribed time limit;\n(5) Other information agreed with the tax authorities to be delivered."
     },
     {
       "article_number": "第十六条",
-      "content_en": ""
+      "content_en": "The tax authorities shall, through the tax-related information sharing platform, deliver the following environmental protection tax-related information to the competent department of environmental protection:\n(1) Basic information of taxpayers;\n(2) Tax declaration information;\n(3) Information such as tax payment into the treasury, tax reduction and exemption, overdue tax payments, and risk points;\n(4) Tax-related violations and administrative penalties received by taxpayers;\n(5) Information on abnormalities in the tax declaration data submitted by taxpayers or on taxpayers failing to make tax declarations within the prescribed time limit;\n(6) Other information agreed with the competent department of environmental protection to be delivered."
     },
     {
       "article_number": "第十七条",
-      "content_en": ""
+      "content_en": "The place of discharge of taxable pollutants as mentioned in Article 17 of the Environmental Protection Tax Law shall refer to:\n(1) The location of the discharge outlet for taxable air pollutants and water pollutants;\n(2) The place of generation of taxable solid waste;\n(3) The place of generation of taxable noise."
     },
     {
       "article_number": "第十八条",
-      "content_en": ""
+      "content_en": "Where taxpayers discharge taxable pollutants across regions, and the tax authorities have disputes over the jurisdiction of tax collection, the disputing parties shall negotiate and resolve the matter in accordance with the principle of facilitating collection and management; if they fail to reach a consensus through negotiation, they shall report to the common higher-level tax authority for a decision."
     },
     {
       "article_number": "第十九条",
-      "content_en": ""
+      "content_en": "The tax authorities shall identify taxpayers based on the information of pollutant discharging entities delivered by the competent department of environmental protection.\nFor taxpayers for which there is no corresponding information in the information on pollutant discharging entities delivered by the competent department of environmental protection, the tax authorities shall identify them when the taxpayers handle the environmental protection tax declaration for the first time, and deliver the relevant information to the competent department of environmental protection."
     },
     {
       "article_number": "第二十条",
-      "content_en": ""
+      "content_en": "If the competent department of environmental protection discovers errors in the information on taxable pollutant discharge declared by the taxpayer or in the applicable pollutant discharge coefficient or material balance calculation method, it shall notify the tax authorities to handle the matter."
     },
     {
       "article_number": "第二十一条",
-      "content_en": ""
+      "content_en": "Article 21 Where the pollutant emission data declared by a taxpayer is inconsistent with the relevant data submitted by the competent department of environmental protection, the tax basis for taxable pollutants shall be determined in accordance with the data submitted by the competent department of environmental protection."
     },
     {
       "article_number": "第二十二条",
-      "content_en": ""
+      "content_en": "Article 22 The abnormal tax declaration data and materials of a taxpayer mentioned in Article 20, paragraph 2 of the Environmental Protection Tax Law includes, but is not limited to, the following circumstances:\n(1) The amount of taxable pollutant emissions declared by the taxpayer in the current period is significantly lower than that of the same period in the previous year, without justifiable reasons;\n(2) The amount of pollutant emissions per unit of product of the taxpayer is significantly lower than that of similar taxpayers, without justifiable reasons."
     },
     {
       "article_number": "第二十三条",
-      "content_en": ""
+      "content_en": "Article 23 Tax authorities and competent departments of environmental protection shall, free of charge, provide taxpayers with guidance, training, and consulting services related to the payment of environmental protection tax."
     },
     {
       "article_number": "第二十四条",
-      "content_en": ""
+      "content_en": "Article 24 Tax authorities shall carry out tax inspection on environmental protection tax according to law, and competent departments of environmental protection shall cooperate."
     },
     {
       "article_number": "第二十五条",
-      "content_en": ""
+      "content_en": "Article 25 Taxpayers shall, in accordance with the relevant provisions on tax collection administration, properly keep the relevant materials on the monitoring and management of taxable pollutants."
     },
     {
       "article_number": "第二十六条",
-      "content_en": ""
+      "content_en": "Article 26 These Regulations shall come into force as of January 1, 2018. The Regulations on the Levy and Use of Pollutant Discharge Fees promulgated by the State Council on January 2, 2003 shall be abolished simultaneously."
     }
   ]
 }
