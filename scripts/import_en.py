@@ -100,10 +100,13 @@ def import_en(dry_run: bool = False, force: bool = False):
         # Build lookup: {article_number_text: [(node_id, existing_content_en), ...]}
         # 使用列表以支持重复 article_number（import_gongbao_sfjs 可能产生多份副本）
         db_map: dict[str, list[tuple[int, str]]] = {}
+        null_nodes = []  # nodes with NULL article_number (full_text fallback)
         for nid, art_num, en_existing in rows:
             key = _norm(art_num) if art_num else ""
             if key:
                 db_map.setdefault(key, []).append((nid, en_existing))
+            else:
+                null_nodes.append((nid, en_existing))
 
         matched = 0
         already = 0
@@ -123,6 +126,10 @@ def import_en(dry_run: bool = False, force: bool = False):
                         if chinese_article_num(key) == cn_int:
                             candidates = entries
                             break
+
+            if not candidates and null_nodes:
+                # Fallback: json_en uses _1/_2 etc (full_text fallback), match to NULL-article_number nodes
+                candidates = null_nodes
 
             if not candidates:
                 continue
