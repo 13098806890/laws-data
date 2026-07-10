@@ -160,7 +160,10 @@ TRANSLATION RULES:
     - Use 'shall' for obligations, 'may' for permissions, 'must' for requirements
     - Neutral tone — preserve the original document's legal authority
     - If the document has no structured sections, translate naturally as a coherent legal text
-    - NEVER add commentary or explanation outside the translation"""
+    - NEVER add commentary or explanation outside the translation
+    - NO MARKDOWN: Never use **bold**, *italic*, bullet lists, or any markdown formatting. Plain text only. Use blank lines between paragraphs.
+    - NEGATIVE EXAMPLE — WRONG: "**Ruling Summary**" or "**Keywords**" (markdown bold)
+    - NEGATIVE EXAMPLE — CORRECT: "【Ruling Summary】" or "Keywords" (plain text, or keep original brackets)"""
 
 
 def api_call(messages: list, system: str) -> str:

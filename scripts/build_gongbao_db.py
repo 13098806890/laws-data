@@ -32,7 +32,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent.parent
 DB_PATH  = BASE_DIR / 'law_content.db'
 
-GONGBAO_DIR = BASE_DIR / '最高人民法院公报'
+GONGBAO_DIR   = BASE_DIR / '最高人民法院公报'
+GONGBAO_EN_DIR = BASE_DIR / 'json_en_gongbao'
 
 # source → 子目录
 DOC_SOURCES = {
@@ -90,7 +91,11 @@ CREATE TABLE IF NOT EXISTS gongbao_docs (
     ruling_gist TEXT,                 -- 裁判摘要/裁判要点（从正文提取）
     keywords    TEXT,                 -- 关键词平铺字符串
     keywords_meta TEXT,               -- 结构化关键词 JSON（LLM生成，各维度分组）
-    full_text   TEXT
+    full_text   TEXT,
+    title_en        TEXT,
+    ruling_gist_en  TEXT,
+    keywords_en     TEXT,
+    full_text_en    TEXT
 );
 
 CREATE TABLE IF NOT EXISTS gongbao_case_law_links (
@@ -108,6 +113,10 @@ CREATE VIRTUAL TABLE IF NOT EXISTS gongbao_docs_fts USING fts5(
     ruling_gist,
     keywords,
     full_text,
+    title_en,
+    ruling_gist_en,
+    keywords_en,
+    full_text_en,
     content="gongbao_docs",
     tokenize="trigram"
 );
@@ -216,6 +225,42 @@ def import_docs(conn: sqlite3.Connection) -> int:
     return total
 
 
+def import_en_gongbao(conn: sqlite3.Connection) -> int:
+    """从 json_en_gongbao/{source}/{id}.json 导入英文翻译至 gongbao_docs 表。"""
+    if not GONGBAO_EN_DIR.exists():
+        print('  ⚠ json_en_gongbao 目录不存在，跳过英文导入')
+        return 0
+    total = 0
+    for source_dir in sorted(GONGBAO_EN_DIR.iterdir()):
+        if not source_dir.is_dir():
+            continue
+        source = source_dir.name
+        files = list(source_dir.glob('*.json'))
+        if not files:
+            continue
+        print(f'  en/{source}: {len(files)} 个文件')
+        for fpath in files:
+            doc_id = int(fpath.stem)
+            try:
+                data = json.loads(fpath.read_text(encoding='utf-8'))
+            except (json.JSONDecodeError, UnicodeDecodeError) as e:
+                print(f'    ⚠  parse error: {fpath.name} — {e}')
+                continue
+            cur = conn.execute(
+                """UPDATE gongbao_docs SET
+                   title_en = ?, ruling_gist_en = ?, keywords_en = ?, full_text_en = ?
+                   WHERE id = ?""",
+                (data.get('title_en', '') or None,
+                 data.get('ruling_gist_en', '') or None,
+                 data.get('keywords_en', '') or None,
+                 data.get('full_text_en', '') or None,
+                 doc_id)
+            )
+            if cur.rowcount > 0:
+                total += 1
+    return total
+
+
 # ── 建立法条关联 ──────────────────────────────────────────────────────────────
 
 def build_links(conn: sqlite3.Connection) -> int:
@@ -312,6 +357,10 @@ def main():
     n_docs = import_docs(conn)
     print(f'  共导入 {n_docs} 条')
 
+    print('\n导入英文翻译...')
+    n_en = import_en_gongbao(conn)
+    print(f'  共导入 {n_en} 条英文翻译')
+
     print('\n建立法条引用关联...')
     n_links = build_links(conn)
     print(f'  共建立 {n_links} 条法条关联')
@@ -324,6 +373,7 @@ def main():
 
     print(f'\n完成：')
     print(f'  gongbao_docs: {n_docs} 条（裁判文书+指导案例+司法文件）')
+    print(f'  en translations: {n_en} 条')
     print(f'  gongbao_case_law_links: {n_links} 条')
     print(f'  → {DB_PATH}')
 
@@ -347,6 +397,10 @@ def run(drop: bool = True):
     n_docs = import_docs(conn)
     print(f'  共导入 {n_docs} 条')
 
+    print('\n  导入英文翻译...')
+    n_en = import_en_gongbao(conn)
+    print(f'  共导入 {n_en} 条英文翻译')
+
     print('\n  建立法条引用关联...')
     n_links = build_links(conn)
     print(f'  共建立 {n_links} 条法条关联')
@@ -358,6 +412,7 @@ def run(drop: bool = True):
     conn.close()
 
     print(f'\n  gongbao_docs: {n_docs} 条（裁判文书+指导案例+司法文件）')
+    print(f'  en translations: {n_en} 条')
     print(f'  gongbao_case_law_links: {n_links} 条')
 
 
