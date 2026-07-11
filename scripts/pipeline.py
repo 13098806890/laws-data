@@ -362,23 +362,20 @@ def main():
         HEADING_MAP_PATH = BASE_DIR / 'references' / 'heading_en_map.json'
         if HEADING_MAP_PATH.exists():
             heading_map = json.loads(HEADING_MAP_PATH.read_text(encoding='utf-8'))
-            # Note: heading_en_map.json uses node_id as key (legacy format).
-            # After DB rebuilds, node IDs change, so this file needs regeneration
-            # via translate_headings.py.
+            # heading_en_map.json uses stable keys (law_id:type:order_index)
             conn = sqlite3.connect(DB_PATH)
-            before = dict(conn.execute("SELECT id, content_en FROM nodes WHERE type IN ('part','chapter','section')").fetchall())
-            for node_id_str, en_text in heading_map.items():
-                nid = int(node_id_str)
-                if before.get(nid) is None or before[nid]:
-                    continue
-                conn.execute(
-                    'UPDATE nodes SET content_en = ? WHERE id = ?',
-                    (en_text, nid)
+            updated = 0
+            for key, en_text in heading_map.items():
+                parts = key.split(':')
+                law_id, ntype, oi = int(parts[0]), parts[1], int(parts[2])
+                cur = conn.execute(
+                    "UPDATE nodes SET content_en = ? WHERE law_id = ? AND type = ? AND order_index = ? AND (content_en IS NULL OR content_en = '')",
+                    (en_text, law_id, ntype, oi)
                 )
+                updated += cur.rowcount
             conn.commit()
-            after = conn.execute("SELECT COUNT(*) FROM nodes WHERE type IN ('part','chapter','section') AND content_en IS NOT NULL AND content_en != ''").fetchone()[0]
             conn.close()
-            print(f"  ✅ nodes.content_en (part/chapter/section): {after} 条有英文 (共 {len(heading_map)} 条缓存)")
+            print(f"  ✅ 写入 {updated} 条结构节点英文标题 (共 {len(heading_map)} 条缓存)")
         else:
             print("  ⚠  heading_en_map.json 不存在，跳过（可先运行 translate_headings.py 生成）")
 

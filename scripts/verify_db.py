@@ -190,12 +190,12 @@ def main():
     # ── 英文覆盖率检查 ──
     print(f'\n英文覆盖率检查:')
     conn2 = sqlite3.connect(DB_PATH)
-    # laws.title_en
-    total_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk'").fetchone()[0]
-    en_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk' AND title_en IS NOT NULL AND title_en != ''").fetchone()[0]
+    # laws.title_en (只统计现行法律)
+    total_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk' AND is_current=1").fetchone()[0]
+    en_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk' AND is_current=1 AND title_en IS NOT NULL AND title_en != ''").fetchone()[0]
     pct_laws = round(100.0 * en_laws / total_laws, 1) if total_laws else 0
     flag_laws = '⚠️' if pct_laws < 95 else '✅'
-    print(f'  {flag_laws} laws.title_en: {en_laws}/{total_laws} ({pct_laws}%)')
+    print(f'  {flag_laws} laws.title_en (active): {en_laws}/{total_laws} ({pct_laws}%)')
 
     # 结构节点 content_en (part/chapter/section)
     for ntype in ('part', 'chapter', 'section'):
