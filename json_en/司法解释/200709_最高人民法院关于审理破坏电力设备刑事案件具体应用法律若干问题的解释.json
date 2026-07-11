@@ -1,0 +1,23 @@
+{
+  "law_id": 3501173,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Sabotaging Electric Power Equipment",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1: Where any person destroys electric power equipment under any of the following circumstances, it shall be deemed as \"causing serious consequences\" as stipulated in paragraph 1 of Article 119 of the Criminal Law, and the person shall be sentenced to fixed-term imprisonment of not less than ten years, life imprisonment, or death penalty for the crime of destroying electric power equipment:\n(1) causing the death of one or more persons, serious injury to three or more persons, or minor injury to ten or more persons;\n(2) causing interruption of power supply to more than 10,000 users for more than six hours, thereby seriously affecting production and daily life;\n(3) causing direct economic losses of more than one million yuan; or\n(4) causing other serious consequences endangering public security."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2: Where any person negligently damages electric power equipment, causing the serious consequences as stipulated in Article 1 of this Interpretation, the person shall, in accordance with the provisions of paragraph 2 of Article 119 of the Criminal Law, be sentenced to fixed-term imprisonment of not less than three years but not more than seven years for the crime of negligently damaging electric power equipment; if the circumstances are relatively minor, the person shall be sentenced to fixed-term imprisonment of not more than three years or criminal detention."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3: Where any person steals electric power equipment, endangering public security, but does not constitute the crime of theft, the person shall be convicted and punished for the crime of destroying electric power equipment; where the person's conduct simultaneously constitutes the crime of theft and the crime of destroying electric power equipment, the person shall be convicted and punished in accordance with the provision of the Criminal Law that imposes a heavier punishment.\nWhere any person steals electric power equipment, without endangering public security, but criminal liability shall be investigated, the person may be dealt with according to the circumstances of the case as the crime of theft or other crimes."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4: For the purpose of this Interpretation, \"electric power equipment\" means electric power equipment that is in operation, emergency use, or other use; electric power equipment that has been put into use with power supply but is temporarily suspended due to dry season, insufficient power, or other reasons; and electric power equipment that has been delivered for use but has not yet been connected to power supply. It does not include electric power equipment that has not been installed, or has been installed but not yet delivered for use.\nThe scope of calculation of direct economic losses in this Interpretation includes the amount of electricity loss, the costs of procurement, replacement, and repair of damaged equipment and materials, and direct economic losses caused to users due to power outages, among others."
+    }
+  ]
+}

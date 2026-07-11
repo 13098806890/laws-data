@@ -1,0 +1,47 @@
+{
+  "law_id": 3501269,
+  "title_en": "Provisions of the Supreme People's Court on Online Inquiry and Freezing of Deposits of Judgment Debtors",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Where a People's Court and a financial institution have established a network enforcement inquiry and control mechanism, the People's Court may, through the network, implement measures such as inquiry and freezing of deposits of the person subject to enforcement.\nThe establishment and operation of the network enforcement inquiry and control mechanism shall meet the following conditions:\n(1) A network enforcement inquiry and control system has been established, which has the function of sending, transmitting, and feedbacking inquiry and control information through the network enforcement inquiry and control system;\n(2) Specific personnel are authorized to handle network enforcement inquiry and control business;\n(3) An electronic seal system that meets security specifications is in place;\n(4) Measures sufficient to ensure the security of the inquiry and control system and information have been taken."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 When a People's Court implements network enforcement inquiry and control measures, it shall, in advance and uniformly, file with the relevant financial institution the relevant official documents of the specific enforcement personnel authorized to take enforcement inquiry and control measures through the network. When handling specific business, it shall no longer separately provide the relevant official documents of the enforcement personnel to the relevant financial institution.\nWhere the specific enforcement personnel of the People's Court handling network enforcement inquiry and control business are changed, the People's Court shall promptly file with the relevant financial institution the personnel change information and the relevant official documents."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 When a People's Court inquires about the deposits of a person subject to enforcement through the network, it shall transmit an electronic Letter of Assistance in Inquiry of Deposits to the financial institution. For centralized inquiry of multiple cases, a summary case inquiry list may be attached.\nWhere the inquired deposits of the person subject to enforcement need to be frozen or continued to be frozen, the People's Court shall promptly transmit an electronic Freezing Ruling and an electronic Letter of Assistance in Freezing Deposits to the financial institution.\nWhere the frozen deposits of the person subject to enforcement need to be unfrozen, the People's Court shall promptly transmit an electronic Ruling on Lifting Freeze and an electronic Letter of Assistance in Unfreezing Deposits to the financial institution."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 The legal documents transmitted by the People's Court to the financial institution shall be affixed with an electronic seal.\nAfter the financial institution, as the assistance enforcer, completes matters such as inquiry and freezing, it shall promptly reply to the People's Court through the network with the results of inquiry and freezing affixed with an electronic seal.\nThe electronic legal documents issued by the People's Court and the electronic inquiry and freezing results issued by the financial institution shall have the same legal effect as paper legal documents and feedback results."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 The inquiry, freezing, continued freezing, and unfreezing of deposits of a person subject to enforcement by the People's Court through the network shall have the same legal effect as the inquiry, freezing, continued freezing, and unfreezing of deposits of a person subject to enforcement by enforcement personnel at the business premises of a financial institution."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 Where a financial institution considers that the inquiry and control measures taken by the People's Court through the network enforcement inquiry and control system violate the provisions of relevant laws and administrative regulations, it shall raise an objection in writing to the People's Court. The People's Court shall complete the review within 15 days and reply in writing."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 A People's Court shall use the network enforcement inquiry and control system and inquiry and control information in accordance with the provisions of laws, administrative regulations, and corresponding operational norms to ensure information security.\nIn the process of handling enforcement cases, a People's Court shall not disclose the inquiry and control information obtained through the network enforcement inquiry and control system, nor shall it use it for purposes other than the enforcement case.\nIn the process of handling enforcement cases, a People's Court shall not take network inquiry and control measures against persons other than the person subject to enforcement who are not subjects of enforcement obligations."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where a staff member of a People's Court violates the provisions of Article 7, disciplinary sanctions shall be imposed according to the Regulations on Disciplinary Sanctions for Staff of People's Courts; if the circumstances are serious enough to constitute a crime, criminal liability shall be investigated according to law."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 Where a People's Court has the corresponding technical conditions for network deduction and transfer, and has reached consensus with the financial institution through consultation, it may take measures to deduct and transfer deposits of the person subject to enforcement through the network enforcement inquiry and control system."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 Where a People's Court has established a network enforcement inquiry and control mechanism with assistance enforcement units such as administrative departments for industry and commerce, securities regulatory authorities, and land and housing management authorities, and takes inquiry and control measures through the network enforcement inquiry and control system against other properties such as equity, stocks, funds in securities accounts, and real estate of the person subject to enforcement, these Provisions shall be referred to for implementation."
+    }
+  ]
+}

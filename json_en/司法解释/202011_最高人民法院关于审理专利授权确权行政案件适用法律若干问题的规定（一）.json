@@ -1,0 +1,135 @@
+{
+  "law_id": 3501383,
+  "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Administrative Cases concerning Patent Grant and Confirmation (I)",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 For the purpose of these Provisions, the term \"administrative cases concerning patent grant\" refers to cases in which a patent applicant, dissatisfied with a patent reexamination request review decision made by the patent administrative department of the State Council, files a prosecution with a People's Court.\nFor the purpose of these Provisions, the term \"administrative cases concerning patent confirmation\" refers to cases in which a patent holder or an invalidation requester, dissatisfied with a patent invalidation request review decision made by the patent administrative department of the State Council, files a prosecution with a People's Court.\nFor the purpose of these Provisions, the term \"the sued decision\" refers to the patent reexamination request review decision or patent invalidation request review decision made by the patent administrative department of the State Council."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 A People's Court shall define the terms of a claim by their ordinary meaning as understood by a person skilled in the relevant technical field after reading the claims, specification and drawings. If a term of a claim is explicitly defined or explained in the specification and drawings, it shall be defined accordingly.\nIf the definition cannot be made under the preceding paragraph, the definition may be made with reference to technical dictionaries, technical manuals, reference books, textbooks, national or industry technical standards commonly used by a person skilled in the relevant technical field."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 When defining the terms of a claim in an administrative case concerning patent confirmation, a People's Court may refer to the relevant statements of the patent holder that have been adopted in a legally effective judgment of a civil case concerning patent infringement."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 If there are obvious errors or ambiguities in grammar, wording, figures, punctuation, drawings, symbols, etc., in the claims, specification and drawings, but a person skilled in the relevant technical field, after reading the claims, specification and drawings, can reach a single understanding, the People's Court shall make a determination based on such single understanding."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 If a party has evidence proving that the patent applicant or patent holder, in violation of the principle of good faith, fabricated or made up the specific embodiments, technical effects, data, charts and other relevant technical content in the specification and drawings, and accordingly claims that the relevant claim does not comply with the relevant provisions of the Patent Law, the People's Court shall uphold such claim."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 If the specification does not sufficiently disclose a specific technical content, resulting in any of the following circumstances as of the patent application date, the People's Court shall determine that the specification and the claim relating to such specific technical content do not comply with Article 26, Paragraph 3 of the Patent Law:\n(1) The technical solution defined in the claim cannot be implemented;\n(2) Implementing the technical solution defined in the claim cannot solve the technical problem to be solved by the invention or utility model;\n(3) Confirming that the technical solution defined in the claim can solve the technical problem to be solved by the invention or utility model requires undue effort.\nIf a party, solely on the basis of the insufficiently disclosed specific technical content as prescribed in the preceding paragraph, claims that the claim relating to such specific technical content complies with the provision of Article 26, Paragraph 4 of the Patent Law that \"the claims shall be supported by the specification,\" the People's Court shall not uphold such claim."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 If, according to the specification and drawings, a person skilled in the relevant technical field believes that the claim has any of the following circumstances, the People's Court shall determine that the claim does not comply with the provision of Article 26, Paragraph 4 of the Patent Law regarding clearly defining the scope of patent protection sought:\n(1) The type of the invention subject matter defined is unclear;\n(2) The meaning of the technical features in the claim cannot be reasonably determined;\n(3) There is an obvious contradiction between the technical features that cannot be reasonably explained."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 If, after reading the specification and drawings, a person skilled in the relevant technical field cannot derive or reasonably generalize the technical solution defined in the claim as of the application date, the People's Court shall determine that the claim does not comply with the provision of Article 26, Paragraph 4 of the Patent Law that \"the claims shall be supported by the specification.\""
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 A technical feature limited by function or effect refers to a technical feature that defines a structure, component, step, condition, or the relationship between technical features only by the function or effect it performs in the invention-creation, except where a person skilled in the relevant technical field can directly and clearly determine the specific embodiment for achieving such function or effect upon reading the claims.\nWith respect to a technical feature limited by function or effect as prescribed in the preceding paragraph, if the claims, specification and drawings do not disclose any specific embodiment that can achieve such function or effect, the People's Court shall determine that the specification and the claim containing such technical feature do not comply with Article 26, Paragraph 3 of the Patent Law."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 If a pharmaceutical patent applicant submits supplementary experimental data after the application date and claims to rely on such data to prove that the patent application complies with Article 22, Paragraph 3, Article 26, Paragraph 3, or other relevant provisions of the Patent Law, the People's Court shall examine such data."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11 If a dispute arises between parties over the authenticity of experimental data, the party submitting the experimental data shall provide evidence to prove the source and formation process of the experimental data. The People's Court may notify the person in charge of the experiment to appear in court to give explanations on the experimental materials, steps, conditions, environment or parameters, as well as the personnel and institutions that conducted the experiment."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12 When determining the technical field of the technical solution defined in the claim, the People's Court shall comprehensively consider the entire content of the claim including the subject-matter title, the description of the technical field and background technology in the specification, as well as the functions and uses achieved by such technical solution."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13 If the specification and drawings do not explicitly record the technical effect that can be achieved by the distinguishing technical feature in the technical solution defined in the claim, the People's Court may, in combination with common general knowledge in the relevant technical field, determine the actual technical problem solved by the claim that can be identified by a person skilled in the relevant technical field, based on the relationship between the distinguishing technical feature and other technical features in the claim, the role of the distinguishing technical feature in the technical solution defined in the claim, etc.\nIf the sued decision fails to determine or erroneously determines the actual technical problem solved by the claim, it shall not affect the People's Court's determination on the inventiveness of the claim according to law."
+    },
+    {
+      "article_number": "第14条",
+      "content_en": "Article 14 When determining the knowledge level and cognitive ability of the ordinary consumer of a design patent product, the People's Court shall take into account the design space of the design patent product as of the application date. If the design space is relatively large, the People's Court may determine that the ordinary consumer is generally not likely to notice minor differences between different designs; if the design space is relatively small, the People's Court may determine that the ordinary consumer is generally more likely to notice minor differences between different designs.\nIn determining the design space referred to in the preceding paragraph, the People's Court may comprehensively consider the following factors:\n(1) The function and use of the product;\n(2) The overall state of the prior designs;\n(3) Commonplace designs;\n(4) Mandatory provisions of laws and administrative regulations;\n(5) National or industry technical standards;\n(6) Other factors that need to be considered."
+    },
+    {
+      "article_number": "第15条",
+      "content_en": "Article 15 If the drawings or photographs of a design contain contradictions, omissions, or are unclear, such that the ordinary consumer cannot determine the design to be protected based on the drawings, photographs and brief explanation, the People's Court shall determine that it does not comply with the provision of Article 27, Paragraph 2 of the Patent Law regarding \"clearly showing the design of the product for which patent protection is sought.\""
+    },
+    {
+      "article_number": "第16条",
+      "content_en": "Article 16 When determining whether a design complies with Article 23 of the Patent Law, the People's Court shall make a comprehensive judgment on the overall visual effect of the design.\nDesign features that are necessary to achieve a specific technical function or have only limited options shall not have a significant impact on the overall observation and comprehensive judgment of the visual effect of the design patent."
+    },
+    {
+      "article_number": "第17条",
+      "content_en": "Article 17 If a design, compared with a prior design of the same or similar kind of product, is identical in overall visual effect or falls under a substantially identical situation such as only having minor local differences, the People's Court shall determine that it constitutes \"being a prior design\" as specified in Article 23, Paragraph 1 of the Patent Law.\nExcept for the circumstances provided in the preceding paragraph, if the difference between a design and a prior design of the same or similar kind of product does not have a significant impact on the overall visual effect, the People's Court shall determine that it lacks \"obvious difference\" as specified in Article 23, Paragraph 2 of the Patent Law.\nThe People's Court shall determine whether the product types are the same or similar based on the use of the design product. In determining the use of the product, reference may be made to factors such as the brief explanation of the design, the classification table of design products, the function of the product, and the sales and actual use of the product."
+    },
+    {
+      "article_number": "第18条",
+      "content_en": "Article 18 If a design patent, compared with another design patent filed on the same day for the same kind of product, is identical in overall visual effect or falls under a substantially identical situation such as only having minor local differences, the People's Court shall determine that it does not comply with the provision of Article 9 of the Patent Law that \"only one patent right shall be granted for the same invention-creation.\""
+    },
+    {
+      "article_number": "第19条",
+      "content_en": "Article 19 If a design, compared with another design that was filed before the application date but published after the application date, and belongs to the same or similar kind of product, is identical in overall visual effect or falls under a substantially identical situation such as only having minor local differences, the People's Court shall determine that it constitutes \"the same design\" as specified in Article 23, Paragraph 1 of the Patent Law."
+    },
+    {
+      "article_number": "第20条",
+      "content_en": "Article 20 If, based on the design inspiration given by the prior designs as a whole, an appearance design is obtained by means of transferring, combining or replacing design features that are readily conceivable by the ordinary consumer, resulting in a design that is identical in overall visual effect to the design patent or falls under a substantially identical situation such as only having minor local differences, and does not have a unique visual effect, the People's Court shall determine that such design patent does not have \"obvious difference\" compared with the combination of prior design features as specified in Article 23, Paragraph 2 of the Patent Law.\nIf any of the following circumstances exists, the People's Court may determine that there is design inspiration as referred to in the preceding paragraph:\n(1) Combining or replacing design features from different parts of a product of the same kind;\n(2) The prior designs disclose the transfer of design features of a specific kind of product to the design patent product;\n(3) The prior designs disclose the combination of design features from different specific kinds of products;\n(4) Using a pattern from the prior designs directly or with only minor modifications on the design patent product;\n(5) Transferring the features of a single natural object to the design patent product;\n(6) Simply adopting basic geometric shapes or obtaining the design with only minor modifications;\n(7) Using all or part of the designs of buildings, works, logos, etc., that are well known to the ordinary consumer."
+    },
+    {
+      "article_number": "第21条",
+      "content_en": "Article 21 When determining the unique visual effect referred to in Article 20 of these Provisions, the People's Court may comprehensively consider the following factors:\n(1) The design space of the design patent product;\n(2) The relevance of the product types;\n(3) The number and difficulty of the design features transferred, combined or replaced;\n(4) Other factors that need to be considered."
+    },
+    {
+      "article_number": "第22条",
+      "content_en": "Article 22 The term \"lawful rights\" as used in Article 23, Paragraph 3 of the Patent Law includes lawful rights or interests in works, trademarks, geographical indications, names, enterprise names, portraits, as well as well-known product names, packaging, and ornamentation."
+    },
+    {
+      "article_number": "第23条",
+      "content_en": "Article 23 If a party claims that any of the following circumstances in the patent reexamination or invalidation request review procedure constitutes \"violation of statutory procedures\" as specified in Item (3) of Article 70 of the Administrative Procedure Law, the People's Court shall uphold such claim:\n(1) Omitting reasons and evidence raised by the party, and having a substantive impact on the party's rights;\n(2) Failing to notify, according to law, the patent applicant, patent holder, invalidation requester, or other persons who should participate in the review procedure, thereby having a substantive impact on their rights;\n(3) Failing to inform the party of the composition of the collegial panel, and a member of the collegial panel has a statutory cause for withdrawal but fails to withdraw;\n(4) Failing to provide the party against whom the sued decision is adverse with an opportunity to state its opinions on the reasons, evidence and facts found on which the sued decision is based;\n(5) Actively introducing common general knowledge or commonplace design that the party did not assert, without hearing the party's opinions, and having a substantive impact on the party's rights;\n(6) Other violations of statutory procedures that may have a substantive impact on the party's rights."
+    },
+    {
+      "article_number": "第24条",
+      "content_en": "Article 24 If the sued decision falls under any of the following circumstances, the People's Court may, in accordance with Article 70 of the Administrative Procedure Law, render a judgment of partial revocation:\n(1) The sued decision is erroneous in its determination of some claims in the claims, while the rest are correct;\n(2) The sued decision is erroneous in its determination of some designs in a \"single design patent application\" as specified in Article 31, Paragraph 2 of the Patent Law, while the rest are correct;\n(3) Other circumstances where a judgment of partial revocation may be rendered."
+    },
+    {
+      "article_number": "第25条",
+      "content_en": "Article 25 If the sued decision has reviewed and adjudicated all invalidation grounds and evidence asserted by the party and declared the claim invalid, and the People's Court considers that none of the reasons for the sued decision's determination that the claim is invalid can be sustained, the People's Court shall render a judgment revoking or partially revoking the decision, and may, as the case may be, order the defendant to make a new review decision on such claim."
+    },
+    {
+      "article_number": "第26条",
+      "content_en": "Article 26 If a review decision is directly made anew based on a legally effective judgment and does not introduce new facts or reasons, and a party files a prosecution against such decision, the People's Court shall, according to law, rule not to accept the case; if the case has already been accepted, the People's Court shall, according to law, rule to dismiss the prosecution."
+    },
+    {
+      "article_number": "第27条",
+      "content_en": "Article 27 If the sued decision is indeed improper in finding facts or applying law, but the conclusion on the determination of patent grant or confirmation is correct, the People's Court may, on the basis of correcting the relevant factual findings and legal application, render a judgment dismissing the plaintiff's claims."
+    },
+    {
+      "article_number": "第28条",
+      "content_en": "Article 28 If a party claims that certain technical content constitutes common general knowledge or that certain design features constitute commonplace design, the People's Court may require the party to provide evidence or give an explanation."
+    },
+    {
+      "article_number": "第29条",
+      "content_en": "Article 29 If a patent applicant or patent holder provides new evidence in an administrative case concerning patent grant or confirmation to prove that the patent application should not be rejected or that the patent right should be maintained valid, the People's Court shall generally examine such evidence."
+    },
+    {
+      "article_number": "第30条",
+      "content_en": "Article 30 If an invalidation requester provides new evidence in an administrative case concerning patent confirmation, the People's Court shall generally not examine such evidence, except for the following evidence:\n(1) Evidence proving common general knowledge or commonplace design that had been asserted in the patent invalidation request review procedure;\n(2) Evidence proving the knowledge level and cognitive ability of a person skilled in the relevant technical field or an ordinary consumer;\n(3) Evidence proving the design space of the design patent product or the overall state of the prior designs;\n(4) Evidence reinforcing the probative force of evidence that has been admitted in the patent invalidation request review procedure;\n(5) Evidence rebutting evidence provided by other parties in the litigation."
+    },
+    {
+      "article_number": "第31条",
+      "content_en": "Article 31 The People's Court may require a party to provide the new evidence specified in Articles 29 and 30 of these Provisions.\nIf the evidence provided by a party to the People's Court is evidence that the party was required according to law to provide in the patent reexamination or invalidation request review procedure but failed to provide without justifiable reasons, the People's Court shall generally not admit such evidence."
+    },
+    {
+      "article_number": "第32条",
+      "content_en": "Article 32 These Provisions shall come into force as of September 12, 2020.\nAfter these Provisions come into force, cases of first instance and second instance that are being tried by the People's Court shall be governed by these Provisions; cases in which a legally effective judgment has already been rendered before these Provisions come into force shall not be governed by these Provisions in retrial."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "law_id": 3501170,
+  "title_en": "Several Provisions of the Supreme People's Court on the Trial of Civil Tort Compensation Cases involving Accounting Firms in Audit Activities",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Where an interested party files a civil tort compensation lawsuit with the People's Court on the ground that an accounting firm issued a false report in the audit business activities as specified in Article 14 of the Certified Public Accountants Law of the People's Republic of China and caused it to suffer losses, the People's Court shall accept the case according to law."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 A natural person, legal person or other organization that suffers losses due to reasonably relying on or using a false report issued by an accounting firm to conduct transactions with the audited entity or engage in trading activities related to stocks, bonds, etc. of the audited entity shall be deemed as an interested party as defined in the Certified Public Accountants Law.\nAn audit business report issued by an accounting firm that violates laws and regulations, the professional standards and rules formulated according to law by the Chinese Institute of Certified Public Accountants and approved by the finance department of the State Council for implementation, and the principles of good faith and fairness, and contains false records, misleading statements or material omissions shall be deemed as a false report."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 Where an interested party directly files a lawsuit against an accounting firm without filing a lawsuit against the audited entity, the People's Court shall inform it to file a lawsuit against both the accounting firm and the audited entity; if the interested party refuses to sue the audited entity, the People's Court shall notify the audited entity to participate in the proceedings as a co-defendant.\nWhere an interested party files a lawsuit against a branch of an accounting firm, the People's Court may list the accounting firm as a co-defendant to participate in the proceedings.\nWhere an interested party alleges that the capital contributor of the audited entity made false capital contributions, insufficient capital contributions, or withdrawal of capital contributions, and failed to make up for them afterwards, the People's Court may list the capital contributor as a third party to participate in the proceedings."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where an accounting firm causes losses to an interested party by issuing a false report in audit business activities, it shall bear tort liability for damages, unless it can prove that it is not at fault.\nWhen proving that it is not at fault, the accounting firm may submit to the People's Court the professional standards, rules, and audit working papers related to the case."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where a certified public accountant, in audit business activities, is under any of the following circumstances, issues a false report and causes losses to an interested party, it shall be determined that the accounting firm shall bear joint and several liability for damages with the audited entity:\n(1) Maliciously colluding with the audited entity;\n(2) Knowing that the audited entity's financial and accounting treatment of important matters conflicts with relevant state regulations, yet failing to point it out;\n(3) Knowing that the audited entity's financial and accounting treatment would directly harm the interests of the interested party, yet concealing it or making a false report;\n(4) Knowing that the audited entity's financial and accounting treatment would cause the interested party to have a major misunderstanding, yet failing to point it out;\n(5) Knowing that the important items in the audited entity's accounting statements contain false content, yet failing to point it out;\n(6) The audited entity hints at making a false report, yet failing to refuse.\nFor the acts listed in items (2) to (5) of the preceding paragraph committed by the audited entity, if the certified public accountant should have known them according to the professional standards and rules, the People's Court shall determine that it knew them."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 Where an accounting firm issues a false report due to negligence in audit business activities and causes losses to an interested party, the People's Court shall determine its liability for damages based on the degree of its negligence.\nIf a certified public accountant fails to maintain the necessary professional care during the audit process and is under any of the following circumstances, resulting in a false report, the People's Court shall determine that the accounting firm is negligent:\n(1) Violating the provisions of items (2) and (3) of Article 20 of the Certified Public Accountants Law;\n(2) The certified public accountant responsible for the audit practices at a professional level lower than that generally possessed by members of the industry;\n(3) The audit plan formulated contains obvious omissions;\n(4) Failing to perform necessary audit procedures in accordance with professional standards and rules;\n(5) Upon discovering signs of possible errors and fraud, failing to add necessary audit procedures to confirm or exclude them;\n(6) Failing to reasonably apply the materiality principle required by professional standards and rules;\n(7) Failing to adopt necessary investigation methods to obtain sufficient audit evidence as required by the audit;\n(8) Knowing that the specific audit object has a significant impact on the overall conclusion but lacking judgment ability, failing to seek expert opinions and directly forming audit conclusions;\n(9) Wrongly judging and evaluating audit evidence;\n(10) Other acts that violate the work procedures determined by professional standards and rules."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 If an accounting firm can prove the existence of any of the following circumstances, it shall not bear civil liability for damages:\n(1) Having complied with the work procedures determined by professional standards and rules and maintained the necessary professional care, but still failing to discover errors in the audited accounting materials;\n(2) The financial institutions or other entities that the audit business must rely on provided false or untrue certification documents, and the accounting firm, while maintaining the necessary professional care, still failed to discover their falsity or untruth;\n(3) Having warned of signs of fraud by the audited entity and pointed it out in the audit business report;\n(4) Having reviewed and issued a report in accordance with the capital verification procedures, but the entity whose capital was verified withdrew funds after registration;\n(5) Having issued a false report for a capital contributor who did not make capital contributions or did not make full capital contributions at the time of registration, but the capital contributor made up the capital contributions after registration."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where an interested party knows that the report issued by an accounting firm is a false report but still uses it, the People's Court shall, as appropriate, reduce the liability for damages of the accounting firm."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 Where an accounting firm states in its report such content as \"this report is only for annual inspection use\" or \"this report is only for industrial and commercial registration use\" or similar expressions, such statements shall not be used as grounds for exemption from its liability."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 When the People's Court determines, pursuant to Article 6 of these Provisions, that an accounting firm shall bear liability for damages corresponding to its degree of negligence, it shall handle the matter according to the following circumstances:\n(1) The audited entity shall first compensate the losses of the interested party. If the capital contributor of the audited entity made false capital contributions, insufficient capital contributions, or withdrew capital contributions and failed to make up for them afterwards, and the losses are still not fully compensated after compulsory execution of the audited entity's property according to law, the capital contributor shall assume supplementary liability for damages to the interested party within the amount of the false capital contributions, insufficient capital contributions, or withdrawn capital contributions.\n(2) If the losses are still not fully compensated after compulsory execution of the property of the audited entity and the capital contributor according to law, the accounting firm shall assume corresponding liability for damages within the amount of the false audit.\n(3) The liability for damages borne by the accounting firm to one or more interested parties shall be limited to the amount of the false audit."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11 Where an accounting firm and its branch are co-defendants, the accounting firm shall bear joint and several liability for damages for the part of liability of its branch."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12 Where a dispute over tort damages involving an accounting firm as specified in these Provisions has not been adjudicated, the People's Court shall not add the accounting firm as a person subject to enforcement."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13 These Provisions shall come into force as of the date of promulgation. Any relevant provisions on the civil liability of accounting firms previously issued by this Court that conflict with these Provisions shall no longer be applicable.\nFor cases of civil tort damages involving accounting firms that have been finally adjudicated before the promulgation and implementation of these Provisions, where a party applies for retrial or a retrial is decided pursuant to the trial supervision procedure, these Provisions shall not apply.\nFor cases of civil tort damages involving accounting firms that are still at the stage of first instance or second instance after the promulgation and implementation of these Provisions, these Provisions shall apply."
+    }
+  ]
+}

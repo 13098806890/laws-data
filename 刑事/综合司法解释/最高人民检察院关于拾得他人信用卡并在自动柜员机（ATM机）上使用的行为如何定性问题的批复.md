@@ -25,3 +25,15 @@
 最高人民检察院  
 2008年4月18日
 
+**Article 1** Supreme People's Procuratorate  
+April 18, 2008  
+Supreme People's Procuratorate  
+Official Reply on the Determination of the Nature of Conduct Involving Picking Up Another Person's Credit Card and Using It on an Automatic Teller Machine (ATM)  
+(Adopted by the 92nd Meeting of the Tenth Procuratorial Committee of the Supreme People's Procuratorate on February 19, 2008)  
+Gaoguanfashizi [2008] No. 1  
+People's Procuratorate of Zhejiang Province:  
+Your Request for Instructions on How to Determine the Nature of Conduct Involving Picking Up Another Person's Credit Card and Using It on an ATM (Zhejiang Procuratorial Research [2007] No. 227) has been received. Upon review, the reply is as follows:  
+The conduct of picking up another person's credit card and using it on an automatic teller machine (ATM) falls under the circumstance of "using another person's credit card by impersonation" as provided in Article 196, paragraph 1, item (3) of the Criminal Law. If a crime is constituted, criminal liability shall be investigated for the crime of credit card fraud.  
+This reply is given.  
+Supreme People's Procuratorate  
+April 18, 2008

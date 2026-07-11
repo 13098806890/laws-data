@@ -1,0 +1,19 @@
+{
+  "law_id": 3501467,
+  "title_en": "Reply of the Supreme People's Court on the Standard for Calculating Interest on Overdue Payment in Foreign Currency and Currencies of Hong Kong, Macao and Taiwan",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "1. In the case of overdue payment in a foreign currency, where a party claims interest losses for overdue payment, if there is an agreement on the interest rate calculation standard, the matter shall be handled in accordance with the parties' agreement. However, if the agreed interest rate calculation standard exceeds the upper limit prescribed by the applicable governing law of the dispute in question, the exceeding portion shall not be upheld."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "2. Where the parties have no agreement on the interest rate calculation standard or the agreement is unclear, the calculation standard for overdue payment interest shall be determined in accordance with the following methods:\n(1) For the calculation standard of overdue payment interest in US dollars, the People's Court may determine it based on the average interest rates for US dollar loans with maturities of less than 3 months, 3 (inclusive) to 6 months, 6 (inclusive) to 12 months, 1 year, and more than 1 year, as published in the appendix of the \"China Monetary Policy Report\" regularly issued on the official website of the People's Bank of China, taking into account the specific circumstances of the case.\n(2) For the calculation standard of overdue payment interest in euros, British pounds, Japanese yen, Australian dollars, Swiss francs, Canadian dollars, New Zealand dollars, and Singapore dollars, the standard may be determined by reference to the Euro Interbank Offered Rate (EURIBOR), the Sterling Overnight Index Average (SONIA), the Tokyo Overnight Average Rate (TONA), the Australian Bank Bill Swap Rate (BBSW), the Swiss Average Rate Overnight (SARON), the Canadian Overnight Repo Rate Average (CORRA), the New Zealand Bank Bill Rate (BKBM), and the Singapore Overnight Rate Average (SORA), respectively.\n(3) For the calculation standard of overdue payment interest in other foreign currencies, the standard may be determined by reference to the benchmark interest rate for that currency published on the official website of the relevant country's central bank."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "3. For the calculation standard of overdue payment interest in Hong Kong dollars, Macau patacas, and New Taiwan dollars, if the parties have an agreement, it shall be handled by reference to the provisions of Article 1 of this Reply. If the parties have no agreement or the agreement is unclear, the standard may be determined by reference to the Hong Kong Interbank Offered Rate, the Macau Pataca Aggregated Rate, and the Taiwan Basic Lending Rate, respectively."
+    }
+  ]
+}

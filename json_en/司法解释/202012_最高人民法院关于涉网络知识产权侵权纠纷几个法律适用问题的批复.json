@@ -1,0 +1,31 @@
+{
+  "law_id": 3501387,
+  "title_en": "Reply of the Supreme People's Court on Several Issues Concerning the Application of Law in Online Intellectual Property Infringement Disputes",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "1. Where an intellectual property right holder claims that its rights have been infringed and applies for preservation, requesting that internet service providers and e-commerce platform operators promptly take down measures such as deletion, blocking, or disconnection of links, the People's Court shall examine the matter according to law and issue a ruling."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "2. After receiving a notice issued by an intellectual property right holder according to law, internet service providers and e-commerce platform operators shall promptly forward the right holder's notice to the relevant network users and platform-based operators, and take necessary measures based on the preliminary evidence of infringement and the type of service; if they fail to take necessary measures according to law, and the right holder claims that the internet service provider and e-commerce platform operator shall bear joint and several liability with the network user and platform-based operator for the expanded part of the damage, the People's Court may support such claim according to law."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "3. Within a reasonable period after the declaration of no infringement forwarded according to law reaches the intellectual property right holder, if the internet service provider or e-commerce platform operator has not received a notice from the right holder that the right holder has filed a complaint or initiated litigation, it shall promptly terminate the take-down measures such as deletion, blocking, or disconnection of links that have been taken. Delays caused by special circumstances beyond the right holder's control, such as handling notarization or certification procedures, shall not be counted in the above period, but such period shall not exceed 20 working days at most."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "4. Where a party submits a declaration in bad faith, causing the e-commerce platform operator to terminate necessary measures and resulting in damage to the intellectual property right holder, and the right holder requests corresponding punitive damages in accordance with relevant legal provisions, the People's Court may support such request according to law."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "5. Where the content of a notice issued by an intellectual property right holder does not conform to objective facts, but the right holder claims in litigation that the notice was submitted in good faith and requests exemption from liability, and is able to provide evidence to prove it, the People's Court shall, upon verification according to law, support such claim."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "6. This Reply shall apply to cases that have not yet reached a final judgment at the time of its issuance; this Reply shall not apply to cases that have already reached a final judgment at the time of its issuance, where a party applies for a retrial or a retrial is decided under the adjudication supervision procedure."
+    }
+  ]
+}

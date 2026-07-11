@@ -1,0 +1,399 @@
+{
+  "law_id": 3501114,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Special Maritime Procedure Law of the People's Republic of China",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Cases of maritime tort disputes, maritime commercial contract disputes, and other maritime dispute cases as provided by law or relevant judicial interpretations, which occur on the sea or navigable waters and are related to ships or transportation, production, or operations, shall be under the special jurisdiction of the maritime court and its superior people's court."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 The jurisdiction over cases of foreign-related maritime tort disputes and disputes over maritime transportation contracts shall be governed by the provisions of Chapter 25 of the Civil Procedure Law of the People's Republic of China; if Chapter 25 of the Civil Procedure Law of the People's Republic of China has no provisions, the provisions of Article 6, Paragraph 2, Items (1) and (2) of the Special Maritime Procedure Law of the People's Republic of China and other relevant provisions of the Civil Procedure Law of the People's Republic of China shall apply."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 The \"seagoing vessel\" as referred to in Article 6 of the Special Maritime Procedure Law of the People's Republic of China means a vessel suitable for navigation on the sea or navigable waters."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 The \"port of registry\" as referred to in Article 6, Paragraph 2, Item (1) of the Special Maritime Procedure Law of the People's Republic of China means the port of registry of the defendant's vessel. If the port of registry of the defendant's vessel is not within the territory of the People's Republic of China and the port of registry of the plaintiff's vessel is within the territory of the People's Republic of China, the maritime court of the place where the port of registry of the plaintiff's vessel is located shall have jurisdiction."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 The port of departure, port of transshipment, and port of destination as referred to in Article 6, Paragraph 2, Item (2) of the Special Maritime Procedure Law of the People's Republic of China mean the port of departure, port of transshipment, and port of destination as agreed in the contract or as actually performed. If the port of departure, port of transshipment, and port of destination as agreed in the contract are inconsistent with those actually performed, the jurisdiction over the case shall be determined on the basis of the place of actual performance."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 The location of the subject matter of protection and indemnity as referred to in Article 6, Paragraph 2, Item (4) of the Special Maritime Procedure Law of the People's Republic of China means the location of the vessel under protection and indemnity."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 The location of the vessel as referred to in Article 6, Paragraph 2, Item (7) of the Special Maritime Procedure Law of the People's Republic of China means the place where the vessel is moored at the time of prosecution or the place where the vessel is arrested."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where an action is directly brought to a maritime court due to a dispute over a crew labor service contract, the maritime court shall accept the case."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 In addition to determining jurisdiction in accordance with Article 32 of the Civil Procedure Law of the People's Republic of China, an action brought for salvage remuneration may also be under the jurisdiction of the maritime court of the place where the salved property other than the salved vessel is located."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 A dispute over a loan contract relating to a ship mortgage or maritime lien shall be under the jurisdiction of the maritime court of the place of domicile of the defendant, the place of performance of the contract, the port of registry of the vessel, or the location of the vessel."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11 The sea areas under jurisdiction as referred to in Article 7, Item (3) of the Special Maritime Procedure Law of the People's Republic of China mean the contiguous zone, the exclusive economic zone, the continental shelf, and other sea areas under the jurisdiction of the People's Republic of China."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12 The place of performance of the contract as referred to in Article 7, Item (3) of the Special Maritime Procedure Law of the People's Republic of China means the place of actual performance of the contract; if the contract is not actually performed, it means the place of performance as agreed in the contract."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13 Where a party applies for enforcement of a maritime arbitral award or for recognition and enforcement of a foreign maritime arbitral award in accordance with Article 11 of the Special Maritime Procedure Law of the People's Republic of China, the maritime court of the place where the property to be enforced is located or the place of domicile of the person against whom enforcement is sought shall have jurisdiction; if the property to be enforced is a vessel, the maritime court shall have jurisdiction regardless of whether the vessel is within the jurisdictional area of a maritime court. If there is no maritime court at the place where the vessel is located, the nearest maritime court shall have jurisdiction.\nThe \"place where the property is located\" and the \"place of domicile of the person against whom enforcement is sought\" as mentioned in the preceding paragraph refer to the area in which the maritime court exercises jurisdiction."
+    },
+    {
+      "article_number": "第14条",
+      "content_en": "Article 14 A case concerning the determination of the validity of a maritime arbitration agreement shall be under the jurisdiction of the maritime court of the place of domicile of the respondent, the place of performance of the contract, or the place where the agreed arbitration institution is located."
+    },
+    {
+      "article_number": "第15条",
+      "content_en": "Article 15 Except for maritime courts and their superior people's courts, a local people's court shall not accept an application for preservation of a vessel filed by a party; if a local people's court needs to arrest and auction a vessel for the purpose of enforcing a legally effective legal instrument, it shall entrust the maritime court of the place of the port of registry or the place where the vessel is located with the enforcement."
+    },
+    {
+      "article_number": "第16条",
+      "content_en": "Article 16 Where two or more maritime courts have jurisdiction over an action, the plaintiff may bring the action in any one of those maritime courts; if the plaintiff brings the action in two or more maritime courts having jurisdiction, the maritime court that first dockets the case shall have jurisdiction."
+    },
+    {
+      "article_number": "第17条",
+      "content_en": "Article 17 Where a dispute over jurisdiction arises between maritime courts, it shall be resolved through consultation between the disputing parties; if consultation fails, the matter shall be reported to the Supreme People's Court for designation of jurisdiction.\nII. Preservation of Maritime Claims"
+    },
+    {
+      "article_number": "第18条",
+      "content_en": "Article 18 The property of the respondent as referred to in Article 12 of the Special Maritime Procedure Law of the People's Republic of China includes vessels, cargo aboard vessels, ship fuel, and ship stores. For the preservation of maritime claims in respect of other property, the provisions of the Civil Procedure Law of the People's Republic of China on property preservation shall apply."
+    },
+    {
+      "article_number": "第19条",
+      "content_en": "Article 19 The \"cargo aboard a vessel\" as provided in the Special Maritime Procedure Law of the People's Republic of China means cargo that is under the control of the carrier, whether not yet loaded on board, already loaded on board, or already discharged."
+    },
+    {
+      "article_number": "第20条",
+      "content_en": "Article 20 The place where the preserved property is located as referred to in Article 13 of the Special Maritime Procedure Law of the People's Republic of China means the location of the vessel or the location of the cargo. If a party applies for preservation of a maritime claim before action in respect of cargo that has been discharged but is still under the control of the carrier, and the place where the cargo is located is not within the jurisdictional area of a maritime court, the application may be filed with the maritime court of the place of the port of discharge or with the local people's court of the place where the cargo is located."
+    },
+    {
+      "article_number": "第21条",
+      "content_en": "Article 21 An application for preservation of a maritime claim before action or arbitration shall be governed by Article 14 of the Special Maritime Procedure Law of the People's Republic of China. Where a relevant maritime case has already been accepted by a foreign court or a relevant dispute has been submitted for arbitration, but the property involved is within the territory of the People's Republic of China, and a party files an application for preservation of a maritime claim with the maritime court of the place where the property is located, the maritime court shall accept the application."
+    },
+    {
+      "article_number": "第22条",
+      "content_en": "Article 22 Where an interested person raises an objection to a ruling on preservation of a maritime claim made by a maritime court, and upon examination, the maritime court finds the grounds to be untenable, it shall notify the interested person in writing."
+    },
+    {
+      "article_number": "第23条",
+      "content_en": "Article 23 Where the respondent or an interested person claims compensation for losses from the claimant of the maritime claim in accordance with Article 20 of the Special Maritime Procedure Law of the People's Republic of China and brings an action in the maritime court that adopted the preservation measure, the maritime court shall accept the case."
+    },
+    {
+      "article_number": "第24条",
+      "content_en": "Article 24 Losses caused by wrongful application for arrest of a vessel include: various maintenance costs and expenses incurred during the period when the vessel is under arrest, losses of voyage time caused by the arrest, and expenses incurred by the respondent in providing security for the release of the vessel."
+    },
+    {
+      "article_number": "第25条",
+      "content_en": "Article 25 If the arrest of a vessel for preservation of a maritime claim exceeds thirty days, or the arrest of cargo or other property exceeds fifteen days, and the claimant of the maritime claim has not brought an action or applied for arbitration in accordance with the arbitration agreement, the maritime court shall promptly release the preservation or return the security.\nIf the claimant of the maritime claim has not brought an action or applied for arbitration within the time limit, but the claimant and the respondent have agreed to settle the dispute through negotiation or have agreed upon a period for the security, the maritime court may, upon the application of the claimant, render a ruling approving the agreement."
+    },
+    {
+      "article_number": "第26条",
+      "content_en": "Article 26 If an applicant provides a limited amount of security for the application to arrest a vessel, and upon expiration of the period of arrest, fails to provide additional security as notified by the maritime court, the maritime court may release the arrest."
+    },
+    {
+      "article_number": "第27条",
+      "content_en": "Article 27 The security provided to the claimant of a maritime claim as referred to in Article 18, Paragraph 2 and Article 74 of the Special Maritime Procedure Law of the People's Republic of China shall be returned by the claimant unless otherwise agreed between the respondent and the claimant; if the claimant fails to return the security, the security shall cease to be effective on the day following the expiration of the period of preservation of the maritime claim."
+    },
+    {
+      "article_number": "第28条",
+      "content_en": "Article 28 All maintenance costs and expenses incurred during the period of arrest of a vessel shall be treated as expenses disbursed for the common benefit of creditors and shall be preferentially paid from the proceeds of the auction of the vessel."
+    },
+    {
+      "article_number": "第29条",
+      "content_en": "Article 29 Where a maritime court permits a vessel that has been subjected to preservation to continue operation in accordance with Article 27 of the Special Maritime Procedure Law of the People's Republic of China, such permission shall generally be limited to allowing a vessel operating on domestic routes to complete its current voyage."
+    },
+    {
+      "article_number": "第30条",
+      "content_en": "Article 30 If the claimant of a maritime claim who has applied for arrest of a vessel, after bringing an action or applying for arbitration, does not apply for auction of the arrested vessel, the maritime court may, upon the application of the respondent, auction the vessel. The proceeds from the auction shall be deposited with the maritime court."
+    },
+    {
+      "article_number": "第31条",
+      "content_en": "Article 31 Where a maritime court decides by ruling to auction a vessel, it shall make a public announcement through newspapers or other news media for three consecutive days."
+    },
+    {
+      "article_number": "第32条",
+      "content_en": "Article 32 Where an interested person requests termination of an auction of an arrested vessel, the maritime court shall render a ruling on whether to grant the request; if the maritime court rules to terminate the auction, the costs incurred in preparing for the auction shall be borne by the interested person."
+    },
+    {
+      "article_number": "第33条",
+      "content_en": "Article 33 An applicant for the auction of a vessel or an interested person who applies for termination of the auction shall file the application at least seven days before the date of the auction as determined in the public announcement."
+    },
+    {
+      "article_number": "第34条",
+      "content_en": "Article 34 The claimant of a maritime claim and the respondent shall, as required by the maritime court, provide accurate information concerning the known maritime lien holders, mortgagees, and shipowners as referred to in Article 33 of the Special Maritime Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第35条",
+      "content_en": "Article 35 The current condition of the vessel as referred to in Article 38 of the Special Maritime Procedure Law of the People's Republic of China means the condition of the vessel at the time of display. If, after appraisal, there is a significant difference between the condition of the vessel at the time of delivery and the condition at the time of display, the vessel price shall be appropriately reduced, except for normal wear and tear or fuel consumed."
+    },
+    {
+      "article_number": "第36条",
+      "content_en": "Article 36 The value of cargo aboard a vessel for which the claimant of a maritime claim applies for arrest shall be commensurate with the amount of the claim, except where the cargo aboard the vessel is indivisible property."
+    },
+    {
+      "article_number": "第37条",
+      "content_en": "Article 37 After the auctioned vessel is delivered, the maritime court shall promptly notify the relevant vessel registration authority."
+    },
+    {
+      "article_number": "第38条",
+      "content_en": "Article 38 Where a claimant of a maritime claim applies for arrest of ship fuel or stores, in addition to the application of Article 50 of the Special Maritime Procedure Law of the People's Republic of China, the provisions of Section 1 of Chapter 3 of the Special Maritime Procedure Law of the People's Republic of China may also apply."
+    },
+    {
+      "article_number": "第39条",
+      "content_en": "Article 39 The arrest and auction of small vessels under 20 gross tons may be carried out in accordance with the arrest and auction procedures provided by the Civil Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第40条",
+      "content_en": "Article 40 Where an applicant applies for auction of cargo subject to a lien in accordance with Article 88 of the Maritime Law of the People's Republic of China, the provisions of the Special Maritime Procedure Law of the People's Republic of China on auction of cargo aboard a vessel shall be applied mutatis mutandis.\nIII. Maritime Injunction"
+    },
+    {
+      "article_number": "第41条",
+      "content_en": "Article 41 An application for a maritime injunction before litigation or arbitration shall be governed by Article 53 of the Special Maritime Procedure Law of the People's Republic of China.\nWhere a relevant maritime case has already been accepted by a foreign court or a relevant dispute has been submitted for arbitration, and a party files an application for a maritime injunction with a maritime court of the People's Republic of China and provides the court with relevant evidence that the maritime injunction can be enforced, the maritime court shall accept the application."
+    },
+    {
+      "article_number": "第42条",
+      "content_en": "Article 42 Where a maritime court grants an applicant's application for a maritime injunction in accordance with Article 57 of the Special Maritime Procedure Law of the People's Republic of China, it shall prepare a civil ruling and issue a maritime injunction."
+    },
+    {
+      "article_number": "第43条",
+      "content_en": "Article 43 A maritime injunction shall be enforced by the maritime court. If the respondent, other relevant entities, or individuals fail to comply with the maritime injunction, the maritime court shall enforce it compulsorily in accordance with the relevant provisions of the Civil Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第44条",
+      "content_en": "Article 44 Where an interested person raises an objection to the civil ruling of the maritime court on a maritime injunction, and upon examination, the maritime court finds the grounds to be untenable, it shall notify the interested person in writing."
+    },
+    {
+      "article_number": "第45条",
+      "content_en": "Article 45 If, within fifteen days after the issuance of a maritime injunction, the respondent does not raise an objection and does not bring an action or apply for arbitration in relation to the relevant maritime dispute, the maritime court may, upon the request of the applicant, return the security provided by the applicant."
+    },
+    {
+      "article_number": "第46条",
+      "content_en": "Article 46 Where the respondent claims compensation for losses from the claimant of the maritime claim in accordance with Article 60 of the Special Maritime Procedure Law of the People's Republic of China, the maritime court that issued the maritime injunction shall have jurisdiction over the case.\nIV. Preservation of Maritime Evidence"
+    },
+    {
+      "article_number": "第47条",
+      "content_en": "Article 47 An application for preservation of maritime evidence before action shall be governed by Article 64 of the Special Maritime Procedure Law of the People's Republic of China.\nWhere a relevant maritime case has already been accepted by a foreign court or a relevant dispute has been submitted for arbitration, and a party files an application for preservation of maritime evidence with a maritime court of the People's Republic of China and provides relevant evidence that the evidence to be preserved is within the territory of the People's Republic of China, the maritime court shall accept the application."
+    },
+    {
+      "article_number": "第48条",
+      "content_en": "Article 48 When a claimant of a maritime claim applies for preservation of maritime evidence, the application shall, in addition to stating the corresponding contents in accordance with Article 65 of the Special Maritime Procedure Law of the People's Republic of China, also state the relevant clues for the collection and retrieval of evidence."
+    },
+    {
+      "article_number": "第49条",
+      "content_en": "Article 49 After the claimant of a maritime claim brings an action in the maritime court that carried out the preservation of maritime evidence, the claimant may apply for copies of the preserved evidence materials; if the relevant maritime dispute is accepted by another maritime court or arbitration institution within the territory of the People's Republic of China, the court accepting the case or the arbitration institution may, upon the application of the claimant of the maritime claim, apply for copies of the preserved evidence materials."
+    },
+    {
+      "article_number": "第50条",
+      "content_en": "Article 50 Where an interested person raises an objection to a ruling on preservation of maritime evidence made by a maritime court, and upon examination, the maritime court finds the grounds to be untenable, it shall notify the interested person in writing."
+    },
+    {
+      "article_number": "第51条",
+      "content_en": "Article 51 Where the respondent claims compensation for losses from the claimant of the maritime claim in accordance with Article 71 of the Special Maritime Procedure Law of the People's Republic of China, the maritime court that carried out the preservation of maritime evidence shall have jurisdiction over the case.\nV. Maritime Security"
+    },
+    {
+      "article_number": "第52条",
+      "content_en": "Article 52 The \"legitimate reasons\" as referred to in Article 77 of the Special Maritime Procedure Law of the People's Republic of China mean:\n(1) The amount of security requested by the claimant of the maritime claim is excessively high;\n(2) The respondent has already adopted other effective forms of security;\n(3) The right of claim of the claimant of the maritime claim has been extinguished.\nVI. Service"
+    },
+    {
+      "article_number": "第53条",
+      "content_en": "Article 53 Legal documents concerning maritime injunctions and preservation of maritime evidence may be served on the master of the vessel involved."
+    },
+    {
+      "article_number": "第54条",
+      "content_en": "Article 54 Legal documents, such as summons for trial, that shall be served on the defendant may be served on the master of the defendant's arrested vessel, except where the master is the plaintiff."
+    },
+    {
+      "article_number": "第55条",
+      "content_en": "Article 55 The \"other appropriate means\" as referred to in Article 80, Paragraph 1, Item (3) of the Special Maritime Procedure Law of the People's Republic of China include service by facsimile, email (including the special website of the person to be served), and other means.\nWhere service is effected by the above means, it shall be confirmed that the person to be served has actually received the documents.\nVII. Adjudication Procedure"
+    },
+    {
+      "article_number": "第56条",
+      "content_en": "Article 56 The content of the parties' obligation to complete the presentation of evidence before trial as provided in Article 84 of the Special Maritime Procedure Law of the People's Republic of China includes the parties' filling of the \"Maritime Accident Investigation Form\" and submission of factual evidence materials concerning the vessel collision in accordance with Article 82 of the Special Maritime Procedure Law of the People's Republic of China.\nThe evidence materials as referred to in the preceding paragraph shall be provided by the parties to the maritime court before the first-instance trial."
+    },
+    {
+      "article_number": "第57条",
+      "content_en": "Article 57 The \"Maritime Accident Investigation Form\" constitutes a statement by a party of the basic facts of a vessel collision. It may serve as a basis for determining the facts if it is admitted by the opposing party or verified as true by the court."
+    },
+    {
+      "article_number": "第58条",
+      "content_en": "Article 58 The factual evidence materials concerning a vessel collision refer to evidence materials involving the course of the collision, the cause of the collision, and other aspects.\nFactual evidence materials concerning a vessel collision shall be exchanged after all parties have completed the presentation of evidence. If a party applies to the court for inspection of factual evidence materials concerning a vessel collision before completing the presentation of evidence, the maritime court shall reject the application."
+    },
+    {
+      "article_number": "第59条",
+      "content_en": "Article 59 The \"new evidence\" as referred to in Article 85 of the Special Maritime Procedure Law of the People's Republic of China means evidence that is not in the possession of the party, and which was not available or accessible before the trial, and therefore could not be produced before the trial."
+    },
+    {
+      "article_number": "第60条",
+      "content_en": "Article 60 Where a vessel survey or appraisal is required in a maritime case other than a vessel collision case, the provisions of Article 86 of the Special Maritime Procedure Law of the People's Republic of China shall apply."
+    },
+    {
+      "article_number": "第61条",
+      "content_en": "Article 61 Actions brought in accordance with Article 170 of the Maritime Law of the People's Republic of China and actions brought for damages caused by vessel contact shall be tried with reference to the relevant provisions of the Special Maritime Procedure Law of the People's Republic of China on the trial of vessel collision cases."
+    },
+    {
+      "article_number": "第62条",
+      "content_en": "Article 62 Where a dispute over general average not yet adjusted is brought before a maritime court, the maritime court shall order the parties to entrust a general average adjustment on their own. If it is truly necessary for the maritime court to entrust the adjustment, the parties shall file an application, and the costs of the entrusted adjustment shall be advanced by the party claiming general average."
+    },
+    {
+      "article_number": "第63条",
+      "content_en": "Article 63 Where a party raises an objection to a general average adjustment report, and upon examination by the maritime court, the objection is found to be justified, and a supplementary adjustment or a new adjustment is necessary, the original principal shall notify the adjuster to carry out the adjustment. If the original principal fails to notify the adjuster, the maritime court may notify the adjuster to carry out a new adjustment, and the relevant costs shall be advanced by the objecting party; if the objecting party refuses to advance the costs, the objection shall be deemed withdrawn."
+    },
+    {
+      "article_number": "第64条",
+      "content_en": "Article 64 An action brought against the person liable for non-general average losses related to a general average dispute shall be subject to the time limit for trial as provided in Article 92 of the Special Maritime Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第65条",
+      "content_en": "Article 65 Where an insurer exercises the right of subrogation for compensation in accordance with Article 95 of the Special Maritime Procedure Law of the People's Republic of China, it shall do so in its own name; if it brings an action in the name of another person, the maritime court shall not accept the case or shall dismiss the action."
+    },
+    {
+      "article_number": "第66条",
+      "content_en": "Article 66 Where an insurer requests a change of party or requests to participate in the proceedings as a co-plaintiff in accordance with Article 95 of the Special Maritime Procedure Law of the People's Republic of China, the maritime court shall examine the request and render a ruling on whether to grant it. If a party is dissatisfied with the ruling, it may appeal."
+    },
+    {
+      "article_number": "第67条",
+      "content_en": "Article 67 Where an insurer participates in the proceedings in accordance with Article 95 of the Special Maritime Procedure Law of the People's Republic of China, the property preservation or security interests obtained by the insured through prior litigation acts or through arrest, etc., shall be valid in favor of the insurer within the scope of the insurer's right of subrogation for compensation. The insurer shall not assume any liability arising from the negligence of the insured."
+    },
+    {
+      "article_number": "第68条",
+      "content_en": "Article 68 The certificate of payment of insurance compensation as referred to in Article 96 of the Special Maritime Procedure Law of the People's Republic of China means the receipt for compensation, bank payment document, or other payment instrument. If the insured only issues a subrogation receipt but cannot produce actual payment evidence, it shall not serve as factual basis for the insurer to acquire the right of subrogation for compensation."
+    },
+    {
+      "article_number": "第69条",
+      "content_en": "Article 69 A maritime court may, upon the request of the insurer for oil pollution damage or another person providing financial security, notify the shipowner to participate in the proceedings as a third party with no independent claim."
+    },
+    {
+      "article_number": "第70条",
+      "content_en": "Article 70 The term \"lost control\" as referred to in Article 100 of the Special Maritime Procedure Law of the People's Republic of China means that the bill of lading or other document of title to the goods is stolen or lost."
+    },
+    {
+      "article_number": "第71条",
+      "content_en": "Article 71 Where an applicant applies to a maritime court for a public summons for exhortation in accordance with Article 100 of the Special Maritime Procedure Law of the People's Republic of China, the applicant shall submit a written application. The application shall state: the type and number of the bill of lading or other document of title to the goods, the name and quantity of the goods, the carrier, the shipper, the consignee, the name and voyage number of the carrying vessel, the endorsement status, and the reasons and facts for the application, etc. If there is a duplicate, a copy of the document shall be attached."
+    },
+    {
+      "article_number": "第72条",
+      "content_en": "Article 72 Where a maritime court decides to accept an application for a public summons for exhortation, it shall simultaneously notify the carrier, the carrier's agent, or the custodian of the goods to stop delivery of the goods, and shall issue a public announcement within three days, urging interested persons to claim their rights. The period of the public summons for exhortation shall be determined by the maritime court based on the circumstances, but shall not be less than thirty days."
+    },
+    {
+      "article_number": "第73条",
+      "content_en": "Article 73 Upon receipt of the notice from the maritime court to stop delivery of the goods, the carrier, the carrier's agent, or the custodian of the goods shall stop delivery until the conclusion of the public summons for exhortation procedure."
+    },
+    {
+      "article_number": "第74条",
+      "content_en": "Article 74 During the period of the public summons for exhortation, any transfer of the bill of lading shall be invalid; the costs of storage and custody of the relevant goods and the risks thereof shall be borne by the applicant."
+    },
+    {
+      "article_number": "第75条",
+      "content_en": "Article 75 During the period of the public summons for exhortation, for goods to be installed, constructed, or produced for key national construction projects, disaster relief materials, or goods whose nature makes them unsuitable for long-term storage, or seasonal goods, the maritime court may, upon the applicant's application and provided that the applicant provides sufficient and reliable security, render a ruling allowing the applicant to take delivery of the goods.\nAfter receiving the ruling of the maritime court granting permission to take delivery of the goods, the carrier, the carrier's agent, or the custodian of the goods shall deliver the goods to the designated person in accordance with the instructions in the ruling."
+    },
+    {
+      "article_number": "第76条",
+      "content_en": "Article 76 During the period of public notice for assertion of claims, an interested party may claim its rights with the maritime court. After receiving the claim from the interested party, the maritime court shall render an order to terminate the public notice procedure for assertion of claims, and shall notify the applicant, the carrier, the carrier's agent or the cargo custodian.\nThe applicant or the claimant may institute an action with the maritime court in respect of the relevant disputes."
+    },
+    {
+      "article_number": "第77条",
+      "content_en": "Article 77 If no claim is made during the period of public notice for assertion of claims, the maritime court shall, upon the application of the applicant, render a judgment declaring the bill of lading or relevant document for taking delivery of the goods null and void. The content of the judgment shall be announced, and shall be notified to the carrier, the carrier's agent or the cargo custodian. From the date of announcement of the judgment, the applicant shall have the right to demand the carrier, the carrier's agent or the cargo custodian to deliver the goods."
+    },
+    {
+      "article_number": "第78条",
+      "content_en": "Article 78 If an interested party, for justifiable reasons, is unable to make a claim with the maritime court during the period of public notice for assertion of claims, it may, within one year from the date when it knows or should have known the announcement of the judgment, institute an action with the maritime court that rendered the judgment.\nVIII. Procedures for Constitution of Limitation Fund for Maritime Claims"
+    },
+    {
+      "article_number": "第79条",
+      "content_en": "Article 79 The shipowner as referred to in Article 101 of the Special Maritime Procedure Law of the People's Republic of China means the shipowner registered on the relevant ship certificate."
+    },
+    {
+      "article_number": "第80条",
+      "content_en": "Article 80 Where a maritime accident occurs outside the territory of the People's Republic of China, the first port of arrival within the territory of the People's Republic of China after the accident shall be deemed the place where the accident occurred as prescribed in Article 102 of the Special Maritime Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第81条",
+      "content_en": "Article 81 Where a party applies for constitution of a limitation fund for maritime claims in the course of litigation, the application shall be filed with the maritime court that accepts the relevant maritime dispute case, unless the parties have concluded a valid litigation jurisdiction agreement or arbitration agreement."
+    },
+    {
+      "article_number": "第82条",
+      "content_en": "Article 82 The constitution of a limitation fund for maritime claims shall be announced through newspapers or other news media for three consecutive days. If the vessel involved is capable of navigating on international routes, the announcement shall be published through newspapers or other news media distributed overseas."
+    },
+    {
+      "article_number": "第83条",
+      "content_en": "Article 83 Where an interested party raises an objection to the applicant's constitution of a limitation fund for maritime claims in accordance with Article 106 of the Special Maritime Procedure Law of the People's Republic of China, the maritime court shall examine the applicant's legal personality for constituting the fund, the nature of the claims involved in the accident, and the amount of the fund applied for."
+    },
+    {
+      "article_number": "第84条",
+      "content_en": "Article 84 After the order approving the applicant's constitution of a limitation fund for maritime claims takes effect, the applicant shall constitute the limitation fund for maritime claims with the maritime court within three days. If the applicant fails to constitute the fund within the time limit, the application shall be deemed to have been withdrawn automatically."
+    },
+    {
+      "article_number": "第85条",
+      "content_en": "Article 85 The security as referred to in Article 108 of the Special Maritime Procedure Law of the People's Republic of China means the security issued by a bank or other financial institution within the territory of the People's Republic of China."
+    },
+    {
+      "article_number": "第86条",
+      "content_en": "Article 86 After the constitution of a limitation fund for maritime claims, no person who makes a claim against the fund may exercise any right against any other property of the person constituting the fund or on whose behalf the fund is constituted in respect of such claim.\nIX. Procedures for Registration and Satisfaction of Claims"
+    },
+    {
+      "article_number": "第87条",
+      "content_en": "Article 87 The claims relating to the ship to be auctioned as referred to in Article 111 of the Special Maritime Procedure Law of the People's Republic of China mean the maritime claims relating to the ship to be auctioned."
+    },
+    {
+      "article_number": "第88条",
+      "content_en": "Article 88 The judgments, orders, mediation statements and arbitration awards as referred to in Article 115 of the Special Maritime Procedure Law of the People's Republic of China mean the domestic judgments, orders, mediation statements and arbitration awards of China. For foreign judgments, orders, mediation statements and arbitration awards provided by a creditor, the procedures for examination as prescribed in Articles 268 and 269 of the Civil Procedure Law of the People's Republic of China shall apply."
+    },
+    {
+      "article_number": "第89条",
+      "content_en": "Article 89 Where, before the registration of claims, a creditor has instituted an action with a maritime court other than the one accepting the registration of claims, the maritime court accepting the case shall transfer the case to the maritime court where the claims are registered for consolidated trial, unless the case has already entered the second instance."
+    },
+    {
+      "article_number": "第90条",
+      "content_en": "Article 90 Where a creditor institutes an action for confirmation of rights with the maritime court accepting the registration of claims in accordance with Article 116 of the Special Maritime Procedure Law of the People's Republic of China, such action shall be instituted within seven days after the registration of the claim."
+    },
+    {
+      "article_number": "第91条",
+      "content_en": "Article 91 The three types of expenses as prescribed in the second paragraph of Article 119 of the Special Maritime Procedure Law of the People's Republic of China shall be paid in order.\nX. Procedures for Public Notice Calling for Maritime Liens"
+    },
+    {
+      "article_number": "第92条",
+      "content_en": "Article 92 After the conclusion of a ship transfer contract but before the actual delivery of the ship, the transferee may apply for a public notice calling for maritime liens.\nThe fact that the transferee cannot provide the original ship certificate shall not affect the filing of an application for a public notice calling for maritime liens."
+    },
+    {
+      "article_number": "第93条",
+      "content_en": "Article 93 The transferee as referred to in Article 120 of the Special Maritime Procedure Law of the People's Republic of China means the buyer in a ship transfer and a person intending to purchase a ship; provided that when the transferee applies to the maritime court for a judgment discharging rights, it must submit evidence that it has actually taken over the ship."
+    },
+    {
+      "article_number": "第94条",
+      "content_en": "Article 94 Where a ship transferee applies for reconsideration of an order disallowing the application for a public notice calling for maritime liens, the maritime court shall make a reconsideration decision within seven days."
+    },
+    {
+      "article_number": "第95条",
+      "content_en": "Article 95 After the order of the maritime court approving the application for a public notice calling for maritime liens takes effect, it shall be announced through newspapers or other news media for three consecutive days. If the ship subject to the public notice calling for maritime liens is capable of navigating on international routes, the announcement shall be published through newspapers or other news media distributed overseas."
+    },
+    {
+      "article_number": "第96条",
+      "content_en": "Article 96 If an interested party asserts a maritime lien during the period of the public notice calling for maritime liens, the maritime court shall order the termination of the public notice calling for maritime liens.\nXI. Miscellaneous"
+    },
+    {
+      "article_number": "第97条",
+      "content_en": "Article 97 Maritime litigation conducted within the territory of the People's Republic of China shall be governed by the provisions of the Special Maritime Procedure Law of the People's Republic of China. Matters not provided for in the Special Maritime Procedure Law of the People's Republic of China shall be governed by the relevant provisions of the Civil Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第98条",
+      "content_en": "Article 98 These Provisions shall take effect as of February 1, 2003.\nJanuary 6, 2003"
+    }
+  ]
+}

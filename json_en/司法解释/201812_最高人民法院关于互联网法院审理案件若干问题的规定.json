@@ -1,0 +1,99 @@
+{
+  "law_id": 3501355,
+  "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Cases by Internet Courts",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1. Internet courts shall adjudicate cases online, and litigation steps such as case acceptance, service, mediation, exchange of evidence, pre-trial preparation, court hearing, and pronouncement of judgment shall generally be completed online.\nUpon a party's application or as required for case adjudication, an internet court may decide to complete some litigation steps offline."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2. The Internet Courts of Beijing, Guangzhou, and Hangzhou shall have centralized jurisdiction over the following first-instance cases within their respective city's jurisdiction that shall be accepted by a Primary People's Court:\n(1) disputes arising from the conclusion or performance of online shopping contracts through an e-commerce platform;\n(2) disputes over network service contracts where both conclusion and performance are completed on the internet;\n(3) disputes over financial loan contracts or small-sum loan contracts where both conclusion and performance are completed on the internet;\n(4) copyright or neighboring rights ownership disputes over works first published on the internet;\n(5) disputes arising from infringement of copyright or neighboring rights of works published or disseminated online on the internet;\n(6) disputes over internet domain name ownership, infringement, and contracts;\n(7) disputes arising from infringement of personal rights, property rights, or other civil rights and interests of others on the internet;\n(8) product liability disputes arising from injury to others' personal or property rights and interests due to product defects in products purchased through an e-commerce platform;\n(9) internet public interest litigation cases initiated by a procuratorial authority;\n(10) administrative disputes arising from administrative acts of administrative organs concerning internet information service management, internet commodity trading, and related service management;\n(11) other internet civil or administrative cases designated by a superior People's Court to be under its jurisdiction."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3. A party may, within the scope of contract and other property rights and interests disputes specified in Article 2 of these Provisions, agree according to law to submit to the jurisdiction of the internet court of the place having actual connection with the dispute.\nWhere an e-commerce operator, network service provider, or the like concludes a jurisdiction agreement with a user in the form of standard terms, such terms shall comply with the provisions of laws and judicial interpretations on standard terms."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4. Cases where a party appeals against a judgment or ruling made by the Beijing Internet Court shall be adjudicated by the Beijing No. 4 Intermediate People’s Court; however, appeals concerning internet copyright ownership disputes and infringement disputes, and internet domain name disputes shall be adjudicated by the Beijing Intellectual Property Court.\nCases where a party appeals against a judgment or ruling made by the Guangzhou Internet Court shall be adjudicated by the Guangzhou Intermediate People’s Court; however, appeals concerning internet copyright ownership disputes and infringement disputes, and internet domain name disputes shall be adjudicated by the Guangzhou Intellectual Property Court.\nCases where a party appeals against a judgment or ruling made by the Hangzhou Internet Court shall be adjudicated by the Hangzhou Intermediate People’s Court."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5. Internet courts shall establish an internet litigation platform (hereinafter referred to as the \"litigation platform\") as a dedicated platform for courts to handle cases and for parties and other litigation participants to perform litigation acts. Litigation acts performed through the litigation platform shall have legal effect.\nThe data involved in cases being adjudicated by internet courts shall be provided by e-commerce platform operators, network service providers, and relevant state organs, and shall be orderly connected to the litigation platform for online verification, real-time preservation, and security management by the internet court. The storage and use of case-related data by the litigation platform shall comply with the provisions of the Cybersecurity Law of the People's Republic of China and other laws and regulations."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6. Where a party or other litigation participant uses the litigation platform to perform litigation acts, they shall complete identity authentication via online methods such as comparison of identification documents, biometric recognition, or authentication through the national unified identity authentication platform, and obtain a dedicated account for logging in to the litigation platform.\nAn act performed by logging into the litigation platform using a dedicated account shall be deemed an act of the authenticated person, unless the system error is caused by technical reasons of the litigation platform, or the authenticated person can prove that the litigation platform account has been misappropriated."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7. An internet court shall receive the prosecution materials submitted by the plaintiff online and shall make the following processing online within seven days after receiving the materials:\n(1) If the conditions for prosecution are met, register the case and serve litigation documents such as the case acceptance notice, notice of payment of litigation fees, and notice of evidence submission.\n(2) If the submitted materials do not meet the requirements, promptly issue a notice of correction, and recalculate the acceptance period from the day after receiving the corrected materials; if the plaintiff fails to make corrections as required within the specified period, the prosecution materials shall be returned.\n(3) If the conditions for prosecution are not met, after explanation, if the plaintiff has no objection, the prosecution materials shall be returned; if the plaintiff insists on continuing the prosecution, a ruling of non-acceptance shall be made according to law."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8. After accepting a case, an internet court may notify the defendant and the third party to associate with the case and verify their identity through the litigation platform via the mobile phone number, fax, email, instant messaging account, etc., provided by the plaintiff.\nThe defendant and third party shall understand the case information, receive and submit litigation materials, and perform litigation acts through the litigation platform."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9. Where an internet court organizes online evidence exchange, the parties shall upload or import online electronic data into the litigation platform, or electronically process offline evidence by means of scanning, photographing, transcription, etc., and upload it to the litigation platform for evidence production, and may also use electronic data already imported into the litigation platform to prove their claims."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10. Where a party or other litigation participant electronically processes litigation materials such as identity documents, copies of business licenses, powers of attorney, and legal representative identity certificates, as well as evidence materials such as documentary evidence, expert opinions, and inspection records, and submits them through technical means, they shall be deemed to meet the requirements of original form after review and approval by the internet court. If the opposing party raises an objection to the authenticity of the above materials with reasonable grounds, the internet court shall require the party to provide the originals."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11. Where a party raises an objection to the authenticity of electronic data, the internet court shall, in light of the cross-examination, examine and determine the authenticity of the process of generating, collecting, storing, and transmitting the electronic data, and shall focus on examining the following:\n(1) Whether the hardware and software environment, such as the computer system relied upon for generating, collecting, storing, and transmitting the electronic data, is secure and reliable;\n(2) Whether the subject that generated the electronic data and the time of generation are clear, and whether the content is clear, objective, and accurate;\n(3) Whether the storage medium for the electronic data is clear, and whether the storage method and means are appropriate;\n(4) Whether the subject, tools, and methods used to extract and fix the electronic data are reliable, and whether the extraction process can be reproduced;\n(5) Whether the content of the electronic data has been added to, deleted, modified, or is incomplete;\n(6) Whether the electronic data can be verified through a specific form.\n\nElectronic data submitted by a party that can prove its authenticity through technical means for collection, fixation, and anti-tampering such as electronic signatures, trusted timestamps, hash value verification, and blockchain, or through certification by an electronic evidence collection and preservation platform, shall be confirmed by the internet court.\n\nA party may apply for a person with specialized knowledge to provide opinions on electronic data technical issues. The internet court may, upon a party's application or ex officio, commission an expert evaluation of the authenticity of the electronic data or retrieve other relevant evidence for verification."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12. Internet courts shall hold court sessions by online video. Where there are special circumstances that require on-site identification, verification of original documents, inspection of physical evidence, or the like, the internet court may decide to hold the court session offline; however, other litigation steps shall still be completed online."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13. An internet court may decide to simplify the court hearing procedure in the following ways as circumstances warrant:\n(1) Where identity verification, notification of rights and obligations, and declaration of court discipline have been completed online before the hearing, they shall not be repeated at the hearing;\n(2) Where the parties have already completed evidence exchange online, for undisputed evidence, after the judge explains it during the hearing, the parties may no longer produce or cross-examine it;\n(3) After obtaining the consent of the parties, the court may combine the hearing steps such as party statements, court investigation, and court debate. For simple civil cases, the hearing may directly focus on the claims or the elements of the case."
+    },
+    {
+      "article_number": "第14条",
+      "content_en": "Article 14. Internet courts shall apply the relevant provisions of the Rules of the People's Courts of the People's Republic of China on Courtroom Conduct according to the characteristics of online court hearings. Unless it is verified that the failure to attend online court sessions on time is due to network failure, equipment damage, power outage, or force majeure, a party shall be deemed to have \"refused to appear in court\", and if a party withdraws without authorization during the hearing, it shall be deemed to have \"withdrawn during the hearing\", and shall be handled respectively in accordance with the Civil Procedure Law of the People's Republic of China, the Administrative Procedure Law of the People's Republic of China, and relevant judicial interpretations."
+    },
+    {
+      "article_number": "第15条",
+      "content_en": "Article 15. With the consent of the party, the internet court shall serve litigation documents and evidence materials submitted by the parties by electronic means such as the China Trial Procedure Information Disclosure Network, the litigation platform, mobile phone text messages, fax, email, and instant messaging accounts.\nWhere a party has not expressly consented, but has agreed to apply electronic service in litigation in the event of a dispute, or has accepted the completed electronic service by replying to confirm receipt or by performing corresponding litigation acts, and has not expressly objected to electronic service, electronic service may be deemed to be consented to.\nAfter informing the party of their rights and obligations and obtaining their consent, the internet court may serve the judgment or ruling documents electronically. If a party requests paper copies of the judgment or ruling documents, the internet court shall provide them."
+    },
+    {
+      "article_number": "第16条",
+      "content_en": "Article 16. When conducting electronic service, the internet court shall confirm with the party the specific method and address for electronic service, and inform the party of the scope of application, effect, method of changing the service address, and other service matters that need to be informed.\nIf the person to be served fails to provide a valid electronic service address, the internet court may use commonly used electronic addresses that can be confirmed as belonging to the person to be served, such as mobile phone numbers, email addresses, or instant messaging accounts that have been in daily active use within the last three months, as the priority service addresses."
+    },
+    {
+      "article_number": "第17条",
+      "content_en": "Article 17. Where the internet court serves at an electronic address actively provided or confirmed by the person to be served, the service shall be considered effected when the service information reaches the specific system of the person to be served.\nWhere the internet court serves at a commonly used electronic address of the person to be served or other electronic address that can be obtained, whether service has been completed shall be determined according to the following circumstances:\n(1) If the person to be served replies that they have received the served materials, or performs corresponding litigation acts in accordance with the content of the service, it shall be deemed that effective service has been completed.\n(2) If the person to be served's media system indicates that the person has read the service, or there is other evidence proving that the person has received the service, it shall be presumed that effective service has been completed, unless the person to be served can prove that there was a media system error, the service address did not belong to or was not used by the person, or the person did not read the service, or other circumstances where the content was not received.\nAfter effective service is completed, the internet court shall produce an electronic service certificate. The electronic service certificate shall have the effect of a service acknowledgment."
+    },
+    {
+      "article_number": "第18条",
+      "content_en": "Article 18. For simple civil cases with clear facts and clear rights and obligations that require service by publication, the internet court may apply the summary procedure for adjudication."
+    },
+    {
+      "article_number": "第19条",
+      "content_en": "Article 19. In cases adjudicated online by internet courts, where adjudicators, judge assistants, court clerks, parties, and other litigation participants confirm mediation agreements, records, electronic service certificates, and other litigation materials through online methods such as online confirmation and electronic signatures, such confirmation shall be deemed to meet the requirements for \"signature\" under the Civil Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第20条",
+      "content_en": "Article 20. In cases adjudicated online by internet courts, voice recognition technology may be used to simultaneously generate electronic records during litigation steps such as mediation, evidence exchange, court hearings, and deliberations. Electronic records, after being verified and confirmed online, shall have the same legal effect as written records."
+    },
+    {
+      "article_number": "第21条",
+      "content_en": "Article 21. Internet courts shall use the litigation platform to simultaneously generate electronic case files along with the case to form electronic archives. If all paper archives of a case have been converted into electronic archives, the electronic archives may be used to replace paper archives for appeal transfer and case filing."
+    },
+    {
+      "article_number": "第22条",
+      "content_en": "Article 22. Where a party appeals against a case adjudicated by an internet court, the court of second instance shall in principle adjudicate the case online. The online adjudication rules of the court of second instance shall apply mutatis mutandis to these Provisions."
+    },
+    {
+      "article_number": "第23条",
+      "content_en": "Article 23. These Provisions shall come into force on September 7, 2018. Where judicial interpretations previously issued by the Supreme People's Court are inconsistent with these Provisions, these Provisions shall prevail."
+    }
+  ]
+}

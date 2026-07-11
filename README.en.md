@@ -13,14 +13,37 @@
 | Constitution (宪法) | 1 |
 | Laws (法律) | 310 |
 | Amendments (修正案) | 12 |
-| Decisions (决定) | 2 |
+| Decisions (有关法律问题和重大问题的决定) | 2 |
 | Legal Interpretations (法律解释) | 25 |
-| Judicial Interpretations (司法解释) | 566 |
+| Judicial Interpretations - FLK (司法解释主库) | 300 |
+| Judicial Interpretations - Gazette (司法解释公报补充) | 749 |
 | Administrative Regulations (行政法规) | 607 |
 | Supervisory Regulations (监察法规) | 2 |
-| **Total** | **1525** |
+| **Total** | **2,008** |
 
-**Display groups:** Constitutional & State Institutions · Civil & Commercial · Criminal · Administrative & Public Law · Economy, Tax & Finance · Labor & Social Security · Litigation & Judicial Procedure
+**80,162** article nodes, **7,656** cross references (4,569 cross-law + 3,087 self-ref).
+
+### 🌐 English Translation
+
+| Metric | Progress |
+|--------|---------:|
+| Articles with EN | **62,549/62,549 (100%)** |
+| Law titles with EN | 1,259/2,008 (62.7%) |
+| English FTS index | `nodes_fts_en` (trigram) |
+| Laws covered | 2,003 current laws |
+
+Translation uses a two-phase pipeline (`translate_to_en.py`): batch title translation first, then article-by-article translation with glossary and law name context injection. Terminology consistency is enforced via 39 expert `nameEn`, 6 group `nameEn`, and 101 `RequiredInfo.fieldEn`.
+
+### 📖 Supreme People's Court Gazette
+
+| Type | Count |
+|------|------:|
+| Guiding Cases (指导案例) | 986 |
+| Judicial Documents (司法文件) | 860 |
+| Selected Judgments (裁判文书) | 443 |
+| Gazette Judicial Interpretations | 749 (merged into `laws`/`nodes`) |
+
+All gazette documents linked to law articles (3,524 case-law links).
 
 ## 📦 Data Source
 

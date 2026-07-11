@@ -1,0 +1,39 @@
+{
+  "law_id": 3501197,
+  "title_en": "Provisions of the Supreme People's Court on Citation of Laws, Regulations and Other Normative Legal Documents in Adjudicatory Documents",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 The judgment documents of the People's Court shall, according to law, cite relevant laws, regulations and other normative legal documents as the basis for adjudication. When citing, the name and article number of the normative legal document shall be accurately and completely written down; where specific articles need to be cited, the entire article (paragraph, subparagraph) shall be cited."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Where multiple normative legal documents are cited in parallel, the order of citation shall be as follows: laws and legal interpretations, administrative regulations, local regulations, autonomous regulations or separate regulations, and judicial interpretations. Where two or more laws are cited simultaneously, basic laws shall be cited first, followed by other laws. Where both substantive law and procedural law are cited, the substantive law shall be cited first, followed by the procedural law."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 Criminal judgment documents shall cite laws, legal interpretations, or judicial interpretations. Where a criminal judgment document with a civil action attached cites normative legal documents, the provisions of Article 4 of these Provisions shall also apply."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Civil judgment documents shall cite laws, legal interpretations, or judicial interpretations. For administrative regulations, local regulations, or autonomous regulations and separate regulations that shall apply, they may be cited directly."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Administrative judgment documents shall cite laws, legal interpretations, administrative regulations, or judicial interpretations. For local regulations, autonomous regulations and separate regulations, interpretations of administrative regulations published by the State Council or departments authorized by the State Council, or administrative rules that shall apply, they may be cited directly."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 For normative documents other than those specified in Articles 3, 4, and 5 of these Provisions, where they are determined to be lawful and effective after examination according to the needs of trial of the case, they may serve as the basis for reasoning in the judgment."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 Where there is a conflict between normative legal documents that the People's Court must cite in making judgment documents, and it is impossible to choose which to apply according to the Legislation Law and other relevant legal provisions, the matter shall be submitted according to law to an organ with decision-making authority for a ruling, and the People's Court shall not on its own determine the validity of the relevant normative legal documents in the judgment documents."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where a judicial interpretation previously issued by this Court is inconsistent with these Provisions, these Provisions shall prevail."
+    }
+  ]
+}

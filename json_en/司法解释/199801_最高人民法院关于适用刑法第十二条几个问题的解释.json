@@ -1,0 +1,19 @@
+{
+  "law_id": 3500957,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Article 12 of the Criminal Law",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 The phrase \"the imposition of a lighter punishment\" as prescribed in Article 12 of the Criminal Law means that the punishment, i.e., the statutory sentence, prescribed by the Criminal Law for a certain crime is lighter than that under the Criminal Law before revision. The statutory sentence being lighter refers to the circumstance where the maximum statutory sentence is lighter; if the maximum statutory sentences are the same, it refers to the circumstance where the minimum statutory sentence is lighter."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 If a certain crime prescribed by the Criminal Law has only one statutory sentencing range, the maximum or minimum statutory sentence shall refer to the maximum or minimum sentence within that statutory sentencing range; if a certain crime prescribed by the Criminal Law has two or more statutory sentencing ranges, the maximum or minimum statutory sentence shall refer to the maximum or minimum sentence within the statutory sentencing range that shall apply to the specific criminal act."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 For criminal cases occurring before September 30, 1997 but tried after October 1, 1997, if the standards for conviction and punishment and the statutory sentence prescribed by the Criminal Law are the same as those under the Criminal Law before revision, the Criminal Law before revision shall apply."
+    }
+  ]
+}

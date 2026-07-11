@@ -344,6 +344,10 @@ def main():
         finally:
             _conn.close()
 
+        print("\n  运行 gongbao 完整性验证...")
+        from verify_gongbao_db import main as verify_gongbao
+        verify_gongbao()
+
     # ── 5. en_json → content_en ──
     if not args.skip_db and not args.skip_en:
         print("\n=== 阶段五：导入英文翻译 (en_json → content_en) ===")

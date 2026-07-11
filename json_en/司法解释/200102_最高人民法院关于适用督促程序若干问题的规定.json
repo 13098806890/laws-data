@@ -1,0 +1,55 @@
+{
+  "law_id": 3501055,
+  "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Procedure for Urgency",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 A Primary People's Court shall accept a case where a creditor applies for an order for payment according to law, and shall not be limited by the amount in dispute."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Where the domicile or habitual residence of joint debtors are not within the jurisdiction of the same Primary People's Court, and each relevant People's Court has jurisdiction, the creditor may apply for an order for payment to any one of the Primary People's Courts; if the creditor applies for an order for payment to two or more People's Courts having jurisdiction, the People's Court that first dockets the case shall have jurisdiction."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 After a People's Court receives a written application from a creditor, if it considers that the application does not meet the requirements, the People's Court may notify the creditor to make corrections within a specified time limit. The period for making corrections shall not be counted in the time limit prescribed in Article 190 of the Civil Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 An order for payment issued against the principal debtor in a debt case with security shall have no binding force on the surety. If the creditor separately initiates a lawsuit on the security relationship, the order for payment shall automatically cease to have effect."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 After a People's Court accepts an application for an order for payment from a creditor, upon trial, if any of the following circumstances exists, it shall rule to dismiss the application:\n(1) the parties are not qualified;\n(2) the supporting documents for the payment of money or negotiable instruments such as bills of exchange, promissory notes, checks, and stocks, bonds, treasury bonds, transferable certificates of deposit, etc., do not stipulate overdue interest or liquidated damages or compensation, and the creditor insists on payment of interest or liquidated damages or compensation;\n(3) the money or negotiable instruments such as bills of exchange, promissory notes, checks, and stocks, bonds, treasury bonds, transferable certificates of deposit, etc., that the creditor requests to be paid are illegal gains;\n(4) before applying for an order for payment, the creditor has already applied to the People's Court for pre-litigation preservation, or, at the same time as applying for an order for payment, also requests pre-litigation preservation."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 After a People's Court accepts an application for an order for payment, if the creditor initiates another lawsuit on the same creditor's right, or if the order for payment cannot be served on the debtor within thirty days from the date the People's Court issues the order for payment, it shall rule to terminate the supervision procedure."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 If the debtor has no objection to the creditor-debtor relationship but raises different opinions on the ability to repay, the term for repayment, the method of repayment, etc., this shall not affect the validity of the order for payment."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where a creditor, based on the same creditor-debtor relationship, makes multiple requests for payment to the debtor, and the debtor objects to only one or several of the requests, this shall not affect the validity of the other requests."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 Where a creditor, based on the same creditor-debtor relationship, makes a request for payment to multiple debtors on a divisible debt, and one or several of the multiple debtors object, this shall not affect the validity of the other requests."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 Before a People's Court makes a ruling to terminate the supervision procedure, if the debtor requests to withdraw the objection, the request shall be permitted."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11 If the president of a People's Court discovers that an order for payment that has already taken legal effect by the same court contains a definite error and considers it necessary to revoke it, the matter shall be submitted to the judicial committee for discussion and decision, after which the court shall rule to revoke the order for payment and dismiss the creditor's application."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12 If other judicial interpretations of the Supreme People's Court on the application of the supervision procedure are inconsistent with these Provisions, these Provisions shall prevail."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "law_id": 3501019,
+  "title_en": "Interpretation of the Supreme People's Court on the Effective Time of a Labor Dispute Arbitration Award after a People's Court Grants Withdrawal of the Lawsuit or Dismisses the Action in a Dispute That Has Been Arbitrated",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 If a party, after refusing to accept the labor dispute arbitration award and filing a prosecution with the People's Court, subsequently applies for withdrawal of the prosecution, and the People's Court, upon examination, permits the withdrawal, the original arbitration award shall become legally effective from the date the People's Court's ruling is served upon the party."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 If a party's prosecution is dismissed by the People's Court's ruling due to exceeding the time limit for prosecution, the original arbitration award shall restore legal effect from the day after the expiration of the time limit for prosecution."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 If the prosecution is dismissed by the People's Court due to an error in the subject qualification determined by the arbitration award or the matter of the arbitration award not being a labor dispute, the original arbitration award shall not have legal effect."
+    }
+  ]
+}

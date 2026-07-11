@@ -1,0 +1,23 @@
+{
+  "law_id": 3500981,
+  "title_en": "Reply of the Supreme People's Court on Several Issues concerning the Confirmation of the Validity of Arbitration Agreements",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "1. Before the arbitration institution is reestablished after the implementation of the Arbitration Law of the People's Republic of China, if the arbitration agreement reached by the parties only stipulates the place of arbitration but does not stipulate the arbitration institution, and the parties select in a supplementary agreement the arbitration institution lawfully reestablished at that place, the arbitration agreement shall be valid; if the parties fail to reach a supplementary agreement, the arbitration agreement shall be invalid."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "2. Before the arbitration institution is lawfully reestablished after the implementation of the Arbitration Law, if the parties have stipulated an arbitration institution in the arbitration agreement, and one party applies for arbitration while the other party institutes a prosecution in a People's Court, upon examination by the People's Court, if a new arbitration institution can be determined according to the relevant provisions, the arbitration agreement shall be valid. The People's Court shall not accept the prosecution of the party."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "3. If a party objects to the validity of an arbitration agreement, and one party applies to the arbitration institution to confirm the validity of the arbitration agreement while the other party requests the People's Court to confirm the invalidity of the arbitration agreement, if the arbitration institution accepts the application before the People's Court and has already made a decision, the People's Court shall not accept the case; if the arbitration institution has accepted the application but has not yet made a decision, the People's Court shall accept the case and shall simultaneously notify the arbitration institution to terminate the arbitration."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "4. If one party applies for arbitration regarding a contract dispute or other property rights dispute, and the other party objects to the validity of the arbitration agreement, requests the People's Court to confirm the invalidity of the arbitration agreement, and institutes a prosecution regarding the contract dispute or other property rights dispute, the People's Court, after accepting the case, shall notify the arbitration institution to suspend the arbitration. After the People's Court makes a ruling according to law that the arbitration agreement is valid or invalid, it shall serve a copy of the ruling on the arbitration institution, and the arbitration institution shall resume the arbitration or revoke the arbitration case based on the People's Court's ruling.\nAfter the People's Court makes a ruling according to law that the arbitration agreement is invalid, if the other party refuses to appear in court, the People's Court may make a default judgment; if the arbitration institution that originally accepted the arbitration application still does not revoke its arbitration case after the People's Court confirms the invalidity of the arbitration agreement, this shall not affect the People's Court's trial of the case.\nThis reply is hereby given."
+    }
+  ]
+}

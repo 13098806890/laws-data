@@ -1,0 +1,71 @@
+{
+  "law_id": 3501409,
+  "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Cases Related to the Use of Facial Recognition Technology to Process Personal Information",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 These Provisions shall apply to civil cases arising from an information processor's processing of facial information or processing of facial information generated based on facial recognition technology in violation of laws, administrative regulations, or the agreement of both parties.\nProcessing of facial information includes the collection, storage, use, processing, transmission, provision, disclosure, etc. of facial information.\nFacial information as used in these Provisions falls within the \"biometric information\" as defined in Article 1,034 of the Civil Code of the People's Republic of China."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Where an information processor processes facial information under any of the following circumstances, the People's Court shall find it to be an act infringing upon the personality rights of a natural person:\n(1) Using facial recognition technology for facial verification, identification, or analysis in business premises or public places such as hotels, shopping malls, banks, railway stations, airports, sports venues, entertainment venues, etc., in violation of laws or administrative regulations;\n(2) Failing to disclose the rules for processing facial information or failing to clearly state the purpose, method, and scope of processing;\n(3) When processing facial information based on individual consent, failing to obtain separate consent from the natural person or their guardian, or failing to obtain written consent from the natural person or their guardian in accordance with laws or administrative regulations;\n(4) Violating the purpose, method, scope, etc., of processing facial information as expressly stated by the information processor or agreed by both parties;\n(5) Failing to take appropriate technical measures or other necessary measures to ensure the security of the collected or stored facial information, resulting in the leakage, tampering, or loss of such information;\n(6) Providing facial information to others in violation of laws, administrative regulations, or the agreement of both parties;\n(7) Processing facial information in violation of public order and good customs;\n(8) Other circumstances of processing facial information in violation of the principles of legality, legitimacy, and necessity."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 When determining that an information processor shall bear civil liability for infringing upon the personality rights of a natural person, the People's Court shall apply the provisions of Article 998 of the Civil Code of the People's Republic of China and, in light of the specific circumstances of the case, comprehensively consider factors such as whether the victim is a minor, the status of notification and consent, and the necessity of the information processing."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Under any of the following circumstances, if an information processor defends on the ground that it has obtained the consent of the natural person or their guardian, the People's Court shall not support such defense:\n(1) The information processor requires the natural person to consent to the processing of their facial information before providing products or services, unless the processing of facial information is necessary for providing such products or services;\n(2) The information processor requires the natural person to consent to the processing of their facial information by bundling it with other authorizations, or by other means;\n(3) Other circumstances where the natural person is forced or constructively forced to consent to the processing of their facial information."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Under any of the following circumstances, if an information processor claims that it shall not bear civil liability, the People's Court shall support such claim according to law:\n(1) Processing of facial information is necessary for responding to a public health emergency, or for protecting the life, health, and property safety of a natural person in an emergency;\n(2) Use of facial recognition technology in public places is for maintaining public security in accordance with relevant national regulations;\n(3) Processing of facial information is within a reasonable scope for carrying out acts such as news reporting or public opinion supervision for the public interest;\n(4) Reasonable processing of facial information within the scope of consent given by the natural person or their guardian;\n(5) Other circumstances that comply with laws and administrative regulations."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 Where a party requests that an information processor bear civil liability, the People's Court shall determine the burden of adducing evidence for both parties in accordance with Article 64 of the Civil Procedure Law of the People's Republic of China, Articles 90 and 91 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China, and the relevant provisions of the Provisions of the Supreme People's Court on Evidence in Civil Proceedings.\nWhere an information processor claims that its conduct complies with the circumstances set forth in the first paragraph of Article 1,035 of the Civil Code of the People's Republic of China, it shall bear the burden of adducing evidence for the facts on which such claim is based.\nWhere an information processor claims that it shall not bear civil liability, it shall bear the burden of adducing evidence that its conduct falls within the circumstances provided in Article 5 of these Provisions."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 Where multiple information processors process facial information and infringe upon the personality rights of a natural person, if the natural person claims that the multiple information processors shall bear tort liability according to the degree of fault and the extent of damage caused, the People's Court shall support such claim according to law; if the circumstances are consistent with the provisions of Articles 1,168, the first paragraph of Article 1,169, Article 1,170, Article 1,171, etc. of the Civil Code of the People's Republic of China, and the natural person claims that the multiple information processors shall bear joint and several liability, the People's Court shall support such claim according to law.\nWhere an information processor uses network services to process facial information and infringes upon the personality rights of a natural person, the provisions of Articles 1,195, 1,196, 1,197, etc. of the Civil Code of the People's Republic of China shall apply."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where an information processor processes facial information and infringes upon the personality rights of a natural person, causing property damage, if the natural person claims compensation for property damage pursuant to Article 1,182 of the Civil Code of the People's Republic of China, the People's Court shall support such claim according to law.\nThe reasonable expenses paid by the natural person to stop the infringement may be determined as property damage under Article 1,182 of the Civil Code of the People's Republic of China. Reasonable expenses include the reasonable costs incurred by the natural person or their authorized agent in investigating and gathering evidence of the infringement. The People's Court may, based on the party's request and the specific circumstances of the case, include reasonable attorney's fees within the scope of compensation."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 Where a natural person has evidence that an information processor is using facial recognition technology to commit or is about to commit an act infringing upon the natural person's right to privacy or other personality rights, and failure to stop such act in a timely manner would cause irreparable damage to the natural person's lawful rights and interests, and the natural person applies to the People's Court for an order to stop the relevant act, the People's Court may, based on the specific circumstances of the case, issue an injunction against the infringement of personality rights according to law."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 Where a property service enterprise or other building manager uses facial recognition as the sole method of verification for owners or users of the property to enter and exit the property service area, if an owner or user who does not consent requests that another reasonable verification method be provided, the People's Court shall support such request according to law.\nWhere a property service enterprise or other building manager falls under the circumstances provided in Article 2 of these Provisions, and a party requests that the property service enterprise or other building manager bear tort liability, the People's Court shall support such request according to law."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11 Where an information processor enters into a contract with a natural person using standard terms and requires the natural person to grant rights to process facial information without time limit, irrevocably, or with unrestricted sub-licensing, if the natural person requests that the standard terms be confirmed as void under Article 497 of the Civil Code of the People's Republic of China, the People's Court shall support such request according to law."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12 Where an information processor processes a natural person's facial information in violation of the agreement, and the natural person requests that the information processor bear liability for breach of contract, the People's Court shall support such request according to law. Where the natural person requests the deletion of facial information when requesting the information processor to bear liability for breach of contract, the People's Court shall support such request according to law; if the information processor defends on the ground that the parties have not agreed on the deletion of facial information, the People's Court shall not support such defense."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13 Where disputes arise based on the same information processor's processing of facial information infringing upon the personality rights of natural persons, and multiple victims respectively file prosecutions with the same People's Court, with the consent of the parties, the People's Court may consolidate the trials."
+    },
+    {
+      "article_number": "第14条",
+      "content_en": "Article 14 Where an information processor's act of processing facial information meets the conditions set forth in Article 55 of the Civil Procedure Law of the People's Republic of China, Article 47 of the Law of the People's Republic of China on the Protection of Consumer Rights and Interests, or other relevant provisions of laws on civil public interest litigation, if an organ or relevant organization prescribed by law initiates a civil public interest action, the People's Court shall accept the case."
+    },
+    {
+      "article_number": "第15条",
+      "content_en": "Article 15 After the death of a natural person, if an information processor processes facial information in violation of laws, administrative regulations, or the agreement of both parties, and the close relatives of the deceased request the information processor to bear civil liability under Article 994 of the Civil Code of the People's Republic of China, these Provisions shall apply."
+    },
+    {
+      "article_number": "第16条",
+      "content_en": "Article 16 These Provisions shall come into force on August 1, 2021.\nWhere an information processor's act of using facial recognition technology to process facial information or processing facial information generated based on facial recognition technology occurred before the coming into force of these Provisions, these Provisions shall not apply."
+    }
+  ]
+}

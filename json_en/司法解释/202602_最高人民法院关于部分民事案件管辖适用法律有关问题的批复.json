@@ -1,0 +1,27 @@
+{
+  "law_id": 3501479,
+  "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Law to Jurisdiction over Certain Civil Cases",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "1. Where a party, by written agreement, chooses the People's Court of a place other than the defendant's domicile, the place of contract performance, the place of contract signing, the plaintiff's domicile, or the location of the subject matter to have jurisdiction, but fails to provide evidence proving that such place has actual connection with the dispute, the People's Court shall, according to law, determine that the jurisdiction agreement is invalid."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "2. Where a party, by written agreement, agrees that a case which may only be under the jurisdiction of a specialized People's Court as provided by laws and judicial interpretations shall be under the jurisdiction of another People's Court, the People's Court shall, according to law, determine that the jurisdiction agreement is invalid, and determine jurisdiction in accordance with the provisions of laws and judicial interpretations on the jurisdiction of specialized People's Courts."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "3. Where a jurisdiction agreement between the parties does not clearly stipulate a specific competent People's Court, but the competent People's Court can be determined according to law based on the territory agreed upon by the parties, combined with the nature of the case, the amount in dispute, etc., and one party merely asserts that the jurisdiction agreement is invalid on the ground that it does not clearly stipulate a specific competent People's Court, the People's Court shall not support such assertion."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "4. Where the parties agree that a dispute may be submitted either to an arbitration institution for arbitration or to the relevant People's Court for prosecution, the agreement on arbitration is invalid, but the validity of the agreement on litigation jurisdiction shall not be affected, and the People's Court may, according to law, determine jurisdiction in accordance with the relevant agreement."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "5. A prosecution arising from a dispute over a liability insurance contract may be under the jurisdiction of the People's Court of the domicile of the insured."
+    }
+  ]
+}

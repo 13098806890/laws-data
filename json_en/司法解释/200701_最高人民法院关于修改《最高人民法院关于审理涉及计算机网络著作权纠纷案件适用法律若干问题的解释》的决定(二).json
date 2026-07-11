@@ -1,0 +1,39 @@
+{
+  "law_id": 3501157,
+  "title_en": "Decision of the Supreme People's Court on Amending the Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in Hearing Cases Involving Copyright Disputes on Computer Networks (II)",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Cases concerning disputes over copyright infringement on the Internet shall be under the jurisdiction of the People's Court of the place where the infringing act is committed or where the defendant has its domicile. The place where the infringing act is committed includes the location of equipment such as the network server or computer terminal on which the alleged infringing act is carried out. Where it is difficult to determine the place where the infringing act is committed or the defendant's domicile, the location of the computer terminal or other equipment on which the plaintiff discovers the infringing content may be deemed the place where the infringing act is committed."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Works protected by the Copyright Law shall include the digital forms of all types of works as specified in Article 3 of the Copyright Law. Where other intellectual creations that cannot be classified under the categories of works listed in Article 3 of the Copyright Law in the Internet environment, but are original in the fields of literature, art, and science and can be reproduced in a tangible form, the People's Court shall protect them."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 Where an Internet service provider participates in another person's act of copyright infringement through the Internet, or instigates or assists another person in committing an act of copyright infringement through the Internet, the People's Court shall, in accordance with Article 130 of the General Principles of the Civil Law, hold it jointly and severally liable for infringement together with the other actor or the person directly committing the infringing act."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where an Internet service provider that provides content services, knowing that a network user is committing an act of copyright infringement through the Internet, or upon receiving a warning from the copyright owner with sufficient evidence, still fails to take measures such as removing the infringing content to eliminate the consequences of the infringement, the People's Court shall, in accordance with Article 130 of the General Principles of the Civil Law, hold it jointly and severally liable for infringement with the network user."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where an Internet service provider that provides content services, without justified reasons, refuses to provide the registration information of the infringer on its network as requested by the copyright owner for the purpose of holding the infringer liable, the People's Court shall, in accordance with Article 106 of the General Principles of the Civil Law, hold it liable for the corresponding infringement."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 Where an Internet service provider, knowing that a method, device, or material is specifically used for intentionally circumventing or destroying the technological protection measures of another person's copyright, uploads, disseminates, or provides it, the People's Court shall, based on the party's claims and the specific circumstances of the case, and in accordance with Article 47(6) of the Copyright Law, hold the Internet service provider civilly liable for infringement."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 Where a copyright owner, upon discovering infringing information, issues a warning to an Internet service provider or requests the registration information of the infringer on the network, but fails to present identification documents, proof of copyright ownership, and proof of the infringing circumstances, it shall be deemed that no warning was issued or no request was made.\nAfter the copyright owner presents the aforementioned proofs, if the Internet service provider still fails to take measures, the copyright owner may, in accordance with Articles 49 and 50 of the Copyright Law, apply to the People's Court before prosecution for a ruling to cease the relevant act and for property preservation and evidence preservation, or may, when filing the lawsuit, apply to the People's Court for an advance ruling to cease the infringement, remove the obstruction, and eliminate the effects, and the People's Court shall grant such application."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where an Internet service provider takes measures such as removing the allegedly infringing content after receiving a warning with sufficient evidence from the copyright owner, and the alleged infringer demands that the Internet service provider bear liability for breach of contract, the People's Court shall not support such demand.\nWhere the copyright owner's accusation of infringement is untrue, and the alleged infringer suffers losses due to the measures taken by the Internet service provider and seeks compensation, the People's Court shall order the person who issued the warning to bear compensation liability."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "law_id": 3501281,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of Law in Calculating Debt Interest During the Period of Delayed Performance in Enforcement Proceedings",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 The debt interest during the period of delayed performance after double calculation under Article 253 of the Civil Procedure Law of the People's Republic of China shall include the general debt interest and the double portion of debt interest during the period of delayed performance.\nThe general debt interest during the period of delayed performance shall be calculated according to the method determined by the effective legal document; if the effective legal document does not determine the payment of such interest, it shall not be calculated.\nThe calculation method for the double portion of debt interest is: double portion of debt interest = monetary debt other than the general debt interest determined by the effective legal document that the debtor has not yet satisfied × 0.000175 per day × period of delayed performance."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 The double portion of debt interest shall be calculated from the date on which the performance period determined by the effective legal document expires; if the effective legal document determines performance by installments, it shall be calculated from the date on which each performance period expires; if the effective legal document does not determine a performance period, it shall be calculated from the date on which the legal document takes effect."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 The double portion of debt interest shall be calculated until the date on which the person subject to enforcement fulfills the obligation; if the person subject to enforcement fulfills the obligation in installments, the double portion of debt interest for the corresponding part shall be calculated until the date on which each installment is fulfilled.\nWhere the People's Court transfers or withdraws the deposits, income, dividends, bonus shares and other property of the person subject to enforcement, the double portion of debt interest for the corresponding part shall be calculated until the date of such transfer or withdrawal; where the People's Court auctions, sells by public auction, or transfers property in satisfaction of a debt of the person subject to enforcement, it shall be calculated until the date on which the ruling of transaction or the ruling of debt settlement takes effect; where the People's Court realizes the property of the person subject to enforcement through other means, it shall be calculated until the date on which the property realization is completed.\nThe period during which the enforcement is suspended or stayed due to the review of an effective legal document not upon the application of the person subject to enforcement, and the period during which the enforcement is suspended due to a retrial, shall not be counted for the double portion of debt interest."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where the property of the person subject to enforcement is insufficient to satisfy all debts, the monetary debt determined by the effective legal document shall be satisfied first, and then the double portion of debt interest shall be satisfied, unless the parties have otherwise agreed on the order of satisfaction."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where the effective legal document determines the payment of foreign currency, the double portion of debt interest shall be calculated in such foreign currency at 0.000175 per day; provided that if the enforcing applicant claims calculation in RMB, the People's Court shall permit it.\nWhere the double portion of debt interest is calculated in RMB, the foreign currency determined by the effective legal document shall first be converted or cross-calculated into RMB before calculation.\nWhere the foreign currency is converted or cross-calculated into RMB, it shall be converted into RMB according to the central parity rate of RMB against such foreign currency published by the China Foreign Exchange Trade System or the institution authorized by the People's Bank of China on the date of the start of calculation of the double portion of debt interest; for foreign currencies for which the China Foreign Exchange Trade System or the institution authorized by the People's Bank of China has not published a central parity rate, it shall be converted into RMB according to the central parity rate of RMB against such foreign currency published by domestic banks on that date, or cross-calculated based on the exchange rate of such foreign currency against the US dollar in domestic banks or the international foreign exchange market and the central parity rate of RMB against the US dollar."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 In the process of execution reversal, if the original enforcing applicant delays performance of the monetary payment obligation, it shall bear the double portion of debt interest in accordance with the provisions of this Interpretation."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 For the part of monetary debt that has not been fully enforced at the time when this Interpretation comes into force, the debt interest during the period of delayed performance before this Interpretation comes into force shall be calculated in accordance with the previous provisions; the debt interest during the period of delayed performance after coming into force shall be calculated in accordance with this Interpretation.\nIf any judicial interpretation issued by this Court before the coming into force of this Interpretation is inconsistent with this Interpretation, this Interpretation shall prevail."
+    }
+  ]
+}

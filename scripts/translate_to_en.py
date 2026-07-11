@@ -19,6 +19,7 @@
 import argparse
 import json
 import os
+import sqlite3
 import sys
 import time
 import urllib.request
@@ -329,22 +330,31 @@ def save_en_file(path: Path, data: dict):
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
-def is_fully_translated(en_data: dict) -> bool:
+def is_fully_translated(en_data: dict, cn_articles: dict = None) -> bool:
     """所有 articles 的 content_en 都非空则视为已完整翻译。
-    无 articles 但有 full_text_en 的，或根本没有中文内容的，都算完成。"""
+    无 articles 但有 full_text_en 的视为完成。
+    只有 title_en 没有条文内容的视为未完成。"""
+    if not en_data:
+        return False
     articles = en_data.get('articles', [])
     if not articles:
-        # 用了 full_text_en 或根本没有内容的，视为完成
-        return bool(en_data.get('full_text_en', '').strip()) or True
+        if en_data.get('full_text_en', '').strip():
+            return True
+        # 只有标题没有条文 → 未完成（等着翻条文）
+        return False
     return all(a.get('content_en', '').strip() for a in articles)
 
 
 def pending_articles(en_data: dict, cn_articles: dict) -> list:
     """返回 content_en 为空且有中文原文的条文列表 [(article_number, 中文content), ...]。"""
+    if not en_data:
+        # 文件不存在（新法律），全部 cn_articles 都是待翻译
+        return list(cn_articles.items()) if cn_articles else []
+    
     result = []
     for a in en_data.get('articles', []):
         if a.get('content_en', '').strip():
-            continue  # 已翻译，跳过
+            continue
         art_num = a['article_number']
         cn_content = cn_articles.get(art_num, '').strip()
         if cn_content:
@@ -358,7 +368,6 @@ def get_laws(filter_kw: str = '') -> list:
     """从数据库读取 is_current=1 的法律列表，返回 [(law_id, filename, category, title), ...]。
     只翻译现行版本，旧版本跳过。
     """
-    import sqlite3
     conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)  # 只读模式
     rows = conn.execute(
         "SELECT id, filename, category, title FROM laws WHERE is_current=1"
@@ -369,9 +378,10 @@ def get_laws(filter_kw: str = '') -> list:
     return rows
 
 
-def load_cn_articles(filename: str, category: str) -> dict:
+def load_cn_articles(filename: str, category: str, law_id: int = None) -> dict:
     """从中文 json/ 文件中提取 article_number → 中文content 的映射。
-    自动处理重复标题（追加 _2, _3 后缀）。"""
+    自动处理重复标题（追加 _2, _3 后缀）。
+    如果 json 文件不存在，尝试从 DB nodes 表读取（用于 source='gongbao' 的法律）。"""
     cn_path = JSON_DIR / category / f'{filename}.json'
     if not cn_path.exists():
         # 有时 DB 的 category 与实际文件路径不一致，尝试递归搜索
@@ -379,6 +389,22 @@ def load_cn_articles(filename: str, category: str) -> dict:
         if matches:
             cn_path = matches[0]
         else:
+            # 从 DB nodes 表回退（gongbao 来源的法律没有 json 文件）
+            if law_id:
+                conn = sqlite3.connect(f'file:{DB_PATH}?mode=ro', uri=True)
+                rows = conn.execute(
+                    "SELECT content FROM nodes WHERE law_id=? AND type='article' ORDER BY global_order",
+                    (law_id,)
+                ).fetchall()
+                conn.close()
+                if rows:
+                    result = {}
+                    for i, (content,) in enumerate(rows):
+                        content = content.strip()
+                        if content:
+                            art_num = f'第{i+1}条'
+                            result[art_num] = content
+                    return result
             return {}
     cn_data = json.loads(cn_path.read_text(encoding='utf-8'))
 
@@ -492,7 +518,7 @@ def main():
         for law_id, filename, category, title in laws:
             en_path = JSON_EN_DIR / category / f'{filename}.json'
             en_data = load_en_file(en_path)
-            cn_articles = load_cn_articles(filename, category)
+            cn_articles = load_cn_articles(filename, category, law_id)
             if not en_data.get('title_en', '').strip():
                 need_title += 1
             if is_fully_translated(en_data):
@@ -561,7 +587,7 @@ def main():
     for idx, (law_id, filename, category, title) in enumerate(laws_with_pending, 1):
         en_path     = JSON_EN_DIR / category / f'{filename}.json'
         en_data     = load_en_file(en_path)
-        cn_articles = load_cn_articles(filename, category)
+        cn_articles = load_cn_articles(filename, category, law_id)
 
         # 如果 json_en 的 articles 为空，或存在重复编号需要修复，从 cn_articles 重建
         if cn_articles:

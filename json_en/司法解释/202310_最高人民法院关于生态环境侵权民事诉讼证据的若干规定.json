@@ -1,0 +1,143 @@
+{
+  "law_id": 3501444,
+  "title_en": "Several Provisions of the Supreme People's Court on Evidence in Civil Litigation for Ecological and Environmental Infringement",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 These Provisions shall apply to the People's Court when hearing disputes over liability for environmental pollution, disputes over liability for ecological damage, and civil public interest litigation for ecological and environmental protection.\nCivil public interest litigation for ecological and environmental protection includes civil public interest litigation for environmental pollution, civil public interest litigation for ecological damage, and litigation for compensation for ecological and environmental damage."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 The plaintiff in a dispute over liability for environmental pollution or a dispute over liability for ecological damage shall bear the burden of adducing evidence for the following facts:\n(1) the defendant has committed an act of polluting the environment or damaging the ecology;\n(2) the plaintiff's person or property has been harmed or is at risk of being harmed."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 The plaintiff in a civil public interest litigation case for ecological and environmental protection shall bear the burden of adducing evidence for the following facts:\n(1) the defendant has committed an act of polluting the environment or damaging the ecology, and such act violates national regulations;\n(2) the ecology and environment have been harmed or are at a significant risk of being harmed."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where the plaintiff requests the defendant to pay compensation for damage to person or property for the act of polluting the environment or damaging the ecology, or to pay the losses and expenses specified in Article 1235 of the Civil Code of the People's Republic of China, the plaintiff shall bear the burden of adducing evidence for the amount of the losses and expenses claimed."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where the plaintiff initiates a prosecution requesting the defendant to bear liability for environmental pollution or ecological damage, the plaintiff shall provide evidence that there is a correlation between the defendant's act and the damage.\nThe People's Court shall, based on the evidence submitted by the parties and taking into account factors such as the manner of the act of polluting the environment or damaging the ecology, the nature of the pollutants, the type of environmental media, the characteristics of ecological factors, the chronological order, and the spatial distance, comprehensively determine whether the correlation between the defendant's act and the damage is established."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 The defendant shall bear the burden of adducing evidence that there is no causal relationship between its act and the damage.\nWhere the defendant claims that it shall not bear liability or that its liability shall be mitigated, it shall bear the burden of adducing evidence for the circumstances of non-liability or mitigation of liability as provided by law."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 Where the defendant proves that the pollutants it discharged, the ecological factors it released, or the ecological impacts it generated did not reach the place where the damage occurred, or that its act was carried out only after the damage occurred and did not aggravate the consequences of the damage, or that there are other circumstances in which its act could not possibly have caused the damage, the People's Court shall find that there is no causal relationship between the defendant's act and the damage."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 For facts not found in a legally effective criminal judgment or administrative judgment because they did not meet the standard of proof, in a civil action for ecological and environmental tort filed for the same act of polluting the environment or damaging the ecology, if the People's Court is convinced, based on the relevant facts and evidence, that the existence of the facts to be proved has a high degree of probability, it shall find such facts to exist."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 For the basic facts confirmed in a legally effective judgment of the People's Court in a civil public interest litigation for ecological and environmental protection, the parties in a lawsuit for compensation for damage to person or property filed for the same act of polluting the environment or damaging the ecology need not adduce evidence to prove them, unless there is sufficient contrary evidence to overturn them."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 For facts that may harm national interests or social and public interests, where neither party has asserted them or there is no dispute between the parties, and the People's Court considers that they may affect the outcome of the judgment, it may order the parties to provide relevant evidence.\nFor the evidence specified in the preceding paragraph, if a party applies to the People's Court to investigate and collect it and the circumstances meet the provisions of Article 94 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China, the People's Court shall grant permission; if the People's Court considers it necessary, it may investigate and collect it ex officio."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11 A court that exercises centralized jurisdiction over environmental and resource cases may entrust the People's Court at the place where the tort was committed, the place where the consequences of the tort occurred, or the domicile of the defendant, among others, to investigate and collect evidence. The entrusted court shall complete the entrusted matters within thirty days from the day following the receipt of the letter of entrustment, and shall transfer the evidence investigated and collected and the relevant records to the entrusting court.\nIf the entrusted court fails to complete the entrusted matters, it shall inform the entrusting court in writing of the relevant circumstances and the reasons for the failure."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12 Where a party or an interested person applies for the preservation of evidence related to environmental pollution or ecological damage, the People's Court shall examine the following factors to determine whether to adopt preservation measures:\n(1) the possibility that the evidence may be lost or difficult to obtain in the future;\n(2) whether the evidence is necessary to prove the facts to be proved;\n(3) whether the applicant has difficulty in collecting the evidence by itself;\n(4) other factors justifying the adoption of evidence preservation measures."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13 Where the purpose of evidence preservation can be achieved, the People's Court shall choose preservation measures that have the least impact on the interests of the evidence holder, and shall minimize any damage to the value of the subject matter of preservation and any impact on the production and daily life of the evidence holder.\nIf it is truly necessary to adopt preservation measures that restrict the use of the subject matter of preservation, such as sealing up or distraining, the People's Court shall promptly organize the parties to conduct cross-examination of the preserved evidence."
+    },
+    {
+      "article_number": "第14条",
+      "content_en": "Article 14 When investigating, collecting, preserving, or inspecting evidence involving specialized issues of environmental pollution or ecological damage, the People's Court shall comply with relevant technical norms. Where necessary, it may notify an expert evaluator to be present, or invite the department responsible for supervision and administration of environmental and resource protection to send personnel to assist."
+    },
+    {
+      "article_number": "第15条",
+      "content_en": "Article 15 Where a party, after submitting evidence to the People's Court, applies to withdraw such evidence, or declares that it will not use such evidence to prove the facts of the case, this shall not affect the right of other parties to invoke such evidence to prove the facts of the case, nor shall it affect the People's Court's examination and determination of such evidence.\nIf a party abandons the use of evidence that the People's Court has investigated, collected, or preserved upon its application, the provisions of the preceding paragraph shall apply."
+    },
+    {
+      "article_number": "第16条",
+      "content_en": "Article 16 For specialized issues that are relevant to ascertaining the facts of a case concerning environmental pollution or ecological damage, if the People's Court, upon examination, considers it necessary, it shall, upon the application of a party or ex officio, entrust a qualified institution or person to provide an expert evaluation opinion."
+    },
+    {
+      "article_number": "第17条",
+      "content_en": "Article 17 For non-specialized issues such as the application of law and the apportionment of liability among parties, or for issues that, although specialized, can be ascertained through other means such as court investigation or inspection, the People's Court shall not entrust an expert evaluation."
+    },
+    {
+      "article_number": "第18条",
+      "content_en": "Article 18 Where an expert evaluator needs to invite another institution or person to complete part of the evaluation matters, it shall apply to the People's Court.\nIf the People's Court, upon examination, considers it truly necessary, after hearing the opinions of both parties, it may grant permission and shall inform the expert evaluator that it shall bear legal liability for the final evaluation opinion; if the main evaluation matters are to be carried out by another institution or person, the People's Court shall not grant permission."
+    },
+    {
+      "article_number": "第19条",
+      "content_en": "Article 19 Where an expert evaluator, without the permission of the People's Court, invites another institution or person to complete part of the evaluation matters, the evaluation opinion shall not be used as a basis for finding the facts of the case.\nIn the circumstance of the preceding paragraph, if a party applies for the refund of the evaluation fees, the People's Court shall, within three days, render a ruling ordering the expert evaluator to refund; if the expert evaluator refuses to refund, the People's Court shall enforce it according to law."
+    },
+    {
+      "article_number": "第20条",
+      "content_en": "Article 20 Where an expert evaluator provides a false evaluation opinion, such opinion shall not be used as a basis for finding the facts of the case. The People's Court may handle the matter in accordance with Article 114 of the Civil Procedure Law of the People's Republic of China.\nIf the evaluation matters are completed by another institution or person and such institution or person provides a false evaluation opinion, the provisions of the preceding paragraph shall apply."
+    },
+    {
+      "article_number": "第21条",
+      "content_en": "Article 21 Where an expert evaluation cannot be carried out because there is no evaluation standard, mature evaluation method, or qualified expert evaluator, or because the evaluation cycle is too long or the cost is too high, the People's Court may, by taking into account the relevant facts of the case, the opinions of the persons with specialized knowledge applied by the parties, and other evidence, make a determination on the facts involving specialized issues."
+    },
+    {
+      "article_number": "第22条",
+      "content_en": "Article 22 Where a party applies for a person with specialized knowledge to appear in court to provide opinions on the expert evaluation opinion or on professional issues such as the identification of pollutants, the result of damage, the causal relationship, the plan for ecological and environmental restoration, the cost of ecological and environmental restoration, the loss caused by the loss of service functions during the period from the occurrence of ecological and environmental damage to the completion of restoration, and the loss caused by permanent damage to ecological and environmental functions, the People's Court may grant permission.\nIf the opposing party raises an objection on the ground that the person with specialized knowledge does not have the corresponding qualifications, the People's Court shall not support such objection."
+    },
+    {
+      "article_number": "第23条",
+      "content_en": "Article 23 Where a party entrusts a relevant institution or person to provide an opinion on specialized issues concerning environmental pollution or ecological damage, the People's Court shall, in light of other evidence in the case, examine and determine whether such opinion may serve as a basis for finding the facts of the case.\nIf the opposing party has an objection to such opinion, the People's Court shall inform the party providing the opinion that it may apply for the institution or person that provided the opinion to appear in court to state the opinion; if such institution or person does not appear in court, the opinion shall not be used as a basis for finding the facts of the case."
+    },
+    {
+      "article_number": "第24条",
+      "content_en": "Article 24 Matters recorded in documents such as punishment decisions made by the department responsible for supervision and administration of environmental and resource protection within the scope of its functions and powers shall be presumed to be true, unless there is sufficient contrary evidence to overturn them.\nIf the People's Court considers it necessary, it may ex officio investigate and verify the authenticity of the aforementioned documents."
+    },
+    {
+      "article_number": "第25条",
+      "content_en": "Article 25 The monitoring data collected, the incident investigation reports, inspection and testing reports, assessment reports, and other materials formed during the administrative law enforcement process by the department responsible for supervision and administration of environmental and resource protection and its affiliated or entrusted monitoring institutions, as well as the data obtained by the public security organ alone or jointly with the department responsible for supervision and administration of environmental and resource protection by extracting samples for testing, may, after being cross-examined by the parties, serve as a basis for finding the facts of the case."
+    },
+    {
+      "article_number": "第26条",
+      "content_en": "Article 26 Where written documents, data information, or audio or video recordings and other evidence that are important for proving the facts of a case concerning environmental pollution or ecological damage are under the control of the opposing party, the party bearing the burden of adducing evidence may, in accordance with Article 112 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China, apply in writing to the People's Court to order the opposing party to submit them."
+    },
+    {
+      "article_number": "第27条",
+      "content_en": "Article 27 Where the party bearing the burden of adducing evidence applies to the People's Court to order the opposing party to submit evidence, it shall provide the name, main content, preparer, time of preparation, or other information that can make the relevant evidence specific. If the evidence cannot be made specific based on the information provided by the applicant, the People's Court shall not grant permission.\nThe People's Court shall, taking into account factors such as whether the applicant participated in the formation process of the evidence and whether it has had access to the evidence, comprehensively determine whether the information provided meets the requirement of specificity of the evidence."
+    },
+    {
+      "article_number": "第28条",
+      "content_en": "Article 28 Where the party bearing the burden of adducing evidence applies to the People's Court to order the opposing party to submit evidence, it shall provide the basis that such evidence is under the control of the opposing party. If the opposing party denies controlling the relevant evidence, the People's Court shall, in accordance with factors such as legal provisions, the agreement between the parties, and trade practices, and in light of the facts and evidence of the case, make a determination.\nIf the relevant evidence, although not directly held by the opposing party, is within its control and there is no objective obstacle to its acquisition, the People's Court shall find that the relevant evidence is under the control of the opposing party."
+    },
+    {
+      "article_number": "第29条",
+      "content_en": "Article 29 Environmental information that laws, regulations, and rules stipulate that a party shall disclose or possess, such as the names of the main pollutants it discharges, the discharge methods, the discharge concentration and total amount, the situation of excessive discharge, the construction and operation of pollution prevention facilities, the development and utilization of the ecology and environment, and information on violations of ecological and environmental laws, shall fall within the category of 'documentary evidence that the opposing party has the right to consult and obtain according to legal provisions' as specified in Article 47, paragraph 1, item (3) of the Several Provisions of the Supreme People's Court on Evidence in Civil Litigation."
+    },
+    {
+      "article_number": "第30条",
+      "content_en": "Article 30 In cases of disputes over liability for environmental pollution or disputes over liability for ecological damage, where the fact of damage is established but the amount of compensation for damage to person or property is difficult to determine, the People's Court may reasonably determine the amount by taking into account factors such as the degree of damage caused to the plaintiff by the tortious act, the benefits obtained by the defendant from the tortious act, and the degree of fault, and may also refer to the opinions of the department responsible for supervision and administration of environmental and resource protection, among others."
+    },
+    {
+      "article_number": "第31条",
+      "content_en": "Article 31 In cases of civil public interest litigation for ecological and environmental protection, where the fact of damage is established but the amounts such as the costs of ecological and environmental restoration, the losses caused by the loss of service functions during the period from the occurrence of ecological and environmental damage to the completion of restoration, and the losses caused by permanent damage to ecological and environmental functions are difficult to determine, the People's Court may reasonably determine the amounts based on the ascertained facts of the case, such as the scope and degree of the environmental pollution or ecological damage, and taking into account factors such as the scarcity of the ecology and environment and their elements, the difficulty of ecological and environmental restoration, the operating costs of pollution prevention equipment, the benefits obtained by the defendant from the tortious act, and the degree of fault, and may also refer to the opinions of the department responsible for supervision and administration of environmental and resource protection, among others."
+    },
+    {
+      "article_number": "第32条",
+      "content_en": "Article 32 Matters not provided for in these Provisions shall be governed by the Several Provisions of the Supreme People's Court on Evidence in Civil Litigation."
+    },
+    {
+      "article_number": "第33条",
+      "content_en": "Article 33 When the People's Court hears a civil public interest litigation case for environmental pollution or a civil public interest litigation case for ecological damage initiated by the People's Procuratorate, it shall apply these Provisions mutatis mutandis."
+    },
+    {
+      "article_number": "第34条",
+      "content_en": "Article 34 These Provisions shall come into force as of September 1, 2023.\nAfter these Provisions are promulgated and come into force, where judicial interpretations previously issued by the Supreme People's Court are inconsistent with these Provisions, they shall no longer apply."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "law_id": 3501040,
+  "title_en": "Provisions of the Supreme People's Court on the Scope of Civil Actions Collateral to Criminal Cases",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Where a person suffers material losses due to criminal infringement upon his personal rights or due to his property being destroyed by a criminal, he may file an incidental civil action.\nWhere a victim brings an incidental civil action on account of mental losses suffered as a result of a criminal act, the People's Court shall not accept the case."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Material losses suffered by a victim as a result of a criminal act refer to the actual losses already suffered by the victim and the inevitable losses to be suffered as a result of the criminal act."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 Where, after the People's Court adjudicates an incidental civil action case and renders a judgment according to law, it ascertains that the defendant truly has no property available for enforcement, it shall issue a ruling to suspend or terminate the enforcement."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where the defendant has already compensated the victim for material losses, the People's Court may take this into consideration as a circumstance for sentencing."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where a criminal illegally takes possession of or disposes of the victim's property, causing the victim to suffer material losses, the People's Court shall according to law order recovery or order restitution. The circumstances of recovery or restitution may be taken into consideration by the People's Court as a circumstance for sentencing.\nIf the losses cannot be made up after recovery or restitution, and the victim separately files a civil action with the civil adjudication tribunal of the People's Court, the People's Court may accept the case."
+    }
+  ]
+}

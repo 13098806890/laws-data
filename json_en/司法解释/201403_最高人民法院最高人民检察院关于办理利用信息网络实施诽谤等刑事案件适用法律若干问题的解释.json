@@ -1,0 +1,47 @@
+{
+  "law_id": 3501270,
+  "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Defamation and Other Criminal Cases Committed through Information Networks",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Any of the following circumstances shall be identified as \"fabricating facts to defame others\" as stipulated in Article 246(1) of the Criminal Law:\n(1) fabricating facts that damage the reputation of others and disseminating them on the information network, or organizing or instructing persons to disseminate them on the information network;\n(2) altering the original information content concerning others on the information network into facts that damage the reputation of others and disseminating them on the information network, or organizing or instructing persons to disseminate them on the information network.\nWhere a person, knowing that it is fabricated facts that damage the reputation of others, disseminates them on the information network, and the circumstances are egregious, the person shall be treated as \"fabricating facts to defame others\"."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Where a person defames others through the information network, any of the following circumstances shall be identified as \"serious circumstances\" as stipulated in Article 246(1) of the Criminal Law:\n(1) the same defamatory information is actually clicked on or viewed five thousand times or more, or is forwarded five hundred times or more;\n(2) causing serious consequences such as mental disorder, self-harm, or suicide of the victim or his close relatives;\n(3) having previously received an administrative penalty for defamation within two years and again defaming others;\n(4) other circumstances of a serious nature."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 Where a person defames others through the information network, any of the following circumstances shall be identified as \"seriously endangering social order and national interests\" as stipulated in Article 246(2) of the Criminal Law:\n(1) causing mass incidents;\n(2) causing public order chaos;\n(3) causing ethnic or religious conflicts;\n(4) defaming multiple persons, causing adverse social impact;\n(5) damaging the national image, seriously endangering national interests;\n(6) causing adverse international impact;\n(7) other circumstances that seriously endanger social order and national interests."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where a person commits multiple acts of defamation through the information network within one year that have not been dealt with, and the cumulative number of actual clicks, views, or forwards of the defamatory information constitutes a crime, the person shall be convicted and punished according to law."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where a person insults or intimidates others through the information network, with egregious circumstances, disrupting social order, the person shall be convicted and punished for the crime of picking quarrels and provoking trouble in accordance with Article 293(1)(ii) of the Criminal Law.\nWhere a person fabricates false information, or knowing it is fabricated false information, disseminates it on the information network, or organizes or instructs persons to disseminate it on the information network, creating a disturbance, causing serious disorder of public order, the person shall be convicted and punished for the crime of picking quarrels and provoking trouble in accordance with Article 293(1)(iv) of the Criminal Law."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 Where a person threatens or blackmails others on the ground of handling network information by means of posting or deleting on the information network, extorting public or private property, and the amount is relatively large, or commits the above acts multiple times, the person shall be convicted and punished for the crime of extortion in accordance with Article 274 of the Criminal Law."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 Where a person, in violation of state regulations and for profit, provides paid deletion of information services through the information network, or, knowing it is false information, provides paid services such as publishing information through the information network, disrupting market order, and having any of the following circumstances, it shall constitute \"serious circumstances\" of illegal business operations, and the person shall be convicted and punished for the crime of illegal business operations in accordance with Article 225(4) of the Criminal Law:\n(1) the individual's illegal business turnover is more than 50,000 yuan, or the illegal income is more than 20,000 yuan;\n(2) the unit's illegal business turnover is more than 150,000 yuan, or the illegal income is more than 50,000 yuan.\nWhere the amount of the act under the preceding paragraph reaches more than five times the amount specified in the preceding paragraph, it shall be identified as \"especially serious circumstances\" as stipulated in Article 225 of the Criminal Law."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where a person, knowing that others are committing crimes such as defamation, picking quarrels and provoking trouble, extortion, or illegal business operations through the information network, provides them with assistance such as funds, venues, or technical support, the person shall be treated as a joint offender."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 Where a person commits crimes of defamation, picking quarrels and provoking trouble, extortion, or illegal business operations through the information network, and at the same time constitutes crimes such as the crime of damaging commercial credit and commodity reputation as stipulated in Article 221 of the Criminal Law, the crime of inciting violence to resist the implementation of law as stipulated in Article 278, or the crime of fabricating and intentionally disseminating false terrorist information as stipulated in Article 291a, the person shall be convicted and punished in accordance with the provision imposing the heavier punishment."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 The term \"information network\" as used in this Interpretation includes information networks such as the computer internet, broadcast television network, fixed communication network, and mobile communication network, with electronic devices such as computers, televisions, fixed telephones, and mobile telephones as terminals, as well as local area networks open to the public."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "law_id": 3501191,
+  "title_en": "Reply of the Supreme People's Court on How to Calculate Debt Interest during the Period of Delayed Performance in Enforcement Work",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "I. When a People's Court calculates the \"interest on the debt for the period of delayed performance\" under Article 229 of the Civil Procedure Law of the People's Republic of China, it shall calculate it in accordance with the benchmark loan interest rate for the same period prescribed by the People's Bank of China."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "II. Where the enforcement payment is insufficient to satisfy all debts, the monetary debt determined by the legal document and the interest on the debt for the period of delayed performance shall be satisfied proportionally under the principle of proportional repayment, unless the parties have otherwise agreed on the order of satisfaction in the conciliation during enforcement.\nThis is in reply.\nAppendix:\nSpecific Calculation Method\n(1) Enforcement payment = monetary debt determined by the legal document to be satisfied + interest on the debt for the period of delayed performance to be satisfied.\n(2) Interest on the debt for the period of delayed performance to be satisfied = monetary debt determined by the legal document to be satisfied × benchmark loan interest rate for the same period × 2 × period of delayed performance."
+    }
+  ]
+}

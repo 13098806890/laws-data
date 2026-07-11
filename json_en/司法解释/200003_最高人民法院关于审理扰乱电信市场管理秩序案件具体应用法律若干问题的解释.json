@@ -1,0 +1,47 @@
+{
+  "law_id": 3501014,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Cases of Disrupting the Management Order of the Telecommunications Market",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Whoever, in violation of state regulations, engages in profit-making activities by leasing international private lines, installing transfer equipment without authorization, or by other means, to operate international telecommunications services or telecommunications services involving Hong Kong, Macao, or Taiwan without authorization, thereby disrupting the management order of the telecommunications market, if the circumstances are serious, shall be convicted and punished for the crime of illegal business operation in accordance with the provisions of subparagraph (4) of Article 225 of the Criminal Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Where any person commits the act prescribed in Article 1 of this Interpretation, and falls under any of the following circumstances, it shall be considered as \"serious circumstances\" of illegal business operation:\n(1) the amount of outbound call service operations reaches RMB 1,000,000 or more;\n(2) the amount of losses in telecommunications charges caused by inbound call service operations reaches RMB 1,000,000 or more.\nFalling under any of the following circumstances shall be considered as \"particularly serious circumstances\" of illegal business operation:\n(1) the amount of outbound call service operations reaches RMB 5,000,000 or more;\n(2) the amount of losses in telecommunications charges caused by inbound call service operations reaches RMB 5,000,000 or more."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 Where any person commits the act prescribed in Article 1 of this Interpretation, and the amount of operations or the amount of losses in telecommunications charges caused is close to the threshold amount for \"serious circumstances\" or \"particularly serious circumstances\" of illegal business operation, and falls under any of the following circumstances, it may be determined as \"serious circumstances\" or \"particularly serious circumstances\" of illegal business operation respectively:\n(1) having been subjected to administrative penalties twice or more within two years for illegally operating international telecommunications services or telecommunications services involving Hong Kong, Macao, or Taiwan;\n(2) having caused other serious consequences due to illegally operating international telecommunications services or telecommunications services involving Hong Kong, Macao, or Taiwan."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where a unit commits the act prescribed in Article 1 of this Interpretation and constitutes a crime, a fine shall be imposed on the unit, and the person directly in charge and other persons directly responsible shall be punished in accordance with the provisions of Articles 2 and 3 of this Interpretation."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where a person, in violation of state regulations, establishes or uses a radio station (transmitting station) without authorization, or occupies frequencies without authorization, and engages in profit-making activities by illegally operating international telecommunications services or telecommunications services involving Hong Kong, Macao, or Taiwan, and such act concurrently constitutes the crime of illegal business operation and the crime of disrupting the order of radio communications management as prescribed in Article 288 of the Criminal Law of the People's Republic of China, the person shall be convicted and punished in accordance with the provisions on the heavier punishment."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 Where an employee of a state-owned telecommunications enterprise, due to serious irresponsibility or abuse of power, causes bankruptcy or severe losses of the state-owned telecommunications enterprise, thereby causing major losses to the interests of the state, the employee shall be convicted and punished in accordance with the provisions of Article 168 of the Criminal Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 Where a person illegally adds value to a telecommunications card and then uses it, causing a relatively large amount of losses in telecommunications charges, the person shall be convicted and punished for the crime of theft in accordance with the provisions of Article 264 of the Criminal Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 Where a person steals another person's account number and password for accessing the public information network and uses them to go online, causing a relatively large amount of losses in telecommunications charges to others, the person shall be convicted and punished for the crime of theft in accordance with the provisions of Article 264 of the Criminal Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 Where a person uses false or fraudulently used identity documents to go through the procedures for network access and uses a mobile phone, causing a relatively large amount of losses in telecommunications charges, the person shall be convicted and punished for the crime of fraud in accordance with the provisions of Article 266 of the Criminal Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10 The term \"amount of outbound call service operations\" as used in this Interpretation refers to the amount obtained by multiplying the total duration (in minutes) of the illegal operation of international telecommunications services or telecommunications services involving Hong Kong, Macao, or Taiwan by the user usage fee per minute charged by the actor.\nThe term \"amount of losses in telecommunications charges\" as used in this Interpretation refers to the amount obtained by multiplying the total duration (in minutes) of the illegal operation of international telecommunications services or telecommunications services involving Hong Kong, Macao, or Taiwan by the international settlement price per minute that China should have received in legitimate telecommunications services."
+    }
+  ]
+}

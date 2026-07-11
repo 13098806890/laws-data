@@ -1,0 +1,83 @@
+{
+  "law_id": 3501371,
+  "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Illegal Use of Information Networks, Aiding Information Network Criminal Activities, and Other Such Crimes",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1: The units and individuals that provide the following services shall be deemed as \"network service providers\" as prescribed in paragraph 1 of Article 286-1 of the Criminal Law:\n(1) Network access, domain name registration and resolution, and other information network access, computing, storage, and transmission services;\n(2) Information publishing, search engines, instant messaging, online payment, online booking, online shopping, online games, live streaming, website construction, security protection, advertising promotion, application stores, and other information network application services;\n(3) Electronic government affairs, communication, energy, transportation, water conservancy, finance, education, medical care, and other public services provided by using information networks."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2: The \"regulatory authority orders the adoption of corrective measures\" as prescribed in paragraph 1 of Article 286-1 of the Criminal Law refers to the departments responsible for information network security supervision in accordance with laws and administrative regulations, such as the Cyberspace Administration, the telecommunications authority, and the public security authority, ordering the network service provider to adopt corrective measures in the form of a notice ordering rectification or other documents.\nTo determine \"failing to correct despite being ordered by the regulatory authority to adopt corrective measures\", comprehensive consideration shall be given to factors such as whether the regulatory order has a legal or administrative basis, whether the corrective measures and time limits are clear and reasonable, and whether the network service provider has the ability to adopt corrective measures as required."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3: Refusing to perform information network security management obligations, in any of the following circumstances, shall be deemed as \"causing illegal information to be disseminated in large quantities\" as prescribed in subparagraph (1) of paragraph 1 of Article 286-1 of the Criminal Law:\n(1) Causing the dissemination of 200 or more illegal video files;\n(2) Causing the dissemination of 2,000 or more items of illegal information other than illegal video files;\n(3) Causing the dissemination of illegal information in quantities that, although not reaching the standards set forth in subparagraphs (1) and (2), when converted proportionally, reach the relevant quantity standards;\n(4) Causing the dissemination of illegal information to 2,000 or more user accounts;\n(5) Causing the dissemination of illegal information through communication groups with a total of 3,000 or more group member accounts, or through social networks with a total of 30,000 or more follower accounts;\n(6) Causing the actual number of clicks on illegal information to reach 50,000 or more;\n(7) Other circumstances causing illegal information to be disseminated in large quantities."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4: Refusing to perform information network security management obligations, causing the disclosure of user information, in any of the following circumstances, shall be deemed as \"causing serious consequences\" as prescribed in subparagraph (2) of paragraph 1 of Article 286-1 of the Criminal Law:\n(1) Causing the disclosure of 500 or more pieces of whereabouts tracking information, communication content, credit information, or property information;\n(2) Causing the disclosure of 5,000 or more pieces of user information such as accommodation information, communication records, health and physiological information, transaction information, or other information that may affect personal or property safety;\n(3) Causing the disclosure of 50,000 or more pieces of user information other than those specified in subparagraphs (1) and (2);\n(4) Where the quantities, although not reaching the standards set forth in subparagraphs (1) to (3), when converted proportionally, reach the relevant quantity standards;\n(5) Causing serious consequences such as death, serious injury, mental disorder, or kidnapping of others;\n(6) Causing significant economic losses;\n(7) Seriously disrupting social order;\n(8) Causing other serious consequences."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5: Refusing to perform information network security management obligations, causing the loss of evidence in criminal cases that affects conviction and sentencing, in any of the following circumstances, shall be deemed as \"serious circumstances\" as prescribed in subparagraph (3) of paragraph 1 of Article 286-1 of the Criminal Law:\n(1) Causing the loss of evidence in cases of crimes endangering national security, terrorist activities, organized crimes of a mafia nature, or embezzlement and bribery;\n(2) Causing the loss of evidence in criminal cases that may result in a sentence of five years or more of fixed-term imprisonment;\n(3) Repeatedly causing the loss of evidence in criminal cases;\n(4) Seriously affecting criminal proceedings;\n(5) Other circumstances of a serious nature."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6: Refusing to perform information network security management obligations, in any of the following circumstances, shall be deemed as \"having other serious circumstances\" as prescribed in subparagraph (4) of paragraph 1 of Article 286-1 of the Criminal Law:\n(1) Failing to retain logs for the vast majority of users or failing to fulfill the obligation of real-name identity information authentication;\n(2) Having been repeatedly ordered to correct within two years but refusing to correct;\n(3) Causing information network services to be mainly used for illegal or criminal activities;\n(4) Causing information network services or network facilities to be used for launching cyber attacks, seriously affecting production or daily life;\n(5) Causing information network services to be used for committing crimes endangering national security, terrorist activities, organized crimes of a mafia nature, embezzlement and bribery, or other major crimes;\n(6) Causing damage to information networks that provide public services in state organs or in fields such as communication, energy, transportation, water conservancy, finance, education, medical care, seriously affecting production or daily life;\n(7) Other circumstances that seriously violate information network security management obligations."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7: \"Illegal or criminal activities\" as prescribed in Article 287-1 of the Criminal Law includes criminal acts and illegal acts that fall under the types of conduct stipulated in the Specific Provisions of the Criminal Law but have not yet constituted a crime."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8: Websites or communication groups established for the purpose of committing illegal or criminal activities, or mainly used for committing illegal or criminal activities after establishment, shall be deemed as \"websites or communication groups used for committing illegal or criminal activities such as fraud, imparting criminal methods, producing or selling prohibited articles, controlled articles, etc.\" as prescribed in subparagraph (1) of paragraph 1 of Article 287-1 of the Criminal Law."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9: Providing links, screenshots, QR codes, access account passwords, or other referral access services for information by using information networks shall be deemed as \"publishing information\" as prescribed in subparagraphs (2) and (3) of paragraph 1 of Article 287-1 of the Criminal Law."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10: Illegally using information networks, in any of the following circumstances, shall be deemed as \"serious circumstances\" as prescribed in paragraph 1 of Article 287-1 of the Criminal Law:\n(1) Establishing a website in the name of a state organ or financial institution for the purpose of committing illegal or criminal activities;\n(2) Establishing three or more websites, or websites with a total of 2,000 or more registered accounts, for the purpose of committing illegal or criminal activities;\n(3) Establishing five or more communication groups, or communication groups with a total of 1,000 or more group member accounts, for the purpose of committing illegal or criminal activities;\n(4) Publishing information about illegal or criminal activities, or publishing information for the purpose of committing illegal or criminal activities, in any of the following circumstances:\n1. Publishing 100 or more items of relevant information on a website;\n2. Sending relevant information to 2,000 or more user accounts;\n3. Sending relevant information to communication groups with a total of 3,000 or more group members;\n4. Disseminating relevant information through social networks with a total of 30,000 or more follower accounts;\n(5) Illegally obtaining 10,000 RMB or more in proceeds;\n(6) Having received an administrative penalty within two years for illegally using information networks, aiding information network criminal activities, or endangering computer information system security, and again illegally using information networks;\n(7) Other circumstances of a serious nature."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11: Where a person provides technical support or assistance to another person for the commission of a crime, in any of the following circumstances, it may be determined that the actor knows that the other person is using an information network to commit a crime, unless there is evidence to the contrary:\n(1) Still carrying out the relevant act after being informed by the regulatory authority;\n(2) Failing to perform statutory management duties after receiving a report;\n(3) The transaction price or method is obviously abnormal;\n(4) Providing programs, tools, or other technical support or assistance specifically for illegal or criminal purposes;\n(5) Frequently using measures such as covert browsing, encrypted communication, data destruction, or using false identities to evade supervision or investigation;\n(6) Providing technical support or assistance to others to evade supervision or investigation;\n(7) Other circumstances sufficient to determine that the actor knows."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12: Where a person knowingly uses an information network to commit a crime and provides assistance for the commission of the crime, in any of the following circumstances, it shall be deemed as \"serious circumstances\" as prescribed in paragraph 1 of Article 287-2 of the Criminal Law:\n(1) Providing assistance to three or more targets;\n(2) The amount of payment settlement is 200,000 RMB or more;\n(3) Providing funds of 50,000 RMB or more by means such as placing advertisements;\n(4) Illegally obtaining 10,000 RMB or more in proceeds;\n(5) Having received an administrative penalty within two years for illegally using information networks, aiding information network criminal activities, or endangering computer information system security, and again aiding information network criminal activities;\n(6) The crime committed by the aided target causes serious consequences;\n(7) Other circumstances of a serious nature.\nWhere the act prescribed in the preceding paragraph is committed, and it is indeed impossible to verify whether the aided target has reached the level of a crime due to objective conditions, but the total relevant amount reaches five times the standards set forth in subparagraphs (2) to (4) of the preceding paragraph, or particularly serious consequences are caused, the actor shall be investigated for criminal liability for the crime of aiding information network criminal activities."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13: If the criminal act committed by the aided target can be confirmed, but the target has not yet been brought to justice, has not yet been adjudicated according to law, or has not been investigated for criminal liability due to reasons such as not having reached the age of criminal responsibility according to law, this shall not affect the determination of the crime of aiding information network criminal activities."
+    },
+    {
+      "article_number": "第14条",
+      "content_en": "Article 14: Where a unit commits a crime prescribed in this Interpretation, the directly responsible managers and other directly liable persons shall be convicted and punished in accordance with the conviction and sentencing standards for the corresponding natural person crimes prescribed in this Interpretation, and the unit shall be fined."
+    },
+    {
+      "article_number": "第15条",
+      "content_en": "Article 15: Where, after comprehensively considering the degree of social harm, the attitude of confessing guilt and repentance, and other circumstances, it is considered that the criminal circumstances are minor, the case may be exempted from prosecution or criminal punishment; where the circumstances are obviously minor and the harm is not great, it shall not be treated as a crime."
+    },
+    {
+      "article_number": "第16条",
+      "content_en": "Article 16: Where a person repeatedly refuses to perform information network security management obligations, illegally uses information networks, or aids information network criminal activities, constituting a crime and shall be prosecuted according to law, or where the person repeatedly commits the aforementioned acts within two years without being dealt with, the quantity or amount shall be calculated cumulatively."
+    },
+    {
+      "article_number": "第17条",
+      "content_en": "Article 17: For a person sentenced to a penalty for committing a crime prescribed in this Interpretation, a professional prohibition may be declared according to law based on the circumstances of the crime and the need to prevent recidivism; where the person is sentenced to public surveillance or declared probation, a prohibition order may be declared according to law based on the circumstances of the crime."
+    },
+    {
+      "article_number": "第18条",
+      "content_en": "Article 18: For a person committing a crime prescribed in this Interpretation, a fine shall be imposed according to law after comprehensive consideration of the degree of harm of the crime, the amount of illegal proceeds, the defendant's previous criminal record, attitude of confessing guilt and repentance, and other factors."
+    },
+    {
+      "article_number": "第19条",
+      "content_en": "Article 19: This Interpretation shall come into force on November 1, 2019."
+    }
+  ]
+}
