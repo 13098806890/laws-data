@@ -123,9 +123,20 @@ def import_en(dry_run: bool = False, force: bool = False):
                 cn_int = chinese_article_num(art_num)
                 if cn_int:
                     for key, entries in db_map.items():
-                        if chinese_article_num(key) == cn_int:
+                        db_int = chinese_article_num(key)
+                        if db_int == cn_int:
                             candidates = entries
                             break
+                        # DB 可能存 '一、' '二、' 等中文数字（无第条包装）
+                        if db_int is None:
+                            # 去掉标点，取第一个中文数字词
+                            import re as _re
+                            m2 = _re.match(r'^([零一二三四五六七八九十百千\d]+)', key)
+                            if m2:
+                                db_int2 = chinese_article_num(f'第{m2.group(1)}条')
+                                if db_int2 == cn_int:
+                                    candidates = entries
+                                    break
 
             if not candidates and null_nodes:
                 # Fallback: json_en uses _1/_2 etc (full_text fallback), match to NULL-article_number nodes

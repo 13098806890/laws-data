@@ -20,6 +20,8 @@ from docx_to_json.converter import clean_article_content, extract_content
 from law_aliases import ALIASES
 
 BASE_DIR     = Path(__file__).parent.parent.parent   # laws_data/
+LAW_INDEX_PATH = BASE_DIR / 'law_index.json'
+
 GONGBAO_SFJS_DIR = BASE_DIR / '最高人民法院公报' / '司法解释'
 
 # 覆盖名单：其他来源替换了主库版本的 law_id 集合
@@ -377,16 +379,24 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
     inserted = parse_errors = 0
 
-    # 预建标题 → law_id 映射（从主库查）
+    # 预建标题 → law_id 映射（从主库查，含已导入的旧公报条目）
     title_to_id: dict[str, int] = {}
+    max_sfjs_id = 3500000
     for row in conn.execute("SELECT id, title FROM laws WHERE category='司法解释'").fetchall():
         title_to_id[row[1]] = row[0]
+        if row[0] > max_sfjs_id:
+            max_sfjs_id = row[0]
+    # 新条目从 max+1 开始连续分配
+    next_gongbao_id = max_sfjs_id + 1
+
+    # 跟踪新条目用于写入 law_index.json
+    gongbao_index_entries: list[dict] = []
 
     for i, f in enumerate(files):
         d = json.loads(f.read_text(encoding='utf-8'))
         law_id = d.get('law_id')
+        title = d.get('title', '').strip()
         if not law_id:
-            title = d.get('title', '').strip()
             if title in title_to_id:
                 law_id = title_to_id[title]
             else:
@@ -397,9 +407,9 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
                         law_id = db_id
                         break
         if not law_id:
-            print(f'  ⚠ 无法匹配 law_id: {f.name}')
-            parse_errors += 1
-            continue
+            # 主库中没有此标题 → 连续分配新 ID
+            law_id = next_gongbao_id
+            next_gongbao_id += 1
 
         title   = d.get('title', '').strip()
         pub_date = d.get('pub_date', '')
@@ -418,10 +428,29 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
         try:
             content_data = extract_content(tmp_path)
+            if content_data.get('total_articles', 0) == 0:
+                raise ValueError(f'total_articles=0 after extract_content')
         except Exception as e:
-            parse_errors += 1
-            tmp_path.unlink(missing_ok=True)
-            continue
+            print(f'  ⚠ extract_content 失败 [{f.name}]: {e}')
+            # fallback: 作为一条纯文本条文插入
+            content_data = {
+                'full_text': content_text,
+                'total_articles': 1,
+                'chapters': [{
+                    'title': title,
+                    'order_index': 1,
+                    'global_order': 1,
+                    'articles': [{
+                        'title': '',
+                        'content': content_text,
+                        'order_index': 1,
+                        'global_order': 1,
+                    }],
+                }],
+                'promulgation_info': '',
+                'issuing_org': '',
+                'doc_number': '',
+            }
         finally:
             tmp_path.unlink(missing_ok=True)
 
@@ -454,6 +483,16 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
                 continue
             insert_nodes(conn, law_id, content_data)
             inserted += 1
+            # 记录新发条目供写入 law_index.json
+            gongbao_index_entries.append({
+                'law_id':       law_id,
+                'filename':     filename,
+                'title':        title,
+                'category':     '司法解释',
+                'legal_domain': _domain_map.get(law_id, ('', ''))[0],
+                'pub_date':     pub_date,
+                'effective_date': eff_date,
+            })
         except Exception as e:
             parse_errors += 1
             print(f'  ERROR [{f.name}]: {e}')
@@ -479,6 +518,20 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
     conn.close()
 
     print(f'  公报司法解释：插入 {inserted} 条，解析错误 {parse_errors} 条')
+
+    if gongbao_index_entries:
+        # 追加到 law_index.json
+        if LAW_INDEX_PATH.exists():
+            existing = json.loads(LAW_INDEX_PATH.read_text(encoding='utf-8'))
+        else:
+            existing = []
+        existing_ids = {e['law_id'] for e in existing}
+        new_entries = [e for e in gongbao_index_entries if e['law_id'] not in existing_ids]
+        if new_entries:
+            existing.extend(new_entries)
+            existing.sort(key=lambda x: x['law_id'])
+            LAW_INDEX_PATH.write_text(json.dumps(existing, ensure_ascii=False, indent=2), encoding='utf-8')
+            print(f'  law_index.json 追加 {len(new_entries)} 条（共 {len(existing)} 条）')
 
 
 def load_references(db_path: Path = DB_PATH,
