@@ -356,6 +356,32 @@ def main():
     else:
         print("\n=== 阶段五：导入英文翻译 (跳过) ===")
 
+    # ── 5b. 结构节点英文标题 (heading_en_map.json → nodes.content_en) ──
+    if not args.skip_db and not args.skip_en:
+        print("\n=== 阶段五b：写入结构节点英文标题 (heading_en_map → content_en) ===")
+        HEADING_MAP_PATH = BASE_DIR / 'references' / 'heading_en_map.json'
+        if HEADING_MAP_PATH.exists():
+            heading_map = json.loads(HEADING_MAP_PATH.read_text(encoding='utf-8'))
+            # Note: heading_en_map.json uses node_id as key (legacy format).
+            # After DB rebuilds, node IDs change, so this file needs regeneration
+            # via translate_headings.py.
+            conn = sqlite3.connect(DB_PATH)
+            before = dict(conn.execute("SELECT id, content_en FROM nodes WHERE type IN ('part','chapter','section')").fetchall())
+            for node_id_str, en_text in heading_map.items():
+                nid = int(node_id_str)
+                if before.get(nid) is None or before[nid]:
+                    continue
+                conn.execute(
+                    'UPDATE nodes SET content_en = ? WHERE id = ?',
+                    (en_text, nid)
+                )
+            conn.commit()
+            after = conn.execute("SELECT COUNT(*) FROM nodes WHERE type IN ('part','chapter','section') AND content_en IS NOT NULL AND content_en != ''").fetchone()[0]
+            conn.close()
+            print(f"  ✅ nodes.content_en (part/chapter/section): {after} 条有英文 (共 {len(heading_map)} 条缓存)")
+        else:
+            print("  ⚠  heading_en_map.json 不存在，跳过（可先运行 translate_headings.py 生成）")
+
     # ── 6. MD export ──
     if not args.skip_md:
         print("\n=== 阶段六：DB → Markdown ===")
@@ -364,9 +390,15 @@ def main():
         from db_to_md.render_flk import run as render_flk
         render_flk()
 
-    # ── 7. Validation ──
+    # ── 7. DB 完整性验证 ──
+    if not args.skip_db:
+        print("\n=== 阶段七：DB 完整性验证 ===")
+        from verify_db import main as verify_db
+        verify_db()
+
+    # ── 7b. content_en vs json_en 验证（可选）──
     if args.validate:
-        print("\n=== 阶段七：验证 (content_en vs json_en) ===")
+        print("\n=== 阶段七b：验证 (content_en vs json_en) ===")
         from validate_en import validate
         validate()
 

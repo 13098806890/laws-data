@@ -54,7 +54,8 @@ def call_api(batch):
     batch: list of (node_id, law_id, type, order_index, text)
     The prompt uses a sequential temp key (1-based index in the batch) to avoid
     confusing the model with sparse node IDs.  The returned results are mapped
-    back using the sequential key.
+    back using the stable key (law_id:type:order_index) so the cache survives
+    DB rebuilds where node autoincrement IDs change.
     """
     prompt_lines = [f'Translate these {len(batch)} headings:']
     temp_ids = {}

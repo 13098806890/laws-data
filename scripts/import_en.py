@@ -79,6 +79,16 @@ def import_en(dry_run: bool = False, force: bool = False):
     total_skipped = 0
     law_stats: dict[int, dict] = defaultdict(lambda: {"title": "", "matched": 0, "en_total": 0, "already_had": 0})
 
+    # Step 0: Update laws.title_en from json_en (separate pass to ensure commit)
+    if not dry_run:
+        en_title_count = 0
+        for law_id, title_en, _, _ in iter_json_en_files():
+            if title_en:
+                conn.execute("UPDATE laws SET title_en = ? WHERE id = ? AND (title_en IS NULL OR title_en = '')", (title_en, law_id))
+                en_title_count += 1
+        conn.commit()
+        print(f"  ✅ 更新 laws.title_en: {en_title_count} 条")
+
     for law_id, title_en, articles, fpath in iter_json_en_files():
         en_total = len(articles)
         if en_total == 0:

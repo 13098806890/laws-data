@@ -187,6 +187,33 @@ def main():
         if len(error_details) > 30:
             print(f'...（共 {len(error_details)} 个）')
 
+    # ── 英文覆盖率检查 ──
+    print(f'\n英文覆盖率检查:')
+    conn2 = sqlite3.connect(DB_PATH)
+    # laws.title_en
+    total_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk'").fetchone()[0]
+    en_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk' AND title_en IS NOT NULL AND title_en != ''").fetchone()[0]
+    pct_laws = round(100.0 * en_laws / total_laws, 1) if total_laws else 0
+    flag_laws = '⚠️' if pct_laws < 95 else '✅'
+    print(f'  {flag_laws} laws.title_en: {en_laws}/{total_laws} ({pct_laws}%)')
+
+    # 结构节点 content_en (part/chapter/section)
+    for ntype in ('part', 'chapter', 'section'):
+        total_n = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type=?", (ntype,)).fetchone()[0]
+        en_n = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type=? AND content_en IS NOT NULL AND content_en != ''", (ntype,)).fetchone()[0]
+        pct_n = round(100.0 * en_n / total_n, 1) if total_n else 0
+        flag_n = '⚠️' if pct_n < 95 else '✅'
+        print(f'  {flag_n} nodes.content_en ({ntype}): {en_n}/{total_n} ({pct_n}%)')
+
+    # 文章节点 content_en
+    total_arts = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type='article' AND law_id IN (SELECT id FROM laws WHERE is_current=1)").fetchone()[0]
+    en_arts = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type='article' AND content_en IS NOT NULL AND content_en != '' AND law_id IN (SELECT id FROM laws WHERE is_current=1)").fetchone()[0]
+    pct_arts = round(100.0 * en_arts / total_arts, 1) if total_arts else 0
+    flag_arts = '⚠️' if pct_arts < 95 else '✅'
+    print(f'  {flag_arts} nodes.content_en (article): {en_arts}/{total_arts} ({pct_arts}%)')
+
+    conn2.close()
+
 
 if __name__ == '__main__':
     main()
