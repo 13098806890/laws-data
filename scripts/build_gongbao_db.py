@@ -79,6 +79,7 @@ def cn2int(s: str):
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS gongbao_docs (
     id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    doc_key     TEXT UNIQUE NOT NULL,  -- "{source}/{filename_stem}" 稳定 key，跨 DB 重建不变
     source      TEXT NOT NULL,        -- 'cpwsxd' | 'al' | 'sfwj'
     case_number TEXT,                 -- '指导性案例212号'，仅 al 中编号案例有值
     title       TEXT NOT NULL,
@@ -209,12 +210,13 @@ def import_docs(conn: sqlite3.Connection) -> int:
             keywords_meta = d.get('keywords_meta')
             if not keywords:
                 keywords = infer_keywords_from_text(title, gist, content)
+            doc_key = d.get('doc_key') or f"{source}/{f.stem}"
             conn.execute(
                 """INSERT INTO gongbao_docs
-                   (source, case_number, title, issue, year, issue_num,
+                   (doc_key, source, case_number, title, issue, year, issue_num,
                     doc_number, pub_date, url, ruling_gist, keywords, keywords_meta, full_text)
-                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)""",
-                (source, case_num or None, title, d.get('issue', ''),
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                (doc_key, source, case_num or None, title, d.get('issue', ''),
                  d.get('year'), d.get('issue_num'), d.get('doc_number', ''),
                  d.get('pub_date', ''), d.get('url', ''),
                  gist, keywords,
@@ -226,7 +228,7 @@ def import_docs(conn: sqlite3.Connection) -> int:
 
 
 def import_en_gongbao(conn: sqlite3.Connection) -> int:
-    """从 json_en_gongbao/{source}/{id}.json 导入英文翻译至 gongbao_docs 表。"""
+    """从 json_en_gongbao/{source}/{doc_key}.json 导入英文翻译至 gongbao_docs 表。"""
     if not GONGBAO_EN_DIR.exists():
         print('  ⚠ json_en_gongbao 目录不存在，跳过英文导入')
         return 0
@@ -240,21 +242,24 @@ def import_en_gongbao(conn: sqlite3.Connection) -> int:
             continue
         print(f'  en/{source}: {len(files)} 个文件')
         for fpath in files:
-            doc_id = int(fpath.stem)
             try:
                 data = json.loads(fpath.read_text(encoding='utf-8'))
             except (json.JSONDecodeError, UnicodeDecodeError) as e:
                 print(f'    ⚠  parse error: {fpath.name} — {e}')
                 continue
+            doc_key = data.get('doc_key')
+            if not doc_key:
+                print(f'    ⚠  no doc_key in {fpath.name}')
+                continue
             cur = conn.execute(
                 """UPDATE gongbao_docs SET
                    title_en = ?, ruling_gist_en = ?, keywords_en = ?, full_text_en = ?
-                   WHERE id = ?""",
+                   WHERE doc_key = ?""",
                 (data.get('title_en', '') or None,
                  data.get('ruling_gist_en', '') or None,
                  data.get('keywords_en', '') or None,
                  data.get('full_text_en', '') or None,
-                 doc_id)
+                 doc_key)
             )
             if cur.rowcount > 0:
                 total += 1
