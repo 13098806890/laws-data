@@ -112,7 +112,7 @@ def call_api(batch):
 def main():
     conn = sqlite3.connect(DB_PATH)
     rows = conn.execute('''
-        SELECT n.id, n.law_id, n.type, n.order_index, n.content
+        SELECT n.id, n.law_id, n.type, COALESCE(n.order_index, 0) AS oi, n.content
         FROM nodes n
         WHERE n.type IN ('part','chapter','section') AND n.content_en IS NULL
         ORDER BY n.id
@@ -140,7 +140,7 @@ def main():
                 parts = key.split(':')
                 law_id, ntype, oi = int(parts[0]), parts[1], int(parts[2])
                 conn.execute(
-                    'UPDATE nodes SET content_en = ? WHERE law_id = ? AND type = ? AND order_index = ?',
+                    'UPDATE nodes SET content_en = ? WHERE law_id = ? AND type = ? AND COALESCE(order_index, 0) = ?',
                     (en, law_id, ntype, oi)
                 )
             conn.commit()
