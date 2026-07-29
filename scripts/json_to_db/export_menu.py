@@ -57,10 +57,18 @@ _CIVIL_SUBGROUPS = [
 _CRIMINAL_SUBGROUPS = [
     ('刑法及修正案', ['法律', '修正案']),
     ('法律解释',     ['法律解释']),
-    ('财产犯罪',     ['盗窃', '诈骗', '抢劫', '敲诈', '挪用', '贪污', '腐败', '受贿', '行贿', '职务']),
-    ('人身犯罪',     ['人身', '故意伤害', '杀人', '强奸', '猥亵', '未成年', '拐卖', '绑架']),
-    ('毒品与走私',   ['毒品', '走私', '贩毒', '制毒']),
-    ('综合司法解释', []),
+    ('侵犯财产',     ['盗窃','诈骗','敲诈','抢夺','抢劫','挪用','强迫借贷','拾得他人信用卡','盗用','赃物','合同诈骗','赃物估价','职务侵占','经济犯罪嫌疑']),
+    ('经济犯罪',     ['非法经营','非法集资','非法放贷','知识产权','侵犯知识产权','税收','生产销售伪劣','伪劣商品','赌博','洗钱','伪造','假币','危害税收','税收征管','非法制造']),
+    ('贪污贿赂',     ['受贿','行贿','贪污','职务犯罪','渎职','渎职侵权','私放在押人员','挪用','第二百二十九条']),
+    ('人身犯罪',     ['非法行医','袭警','寻衅滋事','性侵','强奸','猥亵','嫖宿','未成年人犯罪','拐卖','绑架','故意伤害','杀人','人身','虐待','遗弃','非法采供血液','虐待被监管人','强制隔离戒毒']),
+    ('毒品与走私',   ['毒品','走私','毒鼠强','制毒','贩毒','麻醉药品','精神药品','易制毒']),
+    ('妨害社会管理秩序', ['计算机犯罪','网络犯罪','信息网络','淫秽','诽谤','开设赌场','组织考试作弊','黑社会','恶势力','虚假诉讼','扰乱法庭','破坏监管','脱逃','组织越狱','妨害国','出入境','文物犯罪','环境犯罪','黑土地','破坏公用电信','枪支','弹药','爆炸物','军用','军职','逃离部队','组织考试作弊','非法制造','买卖','运输','储存','非法采供血液','公务用枪','假币','拒不执行判决','掩饰、隐瞒','第三百一十三条']),
+    ('刑罚执行',     ['减刑','假释','暂予监外执行','禁止令','缓刑','台湾地区服刑','无期徒刑','缓刑犯']),
+    ('证据规则',     ['证据','电子数据','非法证据']),
+    ('刑事诉讼程序',   ['管辖','程序规定','移送','集团犯罪','量刑程序','涉嫌犯罪单位','行政执法机关','公安机关']),
+    ('审判监督',     ['冤假错案','申诉','文化大革命']),
+    ('辩护与代理',   ['辩护人','在押犯罪嫌疑人']),
+    ('未成年人刑事程序', ['未成年人刑事案件']),
 ]
 
 _ECON_SUBGROUPS = [
@@ -75,18 +83,15 @@ _LABOR_SUBGROUPS = [
     ('劳动就业',       ['劳动', '就业', '工资', '劳动合同', '劳动争议']),
     ('社会保险与福利', ['社会保险', '工伤', '失业', '养老', '医疗保险', '社会保障']),
     ('特殊群体保护',   ['残疾人', '妇女', '未成年人', '老年人', '退役军人']),
-    ('司法解释',       ['司法解释']),
     ('行政法规',       ['行政法规']),
 ]
 
 _PROC_SUBGROUPS = [
-    ('三大诉讼法',       ['民事诉讼', '刑事诉讼', '行政诉讼', '海事诉讼', '仲裁', '调解', '仲裁法']),
-    ('律师、仲裁与公证', ['律师', '公证', '仲裁法', '法律援助']),
-    ('民事程序解释',     ['民事', '执行', '拍卖', '送达', '保全', '破产清算', '简易程序', '审判监督', '陪审']),
-    ('刑事程序解释',     ['刑事', '死刑', '逮捕', '起诉', '指定管辖', '羁押']),
-    ('行政程序解释',     ['行政', '国家赔偿', '行政赔偿', '复议']),
-    ('文书、送达与废止', ['送达', '文书', '废止', '司法协助', '法庭规则', '巡回法庭', '互联网法院', '国际商事']),
-    ('行政法规',         ['行政法规']),
+    ('民事诉讼',       ['民事诉讼', '海事诉讼', '民事执行', '民事调解', '民事审判', '民事案件', '民事裁定', '民事诉讼证据']),
+    ('刑事诉讼',       ['刑事诉讼', '死刑复核', '刑事再审', '刑事案件', '刑事裁定', '刑事诉讼证据', '刑事审判', '批捕', '逮捕', '羁押']),
+    ('行政诉讼',       ['行政诉讼', '行政案件', '行政裁定', '行政赔偿', '国家赔偿', '行政执行', '行政诉讼证据', '行政复议']),
+    ('律师、仲裁与公证', ['律师', '公证', '仲裁法', '法律援助', '仲裁委员会', '人民调解']),
+    ('文书、送达与废止', ['送达', '文书', '废止', '司法协助', '法庭规则', '巡回法庭', '互联网法院', '国际商事法庭', '知识产权法庭']),
 ]
 
 # ── 顶层分组和子分组排列顺序 ──────────────────────────────────────
@@ -102,13 +107,15 @@ _SUBGROUP_ORDER: dict[str, list[str]] = {
         '担保与物权', '婚姻、家庭与继承', '保险',
         '海事与运输', '外商与涉外', '证券与期货', '综合与程序批复',
     ],
-    '刑事': ['刑法及修正案', '法律解释', '财产犯罪', '人身犯罪', '毒品与走私', '综合司法解释'],
-    '行政与公法': ['行政法律', '国家赔偿', '司法解释'],
+    '刑事': ['刑法及修正案', '侵犯财产', '经济犯罪', '贪污贿赂', '人身犯罪', '毒品与走私', '妨害社会管理秩序', '刑罚执行', '证据规则', '刑事诉讼程序', '审判监督', '辩护与代理', '未成年人刑事程序'],
+    '行政与公法': ['行政法律', '教育科技', '卫生医药', '生态环境', '公安司法',
+                   '社会民政', '土地城建', '自然资源', '劳动就业', '税务财政',
+                   '国家赔偿', '司法解释'],
     '经济、税务与金融': ['税收与财政', '金融、证券与保险', '贸易、竞争与市场', '农业、资源与能源', '其他经济法规'],
     '劳动与社会保障': ['劳动就业', '社会保险与福利', '特殊群体保护', '司法解释', '行政法规'],
     '诉讼与司法程序': [
-        '三大诉讼法', '律师、仲裁与公证', '民事程序解释',
-        '刑事程序解释', '行政程序解释', '文书、送达与废止', '行政法规',
+        '民事诉讼', '刑事诉讼', '行政诉讼', '律师、仲裁与公证',
+        '文书、送达与废止', '行政法规',
     ],
 }
 
@@ -126,67 +133,90 @@ def _match(title: str, keywords: list[str]) -> bool:
     return any(kw in title for kw in keywords)
 
 
-def _civil_subgroup(title: str, category: str, domain: str) -> str:
+def _prefixed(sub: str) -> str:
+    """Add 行政法规/ prefix only if not already present"""
+    if sub and not sub.startswith('行政法规/'):
+        return f'行政法规/{sub}'
+    return sub or '行政法规'
+
+def _civil_subgroup(title: str, category: str, domain: str, subject_area: str) -> str:
     if domain == '民法典' or '民法典' in title:
         return '民法典'
+    if category == '行政法规':
+        return _prefixed(subject_area)
     for subgroup, kws in _CIVIL_SUBGROUPS:
         if kws and _match(title, kws):
             return subgroup
     return '综合与程序批复'
 
 
-def _criminal_subgroup(title: str, category: str) -> str:
+def _criminal_subgroup(title: str, category: str, subject_area: str) -> str:
     if category in ('法律', '修正案'):
         return '刑法及修正案'
     if category == '法律解释':
-        return '法律解释'
+        return '刑法及修正案'
+    if category == '行政法规':
+        return _prefixed(subject_area)
+    # 实体性刑法解释 → 刑法及修正案
+    if _match(title, ['刑法修正案', '时间效力', '适用刑法', '适用修订刑法', '不再追诉', '罪名补充规定', '认真学习宣传贯彻', '罪名的补充规定']):
+        return '刑法及修正案'
     for subgroup, kws in _CRIMINAL_SUBGROUPS[2:]:
         if kws and _match(title, kws):
             return subgroup
-    return '综合司法解释'
+    return '检察院'
 
+
+# 行政与公法中的法律 子分组（参照 subject_area 的分类逻辑）
+_ADMIN_LAW_SUBGROUPS = [
+    ('教育科技',       ['教育', '教师', '学位', '学校', '高等教育', '学前教育', '职业教育', '义务教育', '家庭教育', '爱国主义教育', '公共图书馆', '科学技术普及', '科学技术进步']),
+    ('卫生医药',       ['卫生', '医疗', '医药', '药品', '食品安全', '传染病', '精神卫生', '疫苗', '献血', '母婴保健', '医师', '基本医疗卫生', '突发公共卫生', '红十字会', '动物防疫', '进出境动植物检疫', '农产品质量安全', '生物安全']),
+    ('生态环境',       ['环境保护', '环境影响评价', '生态环境', '污染', '排污', '黑土地', '青藏高原', '长江保护', '黄河保护', '湿地保护', '海岛保护', '海洋环境', '水土保持', '野生动物', '森林法', '草原法', '水法', '国家公园', '核安全']),
+    ('公安司法',       ['治安管理', '警察', '枪支', '禁毒', '监狱', '社区矫正', '国家安全', '保密', '居民身份证', '户口登记', '出入境', '护照', '集会游行示威', '网络安全', '数据安全', '密码法', '人民防空', '出境入境管理', '突发事件应对', '保守国家秘密', '律师法', '人民警察']),
+    ('社会民政',       ['城市居民委员会', '村民委员会', '境外非政府组织', '归侨侨眷', '残疾人', '老年人', '未成年人', '体育法', '公共文化', '文物保护', '非物质文化遗产', '电影产业', '语言文字', '人口与计划生育', '无障碍环境']),
+    ('信息通信',       ['个人信息保护', '网络安全', '数据安全', '密码法']),
+    ('土地城建',       ['土地管理', '城乡规划', '房地产', '城市房地产', '测绘法']),
+    ('自然资源',       ['气象法', '海域使用', '档案法', '水下文物']),
+    ('劳动就业',       ['矿山安全', '特种设备', '安全生产', '危险化学品']),
+    ('税务财政',       ['行政处罚', '行政许可', '行政强制', '行政复议', '国家赔偿', '公务员']),
+]
 
 def _admin_subgroup(title: str, category: str, subject_area: str) -> str:
     if category == '法律':
+        for subgroup, kws in _ADMIN_LAW_SUBGROUPS:
+            if _match(title, kws):
+                return subgroup
         return '行政法律'
     if category == '行政法规':
-        return f'行政法规/{subject_area}' if subject_area else '行政法规'
+        return _prefixed(subject_area)
     if '国家赔偿' in title or '行政赔偿' in title:
         return '国家赔偿'
-    if category in ('司法解释', '法律解释'):
-        return '司法解释'
     return '行政法律'
 
 
 def _econ_subgroup(title: str, category: str, subject_area: str) -> str:
     if category == '行政法规':
-        return f'行政法规/{subject_area}' if subject_area else '行政法规'
+        return _prefixed(subject_area)
     for subgroup, kws in _ECON_SUBGROUPS:
         if kws and _match(title, kws):
             return subgroup
     return '其他经济法规'
 
 
-def _labor_subgroup(title: str, category: str) -> str:
+def _labor_subgroup(title: str, category: str, subject_area: str) -> str:
     if category == '行政法规':
-        return '行政法规'
-    if category in ('司法解释', '法律解释'):
-        return '司法解释'
+        return _prefixed(subject_area)
     for subgroup, kws in _LABOR_SUBGROUPS[:3]:
         if _match(title, kws):
             return subgroup
     return '劳动就业'
 
 
-def _proc_subgroup(title: str, category: str) -> str:
-    if category == '法律':
-        for subgroup, kws in _PROC_SUBGROUPS[:2]:
-            if _match(title, kws):
-                return subgroup
-        return '三大诉讼法'
+def _proc_subgroup(title: str, category: str, subject_area: str) -> str:
     if category == '行政法规':
-        return '行政法规'
-    for subgroup, kws in _PROC_SUBGROUPS[2:6]:
+        if subject_area and not subject_area.startswith('行政法规/'):
+            return f'行政法规/{subject_area}'
+        return subject_area or '行政法规'
+    for subgroup, kws in _PROC_SUBGROUPS:
         if kws and _match(title, kws):
             return subgroup
     return '文书、送达与废止'
@@ -210,21 +240,21 @@ def compute_display(title: str, category: str, legal_domain: str,
 
     if group == '宪法与国家机构':
         if cat == '宪法':             subgroup = '宪法'
-        elif cat == '行政法规':       subgroup = '行政法规'
+        elif cat == '行政法规':       subgroup = _prefixed(subj)
         elif cat in ('司法解释', '法律解释'): subgroup = '司法解释'
         else:                         subgroup = '法律及决定'
     elif group == '民事与商事':
-        subgroup = _civil_subgroup(title, cat, legal_domain or '')
+        subgroup = _civil_subgroup(title, cat, legal_domain or '', subj)
     elif group == '刑事':
-        subgroup = _criminal_subgroup(title, cat)
+        subgroup = _criminal_subgroup(title, cat, subj)
     elif group == '行政与公法':
         subgroup = _admin_subgroup(title, cat, subj)
     elif group == '经济、税务与金融':
         subgroup = _econ_subgroup(title, cat, subj)
     elif group == '劳动与社会保障':
-        subgroup = _labor_subgroup(title, cat)
+        subgroup = _labor_subgroup(title, cat, subj)
     elif group == '诉讼与司法程序':
-        subgroup = _proc_subgroup(title, cat)
+        subgroup = _proc_subgroup(title, cat, subj)
     else:
         subgroup = ''
     return group, subgroup
@@ -252,9 +282,9 @@ def export_menu(db_path: Path = DB_PATH, menu_path: Path = MENU_PATH):
         """SELECT id, title, title_en, category, legal_domain, subject_area FROM laws
            WHERE is_current=1 AND (source='flk' OR (source='gongbao' AND legal_domain != ''))"""
     ).fetchall()
-    conn.close()
 
     tree: dict[str, dict[str, list[dict]]] = {}
+    subject_updates: list[tuple[str, int]] = []  # (subgroup, law_id)
     for row in rows:
         law_id, title, title_en, category, legal_domain, subject_area = row
         group, subgroup = compute_display(title, category, legal_domain, subject_area)
@@ -262,6 +292,12 @@ def export_menu(db_path: Path = DB_PATH, menu_path: Path = MENU_PATH):
         if title_en:
             law_entry['title_en'] = title_en
         tree.setdefault(group, {}).setdefault(subgroup, []).append(law_entry)
+        subject_updates.append((subgroup, law_id))
+
+    # Write subject_area back to database
+    conn.execute("UPDATE laws SET subject_area = NULL WHERE is_current = 1")
+    conn.executemany("UPDATE laws SET subject_area = ? WHERE id = ? AND is_current = 1", subject_updates)
+    conn.commit()
 
     sorted_groups = (
         [g for g in _GROUP_ORDER if g in tree]
@@ -288,6 +324,9 @@ def export_menu(db_path: Path = DB_PATH, menu_path: Path = MENU_PATH):
 
     total = sum(len(s['laws']) for g in groups_out for s in g['subgroups'])
     print(f'law_menu.json 导出完成：{len(groups_out)} 个分组，{total} 部法律 → {menu_path}')
+    print(f'subject_area 已更新：{len(subject_updates)} 条记录')
+
+    conn.close()
 
 
 def run():
