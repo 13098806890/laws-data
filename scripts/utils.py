@@ -3,7 +3,13 @@ import re
 
 def title_from_stem(stem: str) -> str:
     raw = re.sub(r'_\d{8}$', '', stem)
-    return re.sub(r'[ \t]+', ' ', raw).strip()
+    t = re.sub(r'[ \t]+', ' ', raw).strip()
+    # 规范化机构名称间的空格为顿号
+    t = re.sub(r'最高人民法院 +最高人民检察院', '最高人民法院、最高人民检察院', t)
+    t = re.sub(r'最高人民检察院 +最高人民法院', '最高人民检察院、最高人民法院', t)
+    t = re.sub(r'最高人民法院 +公安部', '最高人民法院、公安部', t)
+    t = re.sub(r'最高人民检察院 +公安部', '最高人民检察院、公安部', t)
+    return t
 
 
 def pub_date_from_stem(stem: str):

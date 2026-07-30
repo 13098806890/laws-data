@@ -258,18 +258,32 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         version_date = pub_date_from_stem(stem)
         category     = data.get('category')
 
+        # 标题规范化：机构名称间空格→顿号、多余空格清理
+        title = data['title']
+        # 机构联合署名间的空格 → 顿号（优先替换，避免被后续规则破坏）
+        title = re.sub(r'最高人民法院 +最高人民检察院', '最高人民法院、最高人民检察院', title)
+        title = re.sub(r'最高人民检察院 +最高人民法院', '最高人民检察院、最高人民法院', title)
+        title = re.sub(r'最高人民检察院 +公安部', '最高人民检察院、公安部', title)
+        title = re.sub(r'最高人民法院 +公安部', '最高人民法院、公安部', title)
+        # 机构名后跟文本时，去掉多余空格（此时多机构组合已被替换为顿号版本）
+        title = re.sub(r'[ \t]{2,}', ' ', title).strip()
+        title = re.sub(r'(最高人民法院|最高人民检察院|公安部|国家安全部|司法部) +', r'\1', title)
+        # 书名号/引号后的空格（排版换行残留）
+        title = re.sub(r'([）》」』］]) +', r'\1', title)
+        title = re.sub(r'  +', ' ', title).strip()
+
         # 跳过已被其他来源覆盖的条目（在覆盖名单中的 law_id 由其他来源写入）
         if data.get('law_id') in _OVERRIDE_BLOCKLIST:
             continue
 
-        subject_area = get_subject_area(data['title'], category)
-        aliases      = ALIASES.get(data['title'], '')
+        subject_area = get_subject_area(title, category)
+        aliases      = ALIASES.get(title, '')
         cur = conn.execute(
             """INSERT INTO laws (id, title, filename, category, legal_domain, subject_area, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
                                  total_articles, full_text, version_date, is_current, aliases, is_flk, source)
-               VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,0,'flk')""",
-            (data.get('law_id'), data['title'], stem, category, data.get('legal_domain'),
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,0,'flk')""",
+            (data.get('law_id'), title, stem, category, data.get('legal_domain'),
              subject_area,
              data.get('pub_date'), data.get('effective_date'),
              data.get('promulgation_info'), data.get('issuing_org'), data.get('doc_number'),
@@ -287,13 +301,17 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
     conn.execute("INSERT INTO nodes_fts_bigram(nodes_fts_bigram) VALUES('optimize')")
     conn.commit()
 
-    # 多版本标记：同名法律只保留最新 pub_date 为 is_current=1
+    # 多版本标记：同名法律只保留最新 pub_date 为 is_current=1（同日期时保留 id 最大的）
     conn.execute("""
         UPDATE laws SET is_current = 0
         WHERE id NOT IN (
-            SELECT id FROM laws l1
-            WHERE pub_date = (
-                SELECT MAX(pub_date) FROM laws l2 WHERE l2.title = l1.title
+            SELECT l1.id FROM laws l1
+            WHERE l1.id = (
+                SELECT MAX(l2.id) FROM laws l2
+                WHERE l2.title = l1.title
+                  AND l2.pub_date = (
+                      SELECT MAX(l3.pub_date) FROM laws l3 WHERE l3.title = l2.title
+                  )
             )
         )
     """)
@@ -503,13 +521,17 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
     conn.commit()
 
-    # 多版本标记：同标题公报版本也参与 is_current 更新
+    # 多版本标记：同标题公报版本也参与 is_current 更新（同日期时保留 id 最大的）
     conn.execute("""
         UPDATE laws SET is_current = 0
         WHERE id NOT IN (
-            SELECT id FROM laws l1
-            WHERE pub_date = (
-                SELECT MAX(pub_date) FROM laws l2 WHERE l2.title = l1.title
+            SELECT l1.id FROM laws l1
+            WHERE l1.id = (
+                SELECT MAX(l2.id) FROM laws l2
+                WHERE l2.title = l1.title
+                  AND l2.pub_date = (
+                      SELECT MAX(l3.pub_date) FROM laws l3 WHERE l3.title = l2.title
+                  )
             )
         )
     """)

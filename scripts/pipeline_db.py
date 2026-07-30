@@ -85,8 +85,13 @@ def main():
         if not run(f"python3 '{SCRIPTS / 'import_en.py'}'"):
             print("  ⚠ 部分法律可能有缺失，继续验证…")
 
-    # ── Step 3: Validate ──────────────────────────────────────────────
-    print("\n── Step 3/4: 验证 ──")
+    # ── Step 3: Classify gongbao entries (legal_domain) ──────────────────
+    if not args.skip_gongbao and not args.validate_only:
+        print("\n── Step 3/4: 司法解 legal_domain 分类 ──")
+        run(f"python3 '{SCRIPTS / 'classify_gongbao_domain.py'}'")
+
+    # ── Step 4: Validate ──────────────────────────────────────────────
+    print("\n── Step 4/4: 验证 ──")
 
     # Gongbao validation
     print("\n  ── gongbao 验证 ──")
