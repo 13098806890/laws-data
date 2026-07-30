@@ -12,3 +12,6 @@ __pycache__/
 
 # Source file checksum manifest
 .source_hashes.json
+law_content.db
+law_content*.db
+*.db.backup
