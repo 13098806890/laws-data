@@ -48,6 +48,10 @@ def _load_blocklist() -> set:
     return {e['laws_id'] for e in entries}
 _OVERRIDE_BLOCKLIST: set = _load_blocklist()
 
+# 废止标记：已废止的司法解释在公报源 JSON（最高人民法院公报/司法解释/*.json）的
+# repealed_by 字段中直接标记，导入时读取该字段设为 is_current=0（见 import_gongbao_sfjs）。
+# 不再使用规则表匹配，避免标题/文号差异导致的误标或漏标。
+
 _CN_ORD = {'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,
            '九':9,'十':10,'百':100,'千':1000}
 
@@ -483,6 +487,9 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
         doc_num    = d.get('doc_number', '') or content_data.get('doc_number', '')
         eff_date   = d.get('effective_date', '')
         filename   = f.stem   # 用文件 stem 作 filename（唯一键）
+        # 源 JSON 中的废止标记（repealed_by 非空 → 该司法解释已被废止决定明确废止，导入时直接标 is_current=0）
+        repealed_by = d.get('repealed_by', '')
+        is_current = 0 if repealed_by else 1
 
         try:
             conn.execute(
@@ -490,12 +497,12 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
                    (id, title, filename, category, legal_domain, subject_area, pub_date,
                     effective_date, promulgation_info, issuing_org, doc_number,
                     total_articles, full_text, version_date, is_current, aliases, source)
-                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,NULL,'gongbao')""",
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,NULL,'gongbao')""",
                 (law_id, title, filename, '司法解释',
                  _domain_map.get(law_id, ('', ''))[0],
                  _domain_map.get(law_id, ('', ''))[1],
                  pub_date, eff_date, prom_info, issuing, doc_num,
-                 total_arts, full_text, pub_date)
+                 total_arts, full_text, pub_date, is_current)
             )
             # 如果法律已存在于主库（source='flk'），跳过节点插入避免重复
             existing_nodes = conn.execute(
@@ -540,6 +547,7 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
         )
     """)
     conn.commit()
+
     conn.execute('PRAGMA foreign_keys=ON')
     conn.close()
 

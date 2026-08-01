@@ -107,6 +107,10 @@ def main():
     print("\n  ── 法条英文翻译验证 ──")
     en_ok = run(f"python3 '{SCRIPTS / 'validate_en.py'}'")
 
+    # Repeal marks validation（验证公报源 repealed_by 字段是否正确应用）
+    print("\n  ── 废止标记验证 ──")
+    repeal_ok = run(f"python3 '{SCRIPTS / 'verify_repeal_rules.py'}'")
+
     # Quick FTS check
     print("\n  ── FTS 快速检查 ──")
     run(f"""python3 -c '
@@ -123,6 +127,7 @@ db.close()
     issues = []
     if not ok: issues.append("gongbao 验证失败")
     if not en_ok: issues.append("法条英文翻译验证失败")
+    if not repeal_ok: issues.append("废止规则验证失败")
 
     print(f"\n{'='*60}")
     if issues:
