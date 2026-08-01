@@ -26,15 +26,16 @@ def main():
 
     updated = 0
     for law_id, title, category, old_domain in rows:
-        # 标题规范化
-        new_title = title
+        # 标题规范化（与 builder.normalize_title 同款规则）
+        new_title = title.replace('　', ' ')
         new_title = re.sub(r'最高人民法院 +最高人民检察院', '最高人民法院、最高人民检察院', new_title)
         new_title = re.sub(r'最高人民检察院 +最高人民法院', '最高人民检察院、最高人民法院', new_title)
         new_title = re.sub(r'最高人民法院 +公安部', '最高人民法院、公安部', new_title)
         new_title = re.sub(r'最高人民检察院 +公安部', '最高人民检察院、公安部', new_title)
         new_title = re.sub(r'(最高人民法院|最高人民检察院|公安部|国家安全部|司法部) +', r'\1', new_title)
         new_title = re.sub(r'([）》」』］]) +', r'\1', new_title)
-        new_title = re.sub(r'  +', ' ', new_title).strip()
+        new_title = re.sub(r'([\u4e00-\u9fff]) +(?=[\u4e00-\u9fff])', r'\1', new_title)
+        new_title = re.sub(r' +', ' ', new_title).strip()
         if new_title != title:
             conn.execute("UPDATE laws SET title = ? WHERE id = ?", (new_title, law_id))
 

@@ -313,10 +313,8 @@ def main():
         print("\n=== 阶段三：JSON → DB ===")
         from json_to_db.builder import run as json_to_db
         json_to_db()
-        from json_to_db.export_menu import run as export_menu
-        export_menu()
-        from json_to_db.export_flk_menu import run as export_flk_menu
-        export_flk_menu()
+        from classify_gongbao_domain import main as classify_gongbao
+        classify_gongbao()
         from extract_references import run as extract_refs
         extract_refs()
         from json_to_db.builder import load_references
@@ -379,13 +377,17 @@ def main():
         else:
             print("  ⚠  heading_en_map.json 不存在，跳过（可先运行 translate_headings.py 生成）")
 
+    # ── 5c. 导出菜单（需在 import_en 之后，保证 title_en 已写入）──
+    if not args.skip_db:
+        print("\n=== 阶段五c：导出菜单 (law_menu) ===")
+        from json_to_db.export_menu import run as export_menu
+        export_menu()
+
     # ── 6. MD export ──
     if not args.skip_md:
         print("\n=== 阶段六：DB → Markdown ===")
         from db_to_md.renderer import run as db_to_md
         db_to_md()
-        from db_to_md.render_flk import run as render_flk
-        render_flk()
 
     # ── 7. DB 完整性验证 ──
     if not args.skip_db:

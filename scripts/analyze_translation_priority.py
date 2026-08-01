@@ -25,7 +25,7 @@ def analyze():
 
     # 1. 已翻译法律清单
     translated_laws = conn.execute("""
-        SELECT DISTINCT l.id, l.title, l.legal_domain, l.category, l.is_flk, COUNT(n.id) AS article_count
+        SELECT DISTINCT l.id, l.title, l.legal_domain, l.category, COUNT(n.id) AS article_count
         FROM laws l
         JOIN nodes n ON l.id = n.law_id
         WHERE l.is_current = 1
@@ -33,7 +33,7 @@ def analyze():
           AND n.content_en IS NOT NULL
           AND n.content_en != ''
         GROUP BY l.id
-        ORDER BY l.legal_domain, l.is_flk DESC, l.pub_date DESC
+        ORDER BY l.legal_domain, l.pub_date DESC
     """).fetchall()
 
     # 2. 按法律部门统计
@@ -41,7 +41,6 @@ def analyze():
         SELECT
             l.legal_domain,
             COUNT(DISTINCT l.id) AS total_laws,
-            SUM(CASE WHEN l.is_flk = 1 THEN 1 ELSE 0 END) AS flk_laws,
             COUNT(DISTINCT CASE WHEN n.content_en IS NOT NULL AND n.content_en != '' THEN l.id END) AS translated_laws,
             SUM(CASE WHEN n.type = 'article' THEN 1 ELSE 0 END) AS total_articles,
             SUM(CASE WHEN n.type = 'article' AND n.content_en IS NOT NULL AND n.content_en != '' THEN 1 ELSE 0 END) AS translated_articles
@@ -63,13 +62,12 @@ def analyze():
             END
     """).fetchall()
 
-    # 3. 法考法律清单（未翻译）
-    flk_untranslated = conn.execute("""
+    # 3. 未翻译法律清单
+    untranslated_laws = conn.execute("""
         SELECT l.id, l.title, l.legal_domain, l.category, COUNT(n.id) AS article_count
         FROM laws l
         LEFT JOIN nodes n ON l.id = n.law_id AND n.type = 'article'
         WHERE l.is_current = 1
-          AND l.is_flk = 1
           AND l.id NOT IN (
               SELECT DISTINCT law_id FROM nodes
               WHERE type = 'article' AND content_en IS NOT NULL AND content_en != ''
@@ -78,13 +76,12 @@ def analyze():
         ORDER BY l.legal_domain, article_count DESC
     """).fetchall()
 
-    # 4. 按条文数量推荐翻译（非法考，≤100条）
+    # 4. 按条文数量推荐翻译（≤100条）
     short_laws = conn.execute("""
         SELECT l.id, l.title, l.legal_domain, l.category, COUNT(n.id) AS article_count
         FROM laws l
         LEFT JOIN nodes n ON l.id = n.law_id AND n.type = 'article'
         WHERE l.is_current = 1
-          AND l.is_flk = 0
           AND l.id NOT IN (
               SELECT DISTINCT law_id FROM nodes
               WHERE type = 'article' AND content_en IS NOT NULL AND content_en != ''
@@ -104,34 +101,33 @@ def analyze():
 
     # 已翻译法律
     report.append("## ✅ 已翻译法律（11 部）\n\n")
-    report.append("| 法律名称 | 法律部门 | 分类 | 法考 | 条文数 |\n")
-    report.append("|---------|---------|------|------|-------|\n")
-    for law_id, title, domain, cat, is_flk, art_count in translated_laws:
-        flk_mark = "✓" if is_flk else ""
-        report.append(f"| {title} | {domain or ''} | {cat} | {flk_mark} | {art_count} |\n")
+    report.append("| 法律名称 | 法律部门 | 分类 | 条文数 |\n")
+    report.append("|---------|---------|------|-------|\n")
+    for law_id, title, domain, cat, art_count in translated_laws:
+        report.append(f"| {title} | {domain or ''} | {cat} | {art_count} |\n")
 
     # 按法律部门统计
     report.append("\n## 📊 按法律部门统计\n\n")
-    report.append("| 法律部门 | 总法律数 | 法考法律 | 已翻译 | 总条文数 | 已翻译条文 | 翻译率 |\n")
-    report.append("|---------|---------|---------|-------|---------|-----------|-------|\n")
-    for domain, total, flk, trans, total_art, trans_art in domain_stats:
+    report.append("| 法律部门 | 总法律数 | 已翻译 | 总条文数 | 已翻译条文 | 翻译率 |\n")
+    report.append("|---------|---------|-------|---------|-----------|-------|\n")
+    for domain, total, trans, total_art, trans_art in domain_stats:
         domain_name = domain if domain else "未分类"
         trans_pct = f"{trans_art * 100.0 / total_art:.1f}%" if total_art > 0 else "0%"
-        report.append(f"| {domain_name} | {total} | {flk} | {trans} | {total_art} | {trans_art} | {trans_pct} |\n")
+        report.append(f"| {domain_name} | {total} | {trans} | {total_art} | {trans_art} | {trans_pct} |\n")
 
-    # 推荐翻译：法考法律
-    report.append("\n## 🎯 推荐翻译（优先级 P0）：法考法律（未翻译）\n\n")
-    report.append(f"共 {len(flk_untranslated)} 部，按条文数量降序：\n\n")
+    # 推荐翻译：未翻译法律
+    report.append("\n## 🎯 推荐翻译（优先级 P0）：未翻译法律\n\n")
+    report.append(f"共 {len(untranslated_laws)} 部，按条文数量降序：\n\n")
     report.append("| 法律名称 | 法律部门 | 分类 | 条文数 |\n")
     report.append("|---------|---------|------|-------|\n")
-    for law_id, title, domain, cat, art_count in flk_untranslated[:50]:  # 只显示前50
+    for law_id, title, domain, cat, art_count in untranslated_laws[:50]:  # 只显示前50
         report.append(f"| {title} | {domain or ''} | {cat} | {art_count} |\n")
 
-    if len(flk_untranslated) > 50:
-        report.append(f"\n*（省略剩余 {len(flk_untranslated) - 50} 部法考法律）*\n")
+    if len(untranslated_laws) > 50:
+        report.append(f"\n*（省略剩余 {len(untranslated_laws) - 50} 部法律）*\n")
 
     # 推荐翻译：短法律（≤100条）
-    report.append(f"\n## 💡 推荐翻译（优先级 P1）：短法律（≤100条，非法考）\n\n")
+    report.append(f"\n## 💡 推荐翻译（优先级 P1）：短法律（≤100条）\n\n")
     report.append(f"共 {len(short_laws)} 部，按条文数量降序（前50）：\n\n")
     report.append("| 法律名称 | 法律部门 | 分类 | 条文数 |\n")
     report.append("|---------|---------|------|-------|\n")
@@ -139,17 +135,17 @@ def analyze():
         report.append(f"| {title} | {domain or ''} | {cat} | {art_count} |\n")
 
     # 总结建议
-    total_flk_articles = sum(art_count for _, _, _, _, art_count in flk_untranslated)
+    total_untranslated_articles = sum(art_count for _, _, _, _, art_count in untranslated_laws)
     total_short_articles = sum(art_count for _, _, _, _, art_count in short_laws)
 
     report.append("\n## 📝 翻译建议\n\n")
     report.append("### 优先级分级\n\n")
-    report.append("**P0（必须翻译）：法考法律**\n")
-    report.append(f"- 数量：{len(flk_untranslated)} 部\n")
-    report.append(f"- 条文数：约 {total_flk_articles} 条\n")
-    report.append(f"- 预计成本：${total_flk_articles * 0.05:.0f}（按 $0.05/条估算）\n")
-    report.append(f"- 翻译时间：约 {total_flk_articles // 500:.0f}-{total_flk_articles // 300:.0f} 小时\n")
-    report.append("- 理由：法考法律是用户核心需求，翻译完成后覆盖主要法律体系\n\n")
+    report.append("**P0（必须翻译）：未翻译法律**\n")
+    report.append(f"- 数量：{len(untranslated_laws)} 部\n")
+    report.append(f"- 条文数：约 {total_untranslated_articles} 条\n")
+    report.append(f"- 预计成本：${total_untranslated_articles * 0.05:.0f}（按 $0.05/条估算）\n")
+    report.append(f"- 翻译时间：约 {total_untranslated_articles // 500:.0f}-{total_untranslated_articles // 300:.0f} 小时\n")
+    report.append("- 理由：优先完成主要法律体系的核心法律\n\n")
 
     report.append("**P1（建议翻译）：短法律（≤100条）**\n")
     report.append(f"- 数量：{len(short_laws)} 部\n")
@@ -162,7 +158,7 @@ def analyze():
     report.append("- 可先翻译行政法规、司法解释中的常用文件\n\n")
 
     report.append("### 执行步骤\n\n")
-    report.append("1. **优先翻译法考法律**：运行 `translate_to_en.py --filter-flk` 只翻译法考法律\n")
+    report.append("1. **优先翻译未翻译法律**：运行 `translate_to_en.py` 翻译\n")
     report.append("2. **逐步扩展**：翻译短法律（≤100条），快速提升覆盖率\n")
     report.append("3. **质量优先**：每完成一批翻译，运行质量验证脚本\n")
     report.append("4. **持续更新**：新法律发布后，及时添加到翻译队列\n\n")
@@ -174,9 +170,9 @@ def analyze():
     # 打印摘要
     print("\n📊 翻译进度摘要：")
     print(f"  已翻译法律：{len(translated_laws)} 部")
-    print(f"  法考法律（未翻译）：{len(flk_untranslated)} 部，约 {total_flk_articles} 条")
+    print(f"  法考法律（未翻译）：{len(untranslated_laws)} 部，约 {total_untranslated_articles} 条")
     print(f"  短法律（≤100条，未翻译）：{len(short_laws)} 部，约 {total_short_articles} 条")
-    print(f"\n💰 预计翻译成本（P0+P1）：${(total_flk_articles + total_short_articles) * 0.05:.0f}")
+    print(f"\n💰 预计翻译成本（P0+P1）：${(total_untranslated_articles + total_short_articles) * 0.05:.0f}")
 
 
 if __name__ == '__main__':

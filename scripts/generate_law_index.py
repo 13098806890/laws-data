@@ -57,6 +57,13 @@ def _load_existing_index() -> dict:
     return {entry['filename']: entry['law_id'] for entry in data}
 
 
+def _load_existing_entries() -> list[dict]:
+    """加载已有索引的完整条目列表"""
+    if not INDEX_PATH.exists():
+        return []
+    return json.loads(INDEX_PATH.read_text(encoding='utf-8'))
+
+
 def run():
     # 扫描所有 JSON 文件
     paths = sorted(
@@ -145,6 +152,11 @@ def run():
                 'pub_date':     entry['pub_date'],
                 'effective_date': entry['effective_date'],
             })
+    # 保留不在 JSON_DIR 中的既有条目（如公报目录文件），避免索引丢失导致 id 重新分配
+    json_filenames = {e['filename'] for e in index_entries}
+    for e in _load_existing_entries():
+        if e['filename'] not in json_filenames:
+            index_entries.append(e)
     index_entries.sort(key=lambda x: x['law_id'])
 
     INDEX_PATH.write_text(json.dumps(index_entries, ensure_ascii=False, indent=2), encoding='utf-8')

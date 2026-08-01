@@ -61,7 +61,7 @@ def main():
         print("\n── Step 0/4: JSON → DB 重建（laws + legal_domain + subject_area）──")
         if not run(f"python3 -m json_to_db.builder", cwd=SCRIPTS):
             sys.exit(1)
-        if not run(f"python3 -m json_to_db.export_menu", cwd=SCRIPTS):
+        if not run(f"python3 '{SCRIPTS / 'classify_gongbao_domain.py'}'"):
             sys.exit(1)
 
     if not LAWS_DATA_DB.exists() and not args.validate_only:
@@ -84,6 +84,12 @@ def main():
         print("\n── Step 2/4: 导入法条英文翻译 (nodes.content_en) ──")
         if not run(f"python3 '{SCRIPTS / 'import_en.py'}'"):
             print("  ⚠ 部分法律可能有缺失，继续验证…")
+
+    # ── Step 2b: 导出菜单（需在 import_en 之后，保证 title_en 已写入）──
+    if not args.skip_json_rebuild and not args.validate_only:
+        print("\n── Step 2b: 导出菜单 (law_menu) ──")
+        if not run(f"python3 -m json_to_db.export_menu", cwd=SCRIPTS):
+            sys.exit(1)
 
     # ── Step 3: Classify gongbao entries (legal_domain) ──────────────────
     if not args.skip_gongbao and not args.validate_only:

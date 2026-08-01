@@ -1,0 +1,224 @@
+  ✅  No source file changes detected (1846 files checked)
+
+=== 阶段一：docx → JSON (跳过，源文件无变更) ===
+
+=== 阶段二：生成 law_index ===
+law_index.json 生成完成：2685 条，更新 JSON 文件 0 个
+  ✅ law_id 校验通过：2685 条索引，0 个不匹配
+
+=== 阶段三：JSON → DB ===
+
+=== JSON → 数据库 ===
+写入数据库: 1945 个文件
+  600/1945
+  800/1945
+  1000/1945
+  1200/1945
+  1400/1945
+  1600/1945
+  1800/1945
+法考标记完成：170 部法律标记为 is_flk=1
+数据库完成: laws=1531 nodes=79778 articles=71333 124.1MB
+
+=== 导入公报司法解释 ===
+
+导入公报司法解释：923 个文件
+  ⚠ extract_content 失败 [198501_最高人民法院关于人民法院可以直接与银行系统的营业所、信用社联系查询、冻结或者扣划企事业等单位存款的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198501_最高人民法院关于审判人员可否担任民事案件当事人的委托代理人的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198501_最高人民法院关于指定重庆市中级人民法院办理部分专利纠纷案件的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198501_最高人民法院关于日本回国孤儿与在我国的配偶离婚经我国法院调解双方达成协议可否制发调解书的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198501_最高人民法院关于申请执行仲裁裁决应向何地法院提出的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198502_最高人民法院关于个人非法制造、销售他人注册商标标识而构成犯罪的应按假冒商标罪惩处的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198502_最高人民法院关于外国驻华使馆的职员能否以外交代表身份为本国国民在我国聘请中国律师代理民事诉讼的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198502_最高人民法院关于缓刑考验期内表现好的罪犯可否缩减其缓刑考验期限的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198503_最高人民法院关于一方当事人在国内居住、另一方当事人在国外居住的涉外民事案件的上诉期应如何确定的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198503_最高人民法院关于合同纠纷当事人一方向仲裁机关申请仲裁，仲裁机关已立案，另一方向人民法院起诉，人民法院应否受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198503_最高人民法院关于国内工矿产品购销合同、农副产品购销合同中的合同履行地如何确定的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198503_最高人民法院关于男女登记离婚后一方翻悔，向人民法院提起诉讼，人民法院是否应当受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198503_最高人民法院司法部关于已公证的债权文书依法强制执行问题的答复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198504_最高人民法院关于人民法院依法执行行政机关的行政处罚决定应用何种法律文书的问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198504_最高人民法院关于人民法院审理经济行政案件不应进行调解的通知.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198601_最高人民法院关于二审人民法院作出的维持一审人民法院驳回起诉的裁定，发现确有错误应如何予以纠正的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198601_最高人民法院关于原告向某人民法院起诉后撤诉又向另一个人民法院起诉该法院是否受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198601_最高人民法院关于成武县油化二厂诉瑞昌县流庄乡砖瓦厂购销合同纠纷案管辖问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198601_最高人民法院关于美国法院未通过外交途径迳直将离婚判决书寄给我人民法院如何处理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198601_最高人民法院对我国留学生夫妻双方要求离婚如何办理离婚手续的通知.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198602_最高人民法院关于上级人民法院发现下级人民法院对没有严重妨害民事诉讼行为的当事人采取的强制措施能否纠正问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198602_最高人民法院关于土改后不久被收养的子女能否参加分割土改前的祖遗房产的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198602_最高人民法院关于失踪人的工作单位能否向人民法院申请宣告失踪人死亡的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198602_最高人民法院关于如何确定合同签订地问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198602_最高人民法院关于继母与生父离婚后仍有权要求已与其形成抚养关系的继子女履行赡养义务的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198603_最高人民法院关于典当房屋在“文革”期间未能按期回赎，应作时效中止处理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198603_最高人民法院关于在土改前已分家析产的房屋，土改时误登在一人名下的产权仍归双方各自所有的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198603_最高人民法院关于对分家析产的房屋再立遗嘱变更产权，其遗嘱是否有效的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198603_最高人民法院关于未成年的养子女，其养父在国外死亡后回生母处生活，仍有权继承其养父的遗产的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198603_最高人民法院关于需要再审而又发现遗漏了诉讼第三人的案件应指令哪一审法院按什么程序再审问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198604_最高人民法院关于公民对宅基地只有使用权没有所有权的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198604_最高人民法院关于合同转让后如何确定合同签订地的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198604_最高人民法院关于在审理经济纠纷案件中发现经济犯罪问题后移送有关部门，是否退还预收的案件受理费的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198701_最高人民法院关于租赁契约在履行期间发生争执新订立协议在办理公证时一方反悔并拒绝签字、受领公证书，应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198701_最高人民法院关于邮电部门造成电报稽延、错误是否承担赔偿责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198701_最高人民法院关于非所有权人将他人房屋投资入股应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198702_最高人民法院关于土改时部分确权、部分未确权的祖遗房产应如何继承问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198702_最高人民法院关于地方各级人民法院不应制定司法解释性文件的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198702_最高人民法院关于对判处死刑缓期二年执行期满后尚未裁定减刑前又犯新罪的罪犯能否执行死刑问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198703_最高人民法院关于产权人生前已处分的房屋死后不应认定为遗产的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198703_最高人民法院关于人民法院在审判工作中能否采用人类白细胞抗原作亲子鉴定问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198704_最高人民法院关于企业开办的公司撤销后由谁作为诉讼主体问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198704_最高人民法院关于地方人民政府规定可向人民法院起诉的行政案件法院应否受理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198704_最高人民法院关于民事诉讼法（试行）实施前已经生效的判决当事人申请执行超过法定期限的，无特殊理由依法不予支持的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198704_最高人民法院关于铁路运输法院是否受理治安行政案件的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于《人民法院审理治安行政案件具体应用法律的若干问题的暂行规定》是否适用于审理其他行政案件的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于人民法院发现已经受理的申请执行仲裁裁决或不服仲裁裁决而起诉的案件不属本院管辖应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于侵害名誉权案件有关报刊社应否列为被告和如何适用管辖问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于借款合同双方当事人未经保证人同意达成延期还款协议后保证人是否继续承担担保责任的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于在一审判决后的上诉期限内原审法院能否采取诉讼保全措施的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于如何核定案件受理费的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于经人民法院裁定冻结的当事人银行存款其他人民法院不应就同一笔款额重复冻结问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198801_最高人民法院关于被判处拘役或者三年以下有期徒刑宣告缓刑的罪犯减刑的管辖和处理程序的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198802_最高人民法院关于保险金能否作为被保险人遗产的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198802_最高人民法院关于如何确定合同履行地问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198802_最高人民法院关于海关扣留走私罪嫌疑人的时间可否折抵刑期的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198803_最高人民法院关于刑事案件取保候审的被告人在法院审理期间潜逃应宣告中止审理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198803_最高人民法院关于同意指定青岛市中级人民法院为审理专利纠纷案件第一审法院的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198803_最高人民法院关于由别人代为起草而以个人名义发表的会议讲话作品其著作权（版权）应归个人所有的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198803_最高人民法院关于第二审人民法院审理被害人对刑事案件中附带的民事诉讼部分提出的上诉应全案审查并就附带民事诉讼部分作出终审裁判的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198804_最高人民法院关于作为保证人的合伙组织被撤销后自行公告限期清理债权债务的，债权人在诉讼时效期间内有权要求合伙人承担保证责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198804_最高人民法院关于信用社违反规定手续退汇给他人造成损失应承担民事责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198804_最高人民法院关于雇工合同应当严格执行劳动保护法规问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198901_最高人民法院关于假冒商标案件两个问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198901_最高人民法院关于对无期徒刑犯减刑后原审法院发现原判决确有错误予以改判，原减刑裁定应否撤销问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198903_最高人民法院关于保险货物发生损失引起运输合同赔偿纠纷如何适用法律问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198903_最高人民法院关于典当房屋被视为绝卖以后确认产权程序问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198903_最高人民法院关于对一方当事人下落不明未满两年的离婚案件是否受理和公告送达问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198903_最高人民法院关于拐卖人口案件中婴儿、幼儿、儿童年龄界限如何划分问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198903_最高人民法院关于经济纠纷案件复查期间执行问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [198904_最高人民法院关于在经济纠纷案件执行过程中，自愿达成和解协议后，一方当事人不履行或者翻悔，可否按原生效法律文书执行问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199001_最高人民法院关于人民法院离退休审判人员不得担任参与自己审理过的案件一方当事人的委托代理人的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199001_最高人民法院关于已分家独自生活的被赡养人致人损害时不能由赡养人承担民事责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199002_最高人民法院关于民事诉讼当事人因证据不足撤诉后在诉讼时效内再次起诉人民法院应否受理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199002_最高人民法院关于高级人民法院将死刑案件改判为死刑缓期二年执行的判决书表述问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199003_最高人民法院关于己提出上诉的共同犯罪案件，在第一审判决宣告时其中被判较短有期徒刑或拘役的被告人的刑期已满，是否立即将其解除羁押的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199003_最高人民法院关于已满十四岁不满十六岁的人过失致人重伤是否应负刑事责任的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199003_最高人民法院关于私房改造中典当双方都是被改造户的回赎案件应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199003_最高人民法院关于第三人能否对管辖权提出异议问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199003_最高人民法院关于第二审人民法院因追加、更换当事人发回重审的民事裁定书上，应如何列当事人问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199004_最高人民法院关于中国当事人向人民法院申请承认外国法院离婚判决效力问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199004_最高人民法院关于如何确定刑满释放日期的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199004_最高人民法院关于工商行政管理机关对无效经济合同引起的财产争议处理后当事人向人民法院起诉是否受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199103_最高人民法院关于审判人员在审理民事、经济纠纷案件中徇私舞弊枉法裁判构成犯罪的应当依照刑法第一百八十八条规定追究刑事责任的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199104_最高人民法院关于企业经营者依企业承包经营合同要求保护其合法权益的起诉人民法院应否受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199104_最高人民法院关于出借银行帐户的当事人是否承担民事责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199201_最高人民法院关于因科技拨款有偿使用合同纠纷提起的诉讼人民法院应予受理的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199201_最高人民法院关于国内船舶发生海损事故造成的营运损失应列入海损赔偿范围的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199201_最高人民法院关于行政机关对土地争议的处理决定生效后一方不履行另一方不应以民事侵权向法院起诉的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199202_最高人民法院关于不服工商行政管理机关的确认经济合同无效及财产损失的处理决定的案件应属行政案件的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199202_最高人民法院关于审理合伙型联营体和个人合伙对外债务纠纷案件应否一并确定合伙内部各方的债务份额的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199202_最高人民法院关于被判处死刑的被告人在上诉期满后又提出撤回上诉的应当如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199202_最高人民法院关于财产保险单能否用于抵押的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199202_最高人民法院关于购销合同标的物掺杂使假引起的诉讼如何确定诉讼时效的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199203_最高人民法院关于已满十四岁不满十六岁的人犯走私、贩卖、运输、制造毒品罪应当如何适用法律问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199203_最高人民法院印发《关于适用〈中华人民共和国民事诉讼法〉若干问题的意见》的通知.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199204_最高人民法院关于刊登侵害他人名誉权小说的出版单位在作者已被判刑后还应否承担民事责任的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199301_最高人民法院关于未成年的劳教人员解除劳动教养后三年内犯罪是否适用《全国人民代表大会常务委员会关于处理逃跑或者重新犯罪的劳改犯和劳教人员的决定》的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199302_最高人民法院关于企业或个人欠国家银行贷款逾期两年未还应当适用民法通则规定的诉讼时效问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199302_最高人民法院关于判决宣告后又发现被判刑的犯罪分子的同种漏罪是否实行数罪并罚问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199303_最高人民法院关于在专利侵权诉讼中当事人均拥有专利权应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199303_最高人民法院关于破坏生产单位正在使用的电动机是否构成破坏电力设备罪问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于严厉打击偷渡犯罪活动的通知.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于人民法院审理离婚案件处理子女抚养问题的若干具体意见.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于人民法院审理离婚案件处理财产分割问题的若干具体意见.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于人民法院应否受理当事人不服治安管理处罚而提起的刑事自诉问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于如何确定借款合同履行地问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于对因妨害民事诉讼被罚款拘留的人不服决定申请复议的期间如何确定问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于对无法定和约定期限的工矿产品内在质量提出异议应如何确定期限问题的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199304_最高人民法院关于高级人民法院指令基层人民法院再审的裁定中应否撤销中级人民法院驳回再审申请的通知问题的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199401_最高人民法院关于办理非法制造、买卖、运输、私藏钢珠枪犯罪案件适用法律问题的通知.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199401_最高人民法院关于对破产案件的债务人未被执行的财产均应中止执行问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199401_最高人民法院关于贪污、挪用公款所生利息应否计入贪污、挪用公款犯罪数额问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199401_最高人民法院经济纠纷案件适用简易程序开庭审理的若干规定.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199402_最高人民法院关于企业开办的其他企业被撤销或者歇业后民事责任承担问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199402_最高人民法院关于债务人有多个债权人而将其全部财产抵押给其中一个债权人是否有效问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199402_最高人民法院关于判有死刑的共同犯罪案件被告人未上诉检察院未抗诉复核中发现判决确有错误的应如何制作法律文书问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199402_最高人民法院关于在附加剥夺政治权利执行期间重新犯罪的被告人是否适用数罪并罚问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199402_最高人民法院关于对拐卖、绑架妇女（幼女）过程中又奸淫被害人的行为应当如何定罪问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199403_最高人民法院关于废止1993年底以前发布的部分司法解释的通知.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199403_最高人民法院最高人民检察院关于办理伪造、倒卖、盗窃发票刑事案件适用法律的规定.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199501_最高人民法院关于国营企业购买私房已经使用多年何时补办批准手续方可承认买卖关系有效的复函.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199501_最高人民法院关于适用《全国人民代表大会常务委员会关于惩治侵犯著作权的犯罪的决定》若干问题的解释.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199502_最高人民法院关于未经对方当事人同意私自录制其谈话取得的资料不能作为证据使用的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199503_最高人民法院关于审理生产、销售伪劣产品刑事案件如何认定“违法所得数额”的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199503_最高人民法院关于对执行程序中的裁定的抗诉不予受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199504_最高人民法院关于人民检察院提出抗诉按照审判监督程序再审维持原裁判的民事、经济、行政案件，人民检察院再次提出抗诉应否受理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199504_最高人民法院关于对设置圈套诱骗他人参赌又向索还钱财的受骗者施以暴力或暴力威胁的行为应如何定罪问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199601_最高人民法院关于办理违反公司法受贿、侵占、挪用等刑事案件适用法律若干问题的解释.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199602_最高人民法院关于人民法院依法有权查询、冻结和扣划邮政储蓄存款问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199602_最高人民法院关于金融机构为行政机关批准开办的公司提供注册资金验资报告不实应当承担责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199603_最高人民法院关于人民法院执行《中华人民共和国国家赔偿法》几个问题的解释.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199603_最高人民法院关于劳动争议仲裁委员会的复议仲裁决定书可否作为执行依据问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199603_最高人民法院关于受理房屋拆迁、补偿、安置等案件问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199603_最高人民法院关于如何确定委托贷款协议纠纷诉讼主体资格的批复.json]: total_articles=0 after extract_content
+  200/923 (inserted=199)
+  ⚠ extract_content 失败 [199603_最高人民法院关于当事人因对不予执行仲裁裁决的裁定不服而申请再审人民法院不予受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199603_最高人民法院关于税务机关是否有义务协助人民法院直接划拨退税款问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199603_最高人民法院关于逾期付款违约金应当依据何种标准计算问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199604_最高人民法院关于信用卡透支利息可否计算复利问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199604_最高人民法院关于在破产程序中当事人或人民检察院对人民法院作出的债权人优先受偿的裁定申请再审或抗诉应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199604_最高人民法院关于对企业借贷合同借款方逾期不归还借款的应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199604_最高人民法院关于检察机关对先予执行的民事裁定提出抗诉人民法院应当如何审理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199701_最高人民法院关于实行社会保险的企业破产后各种社会保险统筹费用应缴纳至何时问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199701_最高人民法院关于民事诉讼委托代理人在执行程序中的代理权限问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199702_最高人民法院关于对注册资金投入未达到法规规定最低限额的企业法人签订的经济合同效力如何确认问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199702_最高人民法院关于超过诉讼时效期间当事人达成的还款协议是否应当受法律保护问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199703_最高人民法院关于人民法院裁定撤销仲裁裁决或驳回当事人申请后当事人能否上诉问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199703_最高人民法院关于城市街道办事处是否应当独立承担民事责任的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199703_最高人民法院关于对企业法人破产还债程序终结的裁定的抗诉应否受理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199703_最高人民法院关于承运人就海上货物运输向托运人、收货人或提单持有人要求赔偿的请求权时效期间的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199704_最高人民法院关于第二审人民法院审理死刑案件被告人没有委托辩护人的是否应为其指定辩护人问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199801_最高人民法院关于审理中外合资经营合同纠纷案件如何清算合资企业问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199801_最高人民法院关于对故意伤害、盗窃等严重破坏社会秩序的犯罪分子能否附加剥夺政治权利问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199801_最高人民法院关于对被执行人存在银行的凭证式国库券可否采取执行措施问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199801_最高人民法院关于执行《中华人民共和国刑法》确定罪名的规定.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199801_最高人民法院关于适用法发〔1996〕28号司法解释问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199801_最高人民法院关于验资单位对多个案件债权人损失应如何承担责任的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199802_最高人民法院关于如何理解《关于适用〈中华人民共和国民事诉讼法〉若干问题的意见》第31条第2款的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199803_最高人民法院关于对怀孕妇女在羁押期间自然流产审判时是否可以适用死刑问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199803_最高人民法院关于对案外人的财产能否进行保全问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199803_最高人民法院关于第二审法院裁定按自动撤回上诉处理的案件第一审法院能否再审问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199803_最高人民法院关于经商检局检验出口的商品被退回应否将商检局列为经济合同质量纠纷案件当事人问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199804_最高人民法院关于人民法院不予受理人民检察院单独就诉讼费负担裁定提出抗诉问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199804_最高人民法院关于劳动仲裁委员会逾期不作出仲裁裁决或者作出不予受理通知的劳动争议案件人民法院应否受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199804_最高人民法院关于未被续聘的仲裁员在原参加审理的案件裁决书上签名人民法院应当执行该仲裁裁决书的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199804_最高人民法院关于能否将国有土地使用权折价抵偿给抵押权人问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199901_最高人民法院关于人民法院决定暂予监外执行有关问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199901_最高人民法院关于依据何种标准计算电话费滞纳金问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199902_最高人民法院关于交通事故中的财产损失是否包括被损车辆停运损失问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199902_最高人民法院关于人民检察院对民事调解书提出抗诉人民法院应否受理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199902_最高人民法院关于如何确认公民与企业之间借贷行为效力问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199902_最高人民法院关于对在执行死刑前发现重大情况需要改判的案件如何适用程序问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199902_最高人民法院关于当事人对人民法院撤销仲裁裁决的裁定不服申请再审人民法院是否受理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199902_最高人民法院关于超过诉讼时效期间借款人在催款通知单上签字或者盖章的法律效力问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199902_最高人民法院关于逾期付款违约金应当按照何种标准计算问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199903_最高人民法院关于当事人持台湾地区有关法院民事调解书或者有关机构出具或确认的调解协议书向人民法院申请认可人民法院应否受理的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199904_最高人民法院关于村民小组组长利用职务便利非法占有公共财物行为如何定性问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199904_最高人民法院关于被盗机动车辆肇事后由谁承担损害赔偿责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [199905_最高人民法院关于我国仲裁机构作出的仲裁裁决能否部分撤销问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200002_最高人民法院关于刑事裁判文书中刑期起止日期如何表述问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200002_最高人民法院关于如何理解刑事诉讼法第二百一十三条中“交付执行的人民法院”问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200002_最高人民法院关于审理强奸案件有关问题的解释.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200002_最高人民法院关于对受委托管理、经营国有财产人员挪用国有资金行为如何定罪问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200003_最高人民法院关于农村合作基金会从业人员犯罪如何定性问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200003_最高人民法院关于加强和改进委托执行工作的若干规定.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200004_最高人民法院予以废止的1999年底以前发布的有关司法解释目录（第三批）.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200004_最高人民法院关于人民检察院对撤销仲裁裁决的民事裁定提起抗诉人民法院应如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200004_最高人民法院关于国家工作人员利用职务上的便利为他人谋取利益离退休后收受财物行为如何处理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200004_最高人民法院关于如何处理人民检察院提出的暂缓执行建议问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200004_最高人民法院关于对为索取法律不予保护的债务非法拘禁他人行为如何定罪问题的解释.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200005_最高人民法院关于因法院错判导致债权利息损失扩大保证人应否承担责任问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200005_最高人民法院关于如何理解刑法第二百七十二条规定的“挪用本单位资金归个人使用或者借贷给他人”问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200005_最高人民法院关于当事人对仲裁协议的效力提出异议由哪一级人民法院管辖问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200005_最高人民法院关于未被公安机关正式录用的人员狱医能否构成失职致使在押人员脱逃罪主体问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200006_最高人民法院关于修改《最高人民法院关于逾期付款违约金应当按照何种标准计算问题的批复》的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200006_最高人民法院关于审理单位犯罪案件对其直接负责的主管人员和其他直接责任人员是否区分主犯、从犯问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200101_最高人民法院关于人民检察院对不撤销仲裁裁决的民事裁定提出抗诉人民法院应否受理问题的批复.json]: total_articles=0 after extract_content
+  ⚠ extract_content 失败 [200101_最高人民法

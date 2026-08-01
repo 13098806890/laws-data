@@ -24,6 +24,20 @@ LAW_INDEX_PATH = BASE_DIR / 'law_index.json'
 
 GONGBAO_SFJS_DIR = BASE_DIR / '最高人民法院公报' / '司法解释'
 
+
+def normalize_title(title: str) -> str:
+    """标题规范化：全角空格→空格、机构联合署名空格→顿号、CJK 词间空格删除。"""
+    title = title.replace('　', ' ')
+    title = re.sub(r'最高人民法院 +最高人民检察院', '最高人民法院、最高人民检察院', title)
+    title = re.sub(r'最高人民检察院 +最高人民法院', '最高人民检察院、最高人民法院', title)
+    title = re.sub(r'最高人民检察院 +公安部', '最高人民检察院、公安部', title)
+    title = re.sub(r'最高人民法院 +公安部', '最高人民法院、公安部', title)
+    title = re.sub(r'(最高人民法院|最高人民检察院|公安部|国家安全部|司法部) +', r'\1', title)
+    title = re.sub(r'([）》」』］]) +', r'\1', title)
+    title = re.sub(r'([\u4e00-\u9fff]) +(?=[\u4e00-\u9fff])', r'\1', title)
+    title = re.sub(r' +', ' ', title).strip()
+    return title
+
 # 覆盖名单：其他来源替换了主库版本的 law_id 集合
 # 格式：[{laws_id, gongbao_file, title, pub_date}, ...]
 _BLOCKLIST_PATH = Path(__file__).parent.parent / 'source_override_blocklist.json'
@@ -73,7 +87,6 @@ def create_schema(conn):
             version_date TEXT,
             is_current INTEGER DEFAULT 1,
             aliases TEXT,
-            is_flk INTEGER DEFAULT 0,
             source TEXT DEFAULT 'flk'  -- 'flk'=主库法律库, 'gongbao'=最高人民法院公报
         );
         CREATE TABLE IF NOT EXISTS nodes (
@@ -267,6 +280,8 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         title = re.sub(r'最高人民法院 +公安部', '最高人民法院、公安部', title)
         # 机构名后跟文本时，去掉多余空格（此时多机构组合已被替换为顿号版本）
         title = re.sub(r'[ \t]{2,}', ' ', title).strip()
+        # 全角空格 → 普通空格
+        title = title.replace('　', ' ')
         title = re.sub(r'(最高人民法院|最高人民检察院|公安部|国家安全部|司法部) +', r'\1', title)
         # 书名号/引号后的空格（排版换行残留）
         title = re.sub(r'([）》」』］]) +', r'\1', title)
@@ -281,8 +296,8 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         cur = conn.execute(
             """INSERT INTO laws (id, title, filename, category, legal_domain, subject_area, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
-                                 total_articles, full_text, version_date, is_current, aliases, is_flk, source)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,0,'flk')""",
+                                 total_articles, full_text, version_date, is_current, aliases, source)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,'flk')""",
             (data.get('law_id'), title, stem, category, data.get('legal_domain'),
              subject_area,
              data.get('pub_date'), data.get('effective_date'),
@@ -316,40 +331,6 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
         )
     """)
     conn.commit()
-
-    # 法考标记：从 法考目录.json 中读取法律标题集合，匹配并打标
-    flk_path = db_path.parent / '法考' / '法考目录.json'
-    if flk_path.exists():
-        flk_data = json.loads(flk_path.read_text(encoding='utf-8'))
-        flk_titles: set[str] = set()
-        for laws_list in flk_data.values():
-            flk_titles.update(laws_list)
-        # 规范化：半角括号→全角括号、去书名号，用于模糊匹配
-        # 不去掉末尾括号内容，否则"修正案(四)"和"修正案(十二)"会变成同一个键导致误匹配
-        def _to_fw(t: str) -> str:
-            return t.replace('(', '（').replace(')', '）')
-        def _no_marks(t: str) -> str:
-            return t.replace('《', '').replace('》', '')
-        # 建立四种规范化形式的查找集合
-        flk_variants: set[str] = set()
-        for t in flk_titles:
-            flk_variants.update([t, _to_fw(t), _no_marks(t), _no_marks(_to_fw(t))])
-        # 精确匹配优先，然后规范化匹配
-        all_laws = conn.execute('SELECT id, title FROM laws').fetchall()
-        matched_ids = []
-        for law_id, title in all_laws:
-            if (title in flk_titles or title in flk_variants
-                    or _to_fw(title) in flk_variants
-                    or _no_marks(title) in flk_variants
-                    or _no_marks(_to_fw(title)) in flk_variants):
-                matched_ids.append(law_id)
-        if matched_ids:
-            conn.executemany('UPDATE laws SET is_flk=1 WHERE id=?', [(i,) for i in matched_ids])
-            conn.commit()
-        flk_count = conn.execute('SELECT COUNT(*) FROM laws WHERE is_flk=1').fetchone()[0]
-        print(f'法考标记完成：{flk_count} 部法律标记为 is_flk=1')
-    else:
-        print('未找到 法考目录.json，跳过法考标记')
 
     laws     = conn.execute('SELECT COUNT(*) FROM laws').fetchone()[0]
     nodes    = conn.execute('SELECT COUNT(*) FROM nodes').fetchone()[0]
@@ -404,6 +385,24 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
         title_to_id[row[1]] = row[0]
         if row[0] > max_sfjs_id:
             max_sfjs_id = row[0]
+
+    # 从 law_index.json 读取既有公报条目映射（filename→id、规范化标题→id），
+    # 优先复用历史 id，保证 law_id 跨版本稳定
+    gongbao_index_by_filename: dict[str, int] = {}
+    gongbao_index_by_title: dict[str, int] = {}
+    if LAW_INDEX_PATH.exists():
+        try:
+            for entry in json.loads(LAW_INDEX_PATH.read_text(encoding='utf-8')):
+                if entry.get('law_id', 0) > max_sfjs_id:
+                    fn = entry.get('filename', '')
+                    if fn:
+                        gongbao_index_by_filename[fn] = entry['law_id']
+                    t = entry.get('title', '')
+                    if t:
+                        gongbao_index_by_title[normalize_title(t)] = entry['law_id']
+        except Exception:
+            print('  ⚠ law_index.json 读取失败，公报 id 将重新分配')
+
     # 新条目从 max+1 开始连续分配
     next_gongbao_id = max_sfjs_id + 1
 
@@ -413,7 +412,10 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
     for i, f in enumerate(files):
         d = json.loads(f.read_text(encoding='utf-8'))
         law_id = d.get('law_id')
-        title = d.get('title', '').strip()
+        title = normalize_title(d.get('title', ''))
+        if not law_id:
+            # 优先复用 law_index.json 中的 filename 映射（公报文件名的权威来源）
+            law_id = gongbao_index_by_filename.get(f.stem)
         if not law_id:
             if title in title_to_id:
                 law_id = title_to_id[title]
@@ -425,11 +427,13 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
                         law_id = db_id
                         break
         if not law_id:
+            # 再尝试 law_index.json 的规范化标题映射
+            law_id = gongbao_index_by_title.get(title)
+        if not law_id:
             # 主库中没有此标题 → 连续分配新 ID
             law_id = next_gongbao_id
             next_gongbao_id += 1
 
-        title   = d.get('title', '').strip()
         pub_date = d.get('pub_date', '')
 
         # 用临时 txt 文件让 extract_content 解析条文结构
@@ -485,8 +489,8 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
                 """INSERT OR IGNORE INTO laws
                    (id, title, filename, category, legal_domain, subject_area, pub_date,
                     effective_date, promulgation_info, issuing_org, doc_number,
-                    total_articles, full_text, version_date, is_current, aliases, is_flk, source)
-                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,NULL,0,'gongbao')""",
+                    total_articles, full_text, version_date, is_current, aliases, source)
+                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,NULL,'gongbao')""",
                 (law_id, title, filename, '司法解释',
                  _domain_map.get(law_id, ('', ''))[0],
                  _domain_map.get(law_id, ('', ''))[1],
