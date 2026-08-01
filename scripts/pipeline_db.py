@@ -26,7 +26,7 @@ from pathlib import Path
 
 LAWS_DATA = Path(__file__).parent.parent
 SCRIPTS   = LAWS_DATA / "scripts"
-APP_BUNDLE_DB = Path("/Users/doxie/Github/LawsSearch/ChineseLawsSearch/ChineseLawsSearch/law_content.db")
+APP_BUNDLE_DB = Path("/Users/xiedongze/Desktop/Github/ChineseLawsSearch/ChineseLawsSearch/law_content.db")
 LAWS_DATA_DB  = LAWS_DATA / "law_content.db"
 
 
