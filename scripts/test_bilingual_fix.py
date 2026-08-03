@@ -86,7 +86,7 @@ def test_existing_translation():
     import json
     from pathlib import Path
 
-    json_en_path = Path("/Users/doxie/Github/laws-data/json_en/法律/中华人民共和国民法典_20200528.json")
+    json_en_path = Path(__file__).parent.parent / "json_en/法律/中华人民共和国民法典_20200528.json"
 
     if not json_en_path.exists():
         print("⚠️  测试文件不存在，跳过此测试")

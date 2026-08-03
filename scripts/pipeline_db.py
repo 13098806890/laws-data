@@ -20,14 +20,17 @@
 """
 
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 LAWS_DATA = Path(__file__).parent.parent
 SCRIPTS   = LAWS_DATA / "scripts"
-APP_BUNDLE_DB = Path("/Users/xiedongze/Desktop/Github/ChineseLawsSearch/ChineseLawsSearch/law_content.db")
 LAWS_DATA_DB  = LAWS_DATA / "law_content.db"
+# App bundle 路径可被环境变量覆盖（跨 repo，默认指向本机 iOS 项目）
+APP_BUNDLE_DIR = Path(os.environ.get("LAWS_APP_BUNDLE_DIR", "/Users/doxie/Github/LawsSearch/ChineseLawsSearch/ChineseLawsSearch"))
+APP_BUNDLE_DB = APP_BUNDLE_DIR / "law_content.db"
 
 
 def run(cmd: str, cwd=None) -> bool:
@@ -46,6 +49,7 @@ def main():
     parser.add_argument("--skip-copy-back", action="store_true", help="Skip copying DB back to App bundle")
     parser.add_argument("--skip-gongbao", action="store_true", help="Skip gongbao table rebuild")
     parser.add_argument("--skip-import-en", action="store_true", help="Skip English translation import")
+    parser.add_argument("--skip-enhancements", action="store_true", help="Skip enhancements DB rebuild")
     parser.add_argument("--validate-only", action="store_true", help="Only run validation, skip all builds")
     args = parser.parse_args()
 
@@ -96,6 +100,12 @@ def main():
         print("\n── Step 3/4: 司法解 legal_domain 分类 ──")
         run(f"python3 '{SCRIPTS / 'classify_gongbao_domain.py'}'")
 
+    # ── Step 3.5: Rebuild enhancements (keyword_synonyms etc.) ───────────
+    if not args.skip_enhancements and not args.validate_only:
+        print("\n── Step 3.5/4: 重建 law_enhancements.db ──")
+        if not run(f"python3 '{SCRIPTS / 'build_enhancements.py'}'"):
+            print("  ⚠ 增强库重建失败，继续验证…")
+
     # ── Step 4: Validate ──────────────────────────────────────────────
     print("\n── Step 4/4: 验证 ──")
 
@@ -110,6 +120,10 @@ def main():
     # Repeal marks validation（验证公报源 repealed_by 字段是否正确应用）
     print("\n  ── 废止标记验证 ──")
     repeal_ok = run(f"python3 '{SCRIPTS / 'verify_repeal_rules.py'}'")
+
+    # Enhancements validation
+    print("\n  ── 增强库验证 ──")
+    enh_ok = run(f"python3 '{SCRIPTS / 'verify_enhancements.py'}'")
 
     # Quick FTS check
     print("\n  ── FTS 快速检查 ──")
@@ -128,6 +142,7 @@ db.close()
     if not ok: issues.append("gongbao 验证失败")
     if not en_ok: issues.append("法条英文翻译验证失败")
     if not repeal_ok: issues.append("废止规则验证失败")
+    if not enh_ok: issues.append("增强库验证失败")
 
     print(f"\n{'='*60}")
     if issues:
@@ -143,10 +158,18 @@ db.close()
         print(f"\n── 复制回 App bundle ──")
         size_mb = LAWS_DATA_DB.stat().st_size / 1024 / 1024
         if run(f"cp '{LAWS_DATA_DB}' '{APP_BUNDLE_DB}'"):
-            print(f"  ✅ 已复制 ({size_mb:.0f}MB)")
+            print(f"  ✅ law_content.db 已复制 ({size_mb:.0f}MB)")
         else:
             print(f"  ✗ 复制失败")
             sys.exit(1)
+        ENHANCEMENTS_DB = LAWS_DATA / "law_enhancements.db"
+        APP_ENHANCEMENTS_DB = APP_BUNDLE_DB.parent / "law_enhancements.db"
+        if ENHANCEMENTS_DB.exists():
+            if run(f"cp '{ENHANCEMENTS_DB}' '{APP_ENHANCEMENTS_DB}'"):
+                print(f"  ✅ law_enhancements.db 已复制")
+            else:
+                print(f"  ✗ 增强库复制失败")
+                sys.exit(1)
     else:
         print(f"\n  (跳过复制回 App bundle)")
 

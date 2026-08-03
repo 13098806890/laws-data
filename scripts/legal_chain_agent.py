@@ -35,8 +35,9 @@ except ImportError:
 
 # ── 路径 ──────────────────────────────────────────────────────────────
 
-DB_PATH              = Path("/Users/doxie/laws_data/law_content.db")
-ENHANCEMENTS_DB_PATH = Path("/Users/doxie/laws_data/law_enhancements.db")
+BASE_DIR = Path(__file__).parent.parent
+DB_PATH              = BASE_DIR / "law_content.db"
+ENHANCEMENTS_DB_PATH = BASE_DIR / "law_enhancements.db"
 
 # ── LLM 配置 ──────────────────────────────────────────────────────────
 
