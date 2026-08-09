@@ -1,0 +1,103 @@
+{
+  "law_id": 3500628,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Cases of Compensation for Personal Injury",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第一条",
+      "content_en": "Article 1 Where a compensation obligee initiates prosecution against a compensation obligor for compensation for material damage and mental damage due to infringement upon life, body, or health, the People's Court shall accept the case.\nThe term \"compensation obligee\" as used in this Article refers to the victim who directly suffers personal injury due to the tortious act or other causes of injury, as well as the close relatives of the deceased victim.\nThe term \"compensation obligor\" as used in this Article refers to a natural person, legal person, or unincorporated organization that shall bear civil liability according to law due to its own or another person's tortious act or other causes of injury."
+    },
+    {
+      "article_number": "第二条",
+      "content_en": "Article 2 Where a compensation obligee initiates prosecution against some of the joint tortfeasors, the People's Court shall add the other joint tortfeasors as co-defendants. Where the compensation obligee waives the claims against some of the joint tortfeasors during the proceedings, the other joint tortfeasors shall not bear joint and several liability for the compensation share that the defendant whose claim was waived should bear. Where the scope of liability is difficult to determine, each joint tortfeasor is presumed to bear equal liability.\nThe People's Court shall inform the compensation obligee of the legal consequences of waiving claims and shall state the circumstances of the waiver of claims in the legal instrument."
+    },
+    {
+      "article_number": "第三条",
+      "content_en": "Article 3 Where a worker of an employing unit that shall participate in work-related injury insurance pooling according to law suffers personal injury due to a work-related injury accident, and the worker or his or her close relatives initiate prosecution with the People's Court requesting the employing unit to bear civil compensation liability, they shall be informed to handle the matter in accordance with the provisions of the Regulations on Work-Related Injury Insurance.\nWhere a third party other than the employing unit causes personal injury to a worker through tort, and the compensation obligee requests the third party to bear civil compensation liability, the People's Court shall support the request."
+    },
+    {
+      "article_number": "第四条",
+      "content_en": "Article 4 Where a helper who provides labor services gratuitously causes damage to another person in the course of help activities, the person being helped shall bear compensation liability. Where the person being helped, after bearing compensation liability, seeks recourse against the helper who acted with intent or gross negligence, the People's Court shall support the claim. Where the person being helped expressly refuses the help, the person being helped shall not bear compensation liability."
+    },
+    {
+      "article_number": "第五条",
+      "content_en": "Article 5 Where a helper who provides labor services gratuitously suffers personal injury due to help activities, the helper and the person being helped shall bear corresponding liability according to their respective fault; where the person being helped expressly refuses the help, the person being helped shall not bear compensation liability, but may provide appropriate compensation within the scope of benefits received.\nWhere a helper suffers personal injury in the course of help activities due to the act of a third party, the helper has the right to request the third party to bear compensation liability and also has the right to request the person being helped to provide appropriate compensation. After providing compensation, the person being helped may seek recourse against the third party."
+    },
+    {
+      "article_number": "第六条",
+      "content_en": "Article 6 Medical expenses shall be determined based on the receipts for medical fees, hospitalization expenses, and other charges issued by medical institutions, in conjunction with relevant evidence such as medical records and diagnostic certificates. Where the compensation obligor objects to the necessity and reasonableness of the treatment, the compensation obligor shall bear the corresponding burden of adducing evidence.\nThe amount of compensation for medical expenses shall be determined based on the amount actually incurred before the conclusion of the debate at the first instance trial. Rehabilitation expenses necessary for functional recovery training, appropriate plastic surgery expenses, and other follow-up treatment expenses may be separately prosecuted by the compensation obligee after they are actually incurred. However, expenses that are determined to inevitably occur based on medical certificates or expert evaluation conclusions may be compensated together with the medical expenses already incurred."
+    },
+    {
+      "article_number": "第七条",
+      "content_en": "Article 7 Lost work expenses shall be determined based on the victim's lost work time and income status.\nLost work time shall be determined based on the certificate issued by the medical institution where the victim receives treatment. Where the victim continues to lose work time due to disability caused by injury, the lost work time may be calculated up to the day before the disability assessment date.\nWhere the victim has fixed income, lost work expenses shall be calculated based on the income actually reduced. Where the victim has no fixed income, such expenses shall be calculated based on the average income of the victim over the most recent three years; where the victim cannot adduce evidence to prove the average income status over the most recent three years, the calculation may be made by reference to the average wages of employees in the same or similar industry in the previous year at the place where the accepting court is located."
+    },
+    {
+      "article_number": "第八条",
+      "content_en": "Article 8 Nursing expenses shall be determined based on the income status of the nursing personnel, the number of nursing personnel, and the nursing period.\nWhere the nursing personnel have income, the calculation shall be made by reference to the provisions on lost work expenses; where the nursing personnel have no income or a hired nurse is employed, the calculation shall be made by reference to the labor remuneration standard of local nurses engaged in nursing of the same level. In principle, there shall be one nursing personnel, but where a medical institution or expert evaluation institution has a clear opinion, the number of nursing personnel may be determined by reference thereto.\nThe nursing period shall be calculated until the victim recovers the ability to take care of himself or herself. Where the victim cannot recover the ability to take care of himself or herself due to disability, a reasonable nursing period may be determined based on factors such as age and health condition, but shall not exceed twenty years at most.\nNursing after the victim's disability assessment shall be graded based on the degree of nursing dependence and in light of the circumstances of the configuration of assistive devices for disability."
+    },
+    {
+      "article_number": "第九条",
+      "content_en": "Article 9 Transportation expenses shall be calculated based on the expenses actually incurred by the victim and necessary accompanying personnel for medical treatment or transfer to another hospital. Transportation expenses shall be evidenced by formal receipts; the relevant receipts shall conform to the place, time, number of persons, and number of visits for medical treatment."
+    },
+    {
+      "article_number": "第十条",
+      "content_en": "Article 10 Hospitalization meal allowance may be determined by reference to the standard of meal allowance for business trips of ordinary staff members of local state organs.\nWhere the victim truly needs to go to another place for treatment and cannot be hospitalized due to objective reasons, the accommodation expenses and meal expenses actually incurred by the victim and the accompanying personnel shall be compensated to the extent that they are reasonable."
+    },
+    {
+      "article_number": "第十一条",
+      "content_en": "Article 11 Nutrition expenses shall be determined based on the victim's disability condition and with reference to the opinion of the medical institution."
+    },
+    {
+      "article_number": "第十二条",
+      "content_en": "Article 12 Disability compensation shall be calculated based on the victim's degree of loss of working capacity or the disability grade, according to the standard of per capita disposable income of urban residents in the previous year at the place where the accepting court is located, for a period of twenty years from the date of disability assessment. However, where the victim is over 60 years old, the period shall be reduced by one year for each additional year of age; where the victim is over 75 years old, the period shall be calculated as five years.\nWhere the victim is disabled due to injury but the actual income has not decreased, or the disability grade is relatively light but causes occupational impairment that seriously affects the victim's employment, the disability compensation may be adjusted accordingly."
+    },
+    {
+      "article_number": "第十三条",
+      "content_en": "Article 13 Expenses for assistive devices for disability shall be calculated according to the reasonable cost standard for ordinary suitable devices. Where the injury condition has special needs, the corresponding reasonable cost standard may be determined with reference to the opinion of the assistive device fitting institution.\nThe replacement cycle and compensation period of assistive devices shall be determined with reference to the opinion of the fitting institution."
+    },
+    {
+      "article_number": "第十四条",
+      "content_en": "Article 14 Funeral expenses shall be calculated based on the standard of average monthly wages of employees in the previous year at the place where the accepting court is located, at the total amount of six months."
+    },
+    {
+      "article_number": "第十五条",
+      "content_en": "Article 15 Death compensation shall be calculated according to the standard of per capita disposable income of urban residents in the previous year at the place where the accepting court is located, for a period of twenty years. However, where the victim is over 60 years old, the period shall be reduced by one year for each additional year of age; where the victim is over 75 years old, the period shall be calculated as five years."
+    },
+    {
+      "article_number": "第十六条",
+      "content_en": "Article 16 The living expenses of the persons supported by the victim shall be included in the disability compensation or death compensation."
+    },
+    {
+      "article_number": "第十七条",
+      "content_en": "Article 17 The living expenses of the persons supported by the victim shall be calculated based on the degree of loss of working capacity of the supporter, according to the standard of per capita consumption expenditure of urban residents in the previous year at the place where the accepting court is located. Where the supported person is a minor, the expenses shall be calculated until the age of 18; where the supported person has no working capacity and has no other source of living, the expenses shall be calculated for a period of twenty years. However, where the supported person is over 60 years old, the period shall be reduced by one year for each additional year of age; where the supported person is over 75 years old, the period shall be calculated as five years.\nA supported person refers to a minor to whom the victim shall bear support obligations according to law, or an adult close relative who has lost working capacity and has no other source of living. Where the supported person has other supporters, the compensation obligor shall only compensate the portion that the victim should bear according to law. Where there are several supported persons, the total annual compensation shall not exceed the per capita consumption expenditure of urban residents in the previous year."
+    },
+    {
+      "article_number": "第十八条",
+      "content_en": "Article 18 Where the compensation obligee adduces evidence proving that the per capita disposable income of urban residents at the place of domicile or habitual residence is higher than the standard at the place where the accepting court is located, the disability compensation or death compensation may be calculated according to the relevant standard at the place of domicile or habitual residence.\nThe relevant calculation standard for the living expenses of the persons supported by the victim shall be determined in accordance with the principle of the preceding paragraph."
+    },
+    {
+      "article_number": "第十九条",
+      "content_en": "Article 19 Where the determined nursing period, the payment period for assistive device expenses, or the payment period for disability compensation is exceeded, and the compensation obligee initiates prosecution with the People's Court requesting continued payment of nursing expenses, assistive device expenses, or disability compensation, the People's Court shall accept the case. Where the compensation obligee truly needs continued nursing, fitting of assistive devices, or has no working capacity or source of living, the People's Court shall order the compensation obligor to continue paying the relevant expenses for five to ten years."
+    },
+    {
+      "article_number": "第二十条",
+      "content_en": "Article 20 Where the compensation obligor requests payment of disability compensation and assistive device expenses by way of periodic payments, the compensation obligor shall provide corresponding security. The People's Court may determine to pay the relevant expenses by way of periodic payments based on the compensation obligor's payment capacity and the provision of security. However, expenses already incurred before the conclusion of the debate at the first instance trial, death compensation, and damages for mental anguish shall be paid in a lump sum."
+    },
+    {
+      "article_number": "第二十一条",
+      "content_en": "Article 21 The People's Court shall specify in the legal instrument the time, method, and standard for each payment of the periodic payments. Where the relevant statistical data change during the enforcement period, the payment amount shall be adjusted accordingly in a timely manner.\nPeriodic payments shall be paid according to the actual survival years of the compensation obligee and shall not be subject to the limits of the compensation periods provided in this Interpretation."
+    },
+    {
+      "article_number": "第二十二条",
+      "content_en": "Article 22 The terms \"per capita disposable income of urban residents,\" \"per capita consumption expenditure of urban residents,\" and \"average wages of employees\" as used in this Interpretation shall be determined according to the relevant statistical data for the previous year published by the government statistics department for each province, autonomous region, municipality directly under the Central Government, as well as special economic zones and cities specifically designated in the state plan.\nThe \"previous year\" refers to the statistical year preceding the conclusion of the debate at the first instance trial."
+    },
+    {
+      "article_number": "第二十三条",
+      "content_en": "Article 23 Damages for mental anguish shall be determined in accordance with the Interpretation of the Supreme People's Court on Several Issues concerning the Determination of Mental Damage Compensation Liability for Civil Infringements."
+    },
+    {
+      "article_number": "第二十四条",
+      "content_en": "Article 24 This Interpretation shall come into force as of May 1, 2022. Cases of personal injury compensation caused by tortious acts occurring after the coming into force of this Interpretation shall be governed by this Interpretation.\nWhere the judicial interpretations previously issued by this Court are inconsistent with this Interpretation, this Interpretation shall prevail."
+    }
+  ]
+}

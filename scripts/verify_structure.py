@@ -48,6 +48,8 @@ def check_law(conn, law_id: int, law_title: str) -> list[str]:
         return []
 
     # ── 1. 条文编号严格递增 ──────────────────────────────────────
+    # 附件/多文档拼接文件（如"方案+暂行规则"）会在文档边界重置条号，
+    # 只在同一父节点（章/节）内检查递增，跨父节点的重置视为正常
     article_nums = []
     for r in rows:
         if r[2] == 'article':
@@ -56,11 +58,13 @@ def check_law(conn, law_id: int, law_title: str) -> list[str]:
                 # fallback: parse from article_number string
                 num = cn_to_int(r[4] or '')
             if num and num > 0:
-                article_nums.append((num, r[4] or r[3] or ''))
+                article_nums.append((num, r[4] or r[3] or '', r[1]))
 
     for i in range(1, len(article_nums)):
-        prev_num, prev_label = article_nums[i - 1]
-        curr_num, curr_label = article_nums[i]
+        prev_num, prev_label, prev_parent = article_nums[i - 1]
+        curr_num, curr_label, curr_parent = article_nums[i]
+        if curr_parent != prev_parent:
+            continue  # 跨章/节（附件边界），条号重置合法
         if curr_num == prev_num:
             issues.append(f'  [重复条号] {prev_label} 与 {curr_label} 均为第{curr_num}条')
         elif curr_num > prev_num + 1:
@@ -129,9 +133,11 @@ def main():
     print(f'共检查 {len(laws)} 部法律')
     if total_issues == 0:
         print('✓ 未发现结构问题')
+        return 0
     else:
         print(f'✗ 发现 {problem_laws} 部法律存在 {total_issues} 个问题')
+        return 1
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

@@ -1,0 +1,407 @@
+{
+  "law_id": 3500461,
+  "title_en": "Several Provisions of the Supreme People's Court on Evidence in Civil Litigation",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第一条",
+      "content_en": "Article 1 Where a plaintiff files a prosecution with the People's Court or a defendant files a counterclaim, they shall provide corresponding evidence that meets the conditions for prosecution."
+    },
+    {
+      "article_number": "第二条",
+      "content_en": "Article 2 The People's Court shall explain to the parties the requirements for adducing evidence and the legal consequences, and urge the parties to actively, comprehensively, correctly, and honestly complete the adducing of evidence within a reasonable period.\nWhere a party is unable to collect evidence by itself due to objective reasons, it may apply to the People's Court for investigation and collection."
+    },
+    {
+      "article_number": "第三条",
+      "content_en": "Article 3 In the course of litigation, if a party states facts unfavorable to itself, or explicitly admits facts unfavorable to itself, the other party need not adduce evidence to prove them.\nWhere a party explicitly admits facts unfavorable to itself during evidence exchange, inquiry, or investigation, or in written materials such as the statement of prosecution, statement of defense, or agent's representation, the preceding paragraph shall apply."
+    },
+    {
+      "article_number": "第四条",
+      "content_en": "Article 4 Where a party neither admits nor denies facts unfavorable to itself asserted by the other party, after the judicial personnel explain and inquire, if the party still does not clearly express affirmation or denial, it shall be deemed to have admitted such facts."
+    },
+    {
+      "article_number": "第五条",
+      "content_en": "Article 5 Where a party entrusts a litigation agent to participate in the litigation, except for matters expressly excluded in the power of attorney, the admission of the litigation agent shall be deemed as the admission of the party.\nWhere the party is present and expressly denies the admission of the litigation agent, it shall not be deemed as an admission."
+    },
+    {
+      "article_number": "第六条",
+      "content_en": "Article 6 In an ordinary joint action, an admission made by one or several co-litigants shall be effective against the party who made the admission.\nIn a necessary joint action, where an admission is made by one or several co-litigants but denied by other co-litigants, the admission shall not be effective. Where the other co-litigants neither admit nor deny, and after the judicial personnel explain and inquire, still do not clearly express their opinions, it shall be deemed as an admission by all co-litigants."
+    },
+    {
+      "article_number": "第七条",
+      "content_en": "Article 7 Where a party admits facts unfavorable to itself asserted by the other party with limitations or conditions, the People's Court shall, based on the overall circumstances of the case, decide whether it constitutes an admission."
+    },
+    {
+      "article_number": "第八条",
+      "content_en": "Article 8 The facts specified in the first paragraph of Article 96 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China shall not be subject to the provisions on admission.\nWhere the admitted facts are inconsistent with the facts already ascertained, the People's Court shall not confirm them."
+    },
+    {
+      "article_number": "第九条",
+      "content_en": "Article 9 Where a party withdraws an admission before the conclusion of court debate under any of the following circumstances, the People's Court shall permit it:\n(1) The other party gives consent;\n(2) The admission was made under duress or a major misunderstanding.\nWhere the People's Court permits a party to withdraw an admission, it shall make an oral or written ruling."
+    },
+    {
+      "article_number": "第十条",
+      "content_en": "Article 10 The following facts need not be proved by the parties:\n(1) Natural laws, theorems, and laws;\n(2) Facts known to the general public;\n(3) Facts presumed according to legal provisions;\n(4) Other facts presumed based on known facts and rules of daily life experience;\n(5) Facts confirmed by effective awards of arbitration institutions;\n(6) Basic facts confirmed by legally effective judgments or rulings of the People's Court;\n(7) Facts proved by effective notarized instruments.\nExcept for the facts in items (2) to (5) of the preceding paragraph, where the party has contrary evidence sufficient to rebut them; and except for the facts in items (6) and (7), where the party has contrary evidence sufficient to overturn them."
+    },
+    {
+      "article_number": "第十一条",
+      "content_en": "Article 11 Where a party provides evidence to the People's Court, it shall provide the original document or original object. If it is necessary for the party to keep the original document or object, or if it is genuinely difficult to provide the original document or object, it may provide copies or reproductions that have been checked and found to be identical by the People's Court."
+    },
+    {
+      "article_number": "第十二条",
+      "content_en": "Article 12 Where movable property is used as evidence, the original object shall be submitted to the People's Court. If the original object is not suitable for removal or preservation, the party may provide reproductions, video materials, or other substitutes.\nAfter receiving the movable property or substitutes submitted by a party, the People's Court shall promptly notify both parties to come to the People's Court or the preservation site for inspection."
+    },
+    {
+      "article_number": "第十三条",
+      "content_en": "Article 13 Where a party uses immovable property as evidence, it shall provide the People's Court with video materials of the immovable property.\nIf the People's Court deems it necessary, it shall notify both parties to be present for inspection."
+    },
+    {
+      "article_number": "第十四条",
+      "content_en": "Article 14 Electronic data includes the following information and electronic documents:\n(1) Information published on network platforms such as web pages, blogs, and microblogs;\n(2) Communication information of network application services such as SMS, email, instant messaging, and communication groups;\n(3) Information such as user registration information, identity authentication information, electronic transaction records, communication records, and login logs;\n(4) Electronic documents such as documents, pictures, audio, video, digital certificates, and computer programs;\n(5) Other information stored, processed, and transmitted in digital form that can prove the facts of a case."
+    },
+    {
+      "article_number": "第十五条",
+      "content_en": "Article 15 Where a party uses audio-visual materials as evidence, it shall provide the original carrier storing the audio-visual materials.\nWhere a party uses electronic data as evidence, it shall provide the original. A copy made by the producer of the electronic data that is identical to the original, or a printout directly derived from the electronic data or other output medium that can display or recognize it, shall be deemed the original of the electronic data."
+    },
+    {
+      "article_number": "第十六条",
+      "content_en": "Article 16 Where a public document evidence provided by a party is formed outside the territory of the People's Republic of China, the evidence shall be notarized by the notarial authority of the country where it is formed, or the certification procedures prescribed in the relevant treaty concluded between the People's Republic of China and that country shall be performed.\nEvidence involving personal relationship formed outside the territory of the People's Republic of China shall be notarized by the notarial authority of the country where it is formed and authenticated by the embassy or consulate of the People's Republic of China in that country, or the certification procedures prescribed in the relevant treaty concluded between the People's Republic of China and that country shall be performed.\nWhere the evidence provided by a party to the People's Court is formed in Hong Kong, Macao, or Taiwan, the relevant certification procedures shall be performed."
+    },
+    {
+      "article_number": "第十七条",
+      "content_en": "Article 17 Where a party provides foreign-language documentary evidence or explanatory materials in a foreign language to the People's Court, it shall attach a Chinese translation."
+    },
+    {
+      "article_number": "第十八条",
+      "content_en": "Article 18 Where facts undisputed by both parties fall under the circumstances specified in the first paragraph of Article 96 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China, the People's Court may order the parties to provide relevant evidence."
+    },
+    {
+      "article_number": "第十九条",
+      "content_en": "Article 19 A party shall classify and number the evidentiary materials it submits one by one, briefly explain the source, object of proof, and content of the evidentiary materials, sign and affix its seal, indicate the date of submission, and provide copies according to the number of counterparties.\nUpon receiving the evidentiary materials submitted by a party, the People's Court shall issue a receipt indicating the name, number of copies, number of pages, and time of receipt of the evidence, and it shall be signed or sealed by the handling personnel.\nII. Investigation, Collection, and Preservation of Evidence"
+    },
+    {
+      "article_number": "第二十条",
+      "content_en": "Article 20 Where a party or its litigation agent applies to the People's Court to investigate and collect evidence, it shall submit a written application before the expiration of the time limit for adducing evidence.\nThe application shall state the basic information such as the name of the person under investigation or the name of the unit and its domicile, the name or content of the evidence to be investigated and collected, the reasons why investigation and collection by the People's Court is necessary, the facts to be proved thereby, and clear clues."
+    },
+    {
+      "article_number": "第二十一条",
+      "content_en": "Article 21 Documentary evidence investigated and collected by the People's Court may be the original, or a verified copy or reproduction. If it is a copy or reproduction, the source and circumstances of obtaining the evidence shall be stated in the investigation record."
+    },
+    {
+      "article_number": "第二十二条",
+      "content_en": "Article 22 Physical evidence investigated and collected by the People's Court shall be the original object. If the person under investigation genuinely has difficulty providing the original object, it may provide a reproduction or video materials. If reproduction or video materials are provided, the circumstances of obtaining the evidence shall be stated in the investigation record."
+    },
+    {
+      "article_number": "第二十三条",
+      "content_en": "Article 23 Where the People's Court investigates and collects audio-visual materials or electronic data, it shall require the person under investigation to provide the original carrier.\nIf it is genuinely difficult to provide the original carrier, a copy may be provided. Where a copy is provided, the People's Court shall state in the investigation record its source and production process.\nWhere the People's Court adopts evidence preservation measures for audio-visual materials or electronic data, the preceding paragraph shall apply."
+    },
+    {
+      "article_number": "第二十四条",
+      "content_en": "Article 24 Where the People's Court investigates and collects evidence that may require expert evaluation, it shall comply with relevant technical specifications to ensure that the evidence is not contaminated."
+    },
+    {
+      "article_number": "第二十五条",
+      "content_en": "Article 25 Where a party or an interested person applies for evidence preservation pursuant to Article 81 of the Civil Procedure Law, the application shall state the basic information of the evidence to be preserved, the reasons for applying for preservation, and what preservation measures are to be taken.\nWhere a party applies for evidence preservation pursuant to the first paragraph of Article 81 of the Civil Procedure Law, it shall file the application with the People's Court before the expiration of the time limit for adducing evidence.\nWhere laws or judicial interpretations have provisions on pre-litigation evidence preservation, such provisions shall be followed."
+    },
+    {
+      "article_number": "第二十六条",
+      "content_en": "Article 26 Where a party or an interested person applies for preservation measures that restrict the use or circulation of the subject matter of preservation, such as sealing up or distraining, or where the preservation may cause losses to the holder of the evidence, the People's Court shall order the applicant to provide corresponding security.\nThe method or amount of security shall be comprehensively determined by the People's Court based on factors such as the impact of the preservation measures on the holder of the evidence, the value of the subject matter of preservation, and the amount of the subject matter of the litigation disputed by the party or interested person."
+    },
+    {
+      "article_number": "第二十七条",
+      "content_en": "Article 27 When carrying out evidence preservation, the People's Court may require the parties or litigation agents to be present.\nAccording to the application of the parties and the specific circumstances, the People's Court may adopt methods such as sealing up, distraining, audio recording, video recording, reproduction, expert evaluation, and inspection to preserve evidence, and shall make records.\nWhere the purpose of evidence preservation can be achieved, the People's Court shall choose preservation measures that have the least impact on the interests of the holder of the evidence."
+    },
+    {
+      "article_number": "第二十八条",
+      "content_en": "Article 28 Where erroneous application for evidence preservation causes property losses, and the party requests the applicant to bear compensation liability, the People's Court shall support it."
+    },
+    {
+      "article_number": "第二十九条",
+      "content_en": "Article 29 After the People's Court has taken pre-litigation evidence preservation measures, if a party files a lawsuit with another People's Court having jurisdiction, the People's Court that took the preservation measures shall, upon application of the party, promptly transfer the preserved evidence to the People's Court accepting the case."
+    },
+    {
+      "article_number": "第三十条",
+      "content_en": "Article 30 Where, in the course of adjudicating a case, the People's Court considers that the facts to be proved need to be proved by expert evaluation opinions, it shall explain to the parties and designate a period for filing the application for expert evaluation.\nWhere the circumstances specified in the first paragraph of Article 96 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China are met, the People's Court shall commission expert evaluation on its own authority."
+    },
+    {
+      "article_number": "第三十一条",
+      "content_en": "Article 31 A party applying for expert evaluation shall file the application within the period designated by the People's Court and pay the expert evaluation fees in advance. If the application is not filed or the fees are not paid in advance within the time limit, it shall be deemed that the party has abandoned the application.\nWhere a party bearing the burden of adducing evidence for the facts to be proved that require expert evaluation fails, without justifiable reasons, to file an application for expert evaluation or to pay the evaluation fees in advance within the period designated by the People's Court, or refuses to provide relevant materials, resulting in the facts to be proved being unable to be ascertained, it shall bear the legal consequences of failure to adduce evidence."
+    },
+    {
+      "article_number": "第三十二条",
+      "content_en": "Article 32 Where the People's Court permits an application for expert evaluation, it shall organize the parties to negotiate and determine an expert evaluator with appropriate qualifications. If the parties fail to reach agreement through negotiation, the People's Court shall designate one.\nWhere the People's Court commissions expert evaluation on its own authority, it may, after consulting the opinions of the parties, designate an expert evaluator with appropriate qualifications.\nAfter determining the expert evaluator, the People's Court shall issue a letter of commission, which shall state the subject matter of the evaluation, the scope of evaluation, the purpose of evaluation, and the time limit for evaluation."
+    },
+    {
+      "article_number": "第三十三条",
+      "content_en": "Article 33 Before the evaluation begins, the People's Court shall require the expert evaluator to sign a letter of commitment. The letter of commitment shall state that the expert evaluator undertakes to conduct the evaluation objectively, impartially, and honestly, undertakes to testify in court, and shall bear legal liability for making false evaluations.\nIf an expert evaluator intentionally makes a false evaluation, the People's Court shall order the evaluator to return the evaluation fees and, according to the circumstances, impose penalties pursuant to Article 111 of the Civil Procedure Law."
+    },
+    {
+      "article_number": "第三十四条",
+      "content_en": "Article 34 The People's Court shall organize the parties to cross-examine the evaluation materials. Materials that have not been cross-examined shall not be used as the basis for evaluation.\nWith the permission of the People's Court, the expert evaluator may obtain evidence, inspect physical evidence and the scene, and question the parties or witnesses."
+    },
+    {
+      "article_number": "第三十五条",
+      "content_en": "Article 35 The expert evaluator shall complete the evaluation within the time limit determined by the People's Court and submit the evaluation report.\nWhere the expert evaluator fails to submit the evaluation report on time without justifiable reasons, the parties may apply to the People's Court to commission another expert evaluator to conduct the evaluation. If the People's Court permits it, the original expert evaluator shall return the evaluation fees already collected; if the evaluator refuses to return them, the matter shall be handled pursuant to the provisions of the second paragraph of Article 81 of these Provisions."
+    },
+    {
+      "article_number": "第三十六条",
+      "content_en": "Article 36 The People's Court shall examine whether the evaluation report issued by the expert evaluator contains the following contents:\n(1) The name of the commissioning court;\n(2) The content and requirements of the commissioned evaluation;\n(3) The evaluation materials;\n(4) The principles and methods on which the evaluation is based;\n(5) A description of the evaluation process;\n(6) The evaluation opinion;\n(7) The letter of commitment.\nThe evaluation report shall be signed or sealed by the expert evaluator, and shall be accompanied by the corresponding qualification certificate of the expert evaluator. Where an institution is commissioned for evaluation, the evaluation report shall be sealed by the evaluation institution and signed by the personnel who conducted the evaluation."
+    },
+    {
+      "article_number": "第三十七条",
+      "content_en": "Article 37 After receiving the evaluation report, the People's Court shall promptly deliver a copy to the parties.\nIf a party has objections to the contents of the evaluation report, it shall raise them in writing within the period designated by the People's Court.\nRegarding a party's objections, the People's Court shall require the expert evaluator to make explanations, clarifications, or supplements. If the People's Court deems it necessary, it may require the expert evaluator to explain, clarify, or supplement the contents to which the party has not raised objections."
+    },
+    {
+      "article_number": "第三十八条",
+      "content_en": "Article 38 Where a party still has objections after receiving the written reply of the expert evaluator, the People's Court shall, pursuant to Article 11 of the Measures for Payment of Litigation Costs, notify the objecting party to pay in advance the fees for the expert evaluator to appear in court, and notify the expert evaluator to appear in court. If the objecting party fails to pay in advance the fees for the expert evaluator to appear in court, it shall be deemed to have abandoned the objection.\nWhere both parties have objections to the evaluation opinion, they shall share the advance payment of the fees for the expert evaluator to appear in court."
+    },
+    {
+      "article_number": "第三十九条",
+      "content_en": "Article 39 The fees for the expert evaluator to appear in court shall be calculated according to the standards for witness appearing in court to testify, and shall be borne by the party losing the lawsuit. Where the expert evaluator is required to appear in court because the evaluation opinion is unclear or has defects, the expert evaluator shall bear the appearance fees itself.\nWhere, when commissioning an evaluation, the People's Court has already determined that the fees for the expert evaluator to appear in court are included in the evaluation fees, the parties shall no longer be notified to pay the fees in advance."
+    },
+    {
+      "article_number": "第四十条",
+      "content_en": "Article 40 Where a party applies for re-evaluation, the People's Court shall permit it under any of the following circumstances:\n(1) The expert evaluator does not have corresponding qualifications;\n(2) The evaluation procedure seriously violates the law;\n(3) The evaluation opinion is obviously insufficiently based;\n(4) Other circumstances where the evaluation opinion cannot be used as evidence.\nWhere the circumstances in items (1) to (3) of the preceding paragraph exist, the evaluation fees already collected by the expert evaluator shall be returned. If the evaluator refuses to return them, the matter shall be handled pursuant to the provisions of the second paragraph of Article 81 of these Provisions.\nWhere defects in the evaluation opinion can be resolved by correction, supplementary evaluation, supplementary cross-examination, or re-cross-examination, the People's Court shall not permit an application for re-evaluation.\nIn the case of re-evaluation, the original evaluation opinion shall not be used as the basis for determining the facts of the case."
+    },
+    {
+      "article_number": "第四十一条",
+      "content_en": "Article 41 Where a party has evidence or reasons sufficient to rebut an opinion issued by a relevant institution or personnel commissioned by the other party on its own concerning a specialized issue, and applies for expert evaluation, the People's Court shall permit it."
+    },
+    {
+      "article_number": "第四十二条",
+      "content_en": "Article 42 Where, after the evaluation opinion has been adopted, the expert evaluator revokes the evaluation opinion without justifiable reasons, the People's Court shall order the evaluator to return the evaluation fees, and may, according to the circumstances, impose penalties on the expert evaluator pursuant to Article 111 of the Civil Procedure Law. Where a party claims that the expert evaluator shall bear the reasonable expenses increased as a result, the People's Court shall support it.\nWhere the People's Court, after adopting the evaluation opinion, permits the expert evaluator to revoke it, it shall order the evaluator to return the evaluation fees."
+    },
+    {
+      "article_number": "第四十三条",
+      "content_en": "Article 43 The People's Court shall notify the parties of the time and place of inspection before the inspection. Where a party does not participate, the inspection shall not be affected.\nThe parties may provide explanations and clarifications to the People's Court regarding the inspection matters, and may request the People's Court to pay attention to important matters in the inspection.\nWhere the People's Court inspects physical evidence or the scene, it shall make a record, recording the time, place, inspector, persons present, process and results of the inspection, and it shall be signed or sealed by the inspector and the persons present. For a drawing of the scene, the time, orientation, name and identity of the surveyor, and other contents shall be indicated."
+    },
+    {
+      "article_number": "第四十四条",
+      "content_en": "Article 44 Where excerpts are made from documents or materials produced by relevant units and related to the facts of the case, the source shall be indicated, and the seal of the producing unit or the custodian unit shall be affixed. The excerptor and other investigators shall sign or seal the excerpts.\nExcerpts of documents and materials shall maintain the corresponding completeness of the content."
+    },
+    {
+      "article_number": "第四十五条",
+      "content_en": "Article 45 Where a party, pursuant to Article 112 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China, applies to the People's Court to order the other party to submit documentary evidence, the application shall state the name or content of the documentary evidence sought to be submitted, the facts to be proved by such documentary evidence and the importance of the facts, the basis for the other party's control of the documentary evidence, and the reasons why the documentary evidence shall be submitted.\nWhere the other party denies controlling the documentary evidence, the People's Court shall, based on factors such as legal provisions and customs, in combination with the facts and evidence of the case, make a comprehensive determination on the fact of whether the documentary evidence is under the control of the other party."
+    },
+    {
+      "article_number": "第四十六条",
+      "content_en": "Article 46 When examining an application for submission of documentary evidence, the People's Court shall hear the opinions of the other party, and may, when necessary, require both parties to provide evidence and engage in debate.\nWhere the documentary evidence applied for is unclear, the documentary evidence is unnecessary for proving the facts to be proved, the facts to be proved have no substantive impact on the adjudication result, the documentary evidence is not under the control of the other party, or the circumstances set forth in Article 47 of these Provisions are not met, the People's Court shall not permit the application.\nWhere the grounds for the party's application are established, the People's Court shall render a ruling ordering the other party to submit the documentary evidence; where the grounds are not established, it shall notify the applicant."
+    },
+    {
+      "article_number": "第四十七条",
+      "content_en": "Article 47 Under the following circumstances, the party controlling documentary evidence shall submit the documentary evidence:\n(1) Documentary evidence that the party controlling the documentary evidence has previously cited in the litigation;\n(2) Documentary evidence made for the benefit of the other party;\n(3) Documentary evidence that the other party has the right to consult and obtain according to law;\n(4) Account books and original accounting vouchers;\n(5) Other circumstances under which the People's Court considers that documentary evidence shall be submitted.\nWhere the documentary evidence listed in the preceding paragraph involves State secrets, trade secrets, privacy of a party or a third party, or circumstances where confidentiality is required by legal provisions, it shall not be openly cross-examined after submission."
+    },
+    {
+      "article_number": "第四十八条",
+      "content_en": "Article 48 Where the party controlling documentary evidence refuses to submit it without justifiable reasons, the People's Court may determine that the content of the documentary evidence asserted by the other party is true.\nWhere the party controlling documentary evidence falls under the circumstances specified in Article 113 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China, the People's Court may determine that the facts claimed by the other party to be proved by such documentary evidence are true.\nIII. Time Limit for Adducing Evidence and Evidence Exchange"
+    },
+    {
+      "article_number": "第四十九条",
+      "content_en": "Article 49 The defendant shall submit a written statement of defense before the expiration of the defense period, clarifying its opinions on the plaintiff's claims and the facts and reasons on which they are based."
+    },
+    {
+      "article_number": "第五十条",
+      "content_en": "Article 50 The People's Court shall serve a notice to adduce evidence on the parties during the stage of preparation for trial.\nThe notice to adduce evidence shall state the principles and requirements for allocation of the burden of adducing evidence, the circumstances under which a party may apply to the People's Court for investigation and collection of evidence, the time limit for adducing evidence designated by the People's Court based on the circumstances of the case, and the legal consequences of providing evidence belatedly."
+    },
+    {
+      "article_number": "第五十一条",
+      "content_en": "Article 51 The time limit for adducing evidence may be agreed upon by the parties and shall be subject to the approval of the People's Court.\nWhere the People's Court designates a time limit for adducing evidence, the time limit for cases tried under the ordinary procedure of first instance shall not be less than fifteen days, and for cases of second instance where the parties provide new evidence, shall not be less than ten days. The time limit for cases tried under the summary procedure shall not exceed fifteen days, and the time limit for adducing evidence in small-claim cases generally shall not exceed seven days.\nAfter the expiration of the time limit for adducing evidence, where a party provides rebuttal evidence or remedies defects in the source, form, or other aspects of evidence already provided, the People's Court may, at its discretion, determine a time limit for adducing evidence anew, and such time limit shall not be subject to the restrictions of the time limits provided in the preceding paragraph."
+    },
+    {
+      "article_number": "第五十二条",
+      "content_en": "Article 52 Where a party experiences objective obstacles to providing evidence within the time limit for adducing evidence, this falls under the circumstance of \"the party indeed has difficulty providing evidence within that time limit\" as provided in Article 65, paragraph 2 of the Civil Procedure Law.\nIn the circumstance of the preceding paragraph, the People's Court shall comprehensively determine the matter based on factors such as the party's ability to adduce evidence and the reasons for inability to provide evidence within the time limit. When necessary, the People's Court may hear the opinions of the opposite party."
+    },
+    {
+      "article_number": "第五十三条",
+      "content_en": "Article 53 In the course of litigation, where the nature of the legal relationship claimed by a party or the validity of a civil act is inconsistent with the determination made by the People's Court based on the facts of the case, the People's Court shall take the nature of the legal relationship or the validity of the civil act as an issue of focus for adjudication, unless the nature of the legal relationship has no impact on the reasons and result of the adjudication, or the relevant issue has already been fully debated by the parties.\nWhere the circumstance of the preceding paragraph exists and a party changes its claims according to the circumstances of the court hearing, the People's Court shall permit it and may re-designate a time limit for adducing evidence based on the specific circumstances of the case."
+    },
+    {
+      "article_number": "第五十四条",
+      "content_en": "Article 54 Where a party applies for an extension of the time limit for adducing evidence, it shall submit a written application to the People's Court before the expiration of the time limit for adducing evidence.\nIf the reasons for the application are established, the People's Court shall permit the application, appropriately extend the time limit for adducing evidence, and notify the other parties. The extended time limit for adducing evidence shall apply to the other parties.\nIf the reasons for the application are not established, the People's Court shall not permit the application and shall notify the applicant."
+    },
+    {
+      "article_number": "第五十五条",
+      "content_en": "Article 55 Under any of the following circumstances, the time limit for adducing evidence shall be determined in the following manner:\n(1) Where a party raises an objection to jurisdiction in accordance with Article 127 of the Civil Procedure Law, the time limit for adducing evidence shall be suspended, and the calculation shall resume from the date on which the ruling rejecting the jurisdictional objection takes effect;\n(2) Where a party is added, a third party with independent claims participates in the litigation, or a third party without independent claims participates in the litigation upon notice by the People's Court, the People's Court shall determine a time limit for adducing evidence for the party newly participating in the litigation in accordance with Article 51 of these Provisions, and such time limit shall apply to the other parties;\n(3) For a case remanded for retrial, the people's court of first instance may, in light of the specific circumstances of the case and the reasons for the remand, determine at its discretion a time limit for adducing evidence;\n(4) Where a party adds or changes its claims or files a counterclaim, the People's Court shall re-determine a time limit for adducing evidence based on the specific circumstances of the case;\n(5) Where service is made by public announcement, the time limit for adducing evidence shall be calculated from the day after the expiration of the announcement period."
+    },
+    {
+      "article_number": "第五十六条",
+      "content_en": "Article 56 Where the People's Court, in accordance with the provisions of Article 133, item 4 of the Civil Procedure Law, makes preparations before trial by organizing the exchange of evidence, the time limit for adducing evidence shall expire on the date of the evidence exchange.\nThe time for the evidence exchange may be agreed upon by the parties and approved by the People's Court, or may be designated by the People's Court. Where a party applies for an extension of the time limit for adducing evidence and the People's Court permits it, the date of evidence exchange shall be postponed accordingly."
+    },
+    {
+      "article_number": "第五十七条",
+      "content_en": "Article 57 The exchange of evidence shall be conducted under the auspices of the judicial personnel.\nDuring the exchange of evidence, the judicial personnel shall record in the case file the facts and evidence with respect to which the parties have no objection; with respect to evidence objected to, they shall record it in the case file by category according to the facts to be proven, and record the reasons for the objection. Through the exchange of evidence, the main issues in dispute between the parties shall be identified."
+    },
+    {
+      "article_number": "第五十八条",
+      "content_en": "Article 58 Where a party, after receiving the evidence of the other party, has rebuttal evidence to submit, the People's Court shall organize the exchange of evidence again."
+    },
+    {
+      "article_number": "第五十九条",
+      "content_en": "Article 59 Where the People's Court imposes a fine on a party who provides evidence belatedly, the amount of the fine may be determined by taking into account factors such as the degree of subjective fault of the party in providing evidence belatedly, the situation causing delay of the litigation, and the amount of the subject matter of the litigation.\nIV. Cross-Examination"
+    },
+    {
+      "article_number": "第六十条",
+      "content_en": "Article 60 Evidence on which a party has expressed cross-examination opinions during the stage of preparation before trial or during the People's Court's investigation or inquiry process shall be deemed evidence that has been cross-examined.\nWhere a party requests to express cross-examination opinions in writing, and the People's Court, after hearing the opinions of the opposite party, considers it necessary, it may permit such request. The People's Court shall promptly deliver the written cross-examination opinions to the opposite party."
+    },
+    {
+      "article_number": "第六十一条",
+      "content_en": "Article 61 When cross-examining documentary evidence, physical evidence, or audio-visual materials, the parties shall present the original or the original object of the evidence, except under any of the following circumstances:\n(1) There is indeed difficulty in presenting the original or the original object, and the People's Court has permitted the presentation of a copy or reproduction;\n(2) The original or the original object no longer exists, but there is evidence proving that the copy or reproduction is consistent with the original or the original object."
+    },
+    {
+      "article_number": "第六十二条",
+      "content_en": "Article 62 Cross-examination generally shall be conducted in the following order:\n(1) The plaintiff presents evidence, and the defendant and the third party cross-examine with the plaintiff;\n(2) The defendant presents evidence, and the plaintiff and the third party cross-examine with the defendant;\n(3) The third party presents evidence, and the plaintiff and the defendant cross-examine with the third party.\nWith respect to evidence investigated and collected by the People's Court upon the application of a party, after the judicial personnel explain the circumstances of the investigation and collection of evidence, the party that made the application shall cross-examine with the opposite party and the third party.\nWith respect to evidence investigated and collected by the People's Court ex officio, after the judicial personnel explain the circumstances of the investigation and collection of evidence, the opinions of the parties shall be heard."
+    },
+    {
+      "article_number": "第六十三条",
+      "content_en": "Article 63 The parties shall make true and complete statements regarding the facts of the case.\nWhere a party's statement is inconsistent with its previous statements, the People's Court shall order it to explain the reasons and shall examine and determine the matter in light of the party's litigation ability, the evidence, and the specific circumstances of the case.\nWhere a party intentionally makes false statements to obstruct the People's Court's trial, the People's Court shall, according to the circumstances, impose a penalty in accordance with the provisions of Article 111 of the Civil Procedure Law."
+    },
+    {
+      "article_number": "第六十四条",
+      "content_en": "Article 64 Where the People's Court considers it necessary, it may require the party concerned to appear in person to be questioned regarding the relevant facts of the case.\nWhere the People's Court requires a party to appear for questioning, it shall notify the party of the time and place of the questioning, the consequences of failure to appear, and other matters."
+    },
+    {
+      "article_number": "第六十五条",
+      "content_en": "Article 65 The People's Court shall, before questioning, order the party to sign an undertaking and read out the contents of the undertaking.\nThe undertaking shall state that the party undertakes to make truthful statements, absolutely without concealment, distortion, addition or omission, and that if there is a false statement, the party shall accept punishment. The party shall sign and affix a fingerprint on the undertaking.\nWhere the party cannot read out the undertaking for justified reasons, the court clerk shall read it out and give an explanation."
+    },
+    {
+      "article_number": "第六十六条",
+      "content_en": "Article 66 Where a party, without justified reasons, refuses to appear, refuses to sign or read the undertaking, or refuses to accept questioning, the People's Court shall, comprehensively considering the circumstances of the case, determine the truth or falsity of the fact to be proved. Where the fact to be proved is not supported by other evidence, the People's Court shall make a determination unfavorable to that party."
+    },
+    {
+      "article_number": "第六十七条",
+      "content_en": "Article 67 A person who cannot correctly express intentions shall not serve as a witness.\nA person with no capacity for civil conduct or with limited capacity for civil conduct whose facts to be proved are commensurate with his or her age, intellectual status, or mental health status may serve as a witness."
+    },
+    {
+      "article_number": "第六十八条",
+      "content_en": "Article 68 The People's Court shall require witnesses to testify in court and to accept questioning by the judicial personnel and the parties. Where a witness gives testimony during the stage of preparation before trial or at a time when both parties are present during the People's Court's investigation or inquiry, it shall be deemed as testifying in court.\nWhere both parties agree that a witness may testify by other means and the People's Court approves it, the witness may testify without appearing in court.\nTestimony provided in writing or by other means by a witness who, without justified reasons, fails to appear in court shall not be used as the basis for determining the facts of the case."
+    },
+    {
+      "article_number": "第六十九条",
+      "content_en": "Article 69 Where a party applies for a witness to testify in court, it shall submit a written application to the People's Court before the expiration of the time limit for adducing evidence.\nThe application shall state the witness's name, occupation, domicile, contact information, the main contents of the testimony, the relevance of the testimony to the facts to be proved, and the necessity of the witness's appearance in court.\nWhere the circumstances set forth in Article 96, paragraph 1 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China are satisfied, the People's Court shall notify the witness to testify in court ex officio."
+    },
+    {
+      "article_number": "第七十条",
+      "content_en": "Article 70 Where the People's Court approves an application for a witness to testify in court, it shall serve a notice on the witness and inform both parties. The notice shall state the time and place for the witness to testify, the matters and requirements for testifying, and the legal consequences of giving false testimony.\nWhere the matters for which a party applies for the witness to testify in court are unrelated to the facts to be proved, or there is no necessity to notify the witness to testify in court, the People's Court shall not approve the party's application."
+    },
+    {
+      "article_number": "第七十一条",
+      "content_en": "Article 71 The People's Court shall require witnesses to sign an undertaking before testifying and to read out the contents of the undertaking in court, except where a person without capacity for civil conduct or with limited capacity for civil conduct serves as a witness.\nWhere a witness indeed has justified reasons for being unable to read the undertaking, the court clerk shall read it on the witness's behalf and give an explanation.\nWhere a witness refuses to sign or read the undertaking, the witness shall not testify and shall bear the relevant expenses himself or herself.\nThe provisions on the contents of a party's undertaking shall apply to the contents of a witness's undertaking."
+    },
+    {
+      "article_number": "第七十二条",
+      "content_en": "Article 72 A witness shall objectively state the facts that he or she personally perceived, and shall not use language of conjecture, inference, or commentary when testifying.\nA witness shall not sit in on court hearings before testifying, and shall not state testimony by reading pre-prepared written materials when testifying.\nWhere a witness has difficulties in verbal expression, the witness may testify through other means of expression."
+    },
+    {
+      "article_number": "第七十三条",
+      "content_en": "Article 73 A witness shall make continuous statements on the matters for which he or she testifies.\nWhere a party, its statutory agent, litigation agent, or person in attendance interferes with the witness's statement, the People's Court shall promptly stop it, and if necessary, may impose a penalty in accordance with the provisions of Article 110 of the Civil Procedure Law."
+    },
+    {
+      "article_number": "第七十四条",
+      "content_en": "Article 74 The judicial personnel may question a witness. A party and its litigation agent may question a witness after obtaining permission from the judicial personnel.\nOther witnesses shall not be present when a witness is being questioned.\nWhere the People's Court considers it necessary, it may require confrontation between witnesses."
+    },
+    {
+      "article_number": "第七十五条",
+      "content_en": "Article 75 After a witness testifies in court, the witness may apply to the People's Court for payment of the expenses for testifying in court. Where a witness has difficulties and needs to draw the expenses for testifying in court in advance, the People's Court may, upon the witness's application, pay them before the witness testifies in court."
+    },
+    {
+      "article_number": "第七十六条",
+      "content_en": "Article 76 Where a witness indeed has difficulties and cannot testify in court, and applies to testify by means of written testimony, audio-visual transmission technology, or audio-visual materials, the witness shall submit a written application to the People's Court. The application shall state the specific reasons for being unable to appear in court.\nWhere the circumstances provided in Article 73 of the Civil Procedure Law are satisfied, the People's Court shall approve the application."
+    },
+    {
+      "article_number": "第七十七条",
+      "content_en": "Article 77 Where a witness, with the approval of the People's Court, testifies by means of written testimony, the witness shall sign an undertaking; where the witness testifies by means of audio-visual transmission technology or audio-visual materials, the witness shall sign an undertaking and read out the contents of the undertaking."
+    },
+    {
+      "article_number": "第七十八条",
+      "content_en": "Article 78 Where the questioning of a witness by a party or its litigation agent is unrelated to the facts to be proved, or there are circumstances such as threatening, insulting, or improperly leading the witness, the judicial personnel shall promptly stop it. If necessary, a penalty may be imposed in accordance with the provisions of Articles 110 and 111 of the Civil Procedure Law.\nWhere a witness intentionally makes false statements, or a litigation participant or any other person obstructs a witness from testifying by means of violence, threat, bribery, or other methods, or retaliates against a witness after testifying by means of insult, defamation, false accusation, intimidation, assault, or other methods, the People's Court shall, according to the circumstances, impose a penalty on the actor in accordance with the provisions of Article 111 of the Civil Procedure Law."
+    },
+    {
+      "article_number": "第七十九条",
+      "content_en": "Article 79 Where an expert evaluator testifies in court in accordance with Article 78 of the Civil Procedure Law, the People's Court shall notify the expert evaluator of the time, place, and requirements for appearing in court three days before the court hearing.\nWhere an institution is entrusted to conduct the expert evaluation, the personnel who conducted the expert evaluation shall represent the institution in court."
+    },
+    {
+      "article_number": "第八十条",
+      "content_en": "Article 80 An expert evaluator shall truthfully respond to the parties' objections and the judicial personnel's questions regarding the evaluation matters. Where it is indeed difficult to respond in court, with the approval of the People's Court, the expert evaluator may respond in writing after the conclusion of the court hearing.\nThe People's Court shall promptly deliver the written response to the parties and hear their opinions. If necessary, cross-examination may be organized again."
+    },
+    {
+      "article_number": "第八十一条",
+      "content_en": "Article 81 Where an expert evaluator refuses to testify in court, the expert evaluation opinion shall not be used as the basis for determining the facts of the case. The People's Court shall suggest that the relevant competent authority or organization impose a penalty on the expert evaluator who refuses to testify in court.\nWhere a party requests a refund of the evaluation fees, the People's Court shall render a ruling within three days to order the expert evaluator to refund the fees; if the expert evaluator refuses to refund, the People's Court shall enforce it according to law.\nWhere a party applies for a new expert evaluation because the expert evaluator refuses to testify in court, the People's Court shall approve it."
+    },
+    {
+      "article_number": "第八十二条",
+      "content_en": "Article 82 With the permission of the court, the parties may question the expert evaluator or the inspector.\nWhen questioning the expert evaluator or the inspector, inappropriate language or methods such as threats or insults shall not be used."
+    },
+    {
+      "article_number": "第八十三条",
+      "content_en": "Article 83 Where a party, in accordance with Article 79 of the Civil Procedure Law and Article 122 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China, applies for a person with specialized knowledge to appear in court, the application shall state the basic information of the person with specialized knowledge and the purpose of the application.\nWhere the People's Court approves the party's application, it shall notify both parties."
+    },
+    {
+      "article_number": "第八十四条",
+      "content_en": "Article 84 The judicial personnel may question a person with specialized knowledge. With the permission of the court, a party may question a person with specialized knowledge, and the persons with specialized knowledge respectively applied by the parties may confront each other on the relevant issues of the case.\nA person with specialized knowledge shall not participate in court trial activities other than cross-examining expert evaluation opinions or expressing opinions on professional issues.\nV. Examination and Determination of Evidence"
+    },
+    {
+      "article_number": "第八十五条",
+      "content_en": "Article 85. The People's Court shall render an adjudication according to law on the basis of the facts of the case that can be proved by evidence.\nThe trial personnel shall, in accordance with statutory procedures, comprehensively and objectively examine the evidence, and, pursuant to the provisions of law, follow the professional ethics of judges, and apply logical reasoning and daily life experience to independently determine whether the evidence has probative force and the degree of probative force, and shall disclose the reasons and results of the determination."
+    },
+    {
+      "article_number": "第八十六条",
+      "content_en": "Article 86. With respect to a party's proof of fraud, duress, or malicious collusion, or proof of an oral will or gift, if the People's Court is convinced that the possibility of the existence of the fact to be proved can exclude reasonable doubt, it shall find that the fact exists.\nWith respect to facts related to procedural matters such as litigation preservation and withdrawal, where the People's Court, in light of the party's statements and the relevant evidence, considers that the possibility of the existence of the fact is relatively high, it may find that the fact exists."
+    },
+    {
+      "article_number": "第八十七条",
+      "content_en": "Article 87. The trial personnel may examine and determine a single piece of evidence from the following aspects:\n(1) Whether the evidence is an original document or original object, and whether the copies or reproductions are consistent with the original document or original object;\n(2) Whether the evidence is relevant to the facts of the case;\n(3) Whether the form and source of the evidence comply with legal provisions;\n(4) Whether the content of the evidence is true;\n(5) Whether the witness or the person providing the evidence has an interest relationship with the party."
+    },
+    {
+      "article_number": "第八十八条",
+      "content_en": "Article 88. The trial personnel shall conduct a comprehensive review and determination of all evidence in the case from aspects such as the degree of relevance of each piece of evidence to the facts of the case and the connections among the pieces of evidence."
+    },
+    {
+      "article_number": "第八十九条",
+      "content_en": "Article 89. Evidence acknowledged by a party in the course of litigation shall be confirmed by the People's Court, except where otherwise provided by law or judicial interpretation.\nIf a party retracts its acknowledgment of evidence, the matter shall be handled by reference to the provisions of Article 229 of the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China."
+    },
+    {
+      "article_number": "第九十条",
+      "content_en": "Article 90. The following evidence shall not be used alone as the basis for determining the facts of a case:\n(1) Statements of the parties;\n(2) Testimony given by a person without or with limited capacity for civil conduct that is not commensurate with his or her age, intellectual condition, or mental health condition;\n(3) Testimony given by a witness who has an interest relationship with a party or his or her agent;\n(4) Audio-visual materials or electronic data with doubtful points;\n(5) Copies or reproductions that cannot be checked against the original document or original object."
+    },
+    {
+      "article_number": "第九十一条",
+      "content_en": "Article 91. A duplicate produced by the maker of official documentary evidence based on the original document, containing part or all of the contents, shall have the same probative force as the original.\nFor a document archived in a state organ, if its reproduction, duplicate, or excerpt is certified by the archival department or the organ that made the original to be consistent with the original in content, such reproduction, duplicate, or excerpt shall have the same probative force as the original."
+    },
+    {
+      "article_number": "第九十二条",
+      "content_en": "Article 92. The burden of adducing evidence for the authenticity of private documentary evidence shall be borne by the party who claims to prove the facts of the case with such private documentary evidence.\nIf a private documentary evidence is signed, sealed, or fingerprinted by its maker or his or her agent, it shall be presumed to be authentic.\nIf a private documentary evidence has deletions, alterations, additions, or other formal defects, the People's Court shall determine its probative force in light of the specific circumstances of the case."
+    },
+    {
+      "article_number": "第九十三条",
+      "content_en": "Article 93. The People's Court shall comprehensively determine the authenticity of electronic data by taking into consideration the following factors:\n(1) Whether the hardware and software environments of the computer system relied upon for the generation, storage, and transmission of the electronic data are complete and reliable;\n(2) Whether the hardware and software environments of the computer system relied upon for the generation, storage, and transmission of the electronic data are in a normal operating state, or, if not in a normal operating state, whether such state has any impact on the generation, storage, and transmission of the electronic data;\n(3) Whether the hardware and software environments of the computer system relied upon for the generation, storage, and transmission of the electronic data have effective monitoring and verification means for preventing errors;\n(4) Whether the electronic data has been completely stored, transmitted, and extracted, and whether the methods for storage, transmission, and extraction are reliable;\n(5) Whether the electronic data was formed and stored in normal transactions;\n(6) Whether the subject that stores, transmits, and extracts the electronic data is appropriate;\n(7) Other factors affecting the integrity and reliability of the electronic data.\nIf the People's Court considers it necessary, it may examine and determine the authenticity of the electronic data through methods such as expert evaluation or inspection."
+    },
+    {
+      "article_number": "第九十四条",
+      "content_en": "Article 94. The People's Court may confirm the authenticity of electronic data under any of the following circumstances, unless there is contrary evidence sufficient to rebut it:\n(1) The electronic data was submitted or kept by a party and is unfavorable to that party;\n(2) The electronic data was provided or confirmed by a neutral third-party platform that records and preserves electronic data;\n(3) The electronic data was formed in normal business activities;\n(4) The electronic data was kept in an archival management manner;\n(5) The electronic data was stored, transmitted, and extracted in the manner agreed upon by the parties.\nIf the content of electronic data has been notarized by a notarization authority, the People's Court shall confirm its authenticity, unless there is contrary evidence sufficient to overturn it."
+    },
+    {
+      "article_number": "第九十五条",
+      "content_en": "Article 95: Where a party controls evidence and refuses to submit it without justifiable reasons, and the party bearing the burden of adducing evidence for the fact to be proved claims that the content of the evidence is unfavorable to the controlling party, the People's Court may find that the claim is established."
+    },
+    {
+      "article_number": "第九十六条",
+      "content_en": "Article 96: When determining witness testimony, the People's Court may make a judgment through comprehensive analysis of the witness's intelligence, moral character, knowledge, experience, legal awareness, and professional skills."
+    },
+    {
+      "article_number": "第九十七条",
+      "content_en": "Article 97: The People's Court shall state in the adjudication document the reasons for whether evidence is admitted.\nFor evidence not disputed by the parties, the reasons for whether it is admitted may be omitted from the adjudication document.\nVI. Miscellaneous"
+    },
+    {
+      "article_number": "第九十八条",
+      "content_en": "Article 98: The lawful rights and interests of witnesses, expert evaluators, and inspectors shall be protected according to law.\nWhere a party or other litigation participant forges or destroys evidence, provides false evidence, prevents a witness from testifying, instigates, bribes, or coerces another person to give false testimony, or retaliates against a witness, expert evaluator, or inspector, punishment shall be imposed in accordance with the provisions of Articles 110 and 111 of the Civil Procedure Law."
+    },
+    {
+      "article_number": "第九十九条",
+      "content_en": "Article 99: Where these Provisions have no provisions on evidence preservation, the provisions of laws and judicial interpretations on property preservation shall apply mutatis mutandis.\nUnless otherwise provided by laws or judicial interpretations, for inquiries of parties, expert evaluators, and persons with specialized knowledge, the provisions of these Provisions on inquiries of witnesses shall apply mutatis mutandis; the provisions on documentary evidence shall apply to audio-visual material and electronic data; audio-visual material stored in electronic media such as electronic computers shall be governed by the provisions on electronic data."
+    },
+    {
+      "article_number": "第一百条",
+      "content_en": "Article 100: These Provisions shall come into force as of May 1, 2020.\nAfter these Provisions are promulgated and come into force, judicial interpretations previously issued by the Supreme People's Court that are inconsistent with these Provisions shall no longer apply."
+    }
+  ]
+}

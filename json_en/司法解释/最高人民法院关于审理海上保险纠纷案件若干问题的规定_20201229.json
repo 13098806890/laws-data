@@ -1,0 +1,75 @@
+{
+  "law_id": 3500531,
+  "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Marine Insurance Dispute Cases",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第一条",
+      "content_en": "For the trial of maritime insurance contract dispute cases, the provisions of the Maritime Code shall apply; where the Maritime Code has no provisions, the relevant provisions of the Insurance Law shall apply; where neither the Maritime Code nor the Insurance Law has provisions, the provisions of the Civil Code and other relevant laws shall apply."
+    },
+    {
+      "article_number": "第二条",
+      "content_en": "For the trial of insurance contract dispute cases not caused by maritime accidents, in which port facilities or wharves are the subject matter of insurance, the provisions of the Insurance Law and other laws shall apply."
+    },
+    {
+      "article_number": "第三条",
+      "content_en": "For the trial of cases where the insurer, due to an insured event such as a ship colliding with port facilities or a wharf, exercises the right of subrogation for compensation and recovers from the third party who caused the insured event, the provisions of the Maritime Code shall apply."
+    },
+    {
+      "article_number": "第四条",
+      "content_en": "Where the insurer, knowing that the insured failed to truthfully disclose the material circumstances as provided in Article 222, Paragraph 1 of the Maritime Code, still collects the insurance premium or pays insurance compensation, and thereafter requests dissolution of the contract on the ground that the insured failed to truthfully disclose the material circumstances, the People's Court shall not support such request."
+    },
+    {
+      "article_number": "第五条",
+      "content_en": "Where the insured fails to pay the agreed insurance premium to the insurer in accordance with Article 234 of the Maritime Code, the insurer has the right to dissolve the insurance contract before the insurance liability begins, unless the insurer has already issued the insurance policy document; after the insurance liability begins, if the insurer requests dissolution of the contract on the ground that the insured failed to pay the insurance premium, the People's Court shall not support such request."
+    },
+    {
+      "article_number": "第六条",
+      "content_en": "Where the insurer requests dissolution of the insurance contract from the date of breach of the warranty clause on the ground that the insured violated the warranty clause stipulated in the contract and failed to immediately notify the insurer in writing, the People's Court shall support such request."
+    },
+    {
+      "article_number": "第七条",
+      "content_en": "Where the insurer, after receiving the written notice from the insured of the breach of the warranty clause stipulated in the contract, still pays insurance compensation, and thereafter requests dissolution of the contract on the ground that the insured violated the warranty clause stipulated in the contract, the People's Court shall not support such request."
+    },
+    {
+      "article_number": "第八条",
+      "content_en": "Where the insurer, after receiving the written notice from the insured of the breach of the warranty clause stipulated in the contract, fails to reach an agreement with the insured on matters such as revising the underwriting conditions or increasing the insurance premium, the insurance contract shall be dissolved on the date of breach of the warranty clause."
+    },
+    {
+      "article_number": "第九条",
+      "content_en": "Where a ship is transferred during a voyage, the insurance contract for the ship transferred without the insurer's consent shall be dissolved upon the end of the voyage. The rights and obligations under the ship insurance contract from the time of transfer of the ship to the end of the voyage shall be enjoyed and borne by the transferor of the ship, and may also be succeeded to by the transferee of the ship.\nWhen the transferee of the ship claims compensation from the insurer in accordance with the preceding paragraph, it shall submit valid insurance policy documents and proof of the ship transfer contract."
+    },
+    {
+      "article_number": "第十条",
+      "content_en": "Where, at the time of concluding the insurance contract, neither the insurer nor the insured knows that the subject matter insured has suffered a loss due to an insured event, or that the subject matter insured is already impossible to suffer a loss due to an insured event, the validity of the insurance contract shall not be affected."
+    },
+    {
+      "article_number": "第十一条",
+      "content_en": "Losses caused by the carrier delivering goods without the original bill of lading in maritime cargo transport shall not fall within the scope of the insurer's insurance liability. Where the parties to the insurance contract have otherwise agreed, such agreement shall prevail."
+    },
+    {
+      "article_number": "第十二条",
+      "content_en": "Where, after an insured event occurs, the reasonable measures taken by the insured to prevent or reduce the loss are ineffective, and the insured requests the insurer to pay the reasonable expenses incurred thereby, the People's Court shall support such request."
+    },
+    {
+      "article_number": "第十三条",
+      "content_en": "Where the insurer, when exercising the right of subrogation for compensation, fails to submit to the People's Court, in accordance with the Special Maritime Procedure Law, the certificate that it has actually paid insurance compensation to the insured, the People's Court shall not accept the case; if it has already accepted, it shall rule to dismiss the prosecution."
+    },
+    {
+      "article_number": "第十四条",
+      "content_en": "The People's Court accepting a dispute case where the insurer exercises the right of subrogation for compensation shall only review the legal relationship between the third party who caused the insured event and the insured."
+    },
+    {
+      "article_number": "第十五条",
+      "content_en": "Where the insurer, after obtaining the right of subrogation for compensation, claims that the limitation of action is interrupted on the grounds that the insured has filed a lawsuit against the third party, submitted to arbitration, applied for arrest of the ship, or that the third party has agreed to perform the obligation, the People's Court shall support such claim."
+    },
+    {
+      "article_number": "第十六条",
+      "content_en": "Where the insurer, after obtaining the right of subrogation for compensation, claims to enjoy the security right obtained by the insured by applying for the arrest of the ship, the People's Court shall support such claim."
+    },
+    {
+      "article_number": "第十七条",
+      "content_en": "These Provisions shall come into force as of January 1, 2007."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "law_id": 3500509,
+  "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Disputes over Infringement of Personal Rights and Interests through Information Networks",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第一条",
+      "content_en": "Article 1: These Provisions refer to civil dispute cases involving infringement of personal rights and interests through the use of information networks, which are dispute cases arising from infringement of others' rights to name, name of an organization, reputation, honor, portrait, privacy, and other personal rights and interests through the use of information networks."
+    },
+    {
+      "article_number": "第二条",
+      "content_en": "Article 2: Where a plaintiff initiates prosecution against a network user or a network service provider pursuant to the provisions of Articles 1195 and 1197 of the Civil Code, the People's Court shall accept it.\nWhere the plaintiff only initiates prosecution against a network user, and the network user requests to add the network service provider suspected of infringement as a co-defendant or third party, the People's Court shall permit it.\nWhere the plaintiff only initiates prosecution against a network service provider, and the network service provider requests to add the network user that can be determined as a co-defendant or third party, the People's Court shall permit it."
+    },
+    {
+      "article_number": "第三条",
+      "content_en": "Article 3: Where a plaintiff initiates prosecution against a network service provider, and the network service provider defends on the ground that the information suspected of infringement was published by a network user, the People's Court may, based on the plaintiff's request and the specific circumstances of the case, order the network service provider to provide to the People's Court such information as the name (or title), contact information, and network address of the network user suspected of infringement that can be determined.\nWhere the network service provider refuses to provide such information without justifiable reasons, the People's Court may, pursuant to the provisions of Article 114 of the Civil Procedure Law, take measures such as punishment against the network service provider.\nWhere the plaintiff, based on the information provided by the network service provider, requests to add the network user as a defendant, the People's Court shall permit it."
+    },
+    {
+      "article_number": "第四条",
+      "content_en": "Article 4: In applying the provisions of paragraph 2 of Article 1195 of the Civil Code to determine whether the necessary measures such as deletion, blocking, and disconnection of links taken by a network service provider are timely, the People's Court shall make a comprehensive determination based on such factors as the type and nature of the network service, the form and accuracy of the effective notice, and the type and degree of infringement on rights and interests by the network information."
+    },
+    {
+      "article_number": "第五条",
+      "content_en": "Article 5: Where a network user whose published information has been subjected to measures such as deletion, blocking, or disconnection of links claims that the network service provider bears liability for breach of contract or tort liability, and the network service provider defends on the ground that it has received a valid notice as provided in paragraph 1 of Article 1195 of the Civil Code, the People's Court shall uphold the defense."
+    },
+    {
+      "article_number": "第六条",
+      "content_en": "Article 6: In determining whether a network service provider 'knows or should know' pursuant to Article 1197 of the Civil Code, the People's Court shall comprehensively consider the following factors:\n(1) whether the network service provider has processed the infringing network information by means of recommendation, ranking, selection, editing, organization, modification, or other means, whether manually or automatically;\n(2) the network service provider's capability to manage information that it should possess, as well as the nature and manner of the services provided and the likelihood of causing infringement therefrom;\n(3) the type and obviousness of the infringement on personal rights and interests by the network information;\n(4) the degree of social impact of the network information or the number of page views within a certain period;\n(5) the technical feasibility of the network service provider taking measures to prevent infringement and whether it has taken corresponding reasonable measures;\n(6) whether the network service provider has taken corresponding reasonable measures against repeated infringements by the same network user or for the same infringing information;\n(7) other factors related to the case."
+    },
+    {
+      "article_number": "第七条",
+      "content_en": "Article 7: In determining the fault and the degree of fault of a network user or network service provider in reposting network information, the People's Court shall comprehensively consider the following factors:\n(1) the duty of care borne by the reposting subject that is commensurate with its nature and scope of influence;\n(2) the obviousness of the infringement on others' personal rights and interests by the reposted information;\n(3) whether substantive modifications have been made to the reposted information, and whether the article title has been added or modified, resulting in a serious inconsistency with the content and the possibility of misleading the public."
+    },
+    {
+      "article_number": "第八条",
+      "content_en": "Article 8: Where a network user or network service provider adopts means such as defamation or disparagement to damage the public's trust in a business entity and lower the social evaluation of its products or services, and the business entity requests the network user or network service provider to bear tort liability, the People's Court shall support it according to law."
+    },
+    {
+      "article_number": "第九条",
+      "content_en": "Article 9: Where a network user or network service provider publishes information based on information sources such as documents produced by state organs in the exercise of their authority and acts performed by state organs in the public exercise of their authority, and any of the following circumstances exists, resulting in infringement on others' personal rights and interests, and the infringed person requests the infringer to bear tort liability, the People's Court shall support it:\n(1) the information published by the network user or network service provider is inconsistent with the content of the aforesaid information sources;\n(2) the network user or network service provider causes misunderstanding by adding insulting content, defamatory information, improper titles, or by adding or deleting information, adjusting the structure, changing the order, or other means;\n(3) the aforesaid information source has been publicly corrected, but the network user refuses to correct it or the network service provider fails to correct it;\n(4) after the aforesaid information source has been publicly corrected, the network user or network service provider still publishes the information before the correction."
+    },
+    {
+      "article_number": "第十条",
+      "content_en": "Article 10: Where the infringed person and the network user or network service provider that constitutes infringement reach an agreement under which one party pays remuneration and the other party provides services such as deletion, blocking, or disconnection of links, the People's Court shall determine the agreement to be invalid.\nWhere a person, without authorization, tampers with, deletes, or blocks specific network information, or prevents others from obtaining network information by disconnecting links, and the network user or network service provider that published such information requests the infringer to bear tort liability, the People's Court shall support it. Where the act is performed upon the commission of another person, the principal and the agent shall bear joint and several liability."
+    },
+    {
+      "article_number": "第十一条",
+      "content_en": "Article 11: Where a network user or network service provider infringes upon others' personal rights and interests, causing property damage or serious mental harm, and the infringed person requests it to bear compensation liability pursuant to the provisions of Article 1182 and Article 1183 of the Civil Code, the People's Court shall support it."
+    },
+    {
+      "article_number": "第十二条",
+      "content_en": "Article 12: The reasonable expenses paid by the infringed person to stop the infringing act may be determined as the property damage as stipulated in Article 1182 of the Civil Code. Reasonable expenses include the reasonable costs incurred by the infringed person or the authorized agent for investigation and evidence collection of the infringing act. The People's Court may, based on the party's request and the specific circumstances of the case, include the lawyer fees that conform to the relevant state regulations within the scope of compensation.\nWhere the property damage suffered by the infringed person due to infringement upon personal rights and interests and the benefits obtained by the infringer therefrom are difficult to determine, the People's Court may determine the amount of compensation within the range of not more than RMB 500,000 yuan based on the specific circumstances of the case."
+    },
+    {
+      "article_number": "第十三条",
+      "content_en": "Article 13: These Provisions shall apply to cases of first instance and second instance that are being tried by the People's Court after these Provisions come into force.\nFor cases that have already attained final adjudication before these Provisions come into force, and where a party applies for retrial or a decision for retrial is made under the trial supervision procedure after these Provisions come into force, these Provisions shall not apply.\n126"
+    }
+  ]
+}

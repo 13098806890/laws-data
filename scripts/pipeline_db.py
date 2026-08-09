@@ -89,6 +89,33 @@ def main():
         if not run(f"python3 '{SCRIPTS / 'import_en.py'}'"):
             print("  ⚠ 部分法律可能有缺失，继续验证…")
 
+    # ── Step 2a: 结构节点英文标题（heading_en_map.json → nodes.content_en）──
+    if not args.skip_import_en and not args.validate_only:
+        print("\n── Step 2a: 写入结构节点英文标题 (heading_en_map → content_en) ──")
+        import json as _json
+        HEADING_MAP_PATH = LAWS_DATA / "references" / "heading_en_map.json"
+        if HEADING_MAP_PATH.exists():
+            heading_map = _json.loads(HEADING_MAP_PATH.read_text(encoding="utf-8"))
+            # heading_en_map.json uses stable keys (law_id:type:order_index)。
+            # 注意：translate_headings.py 写入时用 COALESCE(order_index,0)，这里必须保持一致，
+            # 否则 order_index 为 NULL 的"正文"等节点匹配不上（此前 pipeline.py 阶段五b 的 bug）。
+            import sqlite3
+            conn = sqlite3.connect(str(LAWS_DATA_DB))
+            updated = 0
+            for key, en_text in heading_map.items():
+                parts = key.split(":")
+                law_id, ntype, oi = int(parts[0]), parts[1], int(parts[2])
+                cur = conn.execute(
+                    "UPDATE nodes SET content_en = ? WHERE law_id = ? AND type = ? AND COALESCE(order_index, 0) = ? AND (content_en IS NULL OR content_en = '')",
+                    (en_text, law_id, ntype, oi)
+                )
+                updated += cur.rowcount
+            conn.commit()
+            conn.close()
+            print(f"  ✅ 写入 {updated} 条结构节点英文标题 (共 {len(heading_map)} 条缓存)")
+        else:
+            print("  ⚠  heading_en_map.json 不存在，跳过（可先运行 translate_headings.py 生成）")
+
     # ── Step 2b: 导出菜单（需在 import_en 之后，保证 title_en 已写入）──
     if not args.skip_json_rebuild and not args.validate_only:
         print("\n── Step 2b: 导出菜单 (law_menu) ──")
@@ -109,6 +136,14 @@ def main():
     # ── Step 4: Validate ──────────────────────────────────────────────
     print("\n── Step 4/4: 验证 ──")
 
+    # DB vs JSON 结构一致性 + 英文覆盖率
+    print("\n  ── DB 一致性 + 英文覆盖率验证 ──")
+    db_ok = run(f"python3 '{SCRIPTS / 'verify_db.py'}'")
+
+    # 法律结构完整性（条文编号递增、父子结构）
+    print("\n  ── 结构完整性验证 ──")
+    struct_ok = run(f"python3 '{SCRIPTS / 'verify_structure.py'}'")
+
     # Gongbao validation
     print("\n  ── gongbao 验证 ──")
     ok = run(f"python3 '{SCRIPTS / 'verify_gongbao_db.py'}'")
@@ -127,22 +162,36 @@ def main():
 
     # Quick FTS check
     print("\n  ── FTS 快速检查 ──")
-    run(f"""python3 -c '
+    fts_ok = True
+    fts_out = run(f"""python3 -c '
 import sqlite3
 db = sqlite3.connect("{LAWS_DATA_DB}")
+fails = []
 for q, min_hits in [("交通肇事", 5), ("accident", 50), ("traffic", 50)]:
     n = db.execute("SELECT COUNT(*) FROM gongbao_docs_fts WHERE gongbao_docs_fts MATCH ?", (q,)).fetchone()[0]
     icon = "✅" if n >= min_hits else "⚠"
     print(f"  {{icon}} FTS \\\"{{q}}\\\": {{n}} hits")
+    if n < min_hits:
+        fails.append(f"FTS \\\"{{q}}\\\" 只有 {{n}} 条（需要 {{min_hits}}）")
 db.close()
+import sys
+if fails:
+    print("  ❌ FTS 命中数不足：")
+    for f in fails:
+        print(f"    - {{f}}")
+    sys.exit(1)
 ' """)
+    fts_ok = bool(fts_out)
 
     # ── Summary ───────────────────────────────────────────────────────
     issues = []
+    if not db_ok: issues.append("DB 一致性/英文覆盖率验证失败")
+    if not struct_ok: issues.append("结构完整性验证失败")
     if not ok: issues.append("gongbao 验证失败")
     if not en_ok: issues.append("法条英文翻译验证失败")
     if not repeal_ok: issues.append("废止规则验证失败")
     if not enh_ok: issues.append("增强库验证失败")
+    if not fts_ok: issues.append("FTS 检查失败")
 
     print(f"\n{'='*60}")
     if issues:

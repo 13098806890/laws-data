@@ -1,12 +1,14 @@
 {
   "name": "默认分类",
-  "version": "2026-08-03",
+  "version": "2026-08-09",
   "groups": [
     {
       "label": "宪法与国家机构",
+      "label_en": "Constitution & State Institutions",
       "subgroups": [
         {
           "label": "宪法",
+          "label_en": "Constitution",
           "laws": [
             {
               "id": 1000001,
@@ -17,6 +19,7 @@
         },
         {
           "label": "法律及决定",
+          "label_en": "Laws & Decisions",
           "laws": [
             {
               "id": 1100028,
@@ -382,6 +385,7 @@
         },
         {
           "label": "司法解释",
+          "label_en": "Judicial Interpretations",
           "laws": [
             {
               "id": 3000025,
@@ -434,7 +438,7 @@
               "title_en": "Interpretation of the Standing Committee of the National People's Congress on Article 14 and Article 47 of the Law of the People's Republic of China on Safeguarding National Security in the Hong Kong Special Administrative Region"
             },
             {
-              "id": 3500995,
+              "id": 3500097,
               "title": "最高人民法院关于内地与香港特别行政区法院相互委托送达民商事司法文书的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Entrustment of Service of Civil and Commercial Judicial Documents Between the Courts of the Mainland and the Hong Kong Special Administrative Region"
             },
@@ -444,7 +448,7 @@
               "title_en": "Reply of the Supreme People's Court on Whether Courts Should Accept Disputes Over the Evacuation of Military-Owned Houses by Retired Military Cadres"
             },
             {
-              "id": 3500137,
+              "id": 3500508,
               "title": "最高人民法院关于审理军队、武警部队、政法机关移交、撤销企业和与党政机关脱钩企业相关纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Dispute Cases Related to Enterprises Transferred or Dissolved by the Military, Armed Police, and Political-Legal Organs, and Enterprises Separated from Party and Government Organs"
             },
@@ -457,6 +461,7 @@
         },
         {
           "label": "行政法规/交通运输",
+          "label_en": "Administrative Regulations: Transportation",
           "laws": [
             {
               "id": 5000976,
@@ -467,6 +472,7 @@
         },
         {
           "label": "行政法规/生态环境",
+          "label_en": "Administrative Regulations: Ecology & Environment",
           "laws": [
             {
               "id": 5000795,
@@ -477,6 +483,7 @@
         },
         {
           "label": "行政法规/劳动就业",
+          "label_en": "Administrative Regulations: Labor & Employment",
           "laws": [
             {
               "id": 5000900,
@@ -487,6 +494,7 @@
         },
         {
           "label": "行政法规/社会民政",
+          "label_en": "Administrative Regulations: Social & Civil Affairs",
           "laws": [
             {
               "id": 5000903,
@@ -497,6 +505,7 @@
         },
         {
           "label": "行政法规/工商市场",
+          "label_en": "Administrative Regulations: Industry, Commerce & Market",
           "laws": [
             {
               "id": 5000937,
@@ -507,6 +516,7 @@
         },
         {
           "label": "行政法规/安全应急",
+          "label_en": "Administrative Regulations: Safety & Emergency Response",
           "laws": [
             {
               "id": 5000964,
@@ -517,6 +527,7 @@
         },
         {
           "label": "行政法规/军事国防",
+          "label_en": "Administrative Regulations: Military & National Defense",
           "laws": [
             {
               "id": 5000966,
@@ -552,6 +563,7 @@
         },
         {
           "label": "行政法规/行政法制",
+          "label_en": "Administrative Regulations: Administrative Rule of Law",
           "laws": [
             {
               "id": 5000844,
@@ -567,6 +579,7 @@
         },
         {
           "label": "行政法规/涉外外资",
+          "label_en": "Administrative Regulations: Foreign Affairs & Investment",
           "laws": [
             {
               "id": 5001357,
@@ -579,9 +592,11 @@
     },
     {
       "label": "民事与商事",
+      "label_en": "Civil & Commercial",
       "subgroups": [
         {
           "label": "民法典",
+          "label_en": "Civil Code",
           "laws": [
             {
               "id": 1100313,
@@ -619,7 +634,7 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the General Part of the Civil Code of the People's Republic of China"
             },
             {
-              "id": 3501392,
+              "id": 3500585,
               "title": "最高人民法院关于适用《中华人民共和国民法典》时间效力的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Temporal Effect of the Civil Code of the People's Republic of China"
             },
@@ -642,6 +657,7 @@
         },
         {
           "label": "合同与债权",
+          "label_en": "Contracts & Obligations",
           "laws": [
             {
               "id": 1100048,
@@ -649,32 +665,32 @@
               "title_en": "Negotiable Instruments Law of the People's Republic of China"
             },
             {
-              "id": 3501182,
+              "id": 3500240,
               "title": "最高人民法院关于债权人对人员下落不明或者财产状况不清的债务人申请破产清算案件如何处理的批复",
               "title_en": "Reply of the Supreme People's Court on How to Handle Cases Where a Creditor Applies for Bankruptcy Liquidation of a Debtor Whose Whereabouts Are Unknown or Whose Property Status Is Unclear"
             },
             {
-              "id": 3500308,
+              "id": 3500496,
               "title": "最高人民法院关于国有土地开荒后用于农耕的土地使用权转让合同纠纷案件如何适用法律问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Apply Law in Cases of Disputes over Contracts for Transfer of Land-Use Rights of State-Owned Land Reclaimed for Farming"
             },
             {
-              "id": 3500304,
+              "id": 3500502,
               "title": "最高人民法院关于审理买卖合同纠纷案件适用法律问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Application of Law in the Trial of Sales Contract Dispute Cases"
             },
             {
-              "id": 3501264,
+              "id": 3500322,
               "title": "最高人民法院关于审理出口信用保险合同纠纷案件适用相关法律问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Relevant Laws in the Trial of Export Credit Insurance Contract Dispute Cases"
             },
             {
-              "id": 3500183,
+              "id": 3500512,
               "title": "最高人民法院关于审理商品房买卖合同纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Disputes over Commercial Housing Sale Contracts"
             },
             {
-              "id": 3500253,
+              "id": 3500516,
               "title": "最高人民法院关于审理城镇房屋租赁合同纠纷案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Urban Housing Lease Contract Dispute Cases"
             },
@@ -684,22 +700,22 @@
               "title_en": "Interpretation (I) of the Supreme People's Court on Issues concerning the Application of Law in the Trial of Construction Project Construction Contract Dispute Cases"
             },
             {
-              "id": 3500203,
+              "id": 3500521,
               "title": "最高人民法院关于审理技术合同纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Technology Contract Dispute Cases"
             },
             {
-              "id": 3500208,
+              "id": 3500538,
               "title": "最高人民法院关于审理涉及国有土地使用权合同纠纷案件适用法律问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Contract Dispute Cases involving the Right to Use State-owned Land"
             },
             {
-              "id": 3500122,
+              "id": 3500546,
               "title": "最高人民法院关于审理票据纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Disputes over Negotiable Instruments"
             },
             {
-              "id": 3500342,
+              "id": 3500551,
               "title": "最高人民法院关于审理融资租赁合同纠纷案件适用法律问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Disputes over Financial Leasing Contracts"
             },
@@ -709,7 +725,7 @@
               "title_en": "Reply of the Supreme People's Court on How to Handle Issues Concerning the Borrower's Failure to Repay a Loan When Due under a Loan Contract between Enterprises"
             },
             {
-              "id": 3501143,
+              "id": 3500209,
               "title": "最高人民法院关于银行储蓄卡密码被泄露导致存款被他人骗取引起的储蓄合同纠纷应否作为民事案件受理问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether a Dispute over a Savings Contract Arising from the Theft of Deposits by Others Due to Leakage of Bank Card Passwords Should Be Accepted as a Civil Case"
             }
@@ -717,6 +733,7 @@
         },
         {
           "label": "公司与破产",
+          "label_en": "Companies & Bankruptcy",
           "laws": [
             {
               "id": 1100032,
@@ -739,17 +756,17 @@
               "title_en": "Partnership Enterprise Law of the People's Republic of China"
             },
             {
-              "id": 3501168,
+              "id": 3500226,
               "title": "最高人民法院关于《中华人民共和国企业破产法》施行时尚未审结的企业破产案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law to Enterprise Bankruptcy Cases Not Yet Concluded upon the Effectiveness of the Enterprise Bankruptcy Law of the People's Republic of China"
             },
             {
-              "id": 3501463,
+              "id": 3500665,
               "title": "最高人民法院关于《中华人民共和国公司法》第八十八条第一款不溯及适用的批复",
               "title_en": "Reply of the Supreme People's Court on the Non-retroactive Application of Article 88, Paragraph 1 of the Company Law of the People's Republic of China"
             },
             {
-              "id": 3501245,
+              "id": 3500312,
               "title": "最高人民法院关于个人独资企业清算是否可以参照适用企业破产法规定的破产清算程序的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the Liquidation of a Sole Proprietorship Enterprise May Apply Mutatis Mutandis the Bankruptcy Liquidation Procedures under the Enterprise Bankruptcy Law"
             },
@@ -759,52 +776,57 @@
               "title_en": "Decision of the Supreme People's Court on Revising the Provisions on Several Issues concerning the Application of the Company Law of the People's Republic of China"
             },
             {
-              "id": 3501447,
+              "id": 3500644,
               "title": "最高人民法院关于公司解散纠纷案件受理费收费标准的批复",
               "title_en": "Reply of the Supreme People's Court on the Standards for Acceptance Fees in Cases of Company Dissolution Disputes"
             },
             {
-              "id": 3501070,
+              "id": 3500147,
               "title": "最高人民法院关于冻结、拍卖上市公司国有股和社会法人股若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on Freezing and Auctioning State-Owned Shares and Social Legal Person Shares of Listed Companies"
             },
             {
-              "id": 3501144,
+              "id": 3500212,
               "title": "最高人民法院关于如何认定国有控股、参股股份有限公司中的国有公司、企业人员的解释",
               "title_en": "Interpretation of the Supreme People's Court on How to Determine Personnel of State-Owned Companies and Enterprises in Joint-Stock Companies Controlled or Participated by the State"
             },
             {
-              "id": 3501165,
+              "id": 3500224,
               "title": "最高人民法院关于审理企业破产案件指定管理人的规定",
               "title_en": "Provisions of the Supreme People's Court on the Appointment of Administrators in the Trial of Enterprise Bankruptcy Cases"
             },
             {
-              "id": 3501166,
+              "id": 3500225,
               "title": "最高人民法院关于审理企业破产案件确定管理人报酬的规定",
               "title_en": "Provisions of the Supreme People's Court on the Determination of Administrator's Remuneration in the Trial of Enterprise Bankruptcy Cases"
             },
             {
-              "id": 3501101,
+              "id": 3500165,
               "title": "最高人民法院关于审理企业破产案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Enterprise Bankruptcy Cases"
             },
             {
-              "id": 3500277,
+              "id": 3500557,
               "title": "最高人民法院关于对因资不抵债无法继续办学被终止的民办学校如何组织清算问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Organize Liquidation of a Private School Terminated Due to Insolvency and Inability to Continue Operation"
             },
             {
-              "id": 3500448,
+              "id": 3500298,
+              "title": "最高人民法院关于适用《中华人民共和国企业破产法》若干问题的规定（一）",
+              "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Enterprise Bankruptcy Law of the People's Republic of China (I)"
+            },
+            {
+              "id": 3500572,
               "title": "最高人民法院关于适用《中华人民共和国企业破产法》若干问题的规定（三）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Enterprise Bankruptcy Law of the People's Republic of China (III)"
             },
             {
-              "id": 3500329,
+              "id": 3500573,
               "title": "最高人民法院关于适用《中华人民共和国企业破产法》若干问题的规定（二）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Enterprise Bankruptcy Law of the People's Republic of China (II)"
             },
             {
-              "id": 3501457,
+              "id": 3500657,
               "title": "最高人民法院关于适用《中华人民共和国公司法》时间效力的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Temporal Effect of the Application of the Company Law of the People's Republic of China"
             },
@@ -814,27 +836,27 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Company Law of the People's Republic of China (III)"
             },
             {
-              "id": 3500217,
+              "id": 3500339,
               "title": "最高人民法院关于适用《中华人民共和国公司法》若干问题的规定（一）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Company Law of the People's Republic of China (I)"
             },
             {
-              "id": 3500340,
+              "id": 3500577,
               "title": "最高人民法院关于适用《中华人民共和国公司法》若干问题的规定（三）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Company Law of the People's Republic of China (III)"
             },
             {
-              "id": 3500341,
+              "id": 3500578,
               "title": "最高人民法院关于适用《中华人民共和国公司法》若干问题的规定（二）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Company Law of the People's Republic of China (II)"
             },
             {
-              "id": 3500451,
+              "id": 3500579,
               "title": "最高人民法院关于适用《中华人民共和国公司法》若干问题的规定（五）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Company Law of the People's Republic of China (V)"
             },
             {
-              "id": 3500416,
+              "id": 3500580,
               "title": "最高人民法院关于适用《中华人民共和国公司法》若干问题的规定（四）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Company Law of the People's Republic of China (IV)"
             }
@@ -842,6 +864,7 @@
         },
         {
           "label": "知识产权",
+          "label_en": "Intellectual Property",
           "laws": [
             {
               "id": 1100320,
@@ -859,7 +882,7 @@
               "title_en": "Copyright Law of the People's Republic of China"
             },
             {
-              "id": 3500131,
+              "id": 3500485,
               "title": "最高人民法院关于人民法院对注册商标权进行财产保全的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Property Preservation of Registered Trademark Rights by People's Courts"
             },
@@ -889,7 +912,7 @@
               "title_en": "Decision of the Supreme People's Court on Amending the Provisions of the Supreme People's Court on Several Issues concerning the Intellectual Property Court"
             },
             {
-              "id": 3501359,
+              "id": 3500442,
               "title": "最高人民法院关于审查知识产权纠纷行为保全案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in Reviewing Behavior Preservation Cases in Intellectual Property Disputes"
             },
@@ -899,12 +922,12 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Cases Involving Unfair Competition"
             },
             {
-              "id": 3501383,
+              "id": 3500472,
               "title": "最高人民法院关于审理专利授权确权行政案件适用法律若干问题的规定（一）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Administrative Cases concerning Patent Grant and Confirmation (I)"
             },
             {
-              "id": 3500357,
+              "id": 3500501,
               "title": "最高人民法院关于审理专利纠纷案件适用法律问题的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Application of Law in the Trial of Patent Dispute Cases"
             },
@@ -914,27 +937,32 @@
               "title_en": "Interpretation of the Supreme People's Court on the Application of Punitive Damages in the Trial of Civil Cases of Intellectual Property Infringement"
             },
             {
-              "id": 3500380,
+              "id": 3500262,
+              "title": "最高人民法院关于审理侵犯专利权纠纷案件应用法律若干问题的解释",
+              "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Patent Infringement Dispute Cases"
+            },
+            {
+              "id": 3500506,
               "title": "最高人民法院关于审理侵犯专利权纠纷案件应用法律若干问题的解释（二）",
               "title_en": "Interpretation (II) of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Patent Infringement Dispute Cases"
             },
             {
-              "id": 3500404,
+              "id": 3500513,
               "title": "最高人民法院关于审理商标授权确权行政案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Administrative Cases on Trademark Granting and Confirmation of Rights"
             },
             {
-              "id": 3500172,
+              "id": 3500515,
               "title": "最高人民法院关于审理商标民事纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Trademark Dispute Cases"
             },
             {
-              "id": 3500234,
+              "id": 3500530,
               "title": "最高人民法院关于审理注册商标、企业名称与在先权利冲突的民事纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Civil Dispute Cases involving Conflict between Registered Trademark, Enterprise Name and Prior Rights"
             },
             {
-              "id": 3501476,
+              "id": 3500677,
               "title": "最高人民法院关于审理涉专利权评价报告案件适用法律问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Law in the Trial of Cases Involving Patent Evaluation Reports"
             },
@@ -944,27 +972,27 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of Law in Hearing Cases Involving Copyright Disputes in Computer Networks"
             },
             {
-              "id": 3500248,
+              "id": 3500540,
               "title": "最高人民法院关于审理涉及驰名商标保护的民事纠纷案件应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Dispute Cases involving the Protection of Well-known Trademarks"
             },
             {
-              "id": 3501410,
+              "id": 3500603,
               "title": "最高人民法院关于审理申请注册的药品相关的专利权纠纷民事案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Cases involving Patent Disputes Related to Drugs under Application for Registration"
             },
             {
-              "id": 3500173,
+              "id": 3500550,
               "title": "最高人民法院关于审理著作权民事纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Disputes over Copyright"
             },
             {
-              "id": 3501387,
+              "id": 3500474,
               "title": "最高人民法院关于涉网络知识产权侵权纠纷几个法律适用问题的批复",
               "title_en": "Reply of the Supreme People's Court on Several Issues Concerning the Application of Law in Online Intellectual Property Infringement Disputes"
             },
             {
-              "id": 3501432,
+              "id": 3500627,
               "title": "最高人民法院关于第一审知识产权民事、行政案件管辖的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Jurisdiction over First-instance Intellectual Property Civil and Administrative Cases"
             }
@@ -972,6 +1000,7 @@
         },
         {
           "label": "担保与物权",
+          "label_en": "Security & Property Rights",
           "laws": [
             {
               "id": 3500846,
@@ -982,9 +1011,10 @@
         },
         {
           "label": "婚姻、家庭与继承",
+          "label_en": "Marriage, Family & Inheritance",
           "laws": [
             {
-              "id": 3501420,
+              "id": 3500617,
               "title": "最高人民法院关于内地与香港特别行政区法院相互认可和执行婚姻家庭民事案件判决的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Recognition and Enforcement of Judgments in Civil Cases Concerning Marriage and Family Between the Courts of the Mainland and the Hong Kong Special Administrative Region"
             },
@@ -1002,6 +1032,7 @@
         },
         {
           "label": "保险",
+          "label_en": "Insurance",
           "laws": [
             {
               "id": 1100144,
@@ -1014,27 +1045,32 @@
               "title_en": "Military Personnel Insurance Law of the People's Republic of China"
             },
             {
-              "id": 3501480,
+              "id": 3500682,
               "title": "最高人民法院关于基本医疗保险基金先行支付申请条件法律适用问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Issues concerning the Application of Law regarding the Conditions for Applying for Advance Payment from the Basic Medical Insurance Fund"
             },
             {
-              "id": 3500221,
+              "id": 3500531,
               "title": "最高人民法院关于审理海上保险纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Marine Insurance Dispute Cases"
             },
             {
-              "id": 3500373,
+              "id": 3500254,
+              "title": "最高人民法院关于适用《中华人民共和国保险法》若干问题的解释（一）",
+              "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Insurance Law of the People's Republic of China (I)"
+            },
+            {
+              "id": 3500574,
               "title": "最高人民法院关于适用《中华人民共和国保险法》若干问题的解释（三）",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Insurance Law of the People's Republic of China (III)"
             },
             {
-              "id": 3500323,
+              "id": 3500575,
               "title": "最高人民法院关于适用《中华人民共和国保险法》若干问题的解释（二）",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Insurance Law of the People's Republic of China (II)"
             },
             {
-              "id": 3500435,
+              "id": 3500576,
               "title": "最高人民法院关于适用《中华人民共和国保险法》若干问题的解释（四）",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Insurance Law of the People's Republic of China (IV)"
             }
@@ -1042,6 +1078,7 @@
         },
         {
           "label": "海事与运输",
+          "label_en": "Maritime & Transport",
           "laws": [
             {
               "id": 1100438,
@@ -1049,27 +1086,27 @@
               "title_en": "Maritime Law of the People's Republic of China"
             },
             {
-              "id": 3500271,
+              "id": 3500533,
               "title": "最高人民法院关于审理海事赔偿责任限制相关纠纷案件的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Dispute Cases related to Limitation of Liability for Maritime Claims"
             },
             {
-              "id": 3500290,
+              "id": 3500547,
               "title": "最高人民法院关于审理船舶油污损害赔偿纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Disputes over Compensation for Oil Pollution Damage from Ships"
             },
             {
-              "id": 3501402,
+              "id": 3500548,
               "title": "最高人民法院关于审理船舶碰撞和触碰案件财产损害赔偿的规定",
               "title_en": "Provisions of the Supreme People's Court on Compensation for Property Damage in Cases of Ship Collision and Contact"
             },
             {
-              "id": 3500239,
+              "id": 3500549,
               "title": "最高人民法院关于审理船舶碰撞纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Ship Collision Disputes"
             },
             {
-              "id": 3501048,
+              "id": 3500125,
               "title": "最高人民法院关于购买人使用分期付款购买的车辆从事运输因交通事故造成他人财产损失保留车辆所有权的出卖方不应承担民事责任的批复",
               "title_en": "Reply of the Supreme People's Court on the Seller Who Retains Ownership of a Vehicle Purchased by Installments and Used for Transport Causing Property Damage to Others in a Traffic Accident Shall Not Bear Civil Liability"
             }
@@ -1077,6 +1114,7 @@
         },
         {
           "label": "外商与涉外",
+          "label_en": "Foreign Investment & Foreign Affairs",
           "laws": [
             {
               "id": 1100290,
@@ -1089,7 +1127,7 @@
               "title_en": "Law of the People's Republic of China on the Application of Laws to Foreign-Related Civil Relations"
             },
             {
-              "id": 3500269,
+              "id": 3500517,
               "title": "最高人民法院关于审理外商投资企业纠纷案件若干问题的规定（一）",
               "title_en": "Provisions (I) of the Supreme People's Court on Several Issues concerning the Trial of Dispute Cases Involving Foreign-Invested Enterprises"
             },
@@ -1104,12 +1142,12 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of the Foreign Investment Law of the People's Republic of China (Fa Shi)"
             },
             {
-              "id": 3501403,
+              "id": 3501254,
               "title": "最高人民法院关于适用《中华人民共和国涉外民事关系法律适用法》若干问题的解释（一）",
-              "title_en": "Interpretation of the Supreme People's Court on Certain Issues Concerning the Application of the Law of the People's Republic of China on the Application of Laws to Foreign-Related Civil Relations (I)"
+              "title_en": "Interpretation (I) of the Supreme People's Court on Several Issues concerning the Application of the Law of the Application of Laws to Foreign-Related Civil Relations of the People's Republic of China"
             },
             {
-              "id": 3501449,
+              "id": 3500647,
               "title": "最高人民法院关于适用《中华人民共和国涉外民事关系法律适用法》若干问题的解释（二）",
               "title_en": "Interpretation (II) of the Supreme People's Court on Several Issues concerning the Application of the Law of the People's Republic of China on Application of Laws to Foreign-Related Civil Relations"
             }
@@ -1117,6 +1155,7 @@
         },
         {
           "label": "证券与期货",
+          "label_en": "Securities & Futures",
           "laws": [
             {
               "id": 1100376,
@@ -1134,12 +1173,12 @@
               "title_en": "Securities Law of the People's Republic of China"
             },
             {
-              "id": 3500185,
+              "id": 3500524,
               "title": "最高人民法院关于审理期货纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Futures Dispute Cases"
             },
             {
-              "id": 3500278,
+              "id": 3500525,
               "title": "最高人民法院关于审理期货纠纷案件若干问题的规定（二）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Futures Dispute Cases (II)"
             },
@@ -1149,7 +1188,7 @@
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Civil Compensation Cases Arising from False Statements in the Securities Market"
             },
             {
-              "id": 3501419,
+              "id": 3500615,
               "title": "最高人民法院关于审理证券市场虚假陈述侵权民事赔偿案件的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Civil Compensation Cases for Misrepresentation in the Securities Market"
             }
@@ -1157,6 +1196,7 @@
         },
         {
           "label": "综合与程序批复",
+          "label_en": "General & Procedural Responses",
           "laws": [
             {
               "id": 1100038,
@@ -1194,32 +1234,32 @@
               "title_en": "Electronic Signature Law of the People's Republic of China"
             },
             {
-              "id": 3501199,
+              "id": 3500257,
               "title": "最高人民法院关于人民法院委托评估、拍卖和变卖工作的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Entrusted Appraisal, Auction, and Sale by People's Courts"
             },
             {
-              "id": 3501231,
+              "id": 3500297,
               "title": "最高人民法院关于人民法院委托评估、拍卖工作的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Entrusted Appraisal and Auction by People's Courts"
             },
             {
-              "id": 3500201,
+              "id": 3500488,
               "title": "最高人民法院关于人民法院民事执行中拍卖、变卖财产的规定",
               "title_en": "Provisions of the Supreme People's Court on the Auction and Sale of Property in Civil Enforcement by People's Courts"
             },
             {
-              "id": 3500200,
+              "id": 3500489,
               "title": "最高人民法院关于人民法院民事执行中查封、扣押、冻结财产的规定",
               "title_en": "Provisions of the Supreme People's Court on the Seizure, Impoundment, and Freezing of Property in Civil Enforcement by People's Courts"
             },
             {
-              "id": 3500198,
+              "id": 3500490,
               "title": "最高人民法院关于人民法院民事调解工作若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Work of Civil Mediation by People's Courts"
             },
             {
-              "id": 3501354,
+              "id": 3500437,
               "title": "最高人民法院关于人民法院确定财产处置参考价若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on Determining Reference Prices for Property Disposition by People's Courts"
             },
@@ -1244,7 +1284,7 @@
               "title_en": "Decision of the Supreme People's Court on Amending the Provisions of the Supreme People's Court on Recognition and Enforcement of Civil Judgments of Courts in the Taiwan Region"
             },
             {
-              "id": 3501470,
+              "id": 3500672,
               "title": "最高人民法院关于军事法院管辖民事案件若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Jurisdiction of Military Courts over Civil Cases"
             },
@@ -1254,7 +1294,7 @@
               "title_en": "Reply of the Supreme People's Court on the Issue of Whether the Party Lending a Bank Account Shall Bear Civil Liability"
             },
             {
-              "id": 3500186,
+              "id": 3500498,
               "title": "最高人民法院关于在民事审判工作中适用《中华人民共和国工会法》若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Trade Union Law of the People's Republic of China in Civil Trial Work"
             },
@@ -1264,17 +1304,17 @@
               "title_en": "Reply of the Supreme People's Court on Whether Judicial Personnel May Serve as Authorized Representatives of Parties in Civil Cases"
             },
             {
-              "id": 3500177,
+              "id": 3500500,
               "title": "最高人民法院关于审理与企业改制相关的民事纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Civil Dispute Cases Related to Enterprise Restructuring"
             },
             {
-              "id": 3500503,
+              "id": 3500628,
               "title": "最高人民法院关于审理人身损害赔偿案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Cases of Compensation for Personal Injury"
             },
             {
-              "id": 3501409,
+              "id": 3500606,
               "title": "最高人民法院关于审理使用人脸识别技术处理个人信息相关民事案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Cases Related to the Use of Facial Recognition Technology to Process Personal Information"
             },
@@ -1284,22 +1324,22 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Disputes over Infringement of the Right to Network Dissemination of Information"
             },
             {
-              "id": 3501384,
+              "id": 3500473,
               "title": "最高人民法院关于审理侵犯商业秘密民事案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Cases of Trade Secret Infringement"
             },
             {
-              "id": 3501158,
+              "id": 3500223,
               "title": "最高人民法院关于审理侵犯植物新品种权纠纷案件具体应用法律问题的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Issues concerning the Specific Application of Law in the Trial of Disputes over Infringement of New Plant Variety Rights"
             },
             {
-              "id": 3500214,
+              "id": 3500507,
               "title": "最高人民法院关于审理信用证纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Letter of Credit Dispute Cases"
             },
             {
-              "id": 3500351,
+              "id": 3500509,
               "title": "最高人民法院关于审理利用信息网络侵害人身权益民事纠纷案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Disputes over Infringement of Personal Rights and Interests through Information Networks"
             },
@@ -1309,82 +1349,82 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Dispute Cases Arising from Monopolistic Acts"
             },
             {
-              "id": 3501456,
+              "id": 3500656,
               "title": "最高人民法院关于审理垄断民事纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Monopoly Dispute Cases"
             },
             {
-              "id": 3500071,
+              "id": 3500518,
               "title": "最高人民法院关于审理存单纠纷案件的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Certificate of Deposit Dispute Cases"
             },
             {
-              "id": 3501192,
+              "id": 3500250,
               "title": "最高人民法院关于审理建筑物区分所有权纠纷案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Disputes over Building Distinction Ownership"
             },
             {
-              "id": 3500273,
+              "id": 3500522,
               "title": "最高人民法院关于审理旅游纠纷案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Tourism Dispute Cases"
             },
             {
-              "id": 3500246,
+              "id": 3500523,
               "title": "最高人民法院关于审理无正本提单交付货物案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Cases of Delivery of Goods without Original Bill of Lading"
             },
             {
-              "id": 3501434,
+              "id": 3500630,
               "title": "最高人民法院关于审理森林资源民事纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Dispute Cases concerning Forest Resources"
             },
             {
-              "id": 3500258,
+              "id": 3500528,
               "title": "最高人民法院关于审理民事级别管辖异议案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Objections to Civil Jurisdiction at Different Levels"
             },
             {
-              "id": 3500301,
+              "id": 3500532,
               "title": "最高人民法院关于审理海上货运代理纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Maritime Freight Forwarding Dispute Cases"
             },
             {
-              "id": 3501170,
+              "id": 3500229,
               "title": "最高人民法院关于审理涉及会计师事务所在审计业务活动中民事侵权赔偿案件的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Civil Tort Compensation Cases involving Accounting Firms in Audit Activities"
             },
             {
-              "id": 3500346,
+              "id": 3500535,
               "title": "最高人民法院关于审理涉及公证活动相关民事案件的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Civil Cases involving Notarization Activities"
             },
             {
-              "id": 3500211,
+              "id": 3500536,
               "title": "最高人民法院关于审理涉及农村土地承包纠纷案件适用法律问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Dispute Cases involving Rural Land Contracting"
             },
             {
-              "id": 3500145,
+              "id": 3500539,
               "title": "最高人民法院关于审理涉及计算机网络域名民事纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Dispute Cases involving Computer Network Domain Names"
             },
             {
-              "id": 3500276,
+              "id": 3500541,
               "title": "最高人民法院关于审理涉台民商事案件法律适用问题的规定",
               "title_en": "Provisions of the Supreme People's Court on the Application of Law in the Trial of Civil and Commercial Cases involving Taiwan"
             },
             {
-              "id": 3501193,
+              "id": 3500251,
               "title": "最高人民法院关于审理物业服务纠纷案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Property Service Dispute Cases"
             },
             {
-              "id": 3500398,
+              "id": 3500543,
               "title": "最高人民法院关于审理独立保函纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Independent Guarantee Letter Dispute Cases"
             },
             {
-              "id": 3501394,
+              "id": 3501294,
               "title": "最高人民法院关于审理环境侵权责任纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of Law in the Trial of Environmental Tort Liability Disputes"
             },
@@ -1394,12 +1434,12 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Civil Disputes over Bank Cards"
             },
             {
-              "id": 3501468,
+              "id": 3500670,
               "title": "最高人民法院关于审理预付式消费民事纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Prepaid Consumption Civil Disputes"
             },
             {
-              "id": 3501389,
+              "id": 3500478,
               "title": "最高人民法院关于审理食品安全民事纠纷案件适用法律若干问题的解释（一）",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Civil Disputes over Food Safety (I)"
             },
@@ -1409,42 +1449,42 @@
               "title_en": "Supreme People's Court's Reply on Whether the People's Court Shall Accept Applications for Recognition of Civil Mediation Documents Issued by Relevant Courts in the Taiwan Region or Mediation Agreements Issued or Confirmed by Relevant Institutions"
             },
             {
-              "id": 3501145,
+              "id": 3500213,
               "title": "最高人民法院关于当事人申请财产保全错误造成案外人损失应否承担赔偿责任问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Whether a Party Shall Assume Compensation Liability for Losses Caused to a Third Party by Wrongfully Applying for Property Preservation"
             },
             {
-              "id": 3500396,
+              "id": 3500564,
               "title": "最高人民法院关于民事执行中变更、追加当事人若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Change and Addition of Parties in Civil Enforcement"
             },
             {
-              "id": 3500409,
+              "id": 3500565,
               "title": "最高人民法院关于民事执行中财产调查若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning Property Investigation in Civil Enforcement"
             },
             {
-              "id": 3500182,
+              "id": 3500569,
               "title": "最高人民法院关于破产企业国有划拨土地使用权应否列入破产财产等问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the State-allocated Land Use Right of a Bankrupt Enterprise Should Be Included in the Bankruptcy Property and Other Issues"
             },
             {
-              "id": 3500136,
+              "id": 3500570,
               "title": "最高人民法院关于确定民事侵权精神损害赔偿责任若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Determination of Compensation Liability for Mental Damage in Civil Torts"
             },
             {
-              "id": 3500366,
+              "id": 3500664,
               "title": "最高人民法院关于认可和执行台湾地区法院民事判决的规定",
               "title_en": "Provisions of the Supreme People's Court on Recognition and Enforcement of Civil Judgments of Courts of the Taiwan Region"
             },
             {
-              "id": 3501260,
+              "id": 3500318,
               "title": "最高人民法院关于违法的建筑物、构筑物、设施等强制拆除问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Compulsory Demolition of Illegal Buildings, Structures, and Facilities"
             },
             {
-              "id": 3501479,
+              "id": 3500681,
               "title": "最高人民法院关于部分民事案件管辖适用法律有关问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Law to Jurisdiction over Certain Civil Cases"
             }
@@ -1452,6 +1492,7 @@
         },
         {
           "label": "行政法规/税务财政",
+          "label_en": "Administrative Regulations: Taxation & Finance",
           "laws": [
             {
               "id": 5000821,
@@ -1467,6 +1508,7 @@
         },
         {
           "label": "行政法规/海关进出口",
+          "label_en": "Administrative Regulations: Customs & Import-Export",
           "laws": [
             {
               "id": 5001125,
@@ -1482,6 +1524,7 @@
         },
         {
           "label": "行政法规/金融证券",
+          "label_en": "Administrative Regulations: Banking & Securities",
           "laws": [
             {
               "id": 5001207,
@@ -1547,6 +1590,7 @@
         },
         {
           "label": "行政法规/土地城建",
+          "label_en": "Administrative Regulations: Land & Urban Development",
           "laws": [
             {
               "id": 5001300,
@@ -1557,6 +1601,7 @@
         },
         {
           "label": "行政法规/社会民政",
+          "label_en": "Administrative Regulations: Social & Civil Affairs",
           "laws": [
             {
               "id": 5001349,
@@ -1567,6 +1612,7 @@
         },
         {
           "label": "行政法规/教育科技",
+          "label_en": "Administrative Regulations: Education & Science",
           "laws": [
             {
               "id": 5001148,
@@ -1597,6 +1643,7 @@
         },
         {
           "label": "行政法规/工商市场",
+          "label_en": "Administrative Regulations: Industry, Commerce & Market",
           "laws": [
             {
               "id": 5001031,
@@ -1607,6 +1654,7 @@
         },
         {
           "label": "行政法规/行政法制",
+          "label_en": "Administrative Regulations: Administrative Rule of Law",
           "laws": [
             {
               "id": 5001314,
@@ -1632,6 +1680,7 @@
         },
         {
           "label": "行政法规/涉外外资",
+          "label_en": "Administrative Regulations: Foreign Affairs & Investment",
           "laws": [
             {
               "id": 5001211,
@@ -1654,9 +1703,11 @@
     },
     {
       "label": "刑事",
+      "label_en": "Criminal",
       "subgroups": [
         {
           "label": "刑法及修正案",
+          "label_en": "Criminal Law & Amendments",
           "laws": [
             {
               "id": 1100329,
@@ -1839,7 +1890,7 @@
               "title_en": "Supplementary Provisions (III) of the Supreme People's Court and the Supreme People's Procuratorate on the Determination of Crimes under the Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3501083,
+              "id": 3500157,
               "title": "最高人民法院、最高人民检察院关于执行《中华人民共和国刑法》确定罪名的补充规定",
               "title_en": "Supplementary Provisions of the Supreme People's Court and the Supreme People's Procuratorate on the Determination of Charges in the Implementation of the Criminal Law of the People's Republic of China"
             },
@@ -1854,22 +1905,22 @@
               "title_en": "Supplementary Provisions (III) of the Supreme People's Court and the Supreme People's Procuratorate on the Implementation of the Criminal Law of the People's Republic of China for the Determination of Charges"
             },
             {
-              "id": 3501119,
+              "id": 3500187,
               "title": "最高人民法院、最高人民检察院关于执行《中华人民共和国刑法》确定罪名的补充规定（二）",
               "title_en": "Supplementary Provisions (II) of the Supreme People's Court and the Supreme People's Procuratorate on Determining Criminal Charges in Implementing the Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3501221,
+              "id": 3500288,
               "title": "最高人民法院、最高人民检察院关于执行《中华人民共和国刑法》确定罪名的补充规定（五）",
               "title_en": "Supreme People's Court and Supreme People's Procuratorate Supplementary Provisions (V) on the Determination of Charges in Implementing the Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3501452,
+              "id": 3500653,
               "title": "最高人民法院、最高人民检察院关于执行《中华人民共和国刑法》确定罪名的补充规定（八）",
               "title_en": "Supplementary Provisions (VIII) of the Supreme People's Court and the Supreme People's Procuratorate on the Execution of the Determination of Charges in the Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3501300,
+              "id": 3500372,
               "title": "最高人民法院、最高人民检察院关于执行《中华人民共和国刑法》确定罪名的补充规定（六）",
               "title_en": "Supplementary Provisions (VI) of the Supreme People's Court and the Supreme People's Procuratorate on the Determination of Criminal Charges in the Execution of the Criminal Law of the People's Republic of China"
             },
@@ -1879,7 +1930,7 @@
               "title_en": "Supplementary Provisions (IV) of the Supreme People's Court and the Supreme People's Procuratorate on the Implementation of the Criminal Law of the People's Republic of China for the Determination of Charges"
             },
             {
-              "id": 3501075,
+              "id": 3500149,
               "title": "最高人民法院、最高人民检察院关于适用刑事司法解释时间效力问题的规定",
               "title_en": "Provisions of the Supreme People's Court and the Supreme People's Procuratorate on Issues concerning the Time Effectiveness of the Application of Criminal Judicial Interpretations"
             },
@@ -1889,7 +1940,7 @@
               "title_en": "Interpretation of the Supreme People's Court on the Temporal Effect of the Amendment (VIII) to the Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3501299,
+              "id": 3500371,
               "title": "最高人民法院关于《中华人民共和国刑法修正案（九）》时间效力问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Temporal Effect of the Amendment (IX) to the Criminal Law of the People's Republic of China"
             },
@@ -1909,7 +1960,7 @@
               "title_en": "Notice of the Supreme People's Court on Conscientiously Studying, Publicizing and Implementing the Revised Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3500953,
+              "id": 3500068,
               "title": "最高人民法院关于适用刑法时间效力规定若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Temporal Effect of the Criminal Law"
             },
@@ -1919,7 +1970,7 @@
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Article 64 of the Criminal Law"
             },
             {
-              "id": 3500957,
+              "id": 3500074,
               "title": "最高人民法院关于适用刑法第十二条几个问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Article 12 of the Criminal Law"
             },
@@ -1932,6 +1983,7 @@
         },
         {
           "label": "侵犯财产",
+          "label_en": "Property Crimes",
           "laws": [
             {
               "id": 3500166,
@@ -1999,7 +2051,7 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Theft"
             },
             {
-              "id": 3501220,
+              "id": 3500283,
               "title": "最高人民法院、最高人民检察院关于办理诈骗刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Specific Application of Law in the Handling of Criminal Cases of Fraud"
             },
@@ -2009,7 +2061,7 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Economic Crime Suspicions Involved in the Trial of Economic Dispute Cases"
             },
             {
-              "id": 3501028,
+              "id": 3500117,
               "title": "最高人民法院关于如何理解刑法第二百七十二条规定的“挪用本单位资金归个人使用或者借贷给他人”问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Understand \"Misappropriating Funds of the Unit for Personal Use or Lending to Others\" as Provided in Article 272 of the Criminal Law"
             },
@@ -2019,7 +2071,7 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Snatch"
             },
             {
-              "id": 3500963,
+              "id": 3500078,
               "title": "最高人民法院关于审理挪用公款案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Cases of Embezzlement of Public Funds"
             },
@@ -2029,27 +2081,27 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Theft Cases"
             },
             {
-              "id": 3501024,
+              "id": 3500110,
               "title": "最高人民法院关于审理贪污、职务侵占案件如何认定共同犯罪几个问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Determination of Joint Crimes in Cases of Embezzlement and Duty Encroachment"
             },
             {
-              "id": 3501011,
+              "id": 3500103,
               "title": "最高人民法院关于对受委托管理、经营国有财产人员挪用国有资金行为如何定罪问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Determine the Crime of Misappropriation of State-owned Funds by Persons Entrusted with the Management and Operation of State-owned Property"
             },
             {
-              "id": 3500955,
+              "id": 3500073,
               "title": "最高人民法院关于对故意伤害、盗窃等严重破坏社会秩序的犯罪分子能否附加剥夺政治权利问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether Deprivation of Political Rights May Be Imposed as a Supplementary Punishment on Criminals Who Commit Crimes Such as Intentional Injury and Theft That Seriously Undermine Social Order"
             },
             {
-              "id": 3501062,
+              "id": 3500141,
               "title": "最高人民法院关于抢劫过程中故意杀人案件如何定罪问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Characterize the Crime in Cases of Intentional Homicide During Robbery"
             },
             {
-              "id": 3501122,
+              "id": 3500191,
               "title": "最高人民法院关于挪用公款犯罪如何计算追诉期限问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Calculate the Limitation Period for Prosecution of the Crime of Embezzlement of Public Funds"
             },
@@ -2107,6 +2159,7 @@
         },
         {
           "label": "经济犯罪",
+          "label_en": "Economic Crimes",
           "laws": [
             {
               "id": 3500154,
@@ -2144,7 +2197,7 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Specific Application of Law in Handling Criminal Cases of Infringement of Intellectual Property Rights (III)"
             },
             {
-              "id": 3501469,
+              "id": 3500671,
               "title": "最高人民法院、最高人民检察院关于办理侵犯知识产权刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Infringement of Intellectual Property Rights"
             },
@@ -2154,7 +2207,7 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Jeopardizing Tax Collection and Management"
             },
             {
-              "id": 3501459,
+              "id": 3500659,
               "title": "最高人民法院、最高人民检察院关于办理洗钱刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Money Laundering"
             },
@@ -2184,27 +2237,27 @@
               "title_en": "Decision of the Supreme People's Court on Amending the Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases Involving Illegal Fundraising"
             },
             {
-              "id": 3501212,
+              "id": 3500272,
               "title": "最高人民法院关于审理伪造货币等案件具体应用法律若干问题的解释（二）",
               "title_en": "Interpretation (II) of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Cases of Counterfeiting Currency and Other Crimes"
             },
             {
-              "id": 3501201,
+              "id": 3500694,
               "title": "最高人民法院关于审理洗钱等刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases such as Money Laundering"
             },
             {
-              "id": 3501374,
+              "id": 3500459,
               "title": "最高人民法院关于审理走私、非法经营、非法使用兴奋剂刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Smuggling, Illegal Business, and Illegal Use of Doping"
             },
             {
-              "id": 3500139,
+              "id": 3500259,
               "title": "最高人民法院关于审理非法制造、买卖、运输枪支、弹药、爆炸物等刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Illegally Manufacturing, Trading, Transporting Firearms, Ammunition, Explosives, etc."
             },
             {
-              "id": 3500275,
+              "id": 3500618,
               "title": "最高人民法院关于审理非法集资刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Illegal Fundraising"
             },
@@ -2247,6 +2300,7 @@
         },
         {
           "label": "贪污贿赂",
+          "label_en": "Embezzlement & Bribery",
           "laws": [
             {
               "id": 3500160,
@@ -2294,7 +2348,7 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Specific Application of Law in Handling Criminal Cases of Bribery"
             },
             {
-              "id": 3501313,
+              "id": 3500384,
               "title": "最高人民法院、最高人民检察院关于办理贪污贿赂刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Embezzlement and Bribery"
             },
@@ -2312,6 +2366,7 @@
         },
         {
           "label": "人身犯罪",
+          "label_en": "Crimes Against the Person",
           "laws": [
             {
               "id": 3500400,
@@ -2339,7 +2394,7 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Picking Quarrels and Provoking Trouble"
             },
             {
-              "id": 3501441,
+              "id": 3500638,
               "title": "最高人民法院、最高人民检察院关于办理强奸、猥亵未成年人刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Rape and Indecent Assault on Minors"
             },
@@ -2359,12 +2414,12 @@
               "title_en": "Decision of the Supreme People's Court on Amending the Interpretation on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Illegal Medical Practice"
             },
             {
-              "id": 3501326,
+              "id": 3500401,
               "title": "最高人民法院关于审理拐卖妇女儿童犯罪案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Abducting and Trafficking Women and Children"
             },
             {
-              "id": 3501178,
+              "id": 3500237,
               "title": "最高人民法院关于审理非法行医刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Illegal Medical Practice"
             },
@@ -2387,6 +2442,7 @@
         },
         {
           "label": "毒品与走私",
+          "label_en": "Drugs & Smuggling",
           "laws": [
             {
               "id": 3500452,
@@ -2394,7 +2450,7 @@
               "title_en": "Reply of the Supreme People's Procuratorate on Whether the \"Supplementary Catalogue of Controlled Varieties of Non-Medicinal Narcotic Drugs and Psychotropic Substances\" Can Be Used as the Basis for Identifying Drugs"
             },
             {
-              "id": 3501282,
+              "id": 3500350,
               "title": "最高人民法院、最高人民检察院关于办理走私刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in the Handling of Criminal Cases of Smuggling"
             },
@@ -2404,7 +2460,7 @@
               "title_en": "Interpretation of the Supreme People's Court on Issues Concerning the Standards for Conviction and Sentencing in Drug Cases"
             },
             {
-              "id": 3501310,
+              "id": 3500381,
               "title": "最高人民法院关于审理毒品犯罪案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Drug Crime Cases"
             },
@@ -2422,6 +2478,7 @@
         },
         {
           "label": "妨害社会管理秩序",
+          "label_en": "Crimes Against Social Order",
           "laws": [
             {
               "id": 3500699,
@@ -2449,7 +2506,7 @@
               "title_en": "Opinion of the Supreme People's Court, the Supreme People's Procuratorate, and the Ministry of Public Security on Several Issues Concerning the Application of Criminal Procedure in Handling Cybercrime Cases"
             },
             {
-              "id": 3501342,
+              "id": 3500418,
               "title": "最高人民法院、最高人民检察院关于利用网络云盘制作、复制、贩卖、传播淫秽电子信息牟利行为定罪量刑问题的批复",
               "title_en": "Reply of the Supreme People's Court and the Supreme People's Procuratorate on Issues Concerning the Conviction and Sentencing of Conduct of Producing, Reproducing, Selling, and Disseminating Obscene Electronic Information Using Network Cloud Drives for Profit"
             },
@@ -2459,7 +2516,7 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Specific Application of Law in Handling Criminal Cases of Using the Internet, Mobile Communication Terminals, or Voice Message Stations to Produce, Reproduce, Publish, Sell, or Disseminate Obscene Electronic Information"
             },
             {
-              "id": 3501205,
+              "id": 3500264,
               "title": "最高人民法院、最高人民检察院关于办理利用互联网、移动通讯终端、声讯台制作、复制、出版、贩卖、传播淫秽电子信息刑事案件具体应用法律若干问题的解释（二）",
               "title_en": "Interpretation (II) of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Specific Application of Law in Handling Criminal Cases of Making, Copying, Publishing, Selling, and Disseminating Pornographic Electronic Information Using the Internet, Mobile Communication Terminals, or Voice Message Platforms"
             },
@@ -2499,12 +2556,12 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Organizing Cheating in Examinations"
             },
             {
-              "id": 3501360,
+              "id": 3500444,
               "title": "最高人民法院、最高人民检察院关于办理非法从事资金支付结算业务、非法买卖外汇刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Illegally Engaging in Fund Payment and Settlement Services and Illegally Trading Foreign Exchange"
             },
             {
-              "id": 3501371,
+              "id": 3500457,
               "title": "最高人民法院、最高人民检察院关于办理非法利用信息网络、帮助信息网络犯罪活动等刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Illegal Use of Information Networks, Aiding Information Network Criminal Activities, and Other Such Crimes"
             },
@@ -2514,17 +2571,17 @@
               "title_en": "Reply of the Supreme People's Court and the Supreme People's Procuratorate on Whether the Act of a Serviceman Deserting the Armed Forces in Non-Wartime Can Be Convicted and Punished"
             },
             {
-              "id": 3501350,
+              "id": 3500430,
               "title": "最高人民法院、最高人民检察院关于涉以压缩气体为动力的枪支、气枪铅弹刑事案件定罪量刑问题的批复",
               "title_en": "Reply of the Supreme People's Court and the Supreme People's Procuratorate on Issues concerning Conviction and Sentencing in Criminal Cases Involving Guns Powered by Compressed Gas and Air Gun Pellets"
             },
             {
-              "id": 3501298,
+              "id": 3500716,
               "title": "最高人民法院关于审理拒不执行判决、裁定刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Refusing to Execute Judgments or Rulings"
             },
             {
-              "id": 3501293,
+              "id": 3500715,
               "title": "最高人民法院关于审理掩饰、隐瞒犯罪所得、犯罪所得收益刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Concealing or Disguising the Proceeds of Crime and the Income Derived Therefrom"
             },
@@ -2534,12 +2591,12 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Sabotaging Public Telecommunications Facilities"
             },
             {
-              "id": 3500969,
+              "id": 3500085,
               "title": "最高人民法院关于审理骗购外汇、非法买卖外汇刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Fraudulent Purchase and Illegal Trading of Foreign Exchange"
             },
             {
-              "id": 3501046,
+              "id": 3500127,
               "title": "最高人民法院关于审理黑社会性质组织犯罪的案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Cases of Crimes Committed by Mafia-like Organizations"
             },
@@ -2572,6 +2629,7 @@
         },
         {
           "label": "刑罚执行",
+          "label_en": "Sentence Execution",
           "laws": [
             {
               "id": 3500713,
@@ -2604,32 +2662,32 @@
               "title_en": "Provisions of the Supreme People's Court on the Handling of Cases Involving the Acceptance of Mainland Residents Serving Sentences in the Taiwan Region to Return to the Mainland to Serve Sentences"
             },
             {
-              "id": 3501278,
+              "id": 3500345,
               "title": "最高人民法院关于减刑、假释案件审理程序的规定",
               "title_en": "Provisions of the Supreme People's Court on the Trial Procedures for Commutation and Parole Cases"
             },
             {
-              "id": 3501364,
+              "id": 3500449,
               "title": "最高人民法院关于办理减刑、假释案件具体应用法律的补充规定",
               "title_en": "Supplementary Provisions of the Supreme People's Court on the Specific Application of Law in Handling Commutation and Parole Cases"
             },
             {
-              "id": 3501322,
+              "id": 3500397,
               "title": "最高人民法院关于办理减刑、假释案件具体应用法律的规定",
               "title_en": "Provisions of the Supreme People's Court on the Specific Application of Law in Handling Commutation and Parole Cases"
             },
             {
-              "id": 3501455,
+              "id": 3500655,
               "title": "最高人民法院关于办理减刑、假释案件审查财产性判项执行问题的规定",
               "title_en": "Provisions of the Supreme People's Court on the Examination of the Enforcement of Property-Related Judgments in Cases of Commutation and Parole"
             },
             {
-              "id": 3501089,
+              "id": 3500159,
               "title": "最高人民法院关于撤销缓刑时罪犯在宣告缓刑前羁押的时间能否折抵刑期问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the Time of Custody Before the Declaration of Probation Can Be Offset Against the Sentence When Revoking Probation"
             },
             {
-              "id": 3501223,
+              "id": 3500287,
               "title": "最高人民法院关于死刑缓期执行限制减刑案件审理程序若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Trial Procedures for Cases of Death Sentence with a Reprieve and Restricted Commutation of Sentence"
             }
@@ -2637,6 +2695,7 @@
         },
         {
           "label": "证据规则",
+          "label_en": "Evidence Rules",
           "laws": [
             {
               "id": 3500720,
@@ -2657,6 +2716,7 @@
         },
         {
           "label": "刑事诉讼程序",
+          "label_en": "Criminal Procedure",
           "laws": [
             {
               "id": 3500148,
@@ -2697,6 +2757,7 @@
         },
         {
           "label": "审判监督",
+          "label_en": "Trial Supervision",
           "laws": [
             {
               "id": 3500002,
@@ -2712,6 +2773,7 @@
         },
         {
           "label": "辩护与代理",
+          "label_en": "Defense & Representation",
           "laws": [
             {
               "id": 3501473,
@@ -2727,6 +2789,7 @@
         },
         {
           "label": "未成年人刑事程序",
+          "label_en": "Juvenile Criminal Procedure",
           "laws": [
             {
               "id": 3500698,
@@ -2739,7 +2802,7 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of Law in Handling Criminal Cases of Minors"
             },
             {
-              "id": 3501150,
+              "id": 3500215,
               "title": "最高人民法院关于审理未成年人刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Juveniles"
             }
@@ -2747,6 +2810,7 @@
         },
         {
           "label": "行政法规/公安司法",
+          "label_en": "Administrative Regulations: Public Security & Justice",
           "laws": [
             {
               "id": 5000560,
@@ -2757,6 +2821,7 @@
         },
         {
           "label": "检察院",
+          "label_en": "Procuratorate",
           "laws": [
             {
               "id": 3501149,
@@ -2764,22 +2829,22 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Specific Application of Law in the Trial of Criminal Cases Involving Destruction of Forest Land Resources"
             },
             {
-              "id": 3501358,
+              "id": 3500441,
               "title": "最高人民法院、最高人民检察院关于修改《关于办理妨害信用卡管理刑事案件具体应用法律若干问题的解释》的决定",
               "title_en": "Decision of the Supreme People's Court and the Supreme People's Procuratorate on Amending the Interpretation on Several Issues Concerning the Specific Application of Law in Handling Criminal Cases of Disrupting Credit Card Management"
             },
             {
-              "id": 3501334,
+              "id": 3500411,
               "title": "最高人民法院、最高人民检察院关于办理侵犯公民个人信息刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Infringing on Citizens' Personal Information"
             },
             {
-              "id": 3501238,
+              "id": 3500303,
               "title": "最高人民法院、最高人民检察院关于办理内幕交易、泄露内幕信息刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Specific Application of Law in Handling Criminal Cases of Insider Trading or Disclosure of Inside Information"
             },
             {
-              "id": 3501303,
+              "id": 3500375,
               "title": "最高人民法院、最高人民检察院关于办理刑事赔偿案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in the Handling of Criminal Compensation Cases"
             },
@@ -2789,64 +2854,64 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Trading Using Non-public Information"
             },
             {
-              "id": 3501301,
+              "id": 3500374,
               "title": "最高人民法院、最高人民检察院关于办理危害生产安全刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in the Handling of Criminal Cases of Endangering Production Safety"
             },
             {
-              "id": 3501436,
+              "id": 3500634,
               "title": "最高人民法院、最高人民检察院关于办理危害生产安全刑事案件适用法律若干问题的解释（二）",
               "title_en": "Interpretation (II) of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Endangering Production Safety"
             },
             {
-              "id": 3501422,
+              "id": 3500622,
               "title": "最高人民法院、最高人民检察院关于办理危害药品安全刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Endangering Drug Safety"
             },
             {
-              "id": 3501230,
+              "id": 3500295,
               "title": "最高人民法院、最高人民检察院关于办理危害计算机信息系统安全刑事案件应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases Endangering Computer Information System Security"
             },
             {
-              "id": 3501417,
+              "id": 3500613,
               "title": "最高人民法院、最高人民检察院关于办理危害食品安全刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in the Handling of Criminal Cases of Endangering Food Safety"
             },
             {
-              "id": 3501198,
+              "id": 3500260,
               "title": "最高人民法院、最高人民检察院关于办理妨害信用卡管理刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Specific Application of Law in Handling Criminal Cases of Obstructing Credit Card Management"
             },
             {
-              "id": 3501302,
+              "id": 3500376,
               "title": "最高人民法院、最高人民检察院关于办理妨害文物管理等刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Obstructing Cultural Relics Management, etc."
             },
             {
-              "id": 3501227,
+              "id": 3500294,
               "title": "最高人民法院、最高人民检察院关于办理妨害武装部队制式服装、车辆号牌管理秩序等刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Concrete Application of Law in Handling Criminal Cases of Disrupting the Management Order of Armed Forces' Uniforms and Vehicle License Plates, etc."
             },
             {
-              "id": 3501116,
+              "id": 3500184,
               "title": "最高人民法院、最高人民检察院关于办理妨害预防、控制突发传染病疫情等灾害的刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Specific Application of Law in Handling Criminal Cases of Impairing the Prevention and Control of Sudden Outbreaks of Infectious Diseases and Other Disasters"
             },
             {
-              "id": 3501336,
+              "id": 3500412,
               "title": "最高人民法院、最高人民检察院关于办理扰乱无线电通讯管理秩序等刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in the Handling of Criminal Cases such as Disturbing the Order of Radio Communication Management"
             },
             {
-              "id": 3501366,
+              "id": 3500454,
               "title": "最高人民法院、最高人民检察院关于办理操纵证券、期货市场刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Manipulating the Securities and Futures Markets"
             },
             {
-              "id": 3501325,
+              "id": 3500640,
               "title": "最高人民法院、最高人民检察院关于办理环境污染刑事案件适用法律若干问题的解释",
-              "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Environmental Pollution Criminal Cases"
+              "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Environmental Pollution"
             },
             {
               "id": 3501190,
@@ -2854,7 +2919,7 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Specific Application of Law in the Handling of Criminal Cases of Producing and Selling Fake or Substandard Drugs"
             },
             {
-              "id": 3501429,
+              "id": 3500626,
               "title": "最高人民法院、最高人民检察院关于办理破坏野生动物资源刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Damaging Wildlife Resources"
             },
@@ -2864,12 +2929,12 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Harboring and Shielding"
             },
             {
-              "id": 3501329,
+              "id": 3500405,
               "title": "最高人民法院、最高人民检察院关于办理组织、利用邪教组织破坏法律实施等刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Organizing or Using Cults to Undermine the Implementation of Laws, etc."
             },
             {
-              "id": 3501337,
+              "id": 3500413,
               "title": "最高人民法院、最高人民检察院关于办理组织、强迫、引诱、容留、介绍卖淫刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Handling Criminal Cases of Organizing, Forcing, Luring, Sheltering, or Procuring Prostitution"
             },
@@ -2879,32 +2944,32 @@
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Falsification of Materials in Applications for Drug and Medical Device Registration"
             },
             {
-              "id": 3501098,
+              "id": 3500168,
               "title": "最高人民法院、最高人民检察院关于办理非法生产、销售、使用禁止在饲料和动物饮用水中使用的药品等刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Specific Application of Law in Handling Criminal Cases of Illegal Production, Sale, and Use of Drugs Prohibited for Use in Feed and Animal Drinking Water, etc."
             },
             {
-              "id": 3501206,
+              "id": 3500265,
               "title": "最高人民法院、最高人民检察院关于办理非法生产、销售烟草专卖品等刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Specific Application of Law in Handling Criminal Cases of Illegal Production and Sale of Tobacco Monopoly Products"
             },
             {
-              "id": 3501323,
+              "id": 3500399,
               "title": "最高人民法院、最高人民检察院关于办理非法采矿、破坏性采矿刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in Handling Criminal Cases of Illegal Mining and Destructive Mining"
             },
             {
-              "id": 3501210,
+              "id": 3500270,
               "title": "最高人民法院、最高人民检察院关于对死刑判决提出上诉的被告人在上诉期满后宣判前提出撤回上诉人民法院是否准许的批复",
               "title_en": "Reply of the Supreme People's Court and the Supreme People's Procuratorate on Whether the People's Court Shall Permit a Defendant Who Has Filed an Appeal Against a Death Sentence to Withdraw the Appeal After the Appeal Period Expires but Before the Judgment Is Pronounced"
             },
             {
-              "id": 3501378,
+              "id": 3500466,
               "title": "最高人民法院、最高人民检察院关于适用《中华人民共和国刑法》第三百四十四条有关问题的批复",
               "title_en": "Reply of the Supreme People's Court and the Supreme People's Procuratorate on Issues Concerning the Application of Article 344 of the Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3501328,
+              "id": 3500403,
               "title": "最高人民法院、最高人民检察院关于适用犯罪嫌疑人、被告人逃匿、死亡案件违法所得没收程序若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of the Procedure for Confiscation of Illegal Gains in Cases Involving the Flight or Death of Criminal Suspects or Defendants"
             },
@@ -2914,32 +2979,32 @@
               "title_en": "Reply of the Supreme People's Court on How to Correct an Error Discovered in a Ruling of the Court of Second Instance That Affirms the Ruling of the Court of First Instance to Reject a Lawsuit"
             },
             {
-              "id": 3501137,
+              "id": 3500202,
               "title": "最高人民法院关于依据原告起诉时提供的被告住址无法送达应如何处理问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Handle Inability to Serve Process Based on the Defendant's Address Provided by the Plaintiff at the Time of Filing"
             },
             {
-              "id": 3501077,
+              "id": 3500697,
               "title": "最高人民法院关于刑事再审案件开庭审理程序的具体规定（试行）",
               "title_en": "Specific Provisions of the Supreme People's Court on the Trial Procedures for Criminal Retrial Cases (Trial Implementation)"
             },
             {
-              "id": 3501130,
+              "id": 3500195,
               "title": "最高人民法院关于刑事案件终审判决和裁定何时发生法律效力问题的批复",
               "title_en": "Reply of the Supreme People's Court on When the Final Judgment and Ruling in a Criminal Case Become Legally Effective"
             },
             {
-              "id": 3501007,
+              "id": 3500104,
               "title": "最高人民法院关于刑事裁判文书中刑期起止日期如何表述问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Express the Start and End Dates of a Sentence in a Criminal Judgment Document"
             },
             {
-              "id": 3501283,
+              "id": 3500352,
               "title": "最高人民法院关于刑事裁判涉财产部分执行的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Enforcement of Property-Related Parts of Criminal Judgments"
             },
             {
-              "id": 3500861,
+              "id": 3500028,
               "title": "最高人民法院关于判决宣告后又发现被判刑的犯罪分子的同种漏罪是否实行数罪并罚问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether a Newly Discovered Omission of the Same Type of Crime Committed by a Convicted Criminal After Sentencing Should Be Subject to Consecutive Sentencing"
             },
@@ -2949,37 +3014,37 @@
               "title_en": "Reply of the Supreme People's Court on the Issue of How to Prepare Legal Documents When It Is Found During Review That the Judgment Is Indeed Erroneous in a Death Penalty Case of Joint Crime Where the Defendants Have Not Appealed and the Procuratorate Has Not Protested"
             },
             {
-              "id": 3501056,
+              "id": 3500140,
               "title": "最高人民法院关于在国有资本控股、参股的股份有限公司中从事管理工作的人员利用职务便利非法占有本公司财物如何定罪问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Determine the Guilt of Personnel Engaged in Management in Joint-Stock Companies Controlled or Participated by State-Owned Capital Who Illegally Appropriate the Company's Property by Taking Advantage of Their Positions"
             },
             {
-              "id": 3501239,
+              "id": 3500305,
               "title": "最高人民法院关于在裁判文书中如何表述修正前后刑法条文的批复",
               "title_en": "Reply of the Supreme People's Court on How to Express Criminal Law Provisions before and after Amendment in Judicial Documents"
             },
             {
-              "id": 3500960,
+              "id": 3500076,
               "title": "最高人民法院关于处理自首和立功具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in Handling Voluntary Surrender and Meritorious Performance"
             },
             {
-              "id": 3501053,
+              "id": 3500132,
               "title": "最高人民法院关于审理为境外窃取、刺探、收买、非法提供国家秘密、情报案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Cases of Stealing, Spying, Buying, or Illegally Providing State Secrets or Intelligence for Foreign Entities"
             },
             {
-              "id": 3501035,
+              "id": 3500123,
               "title": "最高人民法院关于审理交通肇事刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Traffic Accidents"
             },
             {
-              "id": 3501233,
+              "id": 3500299,
               "title": "最高人民法院关于审理人民检察院按照审判监督程序提出的刑事抗诉案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Criminal Protest Cases Filed by the People's Procuratorate in Accordance with the Trial Supervision Procedure"
             },
             {
-              "id": 3501002,
+              "id": 3500100,
               "title": "最高人民法院关于审理倒卖车票刑事案件有关问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Issues concerning the Trial of Criminal Cases of Ticket Scalping"
             },
@@ -2989,22 +3054,22 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Tax Evasion and Tax Resistance"
             },
             {
-              "id": 3500999,
+              "id": 3500098,
               "title": "最高人民法院关于审理单位犯罪案件具体应用法律有关问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Issues concerning the Specific Application of Law in the Trial of Crimes Committed by Entities"
             },
             {
-              "id": 3501036,
+              "id": 3500120,
               "title": "最高人民法院关于审理单位犯罪案件对其直接负责的主管人员和其他直接责任人员是否区分主犯、从犯问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether to Distinguish between Principals and Accessories concerning the Directly Responsible Supervisors and Other Directly Responsible Persons in the Trial of Crimes Committed by Entities"
             },
             {
-              "id": 3501171,
+              "id": 3500230,
               "title": "最高人民法院关于审理危害军事通信刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Endangering Military Communications"
             },
             {
-              "id": 3501255,
+              "id": 3500317,
               "title": "最高人民法院关于审理拒不支付劳动报酬刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Refusing to Pay Labor Remuneration"
             },
@@ -3014,22 +3079,22 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of Law in the Trial of Environmental Pollution Criminal Cases"
             },
             {
-              "id": 3501023,
+              "id": 3500109,
               "title": "最高人民法院关于审理破坏土地资源刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Sabotaging Land Resources"
             },
             {
-              "id": 3501225,
+              "id": 3500291,
               "title": "最高人民法院关于审理破坏广播电视设施等刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Sabotaging Radio and Television Facilities, etc."
             },
             {
-              "id": 3501044,
+              "id": 3500696,
               "title": "最高人民法院关于审理破坏森林资源刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Destroying Forest Resources"
             },
             {
-              "id": 3501445,
+              "id": 3500641,
               "title": "最高人民法院关于审理破坏森林资源刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Destroying Forest Resources"
             },
@@ -3039,7 +3104,7 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Sabotaging Electric Power Equipment"
             },
             {
-              "id": 3501246,
+              "id": 3500309,
               "title": "最高人民法院关于审理破坏草原资源刑事案件应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Destroying Grassland Resources"
             },
@@ -3054,12 +3119,12 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Organizing or Transporting Another Person to Illegally Cross the National Border (Frontier) and Other Such Crimes"
             },
             {
-              "id": 3501275,
+              "id": 3500332,
               "title": "最高人民法院关于审理编造、故意传播虚假恐怖信息刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Criminal Cases of Fabricating and Deliberately Spreading False Terrorist Information"
             },
             {
-              "id": 3500985,
+              "id": 3500094,
               "title": "最高人民法院关于审理非法出版物刑事案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Criminal Cases of Illegal Publications"
             },
@@ -3074,17 +3139,17 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Specific Application of Law in the Trial of Criminal Cases of Fraudulently Obtaining Export Tax Rebates"
             },
             {
-              "id": 3501025,
+              "id": 3500116,
               "title": "最高人民法院关于对为索取法律不予保护的债务非法拘禁他人行为如何定罪问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on How to Determine the Crime of Illegally Detaining Another Person to Recover Debts Not Protected by Law"
             },
             {
-              "id": 3500970,
+              "id": 3500084,
               "title": "最高人民法院关于对怀孕妇女在羁押期间自然流产审判时是否可以适用死刑问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the Death Penalty May Be Applied to a Pregnant Woman Who Has a Miscarriage during Detention at the Time of Trial"
             },
             {
-              "id": 3500909,
+              "id": 3500050,
               "title": "最高人民法院关于对设置圈套诱骗他人参赌又向索还钱财的受骗者施以暴力或暴力威胁的行为应如何定罪问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Determine the Crime of Setting a Trap to Induce Others to Gamble and Then Using Violence or Threat of Violence against the Victim Who Seeks to Recover Money"
             },
@@ -3104,22 +3169,22 @@
               "title_en": "Provisions of the Supreme People's Court on Determining Charges in Implementing the Criminal Law of the People's Republic of China"
             },
             {
-              "id": 3501159,
+              "id": 3500222,
               "title": "最高人民法院关于统一行使死刑案件核准权有关问题的决定",
               "title_en": "Decision of the Supreme People's Court on Issues concerning the Unified Exercise of the Power to Approve Death Penalty Cases"
             },
             {
-              "id": 3500779,
+              "id": 3500010,
               "title": "最高人民法院关于被告人亲属主动为被告人退缴赃款应如何处理的批复",
               "title_en": "Reply of the Supreme People's Court on How to Handle the Voluntary Repayment of Illicit Money by the Defendant's Relatives on Behalf of the Defendant"
             },
             {
-              "id": 3501128,
+              "id": 3500194,
               "title": "最高人民法院关于被告人对行为性质的辩解是否影响自首成立问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether a Defendant's Defense on the Nature of the Act Affects the Establishment of Voluntary Surrender"
             },
             {
-              "id": 3501050,
+              "id": 3500130,
               "title": "最高人民法院关于适用财产刑若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Application of Property Forfeiture Penalties"
             },
@@ -3174,9 +3239,11 @@
     },
     {
       "label": "行政与公法",
+      "label_en": "Administrative & Public Law",
       "subgroups": [
         {
           "label": "行政法律",
+          "label_en": "Administrative Laws",
           "laws": [
             {
               "id": 3500700,
@@ -3184,7 +3251,7 @@
               "title_en": "Summary of the Symposium on the Application of Legal Norms in the Trial of Administrative Cases"
             },
             {
-              "id": 3501379,
+              "id": 3500468,
               "title": "最高人民法院关于人民法院司法警察依法履行职权的规定",
               "title_en": "Provisions of the Supreme People's Court on the Performance of Duties by Judicial Police of People's Courts in accordance with Law"
             },
@@ -3194,7 +3261,7 @@
               "title_en": "Decision of the Supreme People's Court on Amending the Provisions of the Supreme People's Court on Several Issues Concerning the Application of Law in the Trial of Food and Drug Disputes"
             },
             {
-              "id": 3501442,
+              "id": 3500639,
               "title": "最高人民法院关于具有专门知识的人民陪审员参加环境资源案件审理的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on People's Assessors with Specialized Knowledge Participating in the Trial of Environmental and Resource Cases"
             },
@@ -3204,82 +3271,82 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Cases of Administrative Application for Retrial"
             },
             {
-              "id": 3500419,
+              "id": 3500511,
               "title": "最高人民法院关于审理医疗损害责任纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Medical Damage Liability Dispute Cases"
             },
             {
-              "id": 3501107,
+              "id": 3500175,
               "title": "最高人民法院关于审理反倾销行政案件应用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Anti-Dumping Administrative Cases"
             },
             {
-              "id": 3501108,
+              "id": 3500176,
               "title": "最高人民法院关于审理反补贴行政案件应用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Anti-Subsidy Administrative Cases"
             },
             {
-              "id": 3501102,
+              "id": 3500170,
               "title": "最高人民法院关于审理国际贸易行政案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of International Trade Administrative Cases"
             },
             {
-              "id": 3501213,
+              "id": 3500274,
               "title": "最高人民法院关于审理房屋登记案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Housing Registration Cases"
             },
             {
-              "id": 3501228,
+              "id": 3500706,
               "title": "最高人民法院关于审理政府信息公开行政案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Administrative Cases concerning Disclosure of Government Information"
             },
             {
-              "id": 3501472,
+              "id": 3500674,
               "title": "最高人民法院关于审理政府信息公开行政案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Administrative Cases concerning Disclosure of Government Information"
             },
             {
-              "id": 3501345,
+              "id": 3500422,
               "title": "最高人民法院关于审理海洋自然资源与生态环境损害赔偿纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Dispute Cases on Compensation for Damage to Marine Natural Resources and Ecological Environment"
             },
             {
-              "id": 3501232,
+              "id": 3500296,
               "title": "最高人民法院关于审理涉及农村集体土地行政案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Administrative Cases involving Rural Collective Land"
             },
             {
-              "id": 3501418,
+              "id": 3500614,
               "title": "最高人民法院关于审理生态环境侵权纠纷案件适用惩罚性赔偿的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Application of Punitive Damages in the Trial of Environmental Tort Dispute Cases"
             },
             {
-              "id": 3501443,
+              "id": 3500642,
               "title": "最高人民法院关于审理生态环境侵权责任纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Dispute Cases on Liability for Environmental Tort"
             },
             {
-              "id": 3500453,
+              "id": 3500545,
               "title": "最高人民法院关于审理生态环境损害赔偿案件的若干规定（试行）",
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Cases concerning Compensation for Ecological and Environmental Damage (for Trial Implementation)"
             },
             {
-              "id": 3501373,
+              "id": 3500460,
               "title": "最高人民法院关于审理行政协议案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Administrative Agreement Cases"
             },
             {
-              "id": 3501203,
+              "id": 3500261,
               "title": "最高人民法院关于审理行政许可案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Administrative Licensing Cases"
             },
             {
-              "id": 3501460,
+              "id": 3500660,
               "title": "最高人民法院关于审理食品药品惩罚性赔偿纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Disputes over Punitive Damages for Food and Drugs"
             },
             {
-              "id": 3500555,
+              "id": 3500607,
               "title": "最高人民法院关于审理食品药品纠纷案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Food and Drug Disputes"
             },
@@ -3289,7 +3356,7 @@
               "title_en": "Reply of the Supreme People's Court on the Nature of Underground Hot Water and the Application of Law"
             },
             {
-              "id": 3501121,
+              "id": 3500192,
               "title": "最高人民法院关于房地产管理机关能否撤销错误的注销抵押登记行为问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the Real Estate Management Authority Can Revoke an Erroneous Cancellation of Mortgage Registration"
             },
@@ -3299,12 +3366,12 @@
               "title_en": "Several Provisions of the Supreme People's Court on the Application of Injunction Preservation Measures in Cases of Ecological Environment Torts"
             },
             {
-              "id": 3501380,
+              "id": 3500467,
               "title": "最高人民法院关于行政机关负责人出庭应诉若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Appearance of the Head of an Administrative Agency in Court"
             },
             {
-              "id": 3501115,
+              "id": 3500181,
               "title": "最高人民法院关于适用《行政复议法》第三十条第一款有关问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Paragraph 1 of Article 30 of the Administrative Reconsideration Law"
             },
@@ -3342,6 +3409,7 @@
         },
         {
           "label": "教育科技",
+          "label_en": "Education & Science",
           "laws": [
             {
               "id": 1100268,
@@ -3412,6 +3480,7 @@
         },
         {
           "label": "卫生医药",
+          "label_en": "Health & Medicine",
           "laws": [
             {
               "id": 1100197,
@@ -3502,6 +3571,7 @@
         },
         {
           "label": "生态环境",
+          "label_en": "Ecology & Environment",
           "laws": [
             {
               "id": 1100368,
@@ -3622,6 +3692,7 @@
         },
         {
           "label": "公安司法",
+          "label_en": "Public Security & Justice",
           "laws": [
             {
               "id": 1100119,
@@ -3722,6 +3793,7 @@
         },
         {
           "label": "社会民政",
+          "label_en": "Social & Civil Affairs",
           "laws": [
             {
               "id": 1100359,
@@ -3787,6 +3859,7 @@
         },
         {
           "label": "土地城建",
+          "label_en": "Land & Urban Development",
           "laws": [
             {
               "id": 1100302,
@@ -3812,6 +3885,7 @@
         },
         {
           "label": "自然资源",
+          "label_en": "Natural Resources",
           "laws": [
             {
               "id": 1100316,
@@ -3832,6 +3906,7 @@
         },
         {
           "label": "劳动就业",
+          "label_en": "Labor & Employment",
           "laws": [
             {
               "id": 1100441,
@@ -3852,6 +3927,7 @@
         },
         {
           "label": "税务财政",
+          "label_en": "Taxation & Finance",
           "laws": [
             {
               "id": 1100271,
@@ -3887,29 +3963,30 @@
         },
         {
           "label": "国家赔偿",
+          "label_en": "State Compensation",
           "laws": [
             {
-              "id": 3500897,
+              "id": 3500042,
               "title": "最高人民法院关于《中华人民共和国国家赔偿法》溯及力和人民法院赔偿委员会受案范围问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Retroactive Effect of the State Compensation Law of the People's Republic of China and the Scope of Cases Accepted by the Compensation Committees of People's Courts"
             },
             {
-              "id": 3501279,
+              "id": 3500348,
               "title": "最高人民法院关于人民法院赔偿委员会依照《中华人民共和国国家赔偿法》第三十条规定纠正原生效的赔偿委员会决定应如何适用人身自由赔偿标准问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Apply the Standard of Compensation for Personal Freedom When the Compensation Committee of a People's Court Corrects Its Previously Effective Decision Pursuant to Article 30 of the State Compensation Law of the People's Republic of China"
             },
             {
-              "id": 3501217,
+              "id": 3500284,
               "title": "最高人民法院关于人民法院赔偿委员会审理国家赔偿案件程序的规定",
               "title_en": "Provisions of the Supreme People's Court on the Procedures for the Compensation Committee of a People's Court to Hear State Compensation Cases"
             },
             {
-              "id": 3501274,
+              "id": 3500335,
               "title": "最高人民法院关于人民法院赔偿委员会适用质证程序审理国家赔偿案件的规定",
               "title_en": "Provisions of the Supreme People's Court on the Application of Evidence Cross-Examination Procedures by the Compensation Committee of a People's Court in Hearing State Compensation Cases"
             },
             {
-              "id": 3501335,
+              "id": 3500410,
               "title": "最高人民法院关于国家赔偿监督程序若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Supervisory Procedures for State Compensation"
             },
@@ -3919,12 +3996,12 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in Determining Liability for Mental Damage in the Trial of State Compensation Cases"
             },
             {
-              "id": 3501427,
+              "id": 3500624,
               "title": "最高人民法院关于审理行政赔偿案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Administrative Compensation Cases"
             },
             {
-              "id": 3501219,
+              "id": 3500282,
               "title": "最高人民法院关于适用《中华人民共和国国家赔偿法》若干问题的解释（一）",
               "title_en": "Interpretation (I) of the Supreme People's Court on Several Issues concerning the Application of the State Compensation Law of the People's Republic of China"
             }
@@ -3932,6 +4009,7 @@
         },
         {
           "label": "行政法规/税务财政",
+          "label_en": "Administrative Regulations: Taxation & Finance",
           "laws": [
             {
               "id": 5001278,
@@ -3977,6 +4055,7 @@
         },
         {
           "label": "行政法规/海关进出口",
+          "label_en": "Administrative Regulations: Customs & Import-Export",
           "laws": [
             {
               "id": 5001319,
@@ -4057,6 +4136,7 @@
         },
         {
           "label": "行政法规/金融证券",
+          "label_en": "Administrative Regulations: Banking & Securities",
           "laws": [
             {
               "id": 5000861,
@@ -4142,6 +4222,7 @@
         },
         {
           "label": "行政法规/交通运输",
+          "label_en": "Administrative Regulations: Transportation",
           "laws": [
             {
               "id": 5000838,
@@ -4337,6 +4418,7 @@
         },
         {
           "label": "行政法规/能源电力",
+          "label_en": "Administrative Regulations: Energy & Power",
           "laws": [
             {
               "id": 5001082,
@@ -4352,6 +4434,7 @@
         },
         {
           "label": "行政法规/生态环境",
+          "label_en": "Administrative Regulations: Ecology & Environment",
           "laws": [
             {
               "id": 5000770,
@@ -4502,6 +4585,7 @@
         },
         {
           "label": "行政法规/自然资源",
+          "label_en": "Administrative Regulations: Natural Resources",
           "laws": [
             {
               "id": 5000938,
@@ -4712,6 +4796,7 @@
         },
         {
           "label": "行政法规/土地城建",
+          "label_en": "Administrative Regulations: Land & Urban Development",
           "laws": [
             {
               "id": 5001250,
@@ -4882,6 +4967,7 @@
         },
         {
           "label": "行政法规/农业农村",
+          "label_en": "Administrative Regulations: Agriculture & Rural Affairs",
           "laws": [
             {
               "id": 5000951,
@@ -4942,6 +5028,7 @@
         },
         {
           "label": "行政法规/卫生医药",
+          "label_en": "Administrative Regulations: Health & Medicine",
           "laws": [
             {
               "id": 5001301,
@@ -5127,6 +5214,7 @@
         },
         {
           "label": "行政法规/劳动就业",
+          "label_en": "Administrative Regulations: Labor & Employment",
           "laws": [
             {
               "id": 5001030,
@@ -5187,6 +5275,7 @@
         },
         {
           "label": "行政法规/社会民政",
+          "label_en": "Administrative Regulations: Social & Civil Affairs",
           "laws": [
             {
               "id": 5000834,
@@ -5302,6 +5391,7 @@
         },
         {
           "label": "行政法规/教育科技",
+          "label_en": "Administrative Regulations: Education & Science",
           "laws": [
             {
               "id": 5001152,
@@ -5457,6 +5547,7 @@
         },
         {
           "label": "行政法规/信息通信",
+          "label_en": "Administrative Regulations: Information & Communications",
           "laws": [
             {
               "id": 5000933,
@@ -5582,6 +5673,7 @@
         },
         {
           "label": "行政法规/工商市场",
+          "label_en": "Administrative Regulations: Industry, Commerce & Market",
           "laws": [
             {
               "id": 5001280,
@@ -5707,6 +5799,7 @@
         },
         {
           "label": "行政法规/安全应急",
+          "label_en": "Administrative Regulations: Safety & Emergency Response",
           "laws": [
             {
               "id": 5001025,
@@ -5767,6 +5860,7 @@
         },
         {
           "label": "行政法规/公安司法",
+          "label_en": "Administrative Regulations: Public Security & Justice",
           "laws": [
             {
               "id": 5000876,
@@ -5887,6 +5981,7 @@
         },
         {
           "label": "行政法规/军事国防",
+          "label_en": "Administrative Regulations: Military & National Defense",
           "laws": [
             {
               "id": 5000866,
@@ -5977,6 +6072,7 @@
         },
         {
           "label": "行政法规/行政法制",
+          "label_en": "Administrative Regulations: Administrative Rule of Law",
           "laws": [
             {
               "id": 5000738,
@@ -6192,6 +6288,7 @@
         },
         {
           "label": "行政法规/涉外外资",
+          "label_en": "Administrative Regulations: Foreign Affairs & Investment",
           "laws": [
             {
               "id": 5000899,
@@ -6307,6 +6404,7 @@
         },
         {
           "label": "信息通信",
+          "label_en": "Information & Communications",
           "laws": [
             {
               "id": 1100358,
@@ -6319,9 +6417,11 @@
     },
     {
       "label": "经济、税务与金融",
+      "label_en": "Economy, Taxation & Finance",
       "subgroups": [
         {
           "label": "税收与财政",
+          "label_en": "Taxation & Public Finance",
           "laws": [
             {
               "id": 1100244,
@@ -6434,7 +6534,7 @@
               "title_en": "Interpretation of the Supreme People's Procuratorate on the Application of Law to the Act of Unauthorized Sale of Bonded Goods for Processing with Imported Materials"
             },
             {
-              "id": 3501240,
+              "id": 3500306,
               "title": "最高人民法院关于税务机关就破产企业欠缴税款产生的滞纳金提起的债权确认之诉应否受理问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the Court Should Accept a Lawsuit for Confirmation of Claims Filed by Tax Authorities for Late Payment Surcharges Arising from Tax Arrears of a Bankrupt Enterprise"
             }
@@ -6442,6 +6542,7 @@
         },
         {
           "label": "金融、证券与保险",
+          "label_en": "Finance, Securities & Insurance",
           "laws": [
             {
               "id": 1100045,
@@ -6482,6 +6583,7 @@
         },
         {
           "label": "贸易、竞争与市场",
+          "label_en": "Trade, Competition & Market",
           "laws": [
             {
               "id": 1100428,
@@ -6524,7 +6626,7 @@
               "title_en": "Law of the People's Republic of China on the Hainan Free Trade Port"
             },
             {
-              "id": 3501428,
+              "id": 3500623,
               "title": "最高人民法院关于适用《中华人民共和国反不正当竞争法》若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Anti-Unfair Competition Law of the People's Republic of China"
             }
@@ -6532,6 +6634,7 @@
         },
         {
           "label": "农业、资源与能源",
+          "label_en": "Agriculture, Resources & Energy",
           "laws": [
             {
               "id": 1100406,
@@ -6612,6 +6715,7 @@
         },
         {
           "label": "其他经济法规",
+          "label_en": "Other Economic Regulations",
           "laws": [
             {
               "id": 1100206,
@@ -6799,7 +6903,7 @@
               "title_en": "Railway Law of the People's Republic of China"
             },
             {
-              "id": 3500943,
+              "id": 3500486,
               "title": "最高人民法院关于人民法院扣押铁路运输货物若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Seizure of Goods in Railway Transport by People's Courts"
             },
@@ -6814,17 +6918,17 @@
               "title_en": "Notice of the Supreme People's Court on Issuing the Interpretation of Several Issues concerning the Trial of Cases of Railway Transport Damage Compensation"
             },
             {
-              "id": 3500310,
+              "id": 3500552,
               "title": "最高人民法院关于审理道路交通事故损害赔偿案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Compensation for Damages in Road Traffic Accidents"
             },
             {
-              "id": 3500553,
+              "id": 3500608,
               "title": "最高人民法院关于审理铁路运输人身损害赔偿纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Disputes over Compensation for Personal Injury in Railway Transport"
             },
             {
-              "id": 3501396,
+              "id": 3500554,
               "title": "最高人民法院关于审理铁路运输损害赔偿案件若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Trial of Compensation for Damages in Railway Transport"
             },
@@ -6837,6 +6941,7 @@
         },
         {
           "label": "行政法规/税务财政",
+          "label_en": "Administrative Regulations: Taxation & Finance",
           "laws": [
             {
               "id": 5001150,
@@ -6972,6 +7077,7 @@
         },
         {
           "label": "行政法规/海关进出口",
+          "label_en": "Administrative Regulations: Customs & Import-Export",
           "laws": [
             {
               "id": 5001124,
@@ -7012,6 +7118,7 @@
         },
         {
           "label": "行政法规/金融证券",
+          "label_en": "Administrative Regulations: Banking & Securities",
           "laws": [
             {
               "id": 5000929,
@@ -7062,6 +7169,7 @@
         },
         {
           "label": "行政法规/交通运输",
+          "label_en": "Administrative Regulations: Transportation",
           "laws": [
             {
               "id": 5001153,
@@ -7142,6 +7250,7 @@
         },
         {
           "label": "行政法规/能源电力",
+          "label_en": "Administrative Regulations: Energy & Power",
           "laws": [
             {
               "id": 5001189,
@@ -7167,6 +7276,7 @@
         },
         {
           "label": "行政法规/生态环境",
+          "label_en": "Administrative Regulations: Ecology & Environment",
           "laws": [
             {
               "id": 5000750,
@@ -7177,6 +7287,7 @@
         },
         {
           "label": "行政法规/自然资源",
+          "label_en": "Administrative Regulations: Natural Resources",
           "laws": [
             {
               "id": 5000823,
@@ -7212,6 +7323,7 @@
         },
         {
           "label": "行政法规/农业农村",
+          "label_en": "Administrative Regulations: Agriculture & Rural Affairs",
           "laws": [
             {
               "id": 5001228,
@@ -7247,6 +7359,7 @@
         },
         {
           "label": "行政法规/工商市场",
+          "label_en": "Administrative Regulations: Industry, Commerce & Market",
           "laws": [
             {
               "id": 5001161,
@@ -7277,6 +7390,7 @@
         },
         {
           "label": "行政法规/涉外外资",
+          "label_en": "Administrative Regulations: Foreign Affairs & Investment",
           "laws": [
             {
               "id": 5001016,
@@ -7294,9 +7408,11 @@
     },
     {
       "label": "劳动与社会保障",
+      "label_en": "Labor & Social Security",
       "subgroups": [
         {
           "label": "劳动就业",
+          "label_en": "Labor & Employment",
           "laws": [
             {
               "id": 1100126,
@@ -7354,7 +7470,7 @@
               "title_en": "Law on Protection of Heroes and Martyrs of the People's Republic of China"
             },
             {
-              "id": 3500942,
+              "id": 3500064,
               "title": "最高人民法院关于产业工会、基层工会是否具备社团法人资格和工会经费集中户可否冻结划拨问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether Industrial Unions and Grassroots Trade Unions Have the Status of Social Organizations as Legal Persons and Whether the Centralized Account for Trade Union Funds May Be Frozen or Transferred"
             },
@@ -7382,6 +7498,7 @@
         },
         {
           "label": "社会保险与福利",
+          "label_en": "Social Insurance & Welfare",
           "laws": [
             {
               "id": 1100281,
@@ -7389,12 +7506,12 @@
               "title_en": "Social Insurance Law of the People's Republic of China"
             },
             {
-              "id": 3500937,
+              "id": 3500058,
               "title": "最高人民法院关于实行社会保险的企业破产后各种社会保险统筹费用应缴纳至何时问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Time Limit for Payment of Various Social Insurance Pooling Funds after Bankruptcy of Enterprises That Implement Social Insurance"
             },
             {
-              "id": 3501280,
+              "id": 3500347,
               "title": "最高人民法院关于审理工伤保险行政案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Administrative Cases on Work-Related Injury Insurance"
             }
@@ -7402,6 +7519,7 @@
         },
         {
           "label": "特殊群体保护",
+          "label_en": "Protection of Special Groups",
           "laws": [
             {
               "id": 1100384,
@@ -7429,7 +7547,7 @@
               "title_en": "Law on the Protection of Demobilized Soldiers of the People's Republic of China"
             },
             {
-              "id": 3501010,
+              "id": 3500101,
               "title": "最高人民法院关于审理拐卖妇女案件适用法律有关问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Issues concerning the Application of Law in the Trial of Cases of Abducting and Trafficking Women"
             },
@@ -7442,6 +7560,7 @@
         },
         {
           "label": "行政法规/税务财政",
+          "label_en": "Administrative Regulations: Taxation & Finance",
           "laws": [
             {
               "id": 5000841,
@@ -7452,6 +7571,7 @@
         },
         {
           "label": "行政法规/金融证券",
+          "label_en": "Administrative Regulations: Banking & Securities",
           "laws": [
             {
               "id": 5000852,
@@ -7477,6 +7597,7 @@
         },
         {
           "label": "行政法规/土地城建",
+          "label_en": "Administrative Regulations: Land & Urban Development",
           "laws": [
             {
               "id": 5000887,
@@ -7487,6 +7608,7 @@
         },
         {
           "label": "行政法规/卫生医药",
+          "label_en": "Administrative Regulations: Health & Medicine",
           "laws": [
             {
               "id": 5001147,
@@ -7497,6 +7619,7 @@
         },
         {
           "label": "行政法规/劳动就业",
+          "label_en": "Administrative Regulations: Labor & Employment",
           "laws": [
             {
               "id": 5000931,
@@ -7522,6 +7645,7 @@
         },
         {
           "label": "行政法规/社会民政",
+          "label_en": "Administrative Regulations: Social & Civil Affairs",
           "laws": [
             {
               "id": 5000917,
@@ -7532,6 +7656,7 @@
         },
         {
           "label": "行政法规/教育科技",
+          "label_en": "Administrative Regulations: Education & Science",
           "laws": [
             {
               "id": 5001078,
@@ -7542,6 +7667,7 @@
         },
         {
           "label": "行政法规/信息通信",
+          "label_en": "Administrative Regulations: Information & Communications",
           "laws": [
             {
               "id": 5001291,
@@ -7552,6 +7678,7 @@
         },
         {
           "label": "行政法规/安全应急",
+          "label_en": "Administrative Regulations: Safety & Emergency Response",
           "laws": [
             {
               "id": 5001035,
@@ -7567,6 +7694,7 @@
         },
         {
           "label": "行政法规/军事国防",
+          "label_en": "Administrative Regulations: Military & National Defense",
           "laws": [
             {
               "id": 5001149,
@@ -7579,9 +7707,11 @@
     },
     {
       "label": "诉讼与司法程序",
+      "label_en": "Litigation & Judicial Procedure",
       "subgroups": [
         {
           "label": "民事诉讼",
+          "label_en": "Civil Litigation",
           "laws": [
             {
               "id": 1100396,
@@ -7599,22 +7729,22 @@
               "title_en": "Rules on Supervision of Civil Proceedings by People's Procuratorates"
             },
             {
-              "id": 3500163,
+              "id": 3500481,
               "title": "最高人民法院关于产品侵权案件的受害人能否以产品的商标所有人为被告提起民事诉讼的批复",
               "title_en": "Reply of the Supreme People's Court on Whether a Victim in a Product Infringement Case May File a Civil Lawsuit against the Trademark Owner of the Product as Defendant"
             },
             {
-              "id": 3501038,
+              "id": 3500129,
               "title": "最高人民法院关于人民检察院对不撤销仲裁裁决的民事裁定提出抗诉人民法院应否受理问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether a People's Court Should Accept a Protest Filed by a People's Procuratorate against a Civil Ruling Not to Set Aside an Arbitral Award"
             },
             {
-              "id": 3501018,
+              "id": 3500111,
               "title": "最高人民法院关于人民检察院对撤销仲裁裁决的民事裁定提起抗诉人民法院应如何处理问题的批复",
               "title_en": "Reply of the Supreme People's Court on How a People's Court Should Handle a Protest Filed by a People's Procuratorate against a Civil Ruling Setting Aside an Arbitral Award"
             },
             {
-              "id": 3501136,
+              "id": 3500199,
               "title": "最高人民法院关于以法院专递方式邮寄送达民事诉讼文书的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Service of Civil Litigation Documents by Court Express Mail"
             },
@@ -7629,27 +7759,27 @@
               "title_en": "Decision of the Supreme People's Court on Amending the Interpretation of the Supreme People's Court on the Application of the Civil Procedure Law of the People's Republic of China"
             },
             {
-              "id": 3501250,
+              "id": 3500316,
               "title": "最高人民法院关于修改后的民事诉讼法施行时未结案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Application of Law to Pending Cases at the Time of Implementation of the Amended Civil Procedure Law"
             },
             {
-              "id": 3500241,
+              "id": 3500527,
               "title": "最高人民法院关于审理民事案件适用诉讼时效制度若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Statute of Limitations in the Trial of Civil Cases"
             },
             {
-              "id": 3501207,
+              "id": 3500267,
               "title": "最高人民法院关于对被判处死刑的被告人未提出上诉、共同犯罪的部分被告人或者附带民事诉讼原告人提出上诉的案件应适用何种程序审理的批复",
               "title_en": "Reply of the Supreme People's Court on the Procedure to Be Applied in Cases Where a Defendant Sentenced to Death Has Not Appealed, but Some Co-defendants or the Plaintiff in an Incidental Civil Action Have Appealed"
             },
             {
-              "id": 3501290,
+              "id": 3500361,
               "title": "最高人民法院关于民事审判监督程序严格依法适用指令再审和发回重审若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Strict Application of Law in Cases of Directing Retrial and Remanding for New Trial in Civil Adjudication Supervision Procedures"
             },
             {
-              "id": 3500939,
+              "id": 3500061,
               "title": "最高人民法院关于民事诉讼委托代理人在执行程序中的代理权限问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Scope of Authority of Entrusted Agents in Civil Litigation in Enforcement Procedures"
             },
@@ -7659,47 +7789,47 @@
               "title_en": "Reply of the Supreme People's Court on the Issue That Applications for Enforcement of Judgments That Have Become Effective Before the Implementation of the Civil Procedure Law (for Trial Implementation) Exceeding the Statutory Time Limit Shall Not Be Supported According to Law Without Special Reasons"
             },
             {
-              "id": 3500150,
+              "id": 3500461,
               "title": "最高人民法院关于民事诉讼证据的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Evidence in Civil Litigation"
             },
             {
-              "id": 3501305,
+              "id": 3500379,
               "title": "最高人民法院关于海事诉讼管辖问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Jurisdiction over Maritime Litigation"
             },
             {
-              "id": 3501179,
+              "id": 3500235,
               "title": "最高人民法院关于涉台民事诉讼文书送达的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Service of Civil Litigation Documents Involving Taiwan"
             },
             {
-              "id": 3501444,
+              "id": 3500643,
               "title": "最高人民法院关于生态环境侵权民事诉讼证据的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Evidence in Civil Litigation for Ecological and Environmental Infringement"
             },
             {
-              "id": 3501390,
+              "id": 3500476,
               "title": "最高人民法院关于知识产权民事诉讼证据的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Evidence in Intellectual Property Civil Litigation"
             },
             {
-              "id": 3500828,
+              "id": 3500015,
               "title": "最高人民法院关于第二审人民法院因追加、更换当事人发回重审的民事裁定书上，应如何列当事人问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to List the Parties in a Civil Ruling of Remand for Retrial Due to Addition or Replacement of Parties by the Second-instance Court"
             },
             {
-              "id": 3500174,
+              "id": 3500571,
               "title": "最高人民法院关于诉讼代理人查阅民事案件材料的规定",
               "title_en": "Provisions of the Supreme People's Court on Litigation Representatives' Access to Materials in Civil Cases"
             },
             {
-              "id": 3500244,
+              "id": 3500581,
               "title": "最高人民法院关于适用《中华人民共和国民事诉讼法》审判监督程序若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Trial Supervision Procedure of the Civil Procedure Law of the People's Republic of China"
             },
             {
-              "id": 3500243,
+              "id": 3500582,
               "title": "最高人民法院关于适用《中华人民共和国民事诉讼法》执行程序若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Enforcement Procedure of the Civil Procedure Law of the People's Republic of China"
             },
@@ -7714,12 +7844,12 @@
               "title_en": "Opinions of the Supreme People's Court on Several Issues concerning the Application of the Civil Procedure Law of the People's Republic of China"
             },
             {
-              "id": 3501114,
+              "id": 3500178,
               "title": "最高人民法院关于适用《中华人民共和国海事诉讼特别程序法》若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Special Maritime Procedure Law of the People's Republic of China"
             },
             {
-              "id": 3500190,
+              "id": 3500588,
               "title": "最高人民法院关于适用简易程序审理民事案件的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Trial of Civil Cases by Summary Procedure"
             },
@@ -7732,6 +7862,7 @@
         },
         {
           "label": "刑事诉讼",
+          "label_en": "Criminal Litigation",
           "laws": [
             {
               "id": 1100253,
@@ -7769,7 +7900,7 @@
               "title_en": "Opinion of the Supreme People's Court, the Supreme People's Procuratorate, the Ministry of Public Security, the Ministry of State Security, and the Ministry of Justice on Promoting the Reform of the Criminal Procedure System Centering on Trial"
             },
             {
-              "id": 3501356,
+              "id": 3500439,
               "title": "最高人民法院、最高人民检察院关于办理虚假诉讼刑事案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Application of Law in the Handling of Criminal Cases of False Litigation"
             },
@@ -7784,7 +7915,7 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Implementation of the Criminal Procedure Law of the People's Republic of China"
             },
             {
-              "id": 3501368,
+              "id": 3500455,
               "title": "最高人民法院关于死刑复核及执行程序中保障当事人合法权益的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Protecting the Legitimate Rights and Interests of Parties in the Death Penalty Review and Execution Procedures"
             },
@@ -7794,7 +7925,7 @@
               "title_en": "Interpretation of the Supreme People's Court on the Application of the Criminal Procedure Law of the People's Republic of China"
             },
             {
-              "id": 3501315,
+              "id": 3500387,
               "title": "最高人民法院关于适用刑事诉讼法第二百二十五条第二款有关问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Paragraph 2 of Article 225 of the Criminal Procedure Law"
             }
@@ -7802,6 +7933,7 @@
         },
         {
           "label": "行政诉讼",
+          "label_en": "Administrative Litigation",
           "laws": [
             {
               "id": 1100205,
@@ -7834,17 +7966,17 @@
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Implementation of the State Compensation Law of the People's Republic of China by People's Courts"
             },
             {
-              "id": 3501234,
+              "id": 3500300,
               "title": "最高人民法院关于国家赔偿案件立案工作的规定",
               "title_en": "Provisions of the Supreme People's Court on the Filing of State Compensation Cases"
             },
             {
-              "id": 3501052,
+              "id": 3500134,
               "title": "最高人民法院关于国有资产产权管理行政案件管辖问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Jurisdiction of Administrative Cases concerning the Administration of State-Owned Assets Property Rights"
             },
             {
-              "id": 3501321,
+              "id": 3500394,
               "title": "最高人民法院关于审理民事、行政诉讼中司法赔偿案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Cases of Judicial Compensation in Civil and Administrative Litigation"
             },
@@ -7869,22 +8001,22 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Correct Determination of the Defendant Qualification of Local People's Governments at or Above the County Level in Administrative Proceedings"
             },
             {
-              "id": 3501458,
+              "id": 3500658,
               "title": "最高人民法院关于正确确定强制拆除行政诉讼案件被告及起诉期限的批复",
               "title_en": "Reply of the Supreme People's Court on the Correct Determination of the Defendant and the Period for Filing a Lawsuit in Administrative Cases Concerning Compulsory Demolition"
             },
             {
-              "id": 3501177,
+              "id": 3500233,
               "title": "最高人民法院关于行政诉讼撤诉若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Withdrawal of Lawsuits in Administrative Litigation"
             },
             {
-              "id": 3501097,
+              "id": 3500164,
               "title": "最高人民法院关于行政诉讼证据若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Evidence in Administrative Litigation"
             },
             {
-              "id": 3501346,
+              "id": 3500424,
               "title": "最高人民法院关于适用《中华人民共和国行政诉讼法》的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Application of the Administrative Procedure Law of the People's Republic of China"
             },
@@ -7907,6 +8039,7 @@
         },
         {
           "label": "律师、仲裁与公证",
+          "label_en": "Lawyers, Arbitration & Notarization",
           "laws": [
             {
               "id": 1100101,
@@ -7954,12 +8087,12 @@
               "title_en": "Opinion of the Supreme People's Court, the Supreme People's Procuratorate, the Ministry of Public Security, the Ministry of State Security, and the Ministry of Justice on Carrying Out the Work of Legal Aid Duty Lawyers"
             },
             {
-              "id": 3501218,
+              "id": 3500285,
               "title": "最高人民法院关于人民调解协议司法确认程序的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Judicial Confirmation Procedures for People's Mediation Agreements"
             },
             {
-              "id": 3501357,
+              "id": 3500440,
               "title": "最高人民法院关于公证债权文书执行若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Enforcement of Notarized Creditor's Rights Documents"
             },
@@ -7969,7 +8102,7 @@
               "title_en": "Reply of the Supreme People's Court on the Issue of Whether the Review Arbitration Decision of a Labor Dispute Arbitration Committee May Serve as a Basis for Enforcement"
             },
             {
-              "id": 3501295,
+              "id": 3500367,
               "title": "最高人民法院关于对上海市高级人民法院等就涉及中国国际经济贸易仲裁委员会及其原分会等仲裁机构所作仲裁裁决司法审查案件请示问题的批复",
               "title_en": "Reply of the Supreme People's Court to the Request of the Shanghai Higher People's Court and Others on Issues concerning Judicial Review of Arbitral Awards Made by the China International Economic and Trade Arbitration Commission and Its Former Sub-Commissions and Other Arbitration Institutions"
             },
@@ -7979,7 +8112,7 @@
               "title_en": "Notice of the Supreme People's Court on Transmitting the Notice of the Ministry of Justice on Re-entrusting 23 Hong Kong Lawyers to Handle Notarization Affairs and Changing the Certification Method"
             },
             {
-              "id": 3501154,
+              "id": 3500220,
               "title": "最高人民法院关于适用《中华人民共和国仲裁法》若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Arbitration Law of the People's Republic of China"
             },
@@ -7997,6 +8130,7 @@
         },
         {
           "label": "文书、送达与废止",
+          "label_en": "Documents, Service & Repeals",
           "laws": [
             {
               "id": 3500878,
@@ -8024,12 +8158,12 @@
               "title_en": "Provisions on Procuratorial Suggestions of People's Procuratorates"
             },
             {
-              "id": 3501406,
+              "id": 3500600,
               "title": "人民法院在线诉讼规则",
               "title_en": "Rules on Online Litigation of People's Courts"
             },
             {
-              "id": 3501416,
+              "id": 3500612,
               "title": "人民法院在线调解规则",
               "title_en": "Rules on Online Mediation of People's Courts"
             },
@@ -8104,7 +8238,7 @@
               "title_en": "Reply of the Supreme People's Court and the Supreme People's Procuratorate on the Issue of Whether the People's Procuratorate Shall Perform Pre-litigation Announcement Procedures When Filing a Criminal Incidental Civil Public Interest Litigation"
             },
             {
-              "id": 3501433,
+              "id": 3500629,
               "title": "最高人民法院、最高人民检察院关于办理海洋自然资源与生态环境公益诉讼案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues concerning the Handling of Public Interest Litigation Cases Involving Marine Natural Resources and Ecological Environment"
             },
@@ -8134,27 +8268,27 @@
               "title_en": "Decision of the Supreme People's Court and the Supreme People's Procuratorate on Abrogating Certain Judicial Interpretations and Normative Documents"
             },
             {
-              "id": 3500428,
+              "id": 3500479,
               "title": "最高人民法院、最高人民检察院关于检察公益诉讼案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court and the Supreme People's Procuratorate on Several Issues Concerning the Application of Law in Procuratorial Public Interest Litigation Cases"
             },
             {
-              "id": 3501017,
+              "id": 3500114,
               "title": "最高人民法院予以废止的1999年底以前发布的有关司法解释目录（第三批）",
               "title_en": "Catalogue of Judicial Interpretations Issued by the Supreme People's Court before the End of 1999 to be Abolished (Third Batch)"
             },
             {
-              "id": 3501080,
+              "id": 3500156,
               "title": "最高人民法院予以废止的2000年底以前发布的有关司法解释目录（第五批）",
               "title_en": "Catalogue of Judicial Interpretations Issued by the Supreme People's Court before the End of 2000 to be Abolished (Fifth Batch)"
             },
             {
-              "id": 3501084,
+              "id": 3500161,
               "title": "最高人民法院予以废止的2000年底以前发布的有关司法解释目录（第六批）",
               "title_en": "Catalogue of Judicial Interpretations Issued by the Supreme People's Court before the End of 2000 to be Abolished (Sixth Batch)"
             },
             {
-              "id": 3501076,
+              "id": 3500151,
               "title": "最高人民法院予以废止的2000年底以前发布的有关司法解释目录（第四批）",
               "title_en": "Catalogue of Judicial Interpretations Issued by the Supreme People's Court before the End of 2000 to be Abolished (Fourth Batch)"
             },
@@ -8164,7 +8298,7 @@
               "title_en": "Provisions of the Supreme People's Court on the Administration of Entrusted Forensic Appraisal by People's Courts"
             },
             {
-              "id": 3500436,
+              "id": 3500597,
               "title": "最高人民法院关于上海金融法院案件管辖的规定",
               "title_en": "Provisions of the Supreme People's Court on the Jurisdiction of Cases by the Shanghai Financial Court"
             },
@@ -8174,12 +8308,12 @@
               "title_en": "Letter of the Supreme People's Court on What Type of Case Should Be Accepted by the People's Court When a Lawsuit Is Filed against the Confirmation of Ownership of a Disputed House by the Government or the Real Estate Administrative Department"
             },
             {
-              "id": 3501033,
+              "id": 3500119,
               "title": "最高人民法院关于严格执行案件审理期限制度的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Strictly Enforcing the System of Time Limits for Case Trial"
             },
             {
-              "id": 3500432,
+              "id": 3500447,
               "title": "最高人民法院关于严格规范民商事案件延长审限和延期开庭问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Strictly Regulating the Extension of Trial Period and Adjournment of Hearings in Civil and Commercial Cases"
             },
@@ -8189,7 +8323,7 @@
               "title_en": "Provisions of the Supreme People's Court on the Procedure for Chinese Citizens Applying for Recognition of Divorce Judgments Rendered by Foreign Courts"
             },
             {
-              "id": 3501355,
+              "id": 3500438,
               "title": "最高人民法院关于互联网法院审理案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Cases by Internet Courts"
             },
@@ -8204,67 +8338,67 @@
               "title_en": "Reply of the Supreme People's Court on the Issue that a House Disposed of by the Property Owner before Death Shall Not Be Recognized as Legacy after Death"
             },
             {
-              "id": 3501272,
+              "id": 3500331,
               "title": "最高人民法院关于人事争议申请仲裁的时效期间如何计算的批复",
               "title_en": "Reply of the Supreme People's Court on How to Calculate the Limitation Period for Applying for Arbitration in Personnel Disputes"
             },
             {
-              "id": 3500976,
+              "id": 3500086,
               "title": "最高人民法院关于人民法院不予受理人民检察院单独就诉讼费负担裁定提出抗诉问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Non-acceptance by People's Courts of a Protest Filed by a People's Procuratorate Solely against a Ruling on the Allocation of Litigation Costs"
             },
             {
-              "id": 3501348,
+              "id": 3500425,
               "title": "最高人民法院关于人民法院办理仲裁裁决执行案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Handling of Cases Involving Enforcement of Arbitral Awards by People's Courts"
             },
             {
-              "id": 3500364,
+              "id": 3500482,
               "title": "最高人民法院关于人民法院办理执行异议和复议案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Handling of Cases of Objection and Reconsideration in Enforcement by People's Courts"
             },
             {
-              "id": 3501226,
+              "id": 3500293,
               "title": "最高人民法院关于人民法院办理海峡两岸送达文书和调查取证司法互助案件的规定",
               "title_en": "Provisions of the Supreme People's Court on the Handling of Judicial Mutual Assistance Cases Concerning Service of Documents and Investigation and Evidence Collection across the Taiwan Strait"
             },
             {
-              "id": 3501268,
+              "id": 3500327,
               "title": "最高人民法院关于人民法院办理自赔案件程序的规定",
               "title_en": "Provisions of the Supreme People's Court on the Procedure for Handling Self-compensation Cases by People's Courts"
             },
             {
-              "id": 3500395,
+              "id": 3500483,
               "title": "最高人民法院关于人民法院办理财产保全案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Handling of Property Preservation Cases by People's Courts"
             },
             {
-              "id": 3500965,
+              "id": 3500083,
               "title": "最高人民法院关于人民法院发现本院作出的诉前保全裁定和在执行程序中作出的裁定确有错误以及人民检察院对人民法院作出的诉前保全裁定提出抗诉人民法院应当如何处理的批复",
               "title_en": "Reply of the Supreme People's Court on How a People's Court Should Handle a Situation Where It Finds That a Pre-litigation Preservation Ruling or a Ruling Made during Enforcement Is Erroneous and Where a People's Procuratorate Files a Protest against a Pre-litigation Preservation Ruling Made by the People's Court"
             },
             {
-              "id": 3500105,
+              "id": 3500484,
               "title": "最高人民法院关于人民法院受理申请承认外国法院离婚判决案件有关问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Issues concerning the Acceptance of Cases for Recognition of Divorce Judgments Rendered by Foreign Courts by People's Courts"
             },
             {
-              "id": 3501411,
+              "id": 3500609,
               "title": "最高人民法院关于人民法院司法拍卖房产竞买人资格若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Qualifications of Bidders in Judicial Auction of Real Property by People's Courts"
             },
             {
-              "id": 3501099,
+              "id": 3500167,
               "title": "最高人民法院关于人民法院合议庭工作的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Work of Collegial Panels of People's Courts"
             },
             {
-              "id": 3501320,
+              "id": 3500393,
               "title": "最高人民法院关于人民法院在互联网公布裁判文书的规定",
               "title_en": "Provisions of the Supreme People's Court on the Publication of Judicial Documents by People's Courts on the Internet"
             },
             {
-              "id": 3501120,
+              "id": 3500188,
               "title": "最高人民法院关于人民法院审理事业单位人事争议案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Personnel Dispute Cases of Public Institutions by People's Courts"
             },
@@ -8274,32 +8408,32 @@
               "title_en": "Provisions of the Supreme People's Court on the Administration of Judicial Appraisal Entrusted by People's Courts to External Entities"
             },
             {
-              "id": 3501019,
+              "id": 3500112,
               "title": "最高人民法院关于人民法院对经劳动争议仲裁裁决的纠纷准予撤诉或驳回起诉后劳动争议仲裁裁决从何时起生效的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Effective Time of a Labor Dispute Arbitration Award after a People's Court Grants Withdrawal of the Lawsuit or Dismisses the Action in a Dispute That Has Been Arbitrated"
             },
             {
-              "id": 3501331,
+              "id": 3500406,
               "title": "最高人民法院关于人民法院庭审录音录像的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Audio and Video Recording of Court Hearings in People's Courts"
             },
             {
-              "id": 3501412,
+              "id": 3500610,
               "title": "最高人民法院关于人民法院强制执行股权若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Compulsory Enforcement of Equity by People's Courts"
             },
             {
-              "id": 3500081,
+              "id": 3500487,
               "title": "最高人民法院关于人民法院执行工作若干问题的规定（试行）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Enforcement Work by People's Courts (Trial Implementation)"
             },
             {
-              "id": 3501314,
+              "id": 3500388,
               "title": "最高人民法院关于人民法院特邀调解的规定",
               "title_en": "Provisions of the Supreme People's Court on Special Invited Mediation by People's Courts"
             },
             {
-              "id": 3501291,
+              "id": 3500363,
               "title": "最高人民法院关于人民法院登记立案若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on Case Registration and Filing by People's Courts"
             },
@@ -8309,17 +8443,17 @@
               "title_en": "Provisional Regulations of the Supreme People's Court on the Work of Case Filing by People's Courts"
             },
             {
-              "id": 3501319,
+              "id": 3500392,
               "title": "最高人民法院关于人民法院网络司法拍卖若干问题的规定",
               "title_en": "Several Provisions of the Supreme People's Court on Online Judicial Auction by People's Courts"
             },
             {
-              "id": 3500067,
+              "id": 3500491,
               "title": "最高人民法院关于人民法院能否对信用证开证保证金采取冻结和扣划措施问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Whether People's Courts May Freeze or Deduct Letter of Credit Margin"
             },
             {
-              "id": 3501351,
+              "id": 3500429,
               "title": "最高人民法院关于人民法院通过互联网公开审判流程信息的规定",
               "title_en": "Provisions of the Supreme People's Court on the Disclosure of Trial Process Information by People's Courts via the Internet"
             },
@@ -8329,17 +8463,17 @@
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Participation of People's Assessors in Trial Activities"
             },
             {
-              "id": 3501316,
+              "id": 3500389,
               "title": "最高人民法院关于人身安全保护令案件相关程序问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues Concerning Procedures in Cases of Personal Safety Protection Orders"
             },
             {
-              "id": 3500420,
+              "id": 3500611,
               "title": "最高人民法院关于仲裁司法审查案件报核问题的有关规定",
               "title_en": "Relevant Provisions of the Supreme People's Court on the Reporting and Approval of Judicial Review Cases Concerning Arbitration"
             },
             {
-              "id": 3501352,
+              "id": 3500433,
               "title": "最高人民法院关于仲裁机构“先予仲裁”裁决或者调解书立案、执行等法律适用问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues Concerning the Application of Law in Case Filing and Enforcement of 'Advance Arbitration' Awards or Mediation Documents by Arbitration Institutions"
             },
@@ -8349,7 +8483,7 @@
               "title_en": "Reply of the Supreme People's Court Concerning the Issue of Who Shall Be the Subject of Litigation after the Cancellation of a Company Established by an Enterprise"
             },
             {
-              "id": 3500320,
+              "id": 3500492,
               "title": "最高人民法院关于依据国际公约和双边司法协助条约办理民商事案件司法文书送达和调查取证司法协助请求的规定",
               "title_en": "Provisions of the Supreme People's Court on Handling Requests for Judicial Assistance in Service of Judicial Documents and Taking of Evidence in Civil and Commercial Cases Pursuant to International Conventions and Bilateral Judicial Assistance Treaties"
             },
@@ -8359,7 +8493,7 @@
               "title_en": "Reply of the Supreme People's Court on the Issue of Whether Compound Interest May Be Calculated on Overdraft Interest of Credit Cards"
             },
             {
-              "id": 3501309,
+              "id": 3500383,
               "title": "最高人民法院关于修改《中华人民共和国人民法院法庭规则》的决定",
               "title_en": "Decision of the Supreme People's Court on Amending the Rules of the Courtroom of the People's Courts of the People's Republic of China"
             },
@@ -8404,12 +8538,12 @@
               "title_en": "Decision of the Supreme People's Court on Amending the Several Provisions of the Supreme People's Court on Restricting High Consumption of the Persons Subject to Enforcement"
             },
             {
-              "id": 3500033,
+              "id": 3500493,
               "title": "最高人民法院关于债务人在约定的期限届满后未履行债务而出具没有还款日期的欠款条诉讼时效期间应从何时开始计算问题的批复",
               "title_en": "Reply of the Supreme People's Court on When the Limitation Period Begins for a Debtor Who Issues an IOU Without a Repayment Date After Failing to Perform the Debt Within the Agreed Period"
             },
             {
-              "id": 3500326,
+              "id": 3500408,
               "title": "最高人民法院关于公布失信被执行人名单信息的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Disclosing the List of Dishonest Judgment Debtors"
             },
@@ -8424,17 +8558,17 @@
               "title_en": "Arrangement of the Supreme People's Court on Mutual Recognition and Enforcement of Civil and Commercial Judgments Between the Mainland and the Macao Special Administrative Region"
             },
             {
-              "id": 3501424,
+              "id": 3500619,
               "title": "最高人民法院关于内地与澳门特别行政区就仲裁程序相互协助保全的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Assistance in Preservation in Arbitration Proceedings Between the Mainland and the Macao Special Administrative Region"
             },
             {
-              "id": 3500146,
+              "id": 3500464,
               "title": "最高人民法院关于内地与澳门特别行政区法院就民商事案件相互委托送达司法文书和调取证据的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Entrustment of Service of Judicial Documents and Taking of Evidence in Civil and Commercial Cases Between the Courts of the Mainland and the Macao Special Administrative Region"
             },
             {
-              "id": 3501175,
+              "id": 3500232,
               "title": "最高人民法院关于内地与澳门特别行政区相互认可和执行仲裁裁决的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Recognition and Enforcement of Arbitral Awards Between the Mainland and the Macao Special Administrative Region"
             },
@@ -8444,12 +8578,12 @@
               "title_en": "Arrangement of the Supreme People's Court on the Mutual Recognition and Enforcement of Civil and Commercial Judgments between the Mainland and the Macao Special Administrative Region"
             },
             {
-              "id": 3501370,
+              "id": 3500456,
               "title": "最高人民法院关于内地与香港特别行政区法院就仲裁程序相互协助保全的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Assistance in Preservation in Arbitration Proceedings Between the Courts of the Mainland and the Hong Kong Special Administrative Region"
             },
             {
-              "id": 3501332,
+              "id": 3500407,
               "title": "最高人民法院关于内地与香港特别行政区法院就民商事案件相互委托提取证据的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Entrustment of Taking of Evidence in Civil and Commercial Cases Between the Courts of the Mainland and the Hong Kong Special Administrative Region"
             },
@@ -8459,17 +8593,17 @@
               "title_en": "Arrangement of the Supreme People's Court on Mutual Recognition and Enforcement of Judgments in Civil and Commercial Matters under Parties' Agreement on Jurisdiction between the Mainland and the Hong Kong Special Administrative Region"
             },
             {
-              "id": 3501453,
+              "id": 3500652,
               "title": "最高人民法院关于内地与香港特别行政区法院相互认可和执行民商事案件判决的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Recognition and Enforcement of Judgments in Civil and Commercial Cases Between the Courts of the Mainland and the Hong Kong Special Administrative Region"
             },
             {
-              "id": 3501006,
+              "id": 3500102,
               "title": "最高人民法院关于内地与香港特别行政区相互执行仲裁裁决的安排",
               "title_en": "Arrangement of the Supreme People's Court on Mutual Enforcement of Arbitral Awards Between the Mainland and the Hong Kong Special Administrative Region"
             },
             {
-              "id": 3501405,
+              "id": 3500477,
               "title": "最高人民法院关于内地与香港特别行政区相互执行仲裁裁决的补充安排",
               "title_en": "Supplementary Arrangement of the Supreme People's Court on Mutual Enforcement of Arbitral Awards Between the Mainland and the Hong Kong Special Administrative Region"
             },
@@ -8479,22 +8613,22 @@
               "title_en": "Reply of the Supreme People's Court on Whether Litigation Preservation May Be Taken Against Deposits in Bank Accounts of Military Units as Parties to Economic Dispute Cases and Whether Military Funds May Be Compulsorily Transferred to Repay Debts"
             },
             {
-              "id": 3501216,
+              "id": 3500279,
               "title": "最高人民法院关于判决生效后当事人将判决确认的债权转让债权受让人对该判决不服提出再审申请人民法院是否受理问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether a People's Court Should Accept an Application for Retrial Filed by a Transferee of a Creditor's Right Confirmed by an Effective Judgment Who Disagrees with the Judgment"
             },
             {
-              "id": 3501435,
+              "id": 3500631,
               "title": "最高人民法院关于办理人身安全保护令案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Application of Law in Handling Cases of Personal Safety Protection Orders"
             },
             {
-              "id": 3501236,
+              "id": 3500302,
               "title": "最高人民法院关于办理申请人民法院强制执行国有土地上房屋征收补偿决定案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Cases of Applying to the People's Court for Compulsory Enforcement of Decisions on Expropriation and Compensation for Houses on State-Owned Land"
             },
             {
-              "id": 3500353,
+              "id": 3500494,
               "title": "最高人民法院关于北京、上海、广州知识产权法院案件管辖的规定",
               "title_en": "Provisions of the Supreme People's Court on the Jurisdiction of Cases of the Beijing, Shanghai, and Guangzhou Intellectual Property Courts"
             },
@@ -8519,22 +8653,22 @@
               "title_en": "Reply of the Supreme People's Court on the Service of Judicial Documents to Chinese Citizens Residing Abroad"
             },
             {
-              "id": 3501439,
+              "id": 3500636,
               "title": "最高人民法院关于商品房消费者权利保护问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Protection of the Rights of Consumers of Commercial Housing"
             },
             {
-              "id": 3500343,
+              "id": 3500495,
               "title": "最高人民法院关于商标法修改决定施行后商标案件管辖和法律适用问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Issues concerning Jurisdiction and Application of Law in Trademark Cases after the Implementation of the Decision on Amending the Trademark Law"
             },
             {
-              "id": 3501338,
+              "id": 3500415,
               "title": "最高人民法院关于因申请诉中财产保全损害责任纠纷管辖问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Jurisdiction of Disputes over Liability for Damages Caused by Application for Property Preservation during Litigation"
             },
             {
-              "id": 3501020,
+              "id": 3500115,
               "title": "最高人民法院关于国家工作人员利用职务上的便利为他人谋取利益离退休后收受财物行为如何处理问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Handle the Act of a State Functionary Who Accepts Property after Retirement for Having Sought Benefits for Others by Taking Advantage of His Position"
             },
@@ -8549,12 +8683,12 @@
               "title_en": "Reply of the Supreme People's Court on the Issue That the Property Rights of Houses Divided Before the Land Reform but Mistakenly Registered Under One Person's Name During the Land Reform Shall Still Belong to Each Party Respectively"
             },
             {
-              "id": 3501191,
+              "id": 3500249,
               "title": "最高人民法院关于在执行工作中如何计算迟延履行期间的债务利息等问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Calculate Debt Interest during the Period of Delayed Performance in Enforcement Work"
             },
             {
-              "id": 3501195,
+              "id": 3500252,
               "title": "最高人民法院关于在执行附加刑剥夺政治权利期间犯新罪应如何处理的批复",
               "title_en": "Reply of the Supreme People's Court on How to Handle the Commission of a New Crime during the Period of Enforcement of the Supplementary Punishment of Deprivation of Political Rights"
             },
@@ -8564,7 +8698,7 @@
               "title_en": "Reply of the Supreme People's Court on How to Apply Law to the Act of Felling Forests or Other Trees Owned by One's Own Unit or by Oneself Outside the Location Specified in a Forest Tree Felling License"
             },
             {
-              "id": 3501466,
+              "id": 3500669,
               "title": "最高人民法院关于在粤港澳大湾区内地登记设立的香港、澳门投资企业协议选择港澳法律为合同适用法律或者协议约定港澳为仲裁地效力问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Validity of Agreements by Hong Kong and Macao Invested Enterprises Registered and Established in the Mainland of the Guangdong-Hong Kong-Macao Greater Bay Area to Choose Hong Kong or Macao Law as the Applicable Law for the Contract or to Designate Hong Kong or Macao as the Place of Arbitration"
             },
@@ -8574,12 +8708,12 @@
               "title_en": "Notice of the Supreme People's Court on Issues concerning the Handling of Appeal Cases Involving Firearms and Explosives"
             },
             {
-              "id": 3501467,
+              "id": 3500668,
               "title": "最高人民法院关于外币及港澳台货币逾期付款利息计算标准的批复",
               "title_en": "Reply of the Supreme People's Court on the Standard for Calculating Interest on Overdue Payment in Foreign Currency and Currencies of Hong Kong, Macao and Taiwan"
             },
             {
-              "id": 3501461,
+              "id": 3500661,
               "title": "最高人民法院关于大型企业与中小企业约定以第三方支付款项为付款前提条款效力问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Validity of Clauses Where Large Enterprises and Small and Medium-Sized Enterprises Agree to Make Payment Conditional upon Payment by a Third Party"
             },
@@ -8589,17 +8723,17 @@
               "title_en": "Reply of the Supreme People's Court on Whether the Work Unit of a Missing Person May Apply to the People's Court for Declaration of the Missing Person's Death"
             },
             {
-              "id": 3501021,
+              "id": 3500113,
               "title": "最高人民法院关于如何处理人民检察院提出的暂缓执行建议问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Handle the Proposal to Suspend Enforcement Made by the People's Procuratorate"
             },
             {
-              "id": 3501065,
+              "id": 3500142,
               "title": "最高人民法院关于如何确定沿海、内河货物运输赔偿请求权时效期间问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Determine the Limitation Period for the Right to Claim Compensation for Coastal and Inland River Cargo Transport"
             },
             {
-              "id": 3500289,
+              "id": 3500499,
               "title": "最高人民法院关于委托执行若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Entrusted Enforcement"
             },
@@ -8609,17 +8743,17 @@
               "title_en": "Reply of the Supreme People's Court on Whether a Judge May Pronounce Judgment When a People's Assessor Cannot Participate in the Trial of a Case Scheduled for Pronouncement"
             },
             {
-              "id": 3501224,
+              "id": 3500292,
               "title": "最高人民法院关于审判人员在诉讼活动中执行回避制度若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Implementation of the Recusal System by Judicial Personnel in Litigation Activities"
             },
             {
-              "id": 3501344,
+              "id": 3500421,
               "title": "最高人民法院关于审理仲裁司法审查案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Cases of Judicial Review of Arbitration"
             },
             {
-              "id": 3501029,
+              "id": 3500118,
               "title": "最高人民法院关于审理伪造货币等案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Cases of Counterfeiting Currency, etc."
             },
@@ -8629,37 +8763,42 @@
               "title_en": "Several Provisions of the Supreme People's Court on Issues concerning the Specific Application of Law in the Trial of Disputes over Infringement of New Plant Variety Rights"
             },
             {
+              "id": 3500604,
+              "title": "最高人民法院关于审理侵害植物新品种权纠纷案件具体应用法律问题的若干规定（二）",
+              "title_en": "Several Provisions (II) of the Supreme People's Court on Issues concerning the Specific Application of Law in the Trial of Disputes over Infringement of New Plant Variety Rights"
+            },
+            {
               "id": 3500012,
               "title": "最高人民法院关于审理劳动争议案件诉讼当事人问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Litigants in the Trial of Labor Dispute Cases"
             },
             {
-              "id": 3501317,
+              "id": 3500390,
               "title": "最高人民法院关于审理发生在我国管辖海域相关案件若干问题的规定（一）",
               "title_en": "Provisions (I) of the Supreme People's Court on Several Issues concerning the Trial of Cases Related to the Sea Areas under China's Jurisdiction"
             },
             {
-              "id": 3501318,
+              "id": 3500391,
               "title": "最高人民法院关于审理发生在我国管辖海域相关案件若干问题的规定（二）",
               "title_en": "Provisions (II) of the Supreme People's Court on Several Issues concerning the Trial of Cases Related to the Sea Areas under China's Jurisdiction"
             },
             {
-              "id": 3501440,
+              "id": 3500637,
               "title": "最高人民法院关于审理司法赔偿案件适用请求时效制度若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Limitation Period System in the Trial of Judicial Compensation Cases"
             },
             {
-              "id": 3500152,
+              "id": 3500514,
               "title": "最高人民法院关于审理商标案件有关管辖和法律适用范围问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Issues concerning Jurisdiction and Scope of Application of Law in the Trial of Trademark Cases"
             },
             {
-              "id": 3501397,
+              "id": 3500519,
               "title": "最高人民法院关于审理建筑物区分所有权纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Disputes over Building Distinction Ownership"
             },
             {
-              "id": 3500968,
+              "id": 3500082,
               "title": "最高人民法院关于审理当事人申请撤销仲裁裁决案件几个具体问题的批复",
               "title_en": "Reply of the Supreme People's Court on Several Specific Issues concerning the Trial of Cases Where a Party Applies for Setting Aside an Arbitral Award"
             },
@@ -8669,82 +8808,82 @@
               "title_en": "Interpretation of the Supreme People's Court on Issues concerning the Application of Law in the Trial of Actions of Objection to Enforcement"
             },
             {
-              "id": 3501014,
+              "id": 3500108,
               "title": "最高人民法院关于审理扰乱电信市场管理秩序案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Cases of Disrupting the Management Order of the Telecommunications Market"
             },
             {
-              "id": 3501042,
+              "id": 3500124,
               "title": "最高人民法院关于审理抢劫案件具体应用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Specific Application of Law in the Trial of Robbery Cases"
             },
             {
-              "id": 3500133,
+              "id": 3500526,
               "title": "最高人民法院关于审理植物新品种纠纷案件若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Trial of Dispute Cases concerning New Plant Varieties"
             },
             {
-              "id": 3500471,
+              "id": 3500529,
               "title": "最高人民法院关于审理民间借贷案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Private Lending Cases"
             },
             {
-              "id": 3500385,
+              "id": 3500534,
               "title": "最高人民法院关于审理消费民事公益诉讼案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Consumer Civil Public Interest Litigation Cases"
             },
             {
-              "id": 3500338,
+              "id": 3500537,
               "title": "最高人民法院关于审理涉及农村土地承包经营纠纷调解仲裁案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Cases concerning Mediation and Arbitration of Rural Land Contract Management Disputes"
             },
             {
-              "id": 3501451,
+              "id": 3500650,
               "title": "最高人民法院关于审理涉外民商事案件适用国际条约和国际惯例若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of International Treaties and International Practices in the Trial of Foreign-related Civil and Commercial Cases"
             },
             {
-              "id": 3501454,
+              "id": 3500651,
               "title": "最高人民法院关于审理涉彩礼纠纷案件适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Dispute Cases involving Betrothal Gifts"
             },
             {
-              "id": 3501421,
+              "id": 3500616,
               "title": "最高人民法院关于审理涉执行司法赔偿案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Cases of Judicial Compensation related to Enforcement"
             },
             {
-              "id": 3501386,
+              "id": 3500475,
               "title": "最高人民法院关于审理涉船员纠纷案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Dispute Cases involving Seafarers"
             },
             {
-              "id": 3501398,
+              "id": 3500542,
               "title": "最高人民法院关于审理物业服务纠纷案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Property Service Dispute Cases"
             },
             {
-              "id": 3500355,
+              "id": 3500544,
               "title": "最高人民法院关于审理环境民事公益诉讼案件适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Environmental Civil Public Interest Litigation Cases"
             },
             {
-              "id": 3501395,
+              "id": 3501339,
               "title": "最高人民法院关于审理矿业权纠纷案件适用法律若干问题的解释",
-              "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of Law in the Trial of Mining Rights Dispute Cases"
+              "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Disputes over Mining Rights"
             },
             {
-              "id": 3501425,
+              "id": 3500621,
               "title": "最高人民法院关于审理网络消费纠纷案件适用法律若干问题的规定（一）",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Online Consumption Disputes (I)"
             },
             {
-              "id": 3500205,
+              "id": 3500556,
               "title": "最高人民法院关于对与证券交易所监管职能相关的诉讼案件管辖与受理问题的规定",
               "title_en": "Provisions of the Supreme People's Court on the Jurisdiction and Acceptance of Litigation Cases Related to the Regulatory Functions of Stock Exchanges"
             },
             {
-              "id": 3501304,
+              "id": 3500377,
               "title": "最高人民法院关于对人民法院终结执行行为提出执行异议期限问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Time Limit for Raising an Objection to the Termination of Enforcement by the People's Court"
             },
@@ -8754,7 +8893,7 @@
               "title_en": "Reply of the Supreme People's Court on Whether a Will Made Subsequently to Change Property Rights After Division of Family Property Is Valid"
             },
             {
-              "id": 3501047,
+              "id": 3500128,
               "title": "最高人民法院关于对变造、倒卖变造邮票行为如何适用法律问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on How to Apply Law to the Acts of Altering and Reselling Altered Stamps"
             },
@@ -8764,7 +8903,7 @@
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Application of Procedure in Cases Where Major Circumstances Are Discovered before Execution of a Death Sentence and a Change of Judgment Is Required"
             },
             {
-              "id": 3500906,
+              "id": 3500045,
               "title": "最高人民法院关于对执行程序中的裁定的抗诉不予受理的批复",
               "title_en": "Reply of the Supreme People's Court on Non-acceptance of Protest against Orders in Enforcement Proceedings"
             },
@@ -8779,12 +8918,12 @@
               "title_en": "Reply of the Supreme People's Court on the Issue that All Property of the Debtor in Bankruptcy Cases Which Has Not Been Executed Shall Be Suspended from Execution"
             },
             {
-              "id": 3500075,
+              "id": 3500559,
               "title": "最高人民法院关于对被执行人存在银行的凭证式国库券可否采取执行措施问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether Enforcement Measures May Be Taken against the Certificate Treasury Bonds Held by the Person Subject to Enforcement in Banks"
             },
             {
-              "id": 3500356,
+              "id": 3500402,
               "title": "最高人民法院关于巡回法庭审理案件若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Trial of Cases by Circuit Courts"
             },
@@ -8814,7 +8953,7 @@
               "title_en": "Decision of the Supreme People's Court on Abolishing Certain Judicial Interpretations and Documents of a Judicial Interpretation Nature Issued During the Period from January 1, 1980 to June 30, 1997 (Ninth Batch)"
             },
             {
-              "id": 3500891,
+              "id": 3500036,
               "title": "最高人民法院关于废止1993年底以前发布的部分司法解释的通知",
               "title_en": "Notice of the Supreme People's Court on Abolishing Certain Judicial Interpretations Issued Before the End of 1993"
             },
@@ -8849,12 +8988,12 @@
               "title_en": "Decision of the Supreme People's Court on Abolishing Some Judicial Interpretations (Thirteenth Batch)"
             },
             {
-              "id": 3500992,
+              "id": 3500095,
               "title": "最高人民法院关于当事人对人民法院撤销仲裁裁决的裁定不服申请再审人民法院是否受理问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the People's Court Shall Accept an Application for Retrial Filed by a Party Against a Ruling of the People's Court to Set Aside an Arbitration Award"
             },
             {
-              "id": 3501131,
+              "id": 3500196,
               "title": "最高人民法院关于当事人对驳回其申请撤销仲裁裁决的裁定不服而申请再审，人民法院不予受理问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Issue That the People's Court Shall Not Accept a Retrial Application Filed by a Party Against a Ruling Rejecting Its Application to Set Aside an Arbitration Award"
             },
@@ -8864,7 +9003,7 @@
               "title_en": "Reply of the Supreme People's Court on Whether the People's Court Shall Accept an Application for Recognition of a Payment Order Issued by a Relevant Court in the Taiwan Region"
             },
             {
-              "id": 3500210,
+              "id": 3500560,
               "title": "最高人民法院关于当事人申请承认澳大利亚法院出具的离婚证明书人民法院应否受理问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the People's Court Shall Accept a Party's Application for Recognition of a Divorce Certificate Issued by an Australian Court"
             },
@@ -8874,12 +9013,12 @@
               "title_en": "Reply of the Supreme People's Court on the Jurisdictional Issue in the Dispute over a Purchase and Sales Contract between the Second Oil Chemical Factory of Chengwu County and the Brick and Tile Factory of Liuzhuang Township, Ruichang County"
             },
             {
-              "id": 3501437,
+              "id": 3500635,
               "title": "最高人民法院关于成渝金融法院案件管辖的规定",
               "title_en": "Provisions of the Supreme People's Court on the Jurisdiction of Cases of the Chengdu-Chongqing Financial Court"
             },
             {
-              "id": 3501289,
+              "id": 3500362,
               "title": "最高人民法院关于扣押与拍卖船舶适用法律若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Application of Law in the Arrest and Auction of Ships"
             },
@@ -8889,7 +9028,7 @@
               "title_en": "Reply of the Supreme People's Court on Issues Concerning the Implementation of the Several Provisions of the Supreme People's Court on Strictly Enforcing the System of Case Trial Time Limits"
             },
             {
-              "id": 3500426,
+              "id": 3500561,
               "title": "最高人民法院关于执行和解若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning Enforcement Settlement"
             },
@@ -8899,12 +9038,12 @@
               "title_en": "Notice of the Supreme People's Court on the Implementation of the Convention on the Recognition and Enforcement of Foreign Arbitral Awards to Which China Has Acceded"
             },
             {
-              "id": 3500427,
+              "id": 3500562,
               "title": "最高人民法院关于执行担保若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning Enforcement Guarantee"
             },
             {
-              "id": 3501281,
+              "id": 3500349,
               "title": "最高人民法院关于执行程序中计算迟延履行期间的债务利息适用法律若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues Concerning the Application of Law in Calculating Debt Interest During the Period of Delayed Performance in Enforcement Proceedings"
             },
@@ -8914,12 +9053,12 @@
               "title_en": "Notice of the Supreme People's Court on Implementing the Protective Clause in Consular Treaties When Taking Compulsory Measures Against Ships of the Sending State"
             },
             {
-              "id": 3500950,
+              "id": 3500066,
               "title": "最高人民法院关于承运人就海上货物运输向托运人、收货人或提单持有人要求赔偿的请求权时效期间的批复",
               "title_en": "Reply of the Supreme People's Court on the Statutory Limitation for the Carrier's Right to Claim Compensation from the Shipper, Consignee, or Holder of the Bill of Lading in Maritime Cargo Transport"
             },
             {
-              "id": 3501362,
+              "id": 3500446,
               "title": "最高人民法院关于技术调查官参与知识产权案件诉讼活动的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Participation of Technical Investigation Officers in Litigation Activities of Intellectual Property Cases"
             },
@@ -8934,7 +9073,7 @@
               "title_en": "Reply of the Supreme People's Court on the Scope of Application of the New Judicial Interpretation on Private Lending"
             },
             {
-              "id": 3501142,
+              "id": 3500207,
               "title": "最高人民法院关于新疆生产建设兵团人民法院案件管辖权问题的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Jurisdiction of Cases of the People's Court of the Xinjiang Production and Construction Corps"
             },
@@ -8944,17 +9083,17 @@
               "title_en": "Reply of the Supreme People's Court on Whether a Mediation Statement May Be Issued When Both Parties Have Reached an Agreement through Mediation by a Chinese Court in a Divorce Case between a Japanese Returned Orphan and His or Her Spouse in China"
             },
             {
-              "id": 3500980,
+              "id": 3500087,
               "title": "最高人民法院关于未被续聘的仲裁员在原参加审理的案件裁决书上签名人民法院应当执行该仲裁裁决书的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the People's Court Shall Enforce an Arbitration Award Signed by an Arbitrator Who Was Not Reappointed but Participated in the Hearing of the Case"
             },
             {
-              "id": 3501000,
+              "id": 3500099,
               "title": "最高人民法院关于村民小组组长利用职务便利非法占有公共财物行为如何定性问题的批复",
               "title_en": "Reply of the Supreme People's Court on How to Characterize the Act of a Village Group Leader Illegally Occupying Public Property by Taking Advantage of His Position"
             },
             {
-              "id": 3501284,
+              "id": 3500354,
               "title": "最高人民法院关于海上保险合同的保险人行使代位请求赔偿权利的诉讼时效期间起算日的批复",
               "title_en": "Reply of the Supreme People's Court on the Starting Date of the Limitation Period for the Insurer Under a Marine Insurance Contract to Exercise the Right of Subrogation"
             },
@@ -8964,12 +9103,12 @@
               "title_en": "Several Provisions of the Supreme People's Court on the Scope of Cases to Be Accepted by Maritime Courts"
             },
             {
-              "id": 3501307,
+              "id": 3500378,
               "title": "最高人民法院关于海事法院受理案件范围的规定",
               "title_en": "Provisions of the Supreme People's Court on the Scope of Cases Accepted by Maritime Courts"
             },
             {
-              "id": 3501266,
+              "id": 3500324,
               "title": "最高人民法院关于海事法院可否适用小额诉讼程序问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether Maritime Courts May Apply the Small Claims Procedure"
             },
@@ -8979,27 +9118,27 @@
               "title_en": "Provisions of the Supreme People's Court on the Auction of Arrested Ships by Maritime Courts to Satisfy Debts"
             },
             {
-              "id": 3501082,
+              "id": 3500153,
               "title": "最高人民法院关于海关行政处罚案件诉讼管辖问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on the Jurisdiction over Administrative Penalty Cases of Customs"
             },
             {
-              "id": 3500219,
+              "id": 3500567,
               "title": "最高人民法院关于涉外民事或商事案件司法文书送达问题若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Service of Judicial Documents in Foreign-Related Civil or Commercial Cases"
             },
             {
-              "id": 3501438,
+              "id": 3500632,
               "title": "最高人民法院关于涉外民商事案件管辖若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Jurisdiction over Foreign-Related Civil and Commercial Cases"
             },
             {
-              "id": 3500155,
+              "id": 3500568,
               "title": "最高人民法院关于涉外民商事案件诉讼管辖若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues Concerning the Litigation Jurisdiction over Foreign-Related Civil and Commercial Cases"
             },
             {
-              "id": 3501188,
+              "id": 3500247,
               "title": "最高人民法院关于涉港澳民商事案件司法文书送达问题若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Service of Judicial Documents in Civil and Commercial Cases Involving Hong Kong and Macao"
             },
@@ -9009,12 +9148,12 @@
               "title_en": "Reply of the Supreme People's Court on the Issue of a Defendant Requesting Compensation for Reasonable Expenses on the Ground of Abuse of Rights by the Plaintiff in Intellectual Property Infringement Litigation"
             },
             {
-              "id": 3500443,
+              "id": 3500645,
               "title": "最高人民法院关于知识产权法庭若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Intellectual Property Court"
             },
             {
-              "id": 3500981,
+              "id": 3500089,
               "title": "最高人民法院关于确认仲裁协议效力几个问题的批复",
               "title_en": "Reply of the Supreme People's Court on Several Issues concerning the Confirmation of the Validity of Arbitration Agreements"
             },
@@ -9024,7 +9163,7 @@
               "title_en": "Reply of the Supreme People's Court on the Issue of Whether a Third Party May Raise Objections to Jurisdiction"
             },
             {
-              "id": 3500829,
+              "id": 3500016,
               "title": "最高人民法院关于第二审人民法院在审理过程中可否对当事人的违法行为径行制裁等问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the Second-instance Court May Directly Impose Sanctions on a Party's Illegal Acts during Trial and Other Issues"
             },
@@ -9039,52 +9178,52 @@
               "title_en": "Reply of the Supreme People's Court concerning Whether a Stepmother Still Has the Right to Require Stepchildren Who Have Formed a Foster Relationship with Her to Perform the Duty of Support after She Divorces Their Biological Father"
             },
             {
-              "id": 3501448,
+              "id": 3500646,
               "title": "最高人民法院关于综合治理类司法建议工作若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Judicial Suggestions on Comprehensive Governance"
             },
             {
-              "id": 3501269,
+              "id": 3500328,
               "title": "最高人民法院关于网络查询、冻结被执行人存款的规定",
               "title_en": "Provisions of the Supreme People's Court on Online Inquiry and Freezing of Deposits of Judgment Debtors"
             },
             {
-              "id": 3500982,
+              "id": 3500088,
               "title": "最高人民法院关于能否将国有土地使用权折价抵偿给抵押权人问题的批复",
               "title_en": "Reply of the Supreme People's Court on Whether the State-owned Land Use Right May Be Converted into Value to Satisfy the Mortgagee"
             },
             {
-              "id": 3501105,
+              "id": 3500169,
               "title": "最高人民法院关于行政机关工作人员执行职务致人伤亡构成犯罪的赔偿诉讼程序问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Procedures for Compensation Litigation Where Injuries or Fatalities Caused by Administrative Agency Personnel in the Performance of Duties Constitute Crimes"
             },
             {
-              "id": 3501343,
+              "id": 3500417,
               "title": "最高人民法院关于行政申请再审案件立案程序的规定",
               "title_en": "Provisions of the Supreme People's Court on the Filing Procedures for Administrative Retrial Applications"
             },
             {
-              "id": 3501197,
+              "id": 3500256,
               "title": "最高人民法院关于裁判文书引用法律、法规等规范性法律文件的规定",
               "title_en": "Provisions of the Supreme People's Court on Citation of Laws, Regulations and Other Normative Legal Documents in Adjudicatory Documents"
             },
             {
-              "id": 3501296,
+              "id": 3500365,
               "title": "最高人民法院关于认可和执行台湾地区仲裁裁决的规定",
               "title_en": "Provisions of the Supreme People's Court on Recognition and Enforcement of Arbitration Awards of the Taiwan Region"
             },
             {
-              "id": 3500434,
+              "id": 3500649,
               "title": "最高人民法院关于设立国际商事法庭若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Establishment of the International Commercial Court"
             },
             {
-              "id": 3501381,
+              "id": 3500469,
               "title": "最高人民法院关于证券纠纷代表人诉讼若干问题的规定",
               "title_en": "Provisions of the Supreme People's Court on Several Issues concerning Representative Litigation in Securities Disputes"
             },
             {
-              "id": 3500987,
+              "id": 3500092,
               "title": "最高人民法院关于诉前财产保全几个问题的批复",
               "title_en": "Reply of the Supreme People's Court on Several Issues concerning Pre-litigation Property Preservation"
             },
@@ -9094,22 +9233,22 @@
               "title_en": "Reply of the Supreme People's Court on How to Determine the Statute of Limitations for Lawsuits Arising from Adulteration of Subject Matter in Purchase and Sale Contracts"
             },
             {
-              "id": 3500993,
+              "id": 3500096,
               "title": "最高人民法院关于超过诉讼时效期间借款人在催款通知单上签字或者盖章的法律效力问题的批复",
               "title_en": "Reply of the Supreme People's Court on the Legal Effect of a Borrower's Signature or Seal on a Payment Reminder after the Expiration of the Limitation Period"
             },
             {
-              "id": 3501204,
+              "id": 3500263,
               "title": "最高人民法院关于进一步加强合议庭职责的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Further Strengthening the Duties of the Collegial Panel"
             },
             {
-              "id": 3501363,
+              "id": 3500450,
               "title": "最高人民法院关于适用《中华人民共和国人民陪审员法》若干问题的解释",
               "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the People's Assessors Law of the People's Republic of China"
             },
             {
-              "id": 3501241,
+              "id": 3500307,
               "title": "最高人民法院关于铁路运输法院案件管辖范围的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on the Scope of Jurisdiction of Railway Transport Courts"
             },
@@ -9119,7 +9258,7 @@
               "title_en": "Several Provisions of the Supreme People's Court on Restricting High Consumption and Related Consumption of Judgment Debtors"
             },
             {
-              "id": 3501209,
+              "id": 3500268,
               "title": "最高人民法院关于限制被执行人高消费的若干规定",
               "title_en": "Several Provisions of the Supreme People's Court on Restricting High Consumption of Judgment Debtors"
             },
@@ -9134,7 +9273,7 @@
               "title_en": "Reply of the Supreme People's Court on How to Handle the Issue of a Non-Owner Contributing Another Person's House as Capital Investment"
             },
             {
-              "id": 3501311,
+              "id": 3500382,
               "title": "最高人民法院关于首先查封法院与优先债权执行法院处分查封财产有关问题的批复",
               "title_en": "Reply of the Supreme People's Court on Issues concerning the Disposition of Seized Property by the Court That First Seized It and the Court Executing Priority Claims"
             },
@@ -9217,6 +9356,7 @@
         },
         {
           "label": "行政法规/社会民政",
+          "label_en": "Administrative Regulations: Social & Civil Affairs",
           "laws": [
             {
               "id": 5000784,
@@ -9232,6 +9372,7 @@
         },
         {
           "label": "行政法规/公安司法",
+          "label_en": "Administrative Regulations: Public Security & Justice",
           "laws": [
             {
               "id": 5000827,
@@ -9257,6 +9398,7 @@
         },
         {
           "label": "行政法规/涉外外资",
+          "label_en": "Administrative Regulations: Foreign Affairs & Investment",
           "laws": [
             {
               "id": 5001369,

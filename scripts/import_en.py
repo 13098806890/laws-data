@@ -26,9 +26,21 @@ from config import DB_PATH
 BASE_DIR = Path(__file__).parent.parent
 JSON_EN_DIR = BASE_DIR / "json_en"
 
+import law_id_registry as _lid_reg
+
 # Normalize whitespace for matching
 def _norm(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
+
+
+def load_law_id_redirects() -> dict[str, int]:
+    """Build {json_en filename: target law_id} from the gongbao source-override blocklist.
+
+    The blocklist maps flk-sourced files to the law_id of their gongbao-sourced
+    replacement. json_en files may still carry the old (flk) law_id — redirect
+    them by filename so translations land on the current law.
+    """
+    return _lid_reg.gongbao_file_to_law_id()
 
 
 def iter_json_en_files():
@@ -78,18 +90,38 @@ def import_en(dry_run: bool = False, force: bool = False):
     total_updated = 0
     total_skipped = 0
     law_stats: dict[int, dict] = defaultdict(lambda: {"title": "", "matched": 0, "en_total": 0, "already_had": 0})
+    redirects = load_law_id_redirects()
+
+    def resolve_law_id(law_id: int, fpath: Path):
+        """Return the law_id that currently holds this law in the DB.
+
+        json_en files carry law_ids that may predate the gongbao source-override
+        blocklist (which re-sourced some judicial interpretations from flk to
+        gongbao entries). Authoritative resolution lives in law_id_registry.
+        Returns None for orphan files (no DB law at all).
+        """
+        resolved = _lid_reg.resolve_law_id(fpath.name, law_id)
+        if resolved is None:
+            return None
+        row = conn.execute("SELECT id FROM laws WHERE id = ?", (resolved,)).fetchone()
+        return resolved if row else None
 
     # Step 0: Update laws.title_en from json_en (separate pass to ensure commit)
     if not dry_run:
         en_title_count = 0
-        for law_id, title_en, _, _ in iter_json_en_files():
+        for law_id, title_en, _, fpath in iter_json_en_files():
             if title_en:
-                conn.execute("UPDATE laws SET title_en = ? WHERE id = ? AND (title_en IS NULL OR title_en = '')", (title_en, law_id))
-                en_title_count += 1
+                lid = resolve_law_id(law_id, fpath)
+                if lid is not None:
+                    conn.execute("UPDATE laws SET title_en = ? WHERE id = ? AND (title_en IS NULL OR title_en = '')", (title_en, lid))
+                    en_title_count += 1
         conn.commit()
         print(f"  ✅ 更新 laws.title_en: {en_title_count} 条")
 
     for law_id, title_en, articles, fpath in iter_json_en_files():
+        law_id = resolve_law_id(law_id, fpath)
+        if law_id is None:
+            continue
         en_total = len(articles)
         if en_total == 0:
             continue

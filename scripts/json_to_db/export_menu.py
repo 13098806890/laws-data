@@ -39,6 +39,115 @@ _DOMAIN_TO_GROUP = {
     '诉讼与非诉讼程序法': '诉讼与司法程序',
 }
 
+# ── 分组/子分组英文标签（英文版目录展示）────────────────────────────
+_GROUP_EN = {
+    '宪法与国家机构':     'Constitution & State Institutions',
+    '民事与商事':         'Civil & Commercial',
+    '刑事':               'Criminal',
+    '行政与公法':         'Administrative & Public Law',
+    '经济、税务与金融':   'Economy, Taxation & Finance',
+    '劳动与社会保障':     'Labor & Social Security',
+    '诉讼与司法程序':     'Litigation & Judicial Procedure',
+    '其他':               'Other',
+}
+
+_SUBGROUP_EN = {
+    # 宪法与国家机构
+    '宪法':           'Constitution',
+    '法律及决定':     'Laws & Decisions',
+    '司法解释':       'Judicial Interpretations',
+    # 民事与商事
+    '民法典':               'Civil Code',
+    '合同与债权':           'Contracts & Obligations',
+    '公司与破产':           'Companies & Bankruptcy',
+    '知识产权':             'Intellectual Property',
+    '担保与物权':           'Security & Property Rights',
+    '婚姻、家庭与继承':     'Marriage, Family & Inheritance',
+    '保险':                 'Insurance',
+    '海事与运输':           'Maritime & Transport',
+    '外商与涉外':           'Foreign Investment & Foreign Affairs',
+    '证券与期货':           'Securities & Futures',
+    '综合与程序批复':       'General & Procedural Responses',
+    # 刑事
+    '刑法及修正案':       'Criminal Law & Amendments',
+    '法律解释':           'Judicial Interpretations',
+    '侵犯财产':           'Property Crimes',
+    '经济犯罪':           'Economic Crimes',
+    '贪污贿赂':           'Embezzlement & Bribery',
+    '人身犯罪':           'Crimes Against the Person',
+    '毒品与走私':         'Drugs & Smuggling',
+    '妨害社会管理秩序':   'Crimes Against Social Order',
+    '刑罚执行':           'Sentence Execution',
+    '证据规则':           'Evidence Rules',
+    '刑事诉讼程序':       'Criminal Procedure',
+    '审判监督':           'Trial Supervision',
+    '辩护与代理':         'Defense & Representation',
+    '未成年人刑事程序':   'Juvenile Criminal Procedure',
+    '检察院':             'Procuratorate',
+    # 行政与公法
+    '行政法律':     'Administrative Laws',
+    '教育科技':     'Education & Science',
+    '卫生医药':     'Health & Medicine',
+    '生态环境':     'Ecology & Environment',
+    '公安司法':     'Public Security & Justice',
+    '社会民政':     'Social & Civil Affairs',
+    '土地城建':     'Land & Urban Development',
+    '自然资源':     'Natural Resources',
+    '劳动就业':     'Labor & Employment',
+    '税务财政':     'Taxation & Finance',
+    '国家赔偿':     'State Compensation',
+    '信息通信':     'Information & Communications',
+    # 经济、税务与金融
+    '税收与财政':         'Taxation & Public Finance',
+    '金融、证券与保险':   'Finance, Securities & Insurance',
+    '贸易、竞争与市场':   'Trade, Competition & Market',
+    '农业、资源与能源':   'Agriculture, Resources & Energy',
+    '其他经济法规':       'Other Economic Regulations',
+    # 劳动与社会保障
+    '社会保险与福利':   'Social Insurance & Welfare',
+    '特殊群体保护':     'Protection of Special Groups',
+    '行政法规':         'Administrative Regulations',
+    # 诉讼与司法程序
+    '民事诉讼':             'Civil Litigation',
+    '刑事诉讼':             'Criminal Litigation',
+    '行政诉讼':             'Administrative Litigation',
+    '律师、仲裁与公证':     'Lawyers, Arbitration & Notarization',
+    '文书、送达与废止':     'Documents, Service & Repeals',
+}
+
+# 行政法规子分组：主题 → 英文（"行政法规/XXX" 的 XXX 部分）
+_ADMIN_TOPIC_EN = {
+    '税务财政': 'Taxation & Finance',
+    '海关进出口': 'Customs & Import-Export',
+    '金融证券': 'Banking & Securities',
+    '交通运输': 'Transportation',
+    '能源电力': 'Energy & Power',
+    '生态环境': 'Ecology & Environment',
+    '自然资源': 'Natural Resources',
+    '土地城建': 'Land & Urban Development',
+    '农业农村': 'Agriculture & Rural Affairs',
+    '卫生医药': 'Health & Medicine',
+    '劳动就业': 'Labor & Employment',
+    '社会民政': 'Social & Civil Affairs',
+    '教育科技': 'Education & Science',
+    '信息通信': 'Information & Communications',
+    '工商市场': 'Industry, Commerce & Market',
+    '安全应急': 'Safety & Emergency Response',
+    '公安司法': 'Public Security & Justice',
+    '军事国防': 'Military & National Defense',
+    '行政法制': 'Administrative Rule of Law',
+    '涉外外资': 'Foreign Affairs & Investment',
+}
+
+def subgroup_label_en(label: str) -> str:
+    """计算子分组英文标签：'行政法规/XXX' → 'Administrative Regulations: XXX'"""
+    if label.startswith('行政法规/'):
+        topic = label[len('行政法规/'):]
+        topic_en = _ADMIN_TOPIC_EN.get(topic, topic)
+        return f'Administrative Regulations: {topic_en}'
+    return _SUBGROUP_EN.get(label, label)
+
+
 # ── 子分组关键词表 ────────────────────────────────────────────────
 _CIVIL_SUBGROUPS = [
     ('民法典',           ['民法典']),
@@ -309,8 +418,9 @@ def export_menu(db_path: Path = DB_PATH, menu_path: Path = MENU_PATH):
         sorted_subs = _sort_subgroups(group, list(sub_map.keys()))
         groups_out.append({
             'label': group,
+            'label_en': _GROUP_EN.get(group, group),
             'subgroups': [
-                {'label': s, 'laws': sorted(sub_map[s], key=lambda x: x['title'])}
+                {'label': s, 'label_en': subgroup_label_en(s), 'laws': sorted(sub_map[s], key=lambda x: x['title'])}
                 for s in sorted_subs
             ],
         })

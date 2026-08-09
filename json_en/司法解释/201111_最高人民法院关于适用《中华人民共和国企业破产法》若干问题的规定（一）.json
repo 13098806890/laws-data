@@ -1,0 +1,43 @@
+{
+  "law_id": 3500298,
+  "title_en": "Provisions of the Supreme People's Court on Several Issues concerning the Application of the Enterprise Bankruptcy Law of the People's Republic of China (I)",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1 Where a debtor is unable to discharge due debts as they fall due and falls under any of the following circumstances, the People's Court shall determine that it has grounds for bankruptcy:\n(1) its assets are insufficient to discharge all debts;\n(2) it is obviously lacking in ability to discharge debts.\nWhere a relevant party asserts that the debtor does not have grounds for bankruptcy on the ground that a person jointly and severally liable for the debtor's debts has not lost the ability to discharge debts, the People's Court shall not support the assertion."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2 Where the following circumstances exist concurrently, the People's Court shall determine that the debtor is unable to discharge due debts:\n(1) the creditor-debtor relationship is established according to law;\n(2) the time limit for performance of the debt has expired;\n(3) the debtor has not fully discharged the debt."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3 Where the debtor's balance sheet, or audit report, asset appraisal report, etc. show that its total assets are insufficient to pay all liabilities, the People's Court shall determine that the debtor's assets are insufficient to discharge all debts, unless there is contrary evidence sufficient to prove that the debtor's assets are able to pay all liabilities."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4 Where the debtor's book assets are greater than its liabilities, but any of the following circumstances exists, the People's Court shall determine that it is obviously lacking in ability to discharge debts:\n(1) it is unable to discharge debts due to serious shortage of funds or inability to realize property;\n(2) the legal representative's whereabouts are unknown and no other person is responsible for managing the property, so the debts cannot be discharged;\n(3) after compulsory execution by the People's Court, the debts cannot be discharged;\n(4) long-term losses and difficulty in turning around operations make it impossible to discharge debts;\n(5) other circumstances causing the debtor to lose its ability to discharge debts."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5 Where an enterprise legal person has been dissolved but has not been liquidated, or has not completed liquidation within a reasonable period, and a creditor applies for bankruptcy liquidation of the debtor, the People's Court shall accept the application, unless the debtor, within the statutory objection period, adduces evidence proving that it has not developed grounds for bankruptcy."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6 Where a creditor applies for bankruptcy of a debtor, it shall submit relevant evidence that the debtor is unable to discharge due debts. If the debtor fails to raise an objection with the People's Court within the statutory time limit against the creditor's application, or the objection is not established, the People's Court shall rule to accept the bankruptcy application according to law.\nAfter accepting the bankruptcy application, the People's Court shall order the debtor to submit, according to law, relevant materials such as a statement of its property status, a list of debts, a list of claims, and financial and accounting reports. If the debtor refuses to submit them, the People's Court may take compulsory measures such as a fine against the directly responsible personnel of the debtor."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7 When the People's Court receives an application for bankruptcy, it shall issue to the applicant a written receipt for the application and the attached evidence.\nAfter receiving the bankruptcy application, the People's Court shall promptly examine the applicant's qualification as a party, the debtor's qualification as a party, and the grounds for bankruptcy, as well as the relevant materials and evidence, and shall, pursuant to Article 10 of the Enterprise Bankruptcy Law, make a ruling on whether to accept the application.\nWhere the People's Court considers that the applicant shall supplement or correct relevant materials, it shall notify the applicant within five days from the date of receipt of the bankruptcy application. The period for the party to supplement or correct relevant materials shall not be included in the time limit provided in Article 10 of the Enterprise Bankruptcy Law."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8 The litigation costs of a bankruptcy case shall be paid from the debtor's property pursuant to Article 43 of the Enterprise Bankruptcy Law. Where a relevant party raises an objection to the bankruptcy application on the ground that the applicant has not prepaid the litigation costs, the People's Court shall not support the objection."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9 Where an applicant submits an application for bankruptcy to the People's Court, and the People's Court does not accept the application, or fails to act in accordance with Article 7 of these Provisions, the applicant may submit the bankruptcy application to the People's Court at the next higher level.\nAfter receiving the bankruptcy application, the People's Court at the next higher level shall order the lower-level court to examine it according to law and promptly make a ruling on whether to accept it; if the lower-level court still does not make such a ruling, the People's Court at the next higher level may directly make a ruling.\nWhere the People's Court at the next higher level rules to accept the bankruptcy application, it may at the same time instruct the lower-level People's Court to hear the case."
+    }
+  ]
+}

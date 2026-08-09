@@ -1,0 +1,31 @@
+{
+  "law_id": 3500254,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of the Insurance Law of the People's Republic of China (I)",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1: For disputes arising from an insurance contract concluded after the Insurance Law comes into force, the provisions of the Insurance Law shall apply. For disputes arising from an insurance contract concluded before the Insurance Law comes into force, except as otherwise provided in this Interpretation, the provisions of the laws in force at that time shall apply; where the laws in force at that time have no provisions, the relevant provisions of the Insurance Law shall apply by reference.\nThe laws at the time of contract formation shall apply in determining whether an insurance contract is concluded."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2: Where an insurance contract concluded before the Insurance Law comes into force is determined to be invalid under the laws in force at that time but valid under the Insurance Law, the provisions of the Insurance Law shall apply."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3: Where an insurance contract was concluded before the Insurance Law comes into force, but acts or events such as the transfer of the subject matter insured, the occurrence of an insured event, claims settlement, or subrogation occur after the Insurance Law comes into force, the provisions of the Insurance Law shall apply."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4: Where an insurance contract was concluded before the Insurance Law comes into force, and after the Insurance Law comes into force, the insurer claims dissolution of the contract on the grounds that the applicant failed to perform the obligation of truthful disclosure or that the age of the insured was reported untruthfully, the provisions of the Insurance Law shall apply."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5: For an insurance contract concluded before the Insurance Law comes into force, the time periods under the following circumstances shall be calculated from October 1, 2009:\n(1) Where, before the Insurance Law comes into force, the insurer received a request for compensation or payment of insurance benefits, and after the Insurance Law comes into force, the thirty-day period provided for in Article 23 of the Insurance Law shall apply;\n(2) Where, before the Insurance Law comes into force, the insurer became aware of the grounds for dissolution, and after the Insurance Law comes into force, the insurer exercises the right of dissolution in accordance with Articles 16 and 32 of the Insurance Law, the thirty-day period provided for in Article 16 of the Insurance Law shall apply;\n(3) Where, after the Insurance Law comes into force, the insurer requests dissolution of the contract in accordance with paragraph 2 of Article 16 of the Insurance Law, the two-year period provided for in Article 16 of the Insurance Law shall apply;\n(4) Where, before the Insurance Law comes into force, the insurer received notice of the transfer of the subject matter insured, and after the Insurance Law comes into force, requests an increase of the insurance premium or dissolution of the contract in accordance with the contract on the grounds that the transfer of the subject matter insured significantly increased the degree of risk, the thirty-day period provided for in Article 49 of the Insurance Law shall apply."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6: The provisions of the Insurance Law shall not apply to cases that have been finally adjudicated before the Insurance Law comes into force, or to cases in which a party applies for retrial or initiates a retrial under the adjudication supervision procedure."
+    }
+  ]
+}

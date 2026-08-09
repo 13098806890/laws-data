@@ -10,15 +10,38 @@
 import json
 import glob
 import sqlite3
+import sys
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent / 'json_to_db'))
+sys.path.insert(0, str(Path(__file__).parent))
+try:
+    from docx_to_json.converter import clean_article_content
+except ImportError:
+    def clean_article_content(text: str) -> str:
+        return text
 
 BASE_DIR = Path(__file__).parent.parent
 DB_PATH  = str(BASE_DIR / 'law_content.db')
 JSON_DIR = str(BASE_DIR / 'json')
 
 
+def _normalize_title(title: str) -> str:
+    """规范化标题：去除空格/全角空格/顿号等标点，便于匹配同标题不同版本"""
+    import re
+    return re.sub(r'[\s\u3000、，。·:：()（）\-—]+', '', title or '')
+
+
+def _count_normalized_title(conn, norm_title: str) -> int:
+    if not norm_title:
+        return 0
+    # 全表扫描标题规范化后比较（laws 仅 ~2200 行，性能可接受）
+    rows = conn.execute('SELECT title FROM laws').fetchall()
+    return sum(1 for (t,) in rows if _normalize_title(t) == norm_title)
+
+
 def flatten_json(data):
-    """把 JSON 里的编/章/节/条按深度优先顺序展开，返回 list of dict"""
+    """把 JSON 里的编/章/节/条按 global_order 展开，返回 list of dict"""
     nodes = []
 
     def add_articles(items, parent_type):
@@ -35,6 +58,10 @@ def flatten_json(data):
         add_articles(sec.get('articles', []), 'section')
 
     def add_chapter(ch):
+        # builder.py 对 _DIRECT_ 占位章不创建节点，文章直接挂到父级 → 跳过占位章本身
+        if (ch.get('title') or '').startswith('_DIRECT_'):
+            add_articles(ch.get('articles', []), 'chapter')
+            return
         nodes.append({'type': 'chapter', 'title': ch.get('title','').strip(), 'global_order': ch.get('global_order')})
         for sec in ch.get('sections', []):
             add_section(sec)
@@ -52,7 +79,15 @@ def flatten_json(data):
         for ch in data.get('chapters', []):
             add_chapter(ch)
 
-    return nodes
+    # builder.py 按 global_order 排序写入；full_text 结构只存 1 个 article
+    if not nodes:
+        full_text = (data.get('full_text') or '').strip()
+        if full_text:
+            return [{'type': 'article', 'article_number': '',
+                     'content': clean_article_content(full_text), 'global_order': 1}]
+        return nodes
+
+    return sorted(nodes, key=lambda n: n['global_order'] if n['global_order'] is not None else float('inf'))
 
 
 def flatten_db(conn, law_id):
@@ -86,6 +121,11 @@ def compare(json_path, conn):
         "SELECT id FROM laws WHERE filename=?", (filename,)
     ).fetchone()
     if not row:
+        # 可能是被替代的旧版本（DB 以带日期前缀、顿号/空格差异的活跃版本存储）
+        norm_title = _normalize_title(data.get('title', ''))
+        legacy = _count_normalized_title(conn, norm_title)
+        if legacy > 0:
+            return None  # 同标题活跃版本已入库，旧版本不算失败
         return f'NOT FOUND: {title} ({filename})'
 
     law_id = row[0]
@@ -144,10 +184,12 @@ def compare(json_path, conn):
             errors.append('  ...(超过5处差异，停止详细对比)')
             break
 
-    # 4. global_order 连续性
+    # 4. global_order 严格递增（允许 _DIRECT_ 占位章留下的空洞，但禁止重复/乱序）
     db_orders = [n['global_order'] for n in db_nodes]
-    if db_orders != list(range(1, len(db_orders) + 1)):
-        errors.append(f'  global_order 不连续')
+    if not all(b is not None and (i == 0 or b > db_orders[i - 1]) for i, b in enumerate(db_orders)):
+        errors.append(f'  global_order 非严格递增或重复')
+    elif db_orders and db_orders[0] != 1:
+        errors.append(f'  global_order 不从 1 开始')
 
     return '\n'.join(errors) if errors else None
 
@@ -190,20 +232,25 @@ def main():
     # ── 英文覆盖率检查 ──
     print(f'\n英文覆盖率检查:')
     conn2 = sqlite3.connect(DB_PATH)
+    en_failures = []
     # laws.title_en (只统计现行法律)
     total_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk' AND is_current=1").fetchone()[0]
     en_laws = conn2.execute("SELECT COUNT(*) FROM laws WHERE source='flk' AND is_current=1 AND title_en IS NOT NULL AND title_en != ''").fetchone()[0]
     pct_laws = round(100.0 * en_laws / total_laws, 1) if total_laws else 0
     flag_laws = '⚠️' if pct_laws < 95 else '✅'
     print(f'  {flag_laws} laws.title_en (active): {en_laws}/{total_laws} ({pct_laws}%)')
+    if pct_laws < 95:
+        en_failures.append(f'laws.title_en 覆盖率 {pct_laws}% < 95%（{en_laws}/{total_laws}）')
 
     # 结构节点 content_en (part/chapter/section)
     for ntype in ('part', 'chapter', 'section'):
-        total_n = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type=?", (ntype,)).fetchone()[0]
-        en_n = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type=? AND content_en IS NOT NULL AND content_en != ''", (ntype,)).fetchone()[0]
+        total_n = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type=? AND law_id IN (SELECT id FROM laws WHERE is_current=1)", (ntype,)).fetchone()[0]
+        en_n = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type=? AND content_en IS NOT NULL AND content_en != '' AND law_id IN (SELECT id FROM laws WHERE is_current=1)", (ntype,)).fetchone()[0]
         pct_n = round(100.0 * en_n / total_n, 1) if total_n else 0
         flag_n = '⚠️' if pct_n < 95 else '✅'
         print(f'  {flag_n} nodes.content_en ({ntype}): {en_n}/{total_n} ({pct_n}%)')
+        if pct_n < 95:
+            en_failures.append(f'nodes.content_en ({ntype}) 覆盖率 {pct_n}% < 95%（{en_n}/{total_n}）')
 
     # 文章节点 content_en
     total_arts = conn2.execute("SELECT COUNT(*) FROM nodes WHERE type='article' AND law_id IN (SELECT id FROM laws WHERE is_current=1)").fetchone()[0]
@@ -211,8 +258,25 @@ def main():
     pct_arts = round(100.0 * en_arts / total_arts, 1) if total_arts else 0
     flag_arts = '⚠️' if pct_arts < 95 else '✅'
     print(f'  {flag_arts} nodes.content_en (article): {en_arts}/{total_arts} ({pct_arts}%)')
+    if pct_arts < 95:
+        en_failures.append(f'nodes.content_en (article) 覆盖率 {pct_arts}% < 95%（{en_arts}/{total_arts}）')
 
     conn2.close()
+
+    # ── 失败即退出：任何校验失败都必须让 pipeline 报错，不能静默通过 ──
+    all_failures = []
+    if error > 0:
+        all_failures.append(f'DB 与 JSON 有 {error} 处差异')
+    if not_found > 0:
+        all_failures.append(f'DB 中找不到 {not_found} 部 JSON 中的法律')
+    if en_failures:
+        all_failures.extend(en_failures)
+    if all_failures:
+        print(f'\n❌ 验证失败：')
+        for f in all_failures:
+            print(f'  - {f}')
+        sys.exit(1)
+    print('\n✅ 全部验证通过')
 
 
 if __name__ == '__main__':

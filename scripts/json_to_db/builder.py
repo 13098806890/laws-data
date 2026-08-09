@@ -20,7 +20,7 @@ from docx_to_json.converter import clean_article_content, extract_content
 from law_aliases import ALIASES
 
 BASE_DIR     = Path(__file__).parent.parent.parent   # laws_data/
-LAW_INDEX_PATH = BASE_DIR / 'law_index.json'
+# LAW_INDEX_PATH 统一来自 law_id_registry（见下方 import）
 
 GONGBAO_SFJS_DIR = BASE_DIR / '最高人民法院公报' / '司法解释'
 
@@ -40,13 +40,20 @@ def normalize_title(title: str) -> str:
 
 # 覆盖名单：其他来源替换了主库版本的 law_id 集合
 # 格式：[{laws_id, gongbao_file, title, pub_date}, ...]
-_BLOCKLIST_PATH = Path(__file__).parent.parent / 'source_override_blocklist.json'
-def _load_blocklist() -> set:
-    if not _BLOCKLIST_PATH.exists():
-        return set()
-    entries = json.loads(_BLOCKLIST_PATH.read_text(encoding='utf-8'))
-    return {e['laws_id'] for e in entries}
-_OVERRIDE_BLOCKLIST: set = _load_blocklist()
+# law_id 权威解析统一走 law_id_registry（禁止在此各自硬编码规则）
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
+try:
+    import law_id_registry as _lid_reg
+    _BLOCKLIST_PATH = _lid_reg.BLOCKLIST_PATH
+    _OVERRIDE_BLOCKLIST: set = _lid_reg.blocklist_ids()
+    _GONGBAO_FILE_TO_LAW_ID: dict[str, int] = _lid_reg.gongbao_file_to_law_id()
+    LAW_INDEX_PATH = _lid_reg.LAW_INDEX_PATH
+except ImportError:
+    _BLOCKLIST_PATH = Path(__file__).parent.parent / 'source_override_blocklist.json'
+    _OVERRIDE_BLOCKLIST: set = set()
+    _GONGBAO_FILE_TO_LAW_ID: dict[str, int] = {}
+    LAW_INDEX_PATH = BASE_DIR / 'law_index.json'
 
 # 废止标记：已废止的司法解释在公报源 JSON（最高人民法院公报/司法解释/*.json）的
 # repealed_by 字段中直接标记，导入时读取该字段设为 is_current=0（见 import_gongbao_sfjs）。
@@ -297,17 +304,20 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
 
         subject_area = get_subject_area(title, category)
         aliases      = ALIASES.get(title, '')
+        # 源 JSON 显式声明的 is_current（多版本法律：非最新版标 0，脚本可据此忽略）
+        src_current = data.get('is_current')
+        is_current = 1 if src_current is None else (1 if src_current else 0)
         cur = conn.execute(
             """INSERT INTO laws (id, title, filename, category, legal_domain, subject_area, pub_date,
                                  effective_date, promulgation_info, issuing_org, doc_number,
                                  total_articles, full_text, version_date, is_current, aliases, source)
-                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,1,?,'flk')""",
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'flk')""",
             (data.get('law_id'), title, stem, category, data.get('legal_domain'),
              subject_area,
              data.get('pub_date'), data.get('effective_date'),
              data.get('promulgation_info'), data.get('issuing_org'), data.get('doc_number'),
              data.get('total_articles'), _clean_text(data.get('full_text', '')),
-             version_date, aliases if aliases else None)
+             version_date, is_current, aliases if aliases else None)
         )
         insert_nodes(conn, data.get('law_id'), data)
 
@@ -418,13 +428,18 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
         law_id = d.get('law_id')
         title = normalize_title(d.get('title', ''))
         if not law_id:
+            # 权威映射：source_override_blocklist 的 gongbao_file → laws_id（flk 源跳过这些
+            # law_id，必须由公报源用同一 id 覆盖，否则该司法解释会整体丢失）
+            law_id = _GONGBAO_FILE_TO_LAW_ID.get(f.name)
+        if not law_id:
             # 优先复用 law_index.json 中的 filename 映射（公报文件名的权威来源）
             law_id = gongbao_index_by_filename.get(f.stem)
         if not law_id:
             if title in title_to_id:
                 law_id = title_to_id[title]
             else:
-                # 模糊匹配：取标题前 30 字
+                # 模糊匹配：取标题前 30 字（仅限无版本后缀差异的场合；
+                # （一）（二）（三）系列靠精确匹配命中，不会走到这里）
                 prefix = title[:30]
                 for db_title, db_id in title_to_id.items():
                     if db_title[:30] == prefix:
@@ -442,9 +457,16 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
         # 用临时 txt 文件让 extract_content 解析条文结构
         # 公报 content 字段中条文号后可能缺少空白，补全以确保 ARTICLE_RE 能识别
+        # 同时清理条号数字与“条”之间的噪声空白（如“第二十五 条”）
         content_text = re.sub(
-            r'^(第[零一二三四五六七八九十百千]+条)([^　\s])',
-            r'\1　\2', d.get('content', ''), flags=re.MULTILINE
+            r'^(第[零一二三四五六七八九十百千]+)\s+条',
+            r'\1条', d.get('content', ''), flags=re.MULTILINE
+        )
+        # 决定/批复类文本中行首“第X条增加第二款/删除/修改为”等是对其他条文
+        # 的引用而非新条文开头，补全空格时排除这些动词，避免误识别为条文标题
+        content_text = re.sub(
+            r'^(第[零一二三四五六七八九十百千]+条)(?![　\s]|增加|删除|删去|修改|改为|废止|并入|调整为|未变|的规定|的内容)',
+            lambda m: m.group(1) + '　', content_text, flags=re.MULTILINE
         )
         with tempfile.NamedTemporaryFile(
             suffix='.txt', mode='w', encoding='utf-8', delete=False
@@ -489,7 +511,9 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
         filename   = f.stem   # 用文件 stem 作 filename（唯一键）
         # 源 JSON 中的废止标记（repealed_by 非空 → 该司法解释已被废止决定明确废止，导入时直接标 is_current=0）
         repealed_by = d.get('repealed_by', '')
-        is_current = 0 if repealed_by else 1
+        # 源 JSON 中显式声明的 is_current（重复/历史版本文件标 0，仅登记不插入节点）
+        src_current = d.get('is_current')
+        is_current = 0 if repealed_by else (1 if src_current is None else (1 if src_current else 0))
 
         try:
             conn.execute(
@@ -508,6 +532,10 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
             existing_nodes = conn.execute(
                 "SELECT COUNT(*) FROM nodes WHERE law_id=?", (law_id,)
             ).fetchone()[0]
+            # 源 JSON 标记为非现行的重复/历史版本：只登记 laws 元数据，不插入节点
+            # （同一 law_id 的现行版本文件会提供实际条文内容）
+            if not is_current:
+                continue
             if existing_nodes > 0:
                 continue
             insert_nodes(conn, law_id, content_data)

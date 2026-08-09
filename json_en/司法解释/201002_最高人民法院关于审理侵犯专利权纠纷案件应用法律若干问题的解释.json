@@ -1,0 +1,87 @@
+{
+  "law_id": 3500262,
+  "title_en": "Interpretation of the Supreme People's Court on Several Issues concerning the Application of Law in the Trial of Patent Infringement Dispute Cases",
+  "promulgation_info_en": "",
+  "articles": [
+    {
+      "article_number": "第1条",
+      "content_en": "Article 1: The People's Court shall, based on the claims asserted by the right holder, determine the scope of protection of the patent right pursuant to the provisions of Article 59, paragraph 1 of the Patent Law. If the right holder changes the claims it asserts before the conclusion of the debate in the first instance court, the People's Court shall permit it.\nWhere the right holder asserts that the scope of protection of the patent right be determined by a dependent claim, the People's Court shall determine the scope of protection of the patent right based on the additional technical features recorded in that dependent claim and the technical features recorded in the claim to which it refers."
+    },
+    {
+      "article_number": "第2条",
+      "content_en": "Article 2: The People's Court shall determine the content of the claims as provided in Article 59, paragraph 1 of the Patent Law based on the records of the claims, in light of the understanding of the claims by a person of ordinary skill in the art after reading the description and the drawings."
+    },
+    {
+      "article_number": "第3条",
+      "content_en": "Article 3: The People's Court may use the description and drawings, the relevant claims in the claims as filed, and the patent examination file to interpret a claim. Where the description specially defines a term used in a claim, such special definition shall prevail.\nWhere the meaning of a claim still cannot be clarified by the aforementioned methods, interpretation may be made in light of public references such as reference books and textbooks, as well as the usual understanding of a person of ordinary skill in the art."
+    },
+    {
+      "article_number": "第4条",
+      "content_en": "Article 4: With respect to a technical feature expressed by function or effect in a claim, the People's Court shall determine the content of such technical feature in light of the specific embodiments of such function or effect described in the description and drawings, and their equivalent embodiments."
+    },
+    {
+      "article_number": "第5条",
+      "content_en": "Article 5: Where a technical solution is described only in the description or drawings but is not recorded in the claims, and the right holder seeks to incorporate it into the scope of protection of the patent right in a patent infringement dispute case, the People's Court shall not support it."
+    },
+    {
+      "article_number": "第6条",
+      "content_en": "Article 6: Where a patent applicant or patentee abandons a technical solution in a patent grant or invalidation procedure through amendment to the claims or description or through statements of opinion, and the right holder subsequently seeks to incorporate it into the scope of protection of the patent right in a patent infringement dispute case, the People's Court shall not support it."
+    },
+    {
+      "article_number": "第7条",
+      "content_en": "Article 7: In determining whether an accused infringing technical solution falls within the scope of protection of a patent right, the People's Court shall examine all the technical features recorded in the claims asserted by the right holder.\nWhere the accused infringing technical solution contains technical features identical or equivalent to all the technical features recorded in the claims, the People's Court shall determine that it falls within the scope of protection of the patent right; where, compared with all the technical features recorded in the claims, the accused infringing technical solution lacks one or more technical features recorded in the claims, or has one or more technical features that are neither identical nor equivalent, the People's Court shall determine that it does not fall within the scope of protection of the patent right."
+    },
+    {
+      "article_number": "第8条",
+      "content_en": "Article 8: Where a design identical or similar to the granted design is adopted on a product of the same or similar kind as the product of the design patent, the People's Court shall determine that the accused infringing design falls within the scope of protection of the design patent right as provided in Article 59, paragraph 2 of the Patent Law."
+    },
+    {
+      "article_number": "第9条",
+      "content_en": "Article 9: The People's Court shall determine whether the types of products are the same or similar based on the use of the design patent product. In determining the use of the product, reference may be made to factors such as the brief description of the design, the International Classification for Industrial Designs, the function of the product, and the circumstances of product sales and actual use."
+    },
+    {
+      "article_number": "第10条",
+      "content_en": "Article 10: The People's Court shall judge whether the designs are identical or similar based on the knowledge level and cognitive capability of the general consumer of the design patent product."
+    },
+    {
+      "article_number": "第11条",
+      "content_en": "Article 11: When determining whether the designs are identical or similar, the People's Court shall make a comprehensive judgment based on the overall visual effects of the design, taking into account the design features of the granted design and the accused infringing design. Design features mainly determined by technical functions and features such as product materials and internal structures that do not affect the overall visual effects shall not be considered.\nThe following circumstances usually have greater influence on the overall visual effects of a design:\n(1) Parts that are easily observed directly during normal use of the product, as compared with other parts;\n(2) Design features of the granted design that distinguish it from the prior art, as compared with other design features of the granted design.\nWhere there is no difference in the overall visual effects between the accused infringing design and the granted design, the People's Court shall determine that the two are identical; where there is no substantial difference in the overall visual effects, it shall determine that the two are similar."
+    },
+    {
+      "article_number": "第12条",
+      "content_en": "Article 12: Where a product infringing a patent right for invention or utility model is used as a component to manufacture another product, the People's Court shall determine that it constitutes the act of using as provided in Article 11 of the Patent Law; where such another product is sold, the People's Court shall determine that it constitutes the act of selling as provided in Article 11 of the Patent Law.\nWhere a product infringing a design patent right is used as a component to manufacture another product and the latter is sold, the People's Court shall determine that it constitutes the act of selling as provided in Article 11 of the Patent Law, unless the product infringing the design patent right has only a technical function in such another product.\nIn the circumstances provided in the preceding two paragraphs, if the accused infringers have a division of labor and cooperate with each other, the People's Court shall determine that it constitutes joint infringement."
+    },
+    {
+      "article_number": "第13条",
+      "content_en": "Article 13: For the original product obtained by using a patented process, the People's Court shall determine that it is the product directly obtained by the patented process as provided in Article 11 of the Patent Law.\nFor the act of further processing or treating the aforementioned original product to obtain a subsequent product, the People's Court shall determine that it constitutes the act of using the product directly obtained by the patented process as provided in Article 11 of the Patent Law."
+    },
+    {
+      "article_number": "第14条",
+      "content_en": "Article 14: Where all the technical features accused of falling within the scope of protection of the patent right are identical or have no substantial difference from the corresponding technical features in a prior art solution, the People's Court shall determine that the technology implemented by the accused infringer belongs to the prior art as provided in Article 62 of the Patent Law.\nWhere the accused infringing design is identical or has no substantial difference from a prior design, the People's Court shall determine that the design implemented by the accused infringer belongs to the prior design as provided in Article 62 of the Patent Law."
+    },
+    {
+      "article_number": "第15条",
+      "content_en": "Article 15: If an accused infringer claims the defense of prior use right based on illegally obtained technology or design, the People's Court shall not support it.\nIn any of the following circumstances, the People's Court shall determine that the necessary preparations for manufacture and use have been made as provided in Article 69, item (2) of the Patent Law:\n(1) The main technical drawings or process documents necessary for implementing the invention-creation have been completed;\n(2) The main equipment or raw materials necessary for implementing the invention-creation have been manufactured or purchased.\nThe original scope as provided in Article 69, item (2) of the Patent Law includes the production scale existing before the date of filing of the patent application and the production scale that can be achieved by using existing production equipment or based on existing production preparations.\nWhere, after the date of filing of the patent application, the prior user transfers or licenses to others the technology or design that it has already implemented or for which it has made necessary preparations, and the accused infringer claims that such implementation constitutes continued implementation within the original scope, the People's Court shall not support it, unless the technology or design is transferred or succeeded together with the original enterprise."
+    },
+    {
+      "article_number": "第16条",
+      "content_en": "Article 16: Where the People's Court determines the profits obtained by the infringer from the infringement pursuant to Article 65, paragraph 1 of the Patent Law, such profits shall be limited to the profits obtained by the infringer from the acts of patent infringement; the profits derived from other rights shall be reasonably deducted.\nWhere a product infringing a patent right for invention or utility model is a component of another product, the People's Court shall reasonably determine the amount of damages based on factors such as the value of the component itself and its role in realizing the profits of the finished product.\nWhere a product infringing a design patent right is a packaging, the People's Court shall reasonably determine the amount of damages according to factors such as the value of the packaging itself and its role in realizing the profits of the packaged product."
+    },
+    {
+      "article_number": "第17条",
+      "content_en": "Article 17: Where the product or the technical solution for manufacturing the product is known to the domestic and foreign public before the date of filing of the patent application, the People's Court shall determine that the product is not a new product as provided in Article 61, paragraph 1 of the Patent Law."
+    },
+    {
+      "article_number": "第18条",
+      "content_en": "Article 18: Where the right holder sends a warning of patent infringement to another person, and the warned person or an interested party gives a written notice to the right holder to exercise its right to sue, and the right holder neither withdraws the warning nor initiates a lawsuit within one month from the date of receipt of the written notice or within two months from the date of dispatch of the written notice, and the warned person or interested party brings an action in the People's Court requesting confirmation that its act does not infringe the patent right, the People's Court shall accept it."
+    },
+    {
+      "article_number": "第19条",
+      "content_en": "Article 19: Where the accused patent infringement act occurred before October 1, 2009, the People's Court shall apply the Patent Law before amendment; where it occurred after October 1, 2009, the People's Court shall apply the amended Patent Law.\nWhere the accused patent infringement act occurred before October 1, 2009 and continued after October 1, 2009, and pursuant to the provisions of both the Patent Law before amendment and the amended Patent Law the infringer shall bear compensation liability, the People's Court shall apply the amended Patent Law to determine the amount of damages."
+    },
+    {
+      "article_number": "第20条",
+      "content_en": "Article 20: Where any judicial interpretation previously issued by this Court is inconsistent with this Interpretation, this Interpretation shall prevail."
+    }
+  ]
+}

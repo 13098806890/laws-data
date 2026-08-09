@@ -82,8 +82,10 @@ def main():
             "SELECT COUNT(*) FROM gongbao_docs_fts WHERE gongbao_docs_fts MATCH 'accident'"
         ).fetchone()[0]
         print(f"  FTS 搜索 'accident': {test_en} 条命中")
+        fts_error = None
     except Exception as e:
-        print(f"  ⚠ FTS 检查失败: {e}")
+        fts_error = f"FTS 检查失败: {e}"
+        print(f"  ⚠ {fts_error}")
 
     # ── 5. nodes.content_en preserved ────────────────────────────────────
     print("\n── 5. nodes 表英文翻译 (content_en) ──")
@@ -157,11 +159,15 @@ def main():
         issues.append("英文列全部为空")
     if en_arts == 0:
         issues.append("nodes.content_en 全部为空")
+    if fts_error:
+        issues.append(fts_error)
 
     if issues:
         print("⚠ 存在问题:")
         for i in issues:
             print(f"  - {i}")
+        print("\n❌ 验证失败：gongbao 表存在以下问题")
+        sys.exit(1)
     else:
         print("✅ 全部正常")
 
