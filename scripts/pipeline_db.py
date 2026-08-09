@@ -122,11 +122,6 @@ def main():
         if not run(f"python3 -m json_to_db.export_menu", cwd=SCRIPTS):
             sys.exit(1)
 
-    # ── Step 3: Classify gongbao entries (legal_domain) ──────────────────
-    if not args.skip_gongbao and not args.validate_only:
-        print("\n── Step 3/4: 司法解 legal_domain 分类 ──")
-        run(f"python3 '{SCRIPTS / 'classify_gongbao_domain.py'}'")
-
     # ── Step 3.5: Rebuild enhancements (keyword_synonyms etc.) ───────────
     if not args.skip_enhancements and not args.validate_only:
         print("\n── Step 3.5/4: 重建 law_enhancements.db ──")

@@ -330,22 +330,6 @@ def build_db(json_dir: Path = JSON_DIR, db_path: Path = DB_PATH):
     conn.execute("INSERT INTO nodes_fts_bigram(nodes_fts_bigram) VALUES('optimize')")
     conn.commit()
 
-    # 多版本标记：同名法律只保留最新 pub_date 为 is_current=1（同日期时保留 id 最大的）
-    conn.execute("""
-        UPDATE laws SET is_current = 0
-        WHERE id NOT IN (
-            SELECT l1.id FROM laws l1
-            WHERE l1.id = (
-                SELECT MAX(l2.id) FROM laws l2
-                WHERE l2.title = l1.title
-                  AND l2.pub_date = (
-                      SELECT MAX(l3.pub_date) FROM laws l3 WHERE l3.title = l2.title
-                  )
-            )
-        )
-    """)
-    conn.commit()
-
     laws     = conn.execute('SELECT COUNT(*) FROM laws').fetchone()[0]
     nodes    = conn.execute('SELECT COUNT(*) FROM nodes').fetchone()[0]
     articles = conn.execute("SELECT COUNT(*) FROM nodes WHERE type='article'").fetchone()[0]
@@ -392,34 +376,6 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
 
     inserted = parse_errors = 0
 
-    # 预建标题 → law_id 映射（从主库查，含已导入的旧公报条目）
-    title_to_id: dict[str, int] = {}
-    max_sfjs_id = 3500000
-    for row in conn.execute("SELECT id, title FROM laws WHERE category='司法解释'").fetchall():
-        title_to_id[row[1]] = row[0]
-        if row[0] > max_sfjs_id:
-            max_sfjs_id = row[0]
-
-    # 从 law_index.json 读取既有公报条目映射（filename→id、规范化标题→id），
-    # 优先复用历史 id，保证 law_id 跨版本稳定
-    gongbao_index_by_filename: dict[str, int] = {}
-    gongbao_index_by_title: dict[str, int] = {}
-    if LAW_INDEX_PATH.exists():
-        try:
-            for entry in json.loads(LAW_INDEX_PATH.read_text(encoding='utf-8')):
-                if entry.get('law_id', 0) > max_sfjs_id:
-                    fn = entry.get('filename', '')
-                    if fn:
-                        gongbao_index_by_filename[fn] = entry['law_id']
-                    t = entry.get('title', '')
-                    if t:
-                        gongbao_index_by_title[normalize_title(t)] = entry['law_id']
-        except Exception:
-            print('  ⚠ law_index.json 读取失败，公报 id 将重新分配')
-
-    # 新条目从 max+1 开始连续分配
-    next_gongbao_id = max_sfjs_id + 1
-
     # 跟踪新条目用于写入 law_index.json
     gongbao_index_entries: list[dict] = []
 
@@ -432,26 +388,11 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
             # law_id，必须由公报源用同一 id 覆盖，否则该司法解释会整体丢失）
             law_id = _GONGBAO_FILE_TO_LAW_ID.get(f.name)
         if not law_id:
-            # 优先复用 law_index.json 中的 filename 映射（公报文件名的权威来源）
-            law_id = gongbao_index_by_filename.get(f.stem)
-        if not law_id:
-            if title in title_to_id:
-                law_id = title_to_id[title]
-            else:
-                # 模糊匹配：取标题前 30 字（仅限无版本后缀差异的场合；
-                # （一）（二）（三）系列靠精确匹配命中，不会走到这里）
-                prefix = title[:30]
-                for db_title, db_id in title_to_id.items():
-                    if db_title[:30] == prefix:
-                        law_id = db_id
-                        break
-        if not law_id:
-            # 再尝试 law_index.json 的规范化标题映射
-            law_id = gongbao_index_by_title.get(title)
-        if not law_id:
-            # 主库中没有此标题 → 连续分配新 ID
-            law_id = next_gongbao_id
-            next_gongbao_id += 1
+            # 源文件必须显式携带 law_id（或由 blocklist 权威映射）。
+            # 缺失时直接报错，禁止静默分配新 ID（会掩盖数据错误、导致 law_id 漂移）。
+            raise ValueError(
+                f'公报文件缺少 law_id 且不在 blocklist 权威映射中: {f.name}'
+            )
 
         pub_date = d.get('pub_date', '')
 
@@ -558,22 +499,6 @@ def import_gongbao_sfjs(db_path: Path = DB_PATH):
             print(f'  {i+1}/{len(files)} (inserted={inserted})')
             conn.commit()
 
-    conn.commit()
-
-    # 多版本标记：同标题公报版本也参与 is_current 更新（同日期时保留 id 最大的）
-    conn.execute("""
-        UPDATE laws SET is_current = 0
-        WHERE id NOT IN (
-            SELECT l1.id FROM laws l1
-            WHERE l1.id = (
-                SELECT MAX(l2.id) FROM laws l2
-                WHERE l2.title = l1.title
-                  AND l2.pub_date = (
-                      SELECT MAX(l3.pub_date) FROM laws l3 WHERE l3.title = l2.title
-                  )
-            )
-        )
-    """)
     conn.commit()
 
     conn.execute('PRAGMA foreign_keys=ON')
