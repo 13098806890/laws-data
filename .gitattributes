@@ -1,2 +1,0 @@
-*.db filter=lfs diff=lfs merge=lfs -text
-law_content.db filter=lfs diff=lfs merge=lfs -text

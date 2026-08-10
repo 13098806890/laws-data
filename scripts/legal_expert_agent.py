@@ -8,7 +8,7 @@ legal_expert_agent.py — 多层专家协作法律问答系统
   Layer 2: Sub-experts（细分专家）— 具体领域，DB 检索 + 分析
 
 用法：
-  cd /Users/doxie/laws_data
+  cd path/to/laws_data
   python3 scripts/legal_expert_agent.py
   python3 scripts/legal_expert_agent.py --question "网购假货怎么维权"
   python3 scripts/legal_expert_agent.py --question "..." --provider deepseek

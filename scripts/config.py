@@ -14,4 +14,4 @@ JSON_DIR  = BASE_DIR / 'json'
 DB_PATH   = BASE_DIR / 'law_content.db'
 MENU_PATH = BASE_DIR / 'law_menu.json'
 MD_DIR    = BASE_DIR
-LAWS_REPO = Path(os.environ.get("LAWS_REPO_PATH", "/Users/doxie/Github/Laws"))
+LAWS_REPO = Path(os.environ.get("LAWS_REPO_PATH", "~/Github/Laws")).expanduser()

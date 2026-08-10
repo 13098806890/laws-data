@@ -13,9 +13,31 @@ import re
 from pathlib import Path
 from collections import defaultdict
 
-SRC_INDEX = Path("/Users/doxie/laws_data mannual/json/index.json")
-SRC_JSON  = Path("/Users/doxie/laws_data mannual/json")
-OUT_DIR   = Path("/Users/doxie/laws_data mannual/knowledge")
+BASE_DIR = Path(__file__).resolve().parent.parent
+SRC_JSON = BASE_DIR / "json"
+OUT_DIR  = BASE_DIR / "knowledge"
+
+
+def build_index():
+    """扫描 json/ 目录，从每个 JSON 文件提取元数据作为索引（替代外部 index.json）"""
+    index = []
+    for cat_dir in sorted(SRC_JSON.iterdir()):
+        if not cat_dir.is_dir():
+            continue
+        for f in sorted(cat_dir.glob("*.json")):
+            try:
+                data = json.loads(f.read_text(encoding="utf-8"))
+            except Exception:
+                print(f"警告：跳过无法解析的 JSON：{f}")
+                continue
+            index.append({
+                "title": data.get("title", f.stem),
+                "category": data.get("category", cat_dir.name),
+                "pub_date": data.get("pub_date", "") or "",
+                "total_articles": data.get("total_articles", 0),
+                "file": f.relative_to(SRC_JSON).as_posix(),
+            })
+    return index
 
 # ─────────────────────────────────────────────
 # 1. 主题分类规则
@@ -177,7 +199,7 @@ def find_parent_laws(title: str, full_text: str, law_titles: set) -> list:
 
 def main():
     OUT_DIR.mkdir(exist_ok=True)
-    index = json.loads(SRC_INDEX.read_text(encoding="utf-8"))
+    index = build_index()
     
     # 建立归一化标题集合（法律类 + 宪法）
     law_titles_norm = set()
@@ -399,7 +421,7 @@ def main():
 
     readme = f"""# 中国法律知识图谱
 
-数据来源：`/laws_data mannual/json/`，共 **{len(index)}** 部法规（宪法 {sum(1 for r in index if r['category']=='宪法')} + 法律 {sum(1 for r in index if r['category']=='法律')} + 行政法规 {sum(1 for r in index if r['category']=='行政法规')} + 监察法规 {sum(1 for r in index if r['category']=='监察法规')} + 司法解释 {sum(1 for r in index if r['category']=='司法解释')}）。
+数据来源：`json/`，共 **{len(index)}** 部法规（宪法 {sum(1 for r in index if r['category']=='宪法')} + 法律 {sum(1 for r in index if r['category']=='法律')} + 行政法规 {sum(1 for r in index if r['category']=='行政法规')} + 监察法规 {sum(1 for r in index if r['category']=='监察法规')} + 司法解释 {sum(1 for r in index if r['category']=='司法解释')}）。
 
 ## 文件说明
 

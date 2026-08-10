@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 RAG 法律咨询 - 多步推理 Pipeline
-用法：cd /Users/doxie/laws_data && python3 scripts/test_rag.py
+用法：cd path/to/laws_data && python3 scripts/test_rag.py
 """
 
 import json

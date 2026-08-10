@@ -7,7 +7,7 @@
 表3: keyword_synonyms — LLM 关键词 → 同义/上位词（拓宽 FTS 召回）
 
 用法：
-    cd /Users/doxie/laws_data
+    cd path/to/laws_data
     python3 scripts/build_enhancements.py
 """
 

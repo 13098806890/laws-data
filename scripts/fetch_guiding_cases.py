@@ -8,7 +8,7 @@
 输出：laws_data/指导案例/{序号}_{标题}.md
 
 用法：
-  cd /Users/doxie/laws_data
+  cd path/to/laws_data
   python3 scripts/fetch_guiding_cases.py            # 全量抓取（约 986 条）
   python3 scripts/fetch_guiding_cases.py --page 1   # 只抓第 1 页（调试）
   python3 scripts/fetch_guiding_cases.py --skip-existing  # 跳过已存在文件

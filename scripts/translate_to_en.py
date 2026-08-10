@@ -9,7 +9,7 @@
 
 用法：
   export ANTHROPIC_API_KEY=sk-ant-...
-  cd /Users/doxie/Github/laws-data
+  cd path/to/laws_data
   python3 scripts/translate_to_en.py                  # 全量翻译
   python3 scripts/translate_to_en.py --dry-run        # 统计待翻译量
   python3 scripts/translate_to_en.py --laws-only      # 只翻译标题

@@ -18,40 +18,57 @@ laws_data/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── 📂 民法典/                     # Markdown 全文（按 legal_domain，is_current=1）
-│   └── 司法解释/
-├── 📂 民法商法/
-│   └── 司法解释/
-├── 📂 刑法/  ...（其他法律部门目录）
+├── json_en/               # 英文翻译（镜像 json/ 的 category 结构，含 title_en / content_en）
+├── json_en_gongbao/       # 公报文书的英文翻译（al / cpwsxd / sfwj 子目录）
+├── 📂 宪法与国家机构/               # Markdown 全文（按 subject_area 菜单分组，is_current=1）
+├── 📂 民事与商事/
+├── 📂 刑事/
+├── 📂 行政与公法/
+├── 📂 经济、税务与金融/
+├── 📂 劳动与社会保障/
+├── 📂 诉讼与司法程序/
+├── 📂 其他/
 ├── 📂 references/
-│   └── article_references.json
+│   ├── article_references.json   # 法条间引用关系（pipeline 产物）
+│   ├── law_title_en_map.json     # 法律标题英译 map
+│   └── heading_en_map.json       # 结构节点英文标题 map
+├── 📂 logs/               # pipeline 运行日志（自动生成）
+├── 📂 knowledge/          # 知识图谱 JSON（taxonomy/hierarchy/relations/versions）
+├── 📂 最高人民法院公报/   # 公报源数据（指导案例/司法文件/裁判文书/司法解释 JSON）
 ├── 📂 scripts/
-│   ├── config.py          # 路径配置（BASE_DIR、SRC_DIRS、DB_PATH 等）
+│   ├── config.py          # 路径配置（BASE_DIR、SRC_DIRS、DB_PATH 等；LAWS_REPO_PATH 环境变量可覆盖）
 │   ├── utils.py           # 公共工具（title_from_stem、pub_date_from_stem）
+│   ├── law_id_registry.py # law_id 单一权威注册表（blocklist / json_en 内嵌 / law_index 三级解析）
 │   ├── source_override_blocklist.json  # 被其他来源覆盖的主库条目列表
 │   ├── docx_to_json/      # 第一阶段：docx → JSON
 │   │   ├── converter.py   # 主入口，extract_content、process_docx、run()
-│   │   ├── domain.py      # legal_domain 映射、xlsx 索引
+│   │   ├── domain.py      # legal_domain 映射（评分制）、xlsx 索引
 │   │   ├── effective_date.py  # 生效日期提取
-│   │   └── structure.py   # 编/章/节结构 + global_order
-│   ├── json_to_db/        # 第二阶段：JSON → SQLite
-│   │   └── builder.py     # 建表、写入、run()
-│   ├── db_to_md/          # 第三阶段：DB → Markdown
+│   │   ├── structure.py   # 编/章/节结构 + global_order
+│   │   └── subject_area.py # 行政法规二级主题分类
+│   ├── json_to_db/        # 第三阶段：JSON → SQLite
+│   │   ├── builder.py     # 建表、写入、run()
+│   │   └── export_menu.py # 导出 law_menu.json（按 subject_area 分组）
+│   ├── db_to_md/          # 第六阶段：DB → Markdown
 │   │   └── renderer.py    # 渲染、run()
-│   ├── pipeline.py        # 完整流程（三阶段串联）
+│   ├── pipeline.py        # 完整流程（七阶段串联，含公报导入、英文导入、验证）
 │   ├── build_gongbao_db.py  # 公报裁判文书/指导案例/司法文件导入
-│   └── verify_db.py       # 数据库与 JSON 一致性验证
-├── law_content.db         # SQLite 数据库（pipeline 产物，约 72MB）
+│   ├── classify_gongbao_domain.py  # 公报司法解释 legal_domain 打标
+│   ├── import_en.py       # json_en → nodes.content_en / laws.title_en 导入
+│   ├── translate_to_en.py # 英文翻译主脚本（按 tier 分批）
+│   ├── build_aliases.py / build_enhancements.py  # RAG 增强表构建
+│   └── verify_db.py       # 数据库与 JSON 一致性验证（含 EN 覆盖率校验）
+├── law_content.db         # SQLite 数据库（pipeline 产物，约 460MB）
 └── CLAUDE.md              # 本文件
 ```
 
 外部依赖：
-- `/Users/doxie/Github/Laws/` — 按法律部门分类的 md 文件仓库，用于 legal_domain 精确映射
+- ``LAWS_REPO_PATH`（默认 `~/Github/Laws/`）`（可用环境变量 `LAWS_REPO_PATH` 覆盖）— 按法律部门分类的 md 文件仓库，用于 legal_domain 精确映射
 
 ## 运行 pipeline
 
 ```bash
-cd /Users/doxie/laws_data
+cd path/to/laws_data
 python3 scripts/pipeline.py        # 完整流程：docx → JSON → DB → Markdown
 python3 scripts/verify_db.py       # 验证（可选）
 
@@ -70,30 +87,37 @@ python3 -m db_to_md.renderer       # 仅重新生成 Markdown
 每部法律一行，字段：
 - `filename` — 唯一键，格式 `{标题}_{YYYYMMDD}`（无 .json 后缀）
 - `title` — 完整标题，从文件名提取（不从 docx 内部读取，因 docx 第一段可能截断或换行）
-- `category` — 法律分类（法律/行政法规/司法解释/法律解释/修正案/监察法规/宪法），xlsx 为权威来源
+- `title_en` — 英文标题，从 json_en 导入
+- `category` — 法律分类（法律/行政法规/司法解释/法律解释/修正案/监察法规/宪法/有关法律问题和重大问题的决定（部分）），xlsx 为权威来源
 - `legal_domain` — 法律部门（宪法相关法/民法商法/民法典/行政法/经济法/社会法/刑法/诉讼与非诉讼程序法）
+- `subject_area` — 菜单二级主题（v2.0.0 起所有法律都有，export_menu.py 回写）
 - `pub_date` — 公布日期，从文件名提取
 - `effective_date` — 生效日期，xlsx 优先，其次从正文提取
 - `promulgation_info` — 发布说明全文（通过/公布/施行信息）
 - `issuing_org` — 发布机关（最高人民法院 / 最高人民检察院 / 国务院等），从文件头部提取
 - `doc_number` — 发文字号（法释〔2000〕29号 等），从文件头部提取
+- `total_articles` — 条文总数
+- `full_text` — 法律全文原文
 - `version_date` — 同 pub_date，用于多版本区分
-- `is_current` — 默认 1（现行版本），未来多版本时旧版设为 0
+- `is_current` — 1 = 现行；0 = 历史版本或被废止决定明确废止（公报源 JSON 的 `repealed_by` 字段非空即标 0）
+- `aliases` — 逗号分隔别名（民法典,民法），用于搜索扩展
 - `source` — 数据来源：`'flk'`（主库 docx 源文件）/ `'gongbao'`（最高人民法院公报）/ 未来可扩展其他来源
 
 ### 多来源覆盖机制
 
 `laws` 表统一存放所有来源的法律条文，用 `source` 字段区分。ID 分配规则：
 
-1. **主库（source='flk'）先跑 pipeline 分配 ID**，ID 一旦写入 JSON 就固定不变
+1. **主库（source='flk'）先跑 pipeline 分配 ID**，ID 一旦写入 JSON 就固定不变（分段规则见 `generate_law_index.py`：法律 1100001+、司法解释 3500001+、行政法规 5000001+、监察法规 6500001+ 等）
 2. **其他来源（source='gongbao' 等）**：
    - 与主库同名的法律 → 复用主库 ID，内容用新来源替换，主库版本从 `source_override_blocklist.json` 屏蔽
    - 主库没有的法律 → 分配新 ID（从主库最大 ID 之后的保留段开始），同样写入来源 JSON 固定
 3. `source_override_blocklist.json`：格式 `[{laws_id, gongbao_file, title, pub_date}]`，记录被覆盖的主库条目；builder.py 导入主库时跳过这些 ID
+4. **law_id 权威解析**：任何脚本取 law_id 一律走 `scripts/law_id_registry.py`（blocklist → json_en 内嵌 → law_index 三级），禁止各自硬编码规则
 
-当前数量（2026-05-14）：
-- `source='flk'`：1526 条
-- `source='gongbao'`（公报司法解释）：927 条，其中 419 条复用主库 ID，508 条分配新 ID（范围 3500726–3501233）
+当前数量（2026-08-09）：
+- `source='flk'`：1538 条
+- `source='gongbao'`（公报司法解释）：839 条（ID 范围 3500010–3501473，全部在司法解释分段内）
+- 合计 2377 条，其中 `is_current=1` 共 1735 条
 
 ### nodes 表
 编/章/节/条 统一存储，字段：
@@ -102,34 +126,18 @@ python3 -m db_to_md.renderer       # 仅重新生成 Markdown
 - `title` — 编/章/节 的标题；条文也存 title（同 article_number）
 - `article_number` — 仅条文，如"第一条"
 - `content` — 所有类型都存（编/章/节 存标题文本，条文存正文），客户端直接用于展示
+- `content_en` — 英文译文（条文 + 结构节点标题），由 import_en.py 从 json_en 导入
 - `global_order` — 深度优先全局序号，`ORDER BY global_order` 即得正确展示顺序
 - `order_index` — 在父节点内的序号，用于层级导航排序
-
-常用查询：
-```sql
--- 按顺序展示某法律全部内容
-SELECT * FROM nodes WHERE law_id = ? ORDER BY global_order;
-
--- 某章下所有条文
-SELECT * FROM nodes WHERE parent_id = ? AND type = 'article';
-
--- 全文搜索（trigram 分词，支持任意中文短语）
-SELECT n.*, l.title AS law_title
-FROM nodes_fts f
-JOIN nodes n ON f.rowid = n.id
-JOIN laws l ON n.law_id = l.id
-WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
-
--- 查某机构发布的司法解释
-SELECT title, doc_number, pub_date FROM laws
-WHERE issuing_org = '最高人民法院' AND category = '司法解释'
-ORDER BY pub_date DESC;
-```
 
 ### nodes_fts 虚拟表
 FTS5，`tokenize='trigram'`，索引 `content` 和 `article_number`。
 搜索时建议加 `AND n.type = 'article'` 限制只搜条文，避免章节标题干扰。
 公报司法解释（`source='gongbao'`）的条文也在此 FTS 表中，无需单独搜索。
+
+### nodes_fts_bigram 虚拟表
+FTS5，`tokenize='unicode61'`，与 nodes_fts 结构相同，专门用于 1–2 字短词搜索
+（trigram 最少匹配 3 字）。查询代码按 CJK 长度自动选择：≥3 字走 `nodes_fts`，否则走 `nodes_fts_bigram`。
 
 ## 公报数据表（gongbao_docs / gongbao_case_law_links）
 
@@ -177,7 +185,7 @@ FTS5 trigram，索引 title/ruling_gist/keywords/full_text。
 若后续重新下载源文件，检查文件名是否含 `+` 并手动修正。
 
 ### legal_domain 映射优先级
-1. `/Users/doxie/Github/Laws/` 目录结构精确匹配
+1. ``LAWS_REPO_PATH`（默认 `~/Github/Laws/`）` 目录结构精确匹配
 2. `MANUAL_DOMAINS` 手工补充（民法典、新法、特殊决议、未分类司法解释等）
 3. 关键词规则（标题 + promulgation_info）
 4. 行政法规兜底归入「行政法」
@@ -190,23 +198,22 @@ pipeline 是无状态的，不做增量，每次全量重建。
 
 ### 章节结构类型
 - **第X章结构**：大多数法律，`CHAPTER_RE` 匹配
-- **汉字序号结构**：115 个司法解释使用 `一、管辖`、`二、回避` 等形式，`CN_SECTION_RE` 匹配
+- **汉字序号结构**：部分司法解释使用 `一、管辖`、`二、回避` 等形式（当前 DB 中 8 部，另有 220 部司法解释因无 `第X条`/无章结构而整体归入 `正文` 占位章），`CN_SECTION_RE` 匹配
 - **无章节结构**：法律解释、批复等短文件，full_text 整体作为单条 article 写入 DB
 
 ### 法律多版本
-同一部法律可能有多个版本（不同 pub_date），全部导入，`is_current` 目前均为 1。
-后续实现"标记现行版本"时，需在 pipeline 中按 title 分组，将最新 version_date 的设为 1，其余设为 0。
+同一部法律可能有多个版本（不同 pub_date），全部导入。`is_current` 取值：最新版为 1，公报源 JSON 中 `repealed_by` 非空的历史版本/被废止版本标 0。
 
 ### 民法典特殊结构
 民法典有 7 编（part）结构，第一编"总则"在源文件 full_text 中没有编标题行，
 pipeline 中硬编码补全为"第一编　总则"。
 
 ### 有编（part）结构的法律
-目前共 8 部（民法典、刑法×2、刑事诉讼法×2、民事诉讼法×3），这些文件的
+目前共 9 部（民法典、刑法×2、刑事诉讼法×2、民事诉讼法×3、生态环境法典），这些文件的
 nodes 表中有 `type='part'` 的节点，其余法律顶层直接是 `type='chapter'`。
 
-### law_enhancements.db（待建）
-计划中的增量扩展库，包含：
+### law_enhancements.db（已建，含待扩展表）
+现有表：`term_aliases`、`alias_patches`、`topic_law_hints`、`keyword_synonyms`（见 README）。计划中的扩展表：
 - `node_pinyin` — 拼音搜索（pypinyin 批量生成）
 - `concept_aliases` — 语义别名（"淘宝" → "网络交易平台"，AI 生成）
 - `node_tags` — 条文标签（AI 批量生成）
@@ -227,10 +234,10 @@ JSON 是元数据/中间产物，只有 Markdown 才按 legal_domain 分目录�
 
 ### article_references 表
 `builder.py` 建表并由 pipeline 填充，记录条文间的引用关系：
-- `ref_type`：`'cross_law'`（跨法引用）/ `'self'`（本法自引）
+- `ref_type`：`'cross_law'`（跨法引用）/ `'self_ref'`（本法自引）
 - `resolved`：1 表示已找到目标条文节点
 
-当前数量：8024 条（跨法 4797，自引 3227），已解析 7444 条。
+当前数量：5319 条（跨法 2559，自引 2760），已解析 5236 条。
 
 ### normalize_title 的精确行为
 `structure.py` 中的 `normalize_title` 只去掉**两个 CJK 字符之间**的多余全角空格：
@@ -241,7 +248,7 @@ JSON 是元数据/中间产物，只有 Markdown 才按 legal_domain 分目录�
 正则是 `r'(?<=[一-鿿])　{2,}(?=[一-鿿])'`，不要改成 `r'[　 ]{2,}'`（那会压缩成一个空格而非去掉，且会误匹配条文正文中的空格）。
 
 ### 汉字序号结构（CN_SECTION_RE）的识别逻辑
-115 个司法解释用 `一、管辖`、`二、回避` 等形式代替第X章，由 `CN_SECTION_RE` 识别。
+部分司法解释用 `一、管辖`、`二、回避` 等形式代替第X章，由 `CN_SECTION_RE` 识别。
 
 识别流程有两条路径：
 1. **有目录**：TOC 扫描阶段如果遇到 `CN_SECTION_RE` 匹配的行，设置 `uses_cn_sections = True`，TOC 结束后从 pending 建章，之后主循环也走汉字序号路径。

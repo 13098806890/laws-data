@@ -9,7 +9,7 @@
 - 进度实时打印到控制台
 
 运行：
-    cd /Users/doxie/laws_data
+    cd path/to/laws_data
     python3 scripts/llm_enrich_gongbao.py              # 处理 al + cpwsxd
     python3 scripts/llm_enrich_gongbao.py --force      # 强制覆盖已有 meta
     python3 scripts/llm_enrich_gongbao.py --dry-run    # 只打印，不写文件

@@ -18,7 +18,7 @@
     形式写入主库 laws/nodes 表（source='gongbao'），不再单独维护 gongbao_sfjs 表。
 
 用法：
-  cd /Users/doxie/laws_data
+  cd path/to/laws_data
   python3 scripts/build_gongbao_db.py        # 建表并导入
   python3 scripts/build_gongbao_db.py --drop # 先删旧表再重建
 """

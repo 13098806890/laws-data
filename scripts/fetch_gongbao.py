@@ -25,7 +25,7 @@ JSON 结构：
 }
 
 用法：
-  cd /Users/doxie/laws_data
+  cd path/to/laws_data
   python3 scripts/fetch_gongbao.py                      # 抓取所有栏目
   python3 scripts/fetch_gongbao.py --target al          # 只抓指导性案例
   python3 scripts/fetch_gongbao.py --target sfjs        # 只抓司法解释

@@ -5,7 +5,7 @@
 增量策略：JSON 中已有非空值的字段不覆盖，只补充空缺字段。
 
 运行：
-    cd /Users/doxie/laws_data
+    cd path/to/laws_data
     python3 scripts/enrich_gongbao_json.py
 """
 

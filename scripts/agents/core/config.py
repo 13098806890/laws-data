@@ -1,6 +1,8 @@
+import os
 from pathlib import Path
 
-DB_PATH = Path("/Users/doxie/laws_data/law_content.db")
+BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
+DB_PATH = Path(os.environ.get("LAWS_DB_PATH", BASE_DIR / "law_content.db"))
 
 PROVIDERS = {
     "groq": {

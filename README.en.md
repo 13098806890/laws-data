@@ -1,53 +1,66 @@
 # 🏛️ Chinese Laws & Regulations Database
 
-[中文](README.md) · [Русский](README.ru.md)
+[中文](README.md) · [Русский](README.ru.md) · [LICENSE](LICENSE)
 
 > A structured open dataset of current Chinese laws and regulations — raw documents, structured JSON, SQLite database, and Markdown full text, for search, research, and application development.
+
+**License**: [MIT](LICENSE). Legal texts are sourced from official public channels (not subject to copyright); the structured data and translations are likewise open under MIT — free for commercial use, redistribution, and modification.
+
+**Getting started**: download the prebuilt database or build it yourself — see [Quick Start](#-quick-start) below.
 
 ---
 
 ## 📊 Data Overview
 
 | Category | Count |
-|----------|------:|
+|----------|-----:|
 | Constitution (宪法) | 1 |
-| Laws (法律) | 310 |
+| Laws (法律) | 448 |
 | Amendments (修正案) | 12 |
-| Decisions (有关法律问题和重大问题的决定) | 2 |
 | Legal Interpretations (法律解释) | 25 |
-| Judicial Interpretations - FLK (司法解释主库) | 300 |
-| Judicial Interpretations - Gazette (司法解释公报补充) | 749 |
-| Administrative Regulations (行政法规) | 607 |
-| Supervisory Regulations (监察法规) | 2 |
-| **Total** | **2,008** |
+| Judicial Interpretations (司法解释) | 1,157 |
+| Administrative Regulations (行政法规) | 727 |
+| Supervisory Regulations (监察法规) | 3 |
+| Decisions (有关法律问题和重大问题的决定, partial) | 4 |
+| **Total** | **2,377** |
 
-**80,162** article nodes, **7,656** cross references (4,569 cross-law + 3,087 self-ref).
+Of these, **1,735** are current (`is_current=1`). **78,788** article nodes (87,810 nodes including chapters and other structural levels), **5,319** article references (2,559 cross-law + 2,760 self-ref), 98.4% resolved.
 
 ### 🌐 English Translation
 
 | Metric | Progress |
-|--------|---------:|
-| Articles with EN | **62,549/62,549 (100%)** |
-| Law titles with EN | 1,259/2,008 (62.7%) |
-| English FTS index | `nodes_fts_en` (trigram) |
-| Laws covered | 2,003 current laws |
+|------|-----:|
+| Articles translated (current laws) | **60,744/60,745 (99.99%)** |
+| Law titles translated | 2,097 |
+| Chinese full-text search | `nodes_fts` (trigram, ≥3 chars) + `nodes_fts_bigram` (unicode61, 1–2 chars) |
+| Laws covered | 2,377 (incl. gazette sources) |
 
-Translation uses a two-phase pipeline (`translate_to_en.py`): batch title translation first, then article-by-article translation with glossary and law name context injection. Terminology consistency is enforced via 39 expert `nameEn`, 6 group `nameEn`, and 101 `RequiredInfo.fieldEn`.
+Translation runs through a two-phase pipeline (`translate_to_en.py`): batch title translation first, then article-by-article translation with glossary and law-name context. Terminology consistency is enforced via 39 specialist experts' `nameEn`, 6 expert-group `nameEn`, and 101 `RequiredInfo.fieldEn` entries.
 
 ### 📖 Supreme People's Court Gazette
 
+Full data from the SPC Gazette (gongbao.court.gov.cn) is additionally included:
+
 | Type | Count |
-|------|------:|
+|------|-----:|
 | Guiding Cases (指导案例) | 986 |
 | Judicial Documents (司法文件) | 860 |
 | Selected Judgments (裁判文书) | 443 |
-| Gazette Judicial Interpretations | 749 (merged into `laws`/`nodes`) |
+| Gazette Judicial Interpretations | 839 (merged into main `laws`/`nodes` tables) |
 
-All gazette documents linked to law articles (3,524 case-law links).
+All gazette documents have citation links to main-DB articles (3,529 links).
+
+This dataset powers the [ChineseLawsSearch](https://github.com/doxie/LawsSearch) iOS app.
+
+---
 
 ## 📦 Data Source
 
-All source documents are downloaded from the **[National Laws and Regulations Database](https://flk.npc.gov.cn/)** (国家法律法规数据库), the official legal retrieval platform of the National People's Congress of China. Files are downloaded in docx / doc format and processed into structured data by this pipeline. The platform is maintained by the Legislative Affairs Commission of the NPC Standing Committee and is the authoritative publication channel for all categories of effective Chinese law.
+**Main library**: all original documents come from the **[National Laws and Regulations Database](https://flk.npc.gov.cn/)** (国家法律法规数据库), the official platform of the NPC Standing Committee's Legislative Affairs Commission, downloaded as docx/doc and processed by this pipeline.
+
+A few files whose original docx is missing or malformed are replaced with web-scraped text from the SPC website — see `sources/_web_sources/README.md`.
+
+**SPC Gazette**: scraped from [gongbao.court.gov.cn](https://gongbao.court.gov.cn) via `scripts/fetch_gongbao.py`, stored under `最高人民法院公报/` (JSON format).
 
 ---
 
@@ -56,270 +69,444 @@ All source documents are downloaded from the **[National Laws and Regulations Da
 ```
 laws_data/
 ├── 📂 sources/                    # Source files (docx/doc + xlsx index)
+│   ├── 法律/
+│   ├── 司法解释/
+│   ├── 行政法规/
+│   ├── 宪法/
+│   ├── 监察法规/
+│   └── _web_sources/              # Web-scraped replacement files + HTML cache
 ├── 📂 json/                       # Structured JSON (by category, pipeline output)
 │   ├── 法律/
 │   ├── 司法解释/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── 📂 宪法与国家机构/             # Markdown full text (by display group, is_current=1 only)
-├── 📂 民事与商事/                 # 10 subgroups (Civil Code / Contracts / IP / Company …)
-├── 📂 刑事/                       # 6 subgroups (Criminal Law / Property Crime …)
-├── 📂 行政与公法/                 # Administrative laws + regulations by 20 topics
+├── 📂 json_en/                    # English translations (mirrors json/)
+├── 📂 json_en_gongbao/            # Gazette document English translations (al/cpwsxd/sfwj)
+├── 📂 宪法与国家机构/             # Markdown full text (by subject_area menu, is_current=1)
+├── 📂 民事与商事/
+├── 📂 刑事/
+├── 📂 行政与公法/
 ├── 📂 经济、税务与金融/
 ├── 📂 劳动与社会保障/
 ├── 📂 诉讼与司法程序/
+├── 📂 其他/
 ├── 📂 references/
-│   └── article_references.json   # Article cross-references
+│   ├── article_references.json    # Article cross-references (pipeline output)
+│   ├── law_title_en_map.json      # Law title English map
+│   └── heading_en_map.json        # Structural heading English map
+├── 📂 最高人民法院公报/            # Full gazette data (fetch_gongbao.py output, JSON)
+│   ├── 指导案例/                  # 986 (al)
+│   ├── 司法文件/                  # 860 (sfwj)
+│   ├── 裁判文书/                  # 443 (cpwsxd)
+│   └── 司法解释/                  # 839 (merged into main laws/nodes)
+├── 📂 knowledge/                  # Knowledge-graph JSON (taxonomy/hierarchy/relations/versions)
+├── 📂 docs/                       # Documentation (archive/ history, translation/ reports, guides/)
 ├── 📂 scripts/
-│   ├── config.py                  # Path configuration
-│   ├── utils.py                   # Shared utilities
+│   ├── config.py                  # Path configuration (BASE_DIR, DB_PATH etc.; LAWS_REPO_PATH env override)
+│   ├── utils.py                   # Shared utilities (title_from_stem, pub_date_from_stem)
+│   ├── law_id_registry.py         # Single authoritative law_id registry
+│   ├── pipeline.py                # Main pipeline entry (7 stages, incl. gazette import, EN import, validation)
+│   ├── download_db.py             # Download prebuilt DB from GitHub Releases
+│   ├── fetch_gongbao.py           # SPC Gazette scraper (5 targets)
+│   ├── build_gongbao_db.py        # Gazette data → law_content.db (stage 7)
+│   ├── classify_gongbao_domain.py # legal_domain tagging for gazette judicial interpretations
+│   ├── import_en.py               # json_en → nodes.content_en / laws.title_en
+│   ├── translate_to_en.py         # English translation script (batched by tier)
 │   ├── generate_law_index.py      # Stable law_id assignment
-│   ├── extract_references.py      # Citation extraction
-│   ├── pipeline.py                # Full pipeline (with stage-skip flags)
-│   ├── verify_db.py               # DB ↔ JSON consistency check
-│   ├── build_aliases.py           # Build colloquial → legal term alias table
-│   ├── build_enhancements.py      # Build topic hints / keyword synonyms tables
-│   ├── test_rag.py                # RAG legal Q&A pipeline (multi-step reasoning)
-│   ├── docx_to_json/              # Stage 1: docx → JSON
-│   ├── json_to_db/                # Stage 2: JSON → SQLite
-│   │   ├── builder.py
-│   │   ├── display_group.py       # Display group mapping table
+│   ├── extract_references.py      # Article citation extraction
+│   ├── fetch_web_sources.py       # Web scraping → .txt replacement files
+│   ├── verify_db.py               # DB ↔ JSON consistency check (incl. EN coverage)
+│   ├── build_aliases.py           # Build term_aliases (LLM + FTS validation)
+│   ├── build_enhancements.py      # Build RAG enhancement tables
+│   ├── test_rag.py                # Basic RAG pipeline
+│   ├── legal_chain_agent.py       # Article-chain reasoning agent
+│   ├── legal_expert_agent.py      # Multi-layer expert system entry
+│   ├── agents/                    # Expert system modules
+│   ├── docx_to_json/              # Stage 1: docx/txt → JSON
+│   │   ├── converter.py           # Main entry, paragraph parsing, structure recognition
+│   │   ├── structure.py           # Hierarchy assembly, global_order assignment
+│   │   ├── domain.py              # legal_domain mapping (scoring), xlsx index reading
+│   │   ├── effective_date.py      # Effective-date extraction
+│   │   └── subject_area.py        # Administrative-regulation subtopic classification
+│   ├── json_to_db/                # Stage 3: JSON → SQLite
+│   │   ├── builder.py             # Table creation, law/node/FTS writing
 │   │   └── export_menu.py         # Export law_menu.json navigation index
-│   └── db_to_md/                  # Stage 3: DB → Markdown
-├── 🗄️  law_content.db             # Main database (~370MB, Git LFS)
-└── 🗄️  law_enhancements.db        # Enhancement database (RAG search optimization, Git LFS)
+│   └── db_to_md/                  # Stage 6: DB → Markdown
+│       └── renderer.py            # Menu-grouped full Markdown rendering
+├── 📄 law_index.json              # Stable law_id index (survives rebuilds)
+├── 📄 law_menu.json               # Sidebar navigation index (by subject_area)
+├── 🗄️  law_content.db             # Main database (~460MB, not committed; download or build)
+├── 🗄️  law_enhancements.db        # RAG enhancement database (~128KB)
+├── 📄 LICENSE                     # MIT
+├── 📄 CONTRIBUTING.md             # Contribution guide
+└── 📄 CLAUDE.md                   # Maintenance notes
+```
+
+---
+
+## 🔄 Main Pipeline
+
+**Entry point**: `python3 scripts/pipeline.py`
+
+The pipeline runs seven stages sequentially and rebuilds everything from scratch (no incremental mode), ~5–10 min per run.
+
+### Stage 1: `docx_to_json` — source files → structured JSON
+
+**Input**: `.docx` / `.doc` / `.txt` files under `sources/` (`.txt` takes precedence over same-name `.docx`, used to replace defective originals)
+
+**Output**: `.json` files under `json/`, one per law
+
+**Steps**:
+
+1. **xlsx index preload** (`domain.py`): each source directory has `法律法规文件目录_*.xlsx` with 4 columns (title | pub date | effective date | category). Preloaded into a `{title}_{YYYYMMDD}` → `{effective_date, category}` index, authoritative over body-extracted results.
+2. **Paragraph extraction** (`converter.py`): reads docx paragraphs / txt lines; recognizes issuing authority (12-org whitelist exact match) and document number (regex `org-abbrev〔year〕num`).
+3. **Effective-date extraction** (`effective_date.py`): from promulgation paragraphs; xlsx value overrides.
+4. **Structure recognition** (converter main loop): `第X编` → part; `第X章` or Chinese-numeral headings (`一、管辖`, common in judicial interpretations) → chapter; `第X节` → section; `第X条` → article (supports splitting merged multi-article paragraphs); short files without structure → single article whose content is full_text.
+5. **Hierarchy assembly** (`structure.py`): nested dict per part/chapter/section/article, `global_order` assigned depth-first so `ORDER BY global_order` restores reading order.
+6. **Metadata**: `title` from filename (never from docx body), `category` from xlsx, `legal_domain` (prefer `LAWS_REPO_PATH` directory match, then manual supplements, then keyword rules).
+
+**Special handling**:
+- Civil Code has 7 parts; the "General Provisions" part heading is hardcoded (missing in source file)
+- Articles directly under a part use a `_DIRECT_` placeholder chapter, no extra nodes created
+- 九民纪要-style files (`1.【标题】正文`) are pre-converted by `fetch_web_sources.py` into `第N条　【标题】正文`
+
+---
+
+### Stage 2: `generate_law_index` — stable law_id assignment
+
+**Input**: all `.json` files under `json/`
+
+**Output**: `scripts/law_index.json` (persistent index, IDs stable across rebuilds)
+
+Each law is keyed by `{title}_{pub_date}`; first sighting gets a permanent ID (auto-increment from 1000001). Rebuilds keep existing IDs, new laws append new ones. This keeps `article_references` and other cross-library references valid across rebuilds.
+
+---
+
+### Stage 3: `json_to_db` — JSON → SQLite
+
+**Input**: `json/`, `law_index.json`
+
+**Output**: `law_content.db` (fully rebuilt, old file dropped)
+
+**Steps**:
+
+1. **Table creation** (`builder.py`): `laws`, `nodes`, `nodes_fts` (trigram FTS5), `nodes_fts_bigram` (unicode61 FTS5), `article_references` + indexes. Both FTS tables are **external content tables** (`content="nodes"`) — no text duplication, saves ~175MB.
+2. **laws rows**: metadata from JSON, stable ID from `law_index.json`, aliases from `law_aliases.py`.
+3. **nodes rows** (recursive): part → chapter → section → article with `parent_id`, `global_order`, `part_num`, `chapter_num`, `section_num`, `article_num`; every article inserted into both FTS tables.
+4. **FTS optimize** after all inserts.
+5. **Gazette interpretation tagging** (`classify_gongbao_domain.py`): assign legal_domain to `source='gongbao'` interpretations.
+6. **Menu export**: `law_menu.json` (grouped by subject_area, with title_en) for the iOS sidebar.
+
+---
+
+### Stage 4: `extract_references` — article citation extraction
+
+**Input**: `law_content.db` (nodes)
+
+**Output**: `references/article_references.json`, plus the `article_references` table in `law_content.db`
+
+Three citation patterns are recognized over all `is_current=1` articles:
+
+1. **Quoted cross-law**: `《法律名》第X条`, resolved via `art_index`; both short titles (sans "中华人民共和国" prefix) and full names match.
+2. **Unquoted short title**: `刑法第X条` etc., via dynamically built short-title regexes, matched longest-first to avoid ambiguity.
+3. **Self-reference**: `本法/本条例/本规定第X条`; criminal-law-amendment "本法第X条" is redirected to the Criminal Code and marked `cross_law`.
+
+**Current stats**: 5,319 citations (2,559 cross-law, 2,760 self-ref), 98.4% resolved.
+
+---
+
+### Stage 5: English import (`import_en.py`)
+
+**Input**: `json_en/` (article translations), `references/heading_en_map.json` (heading translations)
+
+**Output**: `nodes.content_en`, `laws.title_en`
+
+- Articles matched by `article_number`, idempotent (`WHERE content_en IS NULL` never overwrites)
+- Structural headings written from `heading_en_map.json` (stable key `law_id:type:order_index`)
+
+---
+
+### Stage 6: `db_to_md` — DB → Markdown
+
+**Input**: `law_content.db` (`is_current=1` laws)
+
+**Output**: `.md` files grouped by subject_area menu (宪法与国家机构/ 民事与商事/ 刑事/ 行政与公法/ 经济、税务与金融/ 劳动与社会保障/ 诉讼与司法程序/ 其他)
+
+Every article gets an `<a id="art-N">` anchor; outgoing citations in the body become cross-file Markdown links.
+
+---
+
+### Stage 7: Gazette import (`build_gongbao_db`)
+
+**Prerequisite**: JSON files under `最高人民法院公报/` (scraped by `fetch_gongbao.py`)
+
+**Output**: two new tables in `law_content.db`; gazette judicial interpretations merged into main `laws`/`nodes`:
+
+| Table | Description |
+|----|------|
+| `gongbao_docs` | Judgments + guiding cases + judicial documents, 2,289 total; `source` distinguishes `al`/`cpwsxd`/`sfwj` |
+| `gongbao_case_law_links` | Gazette-doc → main-law-article links, 3,529 total, 99.8% resolved |
+| `gongbao_docs_fts` | FTS5 trigram full-text index (external content table) |
+
+Gazette judicial interpretations (839, IDs 3500010–3501473) are not kept in a separate table — they are written as `source='gongbao'` into the main `laws`/`nodes`. law_id assignment strictly follows `scripts/law_id_registry.py` (blocklist → json_en embedded → law_index, three-level), no fuzzy mapping.
+
+**Standalone run**:
+
+```bash
+python3 scripts/build_gongbao_db.py          # create tables + import (skip if exists)
+python3 scripts/build_gongbao_db.py --drop   # drop old tables first, then rebuild
+```
+
+**Gazette scraping**:
+
+```bash
+# All targets (first run ~2–3 hours)
+python3 scripts/fetch_gongbao.py --target al      # guiding cases
+python3 scripts/fetch_gongbao.py --target sfwj    # judicial documents
+python3 scripts/fetch_gongbao.py --target cpwsxd  # judgments
+python3 scripts/fetch_gongbao.py --target sfjs    # gazette judicial interpretations
+python3 scripts/fetch_gongbao.py --target flxd    # laws/regulations (reference)
+
+# Incremental (skip already-fetched files)
+python3 scripts/fetch_gongbao.py --target al --skip-existing
+```
+
+---
+
+### Run flags
+
+```bash
+python3 scripts/pipeline.py                          # full seven-stage run
+python3 scripts/pipeline.py --docx                   # force re-run docx → JSON (auto-detected otherwise)
+python3 scripts/pipeline.py --skip-index             # skip law_index generation
+python3 scripts/pipeline.py --skip-db                # skip JSON → DB
+python3 scripts/pipeline.py --skip-md                # skip DB → Markdown
+python3 scripts/pipeline.py --skip-gongbao           # skip gazette import
+python3 scripts/pipeline.py --skip-en                # skip English import
+python3 scripts/pipeline.py --only-refs              # only re-run citation extraction
+python3 scripts/pipeline.py --validate               # additionally validate content_en vs json_en
+
+# Individual stages
+cd scripts
+python3 -m docx_to_json.converter     # stage 1
+python3 generate_law_index.py          # stage 2
+python3 -m json_to_db.builder          # stage 3
+python3 extract_references.py          # stage 4 (JSON only)
+python3 import_en.py                   # stage 5 (English import)
+python3 -m db_to_md.renderer           # stage 6
+python3 build_gongbao_db.py --drop     # stage 7 (standalone rebuild)
+python3 fetch_web_sources.py           # web replacement files (standalone)
+python3 verify_db.py                   # verify DB ↔ JSON consistency (optional)
 ```
 
 ---
 
 ## 🗄️ Database Schema
 
-The project ships two SQLite databases:
+Two SQLite databases:
 
-- **`law_content.db`** (~370MB) — Main database generated by `pipeline.py`. Contains full law text, article structure, FTS indexes, display group mappings, and citation relationships.
-- **`law_enhancements.db`** (~64KB) — Enhancement database, maintained independently from the main DB, used for RAG search optimization. Can be rebuilt without re-running the full pipeline.
-
-### `law_enhancements.db` tables
-
-#### 🔵 `term_aliases` — Colloquial language → legal terms (134 rows)
-
-Built automatically by `build_aliases.py`: the LLM generates candidate legal terms for each colloquial word, then FTS validation keeps only those with hit count > 0.
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `colloquial` | TEXT | Everyday language, e.g. `车祸` (car accident), `被炒鱿鱼` (got fired) |
-| `legal_term` | TEXT | Term that actually appears in law text, e.g. `道路交通事故`, `解除劳动合同` |
-| `fts_hits` | INTEGER | Hit count in `law_content.db` articles (used for ranking) |
-
-```sql
--- Example: user says "车祸", expand to legal terms
-SELECT legal_term, fts_hits FROM term_aliases WHERE colloquial = '车祸' ORDER BY fts_hits DESC;
--- → 道路交通事故 (36)
-```
-
-#### 🟡 `alias_patches` — Manual patches (22 rows)
-
-Fills gaps in `term_aliases` where LLM-generation failed (e.g. "离婚", "误工费", "工伤"). All entries are FTS-validated. Same schema as `term_aliases`, built by `build_enhancements.py`.
-
-```sql
-SELECT legal_term, fts_hits FROM alias_patches WHERE colloquial = '离婚';
--- → 离婚登记 (18), 离婚诉讼 (29), 婚姻自由 (24), 解除婚姻关系 (13)
-```
-
-#### 🟠 `topic_law_hints` — Topic keywords → recommended laws (50 rows)
-
-Maps question topics to the most relevant specific laws. During RAG retrieval, matching laws are searched first to reduce cross-domain noise.
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `topic_keyword` | TEXT | Topic word, e.g. `消费者`, `交通事故`, `离婚` |
-| `law_title` | TEXT | Full law title, matching `laws.title` in `law_content.db` |
-| `priority` | INTEGER | Lower = higher priority; multiple laws per topic are ranked by this |
-
-```sql
-SELECT law_title, priority FROM topic_law_hints WHERE topic_keyword IN ('假货', '网购', '退货') ORDER BY priority;
--- → 消费者权益保护法 (1), 电子商务法 (1), 产品质量法 (2)
-```
-
-#### 🟢 `keyword_synonyms` — LLM keywords → precise FTS terms (40 rows)
-
-The LLM often coins phrases that don't appear in law text (e.g. "超速驾驶", "机动车事故"). This table maps them to terms that actually have FTS hits.
-
-| Field | Type | Description |
-|-------|------|-------------|
-| `source_kw` | TEXT | Word the LLM might output, e.g. `机动车事故`, `合同违约` |
-| `target_kw` | TEXT | Precise term with FTS hits, e.g. `交通事故`, `违约责任` |
-| `fts_hits` | INTEGER | Hit count for `target_kw` in article text |
-
-```sql
-SELECT target_kw, fts_hits FROM keyword_synonyms WHERE source_kw = '机动车事故';
--- → 交通事故 (276)
-```
-
-Rebuild the enhancement database (requires Ollama for aliases):
-
-```bash
-python3 scripts/build_aliases.py        # Rebuild term_aliases (LLM + FTS validation, ~5 min)
-python3 scripts/build_enhancements.py   # Rebuild the other three tables (static, no LLM, < 1s)
-```
+- **`law_content.db`** (~460MB) — main database, fully generated by `pipeline.py`, includes gazette data. **Not committed to git**; download from [GitHub Releases](https://github.com/doxie/laws-data/releases) or build locally.
+- **`law_enhancements.db`** (~128KB) — RAG enhancement database, maintained independently by `build_enhancements.py`.
 
 ### `law_content.db` tables
 
-Run `python3 scripts/pipeline.py` to generate.
-
----
-
-### 🟠 `laws` — One row per law
-
-Each law has exactly one active row (`is_current=1`). When multiple versions exist (different `pub_date`), only the latest is marked current.
+#### 🟠 `laws` — one row per law
 
 | Field | Type | Description |
-|-------|------|-------------|
-| `id` | INTEGER PK | Stable primary key assigned by `generate_law_index.py`; survives pipeline rebuilds |
-| `title` | TEXT | Full title extracted from filename (not from docx body, which can be truncated) |
+|------|------|------|
+| `id` | INTEGER PK | Stable primary key from `generate_law_index.py`, survives rebuilds |
+| `title` | TEXT | Full title from filename (not from docx body) |
+| `title_en` | TEXT | English title, imported from json_en |
 | `filename` | TEXT UNIQUE | Format: `{title}_{YYYYMMDD}`, no extension |
-| `category` | TEXT | Source type: `法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` |
-| `legal_domain` | TEXT | Legal domain: `民法典` / `民法商法` / `刑法` / `行政法` / `经济法` / `社会法` / `宪法相关法` / `诉讼与非诉讼程序法` |
-| `subject_area` | TEXT | Sub-topic for administrative regulations (交通运输 / 税务财政 …); empty for others |
+| `category` | TEXT | `法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` / `有关法律问题和重大问题的决定（部分）` |
+| `legal_domain` | TEXT | `民法典` / `民法商法` / `刑法` / `行政法` / `经济法` / `社会法` / `宪法相关法` / `诉讼与非诉讼程序法` |
+| `subject_area` | TEXT | Menu subtopic (all laws since v2.0.0, written back by export_menu.py) |
 | `pub_date` | TEXT | Promulgation date `YYYY-MM-DD` |
-| `effective_date` | TEXT | Effective date `YYYY-MM-DD`; xlsx index is authoritative, otherwise extracted from body |
-| `promulgation_info` | TEXT | Full promulgation notice (passage / date / implementation paragraphs) |
-| `issuing_org` | TEXT | Issuing authority (whitelist-matched: Supreme Court / Supreme Procuratorate / State Council / NPC SC …) |
-| `doc_number` | TEXT | Document reference number (法释〔2000〕29号 etc.); usually empty for NPC laws |
-| `total_articles` | INTEGER | Total article count |
+| `effective_date` | TEXT | Effective date; xlsx is authoritative |
+| `promulgation_info` | TEXT | Full promulgation notice |
+| `issuing_org` | TEXT | Issuing authority (12-org whitelist) |
+| `doc_number` | TEXT | Document number (法释〔2000〕29号 etc.) |
+| `total_articles` | INTEGER | Article count |
 | `full_text` | TEXT | Complete law text |
-| `version_date` | TEXT | Same as `pub_date`; used for multi-version disambiguation |
-| `is_current` | INTEGER | **1 = current version**, 0 = historical |
+| `version_date` | TEXT | Same as `pub_date`; multi-version disambiguation |
+| `is_current` | INTEGER | **1 = current**; 0 = historical or explicitly repealed (`repealed_by` non-empty) |
+| `aliases` | TEXT | Comma-separated aliases (民法典,民法), for search expansion |
+| `source` | TEXT | `flk` (main library) / `gongbao` (SPC Gazette) |
 
 ```sql
--- All judicial interpretations from the Supreme Court
+-- Search by alias
+SELECT * FROM laws WHERE is_current=1 AND (title LIKE '%民法%' OR aliases LIKE '%民法%');
+
+-- Supreme Court judicial interpretations
 SELECT title, doc_number, pub_date FROM laws
 WHERE issuing_org = '最高人民法院' AND category = '司法解释'
 ORDER BY pub_date DESC;
 ```
 
----
-
-### 🔵 `nodes` — Unified storage for parts / chapters / sections / articles
-
-All structural levels share one table, differentiated by `type`. `parent_id` forms a tree; `ORDER BY global_order` restores reading order.
+#### 🔵 `nodes` — parts / chapters / sections / articles in one table
 
 | Field | Type | Description |
-|-------|------|-------------|
-| `id` | INTEGER PK | Auto-increment primary key |
+|------|------|------|
+| `id` | INTEGER PK | Auto-increment |
 | `law_id` | INTEGER FK | References `laws.id` |
-| `parent_id` | INTEGER FK | Parent node id; NULL for top-level parts |
-| `type` | TEXT | `part`（编）/ `chapter`（章）/ `section`（节）/ `article`（条） |
+| `parent_id` | INTEGER FK | Parent id; NULL for parts |
+| `type` | TEXT | `part` / `chapter` / `section` / `article` |
 | `title` | TEXT | Heading text for structural nodes; same as `article_number` for articles |
-| `article_number` | TEXT | Article label e.g. `第一条`; NULL for structural nodes |
-| `content` | TEXT | Display text: heading text for structural nodes, full body for articles (includes "第X条　" prefix) |
-| `order_index` | INTEGER | Position within parent (1-based) |
-| `global_order` | INTEGER | Depth-first global sequence number — `ORDER BY global_order` gives correct reading order |
-| `part_num` | INTEGER | Part number (NULL if law has no part structure) |
+| `article_number` | TEXT | e.g. `第一条`; NULL for structural nodes |
+| `content` | TEXT | Heading text for structural nodes, article body otherwise |
+| `content_en` | TEXT | English translation (articles + headings), imported by import_en.py |
+| `order_index` | INTEGER | Position within parent |
+| `global_order` | INTEGER | Depth-first global sequence — `ORDER BY global_order` restores reading order |
+| `part_num` | INTEGER | Part number (NULL if no part structure) |
 | `chapter_num` | INTEGER | Chapter number |
-| `section_num` | INTEGER | Section number (NULL if chapter has no sections) |
-| `article_num` | INTEGER | Integer article number (第十二条 → `12`), enables range queries |
+| `section_num` | INTEGER | Section number (NULL if no section structure) |
+| `article_num` | INTEGER | Integer article number (第十二条 → 12), enables range queries |
 
 Notes:
-- `part` nodes exist only in 8 laws (Civil Code, Criminal Code ×2, Civil Procedure ×3, Criminal Procedure ×2)
-- 115 judicial interpretations use Chinese-numeral headings (`一、管辖`) instead of chapters; these are still mapped to `chapter` type
-- Short documents (legal interpretations, replies) are written as a single `article` node with no structural hierarchy
+- `part` structure exists in 9 laws (Civil Code, Criminal Law ×2, Criminal Procedure Law ×2, Civil Procedure Law ×3, Eco-Environment Code)
+- Some judicial interpretations use Chinese-numeral headings (`一、管辖`) instead of chapters; still mapped to `chapter`
+- Short documents without structure (legal interpretations, replies) are written as a single `article` (content = full_text)
 
 ```sql
--- All articles in a chapter
-SELECT article_number, content FROM nodes
-WHERE parent_id = ? AND type = 'article' ORDER BY order_index;
+-- Law full text in reading order
+SELECT type, title, content FROM nodes WHERE law_id = ? ORDER BY global_order;
 
--- Articles by number range (e.g. articles 10–20)
+-- Articles 10–20
 SELECT article_number, content FROM nodes
 WHERE law_id = ? AND type = 'article' AND article_num BETWEEN 10 AND 20;
 ```
 
----
+#### 🟢 `nodes_fts` — full-text search (≥3 chars)
 
-### 🟢 `nodes_fts` — Full-text search, ≥3 characters (virtual table)
-
-FTS5 external content table backed by `nodes`. Only the inverted index is stored here — **the article text is not duplicated** (saves ~60MB vs standalone storage).
-
-| Field | Description |
-|-------|-------------|
-| `content` | Article body, corresponds to `nodes.content` |
-| `article_number` | Article label, corresponds to `nodes.article_number` |
-
-- Tokenizer: `trigram` — indexes all consecutive 3-character windows, enabling arbitrary substring search
-- Minimum query length: 3 CJK characters (use `nodes_fts_bigram` for 1–2 characters)
-- 4, 5, 6, 7+ character queries work natively — no extra indexes needed
-- `rowid` maps 1:1 to `nodes.id`
+FTS5 **external content table** (`content="nodes"`) — no text duplication, saves ~175MB. Tokenizer: `trigram`, arbitrary Chinese substring match, minimum 3 characters.
 
 ```sql
 SELECT n.article_number, n.content, l.title
 FROM nodes_fts f
 JOIN nodes n ON f.rowid = n.id
 JOIN laws l ON n.law_id = l.id
-WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
+WHERE nodes_fts MATCH '合同解除' AND n.type = 'article' AND l.is_current = 1;
 ```
 
----
+#### 🔵 `nodes_fts_bigram` — short-word search (1–2 chars)
 
-### 🔵 `nodes_fts_bigram` — Short-word search, 1–2 characters (virtual table)
+FTS5 external content table, `unicode61` tokenizer, for 1–2 character queries (`婚`, `婚姻`). For ≥3 chars prefer `nodes_fts` (trigram is more precise).
 
-FTS5 external content table, `unicode61` tokenizer, covering the 1–2 character range that trigram cannot handle. Shares `nodes` as the content source — **no text duplication** (saves ~115MB).
-
-| Field | Description |
-|-------|-------------|
-| `content` | Article body, corresponds to `nodes.content` |
-| `article_number` | Article label, corresponds to `nodes.article_number` |
-
-- Tokenizer: `unicode61` — splits on Unicode character boundaries; each Chinese character is one token
-- Use for 1–2 character queries only; for ≥3 characters use `nodes_fts`
-
-```sql
-SELECT COUNT(*) FROM nodes_fts_bigram WHERE nodes_fts_bigram MATCH '婚姻';
-```
-
----
-
-### 🔴 `article_references` — Cross-article citations
+#### 🔴 `article_references` — citation relationships
 
 | Field | Type | Description |
-|-------|------|-------------|
-| `from_node_id` | INTEGER FK | Citing node (`nodes.id`) |
+|------|------|------|
+| `from_node_id` | INTEGER FK | Citing node |
 | `from_law_id` | INTEGER FK | Citing law |
 | `from_article_num` | INTEGER | Citing article number |
-| `from_chapter_num` | INTEGER | Citing chapter number |
-| `from_section_num` | INTEGER | Citing section number |
-| `from_part_num` | INTEGER | Citing part number |
-| `to_node_id` | INTEGER FK | Cited node (populated when resolved) |
+| `to_node_id` | INTEGER FK | Cited node (when resolved) |
 | `to_law_id` | INTEGER FK | Cited law |
 | `to_article_num` | INTEGER | Cited article number |
-| `to_chapter_num` | INTEGER | Cited chapter number |
-| `to_section_num` | INTEGER | Cited section number |
-| `to_part_num` | INTEGER | Cited part number |
-| `ref_type` | TEXT | `cross_law` (cross-law reference) / `self_ref` (within same law) |
-| `resolved` | INTEGER | 1 = resolved to a specific node, 0 = unresolved |
+| `ref_type` | TEXT | `cross_law` / `self_ref` |
+| `resolved` | INTEGER | 1 = resolved to a specific node |
 | `raw_text` | TEXT | Original citation string, e.g. `《中华人民共和国民法典》第一千二百零八条` |
 
-Synced from `references/article_references.json`, updated by `pipeline.py --only-refs` without rebuilding the full database.
+Covers all `is_current=1` articles; extracted by `extract_references.py`, updated automatically with the pipeline.
+
+---
+
+### `law_content.db` gazette extension tables
+
+Written by `build_gongbao_db.py` (pipeline stage 7).
+
+#### `gongbao_docs` — judgments / guiding cases / judicial documents (2,289)
+
+| Field | Description |
+|------|------|
+| `source` | `al` / `cpwsxd` / `sfwj` |
+| `case_number` | Guiding-case number, e.g. `指导性案例212号` (al only) |
+| `title` | Case/document title |
+| `issue` | Gazette issue, e.g. `2024年01期` |
+| `year` / `issue_num` | Year / issue (integers, sortable) |
+| `pub_date` | Publish date |
+| `url` | Original link (gongbao.court.gov.cn) |
+| `ruling_gist` | Key ruling / summary (≤500 chars, extracted from body) |
+| `keywords` | Keywords (comma-separated) |
+| `full_text` | Full text |
+
+#### `gongbao_case_law_links` — gazette docs → main law articles (3,529)
+
+`《Law name》第N条` citations extracted from `gongbao_docs` bodies, linked to `laws.id` and `nodes.id`, 99.8% resolved.
+
+#### `gongbao_docs_fts`
+
+FTS5 external content table, `tokenize="trigram"`, indexes `title`, `ruling_gist`, `keywords`, `full_text`.
+
+```sql
+-- Guiding cases whose ruling gist contains "善意取得"
+SELECT d.title, d.case_number, d.ruling_gist
+FROM gongbao_docs_fts f
+JOIN gongbao_docs d ON f.rowid = d.id
+WHERE gongbao_docs_fts MATCH '善意取得' AND d.source = 'al'
+ORDER BY d.year DESC;
+
+-- Which gazette cases cite a given article
+SELECT d.title, d.source, l.article_num
+FROM gongbao_case_law_links l
+JOIN gongbao_docs d ON l.doc_id = d.id
+WHERE l.node_id = ?;
+```
+
+---
+
+### `law_enhancements.db` tables
+
+#### `term_aliases` — colloquial → legal terms (134)
+
+LLM-generated candidates, written only after FTS validation confirms hits > 0.
+
+| Field | Description |
+|------|------|
+| `colloquial` | Everyday language, e.g. `车祸`, `被炒鱿鱼` |
+| `legal_term` | Term actually appearing in articles, e.g. `道路交通事故`, `解除劳动合同` |
+| `fts_hits` | Hit count in articles |
+
+#### `alias_patches` — manual precision patches (135)
+
+Fills LLM gaps (`离婚`, `误工费`, `工伤` etc.), same schema as `term_aliases`.
+
+#### `topic_law_hints` — topic keywords → recommended laws (115)
+
+Maps question scenarios to the most relevant laws; RAG searches within them first.
+
+#### `keyword_synonyms` — LLM keywords → precise FTS terms (312)
+
+Maps words the LLM coins (`超速驾驶`) to terms with actual hits (`违法驾驶`).
+
+```bash
+python3 scripts/build_aliases.py        # rebuild term_aliases (needs Ollama, ~5 min)
+python3 scripts/build_enhancements.py   # rebuild the other three tables (static, <1s)
+```
 
 ---
 
 ## 📋 JSON Format
 
-Each file corresponds to one law. Filename: `{title}_{YYYYMMDD}.json`.
+One file per law, filename `{title}_{YYYYMMDD}.json`.
 
 **Without part structure (most laws):**
 
 ```json
 {
+  "law_id": 1100023,
   "title": "中华人民共和国合同法",
   "category": "法律",
+  "legal_domain": "民法商法",
   "pub_date": "1999-03-15",
+  "effective_date": "1999-10-01",
+  "total_articles": 428,
   "chapters": [
     {
       "title": "第一章　一般规定",
       "order_index": 1,
       "global_order": 1,
+      "sections": [],
       "articles": [
         {
           "title": "第一条　",
@@ -333,7 +520,7 @@ Each file corresponds to one law. Filename: `{title}_{YYYYMMDD}.json`.
 }
 ```
 
-**With part structure (Civil Code, Criminal Law, Civil Procedure Law, etc. — 8 laws):**
+**With part structure (Civil Code, Criminal Law, procedure laws, Eco-Environment Code — 9 laws):**
 
 ```json
 {
@@ -351,103 +538,83 @@ Each file corresponds to one law. Filename: `{title}_{YYYYMMDD}.json`.
 
 ---
 
-## 🔗 article_references.json — Citation Graph
+## 🤖 Legal Q&A Agents
 
-Covers only `is_current=1` laws. **4,994 citations** total (2,986 cross-law, 2,008 self-references), 98.0% resolved.
+Three escalating Q&A scripts, all supporting DeepSeek / Groq / Ollama providers.
 
----
+### `test_rag.py` — basic RAG pipeline
 
-## 📝 Markdown Hyperlinks & Citation Markers
+Keyword retrieval + LLM filtering: domain routing → keyword extraction + alias expansion → FTS retrieval → relevance filtering → answer generation.
 
-Each Markdown file includes:
+### `legal_chain_agent.py` — article-chain reasoning agent
 
-- **Article anchors**: every article has an `<a id="art-N">` anchor, reachable via `filename.md#art-N`
-- **Outgoing links**: citation text in article bodies is automatically converted to cross-file links pointing to the cited article
-- **Incoming markers**: articles cited by other laws have superscript numbers `[1]` `[2]` … appended; hovering shows which law and article cites it; clicking jumps to the citing article
-
----
-
-## ⚡ Common Queries
-
-```sql
--- Full content of a law in reading order
-SELECT * FROM nodes WHERE law_id = ? ORDER BY global_order;
-
--- Full-text search (any Chinese phrase, min 3 chars)
-SELECT n.article_number, n.content, l.title
-FROM nodes_fts f
-JOIN nodes n ON f.rowid = n.id
-JOIN laws l ON n.law_id = l.id
-WHERE nodes_fts MATCH '合同解除' AND n.type = 'article';
-
--- Browse by display group
-SELECT l.title, l.category, dgm.display_subgroup
-FROM laws l
-JOIN display_group_map dgm ON l.id = dgm.law_id
-WHERE dgm.display_group = '民事与商事' AND l.is_current = 1;
-
--- All judicial interpretations by the Supreme Court
-SELECT title, doc_number, pub_date FROM laws
-WHERE issuing_org = '最高人民法院' AND category = '司法解释'
-ORDER BY pub_date DESC;
-```
-
----
-
-## 🤖 RAG Legal Q&A Pipeline
-
-`scripts/test_rag.py` provides a multi-step reasoning legal Q&A pipeline powered by a local LLM (Ollama):
-
-1. **Domain routing** — Maps the question to relevant legal domains, excluding clearly unrelated ones
-2. **Keyword extraction** — Extracts FTS-friendly legal terms from the question
-3. **Alias expansion** — Uses `law_enhancements.db` to translate colloquial language into legal terminology and add synonyms
-4. **Layered retrieval** — Searches statutes first, then judicial interpretations; laws matched by `topic_law_hints` are boosted to the top; matched keywords are sorted by FTS hit count ascending (specific terms run first) to ensure key articles are not pushed out by the cap
-5. **Relevance filtering** — LLM judges articles in batches, removing noise hits; articles from `topic_law_hints` bypass filtering and are always kept
-6. **Citation filtering** — LLM judges each candidate citation article individually: only articles that directly support the conclusion or give the user something to act on are kept; administrative regulations and definitional clauses are filtered out
-7. **Answer generation** — Model outputs conclusion text only; code assembles the filtered citation list and appends it directly, eliminating truncation or omissions
-
-Output format: **conclusion + cited articles**. The system prompt includes built-in templates for court jurisdiction, litigation requests, and court fees that the model can use without law article support.
-
-**Requirements:** [Ollama](https://ollama.com/) running locally, default model `qwen2.5:3b`
+Adds chapter navigation and citation-chain expansion: question split → domain routing → chapter navigation to fetch articles → FTS supplement → citation-chain expansion (auto-append cited articles) → filter/rank → conclusion.
 
 ```bash
-# Run example questions after starting Ollama
-python3 scripts/test_rag.py
-
-# Use in your own script
-from scripts.test_rag import ask
-result = ask("What is the maximum probation period in a labor contract?")
-print(result["answer"])
+python3 scripts/legal_chain_agent.py -q "网购假货怎么维权"
+python3 scripts/legal_chain_agent.py -q "..." --provider deepseek
 ```
+
+### `legal_expert_agent.py` — multi-layer expert system
+
+Three-layer expert architecture (coordinator → 6 expert groups → 17 specialists), with information gathering (auto-extract known facts, batch questions when missing).
+
+```bash
+python3 scripts/legal_expert_agent.py -q "公司非法裁员我怎么办"
+python3 scripts/legal_expert_agent.py -q "..." --no-interactive  # skip info gathering
+```
+
+**Dependencies**: `pip install requests` (online providers); local Ollama needs `ollama pull qwen2.5:3b`.
 
 ---
 
-## 🚀 Regeneration
+## 🚀 Quick Start
+
+### Option 1: Download the prebuilt database (recommended)
+
+```bash
+git clone https://github.com/doxie/laws-data.git
+cd laws-data
+
+# Download law_content.db (GitHub Releases asset, ~460MB)
+python3 scripts/download_db.py
+```
+
+The prebuilt database includes all law texts, English translations, FTS indexes, and gazette data — ready for the iOS app or direct querying.
+
+### Option 2: Full build from source (~5–10 min)
 
 ```bash
 pip install python-docx xlrd
 
-# Full pipeline
+# Full pipeline (auto-detects source changes, full rebuild)
 python3 scripts/pipeline.py
 
-# Skip stages (e.g. skip docx parsing when JSON already exists)
-python3 scripts/pipeline.py --skip-docx
-python3 scripts/pipeline.py --skip-docx --skip-index
-python3 scripts/pipeline.py --skip-docx --skip-md
+# Force re-run docx → JSON (after source changes)
+python3 scripts/pipeline.py --docx
 
-# Only regenerate citations
-python3 scripts/pipeline.py --only-refs
-
-# Run each stage individually
-cd scripts
-python3 -m docx_to_json.converter   # docx → JSON
-python3 generate_law_index.py        # assign/update law_id
-python3 -m json_to_db.builder        # JSON → DB
-python3 -m json_to_db.display_group  # update display group mapping
-python3 -m db_to_md.renderer         # DB → Markdown
-python3 extract_references.py        # extract citations
-
-python3 verify_db.py                 # verify DB ↔ JSON consistency (optional)
+# Verify database integrity (optional)
+python3 scripts/verify_db.py
 ```
 
-After updating source files, simply re-run `pipeline.py` — no manual intervention needed.
+After updating source files, just re-run `pipeline.py` — the pipeline is stateless and rebuilds everything.
+
+---
+
+## ⚠️ Known Limitations
+
+- FTS trigram minimum match is 3 chars; 1–2 char search uses `nodes_fts_bigram`
+- Citations are extracted only from `is_current=1` articles
+- 83 citations are unresolved because the target law is not in the dataset (e.g. 执业医师法)
+- `json/` **must mirror `sources/`** (flat by category) — do not reorganize by `legal_domain`, or `builder.py`'s path scanning breaks
+- `law_content.db` is not committed to git (~460MB); download from [GitHub Releases](https://github.com/doxie/laws-data/releases) or build locally
+
+---
+
+## 🤝 Contributing
+
+Issues and PRs welcome — law-data corrections, English translations, and pipeline improvements all appreciated. See [CONTRIBUTING.md](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
+
+## 📄 License
+
+[MIT License](LICENSE). Legal texts are sourced from official public channels (National Laws and Regulations Database, SPC Gazette) and are not subject to copyright; the structured data and translations are likewise open under MIT.

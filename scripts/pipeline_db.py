@@ -28,8 +28,8 @@ from pathlib import Path
 LAWS_DATA = Path(__file__).parent.parent
 SCRIPTS   = LAWS_DATA / "scripts"
 LAWS_DATA_DB  = LAWS_DATA / "law_content.db"
-# App bundle 路径可被环境变量覆盖（跨 repo，默认指向本机 iOS 项目）
-APP_BUNDLE_DIR = Path(os.environ.get("LAWS_APP_BUNDLE_DIR", "/Users/doxie/Github/LawsSearch/ChineseLawsSearch/ChineseLawsSearch"))
+# App bundle 路径可被环境变量覆盖（跨 repo，默认为本机 iOS 项目路径，可省略）
+APP_BUNDLE_DIR = Path(os.environ.get("LAWS_APP_BUNDLE_DIR", str(Path.home() / "Github/LawsSearch/ChineseLawsSearch/ChineseLawsSearch")))
 APP_BUNDLE_DB = APP_BUNDLE_DIR / "law_content.db"
 
 

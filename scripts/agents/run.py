@@ -3,7 +3,7 @@
 scripts/agents/run.py — 多层专家协作法律问答系统入口
 
 用法：
-  cd /Users/doxie/laws_data
+  cd path/to/laws_data
   python3 -m scripts.agents.run
   python3 -m scripts.agents.run -q "网购假货怎么维权"
   python3 -m scripts.agents.run -q "..." --provider deepseek

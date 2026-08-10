@@ -19,7 +19,7 @@
 }
 
 用法：
-  cd /Users/doxie/laws_data
+  cd path/to/laws_data
   python3 scripts/fetch_judicial_interpretations.py           # 全量抓取
   python3 scripts/fetch_judicial_interpretations.py --page 1  # 只抓第1页（调试）
   python3 scripts/fetch_judicial_interpretations.py --skip-existing  # 断点续抓

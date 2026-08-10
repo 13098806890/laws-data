@@ -1,8 +1,12 @@
 # 🏛️ 中国法律法规数据库
 
-[English](README.en.md) · [Русский](README.ru.md)
+[English](README.en.md) · [Русский](README.ru.md) · [LICENSE](LICENSE)
 
 > 中国现行法律法规的结构化开放数据集 —— 原始文档、结构化 JSON、SQLite 数据库、Markdown 全文，供检索、研究和应用开发使用。
+
+**开源协议**：[MIT](LICENSE)。法律文本源于官方公开渠道（不受著作权保护），结构化数据与翻译同样以 MIT 开放，商用、二次分发、修改均无限制。
+
+**开始使用**：下载预构建数据库或自行构建，见下方[快速开始](#-快速开始)。
 
 ---
 
@@ -11,26 +15,25 @@
 | 类别 | 数量 |
 |------|-----:|
 | 宪法 | 1 |
-| 法律 | 310 |
+| 法律 | 448 |
 | 修正案 | 12 |
 | 法律解释 | 25 |
-| 司法解释（主库 FLK） | 300 |
-| 司法解释（公报补充） | 749 |
-| 行政法规 | 607 |
-| 监察法规 | 2 |
-| 有关法律问题和重大问题的决定 | 2 |
-| **合计** | **2,008** |
+| 司法解释 | 1,157 |
+| 行政法规 | 727 |
+| 监察法规 | 3 |
+| 有关法律问题和重大问题的决定（部分） | 4 |
+| **合计** | **2,377** |
 
-条文总数 **80,162 条**（article 节点），法条间引用关系 **7,656 条**（跨法引用 4,569 条，本法自引 3,087 条），解析率 97.7%。
+其中现行（`is_current=1`）1,735 部。条文总数 **78,788 条**（article 节点，含章节等全部节点 87,810 个），法条间引用关系 **5,319 条**（跨法引用 2,559 条，本法自引 2,760 条），解析率 98.4%。
 
 ### 🌐 英文翻译
 
 | 指标 | 进度 |
 |------|-----:|
-| 条文英译 | **62,549/62,549（100%）** |
-| 法律标题英译 | 1,259/2,008（62.7%） |
-| 英文 FTS 索引 | `nodes_fts_en`，trigram 分词 |
-| 覆盖法律 | 2,003 部现行法律 |
+| 条文英译（现行法律） | **60,744/60,745（99.99%）** |
+| 法律标题英译 | 2,097 部 |
+| 中文全文检索 | `nodes_fts`（trigram，≥3 字）+ `nodes_fts_bigram`（unicode61，1–2 字） |
+| 覆盖法律 | 2,377 部（含公报来源） |
 
 翻译通过 `translate_to_en.py` 两阶段管线完成：先批量翻译标题，再带术语表和法律名称上下文逐条翻译条文。术语一致性通过 39 个细分专家的 `nameEn`、6 个专家组 `nameEn`、101 个 `RequiredInfo.fieldEn` 保障。
 
@@ -43,9 +46,9 @@
 | 指导案例 | 986 篇 |
 | 司法文件 | 860 篇 |
 | 裁判文书 | 443 篇 |
-| 公报司法解释 | 749 部（已合并进主库 `laws`/`nodes` 表） |
+| 公报司法解释 | 839 部（已合并进主库 `laws`/`nodes` 表） |
 
-所有公报文书均已建立与主库法条的引用关联（3,524 条）。
+所有公报文书均已建立与主库法条的引用关联（3,529 条）。
 
 本数据集已用于构建 [ChineseLawsSearch](https://github.com/doxie/LawsSearch) iOS 应用。
 
@@ -78,43 +81,42 @@ laws_data/
 │   ├── 行政法规/
 │   ├── 宪法/
 │   └── 监察法规/
-├── 📂 宪法与国家机构/             # Markdown 全文（按法律部门分类，is_current=1）
+├── 📂 json_en/                    # 英文翻译（镜像 json/ 结构）
+├── 📂 json_en_gongbao/            # 公报文书英文翻译（al/cpwsxd/sfwj）
+├── 📂 宪法与国家机构/             # Markdown 全文（按 subject_area 菜单分组，is_current=1）
 ├── 📂 民事与商事/
 ├── 📂 刑事/
 ├── 📂 行政与公法/
 ├── 📂 经济、税务与金融/
 ├── 📂 劳动与社会保障/
 ├── 📂 诉讼与司法程序/
-├── 📂 法考/                        # Markdown 全文（按法考科目分目录，pipeline 产物）
-│   ├── 刑法/                       # 75 部
-│   ├── 刑事诉讼法/                 # 37 部
-│   ├── 行政法与行政诉讼法/         # 34 部
-│   ├── 民法/                       # 19 部
-│   ├── 商法/                       # 22 部
-│   └── 民事诉讼法/                 # 21 部
+├── 📂 其他/
 ├── 📂 references/
-│   └── article_references.json    # 法条间引用关系（pipeline 产物）
-├── 📂 flk_source/                 # 法考交叉验证专用目录（独立 pipeline）
-│   ├── tree_data.js               # 厚大法考目录树（手动下载）
-│   └── json/                      # 厚大法考 JSON 缓存（flk_pipeline.py 自动下载）
+│   ├── article_references.json    # 法条间引用关系（pipeline 产物）
+│   ├── law_title_en_map.json      # 法律标题英译 map
+│   └── heading_en_map.json        # 结构节点英文标题 map
 ├── 📂 最高人民法院公报/            # 公报全量数据（fetch_gongbao.py 抓取，JSON 格式）
 │   ├── 指导案例/                  # 986 篇（al）
 │   ├── 司法文件/                  # 860 篇（sfwj）
 │   ├── 裁判文书/                  # 443 篇（cpwsxd）
-│   └── 司法解释/                  # 927 篇（含主库已有 + 独有 487 篇）
+│   └── 司法解释/                  # 839 部（已合并进主库 laws/nodes）
+├── 📂 knowledge/                  # 知识图谱 JSON（taxonomy/hierarchy/relations/versions）
+├── 📂 docs/                       # 文档（archive/ 历史记录、translation/ 翻译报告、guides/ 指南）
 ├── 📂 scripts/
-│   ├── config.py                  # 路径配置（BASE_DIR、DB_PATH 等）
+│   ├── config.py                  # 路径配置（BASE_DIR、DB_PATH 等；LAWS_REPO_PATH 环境变量可覆盖）
 │   ├── utils.py                   # 公共工具（title_from_stem、pub_date_from_stem）
-│   ├── law_aliases.py             # 法律别名映射（民法典→"民法典,民法" 等）
-│   ├── pipeline.py                # 主 pipeline 入口（六阶段，含公报导入）
+│   ├── law_id_registry.py         # law_id 单一权威注册表
+│   ├── pipeline.py                # 主 pipeline 入口（七阶段，含公报导入、英文导入、验证）
+│   ├── download_db.py             # 从 GitHub Releases 下载预构建数据库
 │   ├── fetch_gongbao.py           # 最高人民法院公报抓取脚本（5 个目标）
-│   ├── build_gongbao_db.py        # 公报数据 → law_content.db（阶段六）
-│   ├── flk_pipeline.py            # 法考交叉验证 pipeline（独立，见下文）
-│   ├── verify_flk.py              # 法考数据库条文内容交叉验证脚本
+│   ├── build_gongbao_db.py        # 公报数据 → law_content.db（阶段七）
+│   ├── classify_gongbao_domain.py # 公报司法解释 legal_domain 打标
+│   ├── import_en.py               # json_en → nodes.content_en / laws.title_en
+│   ├── translate_to_en.py         # 英文翻译主脚本（按 tier 分批）
 │   ├── generate_law_index.py      # 稳定 law_id 分配
 │   ├── extract_references.py      # 法条引用关系提取
 │   ├── fetch_web_sources.py       # 网页抓取 → .txt 替换文件
-│   ├── verify_db.py               # 数据库与 JSON 一致性验证
+│   ├── verify_db.py               # 数据库与 JSON 一致性验证（含 EN 覆盖率）
 │   ├── build_aliases.py           # 构建 term_aliases（LLM + FTS 验证）
 │   ├── build_enhancements.py      # 构建 RAG 增强表
 │   ├── test_rag.py                # 基础 RAG pipeline
@@ -124,23 +126,21 @@ laws_data/
 │   ├── docx_to_json/              # 阶段一：docx/txt → JSON
 │   │   ├── converter.py           # 主入口，段落解析，编/章/节/条识别
 │   │   ├── structure.py           # 层级结构组装，global_order 分配
-│   │   ├── domain.py              # legal_domain 映射，xlsx 索引读取
+│   │   ├── domain.py              # legal_domain 映射（评分制），xlsx 索引读取
 │   │   ├── effective_date.py      # 生效日期提取
 │   │   └── subject_area.py        # 行政法规二级主题分类
 │   ├── json_to_db/                # 阶段三：JSON → SQLite
 │   │   ├── builder.py             # 建表、写入法律/节点/FTS
-│   │   ├── export_menu.py         # 导出 law_menu.json 导航索引
-│   │   └── export_flk_menu.py     # 导出 flk_menu.json 法考导航索引
-│   └── db_to_md/                  # 阶段五：DB → Markdown
-│       ├── renderer.py            # 按 legal_domain 分目录渲染全量 Markdown
-│       └── render_flk.py          # 按法考科目渲染 法考/ 目录
+│   │   └── export_menu.py         # 导出 law_menu.json 导航索引
+│   └── db_to_md/                  # 阶段六：DB → Markdown
+│       └── renderer.py            # 按菜单分组渲染全量 Markdown
 ├── 📄 law_index.json              # 稳定 law_id 索引（跨重建不变）
-├── 📄 law_menu.json               # 侧边栏导航索引（按法律部门分组）
-├── 📄 flk_menu.json               # 法考导航索引（148 部，6 个科目）
-├── 📄 法考目录.json               # 法考收录法律名单（来源：官方法考大纲）
-├── 🗄️  law_content.db             # 主数据库（~250MB，含公报表，Git LFS）
-├── 🗄️  law_enhancements.db        # RAG 增强数据库（~64KB，Git LFS）
-└── 🗄️  flk_content.db             # 法考交叉验证数据库（独立 pipeline 产物）
+├── 📄 law_menu.json               # 侧边栏导航索引（按 subject_area 分组）
+├── 🗄️  law_content.db             # 主数据库（~460MB，不提交 git，从 Releases 下载或本地构建）
+├── 🗄️  law_enhancements.db        # RAG 增强数据库（~128KB）
+├── 📄 LICENSE                     # MIT 开源协议
+├── 📄 CONTRIBUTING.md             # 贡献指南
+└── 📄 CLAUDE.md                   # 项目维护说明
 ```
 
 ---
@@ -149,7 +149,7 @@ laws_data/
 
 **运行入口**：`python3 scripts/pipeline.py`
 
-主 pipeline 分五个阶段顺序执行，全量重建（无增量），每次运行约 5–10 分钟。
+主 pipeline 分七个阶段顺序执行，全量重建（无增量），每次运行约 5–10 分钟。
 
 ### 阶段一：`docx_to_json` — 源文件 → 结构化 JSON
 
@@ -174,7 +174,7 @@ laws_data/
 
 5. **结构组装**（`structure.py`）：按 part/chapter/section/article 层级组装嵌套 dict，分配 `global_order`（深度优先遍历序号），保证 `ORDER BY global_order` 还原原文顺序。
 
-6. **元数据写入**：`title`（从文件名提取，不从 docx 正文读）、`category`（xlsx 权威）、`legal_domain`（优先从 `/Users/doxie/Github/Laws/` 目录结构匹配，其次手工补充，再次关键词规则）。
+6. **元数据写入**：`title`（从文件名提取，不从 docx 正文读）、`category`（xlsx 权威）、`legal_domain`（优先从 ``LAWS_REPO_PATH`（默认 `~/Github/Laws/`）` 目录结构匹配，其次手工补充，再次关键词规则）。
 
 **特殊处理**：
 - 民法典有 7 编，第一编"总则"在源文件中无编标题行，硬编码补全
@@ -207,13 +207,11 @@ laws_data/
 
 3. **写入 nodes 表**（递归插入）：part → chapter → section → article 递归插入，每层记录 `parent_id`、`global_order`、`part_num`、`chapter_num`、`section_num`、`article_num`；每条 article 同时插入两个 FTS 表。
 
-4. **多版本标记**：同名法律按 `pub_date` 降序，最新版设 `is_current=1`，其余设 0。
+4. **FTS 优化**：全部插入完成后执行 `optimize`，合并 FTS 段，提升查询性能。
 
-5. **FTS 优化**：全部插入完成后执行 `optimize`，合并 FTS 段，提升查询性能。
+5. **公报司法解释打标**（`classify_gongbao_domain.py`）：为 `source='gongbao'` 的司法解释分配 legal_domain。
 
-6. **法考标记**：读取 `法考目录.json`，将 208 部法考收录法律（标题精确匹配或规范化变体匹配）的 `is_flk` 字段设为 1。共标记 269 条记录（含历史版本）。**法考 208 部法律均来自 `sources/` 目录，与主 pipeline 共用同一份源文件，无需从外部 URL 重新拉取。**
-
-7. **导出导航菜单**：生成 `law_menu.json`（全量 1,572 部，按法律部门分组）和 `flk_menu.json`（148 部，按 6 个法考科目排列），供 iOS app 侧边栏使用。
+6. **导出导航菜单**：生成 `law_menu.json`（按 subject_area 分组，含 title_en），供 iOS app 侧边栏使用。
 
 ---
 
@@ -225,7 +223,7 @@ laws_data/
 
 **提取逻辑**（`extract_references.py`）：
 
-遍历所有 `is_current=1` 的条文（包含所有 `is_flk=1` 的法考法律），用正则识别三类引用：
+遍历所有 `is_current=1` 的条文，用正则识别三类引用：
 
 1. **有书名号跨法引用**：匹配 `《法律名》第X条`，提取法律名后查 `art_index` 解析到具体节点，短标题（去掉"中华人民共和国"前缀）和全称均可匹配。
 
@@ -233,23 +231,32 @@ laws_data/
 
 3. **本法自引**：匹配 `本法/本条例/本规定第X条`。刑法修正案中的"本法第X条"自动重定向到刑法主体，标记为 `cross_law`。
 
-**当前统计**：7,656 条引用（跨法 4,569 条，自引 3,087 条），解析率 97.7%。
+**当前统计**：5,319 条引用（跨法 2,559 条，自引 2,760 条），解析率 98.4%。
 
 ---
 
-### 阶段五：`db_to_md` — 数据库 → Markdown 全文
+### 阶段五：英文导入（`import_en.py`）
+
+**输入**：`json_en/`（条文翻译）、`references/heading_en_map.json`（结构节点标题翻译）
+
+**输出**：写入 `nodes.content_en` 和 `laws.title_en`
+
+- 按 `article_number` 匹配条文，幂等写入（`WHERE content_en IS NULL` 不覆盖已有翻译）
+- 结构节点（编/章/节）标题从 `heading_en_map.json`（稳定键 `law_id:type:order_index`）写入
+
+---
+
+### 阶段六：`db_to_md` — 数据库 → Markdown 全文
 
 **输入**：`law_content.db`（`is_current=1` 的法律）
 
-**输出**：
-- 按 `legal_domain` 分目录的 `.md` 文件（全量）
-- `法考/` 目录：按 6 个法考科目分子目录，共 148 个文件（`render_flk.py`）
+**输出**：按 subject_area 菜单分组的 `.md` 文件（宪法与国家机构/ 民事与商事/ 刑事/ 行政与公法/ 经济、税务与金融/ 劳动与社会保障/ 诉讼与司法程序/ 其他）
 
 每条条文生成 `<a id="art-N">` 锚点，正文中的出向引用自动转为跨文件 Markdown 链接。
 
 ---
 
-### 阶段六：`build_gongbao_db` — 公报数据 → law_content.db
+### 阶段七：公报数据导入（`build_gongbao_db`）
 
 **前置条件**：`最高人民法院公报/` 目录已有 JSON 文件（由 `fetch_gongbao.py` 抓取）
 
@@ -258,10 +265,10 @@ laws_data/
 | 表 | 说明 |
 |----|------|
 | `gongbao_docs` | 裁判文书 + 指导案例 + 司法文件，共 2,289 条；`source` 字段区分 `al`/`cpwsxd`/`sfwj` |
-| `gongbao_case_law_links` | 公报文书引用主库法条的关联，共 3,533 条，解析率 99.8% |
+| `gongbao_case_law_links` | 公报文书引用主库法条的关联，共 3,529 条，解析率 99.8% |
 | `gongbao_docs_fts` | FTS5 trigram 全文索引（外部内容表） |
 
-公报司法解释（927 条）不再单独建表，而是作为 `source='gongbao'` 写入主库 `laws`/`nodes` 表：419 条复用主库 ID（覆盖主库版本），508 条分配新 ID（范围 3500726–3501233）。
+公报司法解释（839 条，ID 范围 3500010–3501473）不再单独建表，而是作为 `source='gongbao'` 写入主库 `laws`/`nodes` 表。law_id 分配严格遵循 `scripts/law_id_registry.py`（blocklist → json_en 内嵌 → law_index 三级解析），禁止模糊映射。
 
 **独立运行**：
 
@@ -289,12 +296,15 @@ python3 scripts/fetch_gongbao.py --target al --skip-existing
 ### 运行参数
 
 ```bash
-python3 scripts/pipeline.py                          # 完整六阶段运行
-python3 scripts/pipeline.py --skip-docx              # 跳过阶段一（JSON 已有时）
-python3 scripts/pipeline.py --skip-docx --skip-index # 跳过阶段一、二
-python3 scripts/pipeline.py --skip-docx --skip-db    # 只重建 Markdown
-python3 scripts/pipeline.py --skip-docx --skip-md    # 不重建 Markdown
-python3 scripts/pipeline.py --skip-gongbao           # 跳过阶段六（公报导入）
+python3 scripts/pipeline.py                          # 完整七阶段运行
+python3 scripts/pipeline.py --docx                   # 强制重跑 docx → JSON（否则自动检测源文件变更）
+python3 scripts/pipeline.py --skip-index             # 跳过 law_index 生成
+python3 scripts/pipeline.py --skip-db                # 跳过 JSON → DB
+python3 scripts/pipeline.py --skip-md                # 跳过 DB → Markdown
+python3 scripts/pipeline.py --skip-gongbao           # 跳过公报导入
+python3 scripts/pipeline.py --skip-en                # 跳过英文导入
+python3 scripts/pipeline.py --only-refs              # 只重跑引用提取
+python3 scripts/pipeline.py --validate               # 追加 content_en vs json_en 校验
 
 # 各阶段单独运行
 cd scripts
@@ -302,98 +312,21 @@ python3 -m docx_to_json.converter     # 阶段一
 python3 generate_law_index.py          # 阶段二
 python3 -m json_to_db.builder          # 阶段三
 python3 extract_references.py          # 阶段四（仅生成 JSON）
-python3 -m db_to_md.renderer           # 阶段五
-python3 build_gongbao_db.py --drop     # 阶段六（独立重建）
+python3 import_en.py                   # 阶段五（英文导入）
+python3 -m db_to_md.renderer           # 阶段六
+python3 build_gongbao_db.py --drop     # 阶段七（独立重建）
 python3 fetch_web_sources.py           # 抓取/更新网页替换文件（独立）
 python3 verify_db.py                   # 验证 DB 与 JSON 一致性（可选）
 ```
 
 ---
 
-## ⚖️ 法考交叉验证 Pipeline（独立）
-
-**用途**：从 [厚大法考](http://www.houdask.com/) 拉取法律原文，与主库 `law_content.db` 逐条对比，验证条文内容是否一致。属于**独立的验证工具**，不影响主 pipeline，不修改主库。
-
-**重要说明**：法考 208 部法律已全部收录于主库，均来自国家法律法规数据库的 docx 源文件，均已标记 `is_flk=1`，且法条引用关系（`article_references`）也已完整包含这 208 部法律。主库数据**不依赖厚大来源**，该 pipeline 仅用于独立比对两个来源的条文内容，发现版本差异。
-
-### 标题对应关系
-
-厚大数据与主库对同一部法律的标题命名存在以下差异（共 18 部，全部已通过规范化自动匹配）：
-
-| 差异类型 | 厚大标题示例 | 主库标题示例 |
-|----------|------------|------------|
-| 半角括号 vs 全角括号（8 部） | `刑法修正案(四)` | `刑法修正案（四）` |
-| 带书名号 vs 无书名号（7 部） | `五部门《关于…规定》` | `五部门关于…规定` |
-| 带修正年份后缀（1 部） | `…解释(2009修正)` | `…解释`（无后缀） |
-| 带序号 vs 无序号（1 部） | `…淫秽电子信息…解释(一)` | `…淫秽电子信息…解释` |
-| 书名号内容差异（1 部） | `执行《中华人民共和国国家赔偿法》` | `执行中华人民共和国国家赔偿法` |
-
-其中括号写法差异（共 15 部）由 `_build_main_title_index()` 的四种规范化变体自动处理；剩余 2 部通过 `TITLE_OVERRIDES` 字典手动映射。
-
-### 数据流
-
-```
-厚大 houdask.com
-  └─ tree_data.js（208 部法律目录树，含每部法律的 jsonUrl）
-       └─ img.juexiaotime.com/*.json（每部法律的章节原文，2021 年版）
-            └─ flk_source/json/{id}.json（本地缓存）
-                 └─ flk_content.db（法考验证数据库）
-                      │
-                      └─ verify_flk.py ←──→ law_content.db（主库）
-                                           （按 law_id 直接匹配）
-```
-
-### `flk_content.db` 数据库结构
-
-| 表 | 说明 |
-|----|------|
-| `laws` | 法考 208 部法律。`id` 字段与主库 `laws.id` 对齐（同一部法律用同一个 id），方便直接 join 比较。极少数标题差异较大、无法自动对齐的法律使用负数 id。 |
-| `sections` | 章节节点，来自厚大 JSON 的扁平列表（`type`=3 节 / 4 章），含 `full_text`（章节全文） |
-| `articles` | 从 `full_text` 按 `第X条` 正则切分出的条文，含 `article_number`、`content` |
-| `articles_fts` | FTS5 trigram 全文索引，索引 `articles` 表 |
-
-### 运行方法
-
-```bash
-cd /Users/doxie/laws_data
-
-# 完整流程：下载所有法律 JSON + 建库 + 交叉验证（首次约 5 分钟）
-python3 scripts/flk_pipeline.py
-
-# 使用已缓存的 JSON（跳过下载，约 30 秒）
-python3 scripts/flk_pipeline.py --skip-dl
-
-# 只重建 flk_content.db，不跑验证
-python3 scripts/flk_pipeline.py --skip-dl --skip-db
-
-# 只跑验证报告（flk_content.db 已存在时）
-python3 scripts/verify_flk.py
-
-# 查看某部法律的详细差异（含具体条文内容对比）
-python3 scripts/verify_flk.py --law 中华人民共和国刑法 --diff
-
-# 输出报告到文件
-python3 scripts/verify_flk.py --out verify_report.txt
-```
-
-### 验证逻辑（`verify_flk.py`）
-
-1. 从 `flk_content.db` 取全部 208 部法律
-2. 对每部法律，用 `law_id`（已在建库时与主库对齐）直接从主库取对应条文，无需标题匹配
-3. 按 `article_number` 取交集：统计仅法考库有、仅主库有、内容不同的条文
-4. 内容比较忽略所有空白字符差异（换行、缩进等排版差异不影响结论）
-
-**当前验证结论**（2025 年）：208/208 部全部与主库 id 对齐。14 部条文完全一致，194 部存在条文差异，主要原因是**厚大数据为 2021 年版本**，沿用旧条号，而主库收录 2023/2024 年修订的现行版本，差异来源于法律修订而非数据错误。
-
----
-
 ## 🗄️ 数据库结构
 
-项目包含三个 SQLite 数据库：
+项目包含两个 SQLite 数据库：
 
-- **`law_content.db`**（~250MB）— 主数据库，由 `pipeline.py` 全量生成，含公报表
-- **`law_enhancements.db`**（~64KB）— RAG 增强数据库，独立维护
-- **`flk_content.db`**（独立）— 法考交叉验证数据库，由 `flk_pipeline.py` 生成
+- **`law_content.db`**（~460MB）— 主数据库，由 `pipeline.py` 全量生成，含公报表。**不提交 git**，从 [GitHub Releases](https://github.com/doxie/laws-data/releases) 下载或本地构建
+- **`law_enhancements.db`**（~128KB）— RAG 增强数据库，由 `build_enhancements.py` 独立维护
 
 ### `law_content.db` 表结构
 
@@ -403,10 +336,11 @@ python3 scripts/verify_flk.py --out verify_report.txt
 |------|------|------|
 | `id` | INTEGER PK | 稳定主键，由 `generate_law_index.py` 分配，跨重建不变 |
 | `title` | TEXT | 完整标题，从文件名提取（不从 docx 正文读） |
+| `title_en` | TEXT | 英文标题，从 json_en 导入 |
 | `filename` | TEXT UNIQUE | 格式：`{标题}_{YYYYMMDD}`，无后缀 |
-| `category` | TEXT | `法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` |
+| `category` | TEXT | `法律` / `行政法规` / `司法解释` / `修正案` / `法律解释` / `宪法` / `监察法规` / `有关法律问题和重大问题的决定（部分）` |
 | `legal_domain` | TEXT | 法律部门：`民法典` / `民法商法` / `刑法` / `行政法` / `经济法` / `社会法` / `宪法相关法` / `诉讼与非诉讼程序法` |
-| `subject_area` | TEXT | 行政法规二级主题，其他类别为空 |
+| `subject_area` | TEXT | 菜单二级主题（v2.0.0 起所有法律都有，export_menu.py 回写） |
 | `pub_date` | TEXT | 公布日期 `YYYY-MM-DD` |
 | `effective_date` | TEXT | 生效日期，xlsx 权威来源优先 |
 | `promulgation_info` | TEXT | 发布说明全文（通过/公布/施行信息段落） |
@@ -415,14 +349,11 @@ python3 scripts/verify_flk.py --out verify_report.txt
 | `total_articles` | INTEGER | 条文总数 |
 | `full_text` | TEXT | 法律全文原文 |
 | `version_date` | TEXT | 同 `pub_date`，用于多版本区分 |
-| `is_current` | INTEGER | **1 = 现行版本**（最新 pub_date），0 = 历史版本 |
+| `is_current` | INTEGER | **1 = 现行**；0 = 历史版本或被废止决定明确废止（`repealed_by` 非空） |
 | `aliases` | TEXT | 逗号分隔别名（如 `民法典,民法`），用于搜索扩展 |
-| `is_flk` | INTEGER | **1 = 法考收录**，0 = 非法考。由 `法考目录.json` 标注，含历史版本 |
+| `source` | TEXT | 数据来源：`flk`（主库）/ `gongbao`（最高人民法院公报） |
 
 ```sql
--- 查法考收录的现行法律（208 部）
-SELECT title, category FROM laws WHERE is_flk=1 AND is_current=1 ORDER BY title;
-
 -- 按别名搜索
 SELECT * FROM laws WHERE is_current=1 AND (title LIKE '%民法%' OR aliases LIKE '%民法%');
 
@@ -451,8 +382,8 @@ ORDER BY pub_date DESC;
 | `article_num` | INTEGER | 条文整数序号（第十二条 → 12），便于数值范围查询 |
 
 设计说明：
-- 编（part）结构只在 8 部法律中存在（民法典、刑法×2、刑事诉讼法×2、民事诉讼法×3）
-- 115 个司法解释用汉字序号章节（`一、管辖`），仍映射为 `chapter` 类型
+- 编（part）结构在 9 部法律中存在（民法典、刑法×2、刑事诉讼法×2、民事诉讼法×3、生态环境法典）
+- 部分司法解释用汉字序号章节（`一、管辖`），仍映射为 `chapter` 类型
 - 无章节的短文件整体写为单条 `article`（content = full_text）
 
 ```sql
@@ -494,13 +425,13 @@ FTS5 外部内容表，分词器：`unicode61`，专门处理 1–2 字搜索（
 | `resolved` | INTEGER | 1 = 已解析到具体节点 |
 | `raw_text` | TEXT | 原文引用字符串，如 `《中华人民共和国民法典》第一千二百零八条` |
 
-覆盖所有 `is_current=1` 的条文，包含全部 208 部法考法律，由 `extract_references.py` 提取，随主 pipeline 自动更新。
+覆盖所有 `is_current=1` 的条文，由 `extract_references.py` 提取，随主 pipeline 自动更新。
 
 ---
 
 ### `law_content.db` 公报扩展表
 
-这五张表由 `build_gongbao_db.py`（pipeline 阶段六）写入，存储最高人民法院公报数据。
+这五张表由 `build_gongbao_db.py`（pipeline 阶段七）写入，存储最高人民法院公报数据。
 
 #### `gongbao_docs` — 裁判文书 / 指导案例 / 司法文件（2,289 条）
 
@@ -517,7 +448,7 @@ FTS5 外部内容表，分词器：`unicode61`，专门处理 1–2 字搜索（
 | `keywords` | 关键词（逗号分隔，从正文提取） |
 | `full_text` | 全文原文 |
 
-#### `gongbao_case_law_links` — 公报文书 → 主库法条关联（3,533 条）
+#### `gongbao_case_law_links` — 公报文书 → 主库法条关联（3,529 条）
 
 从 `gongbao_docs` 全文提取 `《法律名》第N条` 引用，关联到 `laws.id` 和 `nodes.id`，解析率 99.8%。
 
@@ -554,15 +485,15 @@ LLM 生成候选术语，FTS 验证命中数 > 0 后写入。
 | `legal_term` | 条文中实际出现的术语，如 `道路交通事故`、`解除劳动合同` |
 | `fts_hits` | 该术语在条文中的命中数 |
 
-#### `alias_patches` — 手工精确补丁（22 条）
+#### `alias_patches` — 手工精确补丁（135 条）
 
 补充 LLM 自动生成的缺口（`离婚`、`误工费`、`工伤` 等），与 `term_aliases` 结构相同。
 
-#### `topic_law_hints` — 场景关键词 → 推荐法律（50 条）
+#### `topic_law_hints` — 场景关键词 → 推荐法律（115 条）
 
 将问题场景映射到最相关法律，RAG 检索时优先在这些法律内搜索。
 
-#### `keyword_synonyms` — LLM 关键词 → 精确 FTS 词（40 条）
+#### `keyword_synonyms` — LLM 关键词 → 精确 FTS 词（312 条）
 
 LLM 造出的词（`超速驾驶`）映射到实际有命中的术语（`违法驾驶`）。
 
@@ -607,7 +538,7 @@ python3 scripts/build_enhancements.py   # 重建其余三张表（纯静态，< 
 }
 ```
 
-**有编结构（民法典、刑法、诉讼法等 8 部）：**
+**有编结构（民法典、刑法、诉讼法、生态环境法典等 9 部）：**
 
 ```json
 {
@@ -657,22 +588,31 @@ python3 scripts/legal_expert_agent.py -q "..." --no-interactive  # 跳过信息�
 
 ## 🚀 快速开始
 
+### 方式一：下载预构建数据库（推荐）
+
+```bash
+git clone https://github.com/doxie/laws-data.git
+cd laws-data
+
+# 下载 law_content.db（GitHub Releases 附件，约 460MB）
+python3 scripts/download_db.py
+```
+
+预构建数据库包含全部法律条文、英文翻译、FTS 索引、公报数据，可直接用于 iOS app 或查询。
+
+### 方式二：从源码完整构建（约 5–10 分钟）
+
 ```bash
 pip install python-docx xlrd
 
-# 完整 pipeline（约 5–10 分钟）
-cd /path/to/laws_data
+# 完整 pipeline（自动检测源文件变更，全量重建）
 python3 scripts/pipeline.py
 
-# 已有 JSON，只重建数据库（约 1–2 分钟）
-python3 scripts/pipeline.py --skip-docx
+# 强制重跑 docx → JSON（源文件变更时）
+python3 scripts/pipeline.py --docx
 
 # 验证数据库完整性（可选）
 python3 scripts/verify_db.py
-
-# 法考交叉验证（独立，需先存在 law_content.db）
-python3 scripts/flk_pipeline.py --skip-dl   # 重建 flk_content.db（跳过下载）
-python3 scripts/verify_flk.py               # 对比两库条文内容
 ```
 
 更新源文件后直接重跑 `pipeline.py` 即可，pipeline 无状态，每次全量重建。
@@ -683,6 +623,16 @@ python3 scripts/verify_flk.py               # 对比两库条文内容
 
 - FTS trigram 最短匹配词为 3 字；1–2 字搜索用 `nodes_fts_bigram`
 - 法条引用关系仅提取 `is_current=1` 的条文
-- 78 条引用因目标法律未收录而无法解析（执业医师法等未纳入数据集）
-- 法考交叉验证中，194 部条文存在差异，主因是厚大数据为 2021 年版，与主库 2023/2024 年修订版条号和内容有出入，属正常版本差异
+- 83 条引用因目标法律未收录而无法解析（执业医师法等未纳入数据集）
 - `json/` 目录**必须与 `sources/` 对应**（按 category 平铺），不能按 `legal_domain` 重组，否则 `builder.py` 路径扫描失效
+- `law_content.db` 不提交 git（约 460MB），从 [GitHub Releases](https://github.com/doxie/laws-data/releases) 下载或本地构建
+
+---
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！法律数据修正、英文翻译、pipeline 改进均受欢迎。详见 [CONTRIBUTING.md](CONTRIBUTING.md) 和 [Code of Conduct](CODE_OF_CONDUCT.md)。
+
+## 📄 许可
+
+本项目采用 [MIT License](LICENSE)。法律文本源自官方公开渠道（国家法律法规数据库、最高人民法院公报），本身不受著作权保护；结构化数据与翻译成果同样以 MIT 开放使用。

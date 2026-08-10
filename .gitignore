@@ -10,8 +10,11 @@ __pycache__/
 *.db-shm
 *.db-wal
 
-# Source file checksum manifest
-.source_hashes.json
+# 生成产物（pipeline 运行后自动生成，不提交）
+logs/
 law_content.db
 law_content*.db
 *.db.backup
+
+# Source file checksum manifest
+.source_hashes.json

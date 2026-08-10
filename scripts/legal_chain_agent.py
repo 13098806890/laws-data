@@ -12,7 +12,7 @@ Pipeline:
   Step 6: 生成结论（带明确引用）
 
 用法：
-  cd /Users/doxie/laws_data
+  cd path/to/laws_data
   python3 scripts/legal_chain_agent.py
   python3 scripts/legal_chain_agent.py --question "网购假货怎么维权"
   python3 scripts/legal_chain_agent.py --question "..." --provider deepseek

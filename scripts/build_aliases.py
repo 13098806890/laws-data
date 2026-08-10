@@ -5,7 +5,7 @@
 （FTS 验证仍需读 law_content.db，通过 ATTACH 实现）
 
 用法：
-    cd /Users/doxie/laws_data
+    cd path/to/laws_data
     python3 scripts/build_aliases.py
 """
 
